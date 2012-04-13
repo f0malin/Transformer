@@ -6,7 +6,7 @@ use File::Copy qw(cp);
 
 
 for my $file (@ARGV) {
-    (print "skip ". $file . "\n" and next) unless $file =~ m{\borigin/[^/]+/[^/]+\.new$};
+    (print "skip ". $file . "\n" and next) unless $file =~ m{\borigin(?:/|\\)[^/]+(?:/|\\)[^/]+\.new$};
     ### $file
     my $file2 = $file;
     $file2 =~ s{\.new$}{.old};
