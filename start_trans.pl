@@ -16,7 +16,7 @@ for my $file (@ARGV) {
     $file3 =~ s{\borigin\b}{trans};
     ### $file3
     my $path = $file3;
-    $path =~ s{/[^/]+$}{};
+    $path =~ s{(?:/|\\)[^/]+$}{};
     mkdir $path;
     cp $file, $file3;
 }
