@@ -28,7 +28,7 @@ PerlChina 社区网站是对 L<http://www.perl.org> 、L<http://search.cpan.org>
 
 =item * 到 C<data/origin/www.perl.org/> 目录下找 .new 后缀名挑选你想翻译的页面。如果你看到存在与你挑选的 .new 的文件同名的 .old 文件，说明这个页面正在被别人翻译，请挑选其他文件。
 
-=item * 运行起步脚本。加入你挑选的是 C<data/origin/www.perl.org/%2Fget.html.new> 这个页面，那么把它作为参数传给起步脚本： C<perl start_trans.pl data/origin/www.perl.org/%2Fget.html.new> 。起步脚本会为你生成两个文件： C<data/origin/www.perl.org/%2Fget.html.old> ，这个是用来防止两个人同时翻译一个页面的，见上一条； C<data/trans/www.perl.org/%2Fget.html.old> ，你编辑这个文件，修改里面的英文就可以进行翻译了。
+=item * 运行起步脚本。假如你挑选的是 C<data/origin/www.perl.org/%2Fget.html.new> 这个页面（其中的 %2F 其实就是 / ），那么把它作为参数传给起步脚本： C<perl start_trans.pl data/origin/www.perl.org/%2Fget.html.new> 。起步脚本会为你生成两个文件： C<data/origin/www.perl.org/%2Fget.html.old> ，这个是用来防止两个人同时翻译一个页面的，见上一条； C<data/trans/www.perl.org/%2Fget.html.old> ，你编辑这个文件，修改里面的英文就可以进行翻译了。
 
 =item * C<git add> 、 C<git commit> 、 C<git push> 。注意运行完启动脚本以后先把更改同步到 github ，以防别人翻译跟你一样页面。
 
