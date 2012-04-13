@@ -8,7 +8,8 @@ use URI::Escape qw(uri_escape);
 
 our $config = {
     host_map => {
-        'localhost:5000' => 'www.perl.org',
+        'www.perlchina.org' => 'www.perl.org',
+        'perlchina.org' => 'www.perl.org',
     },
     cache_timeout => 600,
     cache_timeout_rand => 120,
