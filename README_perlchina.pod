@@ -28,15 +28,15 @@ PerlChina 社区网站是对 www.perl.org 、search.cpan.org 、 learn.perl.org 
 
 =item * 到 C<data/origin/www.perl.org/> 目录下找 .new 后缀名挑选你想翻译的页面。如果你看到存在与你挑选的 .new 的文件同名的 .old 文件，说明这个页面正在被别人翻译，请挑选其他文件。
 
-=item 运行起步脚本。加入你挑选的是 C<data/origin/www.perl.org/%2Fget.html.new> 这个页面，那么把它作为参数传给起步脚本： C<perl start_trans.pl data/origin/www.perl.org/%2Fget.html.new> 。起步脚本会为你生成两个文件： C<data/origin/www.perl.org/%2Fget.html.old> ，这个是用来防止两个人同时翻译一个页面的，见上一条； C<data/trans/www.perl.org/%2Fget.html.old> ，你编辑这个文件，修改里面的英文就可以进行翻译了。
+=item * 运行起步脚本。加入你挑选的是 C<data/origin/www.perl.org/%2Fget.html.new> 这个页面，那么把它作为参数传给起步脚本： C<perl start_trans.pl data/origin/www.perl.org/%2Fget.html.new> 。起步脚本会为你生成两个文件： C<data/origin/www.perl.org/%2Fget.html.old> ，这个是用来防止两个人同时翻译一个页面的，见上一条； C<data/trans/www.perl.org/%2Fget.html.old> ，你编辑这个文件，修改里面的英文就可以进行翻译了。
 
-=item C<git add> 、 C<git commit> 、 C<git push> 。注意运行完启动脚本以后先把更改同步到 github ，以防别人翻译跟你一样页面。
+=item * C<git add> 、 C<git commit> 、 C<git push> 。注意运行完启动脚本以后先把更改同步到 github ，以防别人翻译跟你一样页面。
 
-=item 编辑 C<data/trans/www.perl.org/%2Fget.html.old> 文件进行翻译。
+=item * 编辑 C<data/trans/www.perl.org/%2Fget.html.old> 文件进行翻译。
 
-=item 将更改提交到 github 。
+=item * 将更改提交到 github 。
 
-=item 通知网站管理员 Achilles （ formalin14 at gmail dot com ）进行更新。未来会每5分钟定时自动更新。
+=item * 通知网站管理员 Achilles （ formalin14 at gmail dot com ）进行更新。未来会每5分钟定时自动更新。
 
 =back
 
@@ -48,9 +48,9 @@ PerlChina 社区网站是对 www.perl.org 、search.cpan.org 、 learn.perl.org 
 
 =item * 跟任何一个核心翻译团队的成员沟通，让他帮你生成翻译模版发给你。
 
-=item 你进行翻译。
+=item * 你进行翻译。
 
-=item 翻译完成后发给那个成员，让他帮你提交。
+=item * 翻译完成后发给那个成员，让他帮你提交。
 
 =back
 
@@ -58,17 +58,17 @@ PerlChina 社区网站是对 www.perl.org 、search.cpan.org 、 learn.perl.org 
 
 =over 4
 
-=item 不要破坏页面结构和缩进，只在原来位置替换英文。
+=item * 不要破坏页面结构和缩进，只在原来位置替换英文。
 
-=item 注意 perl.org 用的缩进是空格。
+=item * 注意 perl.org 用的缩进是空格。
 
-=item 统一使用中文标点。英文和中文交界的地方要留一个空格，包括英文和中文标点交界的地方。这点尤其重要，请注意。
+=item * 统一使用中文标点。英文和中文交界的地方要留一个空格，包括英文和中文标点交界的地方。这点尤其重要，请注意。
 
-=item 各种名词的翻译请先参考首页的翻译
+=item * 各种名词的翻译请先参考首页的翻译
 
-=item 页头导航条的翻译请参考首页，由于不同页面加白的导航菜单不一样，所以不要直接拷贝首页的过去。或者也可以拷贝首页的过去自己修改一下 class 。
+=item * 页头导航条的翻译请参考首页，由于不同页面加白的导航菜单不一样，所以不要直接拷贝首页的过去。或者也可以拷贝首页的过去自己修改一下 class 。
 
-=item 页脚可以直接拷贝首页的。包括注释掉原网站的赞助商和 google 翻译下拉框。未来会加入 SSI 功能。
+=item * 页脚可以直接拷贝首页的。包括注释掉原网站的赞助商和 google 翻译下拉框。未来会加入 SSI 功能。
 
 =back
 
