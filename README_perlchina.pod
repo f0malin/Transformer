@@ -68,7 +68,7 @@ PerlChina 社区网站是对 L<http://www.perl.org> 、L<http://search.cpan.org>
 
 =item * 页头导航条的翻译请参考首页，由于不同页面加白的导航菜单不一样，所以不要直接拷贝首页的过去。或者也可以拷贝首页的过去自己修改一下 class 。
 
-=item * 页脚可以直接拷贝首页的。包括注释掉原网站的赞助商和 google 翻译下拉框。未来会加入 SSI 功能。
+=item * 页脚从 C<<div id="spacer_for_google"></div>> 这行开始（包括这行），可以全部删去，替换成包含的模版语句： C<: include 'data/trans/www.perl.org/footer.old'> 。
 
 =back
 
