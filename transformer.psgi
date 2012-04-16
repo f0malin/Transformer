@@ -19,7 +19,26 @@ our $config = {
 
 our $ua = LWP::UserAgent->new;
 
-my $tx = Text::Xslate->new();
+our $tx = Text::Xslate->new();
+
+our %access_count_of = ();
+our $last_timeout = 0;
+our $timeout_interval = 300;
+
+sub is_timeout {
+    if (time - $last_timeout > $timeout_interval) {
+        time_out();
+        $last_timeout = time;
+    }
+}
+
+sub time_out {
+    my @sorted_keys = sort { $access_count_of{$b} <=> $access_count_of{$a} } keys(%access_count_of);
+    print "access count:\n";
+    for my $key (@sorted_keys) {
+        print "\t", $key, "\t", $access_count_of{$key}, "\n";
+    }
+}
 
 sub calc_url {
     my $env = shift;
@@ -76,6 +95,7 @@ sub get_content {
         return [200, ['Content-Type' =>  'text/html;charset=utf-8', 'Content-Length' => length($$rcontent)], [$$rcontent]];
     } else {
         ### no translation: $file, $trans_file
+        $access_count_of{$file} ++;
     }
 
     if (-e($file) && (time - (stat($file))[9] < $config->{cache_timeout}+int(rand($config->{cache_timeout_rand})))) {
@@ -115,5 +135,6 @@ sub get_content {
 sub {
     my $env = shift;
     #### $env
+    is_timeout;
     return get_content($env);
 }
