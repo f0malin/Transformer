@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Learn Perl - www.perl.org</title>
+    <title>Perl supports IPv6 - www.perl.org</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
     <link rel="shortcut icon" href="http://st.pimg.net/perlweb/favicon.v249dfa7.ico">
@@ -14,8 +14,8 @@
       <link rel="stylesheet" type="text/css" href="http://st.pimg.net/perlweb/css/www.ve1fe6bb.css"> 
 
 
-    <meta name="description" content="Useful links if you are interested in learning Perl" />
-    
+    <meta name="description" content="Perl and IPv6 support" />
+    <meta name="keywords" content="perl, ipv6, perl ipv6, perl ipv6 support, perl and ipv6" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://st.pimg.net/perlweb/js/jquery.corner.v84b7681.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://st.pimg.net/perlweb/js/leo.v9872b9c.js" type="text/javascript" charset="utf-8"></script>
@@ -23,13 +23,13 @@
 
 
 </head>
-<body class="section_learn">
+<body class="section_about">
 
 <div id="header_holder">
     <div class="sub_holder">
         <div id="page_image"></div>
         <h1>
-            Learn Perl
+            Perl supports IPv6
         </h1>
         <div id="logo_holder">
            
@@ -50,7 +50,7 @@
     <li>
         <a href="/">Home</a>
     </li>
-    <li class="selected">
+    <li>
         <a href="/learn.html">Learn</a>
     </li>
     <li>
@@ -65,7 +65,7 @@
     <li>
         <a href="/contribute.html">Get Involved</a>
     </li>
-    <li class="sub">
+    <li class="sub selected">
         <a href="/about.html">About Perl</a>
     </li>
     <li class="sub">
@@ -86,108 +86,74 @@
     <div id="content" class="sub_holder">
         <div id="main">
             
-
-<table class="content_table">
-    <tr>
-        <td>
-            <h4>
-                There are many ways to start...
-            </h4>
-            <ul>
-                <li>
-                    <a href="http://learn.perl.org/">learn.perl.org</a>
-                </li>
-                <li>
-                    <a href="http://perldoc.perl.org/perlintro.html">A brief introduction</a>
-                </li>
-                
-                <li>
-                    <a href="/books/library.html">Free online Perl books</a>
-                </li>
-                <li>
-                    <a href="/community.html">Join your local community</a>
-                </li>
-                <li>
-                    <a href="/media.html">Books and More</a>
-                </li>
-            </ul>
-            <h4>
-                Recommended modules
-            </h4>
-            <p>
-                If you are looking for a list of recommended modules for many day-to-day tasks, look at <a href="http://search.cpan.org/perldoc?Task::Kensho">Task::Kensho</a>.
-            </p>
-            <h4>
-                The Perl FAQ
-            </h4>
-            <p>
-                Perl FAQs are available as part of your Perl distribution with the<br />
-                <code>perldoc perlfaq</code> command.
-            </p>
-            <ul>
-                <li>Read FAQs online at <a href="http://learn.perl.org/faq/">http://learn.perl.org/faq/</a>
-                </li>
-            </ul>
-        </td>
-        <td>
-            <h4>
-                Videos
-            </h4>
-                <p>
-                    <a href="http://yapc.tv/">Videos</a> of presentations from conferences and workshops, more at <a href="http://www.presentingperl.org/">Presenting Perl</a>.
-                </p>
-            <ul>
-                <li>
-                    <a href="http://blip.tv/file/1887791/">Testing your code</a>
-                </li>
-                <li>
-                    <a href="http://yapc.tv/2008/lpw/mike-whitaker-intro-moose/">Moose (Object Oriented Programming) introduction</a>
-                </li>
-                <li>
-                    <a href="http://yapc.tv/2008/ipw/marcus_ramberg_-_introduction_to_catalyst/">Catalyst web framework introduction</a>
-                </li>
-            </ul>
-            <h4>
-                Presentations
-            </h4>
-            <p>
-                Presentations are not necessarily the best way to learn, but they 
-                can be worth reviewing.
-            </p>
-            <ul>
-                <li>
-                    Introduction to Perl: 
-                      <a href="http://www.slideshare.net/davorg/introduction-to-perl-day-1">Part 1</a>,
-                      <a href="http://www.slideshare.net/davorg/introduction-to-perl-day-2">Part 2</a>
-                </li>
-                <li>
-                    <a href="http://www.slideshare.net/ranguard/dbixclass-beginners-presentation">DBIx::Class - Database ORM introduction</a>
-                </li>
-                <li>
-                    <a href="http://www.slideshare.net/dandv/introduction-to-catalyst-part-1?src=related_normal&amp;rel=283100">Catalyst web framework</a>
-                </li>
-            </ul>
-        </td>
-    </tr>
-</table>
-
-<div style="padding-top: 1em;">
+<h2>
+    Perl and IPv6 - Perl supports IPv6
+</h2>
+<p>
+    <em>How to use both IPv4 and IPv6 networks from Perl</em>
+</p>
+<p>
+    To enable IPv6 in Perl, replace any use of IO::Socket::INET with 
+    <a href="https://metacpan.org/module/IO::Socket::IP">IO::Socket::IP</a> and you will
+    be able to use both <a href="http://en.wikipedia.org/wiki/Ipv4">IPv4</a>
+    and <a href="http://en.wikipedia.org/wiki/IPv6">IPv6</a>. Perl 5.14 has the
+    full set of IPv6 functions as part of it's core Socket module.
+</p>
+<p>
+    The Perl community is currently in the process of converting older modules
+    to use this, if you use a module which has not been converted please report
+    it to the module author.
+</p>
+<p>
+    The IO::Socket::IP class provides a general-purpose socket that can provide
+    <a href=
+    "http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP</a>
+    connections or <a href="http://en.wikipedia.org/wiki/UDP_packet">UDP</a>
+    packets using either IPv4 or IPv6. It is an API-compatible replacement for
+    its IPv4-only predecessor, IO::Socket::INET.
+</p>
+<p>
+    IO::Socket::IP should be a direct drop-in replacement for IO::Socket::INET.
+    It supports the same constructor arguments and the same methods as
+    IO::Socket::INET, most programs only need to change the 'use' line and
+    constructor calls, allowing them to support IPv6.
+</p>
+<p>
+    Unfortunately IO::Socket::INET could not be upgraded in such a way that
+    would not cause backwards incompatibilities, existing code may expect
+    IO::Socket::INET to always return IPv4 sockets.
+</p>
+<p>
+    Perl 5.14 ships with a complete set of IPv6-related functions in the Socket
+    module. It provides the AF_INET6 constant, sockaddr_in6 address structure
+    handling functions, and the getaddrinfo and getnameinfo functions.
+    IO::Socket::IP uses these on Perl 5.14, making it an easy install requiring
+    no other modules, nor compiling any <a href=
+    "http://en.wikipedia.org/wiki/XS_(Perl)">XS</a> code.
+</p>
+<p>
+    On versions of Perl before 5.14, IO::Socket::IP needs a newer version of 
+    <a href="https://metacpan.org/module/Socket">Socket</a> to 
+    provide the IP protocol-neutral support, by way of the getaddrinfo and getnameinfo 
+    functions. This is available on CPAN and requires XS code to build.
+</p>
+<h4>
+    Resources:
+</h4>
+<ul>
+    <li>
+        <a href="https://metacpan.org/module/IO::Socket::IP">IO::Socket::IP</a>
+    </li>
+</ul>
+<h4>
+    Article Authors
+</h4>
+<p>
+    <a href="http://www.leonerd.org.uk/">Paul "LeoNerd" Evans</a> and <a href=
+    "http://leo.cuckoo.org/">Leo Lapworth</a>
+</p>
 
 
-<script type='text/javascript'>
-var amzn_wdgt={widget:'Carousel'};
-amzn_wdgt.tag='develooper';
-amzn_wdgt.widgetType='ASINList';
-amzn_wdgt.title='Books to help learn Perl';
-amzn_wdgt.width='600';
-amzn_wdgt.height='200';
-amzn_wdgt.ASIN='1430223650,1558607013,1884777791,0596004761,0596001738,0596520107,0977920178';
-amzn_wdgt.shuffleProducts='True';
-amzn_wdgt.marketPlace='US';
-</script>
-<script type='text/javascript' src='http://wms.assoc-amazon.com/20070822/US/js/swfobject_1_5.js'>
-</script>
-</div>
 
         </div>
         <div id="short_lists" class="short_lists">
@@ -195,39 +161,27 @@ amzn_wdgt.marketPlace='US';
 
             <div class="quick_links">
         <h4 class="round">
-            Starting points
+            More about Perl
         </h4>
         <div class="list">
         
-        <p><a href="/books/library.html">Free online books</a></p>        
+        <p><a href="/about/whitepapers/">White papers</a></p>        
         
-        <p><a href="/media.html">Books and More</a></p>        
+        <p><a href="/app.html">Application programming</a></p>        
         
-        <p><a  href="http://learn.perl.org/">learn.perl.org</a></p>        
+        <p><a href="/about/reduce-risks.html">Reducing Business Risks</a></p>        
         
-        <p><a  href="http://www.slideshare.net/tag/perl?sort=fav">Presentations</a></p>        
+        <p><a href="http://jobs.perl.org/">Perl Jobs</a></p>        
+        
+        <p><a href="/about/style-guide.html">"perl" or "Perl"?</a></p>        
+        
+        <p><a href="/camel.html">Camels and Perl</a></p>        
         
         </div>
 </div>
 
 
-            <div class="quick_links">
-        <h4 class="round">
-            Related sites
-        </h4>
-        <div class="list">
-        
-        <p><a  href="http://learn.perl.org/">Learn</a></p>        
-        
-        <p><a  href="http://perldoc.perl.org/">Perldoc</a></p>        
-        
-        <p><a  href="http://learn.perl.org/faq/">FAQ</a></p>        
-        
-        <p><a  href="http://books.perl.org/">Books</a></p>        
-        
-        </div>
-</div>
-
+            
             
 
             
@@ -238,7 +192,7 @@ amzn_wdgt.marketPlace='US';
         <div class="list">
         <p>
             <strong>Perl</strong>
-            -- More braces.  Fewer spaces.
+            -- It's like Java, only it lets you deliver on time and under budget.
         </p>
     </div>
 </div>
@@ -252,9 +206,8 @@ amzn_wdgt.marketPlace='US';
           
 
 
-<a href="http://www.yellowbot.com">
-  <img class="border" border="0" src="http://st.pimg.net/perlweb/images/friends/yellowbot.vcc29f5b.gif"
-       width="150" height="40" alt="YellowBot" />Local Search
+<a href="http://www.digitalcraftsmen.net/">
+  <img class="border" border="0" src="http://st.pimg.net/perlweb/images/friends/digital_craftsmen.v9ec156d.png" height="56" width="142" alt="Digital Craftsmen" />bespoke hosting services
   </a>
 
 

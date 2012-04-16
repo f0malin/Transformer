@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Learn Perl - www.perl.org</title>
+    <title>Object Oriented Perl - www.perl.org</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
     <link rel="shortcut icon" href="http://st.pimg.net/perlweb/favicon.v249dfa7.ico">
@@ -14,7 +14,7 @@
       <link rel="stylesheet" type="text/css" href="http://st.pimg.net/perlweb/css/www.ve1fe6bb.css"> 
 
 
-    <meta name="description" content="Useful links if you are interested in learning Perl" />
+    <meta name="description" content="Object Oriented Perl" />
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://st.pimg.net/perlweb/js/jquery.corner.v84b7681.js" type="text/javascript" charset="utf-8"></script>
@@ -23,13 +23,13 @@
 
 
 </head>
-<body class="section_learn">
+<body class="section_about">
 
 <div id="header_holder">
     <div class="sub_holder">
         <div id="page_image"></div>
         <h1>
-            Learn Perl
+            Object Oriented Perl
         </h1>
         <div id="logo_holder">
            
@@ -50,7 +50,7 @@
     <li>
         <a href="/">Home</a>
     </li>
-    <li class="selected">
+    <li>
         <a href="/learn.html">Learn</a>
     </li>
     <li>
@@ -65,7 +65,7 @@
     <li>
         <a href="/contribute.html">Get Involved</a>
     </li>
-    <li class="sub">
+    <li class="sub selected">
         <a href="/about.html">About Perl</a>
     </li>
     <li class="sub">
@@ -86,108 +86,51 @@
     <div id="content" class="sub_holder">
         <div id="main">
             
+<h2>
+    Moose - Object Oriented Perl
+</h2>
+<p>
+    <em>Why code what you can declare? Moose gives you clear object syntax with lots of power when you need it.</em>
+</p>
+<p>
+    Perl has had Object Oriented (OO) capabilities for fifteen years now, and today it has Moose. Moose helps developers focus on the underlying logic and requirements behind any project; encourages code reuse, simplification (making testing easier) and promotes best practices.
+</p>
+<p>
+    With Moose, gone are the days of writing constructors, destructors, and accessors. Moose provides a simple, declarative syntax for specifying classes. Most attribute validation code simply disappears. Moose handles it automatically as soon as the data type is specified.
+</p>
+<p>
+    Roles allow for easy reuse of behavior independent of class data. Moose is built to be as flexible as Perl, it can be change to suit your projects needs—see the growing <a href="http://search.cpan.org/search?query=moosex&mode=dist">MooseX namespace on CPAN</a>. One example of a MooseX module is <a href="http://search.cpan.org/dist/MooseX-NonMoose/">MooseX::NonMoose</a>, designed to make migrating existing codebases easier. And best of all, the user interface to Moose is Just Perl™, so developers don't need to learn a new syntax.
+</p>
+<p>
+    Attributes in Moose are simple and straightforward. A programmer declares them with a simple function call, using named parameters like many other Perl libraries. This declaration can specify whether the attribute is writable, what kind of values it accepts, a default for the attribute, custom builder / clearer methods, and more. Given type information for an attribute, Moose will optionally try to convert values to that type or throw an exception if it cannot do so. This checking allows the programmer to focus on writing their logic, without getting bogged down in the details of value checking.
+</p>
+<p>
+    Just as attributes change how Moose class data is handled, roles change how class behavior is written. Roles are reusable collections of methods that can be added to a class or an object at runtime. With roles, one can write behavior for a collection of classes without needing to know or care about the data those classes manage. Roles can require methods to exist in the classes that use them, and in this way can function like interfaces in more traditional object-oriented languages like Java and C#. As with attributes, exceptions will be thrown upon the failure to satisfy these criteria, providing a structured mechanism for adding behavior to classes.
+</p>
+<p>
+    Well-steeped in the open development model of other Perl projects, Moose has a growing number of committers with a growing number of tests, over four thousand as of this writing.
+</p>
 
-<table class="content_table">
-    <tr>
-        <td>
-            <h4>
-                There are many ways to start...
-            </h4>
-            <ul>
-                <li>
-                    <a href="http://learn.perl.org/">learn.perl.org</a>
-                </li>
-                <li>
-                    <a href="http://perldoc.perl.org/perlintro.html">A brief introduction</a>
-                </li>
-                
-                <li>
-                    <a href="/books/library.html">Free online Perl books</a>
-                </li>
-                <li>
-                    <a href="/community.html">Join your local community</a>
-                </li>
-                <li>
-                    <a href="/media.html">Books and More</a>
-                </li>
-            </ul>
-            <h4>
-                Recommended modules
-            </h4>
-            <p>
-                If you are looking for a list of recommended modules for many day-to-day tasks, look at <a href="http://search.cpan.org/perldoc?Task::Kensho">Task::Kensho</a>.
-            </p>
-            <h4>
-                The Perl FAQ
-            </h4>
-            <p>
-                Perl FAQs are available as part of your Perl distribution with the<br />
-                <code>perldoc perlfaq</code> command.
-            </p>
-            <ul>
-                <li>Read FAQs online at <a href="http://learn.perl.org/faq/">http://learn.perl.org/faq/</a>
-                </li>
-            </ul>
-        </td>
-        <td>
-            <h4>
-                Videos
-            </h4>
-                <p>
-                    <a href="http://yapc.tv/">Videos</a> of presentations from conferences and workshops, more at <a href="http://www.presentingperl.org/">Presenting Perl</a>.
-                </p>
-            <ul>
-                <li>
-                    <a href="http://blip.tv/file/1887791/">Testing your code</a>
-                </li>
-                <li>
-                    <a href="http://yapc.tv/2008/lpw/mike-whitaker-intro-moose/">Moose (Object Oriented Programming) introduction</a>
-                </li>
-                <li>
-                    <a href="http://yapc.tv/2008/ipw/marcus_ramberg_-_introduction_to_catalyst/">Catalyst web framework introduction</a>
-                </li>
-            </ul>
-            <h4>
-                Presentations
-            </h4>
-            <p>
-                Presentations are not necessarily the best way to learn, but they 
-                can be worth reviewing.
-            </p>
-            <ul>
-                <li>
-                    Introduction to Perl: 
-                      <a href="http://www.slideshare.net/davorg/introduction-to-perl-day-1">Part 1</a>,
-                      <a href="http://www.slideshare.net/davorg/introduction-to-perl-day-2">Part 2</a>
-                </li>
-                <li>
-                    <a href="http://www.slideshare.net/ranguard/dbixclass-beginners-presentation">DBIx::Class - Database ORM introduction</a>
-                </li>
-                <li>
-                    <a href="http://www.slideshare.net/dandv/introduction-to-catalyst-part-1?src=related_normal&amp;rel=283100">Catalyst web framework</a>
-                </li>
-            </ul>
-        </td>
-    </tr>
-</table>
+<h4>
+    Quotes
+</h4>
+<ul>
+    <li>"I write less code thanks to Moose, I write better code thanks to Moose. Basically I am a happier person all around because Moose takes much of the drudge work out of my day. Thanks to the Moose team." -- Ben Hengst</li>
+    <li>"What? I can only give it five stars?" -- ctbrown</li>
+</ul>
 
-<div style="padding-top: 1em;">
+<h4>
+    Resources:
+</h4>
+<ul>
+    <li><a href="http://search.cpan.org/dist/Moose/">Moose</a></li>
+    <li><a href="http://search.cpan.org/dist/Moose/lib/Moose/Manual.pod">Moose Manual</a></li>
+</ul>
 
-
-<script type='text/javascript'>
-var amzn_wdgt={widget:'Carousel'};
-amzn_wdgt.tag='develooper';
-amzn_wdgt.widgetType='ASINList';
-amzn_wdgt.title='Books to help learn Perl';
-amzn_wdgt.width='600';
-amzn_wdgt.height='200';
-amzn_wdgt.ASIN='1430223650,1558607013,1884777791,0596004761,0596001738,0596520107,0977920178';
-amzn_wdgt.shuffleProducts='True';
-amzn_wdgt.marketPlace='US';
-</script>
-<script type='text/javascript' src='http://wms.assoc-amazon.com/20070822/US/js/swfobject_1_5.js'>
-</script>
-</div>
+<h4>
+    Article Author
+</h4>
+<p>Chris Nehren</p>
 
         </div>
         <div id="short_lists" class="short_lists">
@@ -195,39 +138,27 @@ amzn_wdgt.marketPlace='US';
 
             <div class="quick_links">
         <h4 class="round">
-            Starting points
+            More about Perl
         </h4>
         <div class="list">
         
-        <p><a href="/books/library.html">Free online books</a></p>        
+        <p><a href="/about/whitepapers/">White papers</a></p>        
         
-        <p><a href="/media.html">Books and More</a></p>        
+        <p><a href="/app.html">Application programming</a></p>        
         
-        <p><a  href="http://learn.perl.org/">learn.perl.org</a></p>        
+        <p><a href="/about/reduce-risks.html">Reducing Business Risks</a></p>        
         
-        <p><a  href="http://www.slideshare.net/tag/perl?sort=fav">Presentations</a></p>        
+        <p><a href="http://jobs.perl.org/">Perl Jobs</a></p>        
+        
+        <p><a href="/about/style-guide.html">"perl" or "Perl"?</a></p>        
+        
+        <p><a href="/camel.html">Camels and Perl</a></p>        
         
         </div>
 </div>
 
 
-            <div class="quick_links">
-        <h4 class="round">
-            Related sites
-        </h4>
-        <div class="list">
-        
-        <p><a  href="http://learn.perl.org/">Learn</a></p>        
-        
-        <p><a  href="http://perldoc.perl.org/">Perldoc</a></p>        
-        
-        <p><a  href="http://learn.perl.org/faq/">FAQ</a></p>        
-        
-        <p><a  href="http://books.perl.org/">Books</a></p>        
-        
-        </div>
-</div>
-
+            
             
 
             
@@ -238,7 +169,7 @@ amzn_wdgt.marketPlace='US';
         <div class="list">
         <p>
             <strong>Perl</strong>
-            -- More braces.  Fewer spaces.
+            -- Program <i>Different</i>
         </p>
     </div>
 </div>
@@ -252,9 +183,8 @@ amzn_wdgt.marketPlace='US';
           
 
 
-<a href="http://www.yellowbot.com">
-  <img class="border" border="0" src="http://st.pimg.net/perlweb/images/friends/yellowbot.vcc29f5b.gif"
-       width="150" height="40" alt="YellowBot" />Local Search
+<a href="http://www.digitalcraftsmen.net/">
+  <img class="border" border="0" src="http://st.pimg.net/perlweb/images/friends/digital_craftsmen.v9ec156d.png" height="56" width="142" alt="Digital Craftsmen" />bespoke hosting services
   </a>
 
 
