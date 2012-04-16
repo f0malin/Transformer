@@ -1,0 +1,49 @@
+=head1 NAME
+
+Transformer - A whole site translation resolution
+
+=head1 Description
+
+Transformer is a whole site translation tool. If you want to translate a website, and host is in another domain, and want all the picture and style are all keep same as origin websites, Then this tool is for you.
+
+If fact transformer is a reverse proxy cache server. But there is another layer above the cache: translation. So when some access come, the server first lookup if there is a translation for this page. If there do be a translation, it will serve the user with this translation. Or it will look for cached file and serve the cache to the user. If there is no cache, it will get page from the origin website, and after serve the user, the page will be write to the cache. 
+
+=head1 How to run?
+
+=head2 Decide a domain for your translation site.
+
+Assume your want to translate www.perl.org, than maybe you should register a domain like www.perlchina.org or www.perl.org.cn .
+
+=head2 Config
+
+    our $config = {
+        host_map => {
+            'www.perlchina.org' => 'www.perl.org',
+            'perlchina.org' => 'www.perl.org',
+            '127.0.0.1:5000' => 'www.perl.org',
+        },
+        cache_timeout => 600,
+        cache_timeout_rand => 120,
+    };
+
+Modify C<host_map> , put your translation domain (eg. www.perlchina.org ) as a key, and origin domain (eg. www.perl.org) as a value.
+
+=head2 Start up
+
+    starman --port 80 transformer.psgi
+
+Change the port to what you need.
+
+=head2 Access you translation site
+
+Point you browser to C<http://www.youtranslationdomain.org:yourport/> (eg. C<http://www.perlchina.org>), you will see the same content as your origin website, nothing translated. But note the domain in you browser's address field, it is your translation domain. Now you translation website is just a reverse proxy cache for you origin website. Next, we will do translations.
+
+=head2 Create translation scaffold
+
+    perl start_trans.pl data/origin/www.perl.org/%2Findex.html.new
+
+The cached files are in data/origin/yourorigindomain/pathencoded.old, you can pick one of them and pass it as a parameter to C<start_trans.pl> script to create the scaffold. After running the script, you will get two files, one is data/origin/www.perl.org/%2Findex.html.old. (this file recored the file your translation based for. In the feture, the origin file and cached file maybe change, but this file doesn't change. So you can diff on .new and this file to see what have changed and update you translation.) The other file is data/trans/www.per.org/%2Findex.html.old, this is where you do translation.
+
+=head2 Do translation
+
+Use your faverate editor to translate data/trans/www.perl.org/%2Findex.html.old, save it, and then access it in your brower. You will find the translation applied.
