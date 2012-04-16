@@ -5,17 +5,21 @@ use utf8;
 use Smart::Comments "###";
 use LWP::UserAgent;
 use URI::Escape qw(uri_escape);
+use Text::Xslate qw(mark_raw);
 
 our $config = {
     host_map => {
         'www.perlchina.org' => 'www.perl.org',
         'perlchina.org' => 'www.perl.org',
+        '127.0.0.1:5000' => 'www.perl.org',
     },
     cache_timeout => 600,
     cache_timeout_rand => 120,
 };
 
 our $ua = LWP::UserAgent->new;
+
+my $tx = Text::Xslate->new();
 
 sub calc_url {
     my $env = shift;
@@ -51,6 +55,13 @@ sub cat_file {
     return \$content;
 }
 
+sub tx_file {
+    my $file = shift;
+    my $str = $tx->render($file);
+    utf8::encode($str);
+    return \$str;
+}
+
 sub get_content {
     my $env = shift;
     my ($path, $file) = calc_origin($env);
@@ -61,7 +72,7 @@ sub get_content {
     $trans_file =~ s{\.new$}{.old};
      if (-e $trans_file) {
         ### translated: $trans_file
-        my $rcontent = cat_file($trans_file);
+        my $rcontent = tx_file($trans_file);
         return [200, ['Content-Type' =>  'text/html;charset=utf-8', 'Content-Length' => length($$rcontent)], [$$rcontent]];
     } else {
         ### no translation: $file, $trans_file
