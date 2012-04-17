@@ -19,6 +19,8 @@ our $config = {
 };
 
 our $ua = LWP::UserAgent->new;
+our $ua2 = LWP::UserAgent->new;
+$ua2->max_redirect(0);
 
 our $tx = Text::Xslate->new();
 
@@ -133,9 +135,38 @@ sub get_content {
     return [ $res->code, \@headers, [$content]];
 }
 
+sub get_pod {
+    my ($env, $module) = @_;
+
+    # get module' src's url
+    my $res = $ua2->get("http://search.cpan.org/perldoc?" . $module);
+    if ($res->code eq 302) {
+        my $url = $res->header('location');
+        ### pod url: $url
+        $url =~ s{^/~([^/]+)}{'http://cpansearch.perl.org/src/'.uc($1)}e;
+        ### pod source url: $url
+        my $res2 = $ua2->get($url);
+        my $content_type = $res2->header('content-type');
+        my $content_length = $res2->header('content-length');
+        my @headers = ('Content-Type' => $content_type);
+        if ($content_length) {
+            push @headers, 'Content-Length' => $content_length;
+        }
+        return [$res2->code, \@headers, [$res2->content]];
+    } else {
+        return [404, ['Content-Type' => 'text/plain', 'Content-Length' => 14], ['no this module']];
+    }
+}
+
 sub {
     my $env = shift;
     #### $env
     is_timeout;
-    return get_content($env);
+    if ($env->{'REQUEST_URI'} =~ m{^/perldoc\?(.*)$}) {
+        my $module = $1;
+        ### pod module : $module
+        return get_pod($env, $module);
+    } else {
+        return get_content($env);
+    }
 }
