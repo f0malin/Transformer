@@ -12,6 +12,7 @@ our $config = {
         'www.perlchina.org' => 'www.perl.org',
         'perlchina.org' => 'www.perl.org',
         '127.0.0.1:5000' => 'www.perl.org',
+        'learn.perlchina.org' => 'learn.perl.org',
     },
     cache_timeout => 600,
     cache_timeout_rand => 120,
