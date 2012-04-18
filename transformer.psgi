@@ -35,30 +35,30 @@ $ua2->max_redirect(0);
 
 our $tx = Text::Xslate->new();
 
-*Pod::Simple::HTML::esc = sub {
-    if(defined wantarray) {
-        if(wantarray) {
-            @_ = splice @_; # break aliasing
-        } else {
-            my $x = shift;
-            $x =~ s/([&<>])/'&#'.(ord($1)).';'/eg;
-            return $x;
-        }
-    }
-    foreach my $x (@_) {
-        # Escape things very cautiously:
-        $x =~ s/([&<>])/'&#'.(ord($1)).';'/eg
-            if defined $x;
-        # Leave out "- so that "--" won't make it thru in X-generated comments
-        #  with text in them.
+# *Pod::Simple::HTML::esc = sub {
+#     if(defined wantarray) {
+#         if(wantarray) {
+#             @_ = splice @_; # break aliasing
+#         } else {
+#             my $x = shift;
+#             $x =~ s/([&<>])/'&#'.(ord($1)).';'/eg;
+#             return $x;
+#         }
+#     }
+#     foreach my $x (@_) {
+#         # Escape things very cautiously:
+#         $x =~ s/([&<>])/'&#'.(ord($1)).';'/eg
+#             if defined $x;
+#         # Leave out "- so that "--" won't make it thru in X-generated comments
+#         #  with text in them.
         
-        # Yes, stipulate the list without a range, so that this can work right on
-        #  all charsets that this module happens to run under.
-        # Altho, hmm, what about that ord?  Presumably that won't work right
-        #  under non-ASCII charsets.  Something should be done about that.
-    }
-    return @_;
-};
+#         # Yes, stipulate the list without a range, so that this can work right on
+#         #  all charsets that this module happens to run under.
+#         # Altho, hmm, what about that ord?  Presumably that won't work right
+#         #  under non-ASCII charsets.  Something should be done about that.
+#     }
+#     return @_;
+# };
 
 our $pod_parser = My::Pod->new();
 $pod_parser->perldoc_url_prefix("http://cpan.perlchina.org/perldoc?");
