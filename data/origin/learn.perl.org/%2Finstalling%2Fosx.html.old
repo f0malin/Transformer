@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Installing Perl on OSX - learn.perl.org</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+    <link rel="shortcut icon" href="http://st.pimg.net/perlweb/favicon.v249dfa7.ico">
+
+    <link rel="stylesheet" title="perl" type="text/css" href="http://st.pimg.net/perlweb/css/shCore.v2fc9caf.css" media="all">
+    <link rel="stylesheet" title="perl" type="text/css" href="http://st.pimg.net/perlweb/css/shThemeDefault.v1365411.css" media="all">
+    <script type="text/javascript" charset="utf-8" src="http://st.pimg.net/perlweb/js/shCore.vd0ac59a.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://st.pimg.net/perlweb/js/shBrushPerl.v764e8d2.js"></script>
+
+
+
+      <link rel="stylesheet" type="text/css" href="http://st.pimg.net/perlweb/css/leostyle.vf79cee0.css"> 
+      <link rel="stylesheet" type="text/css" href="http://st.pimg.net/perlweb/css/learn.v8bb9ac1.css"> 
+
+
+    <meta name="description" content="How to install Perl on OSX" />
+    <meta name="keywords" content="Perl, OSX, Installing Perl on OSX, Perl setup on OSX" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://st.pimg.net/perlweb/js/jquery.corner.v84b7681.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://st.pimg.net/perlweb/js/leo.v9872b9c.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <script type="text/javascript" charset="utf-8">
+        SyntaxHighlighter.all();
+    </script>
+
+
+</head>
+<body class="section_installing">
+
+<div id="header_holder">
+    <div class="sub_holder">
+        <div id="page_image"></div>
+        <h1>
+            Installing Perl on OSX
+        </h1>
+        <div id="logo_holder">
+           
+            
+
+            <a href="/"><img src="http://st.pimg.net/perlweb/images/camel_head.v25e738a.png" id="logo" alt="Learn Perl, modern programming" height="65" align="right" /></a>
+            
+
+			 <span>learn.perl.org</span>
+
+        </div>
+    </div>
+</div>
+
+<div id="nav">
+    <div class="sub_holder">
+        <ul>
+    <li>
+        <a href="/">Home</a>
+    </li>
+
+<!--     <li>
+        <a href="/tutorials/">Tutorials</a>
+    </li>
+    <li>
+        <a href="/faq/">FAQ</a>
+    </li>
+ -->
+    <li class="selected">
+        <a href="/installing/">Installing Perl</a>
+    </li>
+
+    <li>
+        <a href="/first_steps/">First steps</a>
+    </li>
+
+    <li>
+        <a href="/modules/">Modules</a>
+    </li>
+
+    <li>
+        <a href="/examples/">Examples</a>
+    </li>
+
+    <li>
+        <a href="/docs/">Documentation</a>
+    </li>
+    <li>
+        <a href="/books/">Books</a>
+    </li>
+    <li>
+        <a href="/faq/">FAQ / Help</a>
+    </li>
+
+</ul>
+
+
+
+    </div>
+</div>
+
+<div id="crum_holder">
+    <div id="crum" class="sub_holder">
+        &nbsp;
+    </div>
+</div>
+
+<div id="content_holder">
+    <div id="content" class="sub_holder">
+        <div id="main">
+            
+<h3>
+    A good setup for Perl on OSX:
+</h3>
+
+<img alt="Install Perl on Mac OSX" src="/i/oses/mac.gif">
+
+
+<ul class="installLinks">
+    <li>
+        <a href="osx_tools.html">OSX Editors and Terminals</a>
+    </li>
+</ul>
+
+<ul class="instructions">
+    <li>
+        <a href=
+        "http://itunes.apple.com/us/app/xcode/id422352214?mt=12&amp;ls=1">Install
+        Xcode</a> through the Mac App Store (Apple charge a small amount for 
+        this, it is a very large download), or from your OSX software DVD/SSD
+         if possible (any version will work).
+    </li>
+    <li>Open the <em>Terminal.app</em> (found in Applications -&gt; Utilities)
+    and copy &amp; paste the command below into it (then press the
+    'return' key):
+    <pre><code>curl -L http://xrl.us/installperlosx | bash</code></pre>
+    </li>
+    <li>
+        Once this is finished (it takes several minutes), quit the
+        Terminal app.
+    </li>
+</ul>
+
+
+<h3 id="explained">
+    If you are interest in the details of the setup above...
+</h3>
+<ul class="explained">
+    <li>To build and install Perl and many of the thousands of useful
+        <a href="/modules/">Perl modules</a> you need to have a <a href=
+        "http://en.wikipedia.org/wiki/Compiler">compiler</a>. For OSX the
+        easiest way to get a compiler is to install <a href=
+        "http://itunes.apple.com/us/app/xcode/id422352214?mt=12&amp;ls=1">Apple's
+        Xcode</a>. Some versions of the OSX install DVD or SSD come with the
+        'developer tools', which contains Xcode. Only the 'unix tools' section
+        of Xcode is actually required, no specific version of Xcode is needed,
+        the latest is available directly through the App Store.
+    </li>
+    <li>To interact with the command line and run Perl commands, a terminal
+    application is needed. OSX comes with Terminal.app by default, there are
+    <a href="/installing/osx_tools.html#command_line">alternatives</a>
+    available as well.
+    </li>
+    <li>OSX uses .bash_profile, but most other systems (and instructions) look
+    for .bashrc, this code sets up .bash_profie to <em>also</em> run anything
+    in .bashrc. There are <a href=
+    "http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html">other
+    differences</a> but these are not important to us.
+    </li>
+    <li>
+        <a href="http://www.perlbrew.pl/">Perlbrew</a> is used by the this
+        setup because it separates your installation from the system Perl, this
+        makes upgrading OSX less likely to cause issues with your own Perl
+        setup. It also means you can use a newer Perl than the default one
+        which comes with OSX.
+    </li>
+    <li>
+        <a href="http://www.perlbrew.pl/">Perlbrew</a> does let you have
+        multiple versions of Perl installed (very useful for testing if you
+        want to upgrade to a new version), for the purposes of learning Perl
+        you will only need one version which is why we 'switch' to use this as
+        the default.
+    </li>
+    <li>
+        <a href="https://metacpan.org/release/App-cpanminus/">App-cpanminus</a>
+        provides the <code>cpanm</code> tool, which makes <a href=
+        "/modules/">installing modules</a> very simple to do.
+    </li>
+</ul>
+
+
+
+
+        </div>
+        <div id="short_lists" class="short_lists">
+            
+            <div id="addthis">
+                <!-- AddThis Button BEGIN -->
+                <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4e8353aa661005b2"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>
+                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e8353aa661005b2"></script>
+                <!-- AddThis Button END -->
+            </div>
+            
+
+            
+
+            
+            
+
+            
+<div class="quick_links">
+        <h4 class="round">
+            Tip
+        </h4>
+        <div class="list">
+        <p>
+            <strong>Database interfaces</strong>
+            <a 
+                href="https://metacpan.org/module/DBIx::Class">DBIx::Class</a> 
+                provides an Object Relational Mapper (ORM) to databases
+                 (e.g. Oracle, SQL Server, MySQL,
+                 Postgress, Access etc)
+        </p>
+    </div>
+</div>
+
+
+            <div id="sponsor">
+        <h4>
+            <a href="siteinfo.html#sponsors">Sponsor</a>
+        </h4>
+        <p>
+    
+
+
+<a href="http://www.yellowbot.com">
+  <img class="border" border="0" src="http://st.pimg.net/perlweb/images/friends/yellowbot.vcc29f5b.gif"
+       width="150" height="40" alt="YellowBot" />Local Search
+  </a>
+
+
+        </p>
+</div>
+
+
+            <div id="spacer_for_google"></div>
+            
+        </div>
+    </div>
+</div>
+<div style="clear:both"></div>
+
+<div id="footer">
+    <div class="sub_holder">
+        
+
+        <p class="sites">
+            &nbsp;When you need <em>Perl</em> think <strong>Perl.org</strong>: <a href="http://www.perl.org/">www</a> | <a href="http://blogs.perl.org/">blogs</a> | <a href="http://jobs.perl.org/">jobs</a> | <a href="http://learn.perl.org/">learn</a> <!-- | <a href="http://lists.perl.org/">lists</a> --> | <a href="http://dev.perl.org/">dev</a>   
+        </p>
+        <p class="copyright">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/us/80x15.png"></a> © 2002-2012 Perl.org | <a href="/siteinfo.html">Site Info</a>
+        </p>
+
+
+
+
+        <div style="clear:both"></div>
+        <div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            autoDisplay: false
+            ,
+            gaTrack: true,
+            gaId: 'UA-50555-13'
+                  }, 'google_translate_element');
+        }
+        </script><script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript">
+</script>
+    </div>
+</div>
+
+
+<!--[if lt IE 7]>
+<div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative; margin-top: 2em;'>
+  <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>
+  <div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>
+    <div style='width: 75px; float: left;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-warning.jpg' alt='Warning!'/></div>
+    <div style='width: 275px; float: left; font-family: Arial, sans-serif;'>
+      <div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>You are using an outdated browser</div>
+      <div style='font-size: 12px; margin-top: 6px; line-height: 12px;'>For a better experience using this site, please upgrade to a modern web browser.</div>
+    </div>
+    <div style='width: 75px; float: left;'><a href='http://www.firefox.com' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-firefox.jpg' style='border: none;' alt='Get Firefox 3.5'/></a></div>
+    <div style='width: 75px; float: left;'><a href='http://www.browserforthebetter.com/download.html' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div>
+    <div style='width: 73px; float: left;'><a href='http://www.apple.com/safari/download/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-safari.jpg' style='border: none;' alt='Get Safari 4'/></a></div>
+    <div style='float: left;'><a href='http://www.google.com/chrome' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div>
+  </div>
+</div>
+<![endif]-->
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-50555-13']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+        'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+</body>
+</html>
+
+
