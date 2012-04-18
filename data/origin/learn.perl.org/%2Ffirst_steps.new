@@ -1,44 +1,54 @@
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Perl web framework - Catalyst - www.perl.org</title>
+    <title>First steps - learn.perl.org</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
     <link rel="shortcut icon" href="http://st.pimg.net/perlweb/favicon.v249dfa7.ico">
 
+    <link rel="stylesheet" title="perl" type="text/css" href="http://st.pimg.net/perlweb/css/shCore.v2fc9caf.css" media="all">
+    <link rel="stylesheet" title="perl" type="text/css" href="http://st.pimg.net/perlweb/css/shThemeDefault.v1365411.css" media="all">
+    <script type="text/javascript" charset="utf-8" src="http://st.pimg.net/perlweb/js/shCore.vd0ac59a.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://st.pimg.net/perlweb/js/shBrushPerl.v764e8d2.js"></script>
+
 
 
       <link rel="stylesheet" type="text/css" href="http://st.pimg.net/perlweb/css/leostyle.vf79cee0.css"> 
-      <link rel="stylesheet" type="text/css" href="http://st.pimg.net/perlweb/css/www.ve1fe6bb.css"> 
+      <link rel="stylesheet" type="text/css" href="http://st.pimg.net/perlweb/css/learn.v8bb9ac1.css"> 
 
 
-    <meta name="description" content="Perl web framework" />
-    
+    <meta name="description" content="Running your first Perl script" />
+    <meta name="keywords" content="Perl, Command line, Perl script" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://st.pimg.net/perlweb/js/jquery.corner.v84b7681.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://st.pimg.net/perlweb/js/leo.v9872b9c.js" type="text/javascript" charset="utf-8"></script>
 
 
+    <script type="text/javascript" charset="utf-8">
+        SyntaxHighlighter.all();
+    </script>
+
 
 </head>
-<body class="section_about">
+<body class="section_first_steps">
 
 <div id="header_holder">
     <div class="sub_holder">
         <div id="page_image"></div>
         <h1>
-            Perl web framework - Catalyst
+            First steps
         </h1>
         <div id="logo_holder">
            
             
 
-            <a href="/"><img src="http://st.pimg.net/perlweb/images/camel_head.v25e738a.png" id="logo" alt="Perl, modern programming" height="65" align="right" /></a>
+            <a href="/"><img src="http://st.pimg.net/perlweb/images/camel_head.v25e738a.png" id="logo" alt="Learn Perl, modern programming" height="65" align="right" /></a>
             
 
-			 <span>www.perl.org</span>
+			 <span>learn.perl.org</span>
 
         </div>
     </div>
@@ -50,28 +60,43 @@
     <li>
         <a href="/">Home</a>
     </li>
-    <li>
-        <a href="/learn.html">Learn</a>
+
+<!--     <li>
+        <a href="/tutorials/">Tutorials</a>
     </li>
     <li>
-        <a href="/docs.html">Documentation</a>
+        <a href="/faq/">FAQ</a>
+    </li>
+ -->
+    <li>
+        <a href="/installing/">Installing Perl</a>
+    </li>
+
+    <li class="selected">
+        <a href="/first_steps/">First steps</a>
+    </li>
+
+    <li>
+        <a href="/modules/">Modules</a>
+    </li>
+
+    <li>
+        <a href="/examples/">Examples</a>
+    </li>
+
+    <li>
+        <a href="/docs/">Documentation</a>
     </li>
     <li>
-        <a href="/cpan.html">CPAN</a>
+        <a href="/books/">Books</a>
     </li>
     <li>
-        <a href="/community.html">Community</a>
+        <a href="/faq/">FAQ / Help</a>
     </li>
-    <li>
-        <a href="/contribute.html">Get Involved</a>
-    </li>
-    <li class="sub selected">
-        <a href="/about.html">About Perl</a>
-    </li>
-    <li class="sub">
-        <a href="/get.html">Download</a>
-    </li>
+
 </ul>
+
+
 
     </div>
 </div>
@@ -87,90 +112,98 @@
         <div id="main">
             
 <h2>
-    Catalyst - Perl web framework
+    How to get started with your first Perl script
 </h2>
-<p>
-    <em>Tired of inflexible "out-of-the-box" solutions that don't do, or do more than, you want? - Catalyst lets you develop exactly what you need.</em>
-</p>
-<p>
-    The <a href="http://www.catalystframework.org/">Catalyst Web Framework</a> is a comprehensive and flexible environment for quickly building high-functionality applications and is aimed at medium- to large-scale web projects. Catalyst has been designed with rapid development, scalability, extendability and maintenance in mind, including strong belief in backwards compatible deployment. Catalyst is based on the <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a> (Model, View, Controller) design pattern, components are cleanly separated and easily interchangeable.
-</p>
-<p>
-    The model contains business logic and interaction with any database or other systems. View determines how data is rendered, if you want to use an HTML template, or output the data as JSON. Controllers should be lightweight and handle the interaction between user and the model(s) rendering the results with the required view.
-</p>
-<p>
-    Catalyst does not dictate which modules should be used for models and viewers, although the current standard practice is to use <a href="/about/whitepapers/perl-database-orm.html">DBIx::Class</a> for the database model and Template Toolkit for the view. It is easy to add your own, or use one of the many available <a href="http://search.cpan.org/search?query=Catalyst::Model&amp;mode=module">models</a> or <a href="http://search.cpan.org/search?query=Catalyst::View&amp;mode=module">views</a>; creating JSON or RSS versions of your content only requires a different view on your data.
-</p>
-<p>
-    Session management, login and authorization, caching, internationalization and many more plugins are available should they be required. Catalyst is designed so that each project can be quickly customised for the specific needs of that project. This gives developers full control over the systems requirements, using standard components or swapping them out should a custom solution be required.
-</p>
-<p>
-    Based on <a href="/about/whitepapers/perl-object-oriented.html">Moose</a>, the Perl5 object system, Catalyst is easy to extend. Catalyst is able to run on many different web servers, including Apache's mod_perl, FastCGI and a standalone server for development, so you can deploy on or alongside your existing architecture.
-</p>
-<h4>
-    Quotes
-</h4>
-<ul>
-    <li>"Catalyst is the new frontier of web development: it's easy, productive, elegant and fun." - Michele Beltrame
-    </li>
-    <li>"I can wholeheartedly recommend Catalyst if you're looking for a sane, mature and well-supported Perl MVC framework!" - Tobias Kremer
-    </li>
-    <li>"This is by far the most useful and easy to use MVC Framework, I've ever seen... It is View and Model agnostic (to suit your habits), simple, powerful, practical to use AND easy to extend. " -- Arnaud Assad
-    </li>
-</ul>
 
-<h4>
-    Resources:
-</h4>
-<ul>
-    <li><a href="http://search.cpan.org/dist/Catalyst-Runtime/">Latest Catalyst</a></li>
-    <li><a href="http://www.catalystframework.org/">Official site</a></li>
-    <li><a href="http://search.cpan.org/search?query=catalyst::plugin&mode=dist">Catalyst plugins</a></li>
-    <li><a href="http://en.wikipedia.org/wiki/Model–view–controller">MVC</a></li>
-</ul>
-
-<h4>
-    Alternative Perl Web Frameworks:
-</h4>
-<ul>
-    <li><a href="http://search.cpan.org/dist/Dancer/">Dancer</a></li>
-    <li><a href="http://search.cpan.org/dist/Jifty/">Jifty</a></li>
-    <li><a href="http://www.mojolicious.org/">Mojolicious</a> (<a href="http://search.cpan.org/dist/Mojolicious/">on CPAN</a>)</li>
-</ul>
-<h4>
-    Article Author
-</h4>
-<p><a href="http://leo.cuckoo.org/">Leo Lapworth</a></p>
+<p>
+    After <a href="/installing/">installing Perl</a> you will want to actually
+    run some Perl code. You need to use
+    a command line (<a href="/installing/windows_tools.html#command_line">Windows</a>, 
+    <a href="/installing/osx_tools.html#command_line">Mac OSX</a>, 
+    <a href="/installing/unix_linux_tools.html#command_line">Unix/Linux</a>) 
+    program to do this.
+</p>
     
+<p>
+Check you have Perl installed by typing the command below into
+your command line program:
+<pre><code>perl -v</code></pre>
+</p>
+
+<p>
+    Now create a 'perl_tests' folder to save your test files into, you will need to be able to find this from the command line.
+</p>
+
+<p>Open a text editor (<a href="/installing/windows_tools.html#editors">Windows</a>, 
+<a href="/installing/osx_tools.html#editors">Mac OSX</a>, 
+<a href="/installing/unix_linux_tools.html#editors">Unix/Linux</a>) creating a new file with the following
+    content</p> 
+         
+<pre class="brush: pl; class-name: 'highlight'; toolbar: false; gutter: false">#!/usr/bin/perl
+use strict;
+use warnings;
+
+print &quot;hi NAME\n&quot;;</pre>
+
+
+<p>Save this file as <a href="http://en.wikipedia.org/wiki/Plain_text">plain text</a> into your 'perl_tests' folder, name the file 'hello_world.pl'.
+</p>
+
+<p>Then run the script from the command line by typing:
+         <pre><code>perl /path/to/perl_tests/hello_world.pl</code></pre>
+    </p>
+    <p>
+        Open the file again and replace NAME, with your name. Save the file.
+    </p>
+    <p>
+        Run the script again by typing <pre><code>perl /path/to/perl_tests/hello_world.pl</code></pre>
+    </p>
+
+<h3>Video of the above steps</h3>
+<p>
+   <iframe width="640" height="480" src="http://www.youtube.com/embed/0cupB4XOU84" frameborder="0" allowfullscreen></iframe>
+</p>
+<p>(<a href="http://youtu.be/_D5d1PHJTXM">Mac version</a>)</p>
 
 
         </div>
         <div id="short_lists" class="short_lists">
             
+            <div id="addthis">
+                <!-- AddThis Button BEGIN -->
+                <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4e8353aa661005b2"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>
+                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e8353aa661005b2"></script>
+                <!-- AddThis Button END -->
+            </div>
+            
 
             <div class="quick_links">
         <h4 class="round">
-            More about Perl
+            Quick starts
         </h4>
         <div class="list">
         
-        <p><a href="/about/whitepapers/">White papers</a></p>        
+        <p><a href="/first_steps/">First Steps</a></p>        
         
-        <p><a href="/app.html">Application programming</a></p>        
-        
-        <p><a href="/about/reduce-risks.html">Reducing Business Risks</a></p>        
-        
-        <p><a href="http://jobs.perl.org/">Perl Jobs</a></p>        
-        
-        <p><a href="/about/style-guide.html">"perl" or "Perl"?</a></p>        
-        
-        <p><a href="/camel.html">Camels and Perl</a></p>        
+        <p><a href="/tutorials/">Perl tutorials</a></p>        
         
         </div>
 </div>
 
 
-            
+            <div class="quick_links">
+        <h4 class="round">
+            Related sites
+        </h4>
+        <div class="list">
+        
+        <p><a  href="http://www.perl.org/">Perl.org</a></p>        
+        
+        <p><a  href="http://perldoc.perl.org/">Perldoc</a></p>        
+        
+        </div>
+</div>
+
             
 
             
@@ -180,9 +213,9 @@
         </h4>
         <div class="list">
         <p>
-            <strong>Need templates?</strong>
-            look at... <a
-                 href="http://search.cpan.org/dist/Template-Toolkit/">Template Toolkit</a>
+            <strong>Test your code</strong>
+            use <a href="https://metacpan.org/module/Test::More">Test::More</a> or 
+                <a href="https://metacpan.org/module/Test::Most">Test::Most</a>
         </p>
     </div>
 </div>
@@ -190,14 +223,15 @@
 
             <div id="sponsor">
         <h4>
-            <a href="/siteinfo.html#sponsors">Sponsor</a>
+            <a href="siteinfo.html#sponsors">Sponsor</a>
         </h4>
         <p>
-          
+    
 
 
- <a href="http://develooper.com">
-  <img class="border" border="0" src="http://st.pimg.net/perlweb/images/friends/develooperlogo-160t.v5a1f4a3.png" height="36" width="160" alt="Develooper" />Perl Consulting
+<a href="http://www.yellowbot.com">
+  <img class="border" border="0" src="http://st.pimg.net/perlweb/images/friends/yellowbot.vcc29f5b.gif"
+       width="150" height="40" alt="YellowBot" />Local Search
   </a>
 
 
@@ -234,7 +268,7 @@ function googleTranslateElementInit() {
             autoDisplay: false
             ,
             gaTrack: true,
-            gaId: 'UA-50555-1'
+            gaId: 'UA-50555-13'
                   }, 'google_translate_element');
         }
         </script><script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript">
@@ -263,7 +297,7 @@ function googleTranslateElementInit() {
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-50555-1']);
+  _gaq.push(['_setAccount', 'UA-50555-13']);
   _gaq.push(['_trackPageview']);
   (function() {
     var ga = document.createElement('script');

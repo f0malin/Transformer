@@ -1,44 +1,54 @@
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Perl web framework - Catalyst - www.perl.org</title>
+    <title>Perl modules - learn.perl.org</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
     <link rel="shortcut icon" href="http://st.pimg.net/perlweb/favicon.v249dfa7.ico">
 
+    <link rel="stylesheet" title="perl" type="text/css" href="http://st.pimg.net/perlweb/css/shCore.v2fc9caf.css" media="all">
+    <link rel="stylesheet" title="perl" type="text/css" href="http://st.pimg.net/perlweb/css/shThemeDefault.v1365411.css" media="all">
+    <script type="text/javascript" charset="utf-8" src="http://st.pimg.net/perlweb/js/shCore.vd0ac59a.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://st.pimg.net/perlweb/js/shBrushPerl.v764e8d2.js"></script>
+
 
 
       <link rel="stylesheet" type="text/css" href="http://st.pimg.net/perlweb/css/leostyle.vf79cee0.css"> 
-      <link rel="stylesheet" type="text/css" href="http://st.pimg.net/perlweb/css/www.ve1fe6bb.css"> 
+      <link rel="stylesheet" type="text/css" href="http://st.pimg.net/perlweb/css/learn.v8bb9ac1.css"> 
 
 
-    <meta name="description" content="Perl web framework" />
-    
+    <meta name="description" content="Introduction to Perl Modules" />
+    <meta name="keywords" content="Perl, Perl Modules, Perl Packages" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://st.pimg.net/perlweb/js/jquery.corner.v84b7681.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://st.pimg.net/perlweb/js/leo.v9872b9c.js" type="text/javascript" charset="utf-8"></script>
 
 
+    <script type="text/javascript" charset="utf-8">
+        SyntaxHighlighter.all();
+    </script>
+
 
 </head>
-<body class="section_about">
+<body class="section_modules">
 
 <div id="header_holder">
     <div class="sub_holder">
         <div id="page_image"></div>
         <h1>
-            Perl web framework - Catalyst
+            Perl modules
         </h1>
         <div id="logo_holder">
            
             
 
-            <a href="/"><img src="http://st.pimg.net/perlweb/images/camel_head.v25e738a.png" id="logo" alt="Perl, modern programming" height="65" align="right" /></a>
+            <a href="/"><img src="http://st.pimg.net/perlweb/images/camel_head.v25e738a.png" id="logo" alt="Learn Perl, modern programming" height="65" align="right" /></a>
             
 
-			 <span>www.perl.org</span>
+			 <span>learn.perl.org</span>
 
         </div>
     </div>
@@ -50,28 +60,43 @@
     <li>
         <a href="/">Home</a>
     </li>
-    <li>
-        <a href="/learn.html">Learn</a>
+
+<!--     <li>
+        <a href="/tutorials/">Tutorials</a>
     </li>
     <li>
-        <a href="/docs.html">Documentation</a>
+        <a href="/faq/">FAQ</a>
+    </li>
+ -->
+    <li>
+        <a href="/installing/">Installing Perl</a>
+    </li>
+
+    <li>
+        <a href="/first_steps/">First steps</a>
+    </li>
+
+    <li class="selected">
+        <a href="/modules/">Modules</a>
+    </li>
+
+    <li>
+        <a href="/examples/">Examples</a>
+    </li>
+
+    <li>
+        <a href="/docs/">Documentation</a>
     </li>
     <li>
-        <a href="/cpan.html">CPAN</a>
+        <a href="/books/">Books</a>
     </li>
     <li>
-        <a href="/community.html">Community</a>
+        <a href="/faq/">FAQ / Help</a>
     </li>
-    <li>
-        <a href="/contribute.html">Get Involved</a>
-    </li>
-    <li class="sub selected">
-        <a href="/about.html">About Perl</a>
-    </li>
-    <li class="sub">
-        <a href="/get.html">Download</a>
-    </li>
+
 </ul>
+
+
 
     </div>
 </div>
@@ -87,88 +112,72 @@
         <div id="main">
             
 <h2>
-    Catalyst - Perl web framework
+    Perl modules, what are they and why do I care?
 </h2>
-<p>
-    <em>Tired of inflexible "out-of-the-box" solutions that don't do, or do more than, you want? - Catalyst lets you develop exactly what you need.</em>
-</p>
-<p>
-    The <a href="http://www.catalystframework.org/">Catalyst Web Framework</a> is a comprehensive and flexible environment for quickly building high-functionality applications and is aimed at medium- to large-scale web projects. Catalyst has been designed with rapid development, scalability, extendability and maintenance in mind, including strong belief in backwards compatible deployment. Catalyst is based on the <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a> (Model, View, Controller) design pattern, components are cleanly separated and easily interchangeable.
-</p>
-<p>
-    The model contains business logic and interaction with any database or other systems. View determines how data is rendered, if you want to use an HTML template, or output the data as JSON. Controllers should be lightweight and handle the interaction between user and the model(s) rendering the results with the required view.
-</p>
-<p>
-    Catalyst does not dictate which modules should be used for models and viewers, although the current standard practice is to use <a href="/about/whitepapers/perl-database-orm.html">DBIx::Class</a> for the database model and Template Toolkit for the view. It is easy to add your own, or use one of the many available <a href="http://search.cpan.org/search?query=Catalyst::Model&amp;mode=module">models</a> or <a href="http://search.cpan.org/search?query=Catalyst::View&amp;mode=module">views</a>; creating JSON or RSS versions of your content only requires a different view on your data.
-</p>
-<p>
-    Session management, login and authorization, caching, internationalization and many more plugins are available should they be required. Catalyst is designed so that each project can be quickly customised for the specific needs of that project. This gives developers full control over the systems requirements, using standard components or swapping them out should a custom solution be required.
-</p>
-<p>
-    Based on <a href="/about/whitepapers/perl-object-oriented.html">Moose</a>, the Perl5 object system, Catalyst is easy to extend. Catalyst is able to run on many different web servers, including Apache's mod_perl, FastCGI and a standalone server for development, so you can deploy on or alongside your existing architecture.
-</p>
-<h4>
-    Quotes
-</h4>
-<ul>
-    <li>"Catalyst is the new frontier of web development: it's easy, productive, elegant and fun." - Michele Beltrame
-    </li>
-    <li>"I can wholeheartedly recommend Catalyst if you're looking for a sane, mature and well-supported Perl MVC framework!" - Tobias Kremer
-    </li>
-    <li>"This is by far the most useful and easy to use MVC Framework, I've ever seen... It is View and Model agnostic (to suit your habits), simple, powerful, practical to use AND easy to extend. " -- Arnaud Assad
-    </li>
-</ul>
-
-<h4>
-    Resources:
-</h4>
-<ul>
-    <li><a href="http://search.cpan.org/dist/Catalyst-Runtime/">Latest Catalyst</a></li>
-    <li><a href="http://www.catalystframework.org/">Official site</a></li>
-    <li><a href="http://search.cpan.org/search?query=catalyst::plugin&mode=dist">Catalyst plugins</a></li>
-    <li><a href="http://en.wikipedia.org/wiki/Model–view–controller">MVC</a></li>
-</ul>
-
-<h4>
-    Alternative Perl Web Frameworks:
-</h4>
-<ul>
-    <li><a href="http://search.cpan.org/dist/Dancer/">Dancer</a></li>
-    <li><a href="http://search.cpan.org/dist/Jifty/">Jifty</a></li>
-    <li><a href="http://www.mojolicious.org/">Mojolicious</a> (<a href="http://search.cpan.org/dist/Mojolicious/">on CPAN</a>)</li>
-</ul>
-<h4>
-    Article Author
-</h4>
-<p><a href="http://leo.cuckoo.org/">Leo Lapworth</a></p>
-    
 
 
+<h4>What is a Perl module?</h4>
+
+<p>
+    Perl <a href=
+    "http://perldoc.perl.org/perlmod.html">modules</a> 
+    are a set of related functions in a library file. They are specifically
+    designed to be reusable by other modules or programs. 
+    There are 99,000 
+    modules ready for you to use on the <a href="http://www.cpan.org/">Comprehensive Perl Archive Network</a>. 
+</p>
+
+<p> 
+    You should be aware that most Perl modules are written in Perl but some use <a href=
+    "http://perldoc.perl.org/perlxs.html">XS</a> (they are written in <a href=
+    "http://en.wikipedia.org/wiki/C_(programming_language)">C</a>) so require a
+    C <a href="http://en.wikipedia.org/wiki/Compiler">compiler</a> (if you followed
+    the <a href="/installing/">installing</a> instructions you already
+    have one). Modules may have dependencies on other modules
+    (almost always on <a href="http://www.cpan.org/">CPAN</a>) and cannot be
+    installed without them (or without a specific version of them). Many modules on
+    CPAN now require a recent version of Perl (version 5.8 or above).
+</p>
+
+<h4>Where can I find modules?</h4>
+<p>
+    <a href="https://metacpan.org/">https://metacpan.org/</a> lets you
+    search the 99,000 modules on CPAN.
+</p>
+
+<h4>Which modules should I use?</h4>
+<p>
+    Metacpan has user ratings, also have a look at
+    <a href="https://metacpan.org/release/Task-Kensho/">Task::Kensho</a>.
+    The <a href="/examples/">examples</a> section and <a href="/faq/">FAQ</a> 
+    also have some recommendations, you could also ask the Perl <a href="http://www.perl.org/community.html">community</a>.
+</p>
+
+
+<h4>How do I install a module?</h4>
+
+<p>If you haven't already <a href="https://metacpan.org/module/App::cpanminus#INSTALLATION">install cpanm</a> do that first:</p>
+<p>
+<pre><code>cpan App::cpanminus</code></pre>
+</p>
+<p>Then to install any module from CPAN</p>
+<p>
+<pre><code>cpanm Module::Name</code></pre>
+</p>
+
+<!-- TODO: Video of this -->
         </div>
         <div id="short_lists" class="short_lists">
             
+            <div id="addthis">
+                <!-- AddThis Button BEGIN -->
+                <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4e8353aa661005b2"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>
+                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e8353aa661005b2"></script>
+                <!-- AddThis Button END -->
+            </div>
+            
 
-            <div class="quick_links">
-        <h4 class="round">
-            More about Perl
-        </h4>
-        <div class="list">
-        
-        <p><a href="/about/whitepapers/">White papers</a></p>        
-        
-        <p><a href="/app.html">Application programming</a></p>        
-        
-        <p><a href="/about/reduce-risks.html">Reducing Business Risks</a></p>        
-        
-        <p><a href="http://jobs.perl.org/">Perl Jobs</a></p>        
-        
-        <p><a href="/about/style-guide.html">"perl" or "Perl"?</a></p>        
-        
-        <p><a href="/camel.html">Camels and Perl</a></p>        
-        
-        </div>
-</div>
-
+            
 
             
             
@@ -180,9 +189,9 @@
         </h4>
         <div class="list">
         <p>
-            <strong>Need templates?</strong>
-            look at... <a
-                 href="http://search.cpan.org/dist/Template-Toolkit/">Template Toolkit</a>
+            <strong>Test your code</strong>
+            use <a href="https://metacpan.org/module/Test::More">Test::More</a> or 
+                <a href="https://metacpan.org/module/Test::Most">Test::Most</a>
         </p>
     </div>
 </div>
@@ -190,14 +199,15 @@
 
             <div id="sponsor">
         <h4>
-            <a href="/siteinfo.html#sponsors">Sponsor</a>
+            <a href="siteinfo.html#sponsors">Sponsor</a>
         </h4>
         <p>
-          
+    
 
 
- <a href="http://develooper.com">
-  <img class="border" border="0" src="http://st.pimg.net/perlweb/images/friends/develooperlogo-160t.v5a1f4a3.png" height="36" width="160" alt="Develooper" />Perl Consulting
+<a href="http://www.yellowbot.com">
+  <img class="border" border="0" src="http://st.pimg.net/perlweb/images/friends/yellowbot.vcc29f5b.gif"
+       width="150" height="40" alt="YellowBot" />Local Search
   </a>
 
 
@@ -234,7 +244,7 @@ function googleTranslateElementInit() {
             autoDisplay: false
             ,
             gaTrack: true,
-            gaId: 'UA-50555-1'
+            gaId: 'UA-50555-13'
                   }, 'google_translate_element');
         }
         </script><script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript">
@@ -263,7 +273,7 @@ function googleTranslateElementInit() {
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-50555-1']);
+  _gaq.push(['_setAccount', 'UA-50555-13']);
   _gaq.push(['_trackPageview']);
   (function() {
     var ga = document.createElement('script');

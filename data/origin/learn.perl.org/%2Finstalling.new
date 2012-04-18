@@ -1,12 +1,10 @@
 
 
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Validating an email address - learn.perl.org</title>
+    <title>Installing Perl - learn.perl.org</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
     <link rel="shortcut icon" href="http://st.pimg.net/perlweb/favicon.v249dfa7.ico">
@@ -22,8 +20,8 @@
       <link rel="stylesheet" type="text/css" href="http://st.pimg.net/perlweb/css/learn.v8bb9ac1.css"> 
 
 
-    
-    
+    <meta name="description" content="How to install Perl on Window, OSX and Unix/Linux" />
+    <meta name="keywords" content="Perl, Installing Perl, Perl setup" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://st.pimg.net/perlweb/js/jquery.corner.v84b7681.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://st.pimg.net/perlweb/js/leo.v9872b9c.js" type="text/javascript" charset="utf-8"></script>
@@ -35,13 +33,13 @@
 
 
 </head>
-<body class="section_examples">
+<body class="section_installing">
 
 <div id="header_holder">
     <div class="sub_holder">
         <div id="page_image"></div>
         <h1>
-            Validating an email address
+            Installing Perl
         </h1>
         <div id="logo_holder">
            
@@ -70,7 +68,7 @@
         <a href="/faq/">FAQ</a>
     </li>
  -->
-    <li>
+    <li class="selected">
         <a href="/installing/">Installing Perl</a>
     </li>
 
@@ -82,7 +80,7 @@
         <a href="/modules/">Modules</a>
     </li>
 
-    <li class="selected">
+    <li>
         <a href="/examples/">Examples</a>
     </li>
 
@@ -112,22 +110,49 @@
 <div id="content_holder">
     <div id="content" class="sub_holder">
         <div id="main">
-            
+            <h2>
+    Recommended approaches to installing Perl
+</h2>
 
-<pre class="brush: pl; class-name: 'highlight'; toolbar: false; gutter: false">
-#!/usr/bin/perl
-use strict;
-use warnings;
+<table id="os_table">
+    <tr>
+        <td>
+            <a href="windows.html"><img alt="Install Perl on Windows" src=
+            "/i/oses/windows.gif"></a>
+        </td>
+        <td>
+            <a href="windows.html">Installing Perl on Windows</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="osx.html"><img alt="Install Perl on Mac OSX" src=
+            "/i/oses/mac.gif"></a>
+        </td>
+        <td>
+            <a href="osx.html">Installing Perl on OSX</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="unix_linux.html"><img alt="Install Perl on Unix/Linux"
+            src="/i/oses/linux.gif"></a>
+        </td>
+        <td>
+            <a href="unix_linux.html">Installing Perl on Unix/Linux</a>
+        </td>
+    </tr>
+</table>
 
-use Email::Valid;
 
-my $email_address = 'a.n@example.com';
 
-unless( Email::Valid-&gt;address($email_address) ) {
-    print &quot;Sorry, that email address is not valid!&quot;;
-}
 
-</pre>
+
+
+
+
+
+
 
 
         </div>
@@ -141,31 +166,7 @@ unless( Email::Valid-&gt;address($email_address) ) {
             </div>
             
 
-            <div class="quick_links">
-        <h4 class="round">
-            Other examples
-        </h4>
-        <div class="list">
-        
-        <p><a href="/examples/email.html">Sending an email</a></p>        
-        
-        <p><a href="/examples/email_valid.html">Validate an email</a></p>        
-        
-        <p><a href="/examples/directory_list.html">List contents of a directory</a></p>        
-        
-        <p><a href="/examples/read_write_file.html">Reading and writing to file</a></p>        
-        
-        <p><a href="/examples/spreadsheet_read.html">Read a spreadsheet</a></p>        
-        
-        <p><a href="/examples/configuration_files.html">Processing configuration files</a></p>        
-        
-        <p><a href="/examples/static_server.html">Setting up a local static web server</a></p>        
-        
-        <p><a href="/examples/dns.html">Resolving DNS</a></p>        
-        
-        </div>
-</div>
-
+            
 
             
             
@@ -177,9 +178,10 @@ unless( Email::Valid-&gt;address($email_address) ) {
         </h4>
         <div class="list">
         <p>
-            <strong>Test your code</strong>
-            use <a href="https://metacpan.org/module/Test::More">Test::More</a> or 
-                <a href="https://metacpan.org/module/Test::Most">Test::Most</a>
+            <strong>Object Oriented programming</strong>
+            <a href="https://metacpan.org/module/Moose">Moose</a> 
+                (and associated MooseX modules) are a postmodern object system for
+                Perl 5
         </p>
     </div>
 </div>
