@@ -25,8 +25,8 @@ our $config = {
         '127.0.0.1:5000' => 'www.perl.org',
         'learn.perlchina.org' => 'learn.perl.org',
     },
-    cache_timeout => 600,
-    cache_timeout_rand => 120,
+    cache_timeout => 3600,
+    cache_timeout_rand => 300,
 };
 
 our $ua = LWP::UserAgent->new;
@@ -229,14 +229,34 @@ sub get_cpan {
     my $env = shift;
     
     my $url = "http://search.cpan.org" . $env->{REQUEST_URI};
-    
-    # 1 - fetch from remote
-    my $res = $ua->get($url);
-    my $content_type = $res->header('Content-Type');
-    my $content = $res->content;
+
+    my $code;
+    my $content;
+    my $content_type;
+    # 0 - if cached
+    my $cfile = "data/origin/search.cpan.org/" . uri_escape($env->{REQUEST_URI}) . ".new";
+    if (-e($cfile) && (time - (stat($cfile))[9] < $config->{cache_timeout}+int(rand($config->{cache_timeout_rand})))) {
+        my $rcontent = cat_file($cfile);
+        $content = $$rcontent;
+        $content_type = "text/html;charset=utf-8";
+        $code = 200;
+        ### cached : $url
+    } else {
+        # 1 - fetch from remote
+        my $res = $ua->get($url);
+        $content_type = $res->header('Content-Type');
+        $content = $res->content;
+        $code = $res->code;
+        ### no cache: $url
+        if ($code == 200 && $content_type =~ m{text/}i) {
+            open my $fh, ">", $cfile or die $!;
+            print $fh $content;
+            close $fh;
+        }
+    }
     
     # 2 - if .pod or .pm, modify content
-    if ($res->code == 200 && $url =~ m{/lib/(.+)\.p(?:m|od)$}) {
+    if ($code == 200 && $url =~ m{/lib/(.+)\.p(?:m|od)$}) {
         my $module = $1;
         $module =~ s{/}{-}g;
         my $tfile = 'data/trans/cpan/' . $module . ".old";
@@ -255,7 +275,7 @@ sub get_cpan {
     }
 
     # 3 - output
-    return [$res->code, ['Content-Type' => $content_type, 'Content-Length' => length($content)], [$content]];
+    return [$code, ['Content-Type' => $content_type, 'Content-Length' => length($content)], [$content]];
 }
 
 sub {
