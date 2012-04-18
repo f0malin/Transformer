@@ -38,6 +38,8 @@ PerlChina 社区网站是对 L<http://www.perl.org> 、L<http://search.cpan.org>
 
 =item * 网站每1分钟会自动 pull 翻译文件。
 
+=item * 翻译 CPAN 与以上翻译网站类似，只是需要运行 C<perl start_trans_cpan.pl Dancer::Request> 这样来生成翻译骨架。前面这个指令会生成 C<data/origin/cpan/Dancer-Request.old> 文件（基准原文文件）和 C<data/trans/cpan/Dancer-Request.old> 文件（翻译工作针对此文件进行）。注意需要在翻译文件顶部加上 C<=encoding utf-8> 和 C<=cut> 两行，翻译完后文件渲染才不会乱码。翻译后的文件可以在 L<http://cpan.perlchina.org> 查看，如： L<http://cpan.perlchina.org/~rschupp/PAR-Packer-1.013/lib/PAR/Packer.pm> 。
+
 =back
 
 =head2 不加入翻译团队
@@ -57,6 +59,8 @@ PerlChina 社区网站是对 L<http://www.perl.org> 、L<http://search.cpan.org>
 =head1 注意事项
 
 =over 4
+
+=item * 新加入翻译的志愿者最好加入 QQ 群 552603 ，方便在初始流程不熟的时候得到帮助，并能够跟大家一起探讨翻译用语约定。
 
 =item * 不要破坏页面结构和缩进，只在原来位置替换英文。
 
