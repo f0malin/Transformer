@@ -6,6 +6,7 @@ use Smart::Comments "###";
 use LWP::UserAgent;
 use URI::Escape qw(uri_escape);
 use Text::Xslate qw(mark_raw);
+use Pod::Simple::XHTML;
 
 our $config = {
     host_map => {
@@ -24,24 +25,13 @@ $ua2->max_redirect(0);
 
 our $tx = Text::Xslate->new();
 
-our %access_count_of = ();
-our $last_timeout = 0;
-our $timeout_interval = 300;
-
-sub is_timeout {
-    if (time - $last_timeout > $timeout_interval) {
-        time_out();
-        $last_timeout = time;
-    }
-}
-
-sub time_out {
-    my @sorted_keys = sort { $access_count_of{$b} <=> $access_count_of{$a} } keys(%access_count_of);
-    print "access count:\n";
-    for my $key (@sorted_keys) {
-        print "\t", $key, "\t", $access_count_of{$key}, "\n";
-    }
-}
+our $pod_parser = Pod::Simple::XHTML->new();
+$pod_parser->perldoc_url_prefix("http://cpan.perlchina.org/perldoc?");
+$pod_parser->html_charset('utf-8');
+$pod_parser->html_encode_chars("<>&");
+$pod_parser->html_header("");
+$pod_parser->html_footer("");
+$pod_parser->index(1);
 
 sub calc_url {
     my $env = shift;
@@ -98,7 +88,6 @@ sub get_content {
         return [200, ['Content-Type' =>  'text/html;charset=utf-8', 'Content-Length' => length($$rcontent)], [$$rcontent]];
     } else {
         ### no translation: $file, $trans_file
-        $access_count_of{$file} ++;
     }
 
     if (-e($file) && (time - (stat($file))[9] < $config->{cache_timeout}+int(rand($config->{cache_timeout_rand})))) {
@@ -135,37 +124,111 @@ sub get_content {
     return [ $res->code, \@headers, [$content]];
 }
 
+sub render_pod {
+    my $file = shift;
+    my $content;
+    $pod_parser->output_string(\$content);
+    $pod_parser->parse_file($file);
+    my $content_length = length($content);
+    return [200, ['Content-Type' => 'text/html;charset=utf-8', 'Content-Length' => $content_length], [$content]];
+}
+
 sub get_pod {
     my ($env, $module) = @_;
 
-    # get module' src's url
+    # 1 - if translation exist
+    my $tfile = "data/trans/cpan/$module.old";
+    # replace :: to -
+    $tfile =~ s{::}{-}g;
+    if (-e $tfile) {
+        ### use translation: $module, $tfile
+        return render_pod($tfile);
+    }
+
+    # 2 - elsif cached exist and not expired
+    my $cfile = "data/origin/cpan/$module.new";
+    # replace :: to -
+    $cfile =~ s{::}{-}g;
+    if (-e($cfile) && (time - (stat($cfile))[9] < $config->{cache_timeout}+int(rand($config->{cache_timeout_rand})))) {
+        ### use cached: $module, $cfile
+        return render_pod($cfile);
+    }
+
+    # 3 - else fetch remote pod and save it to cache
+    # get module' src's url, using ua2 ( don't follow redirects )
     my $res = $ua2->get("http://search.cpan.org/perldoc?" . $module);
     if ($res->code eq 302) {
         my $url = $res->header('location');
-        ### pod url: $url
         $url =~ s{^/~([^/]+)}{'http://cpansearch.perl.org/src/'.uc($1)}e;
-        ### pod source url: $url
         my $res2 = $ua2->get($url);
-        my $content_type = $res2->header('content-type');
-        my $content_length = $res2->header('content-length');
-        my @headers = ('Content-Type' => $content_type);
-        if ($content_length) {
-            push @headers, 'Content-Length' => $content_length;
+
+        # if is pod
+        if ($res2->code == 200) {
+            my $content;
+            $pod_parser->output_string(\$content);
+            $pod_parser->parse_string_document($res2->content);
+            my $content_length = length($content);
+            # save to cache
+            open my $fh, ">", $cfile or die $!;
+            print $fh $res2->content;
+            close $fh;
+            ### fetch from remote: $module, $url, $cfile
+            return [200, ['Content-Type' => 'text/html;charset=utf-8', 'Content-Length' => $content_length], [$content]];
         }
-        return [$res2->code, \@headers, [$res2->content]];
-    } else {
-        return [404, ['Content-Type' => 'text/plain', 'Content-Length' => 14], ['no this module']];
     }
+
+    # 4 - if fetch failed, fall back to cache
+    if (-e $cfile) {
+        ### fall back to cache: $module, $cfile
+        return render_file($cfile);
+    }
+    
+    # 5 - if cannot fall back to cache, report error
+    ### 404: $module
+    return [404, ['Content-Type' => 'text/plain', 'Content-Length' => 14], ['no this module']];
+}
+
+sub get_cpan {
+    my $env = shift;
+    
+    my $url = "http://search.cpan.org" . $env->{REQUEST_URI};
+    
+    # 1 - fetch from remote
+    my $res = $ua->get($url);
+    my $content_type = $res->header('Content-Type');
+    my $content = $res->content;
+    
+    # 2 - if .pod or .pm, modify content
+    if ($res->code == 200 && $url =~ m{/lib/(.+)\.p(?:m|od)$}) {
+        my $module = $1;
+        $module =~ s{/}{-}g;
+        my $tfile = 'data/trans/cpan/' . $module . ".old";
+        ### translate file path: $tfile
+        # 2.1 - if translation exists
+        if (-e $tfile) {
+            ### translate file exist: $tfile
+            my $html;
+            $pod_parser->output_string(\$html);
+            $pod_parser->parse_file($tfile);
+            $content_type = "text/html;charset=utf-8";
+            $content =~ s{^(.*)<div class="?pod"?>.*(<div class="?footer"?>.*)$}{$1$html$2}s;
+            
+        }
+    }
+
+    # 3 - output
+    return [$res->code, ['Content-Type' => $content_type, 'Content-Length' => length($content)], [$content]];
 }
 
 sub {
     my $env = shift;
     #### $env
-    is_timeout;
-    if ($env->{'REQUEST_URI'} =~ m{^/perldoc\?(.*)$}) {
-        my $module = $1;
-        ### pod module : $module
-        return get_pod($env, $module);
+#    if ($env->{'REQUEST_URI'} =~ m{^/perldoc\?(.*)$}) {
+#        my $module = $1;
+#        return get_pod($env, $module);
+#    } elsif ($env->{'HTTP_HOST'} =~ m{^cpan\.perlchina\.org}) {
+    if ($env->{'HTTP_HOST'} =~ m{^cpan\.perlchina\.org}) {
+        return get_cpan($env);
     } else {
         return get_content($env);
     }
