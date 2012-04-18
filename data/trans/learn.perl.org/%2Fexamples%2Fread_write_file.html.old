@@ -172,8 +172,7 @@ while( my $line = $file_handle-&gt;getline() ) {
     和文件模块 (<a href="https://metacpan.org/module/Path::Class::File">Path::Class::File</a>)
     变的方便、简洁。
     尝试在你的实现中使用 file() 或者 dir() 对象，
-    值得注意的是如果同时使用了别的模块，
-    你需要使用'stringify'把对象转换成字符串：
+    你可以使用'stringify'把对象转换成路径字符串配合其他模块的使用：
     
 <pre class="brush: pl; class-name: 'highlight'; toolbar: false; gutter: false">    $file-&gt;stringify();
     $dir-&gt;stringify();
@@ -183,7 +182,7 @@ while( my $line = $file_handle-&gt;getline() ) {
 <p>
     当方法调用失败的时候，<a href="https://metacpan.org/module/autodie">autodie</a> 强制它们
     抛出有用的错误信息 (代替返回undef)。
-    这样会使实现变的更加简洁. 使用 <a href="https://metacpan.org/module/Try::Tiny">Try::Tiny</a>.检验、捕捉错误。
+    这样会使实现变的更加简洁. 使用 <a href="https://metacpan.org/module/Try::Tiny">Try::Tiny</a>检验、捕捉错误。
 </p>
 
         </div>
