@@ -1,12 +1,22 @@
 use strict;
 use warnings;
 
+package My::Pod;
+
+use base qw(Pod::Simple::HTML);
+
+sub index_as_html {
+    return '<div class="toc">' . Pod::Simple::HTML::index_as_html(@_) . '</div>';
+}
+
+package main;
+    
 use utf8;
 use Smart::Comments "###";
 use LWP::UserAgent;
 use URI::Escape qw(uri_escape);
 use Text::Xslate qw(mark_raw);
-use Pod::Simple::XHTML;
+use Pod::Simple::HTML;
 
 our $config = {
     host_map => {
@@ -25,12 +35,39 @@ $ua2->max_redirect(0);
 
 our $tx = Text::Xslate->new();
 
-our $pod_parser = Pod::Simple::XHTML->new();
+*Pod::Simple::HTML::esc = sub {
+    if(defined wantarray) {
+        if(wantarray) {
+            @_ = splice @_; # break aliasing
+        } else {
+            my $x = shift;
+            $x =~ s/([&<>])/'&#'.(ord($1)).';'/eg;
+            return $x;
+        }
+    }
+    foreach my $x (@_) {
+        # Escape things very cautiously:
+        $x =~ s/([&<>])/'&#'.(ord($1)).';'/eg
+            if defined $x;
+        # Leave out "- so that "--" won't make it thru in X-generated comments
+        #  with text in them.
+        
+        # Yes, stipulate the list without a range, so that this can work right on
+        #  all charsets that this module happens to run under.
+        # Altho, hmm, what about that ord?  Presumably that won't work right
+        #  under non-ASCII charsets.  Something should be done about that.
+    }
+    return @_;
+};
+
+our $pod_parser = My::Pod->new();
 $pod_parser->perldoc_url_prefix("http://cpan.perlchina.org/perldoc?");
-$pod_parser->html_charset('utf-8');
-$pod_parser->html_encode_chars("<>&");
-$pod_parser->html_header("");
+#$pod_parser->html_charset('utf-8');
+#$pod_parser->html_encode_chars("<>&");
+#$pod_parser->html_header("");
 $pod_parser->html_footer("");
+$pod_parser->html_header_before_title("<!-- ");
+$pod_parser->html_header_after_title(" -->");
 $pod_parser->index(1);
 
 sub calc_url {
@@ -210,9 +247,10 @@ sub get_cpan {
             my $html;
             $pod_parser->output_string(\$html);
             $pod_parser->parse_file($tfile);
+            $html = '<div class="pod">' . $html . "</div>";
             $content_type = "text/html;charset=utf-8";
             $content =~ s{^(.*)<div class="?pod"?>.*(<div class="?footer"?>.*)$}{$1$html$2}s;
-            
+            #$content = $html;
         }
     }
 
