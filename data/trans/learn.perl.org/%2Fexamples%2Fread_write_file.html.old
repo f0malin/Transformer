@@ -46,7 +46,7 @@
             <a href="/"><img src="http://st.pimg.net/perlweb/images/camel_head.v25e738a.png" id="logo" alt="Learn Perl, modern programming" height="65" align="right" /></a>
             
 
-			 <span>learn.perlchina.org</span>
+             <span>learn.perlchina.org</span>
 
         </div>
     </div>
@@ -167,13 +167,12 @@ while( my $line = $file_handle-&gt;getline() ) {
 
 
 <p>
-    <a href="https://metacpan.org/module/Path::Class">Path::Class</a> makes working with
-    directories (<a href="https://metacpan.org/module/Path::Class::Dir">Path::Class::Dir</a>) and 
-    files (<a href="https://metacpan.org/module/Path::Class::File">Path::Class::File</a>) clean 
-    and easy to do.
-    Try to work with file() or dir() objects throughout your code, 
-    but remember if you are calling other Perl modules you will often need 
-    to convert the object to a string using 'stringify':
+    <a href="https://metacpan.org/module/Path::Class">Path::Class</a>
+    让使用目录模块 (<a href="https://metacpan.org/module/Path::Class::Dir">Path::Class::Dir</a>)
+    和文件模块 (<a href="https://metacpan.org/module/Path::Class::File">Path::Class::File</a>)
+    变的方便、简洁。
+    尝试在你的实现中使用 file() 或者 dir() 对象，
+    你可以使用'stringify'把对象转换成路径字符串配合其他模块的使用：
     
 <pre class="brush: pl; class-name: 'highlight'; toolbar: false; gutter: false">    $file-&gt;stringify();
     $dir-&gt;stringify();
@@ -181,10 +180,9 @@ while( my $line = $file_handle-&gt;getline() ) {
 
 </p>
 <p>
-    <a href="https://metacpan.org/module/autodie">autodie</a> forces many functions
-    to die with a useful error message (instead of returning undef)
-    if they fail. This makes for cleaner code. To check for and
-    catch errors use <a href="https://metacpan.org/module/Try::Tiny">Try::Tiny</a>.
+    当方法调用失败的时候，<a href="https://metacpan.org/module/autodie">autodie</a> 强制它们
+    抛出有用的错误信息 (代替返回undef)。
+    这样会使实现变的更加简洁. 使用 <a href="https://metacpan.org/module/Try::Tiny">Try::Tiny</a>检验、捕捉错误。
 </p>
 
         </div>
