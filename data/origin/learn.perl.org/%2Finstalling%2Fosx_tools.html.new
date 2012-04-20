@@ -4,7 +4,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>First steps - learn.perl.org</title>
+    <title>Tools for OSX - learn.perl.org</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
     <link rel="shortcut icon" href="http://st.pimg.net/perlweb/favicon.v249dfa7.ico">
@@ -20,8 +20,8 @@
       <link rel="stylesheet" type="text/css" href="http://st.pimg.net/perlweb/css/learn.v8bb9ac1.css"> 
 
 
-    <meta name="description" content="Running your first Perl script" />
-    <meta name="keywords" content="Perl, Command line, Perl script" />
+    
+    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://st.pimg.net/perlweb/js/jquery.corner.v84b7681.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://st.pimg.net/perlweb/js/leo.v9872b9c.js" type="text/javascript" charset="utf-8"></script>
@@ -33,13 +33,13 @@
 
 
 </head>
-<body class="section_first_steps">
+<body class="section_installing">
 
 <div id="header_holder">
     <div class="sub_holder">
         <div id="page_image"></div>
         <h1>
-            First steps
+            Tools for OSX
         </h1>
         <div id="logo_holder">
            
@@ -68,11 +68,11 @@
         <a href="/faq/">FAQ</a>
     </li>
  -->
-    <li>
+    <li class="selected">
         <a href="/installing/">Installing Perl</a>
     </li>
 
-    <li class="selected">
+    <li>
         <a href="/first_steps/">First steps</a>
     </li>
 
@@ -111,59 +111,45 @@
     <div id="content" class="sub_holder">
         <div id="main">
             
-<h2>
-    How to get started with your first Perl script
-</h2>
+<img style="float:right" src="/i/oses/mac.gif">
 
-<p>
-    After <a href="/installing/">installing Perl</a> you will want to actually
-    run some Perl code. You need to use
-    a command line (<a href="/installing/windows_tools.html#command_line">Windows</a>, 
-    <a href="/installing/osx_tools.html#command_line">Mac OSX</a>, 
-    <a href="/installing/unix_linux_tools.html#command_line">Unix/Linux</a>) 
-    program to do this.
-</p>
-    
-<p>
-Check you have Perl installed by typing the command below into
-your command line program:
-<pre><code>perl -v</code></pre>
-</p>
+<h3 id="editors">
+    OSX Editors
+</h3>
+<ul>
+    <li>
+        <img height="50" src="/i/app_icons/TextEdit_icon.png">Applications
+        -&gt; TextEdit (set up as a <a href=
+        "http://support.apple.com/kb/TA20406">Plain Text Editor</a> )
+    </li>
+    <li>
+        <img height="50" src="/i/app_icons/TextmateIcon.png"> <a href=
+        "http://macromates.com/">TextMate</a> (commercial)
+    </li>
+    <li>
+        <img height="50" src="/i/app_icons/venturing_into_vim.jpeg"> <a href=
+        "http://sourceforge.net/projects/macosxvim/">vim</a> (graphical version, command line version comes with recent OSXs)
+    </li>
+    <li>
+        <img height="50" src="/i/app_icons/logo.png"> <a href=
+        "http://padre.perlide.org/">Padre</a>
+    </li>    
+</ul>
 
-<p>
-    Now create a 'perl_tests' folder to save your test files into, you will need to be able to find this from the command line.
-</p>
+<h3 id="command_line">
+    OSX Command line terminals
+</h3>
+<ul>
+    <li>
+        <img height="50" src="/i/app_icons/terminal_app.png">
+            Applications -&gt; Utilities -&gt; Terminal.app
+    </li>
+    <li>
+        <img height="50" src="/i/app_icons/iTerm2.png"> <a href=
+        "http://code.google.com/p/iterm2/">iTerm2</a>
+    </li>
+</ul>
 
-<p>Open a text editor (<a href="/installing/windows_tools.html#editors">Windows</a>, 
-<a href="/installing/osx_tools.html#editors">Mac OSX</a>, 
-<a href="/installing/unix_linux_tools.html#editors">Unix/Linux</a>) creating a new file with the following
-    content</p> 
-         
-<pre class="brush: pl; class-name: 'highlight'; toolbar: false; gutter: false">#!/usr/bin/perl
-use strict;
-use warnings;
-
-print &quot;hi NAME\n&quot;;</pre>
-
-
-<p>Save this file as <a href="http://en.wikipedia.org/wiki/Plain_text">plain text</a> into your 'perl_tests' folder, name the file 'hello_world.pl'.
-</p>
-
-<p>Then run the script from the command line by typing:
-         <pre><code>perl /path/to/perl_tests/hello_world.pl</code></pre>
-    </p>
-    <p>
-        Open the file again and replace NAME, with your name. Save the file.
-    </p>
-    <p>
-        Run the script again by typing <pre><code>perl /path/to/perl_tests/hello_world.pl</code></pre>
-    </p>
-
-<h3>Video of the above steps</h3>
-<p>
-   <iframe width="640" height="480" src="http://www.youtube.com/embed/0cupB4XOU84" frameborder="0" allowfullscreen></iframe>
-</p>
-<p>(<a href="http://youtu.be/_D5d1PHJTXM">Mac version</a>)</p>
 
 
         </div>
@@ -177,33 +163,9 @@ print &quot;hi NAME\n&quot;;</pre>
             </div>
             
 
-            <div class="quick_links">
-        <h4 class="round">
-            Quick starts
-        </h4>
-        <div class="list">
-        
-        <p><a href="/first_steps/">First Steps</a></p>        
-        
-        <p><a href="/tutorials/">Perl tutorials</a></p>        
-        
-        </div>
-</div>
+            
 
-
-            <div class="quick_links">
-        <h4 class="round">
-            Related sites
-        </h4>
-        <div class="list">
-        
-        <p><a  href="http://www.perl.org/">Perl.org</a></p>        
-        
-        <p><a  href="http://perldoc.perl.org/">Perldoc</a></p>        
-        
-        </div>
-</div>
-
+            
             
 
             
@@ -213,12 +175,9 @@ print &quot;hi NAME\n&quot;;</pre>
         </h4>
         <div class="list">
         <p>
-            <strong>Database interfaces</strong>
-            <a 
-                href="https://metacpan.org/module/DBIx::Class">DBIx::Class</a> 
-                provides an Object Relational Mapper (ORM) to databases
-                 (e.g. Oracle, SQL Server, MySQL,
-                 Postgress, Access etc)
+            <strong>Critique your code</strong>
+            automaticaly with Perl::Critic or online at... <a 
+                href="http://perlcritic.com/">PerlCritic.com</a>
         </p>
     </div>
 </div>
