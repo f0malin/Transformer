@@ -1,0 +1,476 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>DateTime::Event::Cron - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","DateTime-Event-Cron",3]);
+    _gaq.push(["_setCustomVar",5,"Release","DateTime-Event-Cron-0.08",3]);
+    _gaq.push(["_setCustomVar",3,"Module","DateTime::Event::Cron",3]);
+    _gaq.push(["_setCustomVar",1,"Author","MSISK",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?DateTime::Event::Cron">permalink</a></div>
+  <a href="/~msisk/">Matt Sisk</a> &gt;
+  <a href="/~msisk/DateTime-Event-Cron-0.08/">DateTime-Event-Cron-0.08</a> &gt;
+  DateTime::Event::Cron
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/45753601b19c0f35102f56ec71b3bb1f?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/M/MS/MSISK/DateTime-Event-Cron-0.08.tar.gz">DateTime-Event-Cron-0.08.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=DateTime%3A%3AEvent%3A%3ACron;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~MSISK/DateTime-Event-Cron-0.08/lib/DateTime/Event/Cron.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Time%3A%3ALocal">Time::Local</a><br>
+<a href="/perldoc?Text%3A%3ACSV">Text::CSV</a><br>
+<a href="/perldoc?Schedule%3A%3ACron">Schedule::Cron</a><br>
+<a href="/perldoc?Date%3A%3ACalc">Date::Calc</a><br>
+<a href="/perldoc?Date%3A%3ASimple">Date::Simple</a><br>
+<a href="/perldoc?Date%3A%3AManip">Date::Manip</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=DateTime%3A%3AEvent%3A%3ACron">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=DateTime-Event-Cron">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.08 &nbsp;
+<span class="noprint">
+  <a href="/src/MSISK/DateTime-Event-Cron-0.08/lib/DateTime/Event/Cron.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#DateTime::Set_Factories'>DateTime::Set Factories</a>
+    <li class='indexItem indexItem2'><a href='#Constructors'>Constructors</a>
+    <li class='indexItem indexItem2'><a href='#Other_methods'>Other methods</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DateTime::Event::Cron - DateTime extension for generating recurrence sets from crontab lines and files.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use DateTime::Event::Cron;
+
+  # check if a date matches (defaults to current time)
+  my $c = DateTime::Event::Cron-&#62;new(&#39;* 2 * * *&#39;);
+  if ($c-&#62;match) {
+    # do stuff
+  }
+  if ($c-&#62;match($date)) {
+    # do something else for datetime $date
+  }
+
+  # DateTime::Set construction from crontab line
+  $crontab = &#39;*/3 15 1-10 3,4,5 */2&#39;;
+  $set = DateTime::Event::Cron-&#62;from_cron($crontab);
+  $iter = $set-&#62;iterator(after =&#62; DateTime-&#62;now);
+  while (1) {
+    my $next = $iter-&#62;next;
+    my $now  = DateTime-&#62;now;
+    sleep(($next-&#62;subtract_datetime_absolute($now))-&#62;seconds);
+    # do stuff...
+  }
+
+  # List of DateTime::Set objects from crontab file
+  @sets = DateTime::Event::Cron-&#62;from_crontab(file =&#62; &#39;/etc/crontab&#39;);
+  $now = DateTime-&#62;now;
+  print &#34;Now: &#34;, $now-&#62;datetime, &#34;\n&#34;;
+  foreach (@sets) {
+    my $next = $_-&#62;next($now);
+    print $next-&#62;datetime, &#34;\n&#34;;
+  }
+
+  # DateTime::Set parameters
+  $crontab = &#39;* * * * *&#39;;
+
+  $now = DateTime-&#62;now;
+  %set_parms = ( after =&#62; $now );
+  $set = DateTime::Event::Cron-&#62;from_cron(cron =&#62; $crontab, %set_parms);
+  $dt = $set-&#62;next;
+  print &#34;Now: &#34;, $now-&#62;datetime, &#34; and next: &#34;, $dt-&#62;datetime, &#34;\n&#34;;
+
+  # Spans for DateTime::Set
+  $crontab = &#39;* * * * *&#39;;
+  $now = DateTime-&#62;now;
+  $now2 = $now-&#62;clone;
+  $span = DateTime::Span-&#62;from_datetimes(
+            start =&#62; $now-&#62;add(minutes =&#62; 1),
+            end   =&#62; $now2-&#62;add(hours =&#62; 1),
+          );
+  %parms = (cron =&#62; $crontab, span =&#62; $span);
+  $set = DateTime::Event::Cron-&#62;from_cron(%parms);
+  # ...do things with the DateTime::Set
+
+  # Every RTFCT relative to 12am Jan 1st this year
+  $crontab = &#39;7-10 6,12-15 10-28/2 */3 3,4,5&#39;;
+  $date = DateTime-&#62;now-&#62;truncate(to =&#62; &#39;year&#39;);
+  $set = DateTime::Event::Cron-&#62;from_cron(cron =&#62; $crontab, after =&#62; $date);
+
+  # Rather than generating DateTime::Set objects, next/prev
+  # calculations can be made directly:
+
+  # Every day at 10am, 2pm, and 6pm. Reference date
+  # defaults to DateTime-&#62;now.
+  $crontab = &#39;10,14,18 * * * *&#39;;
+  $dtc = DateTime::Event::Cron-&#62;new_from_cron(cron =&#62; $crontab);
+  $next_datetime = $dtc-&#62;next;
+  $last_datetime = $dtc-&#62;previous;
+  ...
+
+  # List of DateTime::Event::Cron objects from
+  # crontab file
+  @dtc = DateTime::Event::Cron-&#62;new_from_crontab(file =&#62; &#39;/etc/crontab&#39;);
+
+  # Full cron lines with user, such as from /etc/crontab
+  # or files in /etc/cron.d, are supported and auto-detected:
+  $crontab = &#39;* * * * * gump /bin/date&#39;;
+  $dtc = DateTime::Event::Cron-&#62;new(cron =&#62; $crontab);
+
+  # Auto-detection of users is disabled if you explicitly
+  # enable/disable via the user_mode parameter:
+  $dtc = DateTime::Event::Cron-&#62;new(cron =&#62; $crontab, user_mode =&#62; 1);
+  my $user = $dtc-&#62;user;
+  my $command = $dtc-&#62;command;
+
+  # Unparsed original cron entry
+  my $original = $dtc-&#62;original;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DateTime::Event::Cron generated DateTime events or DateTime::Set objects based on crontab-style entries.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The cron fields are typical crontab-style entries. For more information, see <a href="http://man.he.net/man5/crontab" class="podlinkman"
+>crontab(5)</a> and extensions described in <a href="/perldoc?Set%3A%3ACrontab" class="podlinkpod"
+>Set::Crontab</a>. The fields can be passed as a single string or as a reference to an array containing each field. Only the first five fields are retained.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="DateTime::Set_Factories"
+>DateTime::Set Factories</a></h2>
+
+<p>See <a href="/perldoc?DateTime%3A%3ASet" class="podlinkpod"
+>DateTime::Set</a> for methods provided by Set objects, such as <code>next()</code> and <code>previous()</code>.</p>
+
+<dl>
+<dt><a name='from_cron'></a><a name="from_cron($cronline)"
+>from_cron($cronline)</a></dt>
+
+<dd>
+<dt><a name='from_cron'></a><a name="from_cron(cron_=&#62;_$cronline,_%parms,_%set_parms)"
+>from_cron(cron =&#62; $cronline, %parms, %set_parms)</a></dt>
+
+<dd>
+<p>Generates a DateTime::Set recurrence for the cron line provided. See new() for details on %parms. Optionally takes parameters for DateTime::Set.</p>
+
+<dt><a name='from_crontab'></a><a name="from_crontab(file_=&#62;_$crontab_fh,_%parms,_%set_parms)"
+>from_crontab(file =&#62; $crontab_fh, %parms, %set_parms)</a></dt>
+
+<dd>
+<p>Returns a list of DateTime::Set recurrences based on lines from a crontab file. <code>$crontab_fh</code> can be either a filename or filehandle reference. See new() for details on %parm. Optionally takes parameters for DateTime::Set which will be passed along to each set for each line.</p>
+
+<dt><a name='as_set'></a><a name="as_set(%set_parms)"
+>as_set(%set_parms)</a></dt>
+
+<dd>
+<p>Generates a DateTime::Set recurrence from an existing DateTime::Event::Cron object.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Constructors"
+>Constructors</a></h2>
+
+<dl>
+<dt><a name='new_from_cron'></a><a name="new_from_cron(cron_=&#62;_$cronstring,_%parms)"
+>new_from_cron(cron =&#62; $cronstring, %parms)</a></dt>
+
+<dd>
+<p>Returns a DateTime::Event::Cron object based on the cron specification. Optional parameters include the boolean &#39;user_mode&#39; which indicates that the crontab entry includes a username column before the command.</p>
+
+<dt><a name='new_from_crontab'></a><a name="new_from_crontab(file_=&#62;_$fh,_%parms)"
+>new_from_crontab(file =&#62; $fh, %parms)</a></dt>
+
+<dd>
+<p>Returns a list of DateTime::Event::Cron objects based on the lines of a crontab file. <code>$fh</code> can be either a filename or a filehandle reference. Optional parameters include the boolean &#39;user_mode&#39; as mentioned above.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Other_methods"
+>Other methods</a></h2>
+
+<dl>
+<dt><a name='next'></a><a name="next()"
+>next()</a></dt>
+
+<dd>
+<dt><a name='next'></a><a name="next($date)"
+>next($date)</a></dt>
+
+<dd>
+<p>Returns the next valid datetime according to the cron specification. <code>$date</code> defaults to DateTime-&#62;now unless provided.</p>
+
+<dt><a name='previous'></a><a name="previous()"
+>previous()</a></dt>
+
+<dd>
+<dt><a name='previous'></a><a name="previous($date)"
+>previous($date)</a></dt>
+
+<dd>
+<p>Returns the previous valid datetime according to the cron specification. <code>$date</code> defaults to DateTime-&#62;now unless provided.</p>
+
+<dt><a name='increment'></a><a name="increment($date)"
+>increment($date)</a></dt>
+
+<dd>
+<dt><a name='decrement'></a><a name="decrement($date)"
+>decrement($date)</a></dt>
+
+<dd>
+<p>Same as <code>next()</code> and <code>previous()</code> except that the provided datetime is modified to the new datetime.</p>
+
+<dt><a name='match'></a><a name="match($date)"
+>match($date)</a></dt>
+
+<dd>
+<p>Returns whether or not the given datetime (defaults to current time) matches the current cron specification. Dates are truncated to minute resolution.</p>
+
+<dt><a name='valid'></a><a name="valid($date)"
+>valid($date)</a></dt>
+
+<dd>
+<p>A more strict version of match(). Returns whether the given datetime is valid under the current cron specification. Cron dates are only accurate to the minute -- datetimes with seconds greater than 0 are invalid by default. (note: never fear, all methods accepting dates will accept invalid dates -- they will simply be rounded to the next nearest valid date in all cases except this particular method)</p>
+
+<dt><a name='command'></a><a name="command()"
+>command()</a></dt>
+
+<dd>
+<p>Returns the command string, if any, from the original crontab entry. Currently no expansion is performed such as resolving environment variables, etc.</p>
+
+<dt><a name='user'></a><a name="user()"
+>user()</a></dt>
+
+<dd>
+<p>Returns the username under which this cron command was to be executed, assuming such a field was present in the original cron entry.</p>
+
+<dt><a name='original'></a><a name="original()"
+>original()</a></dt>
+
+<dd>
+<p>Returns the original, unparsed cron string including any user or command fields.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Matthew P. Sisk &#60;sisk@mojotoad.com&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2003 Matthew P. Sisk. All rights reserved. All wrongs revenged. This program is free software; you can distribute it and/or modify it under the same terms as Perl itself.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DateTime(3), <a href="/perldoc?DateTime%3A%3ASet" class="podlinkpod"
+>DateTime::Set</a>(3), <a href="/perldoc?DateTime%3A%3AEvent%3A%3ARecurrence" class="podlinkpod"
+>DateTime::Event::Recurrence</a>(3), <a href="/perldoc?DateTime%3A%3AEvent%3A%3AICal" class="podlinkpod"
+>DateTime::Event::ICal</a>(3), <a href="/perldoc?DateTime%3A%3ASpan" class="podlinkpod"
+>DateTime::Span</a>(3), <a href="/perldoc?Set%3A%3ACrontab" class="podlinkpod"
+>Set::Crontab</a>(3), crontab(5)</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78068 Uploads, 24686 Distributions
+105902 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sun Apr 22 13:02:47 2012 GMT (0.299645185470581) @cpansearch1 -->
+ </body>
+</html>

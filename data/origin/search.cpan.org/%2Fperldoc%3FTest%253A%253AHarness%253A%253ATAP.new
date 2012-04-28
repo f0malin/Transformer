@@ -1,0 +1,692 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Test::Harness::TAP - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Test-Harness",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Test-Harness-2.64",3]);
+    _gaq.push(["_setCustomVar",4,"Document","Test::Harness::TAP",3]);
+    _gaq.push(["_setCustomVar",1,"Author","PETDANCE",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Test::Harness::TAP">permalink</a></div>
+  <a href="/~petdance/">Andy Lester</a> &gt;
+  <a href="/~petdance/Test-Harness-2.64/">Test-Harness-2.64</a> &gt;
+  Test::Harness::TAP
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/8077a0584e451732420d43f5d0b3bd31?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/P/PE/PETDANCE/Test-Harness-2.64.tar.gz">Test-Harness-2.64.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~PETDANCE/Test-Harness-2.64/lib/Test/Harness/TAP.pod">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 15</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 16</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Test-Harness">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/PETDANCE/Test-Harness-2.64/lib/Test/Harness/TAP.pod">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~petdance/Test-Harness/lib/Test/Harness/TAP.pod">Test-Harness-2.65_02</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#TODO'>TODO</a>
+  <li class='indexItem indexItem1'><a href='#THE_TAP_FORMAT'>THE TAP FORMAT</a>
+  <li class='indexItem indexItem1'><a href='#HARNESS_BEHAVIOR'>HARNESS BEHAVIOR</a>
+  <li class='indexItem indexItem1'><a href='#TESTS_LINES_AND_THE_PLAN'>TESTS LINES AND THE PLAN</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#The_plan'>The plan</a>
+    <li class='indexItem indexItem2'><a href='#The_test_line'>The test line</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DIRECTIVES'>DIRECTIVES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#TODO_tests'>TODO tests</a>
+    <li class='indexItem indexItem2'><a href='#Skipping_tests'>Skipping tests</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#OTHER_LINES'>OTHER LINES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Bail_out!'>Bail out!</a>
+    <li class='indexItem indexItem2'><a href='#Diagnostics'>Diagnostics</a>
+    <li class='indexItem indexItem2'><a href='#Anything_else'>Anything else</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#EXAMPLES'>EXAMPLES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Common_with_explanation'>Common with explanation</a>
+    <li class='indexItem indexItem2'><a href='#Unknown_amount_and_failures'>Unknown amount and failures</a>
+    <li class='indexItem indexItem2'><a href='#Giving_up'>Giving up</a>
+    <li class='indexItem indexItem2'><a href='#Skipping_a_few'>Skipping a few</a>
+    <li class='indexItem indexItem2'><a href='#Skipping_everything'>Skipping everything</a>
+    <li class='indexItem indexItem2'><a href='#Got_spare_tuits?'>Got spare tuits?</a>
+    <li class='indexItem indexItem2'><a href='#Creative_liberties'>Creative liberties</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Non-Perl_TAP'>Non-Perl TAP</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#C/C++'>C/C++</a>
+    <li class='indexItem indexItem2'><a href='#Python'>Python</a>
+    <li class='indexItem indexItem2'><a href='#JavaScript'>JavaScript</a>
+    <li class='indexItem indexItem2'><a href='#PHP'>PHP</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#ACKNOWLEDGEMENTS'>ACKNOWLEDGEMENTS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Test::Harness::TAP - Documentation for the TAP format</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>TAP,
+the Test Anything Protocol,
+is Perl&#39;s simple text-based interface between testing modules such as Test::More and the test harness Test::Harness.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TODO"
+>TODO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Exit code of the process.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="THE_TAP_FORMAT"
+>THE TAP FORMAT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>TAP&#39;s general format is:</p>
+
+<pre class="sh_perl">    1..N
+    ok 1 Description # Directive
+    # Diagnostic
+    ....
+    ok 47 Description
+    ok 48 Description
+    more tests....</pre>
+
+<p>For example, a test file&#39;s output might look like:</p>
+
+<pre class="sh_perl">    1..4
+    ok 1 - Input file opened
+    not ok 2 - First line of the input valid
+    ok 3 - Read the rest of the file
+    not ok 4 - Summarized correctly # TODO Not written yet</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="HARNESS_BEHAVIOR"
+>HARNESS BEHAVIOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>In this document, the &#34;harness&#34; is any program analyzing TAP output. Typically this will be Perl&#39;s <i>prove</i> program, or the underlying <code>Test::Harness::runtests</code> subroutine.</p>
+
+<p>A harness must only read TAP output from standard output and not from standard error. Lines written to standard output matching <code>/^(not )?ok\b/</code> must be interpreted as test lines. All other lines must not be considered test output.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TESTS_LINES_AND_THE_PLAN"
+>TESTS LINES AND THE PLAN <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_plan"
+>The plan</a></h2>
+
+<p>The plan tells how many tests will be run, or how many tests have run. It&#39;s a check that the test file hasn&#39;t stopped prematurely. It must appear once, whether at the beginning or end of the output.</p>
+
+<p>The plan is usually the first line of TAP output and it specifies how many test points are to follow. For example,</p>
+
+<pre class="sh_perl">    1..10</pre>
+
+<p>means you plan on running 10 tests. This is a safeguard in case your test file dies silently in the middle of its run. The plan is optional but if there is a plan before the test points it must be the first non-diagnostic line output by the test file.</p>
+
+<p>In certain instances a test file may not know how many test points it will ultimately be running. In this case the plan can be the last non-diagnostic line in the output.</p>
+
+<p>The plan cannot appear in the middle of the output, nor can it appear more than once.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_test_line"
+>The test line</a></h2>
+
+<p>The core of TAP is the test line. A test file prints one test line test point executed. There must be at least one test line in TAP output. Each test line comprises the following elements:</p>
+
+<ul>
+<li><code>ok</code> or <code>not ok</code>
+<p>This tells whether the test point passed or failed. It must be at the beginning of the line. <code>/^not ok/</code> indicates a failed test point. <code>/^ok/</code> is a successful test point. This is the only mandatory part of the line.</p>
+
+<p>Note that unlike the Directives below, <code>ok</code> and <code>not ok</code> are case-sensitive.</p>
+</li>
+
+<li>Test number
+<p>TAP expects the <code>ok</code> or <code>not ok</code> to be followed by a test point number. If there is no number the harness must maintain its own counter until the script supplies test numbers again. So the following test output</p>
+
+<pre class="sh_perl">    1..6
+    not ok
+    ok
+    not ok
+    ok
+    ok</pre>
+
+<p>has five tests. The sixth is missing. Test::Harness will generate</p>
+
+<pre class="sh_perl">    FAILED tests 1, 3, 6
+    Failed 3/6 tests, 50.00% okay</pre>
+</li>
+
+<li>Description
+<p>Any text after the test number but before a <code>#</code> is the description of the test point.</p>
+
+<pre class="sh_perl">    ok 42 this is the description of the test</pre>
+
+<p>Descriptions should not begin with a digit so that they are not confused with the test point number.</p>
+
+<p>The harness may do whatever it wants with the description.</p>
+</li>
+
+<li>Directive
+<p>The test point may include a directive, following a hash on the test line. There are currently two directives allowed: <code>TODO</code> and <code>SKIP</code>. These are discussed below.</p>
+</li>
+</ul>
+
+<p>To summarize:</p>
+
+<ul>
+<li>ok/not ok (required)</li>
+
+<li>Test number (recommended)</li>
+
+<li>Description (recommended)</li>
+
+<li>Directive (only when necessary)</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIRECTIVES"
+>DIRECTIVES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Directives are special notes that follow a <code>#</code> on the test line. Only two are currently defined: <code>TODO</code> and <code>SKIP</code>. Note that these two keywords are not case-sensitive.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="TODO_tests"
+>TODO tests</a></h2>
+
+<p>If the directive starts with <code># TODO</code>, the test is counted as a todo test, and the text after <code>TODO</code> is the explanation.</p>
+
+<pre class="sh_perl">    not ok 13 # TODO bend space and time</pre>
+
+<p>Note that if the TODO has an explanation it must be separated from <code>TODO</code> by a space.</p>
+
+<p>These tests represent a feature to be implemented or a bug to be fixed and act as something of an executable &#34;things to do&#34; list. They are <b>not</b> expected to succeed. Should a todo test point begin succeeding, the harness should report it as a bonus. This indicates that whatever you were supposed to do has been done and you should promote this to a normal test point.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Skipping_tests"
+>Skipping tests</a></h2>
+
+<p>If the directive starts with <code># SKIP</code>, the test is counted as having been skipped. If the whole test file succeeds, the count of skipped tests is included in the generated output. The harness should report the text after <code> # SKIP\S*\s+</code> as a reason for skipping.</p>
+
+<pre class="sh_perl">    ok 23 # skip Insufficient flogiston pressure.</pre>
+
+<p>Similarly, one can include an explanation in a plan line, emitted if the test file is skipped completely:</p>
+
+<pre class="sh_perl">    1..0 # Skipped: WWW::Mechanize not installed</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OTHER_LINES"
+>OTHER LINES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Bail_out!"
+>Bail out!</a></h2>
+
+<p>As an emergency measure a test script can decide that further tests are useless (e.g. missing dependencies) and testing should stop immediately. In that case the test script prints the magic words</p>
+
+<pre class="sh_perl">    Bail out!</pre>
+
+<p>to standard output. Any message after these words must be displayed by the interpreter as the reason why testing must be stopped, as in</p>
+
+<pre class="sh_perl">    Bail out! MySQL is not running.</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Diagnostics"
+>Diagnostics</a></h2>
+
+<p>Additional information may be put into the testing output on separate lines. Diagnostic lines should begin with a <code>#</code>, which the harness must ignore, at least as far as analyzing the test results. The harness is free, however, to display the diagnostics. Typically diagnostics are used to provide information about the environment in which test file is running, or to delineate a group of tests.</p>
+
+<pre class="sh_perl">    ...
+    ok 18 - Closed database connection
+    # End of database section.
+    # This starts the network part of the test.
+    # Daemon started on port 2112
+    ok 19 - Opened socket
+    ...
+    ok 47 - Closed socket
+    # End of network tests</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Anything_else"
+>Anything else</a></h2>
+
+<p>Any output line that is not a plan, a test line or a diagnostic is incorrect. How a harness handles the incorrect line is undefined. Test::Harness silently ignores incorrect lines, but will become more stringent in the future.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>All names, places, and events depicted in any example are wholly fictitious and bear no resemblance to, connection with, or relation to any real entity. Any such similarity is purely coincidental, unintentional, and unintended.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Common_with_explanation"
+>Common with explanation</a></h2>
+
+<p>The following TAP listing declares that six tests follow as well as provides handy feedback as to what the test is about to do. All six tests pass.</p>
+
+<pre class="sh_perl">    1..6
+    #
+    # Create a new Board and Tile, then place
+    # the Tile onto the board.
+    #
+    ok 1 - The object isa Board
+    ok 2 - Board size is zero
+    ok 3 - The object isa Tile
+    ok 4 - Get possible places to put the Tile
+    ok 5 - Placing the tile produces no error
+    ok 6 - Board size is 1</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Unknown_amount_and_failures"
+>Unknown amount and failures</a></h2>
+
+<p>This hypothetical test program ensures that a handful of servers are online and network-accessible. Because it retrieves the hypothetical servers from a database, it doesn&#39;t know exactly how many servers it will need to ping. Thus, the test count is declared at the bottom after all the test points have run. Also, two of the tests fail.</p>
+
+<pre class="sh_perl">    ok 1 - retrieving servers from the database
+    # need to ping 6 servers
+    ok 2 - pinged diamond
+    ok 3 - pinged ruby
+    not ok 4 - pinged saphire
+    ok 5 - pinged onyx
+    not ok 6 - pinged quartz
+    ok 7 - pinged gold
+    1..7</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Giving_up"
+>Giving up</a></h2>
+
+<p>This listing reports that a pile of tests are going to be run. However, the first test fails, reportedly because a connection to the database could not be established. The program decided that continuing was pointless and exited.</p>
+
+<pre class="sh_perl">    1..573
+    not ok 1 - database handle
+    Bail out! Couldn&#39;t connect to database.</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Skipping_a_few"
+>Skipping a few</a></h2>
+
+<p>The following listing plans on running 5 tests. However, our program decided to not run tests 2 thru 5 at all. To properly report this, the tests are marked as being skipped.</p>
+
+<pre class="sh_perl">    1..5
+    ok 1 - approved operating system
+    # $^0 is solaris
+    ok 2 - # SKIP no /sys directory
+    ok 3 - # SKIP no /sys directory
+    ok 4 - # SKIP no /sys directory
+    ok 5 - # SKIP no /sys directory</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Skipping_everything"
+>Skipping everything</a></h2>
+
+<p>This listing shows that the entire listing is a skip. No tests were run.</p>
+
+<pre class="sh_perl">    1..0 # skip because English-to-French translator isn&#39;t installed</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Got_spare_tuits?"
+>Got spare tuits?</a></h2>
+
+<p>The following example reports that four tests are run and the last two tests failed. However, because the failing tests are marked as things to do later, they are considered successes. Thus, a harness should report this entire listing as a success.</p>
+
+<pre class="sh_perl">    1..4
+    ok 1 - Creating test program
+    ok 2 - Test program runs, no error
+    not ok 3 - infinite loop # TODO halting problem unsolved
+    not ok 4 - infinite loop 2 # TODO halting problem unsolved</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Creative_liberties"
+>Creative liberties</a></h2>
+
+<p>This listing shows an alternate output where the test numbers aren&#39;t provided. The test also reports the state of a ficticious board game in diagnostic form. Finally, the test count is reported at the end.</p>
+
+<pre class="sh_perl">    ok - created Board
+    ok
+    ok
+    ok
+    ok
+    ok
+    ok
+    ok
+    # +------+------+------+------+
+    # |      |16G   |      |05C   |
+    # |      |G N C |      |C C G |
+    # |      |  G   |      |  C  +|
+    # +------+------+------+------+
+    # |10C   |01G   |      |03C   |
+    # |R N G |G A G |      |C C C |
+    # |  R   |  G   |      |  C  +|
+    # +------+------+------+------+
+    # |      |01G   |17C   |00C   |
+    # |      |G A G |G N R |R N R |
+    # |      |  G   |  R   |  G   |
+    # +------+------+------+------+
+    ok - board has 7 tiles + starter tile
+    1..9</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Non-Perl_TAP"
+>Non-Perl TAP <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>In Perl, we use Test::Simple and Test::More to generate TAP output. Other languages have solutions that generate TAP, so that they can take advantage of Test::Harness.</p>
+
+<p>The following sections are provided by their maintainers, and may not be up-to-date.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="C/C++"
+>C/C++</a></h2>
+
+<p>libtap makes it easy to write test programs in C that produce TAP-compatible output. Modeled on the Test::More API, libtap contains all the functions you need to:</p>
+
+<ul>
+<li>Specify a test plan</li>
+
+<li>Run tests</li>
+
+<li>Skip tests in certain situations</li>
+
+<li>Have TODO tests</li>
+
+<li>Produce TAP compatible diagnostics</li>
+</ul>
+
+<p>More information about libtap, including download links, checksums, anonymous access to the Subersion repository, and a bug tracking system, can be found at:</p>
+
+<pre class="sh_perl">    <a href="http://jc.ngo.org.uk/trac-bin/trac.cgi/wiki/LibTap" class="podlinkurl"
+>http://jc.ngo.org.uk/trac-bin/trac.cgi/wiki/LibTap</a></pre>
+
+<p>(Nik Clayton, April 17, 2006)</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Python"
+>Python</a></h2>
+
+<p>PyTap will, when it&#39;s done, provide a simple, assertive (Test::More-like) interface for writing tests in Python. It will output TAP and will include the functionality found in Test::Builder and Test::More. It will try to make it easy to add more test code (so you can write your own <code>TAP.StringDiff</code>, for example.</p>
+
+<p>Right now, it&#39;s got a fair bit of the basics needed to emulate Test::More, and I think it&#39;s easy to add more stuff -- just like Test::Builder, there&#39;s a singleton that you can get at easily.</p>
+
+<p>I need to better identify and finish implementing the most basic tests. I am not a Python guru, I just use it from time to time, so my aim may not be true. I need to write tests for it, which means either relying on Perl for the tester tester, or writing one in Python.</p>
+
+<p>Here&#39;s a sample test, as found in my Subversion:</p>
+
+<pre class="sh_perl">    from TAP.Simple import *
+
+    plan(15)
+
+    ok(1)
+    ok(1, &#34;everything is OK!&#34;)
+    ok(0, &#34;always fails&#34;)
+
+    is_ok(10, 10, &#34;is ten ten?&#34;)
+    is_ok(ok, ok, &#34;even ok is ok!&#34;)
+    ok(id(ok),    &#34;ok is not the null pointer&#34;)
+    ok(True,      &#34;the Truth will set you ok&#34;)
+    ok(not False, &#34;and nothing but the truth&#34;)
+    ok(False,     &#34;and we&#39;ll know if you lie to us&#34;)
+
+    isa_ok(10, int, &#34;10&#34;)
+    isa_ok(&#39;ok&#39;, str, &#34;some string&#34;)
+
+    ok(0,    &#34;zero is true&#34;, todo=&#34;be more like Ruby!&#34;)
+    ok(None, &#34;none is true&#34;, skip=&#34;not possible in this universe&#34;)
+
+    eq_ok(&#34;not&#34;, &#34;equal&#34;, &#34;two strings are not equal&#34;);</pre>
+
+<p>(Ricardo Signes, April 17, 2006)</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="JavaScript"
+>JavaScript</a></h2>
+
+<p>Test.Simple looks and acts just like TAP, although in reality it&#39;s tracking test results in an object rather than scraping them from a print buffer.</p>
+
+<pre class="sh_perl">    <a href="http://openjsan.org/doc/t/th/theory/Test/Simple/" class="podlinkurl"
+>http://openjsan.org/doc/t/th/theory/Test/Simple/</a></pre>
+
+<p>(David Wheeler, April 17, 2006)</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PHP"
+>PHP</a></h2>
+
+<p>All the big PHP players now produce TAP</p>
+
+<ul>
+<li>phpt
+<p>Outputs TAP by default as of the yet-to-be-released PEAR 1.5.0</p>
+
+<pre class="sh_perl">    <a href="http://pear.php.net/PEAR" class="podlinkurl"
+>http://pear.php.net/PEAR</a></pre>
+</li>
+
+<li>PHPUnit
+<p>Has a TAP logger (since 2.3.4)</p>
+
+<pre class="sh_perl">    <a href="http://www.phpunit.de/wiki/Main_Page" class="podlinkurl"
+>http://www.phpunit.de/wiki/Main_Page</a></pre>
+</li>
+
+<li>SimpleTest
+<p>There&#39;s a third-party TAP reporting extension for SimpleTest</p>
+
+<pre class="sh_perl">    <a href="http://www.digitalsandwich.com/archives/51-Updated-Simpletest+Apache-Test.html" class="podlinkurl"
+>http://www.digitalsandwich.com/archives/51-Updated-Simpletest+Apache-Test.html</a></pre>
+</li>
+
+<li>Apache-Test
+<p>Apache-Test&#39;s PHP writes TAP by default and includes the standalone test-more.php</p>
+
+<pre class="sh_perl">    <a href="http://search.cpan.org/dist/Apache-Test/" class="podlinkurl"
+>http://search.cpan.org/dist/Apache-Test/</a></pre>
+</li>
+</ul>
+
+<p>(Geoffrey Young, April 17, 2006)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Andy Lester, based on the original Test::Harness documentation by Michael Schwern.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ACKNOWLEDGEMENTS"
+>ACKNOWLEDGEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Thanks to Pete Krawczyk, Paul Johnson, Ian Langworth and Nik Clayton for help and contributions on this document.</p>
+
+<p>The basis for the TAP format was created by Larry Wall in the original test script for Perl 1. Tim Bunce and Andreas Koenig developed it further with their modifications to Test::Harness.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2003-2005 by Michael G Schwern <code>&#60;schwern@pobox.com&#62;</code>, Andy Lester <code>&#60;andy@petdance.com&#62;</code>.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>See <a href="http://www.perl.com/perl/misc/Artistic.html" class="podlinkurl"
+>http://www.perl.com/perl/misc/Artistic.html</a>.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78183 Uploads, 24710 Distributions
+106004 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 08:49:30 2012 GMT (0.0704138278961182) @cpansearch1 -->
+ </body>
+</html>

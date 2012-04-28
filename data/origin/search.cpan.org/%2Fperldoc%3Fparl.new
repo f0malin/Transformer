@@ -1,0 +1,343 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>parl - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","PAR-Packer",3]);
+    _gaq.push(["_setCustomVar",5,"Release","PAR-Packer-1.013",3]);
+    _gaq.push(["_setCustomVar",4,"Document","parl",3]);
+    _gaq.push(["_setCustomVar",1,"Author","RSCHUPP",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?parl">permalink</a></div>
+  <a href="/~rschupp/">Roderich Schupp</a> &gt;
+  <a href="/~rschupp/PAR-Packer-1.013/">PAR-Packer-1.013</a> &gt;
+  parl
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/12f1ea5df52a78cb3a11495a66e92444?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/R/RS/RSCHUPP/PAR-Packer-1.013.tar.gz">PAR-Packer-1.013.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~RSCHUPP/PAR-Packer-1.013/script/parl.pod">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 18</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 37</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 5</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=PAR-Packer">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/RSCHUPP/PAR-Packer-1.013/script/parl.pod">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>parl - Binary PAR Loader</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>(Please see <a href="/~rschupp/PAR-Packer-1.013/lib/pp.pm" class="podlinkpod"
+>pp</a> for convenient ways to make self-contained executables,
+scripts or PAR archives from perl programs.)</p>
+
+<p>To make a <i>PAR distribution</i> from a CPAN module distribution:</p>
+
+<pre class="sh_perl">    % parl -p                 # make a PAR dist under the current path
+    % parl -p Foo-0.01        # assume unpacked CPAN dist in Foo-0.01/</pre>
+
+<p>To manipulate a <i>PAR distribution</i>:</p>
+
+<pre class="sh_perl">    % parl -i Foo-0.01-i386-freebsd-5.8.0.par   # install
+    % parl -i <a href="http://foo.com/Foo-0.01" class="podlinkurl"
+>http://foo.com/Foo-0.01</a>           # auto-appends archname + perlver
+    % parl -i <a href="cpan://AUTRIJUS/PAR-0.74" class="podlinkurl"
+>cpan://AUTRIJUS/PAR-0.74</a>          # uses CPAN author directory
+    % parl -u Foo-0.01-i386-freebsd-5.8.0.par   # uninstall
+    % parl -s Foo-0.01-i386-freebsd-5.8.0.par   # sign
+    % parl -v Foo-0.01-i386-freebsd-5.8.0.par   # verify</pre>
+
+<p>To use <em>Hello.pm</em> from <em>./foo.par</em>:</p>
+
+<pre class="sh_perl">    % parl -A./foo.par -MHello 
+    % parl -A./foo -MHello      # the .par part is optional</pre>
+
+<p>Same thing, but search <em>foo.par</em> in the <em>@INC</em>;</p>
+
+<pre class="sh_perl">    % parl -Ifoo.par -MHello 
+    % parl -Ifoo -MHello        # ditto</pre>
+
+<p>Run <em>test.pl</em> or <em>script/test.pl</em> from <em>foo.par</em>:</p>
+
+<pre class="sh_perl">    % parl foo.par test.pl      # looks for &#39;main.pl&#39; by default,
+                                # otherwise run &#39;test.pl&#39; </pre>
+
+<p>To make a self-containing executable containing a PAR file :</p>
+
+<pre class="sh_perl">    % parl -O./foo foo.par
+    % ./foo test.pl             # same as above</pre>
+
+<p>To embed the necessary non-core modules and shared objects for PAR&#39;s execution (like <code>Zlib</code>, <code>IO</code>, <code>Cwd</code>, etc), use the <b>-b</b> flag:</p>
+
+<pre class="sh_perl">    % parl -b -O./foo foo.par
+    % ./foo test.pl             # runs anywhere with core modules installed</pre>
+
+<p>If you also wish to embed <i>core</i> modules along, use the <b>-B</b> flag instead:</p>
+
+<pre class="sh_perl">    % parl -B -O./foo foo.par
+    % ./foo test.pl             # runs anywhere with the perl interpreter</pre>
+
+<p>This is particularly useful when making stand-alone binary executables; see <a href="/~rschupp/PAR-Packer-1.013/lib/pp.pm" class="podlinkpod"
+>pp</a> for details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This stand-alone command offers roughly the same feature as <code>perl -MPAR</code>, except that it takes the pre-loaded <em>.par</em> files via <code>-Afoo.par</code> instead of <code>-MPAR=foo.par</code>.</p>
+
+<p>Additionally, it lets you convert a CPAN distribution to a PAR distribution, as well as manipulate such distributions. For more information about PAR distributions, see <a href="/perldoc?PAR%3A%3ADist" class="podlinkpod"
+>PAR::Dist</a>.</p>
+
+<p>You can use it to run <em>.par</em> files:</p>
+
+<pre class="sh_perl">    # runs script/run.pl in archive, uses its lib/* as libraries
+    % parl myapp.par run.pl     # runs run.pl or script/run.pl in myapp.par
+    % parl otherapp.pl          # also runs normal perl scripts</pre>
+
+<p>However, if the <em>.par</em> archive contains either <em>main.pl</em> or <em>script/main.pl</em>, it is used instead:</p>
+
+<pre class="sh_perl">    % parl myapp.par run.pl     # runs main.pl, with &#39;run.pl&#39; as @ARGV</pre>
+
+<p>Finally, the <code>-O</code> option makes a stand-alone binary executable from a PAR file:</p>
+
+<pre class="sh_perl">    % parl -B -Omyapp myapp.par
+    % ./myapp                   # run it anywhere without perl binaries</pre>
+
+<p>With the <code>--par-options</code> flag, generated binaries can act as <code>parl</code> to pack new binaries:</p>
+
+<pre class="sh_perl">    % ./myapp --par-options -Omyap2 myapp.par   # identical to ./myapp
+    % ./myapp --par-options -Omyap3 myap3.par   # now with different PAR</pre>
+
+<p>For an explanation of stand-alone executable format, please see <a href="/~rschupp/PAR-Packer-1.013/script/par.pl" class="podlinkpod"
+>par.pl</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?PAR" class="podlinkpod"
+>PAR</a>, <a href="/perldoc?PAR%3A%3ADist" class="podlinkpod"
+>PAR::Dist</a>, <a href="/~rschupp/PAR-Packer-1.013/script/par.pl" class="podlinkpod"
+>par.pl</a>, <a href="/~rschupp/PAR-Packer-1.013/lib/pp.pm" class="podlinkpod"
+>pp</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Audrey Tang &#60;cpan@audreyt.org&#62;</p>
+
+<p><a href="http://par.perl.org/" class="podlinkurl"
+>http://par.perl.org/</a> is the official PAR website. You can write to the mailing list at &#60;par@perl.org&#62;, or send an empty mail to &#60;par-subscribe@perl.org&#62; to participate in the discussion.</p>
+
+<p>Please submit bug reports to &#60;bug-par@rt.cpan.org&#62;.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2002-2009 by Audrey Tang &#60;cpan@audreyt.org&#62;.</p>
+
+<p>Neither this program nor the associated <a href="/~rschupp/PAR-Packer-1.013/lib/pp.pm" class="podlinkpod"
+>pp</a> program impose any licensing restrictions on files generated by their execution, in accordance with the 8th article of the Artistic License:</p>
+
+<pre class="sh_perl">    &#34;Aggregation of this Package with a commercial distribution is
+    always permitted provided that the use of this Package is embedded;
+    that is, when no overt attempt is made to make this Package&#39;s
+    interfaces visible to the end user of the commercial distribution.
+    Such use shall not be construed as a distribution of this Package.&#34;</pre>
+
+<p>Therefore, you are absolutely free to place any license on the resulting executable, as long as the packed 3rd-party libraries are also available under the Artistic License.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>See <a href="http://www.perl.com/perl/misc/Artistic.html" class="podlinkurl"
+>http://www.perl.com/perl/misc/Artistic.html</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78059 Uploads, 24684 Distributions
+105888 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 07:25:25 2012 GMT (0.0488488674163818) @cpansearch1 -->
+ </body>
+</html>

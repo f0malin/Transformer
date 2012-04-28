@@ -1,0 +1,833 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>HTTP::Proxy - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","HTTP-Proxy",3]);
+    _gaq.push(["_setCustomVar",5,"Release","HTTP-Proxy-0.25",3]);
+    _gaq.push(["_setCustomVar",3,"Module","HTTP::Proxy",3]);
+    _gaq.push(["_setCustomVar",1,"Author","BOOK",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?HTTP::Proxy">permalink</a></div>
+  <a href="/~book/">Philippe Bruhat (BooK)</a> &gt;
+  <a href="/~book/HTTP-Proxy-0.25/">HTTP-Proxy-0.25</a> &gt;
+  HTTP::Proxy
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/caceed5798ea9b855532b257de4686e8?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/B/BO/BOOK/HTTP-Proxy-0.25.tar.gz">HTTP-Proxy-0.25.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=HTTP%3A%3AProxy;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~BOOK/HTTP-Proxy-0.25/lib/HTTP/Proxy.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?HTTP%3A%3ARecorder">HTTP::Recorder</a><br>
+<a href="/perldoc?LWP%3A%3AUserAgent">LWP::UserAgent</a><br>
+<a href="/perldoc?WWW%3A%3AMechanize">WWW::Mechanize</a><br>
+<a href="/perldoc?HTTP%3A%3ARequest">HTTP::Request</a><br>
+<a href="/perldoc?HTTP%3A%3AResponse">HTTP::Response</a><br>
+<a href="/perldoc?LWP%3A%3ASimple">LWP::Simple</a><br>
+<a href="/perldoc?HTTP%3A%3AHeaders">HTTP::Headers</a><br>
+<a href="/perldoc?HTTP%3A%3ADaemon">HTTP::Daemon</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?XML%3A%3AParser">XML::Parser</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=HTTP%3A%3AProxy">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 19</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 4</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=HTTP-Proxy">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.25 &nbsp;
+<span class="noprint">
+  <a href="/src/BOOK/HTTP-Proxy-0.25/lib/HTTP/Proxy.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#FILTERS'>FILTERS</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Constructor_and_initialisation'>Constructor and initialisation</a>
+    <li class='indexItem indexItem2'><a href='#Accessors_and_mutators'>Accessors and mutators</a>
+    <li class='indexItem indexItem2'><a href='#Connection_handling_methods'>Connection handling methods</a>
+    <li class='indexItem indexItem2'><a href='#Other_methods'>Other methods</a>
+    <li class='indexItem indexItem2'><a href='#Apache-like_attributes'>Apache-like attributes</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#EXPORTED_SYMBOLS'>EXPORTED SYMBOLS</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#THANKS'>THANKS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>HTTP::Proxy - A pure Perl HTTP proxy</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use HTTP::Proxy;
+
+    # initialisation
+    my $proxy = HTTP::Proxy-&#62;new( port =&#62; 3128 );
+
+    # alternate initialisation
+    my $proxy = HTTP::Proxy-&#62;new;
+    $proxy-&#62;port( 3128 ); # the classical accessors are here!
+
+    # this is a MainLoop-like method
+    $proxy-&#62;start;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module implements a HTTP proxy, using a HTTP::Daemon to accept client connections, and a LWP::UserAgent to ask for the requested pages.</p>
+
+<p>The most interesting feature of this proxy object is its ability to filter the HTTP requests and responses through user-defined filters.</p>
+
+<p>Once the proxy is created, with the <code>new()</code> method, it is possible to alter its behaviour by adding so-called &#34;filters&#34;. This is done by the <code>push_filter()</code> method. Once the filter is ready to run, it can be launched, with the <code>start()</code> method. This method does not normally return until the proxy is killed or otherwise stopped.</p>
+
+<p>An important thing to note is that the proxy is (except when running the <code>NoFork</code> engine) a <i>forking</i> proxy: it doesn&#39;t support passing information between child processes, and you can count on reliable information passing only during a single HTTP connection (request + response).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FILTERS"
+>FILTERS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>You can alter the way the default HTTP::Proxy works by plugging callbacks (filter objects, actually) at different stages of the request/response handling.</p>
+
+<p>When a request is received by the HTTP::Proxy object, it is filtered through a standard filter that transform this request accordingly to RFC 2616 (by adding the <code>Via:</code> header, and a few other transformations). This is the default, bare minimum behaviour.</p>
+
+<p>The response is also filtered in the same manner. There is a total of four filter chains: <code>request-headers</code>, <code>request-body</code>, <code>reponse-headers</code> and <code>response-body</code>.</p>
+
+<p>You can add your own filters to the default ones with the <code>push_filter()</code> method. The method pushes a filter on the appropriate filter stack.</p>
+
+<pre class="sh_perl">    $proxy-&#62;push_filter( response =&#62; $filter );</pre>
+
+<p>The headers/body category is determined by the base class of the filter. There are two base classes for filters, which are <code>HTTP::Proxy::HeaderFilter</code> and <code>HTTP::Proxy::BodyFilter</code> (the names are self-explanatory). See the documentation of those two classes to find out how to write your own header or body filters.</p>
+
+<p>The named parameter is used to determine the request/response part.</p>
+
+<p>It is possible to push the same filter on the request and response stacks, as in the following example:</p>
+
+<pre class="sh_perl">    $proxy-&#62;push_filter( request =&#62; $filter, response =&#62; $filter );</pre>
+
+<p>If several filters match the message, they will be applied in the order they were pushed on their filter stack.</p>
+
+<p>Named parameters can be used to create the match routine. They are:</p>
+
+<pre class="sh_perl">    method - the request method
+    scheme - the URI scheme         
+    host   - the URI authority (host:port)
+    path   - the URI path
+    query  - the URI query string
+    mime   - the MIME type (for a response-body filter)</pre>
+
+<p>The filters are applied only when all the the parameters match the request or the response. All these named parameters have default values, which are:</p>
+
+<pre class="sh_perl">    method =&#62; &#39;OPTIONS,GET,HEAD,POST,PUT,DELETE,TRACE,CONNECT&#39;
+    scheme =&#62; &#39;http&#39;
+    host   =&#62; &#39;&#39;
+    path   =&#62; &#39;&#39;
+    query  =&#62; &#39;&#39;
+    mime   =&#62; &#39;text/*&#39;</pre>
+
+<p>The <code>mime</code> parameter is a glob-like string, with a required <code>/</code> character and a <code>*</code> as a joker. Thus, <code>*/*</code> matches <i>all</i> responses, and <code>&#34;&#34;</code> those with no <code>Content-Type:</code> header. To match any reponse (with or without a <code>Content-Type:</code> header), use <code>undef</code>.</p>
+
+<p>The <code>mime</code> parameter is only meaningful with the <code>response-body</code> filter stack. It is ignored if passed to any other filter stack.</p>
+
+<p>The <code>method</code> and <code>scheme</code> parameters are strings consisting of comma-separated values. The <code>host</code> and <code>path</code> parameters are regular expressions.</p>
+
+<p>A match routine is compiled by the proxy and used to check if a particular request or response must be filtered through a particular filter.</p>
+
+<p>It is also possible to push several filters on the same stack with the same match subroutine:</p>
+
+<pre class="sh_perl">    # convert italics to bold
+    $proxy-&#62;push_filter(
+        mime     =&#62; &#39;text/html&#39;,
+        response =&#62; HTTP::Proxy::BodyFilter::tags-&#62;new(),
+        response =&#62; HTTP::Proxy::BodyFilter::simple-&#62;new(
+            sub { ${ $_[1] } =~ s!(&#60;/?)i&#62;!$1b&#62;!ig }
+        )
+    );</pre>
+
+<p>For more details regarding the creation of new filters, check the <code>HTTP::Proxy::HeaderFilter</code> and <code>HTTP::Proxy::BodyFilter</code> documentation.</p>
+
+<p>Here&#39;s an example of subclassing a base filter class:</p>
+
+<pre class="sh_perl">    # fixes a common typo ;-)
+    # but chances are that this will modify a correct URL
+    {
+        package FilterPerl;
+        use base qw( HTTP::Proxy::BodyFilter );
+
+        sub filter {
+            my ( $self, $dataref, $message, $protocol, $buffer ) = @_;
+            $$dataref =~ s/PERL/Perl/g;
+        }
+    }
+    $proxy-&#62;push_filter( response =&#62; FilterPerl-&#62;new() );</pre>
+
+<p>Other examples can be found in the documentation for <code>HTTP::Proxy::HeaderFilter</code>, <code>HTTP::Proxy::BodyFilter</code>, <code>HTTP::Proxy::HeaderFilter::simple</code>, <code>HTTP::Proxy::BodyFilter::simple</code>.</p>
+
+<pre class="sh_perl">    # a simple anonymiser
+    # see eg/anonymiser.pl for the complete code
+    $proxy-&#62;push_filter(
+        mime    =&#62; undef,
+        request =&#62; HTTP::Proxy::HeaderFilter::simple-&#62;new(
+            sub { $_[1]-&#62;remove_header(qw( User-Agent From Referer Cookie )) },
+        ),
+        response =&#62; HTTP::Proxy::HeaderFilter::simple-&#62;new(
+            sub { $_[1]-&#62;remove_header(qw( Set-Cookie )); },
+        )
+    );</pre>
+
+<p>IMPORTANT: If you use your own <code>LWP::UserAgent</code>, you must install it before your calls to <code>push_filter()</code>, otherwise the match method will make wrong assumptions about the schemes your agent supports.</p>
+
+<p>NOTE: It is likely that possibility of changing the agent or the daemon may disappear in future versions.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Constructor_and_initialisation"
+>Constructor and initialisation</a></h2>
+
+<dl>
+<dt><a name='new'></a><a name="new()"
+>new()</a></dt>
+
+<dd>
+<p>The <code>new()</code> method creates a new HTTP::Proxy object. All attributes can be passed as parameters to replace the default.</p>
+
+<p>Parameters that are not <code>HTTP::Proxy</code> attributes will be ignored and passed to the chosen <code>HTTP::Proxy::Engine</code> object.</p>
+
+<dt><a name='init'></a><a name="init()"
+>init()</a></dt>
+
+<dd>
+<p><code>init()</code> initialise the proxy without starting it. It is usually not needed.</p>
+
+<p>This method is called by <code>start()</code> if needed.</p>
+
+<dt><a name='push_filter'></a><a name="push_filter()"
+>push_filter()</a></dt>
+
+<dd>
+<p>The <code>push_filter()</code> method is used to add filters to the proxy. It is fully described in section <a href="/perldoc?FILTERS" class="podlinkpod"
+>FILTERS</a>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Accessors_and_mutators"
+>Accessors and mutators</a></h2>
+
+<p>The HTTP::Proxy has several accessors and mutators.</p>
+
+<p>Called with arguments, the accessor returns the current value. Called with a single argument, it sets the current value and returns the previous one, in case you want to keep it.</p>
+
+<p>If you call a read-only accessor with a parameter, this parameter will be ignored.</p>
+
+<p>The defined accessors are (in alphabetical order):</p>
+
+<dl>
+<dt><a name="agent"
+>agent</a></dt>
+
+<dd>
+<p>The LWP::UserAgent object used internally to connect to remote sites.</p>
+
+<dt><a name="chunk"
+>chunk</a></dt>
+
+<dd>
+<p>The chunk size for the LWP::UserAgent callbacks.</p>
+
+<dt><a name='client_socket'></a><a name="client_socket_(read-only)"
+>client_socket (read-only)</a></dt>
+
+<dd>
+<p>The socket currently connected to the client. Mostly useful in filters.</p>
+
+<dt><a name="client_headers"
+>client_headers</a></dt>
+
+<dd>
+<p>This attribute holds a reference to the client headers set up by LWP::UserAgent (<code>Client-Aborted</code>, <code>Client-Bad-Header-Line</code>, <code>Client-Date</code>, <code>Client-Junk</code>, <code>Client-Peer</code>, <code>Client-Request-Num</code>, <code>Client-Response-Num</code>, <code>Client-SSL-Cert-Issuer</code>, <code>Client-SSL-Cert-Subject</code>, <code>Client-SSL-Cipher</code>, <code>Client-SSL-Warning</code>, <code>Client-Transfer-Encoding</code>, <code>Client-Warning</code>).</p>
+
+<p>They are removed by the filter HTTP::Proxy::HeaderFilter::standard from the request and response objects received by the proxy.</p>
+
+<p>If a filter (such as a SSL certificate verification filter) need to access them, it must do it through this accessor.</p>
+
+<dt><a name='conn'></a><a name="conn_(read-only)"
+>conn (read-only)</a></dt>
+
+<dd>
+<p>The number of connections processed by this HTTP::Proxy instance.</p>
+
+<dt><a name="daemon"
+>daemon</a></dt>
+
+<dd>
+<p>The HTTP::Daemon object used to accept incoming connections. (You usually never need this.)</p>
+
+<dt><a name="engine"
+>engine</a></dt>
+
+<dd>
+<p>The HTTP::Proxy::Engine object that manages the child processes.</p>
+
+<dt><a name="hop_headers"
+>hop_headers</a></dt>
+
+<dd>
+<p>This attribute holds a reference to the hop-by-hop headers (<code>Connection</code>, <code>Keep-Alive</code>, <code>Proxy-Authenticate</code>, <code>Proxy-Authorization</code>, <code>TE</code>, <code>Trailers</code>, <code>Transfer-Encoding</code>, <code>Upgrade</code>).</p>
+
+<p>They are removed by the filter HTTP::Proxy::HeaderFilter::standard from the request and response objects received by the proxy.</p>
+
+<p>If a filter (such as a proxy authorisation filter) need to access them, it must do it through this accessor.</p>
+
+<dt><a name="host"
+>host</a></dt>
+
+<dd>
+<p>The proxy HTTP::Daemon host (default: &#39;localhost&#39;).</p>
+
+<p>This means that by default, the proxy answers only to clients on the local machine. You can pass a specific interface address or <code>&#34;&#34;</code>/<code>undef</code> for any interface.</p>
+
+<p>This default prevents your proxy to be used as an anonymous proxy by script kiddies.</p>
+
+<dt><a name='known_methods'></a><a name="known_methods(_@groups_)_(read-only)"
+>known_methods( @groups ) (read-only)</a></dt>
+
+<dd>
+<p>This method returns all HTTP (and extensions to HTTP) known to <code>HTTP::Proxy</code>. Methods are grouped by type. Known method groups are: <code>HTTP</code>, <code>WebDAV</code> and <code>DeltaV</code>.</p>
+
+<p>Called with an empty list, this method will return all known methods. This method is case-insensitive, and will <code>carp()</code> if an unknown group name is passed.</p>
+
+<dt><a name="logfh"
+>logfh</a></dt>
+
+<dd>
+<p>A filehandle to a logfile (default: *STDERR).</p>
+
+<dt><a name='logmask'></a><a name="logmask(_[$mask]_)"
+>logmask( [$mask] )</a></dt>
+
+<dd>
+<p>Be verbose in the logs (default: NONE).</p>
+
+<p>Here are the various elements that can be added to the mask (their values are powers of 2, starting from 0 and listed here in ascending order):</p>
+
+<pre class="sh_perl">    NONE    - Log only errors
+    PROXY   - Proxy information
+    STATUS  - Requested URL, reponse status and total number
+              of connections processed
+    PROCESS - Subprocesses information (fork, wait, etc.)
+    SOCKET  - Information about low-level sockets
+    HEADERS - Full request and response headers are sent along
+    FILTERS - Filter information
+    DATA    - Data received by the filters
+    CONNECT - Data transmitted by the CONNECT method
+    ENGINE  - Engine information
+    ALL     - Log all of the above</pre>
+
+<p>If you only want status and process information, you can use:</p>
+
+<pre class="sh_perl">    $proxy-&#62;logmask( STATUS | PROCESS );</pre>
+
+<p>Note that all the logging constants are not exported by default, but by the <code>:log</code> tag. They can also be exported one by one.</p>
+
+<dt><a name='loop'></a><a name="loop_(read-only)"
+>loop (read-only)</a></dt>
+
+<dd>
+<p>Internal. False when the main loop is about to be broken.</p>
+
+<dt><a name="max_clients"
+>max_clients</a></dt>
+
+<dd>
+<dt><a name="maxchild"
+>maxchild</a></dt>
+
+<dd>
+<p>The maximum number of child process the HTTP::Proxy object will spawn to handle client requests (default: depends on the engine).</p>
+
+<p>This method is currently delegated to the HTTP::Proxy::Engine object.</p>
+
+<p><code>maxchild</code> is deprecated and will disappear.</p>
+
+<dt><a name="max_connections"
+>max_connections</a></dt>
+
+<dd>
+<dt><a name="maxconn"
+>maxconn</a></dt>
+
+<dd>
+<p>The maximum number of TCP connections the proxy will accept before returning from start(). 0 (the default) means never stop accepting connections.</p>
+
+<p><code>maxconn</code> is deprecated.</p>
+
+<p>Note: <code>max_connections</code> will be deprecated soon, for two reasons: 1) it is more of an HTTP::Proxy::Engine attribute, 2) not all engines will support it.</p>
+
+<dt><a name="max_keep_alive_requests"
+>max_keep_alive_requests</a></dt>
+
+<dd>
+<dt><a name="maxserve"
+>maxserve</a></dt>
+
+<dd>
+<p>The maximum number of requests the proxy will serve in a single connection. (same as <code>MaxRequestsPerChild</code> in Apache)</p>
+
+<p><code>maxserve</code> is deprecated.</p>
+
+<dt><a name="port"
+>port</a></dt>
+
+<dd>
+<p>The proxy <code>HTTP::Daemon</code> port (default: 8080).</p>
+
+<dt><a name="request"
+>request</a></dt>
+
+<dd>
+<p>The request originaly received by the proxy from the user-agent, which will be modified by the request filters.</p>
+
+<dt><a name="response"
+>response</a></dt>
+
+<dd>
+<p>The response received from the origin server by the proxy. It is normally <code>undef</code> until the proxy actually receives the beginning of a response from the origin server.</p>
+
+<p>If one of the request filters sets this attribute, it &#34;short-circuits&#34; the request/response scheme, and the proxy will return this response (which is NOT filtered through the response filter stacks) instead of the expected origin server response. This is useful for caching (though Squid does it much better) and proxy authentication, for example.</p>
+
+<dt><a name="stash"
+>stash</a></dt>
+
+<dd>
+<p>The stash is a hash where filters can store data to share between them.</p>
+
+<p>The stash() method can be used to set the whole hash (with a HASH reference). To access individual keys simply do:</p>
+
+<pre class="sh_perl">    $proxy-&#62;stash( &#39;bloop&#39; );</pre>
+
+<p>To set it, type:</p>
+
+<pre class="sh_perl">    $proxy-&#62;stash( bloop =&#62; &#39;owww&#39; );</pre>
+
+<p>It&#39;s also possibly to get a reference to the stash:</p>
+
+<pre class="sh_perl">    my $s = $filter-&#62;proxy-&#62;stash();
+    $s-&#62;{bang} = &#39;bam&#39;;
+
+    # $proxy-&#62;stash( &#39;bang&#39; ) will now return &#39;bam&#39;</pre>
+
+<p><b>Warning:</b> since the proxy forks for each TCP connection, the data is only shared between filters in the same child process.</p>
+
+<dt><a name="timeout"
+>timeout</a></dt>
+
+<dd>
+<p>The timeout used by the internal LWP::UserAgent (default: 60).</p>
+
+<dt><a name='url'></a><a name="url_(read-only)"
+>url (read-only)</a></dt>
+
+<dd>
+<p>The url where the proxy can be reached.</p>
+
+<dt><a name="via"
+>via</a></dt>
+
+<dd>
+<p>The content of the Via: header. Setting it to an empty string will prevent its addition. (default: <code>$hostname (HTTP::Proxy/$VERSION)</code>)</p>
+
+<dt><a name="x_forwarded_for"
+>x_forwarded_for</a></dt>
+
+<dd>
+<p>If set to a true value, the proxy will send the <code>X-Forwarded-For:</code> header. (default: true)</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Connection_handling_methods"
+>Connection handling methods</a></h2>
+
+<dl>
+<dt><a name='start'></a><a name="start()"
+>start()</a></dt>
+
+<dd>
+<p>This method works like Tk&#39;s <code>MainLoop</code>: you hand over control to the <code>HTTP::Proxy</code> object you created and configured.</p>
+
+<p>If <code>maxconn</code> is not zero, <code>start()</code> will return after accepting at most that many connections. It will return the total number of connexions.</p>
+
+<dt><a name='serve_connections'></a><a name="serve_connections()"
+>serve_connections()</a></dt>
+
+<dd>
+<p>This is the internal method used to handle each new TCP connection to the proxy.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Other_methods"
+>Other methods</a></h2>
+
+<dl>
+<dt><a name='log'></a><a name="log(_$level,_$prefix,_$message_)"
+>log( $level, $prefix, $message )</a></dt>
+
+<dd>
+<p>Adds <code>$message</code> at the end of <code>logfh</code>, if $level matches <code>logmask</code>. The <code>log()</code> method also prints a timestamp.</p>
+
+<p>The output looks like:</p>
+
+<pre class="sh_perl">    [Thu Dec  5 12:30:12 2002] ($$) $prefix: $message</pre>
+
+<p>where <code>$$</code> is the current processus id.</p>
+
+<p>If <code>$message</code> is a multiline string, several log lines will be output, each line starting with <code>$prefix</code>.</p>
+
+<dt><a name='is_protocol_supported'></a><a name="is_protocol_supported(_$scheme_)"
+>is_protocol_supported( $scheme )</a></dt>
+
+<dd>
+<p>Returns a boolean indicating if $scheme is supported by the proxy.</p>
+
+<p>This method is only used internaly.</p>
+
+<p>It is essential to allow HTTP::Proxy users to create &#34;pseudo-schemes&#34; that LWP doesn&#39;t know about, but that one of the proxy filters can handle directly. New schemes are added as follows:</p>
+
+<pre class="sh_perl">    $proxy-&#62;init();    # required to get an agent
+    $proxy-&#62;agent-&#62;protocols_allowed(
+        [ @{ $proxy-&#62;agent-&#62;protocols_allowed }, &#39;myhttp&#39; ] );</pre>
+
+<dt><a name='new_connection'></a><a name="new_connection()"
+>new_connection()</a></dt>
+
+<dd>
+<p>Increase the proxy&#39;s TCP connections counter. Only used by <code>HTTP::Proxy::Engine</code> objects.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Apache-like_attributes"
+>Apache-like attributes</a></h2>
+
+<p><code>HTTP::Proxy</code> has several Apache-like attributes that control the way the HTTP and TCP connections are handled.</p>
+
+<p>The following attributes control the TCP connection. They are passed to the underlying <code>HTTP::Proxy::Engine</code>, which may (or may not) use them to change its behaviour.</p>
+
+<dl>
+<dt><a name="start_servers"
+>start_servers</a></dt>
+
+<dd>
+<p>Number of child process to fork at the beginning.</p>
+
+<dt><a name="max_clients"
+>max_clients</a></dt>
+
+<dd>
+<p>Maximum number of concurrent TCP connections (i.e. child processes).</p>
+
+<dt><a name="max_requests_per_child"
+>max_requests_per_child</a></dt>
+
+<dd>
+<p>Maximum number of TCP connections handled by the same child process.</p>
+
+<dt><a name="min_spare_servers"
+>min_spare_servers</a></dt>
+
+<dd>
+<p>Minimum number of inactive child processes.</p>
+
+<dt><a name="max_spare_servers"
+>max_spare_servers</a></dt>
+
+<dd>
+<p>Maximum number of inactive child processes.</p>
+</dd>
+</dl>
+
+<p>Those attributes control the HTTP connection:</p>
+
+<dl>
+<dt><a name="keep_alive"
+>keep_alive</a></dt>
+
+<dd>
+<p>Support for keep alive HTTP connections.</p>
+
+<dt><a name="max_keep_alive_requests"
+>max_keep_alive_requests</a></dt>
+
+<dd>
+<p>Maximum number of HTTP connections within a single TCP connection.</p>
+
+<dt><a name="keep_alive_timeout"
+>keep_alive_timeout</a></dt>
+
+<dd>
+<p>Timeout for keep-alive connection.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORTED_SYMBOLS"
+>EXPORTED SYMBOLS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>No symbols are exported by default. The <code>:log</code> tag exports all the logging constants.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module does not work under Windows, but I can&#39;t see why, and do not have a development platform under that system. Patches and explanations very welcome.</p>
+
+<p>I guess it is because <code>fork()</code> is not well supported.</p>
+
+<pre class="sh_perl">    $proxy-&#62;maxchild(0);</pre>
+
+<dl>
+<dt><a name='However'></a><a name="However,_David_Fishburn_says:"
+>However, David Fishburn says:</a></dt>
+
+<dd>
+<p>This did not work for me under WinXP - ActiveState Perl 5.6, but it DOES work on WinXP ActiveState Perl 5.8.</p>
+</dd>
+</dl>
+
+<p>Several people have tried to help, but we haven&#39;t found a way to make it work correctly yet.</p>
+
+<p>As from version 0.16, the default engine is <code>HTTP::Proxy::Engine::NoFork</code>. Let me know if it works better.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~book/HTTP-Proxy-0.25/lib/HTTP/Proxy/Engine.pm" class="podlinkpod"
+>HTTP::Proxy::Engine</a>, <a href="/~book/HTTP-Proxy-0.25/lib/HTTP/Proxy/BodyFilter.pm" class="podlinkpod"
+>HTTP::Proxy::BodyFilter</a>, <a href="/~book/HTTP-Proxy-0.25/lib/HTTP/Proxy/HeaderFilter.pm" class="podlinkpod"
+>HTTP::Proxy::HeaderFilter</a>, the examples in <em>eg/</em>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Philippe &#34;BooK&#34; Bruhat, &#60;book@cpan.org&#62;.</p>
+
+<p>The module has its own web page at <a href="http://http-proxy.mongueurs.net/" class="podlinkurl"
+>http://http-proxy.mongueurs.net/</a> complete with older versions and repository snapshot.</p>
+
+<p>There are also two mailing-lists: http-proxy@mongueurs.net for general discussion about <code>HTTP::Proxy</code> and http-proxy-cvs@mongueurs.net for CVS commits emails.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="THANKS"
+>THANKS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Many people helped me during the development of this module, either on mailing-lists, IRC or over a beer in a pub...</p>
+
+<p>So, in no particular order, thanks to the libwww-perl team for such a terrific suite of modules, perl-qa (tips for testing), the French Perl <i>Mongueurs</i> (for code tricks, beers and encouragements) and my growing user base... <code>;-)</code></p>
+
+<p>I&#39;d like to particularly thank Dan Grigsby, who&#39;s been using <code>HTTP::Proxy</code> since 2003 (before the filter classes even existed). He is apparently making a living from a product based on <code>HTTP::Proxy</code>. Thanks a lot for your confidence in my work!</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2002-2008, Philippe Bruhat.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module is free software; you can redistribute it or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78254 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 09:23:11 2012 GMT (0.15199089050293) @cpansearch1 -->
+ </body>
+</html>

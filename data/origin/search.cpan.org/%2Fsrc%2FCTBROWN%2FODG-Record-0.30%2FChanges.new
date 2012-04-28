@@ -1,0 +1,29 @@
+Revision history for Perl extension ODG::Record.
+
+0.30  Wed Jan 14 2009
+    - Greatly simplified API.
+      - Record fields are specified by Meta Attribute Traits
+      - Removed _metadata_ slot. 
+      - Refactor the attribute accessors
+    - Changed name of slot from _data_ to _data. This seems more in line
+      with Moose and some functional languages.
+    - Added dependence on MooseX::Meta::Attribute::Index
+    - Improved documentation
+
+0.28  Wed Oct 1 2008
+    - Required Dependency MooseX::AttributeHelpers => 0.13 
+    - Remove rebless into ANON SUBCLASS in favor of direct add_method
+      in BUILD.  Much cleaner, simpler code.  What was I thinking, before?
+    - Added some test.
+
+0.27  Mon Jul 7 12:00:00 2008
+    - Fixed dependencies in Makefile.PL
+
+0.25  Thu Mar 27 12:00:00 2008
+    - First release version 
+
+0.01  Wed Mar 19 14:33:14 2008
+	- original version; created by h2xs 1.23 with options
+		-XAn VDS::Record
+
+

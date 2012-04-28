@@ -1,0 +1,46 @@
+{
+   "abstract" : "Cryptographically-secure, cross-platform replacement for rand()",
+   "author" : [
+      "Max Kanat-Alexander <mkanat@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.102340, CPAN::Meta::Converter version 2.102400",
+   "license" : [
+      "artistic_2"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Math-Random-Secure",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "recommends" : {
+            "Math::Random::ISAAC::XS" : 0
+         },
+         "requires" : {
+            "Any::Moose" : 0,
+            "Crypt::Random::Source" : 0,
+            "Math::Random::ISAAC" : "v1.0.3"
+         }
+      },
+      "test" : {
+         "recommends" : {
+            "Test::LeakTrace" : 0
+         },
+         "requires" : {
+            "List::MoreUtils" : 0,
+            "Test::Exception" : 0,
+            "Test::More" : 0
+         }
+      }
+   },
+   "release_status" : "stable",
+   "version" : "0.02"
+}
+

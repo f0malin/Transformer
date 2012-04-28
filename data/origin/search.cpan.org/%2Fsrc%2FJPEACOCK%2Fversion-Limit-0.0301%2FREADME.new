@@ -1,0 +1,17 @@
+NAME
+    version::Limit - Perl extension for fine control of permitted versions
+
+SYNOPSIS
+      use version::Limit;
+      version::Limit::Scope(
+        "[0.0.0,1.0.0)" => "constructor syntax has changed",
+        "[2.2.4,2.3.1)" => "frobniz method croaks without second argument",
+      );
+
+INSTALLATION
+      The usual:
+
+      perl Makefile.PL
+      make
+      make test
+      sudo make install

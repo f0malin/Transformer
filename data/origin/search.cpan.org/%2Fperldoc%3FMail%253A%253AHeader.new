@@ -1,0 +1,495 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Mail::Header - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","MailTools",3]);
+    _gaq.push(["_setCustomVar",5,"Release","MailTools-2.09",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Mail::Header",3]);
+    _gaq.push(["_setCustomVar",1,"Author","MARKOV",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Mail::Header">permalink</a></div>
+  <a href="/~markov/">Mark Overmeer</a> &gt;
+  <a href="/~markov/MailTools-2.09/">MailTools-2.09</a> &gt;
+  Mail::Header
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/18f0494979b7feef52388275080aaa34?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/M/MA/MARKOV/MailTools-2.09.tar.gz">MailTools-2.09.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Mail%3A%3AHeader;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~MARKOV/MailTools-2.09/lib/Mail/Header.pod">Annotate this POD
+(2)
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Mail%3A%3AInternet">Mail::Internet</a><br>
+<a href="/perldoc?Net%3A%3ASMTP">Net::SMTP</a><br>
+<a href="/perldoc?Net%3A%3APOP3">Net::POP3</a><br>
+<a href="/perldoc?Mail%3A%3AAddress">Mail::Address</a><br>
+<a href="/perldoc?Mail%3A%3ASendmail">Mail::Sendmail</a><br>
+<a href="/perldoc?MIME%3A%3ALite">MIME::Lite</a><br>
+<a href="/perldoc?Mail%3A%3APOP3Client">Mail::POP3Client</a><br>
+<a href="/perldoc?Mail%3A%3ABox">Mail::Box</a><br>
+<a href="/perldoc?MIME%3A%3AParser">MIME::Parser</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Mail%3A%3AHeader">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=MailTools">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.09 &nbsp;
+<span class="noprint">
+  <a href="/src/MARKOV/MailTools-2.09/lib/Mail/Header.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Constructors'>Constructors</a>
+    <li class='indexItem indexItem2'><a href='#&#34;Fake&#34;_constructors'>&#34;Fake&#34; constructors</a>
+    <li class='indexItem indexItem2'><a href='#Accessors'>Accessors</a>
+    <li class='indexItem indexItem2'><a href='#Processing'>Processing</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Mail::Header - manipulate MIME headers</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> use Mail::Header;
+    
+ my $head = Mail::Header-&#62;new;
+ my $head = Mail::Header-&#62;new( \*STDIN );
+ my $head = Mail::Header-&#62;new( [&#60;&#62;], Modify =&#62; 0);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Read, write, create, and manipulate MIME headers, the leading part of each modern e-mail message, but also used in other protocols like HTTP. The fields are kept in <a href="/~markov/MailTools-2.09/lib/Mail/Field.pod" class="podlinkpod"
+>Mail::Field</a> objects.</p>
+
+<p>Be aware that the header fields each have a name part, which shall be treated case-insensitive, and a content part, which may be folded over multiple lines.</p>
+
+<p>Mail::Header does not always follow the RFCs strict enough, does not help you with character encodings. It does not use weak references where it could (because those did not exist when the module was written) which costs some performance and make the implementation a little more complicated. The Mail::Message::Head implementation is much newer and therefore better.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Constructors"
+>Constructors</a></h2>
+
+<dl>
+<dt><a name='obj'></a><a name="$obj-&#62;dup()"
+>$obj-&#62;<b>dup</b>()</a></dt>
+
+<dd>
+<p>Create a duplicate of the current object.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;new([ARG],_[OPTIONS])"
+>$obj-&#62;<b>new</b>([ARG], [OPTIONS])</a></dt>
+
+<dd>
+<dt><a name='Mail'></a><a name="Mail::Header-&#62;new([ARG],_[OPTIONS])"
+>Mail::Header-&#62;<b>new</b>([ARG], [OPTIONS])</a></dt>
+
+<dd>
+<p>ARG may be either a file descriptor (reference to a GLOB) or a reference to an array. If given the new object will be initialized with headers either from the array of read from the file descriptor.</p>
+
+<p>OPTIONS is a list of options given in the form of key-value pairs, just like a hash table. Valid options are</p>
+
+<pre class="sh_perl"> -Option    --Default
+  FoldLength  79
+  MailFrom    &#39;KEEP&#39;
+  Modify      true</pre>
+
+<dl>
+<dt><a name='FoldLength'></a><a name="FoldLength_=&#62;_INTEGER"
+>FoldLength =&#62; INTEGER</a></dt>
+
+<dd>
+<p>The default length of line to be used when folding header lines. See <a href="/~markov/MailTools-2.09/lib/Mail/Header.pod#Accessors" class="podlinkpod"
+>fold_length()</a>.</p>
+
+<dt><a name='MailFrom'></a><a name="MailFrom_=&#62;_&#39;IGNORE&#39;|&#39;COERCE&#39;|&#39;KEEP&#39;|&#39;ERROR&#39;"
+>MailFrom =&#62; &#39;IGNORE&#39;|&#39;COERCE&#39;|&#39;KEEP&#39;|&#39;ERROR&#39;</a></dt>
+
+<dd>
+<p>See method <a href="/~markov/MailTools-2.09/lib/Mail/Header.pod#Accessors" class="podlinkpod"
+>mail_from()</a>.</p>
+
+<dt><a name='Modify'></a><a name="Modify_=&#62;_BOOLEAN"
+>Modify =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>If this value is <i>true</i> then the headers will be re-formatted, otherwise the format of the header lines will remain unchanged.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="&#34;Fake&#34;_constructors"
+>&#34;Fake&#34; constructors</a></h2>
+
+<p>Be warned that the next constructors all require an already created header object, of which the original content will be destroyed.</p>
+
+<dl>
+<dt><a name='obj'></a><a name="$obj-&#62;empty()"
+>$obj-&#62;<b>empty</b>()</a></dt>
+
+<dd>
+<p>Empty an existing <code>Mail::Header</code> object of all lines.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;extract(ARRAY)"
+>$obj-&#62;<b>extract</b>(ARRAY)</a></dt>
+
+<dd>
+<p>Extract a header from the given array into an existing Mail::Header object. <code>extract</code> <b>will modify</b> this array. Returns the object that the method was called on.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;header([ARRAY])"
+>$obj-&#62;<b>header</b>([ARRAY])</a></dt>
+
+<dd>
+<p><code>header</code> does multiple operations. First it will extract a header from the ARRAY, if given. It will then reformat the header (if reformatting is permitted), and finally return a reference to an array which contains the header in a printable form.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;header_hashref([HASH])"
+>$obj-&#62;<b>header_hashref</b>([HASH])</a></dt>
+
+<dd>
+<p>As <a href="/~markov/MailTools-2.09/lib/Mail/Header.pod#&#34;Fake&#34;_constructors" class="podlinkpod"
+>header()</a>, but it will eventually set headers from a hash reference, and it will return the headers as a hash reference.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl"> $fields-&#62;{From} = &#39;Tobias Brox &#60;tobix@cpan.org&#62;&#39;;
+ $fields-&#62;{To}   = [&#39;you@somewhere&#39;, &#39;me@localhost&#39;];
+ $head-&#62;header_hashref($fields);</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;read(FILEHANDLE)"
+>$obj-&#62;<b>read</b>(FILEHANDLE)</a></dt>
+
+<dd>
+<p>Read a header from the given file descriptor into an existing Mail::Header object.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Accessors"
+>Accessors</a></h2>
+
+<dl>
+<dt><a name='obj'></a><a name="$obj-&#62;fold_length([TAG],_[LENGTH])"
+>$obj-&#62;<b>fold_length</b>([TAG], [LENGTH])</a></dt>
+
+<dd>
+<p>Set the default fold length for all tags or just one. With no arguments the default fold length is returned. With two arguments it sets the fold length for the given tag and returns the previous value. If only <code>LENGTH</code> is given it sets the default fold length for the current object.</p>
+
+<p>In the two argument form <code>fold_length</code> may be called as a static method, setting default fold lengths for tags that will be used by <b>all</b> <code>Mail::Header</code> objects. See the <code>fold</code> method for a description on how <code>Mail::Header</code> uses these values.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;mail_from(&#39;IGNORE&#39;|&#39;COERCE&#39;|&#39;KEEP&#39;|&#39;ERROR&#39;)"
+>$obj-&#62;<b>mail_from</b>(&#39;IGNORE&#39;|&#39;COERCE&#39;|&#39;KEEP&#39;|&#39;ERROR&#39;)</a></dt>
+
+<dd>
+<p>This specifies what to do when a <code>`From &#39;</code> line is encountered. Valid values are <code>IGNORE</code> - ignore and discard the header, <code>ERROR</code> - invoke an error (call die), <code>COERCE</code> - rename them as Mail-From and <code>KEEP</code> - keep them.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;modify([VALUE])"
+>$obj-&#62;<b>modify</b>([VALUE])</a></dt>
+
+<dd>
+<p>If <code>VALUE</code> is <i>false</i> then <code>Mail::Header</code> will not do any automatic reformatting of the headers, other than to ensure that the line starts with the tags given.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Processing"
+>Processing</a></h2>
+
+<dl>
+<dt><a name='obj'></a><a name="$obj-&#62;add(TAG,_LINE_[,_INDEX])"
+>$obj-&#62;<b>add</b>(TAG, LINE [, INDEX])</a></dt>
+
+<dd>
+<p>Add a new line to the header. If TAG is <code>undef</code> the the tag will be extracted from the beginning of the given line. If INDEX is given, the new line will be inserted into the header at the given point, otherwise the new line will be appended to the end of the header.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;as_string()"
+>$obj-&#62;<b>as_string</b>()</a></dt>
+
+<dd>
+<p>Returns the header as a single string.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;cleanup()"
+>$obj-&#62;<b>cleanup</b>()</a></dt>
+
+<dd>
+<p>Remove any header line that, other than the tag, only contains whitespace</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;combine(TAG_[,_WITH])"
+>$obj-&#62;<b>combine</b>(TAG [, WITH])</a></dt>
+
+<dd>
+<p>Combine all instances of TAG into one. The lines will be joined together WITH, or a single space if not given. The new item will be positioned in the header where the first instance was, all other instances of TAG will be removed.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;count(TAG)"
+>$obj-&#62;<b>count</b>(TAG)</a></dt>
+
+<dd>
+<p>Returns the number of times the given atg appears in the header</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;delete(TAG_[,_INDEX_])"
+>$obj-&#62;<b>delete</b>(TAG [, INDEX ])</a></dt>
+
+<dd>
+<p>Delete a tag from the header. If an INDEX id is given, then the Nth instance of the tag will be removed. If no INDEX is given, then all instances of tag will be removed.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;fold([LENGTH])"
+>$obj-&#62;<b>fold</b>([LENGTH])</a></dt>
+
+<dd>
+<p>Fold the header. If LENGTH is not given, then <code>Mail::Header</code> uses the following rules to determine what length to fold a line.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;get(TAG_[,_INDEX])"
+>$obj-&#62;<b>get</b>(TAG [, INDEX])</a></dt>
+
+<dd>
+<p>Get the text from a line. If an INDEX is given, then the text of the Nth instance will be returned. If it is not given the return value depends on the context in which <code>get</code> was called. In an array context a list of all the text from all the instances of the TAG will be returned. In a scalar context the text for the first instance will be returned.</p>
+
+<p>The lines are unfolded, but still terminated with a new-line (see <code>chomp</code>)</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;print([FILEHANDLE])"
+>$obj-&#62;<b>print</b>([FILEHANDLE])</a></dt>
+
+<dd>
+<p>Print the header to the given file descriptor, or <code>STDOUT</code> if no file descriptor is given.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;replace(TAG,_LINE_[,_INDEX_])"
+>$obj-&#62;<b>replace</b>(TAG, LINE [, INDEX ])</a></dt>
+
+<dd>
+<p>Replace a line in the header. If TAG is <code>undef</code> the the tag will be extracted from the beginning of the given line. If INDEX is given the new line will replace the Nth instance of that tag, otherwise the first instance of the tag is replaced. If the tag does not appear in the header then a new line will be appended to the header.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;tags()"
+>$obj-&#62;<b>tags</b>()</a></dt>
+
+<dd>
+<p>Returns an array of all the tags that exist in the header. Each tag will only appear in the list once. The order of the tags is not specified.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;unfold([TAG])"
+>$obj-&#62;<b>unfold</b>([TAG])</a></dt>
+
+<dd>
+<p>Unfold all instances of the given tag so that they do not spread across multiple lines. If <code>TAG</code> is not given then all lines are unfolded.</p>
+
+<p>The unfolding process is wrong but (for compatibility reasons) will not be repaired: only one blank at the start of the line should be removed, not all of them.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module is part of the MailTools distribution, <em><a href="http://perl.overmeer.net/mailtools/" class="podlinkurl"
+>http://perl.overmeer.net/mailtools/</a></em>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The MailTools bundle was developed by Graham Barr. Later, Mark Overmeer took over maintenance without commitment to further development.</p>
+
+<p>Mail::Cap by Gisle Aas &#60;aas@oslonett.no&#62;. Mail::Field::AddrList by Peter Orbaek &#60;poe@cit.dk&#62;. Mail::Mailer and Mail::Send by Tim Bunce &#60;Tim.Bunce@ig.co.uk&#62;. For other contributors see ChangeLog.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyrights 1995-2000 Graham Barr &#60;gbarr@pobox.com&#62; and 2001-2007 Mark Overmeer &#60;perl@overmeer.net&#62;.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. See <em><a href="http://www.perl.com/perl/misc/Artistic.html" class="podlinkurl"
+>http://www.perl.com/perl/misc/Artistic.html</a></em></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78290 Uploads, 24725 Distributions
+106015 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 28 09:03:03 2012 GMT (0.137905836105347) @cpansearch1 -->
+ </body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>PAR::Dist - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","PAR-Dist",3]);
+    _gaq.push(["_setCustomVar",5,"Release","PAR-Dist-0.48",3]);
+    _gaq.push(["_setCustomVar",3,"Module","PAR::Dist",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SMUELLER",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?PAR::Dist">permalink</a></div>
+  <a href="/~smueller/">Steffen M&uuml;ller</a> &gt;
+  <a href="/~smueller/PAR-Dist-0.48/">PAR-Dist-0.48</a> &gt;
+  PAR::Dist
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/ac0c0eab36df58cd3676c1f03f4d5185?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SM/SMUELLER/PAR-Dist-0.48.tar.gz">PAR-Dist-0.48.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=PAR%3A%3ADist;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SMUELLER/PAR-Dist-0.48/lib/PAR/Dist.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 4</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 2</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=PAR-Dist">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.48 &nbsp;
+<span class="noprint">
+  <a href="/src/SMUELLER/PAR-Dist-0.48/lib/PAR/Dist.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#blib_to_par'>blib_to_par</a>
+    <li class='indexItem indexItem2'><a href='#install_par'>install_par</a>
+    <li class='indexItem indexItem2'><a href='#uninstall_par'>uninstall_par</a>
+    <li class='indexItem indexItem2'><a href='#sign_par'>sign_par</a>
+    <li class='indexItem indexItem2'><a href='#verify_par'>verify_par</a>
+    <li class='indexItem indexItem2'><a href='#merge_par'>merge_par</a>
+    <li class='indexItem indexItem2'><a href='#remove_man'>remove_man</a>
+    <li class='indexItem indexItem2'><a href='#get_meta'>get_meta</a>
+    <li class='indexItem indexItem2'><a href='#parse_dist_name'>parse_dist_name</a>
+    <li class='indexItem indexItem2'><a href='#generate_blib_stub'>generate_blib_stub</a>
+    <li class='indexItem indexItem2'><a href='#contains_binaries'>contains_binaries</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>PAR::Dist - Create and manipulate PAR distributions</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This document describes version 0.47 of PAR::Dist,
+released November 29,
+2009.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>As a shell command:</p>
+
+<pre class="sh_perl">    % perl -MPAR::Dist -eblib_to_par</pre>
+
+<p>In programs:</p>
+
+<pre class="sh_perl">    use PAR::Dist;
+
+    my $dist = blib_to_par(); # make a PAR file using ./blib/
+    install_par($dist);       # install it into the system
+    uninstall_par($dist);     # uninstall it from the system
+    sign_par($dist);          # sign it using Module::Signature
+    verify_par($dist);        # verify it using Module::Signature
+
+    install_par(&#34;<a href="http://foo.com/DBI-1.37-MSWin32-5.8.0.par" class="podlinkurl"
+>http://foo.com/DBI-1.37-MSWin32-5.8.0.par</a>&#34;); # works too
+    install_par(&#34;<a href="http://foo.com/DBI-1.37" class="podlinkurl"
+>http://foo.com/DBI-1.37</a>&#34;); # auto-appends archname + perlver
+    install_par(&#34;<a href="cpan://SMUELLER/PAR-Packer-0.975" class="podlinkurl"
+>cpan://SMUELLER/PAR-Packer-0.975</a>&#34;); # uses CPAN author directory</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module creates and manipulates <i>PAR distributions</i>. They are architecture-specific <b>PAR</b> files, containing everything under <em>blib/</em> of CPAN distributions after their <code>make</code> or <code>Build</code> stage, a <em>META.yml</em> describing metadata of the original CPAN distribution, and a <em>MANIFEST</em> detailing all files within it. Digitally signed PAR distributions will also contain a <em>SIGNATURE</em> file.</p>
+
+<p>The naming convention for such distributions is:</p>
+
+<pre class="sh_perl">    $NAME-$VERSION-$ARCH-$PERL_VERSION.par</pre>
+
+<p>For example, <code>PAR-Dist-0.01-i386-freebsd-5.8.0.par</code> corresponds to the 0.01 release of <code>PAR-Dist</code> on CPAN, built for perl 5.8.0 running on <code>i386-freebsd</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Several functions are exported by default. Unless otherwise noted, they can take either a hash of named arguments, a single argument (taken as <code>$path</code> by <code>blib_to_par</code> and <code>$dist</code> by other functions), or no arguments (in which case the first PAR file in the current directory is used).</p>
+
+<p>Therefore, under a directory containing only a single <em>test.par</em>, all invocations below are equivalent:</p>
+
+<pre class="sh_perl">    % perl -MPAR::Dist -e&#34;install_par( dist =&#62; &#39;test.par&#39; )&#34;
+    % perl -MPAR::Dist -e&#34;install_par( &#39;test.par&#39; )&#34;
+    % perl -MPAR::Dist -einstall_par;</pre>
+
+<p>If <code>$dist</code> resembles a URL, <code>LWP::Simple::mirror</code> is called to mirror it locally under <code>$ENV{PAR_TEMP}</code> (or <code>$TEMP/par/</code> if unspecified), and the function will act on the fetched local file instead. If the URL begins with <code><a href="cpan://AUTHOR/" class="podlinkurl"
+>cpan://AUTHOR/</a></code>, it will be expanded automatically to the author&#39;s CPAN directory (e.g. <code><a href="http://www.cpan.org/modules/by-authors/id/A/AU/AUTHOR/" class="podlinkurl"
+>http://www.cpan.org/modules/by-authors/id/A/AU/AUTHOR/</a></code>).</p>
+
+<p>If <code>$dist</code> does not have a file extension beginning with a letter or underscore, a dash and <code>$suffix</code> ($ARCH-$PERL_VERSION.par by default) will be appended to it.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="blib_to_par"
+>blib_to_par</a></h2>
+
+<p>Takes key/value pairs as parameters or a single parameter indicating the path that contains the <em>blib/</em> subdirectory.</p>
+
+<p>Builds a PAR distribution from the <em>blib/</em> subdirectory under <code>path</code>, or under the current directory if unspecified. If <em>blib/</em> does not exist, it automatically runs <em>Build</em>, <em>make</em>, <em>Build.PL</em> or <em>Makefile.PL</em> to create it.</p>
+
+<p>Returns the filename of the generated PAR distribution.</p>
+
+<p>Valid parameters are:</p>
+
+<dl>
+<dt><a name="path"
+>path</a></dt>
+
+<dd>
+<p>Sets the path which contains the <em>blib/</em> subdirectory from which the PAR distribution will be generated.</p>
+
+<dt><a name='name'></a><a name="name,_version,_suffix"
+>name, version, suffix</a></dt>
+
+<dd>
+<p>These attributes set the name, version and platform specific suffix of the distribution. Name and version can be automatically determined from the distributions <em>META.yml</em> or <em>Makefile.PL</em> files.</p>
+
+<p>The suffix is generated from your architecture name and your version of perl by default.</p>
+
+<dt><a name="dist"
+>dist</a></dt>
+
+<dd>
+<p>The output filename for the PAR distribution.</p>
+
+<dt><a name="quiet"
+>quiet</a></dt>
+
+<dd>
+<p>Set to true to suppress as much output as possible.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="install_par"
+>install_par</a></h2>
+
+<p>Installs a PAR distribution into the system, using <code>ExtUtils::Install::install_default</code>.</p>
+
+<p>If only a single parameter is given, it is treated as the value for the <code>dist</code> parameter.</p>
+
+<p>Valid named parameters are:</p>
+
+<dl>
+<dt><a name="dist"
+>dist</a></dt>
+
+<dd>
+<p>The .par file to install. The heuristics outlined in the <b>FUNCTIONS</b> section above apply.</p>
+
+<dt><a name="prefix"
+>prefix</a></dt>
+
+<dd>
+<p>This string will be prepended to all installation paths. If it isn&#39;t specified, the environment variable <code>PERL_INSTALL_ROOT</code> is used as a prefix.</p>
+
+<dt><a name="uninstall_shadows"
+>uninstall_shadows</a></dt>
+
+<dd>
+<p>This corresponds to the <code>uninstall_shadows</code> option of <a href="/perldoc?ExtUtils%3A%3AInstall" class="podlinkpod"
+>ExtUtils::Install</a>. Quoting its manual: If <code>uninstall_shadows</code> is set to true, any differing versions throughout <code>@INC</code> will be uninstalled. This is <code>make install UNINST=1</code>.</p>
+
+<dt><a name="verbose"
+>verbose</a></dt>
+
+<dd>
+<p>This corresponds to the <code>verbose</code> option of <a href="/perldoc?ExtUtils%3A%3AInstall" class="podlinkpod"
+>ExtUtils::Install</a>. According to its manual: If <code>verbose</code> is true, will print out each file removed. This is <code>make install VERBINST=1</code>. <code>verbose</code> values going up to 5 show increasingly more diagnostics output.</p>
+
+<p>Default verbosity for PAR::Dist is 1.</p>
+</dd>
+</dl>
+
+<p>If you&#39;re just going to install into the running perl like everything else, you can stop reading the rest of this section now.</p>
+
+<p>Additionally, you can use several parameters to change the default installation destinations. You don&#39;t usually have to worry about this unless you are installing into a user-local directory. The following section outlines the parameter names and default settings:</p>
+
+<pre class="sh_perl">  Parameter         From          To
+  inst_lib          blib/lib      $Config{installsitelib} (*)
+  inst_archlib      blib/arch     $Config{installsitearch}
+  inst_script       blib/script   $Config{installscript}
+  inst_bin          blib/bin      $Config{installbin}
+  inst_man1dir      blib/man1     $Config{installman1dir}
+  inst_man3dir      blib/man3     $Config{installman3dir}
+  packlist_read                   $Config{sitearchexp}/auto/$name/.packlist
+  packlist_write                  $Config{installsitearch}/auto/$name/.packlist</pre>
+
+<p>The <code>packlist_write</code> parameter is used to control where the <em>.packlist</em> file is written to. (Necessary for uninstallation.) The <code>packlist_read</code> parameter specifies a .packlist file to merge in if it exists. By setting any of the above installation targets to <code>undef</code>, you can remove that target altogether. For example, passing <code>inst_man1dir =&#62; undef, inst_man3dir =&#62; undef</code> means that the contained manual pages won&#39;t be installed. This is not available for the packlists.</p>
+
+<p>Again, the defaults will be the normal <i>site</i> paths from <code>%Config</code>.</p>
+
+<p>(*) If the <code>.par</code>&#39;s <i>inst_archlib</i> section (normally <code>blib/arch</code>) isn&#39;t empty, the code in <i>inst_lib</i> (normally <code>blib/lib</code>) is also installed into the <i>inst_archlib</i> path. This makes sense for XS modules. If, however, you override <code>inst_lib</code>, this automatic conversion is also overridden! You can use the named parameter <code>auto_inst_lib_conversion =&#62; 1</code> to re-enable the conversion for custom <i>inst_lib</i>&#39;s.</p>
+
+<p>Finally, you may specify a <code>custom_targets</code> parameter. Its value should be a reference to a hash of custom installation targets such as</p>
+
+<pre class="sh_perl">  custom_targets =&#62; { &#39;blib/my_data&#39; =&#62; &#39;/some/path/my_data&#39; }</pre>
+
+<p>You can use this to install the <em>.par</em> archives contents to arbitrary locations.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="uninstall_par"
+>uninstall_par</a></h2>
+
+<p>Uninstalls all previously installed contents of a PAR distribution, using <code>ExtUtils::Install::uninstall</code>.</p>
+
+<p>Takes almost the same parameters as <code>install_par</code>, but naturally, the installation target parameters do not apply. The only exception to this is the <code>packlist_read</code> parameter which specifies the <em>.packlist</em> file to read the list of installed files from. It defaults to <code>$Config::Config{installsitearch}/auto/$name/.packlist</code>.</p>
+
+<p>Additionally, the <code>uninstall_shadows</code> parameter of <code>install_par</code> isn&#39;t available.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="sign_par"
+>sign_par</a></h2>
+
+<p>Digitally sign a PAR distribution using <code>gpg</code> or <b>Crypt::OpenPGP</b>, via <b>Module::Signature</b>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="verify_par"
+>verify_par</a></h2>
+
+<p>Verify the digital signature of a PAR distribution using <code>gpg</code> or <b>Crypt::OpenPGP</b>, via <b>Module::Signature</b>.</p>
+
+<p>Returns a boolean value indicating whether verification passed; <code>$!</code> is set to the return code of <code>Module::Signature::verify</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="merge_par"
+>merge_par</a></h2>
+
+<p><i>Note:</i> Since version 0.32 of PAR::Dist, this function requires a YAML reader. The order of precedence is:</p>
+
+<pre class="sh_perl">  YAML:XS YAML YAML::Syck YAML::Tiny</pre>
+
+<p>Merges two or more PAR distributions into one. First argument must be the name of the distribution you want to merge all others into. Any following arguments will be interpreted as the file names of further PAR distributions to merge into the first one.</p>
+
+<pre class="sh_perl">  merge_par(&#39;foo.par&#39;, &#39;bar.par&#39;, &#39;baz.par&#39;)</pre>
+
+<p>This will merge the distributions <code>foo.par</code>, <code>bar.par</code> and <code>baz.par</code> into the distribution <code>foo.par</code>. <code>foo.par</code> will be overwritten!</p>
+
+<p>The original META.yml of <code>foo.par</code> is retained, but augmented with any <code>provides</code>, <code>requires</code>, <code>recommends</code>, <code>build_requires</code>, and <code>configure_requires</code> sections from the other <code>.par</code> files.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="remove_man"
+>remove_man</a></h2>
+
+<p>Remove the man pages from a PAR distribution. Takes one named parameter: <i>dist</i> which should be the name (and path) of the PAR distribution file. The calling conventions outlined in the <code>FUNCTIONS</code> section above apply.</p>
+
+<p>The PAR archive will be extracted, stripped of all <code>man\d?</code> and <code>html</code> subdirectories and then repackaged into the original file.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="get_meta"
+>get_meta</a></h2>
+
+<p>Opens a PAR archive and extracts the contained META.yml file. Returns the META.yml file as a string.</p>
+
+<p>Takes one named parameter: <i>dist</i>. If only one parameter is passed, it is treated as the <i>dist</i> parameter. (Have a look at the description in the <code>FUNCTIONS</code> section above.)</p>
+
+<p>Returns undef if no PAR archive or no META.yml within the archive were found.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="parse_dist_name"
+>parse_dist_name</a></h2>
+
+<p>First argument must be a distribution file name. The file name is parsed into <i>distribution name</i>, <i>distribution version</i>, <i>architecture name</i>, and <i>perl version</i>.</p>
+
+<p>Returns the results as a list in the above order. If any or all of the above cannot be determined, returns undef instead of the undetermined elements.</p>
+
+<p>Supported formats are:</p>
+
+<p>Math-Symbolic-0.502-x86_64-linux-gnu-thread-multi-5.8.7</p>
+
+<p>Math-Symbolic-0.502</p>
+
+<p>The &#34;.tar.gz&#34; or &#34;.par&#34; extensions as well as any preceding paths are stripped before parsing. Starting with <code>PAR::Dist</code> 0.22, versions containing a preceding <code>v</code> are parsed correctly.</p>
+
+<p>This function is not exported by default.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="generate_blib_stub"
+>generate_blib_stub</a></h2>
+
+<p>Creates a <em>blib/lib</em> subdirectory in the current directory and prepares a <em>META.yml</em> with meta information for a new PAR distribution. First argument should be the name of the PAR distribution in a format understood by <code>parse_dist_name()</code>. Alternatively, named arguments resembling those of <code>blib_to_par</code> are accepted.</p>
+
+<p>After running <code>generate_blib_stub</code> and injecting files into the <em>blib</em> directory, you can create a PAR distribution using <code>blib_to_par</code>. This function is useful for creating custom PAR distributions from scratch. (I.e. not from an unpacked CPAN distribution) Example:</p>
+
+<pre class="sh_perl">  use PAR::Dist;
+  use File::Copy &#39;copy&#39;;
+  
+  generate_blib_stub(
+    name =&#62; &#39;MyApp&#39;, version =&#62; &#39;1.00&#39;
+  );
+  copy(&#39;MyApp.pm&#39;, &#39;blib/lib/MyApp.pm&#39;);
+  blib_to_par(); # generates the .par file!</pre>
+
+<p><code>generate_blib_stub</code> will not overwrite existing files.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="contains_binaries"
+>contains_binaries</a></h2>
+
+<p>This function is not exported by default.</p>
+
+<p>Opens a PAR archive tries to determine whether that archive contains platform-specific binary code.</p>
+
+<p>Takes one named parameter: <i>dist</i>. If only one parameter is passed, it is treated as the <i>dist</i> parameter. (Have a look at the description in the <code>FUNCTIONS</code> section above.)</p>
+
+<p>Throws a fatal error if the PAR archive could not be found.</p>
+
+<p>Returns one if the PAR was found to contain binary code and zero otherwise.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?PAR" class="podlinkpod"
+>PAR</a>, <a href="/perldoc?ExtUtils%3A%3AInstall" class="podlinkpod"
+>ExtUtils::Install</a>, <a href="/perldoc?Module%3A%3ASignature" class="podlinkpod"
+>Module::Signature</a>, <a href="/perldoc?LWP%3A%3ASimple" class="podlinkpod"
+>LWP::Simple</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Audrey Tang &#60;cpan@audreyt.org&#62; 2003-2007</p>
+
+<p>Steffen Mueller &#60;smueller@cpan.org&#62; 2005-2011</p>
+
+<p>PAR has a mailing list, &#60;par@perl.org&#62;, that you can write to; send an empty mail to &#60;par-subscribe@perl.org&#62; to join the list and participate in the discussion.</p>
+
+<p>Please send bug reports to &#60;bug-par@rt.cpan.org&#62;.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2003-2011 by Audrey Tang &#60;autrijus@autrijus.org&#62;.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>See <a href="http://www.perl.com/perl/misc/Artistic.html" class="podlinkurl"
+>http://www.perl.com/perl/misc/Artistic.html</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78262 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 16:08:00 2012 GMT (0.134140968322754) @cpansearch1 -->
+ </body>
+</html>

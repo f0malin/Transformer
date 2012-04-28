@@ -1,0 +1,990 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Algorithm::Diff - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Algorithm-Diff",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Algorithm-Diff-1.1902",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Algorithm::Diff",3]);
+    _gaq.push(["_setCustomVar",1,"Author","TYEMQ",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Algorithm::Diff">permalink</a></div>
+  <a href="/~tyemq/">Tye McQueen</a> &gt;
+  <a href="/~tyemq/Algorithm-Diff-1.1902/">Algorithm-Diff-1.1902</a> &gt;
+  Algorithm::Diff
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fb01519623c749b526b527eb2fd37315?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/T/TY/TYEMQ/Algorithm-Diff-1.1902.tar.gz">Algorithm-Diff-1.1902.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Algorithm%3A%3ADiff;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~TYEMQ/Algorithm-Diff-1.1902/lib/Algorithm/Diff.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?File%3A%3AFind">File::Find</a><br>
+<a href="/perldoc?Text%3A%3ACSV_XS">Text::CSV_XS</a><br>
+<a href="/perldoc?Digest%3A%3AMD5">Digest::MD5</a><br>
+<a href="/perldoc?String%3A%3AApprox">String::Approx</a><br>
+<a href="/perldoc?File%3A%3ACompare">File::Compare</a><br>
+<a href="/perldoc?Archive%3A%3AZip">Archive::Zip</a><br>
+<a href="/perldoc?List%3A%3AUtil">List::Util</a><br>
+<a href="/perldoc?Test%3A%3AMore">Test::More</a><br>
+<a href="/perldoc?Array%3A%3ACompare">Array::Compare</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Algorithm%3A%3ADiff">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 3</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 2</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Algorithm-Diff">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.1902 &nbsp;
+<span class="noprint">
+  <a href="/src/TYEMQ/Algorithm-Diff-1.1902/lib/Algorithm/Diff.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#INTRODUCTION'>INTRODUCTION</a>
+  <li class='indexItem indexItem1'><a href='#USAGE'>USAGE</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#LCS'>LCS</a>
+    <li class='indexItem indexItem2'><a href='#LCS_length'>LCS_length</a>
+    <li class='indexItem indexItem2'><a href='#LCSidx'>LCSidx</a>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#prepare'>prepare</a>
+    <li class='indexItem indexItem2'><a href='#diff'>diff</a>
+    <li class='indexItem indexItem2'><a href='#sdiff'>sdiff</a>
+    <li class='indexItem indexItem2'><a href='#compact_diff'>compact_diff</a>
+    <li class='indexItem indexItem2'><a href='#traverse_sequences'>traverse_sequences</a>
+    <li class='indexItem indexItem2'><a href='#traverse_balanced'>traverse_balanced</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#KEY_GENERATION_FUNCTIONS'>KEY GENERATION FUNCTIONS</a>
+  <li class='indexItem indexItem1'><a href='#ERROR_CHECKING'>ERROR CHECKING</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+  <li class='indexItem indexItem1'><a href='#MAILING_LIST'>MAILING LIST</a>
+  <li class='indexItem indexItem1'><a href='#CREDITS'>CREDITS</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Algorithm::Diff - Compute `intelligent&#39; differences between two files / lists</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    require Algorithm::Diff;
+
+    # This example produces traditional &#39;diff&#39; output:
+
+    my $diff = Algorithm::Diff-&#62;new( \@seq1, \@seq2 );
+
+    $diff-&#62;Base( 1 );   # Return line numbers, not indices
+    while(  $diff-&#62;Next()  ) {
+        next   if  $diff-&#62;Same();
+        my $sep = &#39;&#39;;
+        if(  ! $diff-&#62;Items(2)  ) {
+            printf &#34;%d,%dd%d\n&#34;,
+                $diff-&#62;Get(qw( Min1 Max1 Max2 ));
+        } elsif(  ! $diff-&#62;Items(1)  ) {
+            printf &#34;%da%d,%d\n&#34;,
+                $diff-&#62;Get(qw( Max1 Min2 Max2 ));
+        } else {
+            $sep = &#34;---\n&#34;;
+            printf &#34;%d,%dc%d,%d\n&#34;,
+                $diff-&#62;Get(qw( Min1 Max1 Min2 Max2 ));
+        }
+        print &#34;&#60; $_&#34;   for  $diff-&#62;Items(1);
+        print $sep;
+        print &#34;&#62; $_&#34;   for  $diff-&#62;Items(2);
+    }
+
+
+    # Alternate interfaces:
+
+    use Algorithm::Diff qw(
+        LCS LCS_length LCSidx
+        diff sdiff compact_diff
+        traverse_sequences traverse_balanced );
+
+    @lcs    = LCS( \@seq1, \@seq2 );
+    $lcsref = LCS( \@seq1, \@seq2 );
+    $count  = LCS_length( \@seq1, \@seq2 );
+
+    ( $seq1idxref, $seq2idxref ) = LCSidx( \@seq1, \@seq2 );
+
+
+    # Complicated interfaces:
+
+    @diffs  = diff( \@seq1, \@seq2 );
+
+    @sdiffs = sdiff( \@seq1, \@seq2 );
+
+    @cdiffs = compact_diff( \@seq1, \@seq2 );
+
+    traverse_sequences(
+        \@seq1,
+        \@seq2,
+        {   MATCH     =&#62; \&#38;callback1,
+            DISCARD_A =&#62; \&#38;callback2,
+            DISCARD_B =&#62; \&#38;callback3,
+        },
+        \&#38;key_generator,
+        @extra_args,
+    );
+
+    traverse_balanced(
+        \@seq1,
+        \@seq2,
+        {   MATCH     =&#62; \&#38;callback1,
+            DISCARD_A =&#62; \&#38;callback2,
+            DISCARD_B =&#62; \&#38;callback3,
+            CHANGE    =&#62; \&#38;callback4,
+        },
+        \&#38;key_generator,
+        @extra_args,
+    );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INTRODUCTION"
+>INTRODUCTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>(by Mark-Jason Dominus)</p>
+
+<p>I once read an article written by the authors of <code>diff</code>; they said that they worked very hard on the algorithm until they found the right one.</p>
+
+<p>I think what they ended up using (and I hope someone will correct me, because I am not very confident about this) was the `longest common subsequence&#39; method. In the LCS problem, you have two sequences of items:</p>
+
+<pre class="sh_perl">    a b c d f g h j q z
+
+    a b c d e f g i j k r x y z</pre>
+
+<p>and you want to find the longest sequence of items that is present in both original sequences in the same order. That is, you want to find a new sequence <i>S</i> which can be obtained from the first sequence by deleting some items, and from the secend sequence by deleting other items. You also want <i>S</i> to be as long as possible. In this case <i>S</i> is</p>
+
+<pre class="sh_perl">    a b c d f g j z</pre>
+
+<p>From there it&#39;s only a small step to get diff-like output:</p>
+
+<pre class="sh_perl">    e   h i   k   q r x y
+    +   - +   +   - + + +</pre>
+
+<p>This module solves the LCS problem. It also includes a canned function to generate <code>diff</code>-like output.</p>
+
+<p>It might seem from the example above that the LCS of two sequences is always pretty obvious, but that&#39;s not always the case, especially when the two sequences have many repeated elements. For example, consider</p>
+
+<pre class="sh_perl">    a x b y c z p d q
+    a b c a x b y c z</pre>
+
+<p>A naive approach might start by matching up the <code>a</code> and <code>b</code> that appear at the beginning of each sequence, like this:</p>
+
+<pre class="sh_perl">    a x b y c         z p d q
+    a   b   c a b y c z</pre>
+
+<p>This finds the common subsequence <code>a b c z</code>. But actually, the LCS is <code>a x b y c z</code>:</p>
+
+<pre class="sh_perl">          a x b y c z p d q
+    a b c a x b y c z</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">    a       x b y c z p d q
+    a b c a x b y c z</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="USAGE"
+>USAGE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>(See also the README file and several example scripts include with this module.)</p>
+
+<p>This module now provides an object-oriented interface that uses less memory and is easier to use than most of the previous procedural interfaces. It also still provides several exportable functions. We&#39;ll deal with these in ascending order of difficulty: <code>LCS</code>, <code>LCS_length</code>, <code>LCSidx</code>, OO interface, <code>prepare</code>, <code>diff</code>, <code>sdiff</code>, <code>traverse_sequences</code>, and <code>traverse_balanced</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="LCS"
+><code>LCS</code></a></h2>
+
+<p>Given references to two lists of items, LCS returns an array containing their longest common subsequence. In scalar context, it returns a reference to such a list.</p>
+
+<pre class="sh_perl">    @lcs    = LCS( \@seq1, \@seq2 );
+    $lcsref = LCS( \@seq1, \@seq2 );</pre>
+
+<p><code>LCS</code> may be passed an optional third parameter; this is a CODE reference to a key generation function. See <a href="#KEY_GENERATION_FUNCTIONS" class="podlinkpod"
+>&#34;KEY GENERATION FUNCTIONS&#34;</a>.</p>
+
+<pre class="sh_perl">    @lcs    = LCS( \@seq1, \@seq2, \&#38;keyGen, @args );
+    $lcsref = LCS( \@seq1, \@seq2, \&#38;keyGen, @args );</pre>
+
+<p>Additional parameters, if any, will be passed to the key generation routine.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="LCS_length"
+><code>LCS_length</code></a></h2>
+
+<p>This is just like <code>LCS</code> except it only returns the length of the longest common subsequence. This provides a performance gain of about 9% compared to <code>LCS</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="LCSidx"
+><code>LCSidx</code></a></h2>
+
+<p>Like <code>LCS</code> except it returns references to two arrays. The first array contains the indices into @seq1 where the LCS items are located. The second array contains the indices into @seq2 where the LCS items are located.</p>
+
+<p>Therefore, the following three lists will contain the same values:</p>
+
+<pre class="sh_perl">    my( $idx1, $idx2 ) = LCSidx( \@seq1, \@seq2 );
+    my @list1 = @seq1[ @$idx1 ];
+    my @list2 = @seq2[ @$idx2 ];
+    my @list3 = LCS( \@seq1, \@seq2 );</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+><code>new</code></a></h2>
+
+<pre class="sh_perl">    $diff = Algorithm::Diffs-&#62;new( \@seq1, \@seq2 );
+    $diff = Algorithm::Diffs-&#62;new( \@seq1, \@seq2, \%opts );</pre>
+
+<p><code>new</code> computes the smallest set of additions and deletions necessary to turn the first sequence into the second and compactly records them in the object.</p>
+
+<p>You use the object to iterate over <i>hunks</i>, where each hunk represents a contiguous section of items which should be added, deleted, replaced, or left unchanged.</p>
+
+<blockquote>
+<p>The following summary of all of the methods looks a lot like Perl code but some of the symbols have different meanings:</p>
+
+<pre class="sh_perl">    [ ]     Encloses optional arguments
+    :       Is followed by the default value for an optional argument
+    |       Separates alternate return results</pre>
+
+<p>Method summary:</p>
+
+<pre class="sh_perl">    $obj        = Algorithm::Diff-&#62;new( \@seq1, \@seq2, [ \%opts ] );
+    $pos        = $obj-&#62;Next(  [ $count : 1 ] );
+    $revPos     = $obj-&#62;Prev(  [ $count : 1 ] );
+    $obj        = $obj-&#62;Reset( [ $pos : 0 ] );
+    $copy       = $obj-&#62;Copy(  [ $pos, [ $newBase ] ] );
+    $oldBase    = $obj-&#62;Base(  [ $newBase ] );</pre>
+
+<p>Note that all of the following methods <code>die</code> if used on an object that is &#34;reset&#34; (not currently pointing at any hunk).</p>
+
+<pre class="sh_perl">    $bits       = $obj-&#62;Diff(  );
+    @items|$cnt = $obj-&#62;Same(  );
+    @items|$cnt = $obj-&#62;Items( $seqNum );
+    @idxs |$cnt = $obj-&#62;Range( $seqNum, [ $base ] );
+    $minIdx     = $obj-&#62;Min(   $seqNum, [ $base ] );
+    $maxIdx     = $obj-&#62;Max(   $seqNum, [ $base ] );
+    @values     = $obj-&#62;Get(   @names );</pre>
+
+<p>Passing in <code>undef</code> for an optional argument is always treated the same as if no argument were passed in.</p>
+
+<p><code>Next</code></p>
+
+<pre class="sh_perl">    $pos = $diff-&#62;Next();    # Move forward 1 hunk
+    $pos = $diff-&#62;Next( 2 ); # Move forward 2 hunks
+    $pos = $diff-&#62;Next(-5);  # Move backward 5 hunks</pre>
+
+<p><code>Next</code> moves the object to point at the next hunk. The object starts out &#34;reset&#34;, which means it isn&#39;t pointing at any hunk. If the object is reset, then <code>Next()</code> moves to the first hunk.</p>
+
+<p><code>Next</code> returns a true value iff the move didn&#39;t go past the last hunk. So <code>Next(0)</code> will return true iff the object is not reset.</p>
+
+<p>Actually, <code>Next</code> returns the object&#39;s new position, which is a number between 1 and the number of hunks (inclusive), or returns a false value.</p>
+
+<p><code>Prev</code></p>
+
+<p><code>Prev($N)</code> is almost identical to <code>Next(-$N)</code>; it moves to the $Nth previous hunk. On a &#39;reset&#39; object, <code>Prev()</code> [and <code>Next(-1)</code>] move to the last hunk.</p>
+
+<p>The position returned by <code>Prev</code> is relative to the <i>end</i> of the hunks; -1 for the last hunk, -2 for the second-to-last, etc.</p>
+
+<p><code>Reset</code></p>
+
+<pre class="sh_perl">    $diff-&#62;Reset();     # Reset the object&#39;s position
+    $diff-&#62;Reset($pos); # Move to the specified hunk
+    $diff-&#62;Reset(1);    # Move to the first hunk
+    $diff-&#62;Reset(-1);   # Move to the last hunk</pre>
+
+<p><code>Reset</code> returns the object, so, for example, you could use <code>$diff-&#62;Reset()-&#62;Next(-1)</code> to get the number of hunks.</p>
+
+<p><code>Copy</code></p>
+
+<pre class="sh_perl">    $copy = $diff-&#62;Copy( $newPos, $newBase );</pre>
+
+<p><code>Copy</code> returns a copy of the object. The copy and the orignal object share most of their data, so making copies takes very little memory. The copy maintains its own position (separate from the original), which is the main purpose of copies. It also maintains its own base.</p>
+
+<p>By default, the copy&#39;s position starts out the same as the original object&#39;s position. But <code>Copy</code> takes an optional first argument to set the new position, so the following three snippets are equivalent:</p>
+
+<pre class="sh_perl">    $copy = $diff-&#62;Copy($pos);
+
+    $copy = $diff-&#62;Copy();
+    $copy-&#62;Reset($pos);
+
+    $copy = $diff-&#62;Copy()-&#62;Reset($pos);</pre>
+
+<p><code>Copy</code> takes an optional second argument to set the base for the copy. If you wish to change the base of the copy but leave the position the same as in the original, here are two equivalent ways:</p>
+
+<pre class="sh_perl">    $copy = $diff-&#62;Copy();
+    $copy-&#62;Base( 0 );
+
+    $copy = $diff-&#62;Copy(undef,0);</pre>
+
+<p>Here are two equivalent way to get a &#34;reset&#34; copy:</p>
+
+<pre class="sh_perl">    $copy = $diff-&#62;Copy(0);
+
+    $copy = $diff-&#62;Copy()-&#62;Reset();</pre>
+
+<p><code>Diff</code></p>
+
+<pre class="sh_perl">    $bits = $obj-&#62;Diff();</pre>
+
+<p><code>Diff</code> returns a true value iff the current hunk contains items that are different between the two sequences. It actually returns one of the follow 4 values:</p>
+
+<dl>
+<dt><a name="3"
+>3</a></dt>
+
+<dd>
+<p><code>3==(1|2)</code>. This hunk contains items from @seq1 and the items from @seq2 that should replace them. Both sequence 1 and 2 contain changed items so both the 1 and 2 bits are set.</p>
+
+<dt><a name="2"
+>2</a></dt>
+
+<dd>
+<p>This hunk only contains items from @seq2 that should be inserted (not items from @seq1). Only sequence 2 contains changed items so only the 2 bit is set.</p>
+
+<dt><a name="1"
+>1</a></dt>
+
+<dd>
+<p>This hunk only contains items from @seq1 that should be deleted (not items from @seq2). Only sequence 1 contains changed items so only the 1 bit is set.</p>
+
+<dt><a name="0"
+>0</a></dt>
+
+<dd>
+<p>This means that the items in this hunk are the same in both sequences. Neither sequence 1 nor 2 contain changed items so neither the 1 nor the 2 bits are set.</p>
+</dd>
+</dl>
+
+<p><code>Same</code></p>
+
+<p><code>Same</code> returns a true value iff the current hunk contains items that are the same in both sequences. It actually returns the list of items if they are the same or an emty list if they aren&#39;t. In a scalar context, it returns the size of the list.</p>
+
+<p><code>Items</code></p>
+
+<pre class="sh_perl">    $count = $diff-&#62;Items(2);
+    @items = $diff-&#62;Items($seqNum);</pre>
+
+<p><code>Items</code> returns the (number of) items from the specified sequence that are part of the current hunk.</p>
+
+<p>If the current hunk contains only insertions, then <code>$diff-&#62;Items(1)</code> will return an empty list (0 in a scalar conext). If the current hunk contains only deletions, then <code>$diff-&#62;Items(2)</code> will return an empty list (0 in a scalar conext).</p>
+
+<p>If the hunk contains replacements, then both <code>$diff-&#62;Items(1)</code> and <code>$diff-&#62;Items(2)</code> will return different, non-empty lists.</p>
+
+<p>Otherwise, the hunk contains identical items and all of the following will return the same lists:</p>
+
+<pre class="sh_perl">    @items = $diff-&#62;Items(1);
+    @items = $diff-&#62;Items(2);
+    @items = $diff-&#62;Same();</pre>
+
+<p><code>Range</code></p>
+
+<pre class="sh_perl">    $count = $diff-&#62;Range( $seqNum );
+    @indices = $diff-&#62;Range( $seqNum );
+    @indices = $diff-&#62;Range( $seqNum, $base );</pre>
+
+<p><code>Range</code> is like <code>Items</code> except that it returns a list of <i>indices</i> to the items rather than the items themselves. By default, the index of the first item (in each sequence) is 0 but this can be changed by calling the <code>Base</code> method. So, by default, the following two snippets return the same lists:</p>
+
+<pre class="sh_perl">    @list = $diff-&#62;Items(2);
+    @list = @seq2[ $diff-&#62;Range(2) ];</pre>
+
+<p>You can also specify the base to use as the second argument. So the following two snippets <i>always</i> return the same lists:</p>
+
+<pre class="sh_perl">    @list = $diff-&#62;Items(1);
+    @list = @seq1[ $diff-&#62;Range(1,0) ];</pre>
+
+<p><code>Base</code></p>
+
+<pre class="sh_perl">    $curBase = $diff-&#62;Base();
+    $oldBase = $diff-&#62;Base($newBase);</pre>
+
+<p><code>Base</code> sets and/or returns the current base (usually 0 or 1) that is used when you request range information. The base defaults to 0 so that range information is returned as array indices. You can set the base to 1 if you want to report traditional line numbers instead.</p>
+
+<p><code>Min</code></p>
+
+<pre class="sh_perl">    $min1 = $diff-&#62;Min(1);
+    $min = $diff-&#62;Min( $seqNum, $base );</pre>
+
+<p><code>Min</code> returns the first value that <code>Range</code> would return (given the same arguments) or returns <code>undef</code> if <code>Range</code> would return an empty list.</p>
+
+<p><code>Max</code></p>
+
+<p><code>Max</code> returns the last value that <code>Range</code> would return or <code>undef</code>.</p>
+
+<p><code>Get</code></p>
+
+<pre class="sh_perl">    ( $n, $x, $r ) = $diff-&#62;Get(qw( min1 max1 range1 ));
+    @values = $diff-&#62;Get(qw( 0min2 1max2 range2 same base ));</pre>
+
+<p><code>Get</code> returns one or more scalar values. You pass in a list of the names of the values you want returned. Each name must match one of the following regexes:</p>
+
+<pre class="sh_perl">    /^(-?\d+)?(min|max)[12]$/i
+    /^(range[12]|same|diff|base)$/i</pre>
+
+<p>The 1 or 2 after a name says which sequence you want the information for (and where allowed, it is required). The optional number before &#34;min&#34; or &#34;max&#34; is the base to use. So the following equalities hold:</p>
+
+<pre class="sh_perl">    $diff-&#62;Get(&#39;min1&#39;) == $diff-&#62;Min(1)
+    $diff-&#62;Get(&#39;0min2&#39;) == $diff-&#62;Min(2,0)</pre>
+
+<p>Using <code>Get</code> in a scalar context when you&#39;ve passed in more than one name is a fatal error (<code>die</code> is called).</p>
+</blockquote>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="prepare"
+><code>prepare</code></a></h2>
+
+<p>Given a reference to a list of items, <code>prepare</code> returns a reference to a hash which can be used when comparing this sequence to other sequences with <code>LCS</code> or <code>LCS_length</code>.</p>
+
+<pre class="sh_perl">    $prep = prepare( \@seq1 );
+    for $i ( 0 .. 10_000 )
+    {
+        @lcs = LCS( $prep, $seq[$i] );
+        # do something useful with @lcs
+    }</pre>
+
+<p><code>prepare</code> may be passed an optional third parameter; this is a CODE reference to a key generation function. See <a href="#KEY_GENERATION_FUNCTIONS" class="podlinkpod"
+>&#34;KEY GENERATION FUNCTIONS&#34;</a>.</p>
+
+<pre class="sh_perl">    $prep = prepare( \@seq1, \&#38;keyGen );
+    for $i ( 0 .. 10_000 )
+    {
+        @lcs = LCS( $seq[$i], $prep, \&#38;keyGen );
+        # do something useful with @lcs
+    }</pre>
+
+<p>Using <code>prepare</code> provides a performance gain of about 50% when calling LCS many times compared with not preparing.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="diff"
+><code>diff</code></a></h2>
+
+<pre class="sh_perl">    @diffs     = diff( \@seq1, \@seq2 );
+    $diffs_ref = diff( \@seq1, \@seq2 );</pre>
+
+<p><code>diff</code> computes the smallest set of additions and deletions necessary to turn the first sequence into the second, and returns a description of these changes. The description is a list of <i>hunks</i>; each hunk represents a contiguous section of items which should be added, deleted, or replaced. (Hunks containing unchanged items are not included.)</p>
+
+<p>The return value of <code>diff</code> is a list of hunks, or, in scalar context, a reference to such a list. If there are no differences, the list will be empty.</p>
+
+<p>Here is an example. Calling <code>diff</code> for the following two sequences:</p>
+
+<pre class="sh_perl">    a b c e h j l m n p
+    b c d e f j k l m r s t</pre>
+
+<p>would produce the following list:</p>
+
+<pre class="sh_perl">    (
+      [ [ &#39;-&#39;, 0, &#39;a&#39; ] ],
+
+      [ [ &#39;+&#39;, 2, &#39;d&#39; ] ],
+
+      [ [ &#39;-&#39;, 4, &#39;h&#39; ],
+        [ &#39;+&#39;, 4, &#39;f&#39; ] ],
+
+      [ [ &#39;+&#39;, 6, &#39;k&#39; ] ],
+
+      [ [ &#39;-&#39;,  8, &#39;n&#39; ],
+        [ &#39;-&#39;,  9, &#39;p&#39; ],
+        [ &#39;+&#39;,  9, &#39;r&#39; ],
+        [ &#39;+&#39;, 10, &#39;s&#39; ],
+        [ &#39;+&#39;, 11, &#39;t&#39; ] ],
+    )</pre>
+
+<p>There are five hunks here. The first hunk says that the <code>a</code> at position 0 of the first sequence should be deleted (<code>-</code>). The second hunk says that the <code>d</code> at position 2 of the second sequence should be inserted (<code>+</code>). The third hunk says that the <code>h</code> at position 4 of the first sequence should be removed and replaced with the <code>f</code> from position 4 of the second sequence. And so on.</p>
+
+<p><code>diff</code> may be passed an optional third parameter; this is a CODE reference to a key generation function. See <a href="#KEY_GENERATION_FUNCTIONS" class="podlinkpod"
+>&#34;KEY GENERATION FUNCTIONS&#34;</a>.</p>
+
+<p>Additional parameters, if any, will be passed to the key generation routine.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="sdiff"
+><code>sdiff</code></a></h2>
+
+<pre class="sh_perl">    @sdiffs     = sdiff( \@seq1, \@seq2 );
+    $sdiffs_ref = sdiff( \@seq1, \@seq2 );</pre>
+
+<p><code>sdiff</code> computes all necessary components to show two sequences and their minimized differences side by side, just like the Unix-utility <i>sdiff</i> does:</p>
+
+<pre class="sh_perl">    same             same
+    before     |     after
+    old        &#60;     -
+    -          &#62;     new</pre>
+
+<p>It returns a list of array refs, each pointing to an array of display instructions. In scalar context it returns a reference to such a list. If there are no differences, the list will have one entry per item, each indicating that the item was unchanged.</p>
+
+<p>Display instructions consist of three elements: A modifier indicator (<code>+</code>: Element added, <code>-</code>: Element removed, <code>u</code>: Element unmodified, <code>c</code>: Element changed) and the value of the old and new elements, to be displayed side-by-side.</p>
+
+<p>An <code>sdiff</code> of the following two sequences:</p>
+
+<pre class="sh_perl">    a b c e h j l m n p
+    b c d e f j k l m r s t</pre>
+
+<p>results in</p>
+
+<pre class="sh_perl">    ( [ &#39;-&#39;, &#39;a&#39;, &#39;&#39;  ],
+      [ &#39;u&#39;, &#39;b&#39;, &#39;b&#39; ],
+      [ &#39;u&#39;, &#39;c&#39;, &#39;c&#39; ],
+      [ &#39;+&#39;, &#39;&#39;,  &#39;d&#39; ],
+      [ &#39;u&#39;, &#39;e&#39;, &#39;e&#39; ],
+      [ &#39;c&#39;, &#39;h&#39;, &#39;f&#39; ],
+      [ &#39;u&#39;, &#39;j&#39;, &#39;j&#39; ],
+      [ &#39;+&#39;, &#39;&#39;,  &#39;k&#39; ],
+      [ &#39;u&#39;, &#39;l&#39;, &#39;l&#39; ],
+      [ &#39;u&#39;, &#39;m&#39;, &#39;m&#39; ],
+      [ &#39;c&#39;, &#39;n&#39;, &#39;r&#39; ],
+      [ &#39;c&#39;, &#39;p&#39;, &#39;s&#39; ],
+      [ &#39;+&#39;, &#39;&#39;,  &#39;t&#39; ],
+    )</pre>
+
+<p><code>sdiff</code> may be passed an optional third parameter; this is a CODE reference to a key generation function. See <a href="#KEY_GENERATION_FUNCTIONS" class="podlinkpod"
+>&#34;KEY GENERATION FUNCTIONS&#34;</a>.</p>
+
+<p>Additional parameters, if any, will be passed to the key generation routine.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="compact_diff"
+><code>compact_diff</code></a></h2>
+
+<p><code>compact_diff</code> is much like <code>sdiff</code> except it returns a much more compact description consisting of just one flat list of indices. An example helps explain the format:</p>
+
+<pre class="sh_perl">    my @a = qw( a b c   e  h j   l m n p      );
+    my @b = qw(   b c d e f  j k l m    r s t );
+    @cdiff = compact_diff( \@a, \@b );
+    # Returns:
+    #   @a      @b       @a       @b
+    #  start   start   values   values
+    (    0,      0,   #       =
+         0,      0,   #    a  !
+         1,      0,   #  b c  =  b c
+         3,      2,   #       !  d
+         3,      3,   #    e  =  e
+         4,      4,   #    f  !  h
+         5,      5,   #    j  =  j
+         6,      6,   #       !  k
+         6,      7,   #  l m  =  l m
+         8,      9,   #  n p  !  r s t
+        10,     12,   #
+    );</pre>
+
+<p>The 0th, 2nd, 4th, etc. entries are all indices into @seq1 (@a in the above example) indicating where a hunk begins. The 1st, 3rd, 5th, etc. entries are all indices into @seq2 (@b in the above example) indicating where the same hunk begins.</p>
+
+<p>So each pair of indices (except the last pair) describes where a hunk begins (in each sequence). Since each hunk must end at the item just before the item that starts the next hunk, the next pair of indices can be used to determine where the hunk ends.</p>
+
+<p>So, the first 4 entries (0..3) describe the first hunk. Entries 0 and 1 describe where the first hunk begins (and so are always both 0). Entries 2 and 3 describe where the next hunk begins, so subtracting 1 from each tells us where the first hunk ends. That is, the first hunk contains items <code>$diff[0]</code> through <code>$diff[2] - 1</code> of the first sequence and contains items <code>$diff[1]</code> through <code>$diff[3] - 1</code> of the second sequence.</p>
+
+<p>In other words, the first hunk consists of the following two lists of items:</p>
+
+<pre class="sh_perl">               #  1st pair     2nd pair
+               # of indices   of indices
+    @list1 = @a[ $cdiff[0] .. $cdiff[2]-1 ];
+    @list2 = @b[ $cdiff[1] .. $cdiff[3]-1 ];
+               # Hunk start   Hunk end</pre>
+
+<p>Note that the hunks will always alternate between those that are part of the LCS (those that contain unchanged items) and those that contain changes. This means that all we need to be told is whether the first hunk is a &#39;same&#39; or &#39;diff&#39; hunk and we can determine which of the other hunks contain &#39;same&#39; items or &#39;diff&#39; items.</p>
+
+<p>By convention, we always make the first hunk contain unchanged items. So the 1st, 3rd, 5th, etc. hunks (all odd-numbered hunks if you start counting from 1) all contain unchanged items. And the 2nd, 4th, 6th, etc. hunks (all even-numbered hunks if you start counting from 1) all contain changed items.</p>
+
+<p>Since @a and @b don&#39;t begin with the same value, the first hunk in our example is empty (otherwise we&#39;d violate the above convention). Note that the first 4 index values in our example are all zero. Plug these values into our previous code block and we get:</p>
+
+<pre class="sh_perl">    @hunk1a = @a[ 0 .. 0-1 ];
+    @hunk1b = @b[ 0 .. 0-1 ];</pre>
+
+<p>And <code>0..-1</code> returns the empty list.</p>
+
+<p>Move down one pair of indices (2..5) and we get the offset ranges for the second hunk, which contains changed items.</p>
+
+<p>Since <code>@diff[2..5]</code> contains (0,0,1,0) in our example, the second hunk consists of these two lists of items:</p>
+
+<pre class="sh_perl">        @hunk2a = @a[ $cdiff[2] .. $cdiff[4]-1 ];
+        @hunk2b = @b[ $cdiff[3] .. $cdiff[5]-1 ];
+    # or
+        @hunk2a = @a[ 0 .. 1-1 ];
+        @hunk2b = @b[ 0 .. 0-1 ];
+    # or
+        @hunk2a = @a[ 0 .. 0 ];
+        @hunk2b = @b[ 0 .. -1 ];
+    # or
+        @hunk2a = ( &#39;a&#39; );
+        @hunk2b = ( );</pre>
+
+<p>That is, we would delete item 0 (&#39;a&#39;) from @a.</p>
+
+<p>Since <code>@diff[4..7]</code> contains (1,0,3,2) in our example, the third hunk consists of these two lists of items:</p>
+
+<pre class="sh_perl">        @hunk3a = @a[ $cdiff[4] .. $cdiff[6]-1 ];
+        @hunk3a = @b[ $cdiff[5] .. $cdiff[7]-1 ];
+    # or
+        @hunk3a = @a[ 1 .. 3-1 ];
+        @hunk3a = @b[ 0 .. 2-1 ];
+    # or
+        @hunk3a = @a[ 1 .. 2 ];
+        @hunk3a = @b[ 0 .. 1 ];
+    # or
+        @hunk3a = qw( b c );
+        @hunk3a = qw( b c );</pre>
+
+<p>Note that this third hunk contains unchanged items as our convention demands.</p>
+
+<p>You can continue this process until you reach the last two indices, which will always be the number of items in each sequence. This is required so that subtracting one from each will give you the indices to the last items in each sequence.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="traverse_sequences"
+><code>traverse_sequences</code></a></h2>
+
+<p><code>traverse_sequences</code> used to be the most general facility provided by this module (the new OO interface is more powerful and much easier to use).</p>
+
+<p>Imagine that there are two arrows. Arrow A points to an element of sequence A, and arrow B points to an element of the sequence B. Initially, the arrows point to the first elements of the respective sequences. <code>traverse_sequences</code> will advance the arrows through the sequences one element at a time, calling an appropriate user-specified callback function before each advance. It willadvance the arrows in such a way that if there are equal elements <code>$A[$i]</code> and <code>$B[$j]</code> which are equal and which are part of the LCS, there will be some moment during the execution of <code>traverse_sequences</code> when arrow A is pointing to <code>$A[$i]</code> and arrow B is pointing to <code>$B[$j]</code>. When this happens, <code>traverse_sequences</code> will call the <code>MATCH</code> callback function and then it will advance both arrows.</p>
+
+<p>Otherwise, one of the arrows is pointing to an element of its sequence that is not part of the LCS. <code>traverse_sequences</code> will advance that arrow and will call the <code>DISCARD_A</code> or the <code>DISCARD_B</code> callback, depending on which arrow it advanced. If both arrows point to elements that are not part of the LCS, then <code>traverse_sequences</code> will advance one of them and call the appropriate callback, but it is not specified which it will call.</p>
+
+<p>The arguments to <code>traverse_sequences</code> are the two sequences to traverse, and a hash which specifies the callback functions, like this:</p>
+
+<pre class="sh_perl">    traverse_sequences(
+        \@seq1, \@seq2,
+        {   MATCH =&#62; $callback_1,
+            DISCARD_A =&#62; $callback_2,
+            DISCARD_B =&#62; $callback_3,
+        }
+    );</pre>
+
+<p>Callbacks for MATCH, DISCARD_A, and DISCARD_B are invoked with at least the indices of the two arrows as their arguments. They are not expected to return any values. If a callback is omitted from the table, it is not called.</p>
+
+<p>Callbacks for A_FINISHED and B_FINISHED are invoked with at least the corresponding index in A or B.</p>
+
+<p>If arrow A reaches the end of its sequence, before arrow B does, <code>traverse_sequences</code> will call the <code>A_FINISHED</code> callback when it advances arrow B, if there is such a function; if not it will call <code>DISCARD_B</code> instead. Similarly if arrow B finishes first. <code>traverse_sequences</code> returns when both arrows are at the ends of their respective sequences. It returns true on success and false on failure. At present there is no way to fail.</p>
+
+<p><code>traverse_sequences</code> may be passed an optional fourth parameter; this is a CODE reference to a key generation function. See <a href="#KEY_GENERATION_FUNCTIONS" class="podlinkpod"
+>&#34;KEY GENERATION FUNCTIONS&#34;</a>.</p>
+
+<p>Additional parameters, if any, will be passed to the key generation function.</p>
+
+<p>If you want to pass additional parameters to your callbacks, but don&#39;t need a custom key generation function, you can get the default by passing undef:</p>
+
+<pre class="sh_perl">    traverse_sequences(
+        \@seq1, \@seq2,
+        {   MATCH =&#62; $callback_1,
+            DISCARD_A =&#62; $callback_2,
+            DISCARD_B =&#62; $callback_3,
+        },
+        undef,     # default key-gen
+        $myArgument1,
+        $myArgument2,
+        $myArgument3,
+    );</pre>
+
+<p><code>traverse_sequences</code> does not have a useful return value; you are expected to plug in the appropriate behavior with the callback functions.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="traverse_balanced"
+><code>traverse_balanced</code></a></h2>
+
+<p><code>traverse_balanced</code> is an alternative to <code>traverse_sequences</code>. It uses a different algorithm to iterate through the entries in the computed LCS. Instead of sticking to one side and showing element changes as insertions and deletions only, it will jump back and forth between the two sequences and report <i>changes</i> occurring as deletions on one side followed immediatly by an insertion on the other side.</p>
+
+<p>In addition to the <code>DISCARD_A</code>, <code>DISCARD_B</code>, and <code>MATCH</code> callbacks supported by <code>traverse_sequences</code>, <code>traverse_balanced</code> supports a <code>CHANGE</code> callback indicating that one element got <code>replaced</code> by another:</p>
+
+<pre class="sh_perl">    traverse_balanced(
+        \@seq1, \@seq2,
+        {   MATCH =&#62; $callback_1,
+            DISCARD_A =&#62; $callback_2,
+            DISCARD_B =&#62; $callback_3,
+            CHANGE    =&#62; $callback_4,
+        }
+    );</pre>
+
+<p>If no <code>CHANGE</code> callback is specified, <code>traverse_balanced</code> will map <code>CHANGE</code> events to <code>DISCARD_A</code> and <code>DISCARD_B</code> actions, therefore resulting in a similar behaviour as <code>traverse_sequences</code> with different order of events.</p>
+
+<p><code>traverse_balanced</code> might be a bit slower than <code>traverse_sequences</code>, noticable only while processing huge amounts of data.</p>
+
+<p>The <code>sdiff</code> function of this module is implemented as call to <code>traverse_balanced</code>.</p>
+
+<p><code>traverse_balanced</code> does not have a useful return value; you are expected to plug in the appropriate behavior with the callback functions.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="KEY_GENERATION_FUNCTIONS"
+>KEY GENERATION FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Most of the functions accept an optional extra parameter. This is a CODE reference to a key generating (hashing) function that should return a string that uniquely identifies a given element. It should be the case that if two elements are to be considered equal, their keys should be the same (and the other way around). If no key generation function is provided, the key will be the element as a string.</p>
+
+<p>By default, comparisons will use &#34;eq&#34; and elements will be turned into keys using the default stringizing operator &#39;&#34;&#34;&#39;.</p>
+
+<p>Where this is important is when you&#39;re comparing something other than strings. If it is the case that you have multiple different objects that should be considered to be equal, you should supply a key generation function. Otherwise, you have to make sure that your arrays contain unique references.</p>
+
+<p>For instance, consider this example:</p>
+
+<pre class="sh_perl">    package Person;
+
+    sub new
+    {
+        my $package = shift;
+        return bless { name =&#62; &#39;&#39;, ssn =&#62; &#39;&#39;, @_ }, $package;
+    }
+
+    sub clone
+    {
+        my $old = shift;
+        my $new = bless { %$old }, ref($old);
+    }
+
+    sub hash
+    {
+        return shift()-&#62;{&#39;ssn&#39;};
+    }
+
+    my $person1 = Person-&#62;new( name =&#62; &#39;Joe&#39;, ssn =&#62; &#39;123-45-6789&#39; );
+    my $person2 = Person-&#62;new( name =&#62; &#39;Mary&#39;, ssn =&#62; &#39;123-47-0000&#39; );
+    my $person3 = Person-&#62;new( name =&#62; &#39;Pete&#39;, ssn =&#62; &#39;999-45-2222&#39; );
+    my $person4 = Person-&#62;new( name =&#62; &#39;Peggy&#39;, ssn =&#62; &#39;123-45-9999&#39; );
+    my $person5 = Person-&#62;new( name =&#62; &#39;Frank&#39;, ssn =&#62; &#39;000-45-9999&#39; );</pre>
+
+<p>If you did this:</p>
+
+<pre class="sh_perl">    my $array1 = [ $person1, $person2, $person4 ];
+    my $array2 = [ $person1, $person3, $person4, $person5 ];
+    Algorithm::Diff::diff( $array1, $array2 );</pre>
+
+<p>everything would work out OK (each of the objects would be converted into a string like &#34;Person=HASH(0x82425b0)&#34; for comparison).</p>
+
+<p>But if you did this:</p>
+
+<pre class="sh_perl">    my $array1 = [ $person1, $person2, $person4 ];
+    my $array2 = [ $person1, $person3, $person4-&#62;clone(), $person5 ];
+    Algorithm::Diff::diff( $array1, $array2 );</pre>
+
+<p>$person4 and $person4-&#62;clone() (which have the same name and SSN) would be seen as different objects. If you wanted them to be considered equivalent, you would have to pass in a key generation function:</p>
+
+<pre class="sh_perl">    my $array1 = [ $person1, $person2, $person4 ];
+    my $array2 = [ $person1, $person3, $person4-&#62;clone(), $person5 ];
+    Algorithm::Diff::diff( $array1, $array2, \&#38;Person::hash );</pre>
+
+<p>This would use the &#39;ssn&#39; field in each Person as a comparison key, and so would consider $person4 and $person4-&#62;clone() as equal.</p>
+
+<p>You may also pass additional parameters to the key generation function if you wish.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ERROR_CHECKING"
+>ERROR CHECKING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you pass these routines a non-reference and they expect a reference, they will die with a message.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This version released by Tye McQueen (<a href="http://perlmonks.org/?node=tye" class="podlinkurl"
+>http://perlmonks.org/?node=tye</a>).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Parts Copyright (c) 2000-2004 Ned Konz. All rights reserved. Parts by Tye McQueen.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MAILING_LIST"
+>MAILING LIST <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Mark-Jason still maintains a mailing list. To join a low-volume mailing list for announcements related to diff and Algorithm::Diff, send an empty mail message to mjd-perl-diff-request@plover.com.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CREDITS"
+>CREDITS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Versions through 0.59 (and much of this documentation) were written by:</p>
+
+<p>Mark-Jason Dominus, mjd-perl-diff@plover.com</p>
+
+<p>This version borrows some documentation and routine names from Mark-Jason&#39;s, but Diff.pm&#39;s code was completely replaced.</p>
+
+<p>This code was adapted from the Smalltalk code of Mario Wolczko &#60;mario@wolczko.com&#62;, which is available at <a href="ftp://st.cs.uiuc.edu/pub/Smalltalk/MANCHESTER/manchester/4.0/diff.st" class="podlinkurl"
+>ftp://st.cs.uiuc.edu/pub/Smalltalk/MANCHESTER/manchester/4.0/diff.st</a></p>
+
+<p><code>sdiff</code> and <code>traverse_balanced</code> were written by Mike Schilli &#60;m@perlmeister.com&#62;.</p>
+
+<p>The algorithm is that described in <i>A Fast Algorithm for Computing Longest Common Subsequences</i>, CACM, vol.20, no.5, pp.350-353, May 1977, with a few minor improvements to improve the speed.</p>
+
+<p>Much work was done by Ned Konz (perl@bike-nomad.com).</p>
+
+<p>The OO interface and some other changes are by Tye McQueen.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78068 Uploads, 24686 Distributions
+105902 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sun Apr 22 11:31:59 2012 GMT (0.322914123535156) @cpansearch1 -->
+ </body>
+</html>

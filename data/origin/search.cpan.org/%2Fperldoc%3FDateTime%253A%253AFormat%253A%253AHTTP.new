@@ -1,0 +1,368 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>DateTime::Format::HTTP - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","DateTime-Format-HTTP",3]);
+    _gaq.push(["_setCustomVar",5,"Release","DateTime-Format-HTTP-0.40",3]);
+    _gaq.push(["_setCustomVar",3,"Module","DateTime::Format::HTTP",3]);
+    _gaq.push(["_setCustomVar",1,"Author","CKRAS",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?DateTime::Format::HTTP">permalink</a></div>
+  <a href="/~ckras/">Christiaan Kras</a> &gt;
+  <a href="/~ckras/DateTime-Format-HTTP-0.40/">DateTime-Format-HTTP-0.40</a> &gt;
+  DateTime::Format::HTTP
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/4745757ad4050f5a2b1ec9c9fb2ff370?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/C/CK/CKRAS/DateTime-Format-HTTP-0.40.tar.gz">DateTime-Format-HTTP-0.40.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=DateTime%3A%3AFormat%3A%3AHTTP;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~CKRAS/DateTime-Format-HTTP-0.40/lib/DateTime/Format/HTTP.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=DateTime-Format-HTTP">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.40 &nbsp;
+<span class="noprint">
+  <a href="/src/CKRAS/DateTime-Format-HTTP-0.40/lib/DateTime/Format/HTTP.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#parse_datetime(_$str_[,_$zone]_)'>parse_datetime( $str [, $zone] )</a>
+    <li class='indexItem indexItem2'><a href='#format_datetime()'>format_datetime()</a>
+    <li class='indexItem indexItem2'><a href='#format_iso(_[$time]_)'>format_iso( [$time] )</a>
+    <li class='indexItem indexItem2'><a href='#format_isoz(_[$dt]_)'>format_isoz( [$dt] )</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#THANKS'>THANKS</a>
+  <li class='indexItem indexItem1'><a href='#SUPPORT'>SUPPORT</a>
+  <li class='indexItem indexItem1'><a href='#LICENCE_AND_COPYRIGHT'>LICENCE AND COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DateTime::Format::HTTP - Date conversion routines</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use DateTime::Format::HTTP;
+
+    my $class = &#39;DateTime::Format::HTTP&#39;;
+    $string = $class-&#62;format_datetime($dt); # Format as GMT ASCII time
+    $time = $class-&#62;parse_datetime($string); # convert ASCII date to machine time</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module provides functions that deal the date formats used by the HTTP protocol (and then some more).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="parse_datetime(_$str_[,_$zone]_)"
+>parse_datetime( $str [, $zone] )</a></h2>
+
+<p>The parse_datetime() function converts a string to machine time. It throws an error if the format of $str is unrecognized, or the time is outside the representable range. The time formats recognized are listed below.</p>
+
+<p>The function also takes an optional second argument that specifies the default time zone to use when converting the date. This parameter is ignored if the zone is found in the date string itself. If this parameter is missing, and the date string format does not contain any zone specification, then the floating time zone is used.</p>
+
+<p>The zone should be one that is recognized by <a href="/perldoc?DateTime%3A%3ATimeZone" class="podlinkpod"
+>DateTime::TimeZone</a>.</p>
+
+<p>Actual parsing is done with the <a href="/perldoc?HTTP%3A%3ADate" class="podlinkpod"
+>HTTP::Date</a> module. At the time of writing it supports the formats listed next. Consult that module&#39;s documentation in case the list has been changed.</p>
+
+<pre class="sh_perl"> &#34;Wed, 09 Feb 1994 22:23:32 GMT&#34;       -- HTTP format
+ &#34;Thu Feb  3 17:03:55 GMT 1994&#34;        -- ctime(3) format
+ &#34;Thu Feb  3 00:00:00 1994&#34;,           -- ANSI C asctime() format
+ &#34;Tuesday, 08-Feb-94 14:15:29 GMT&#34;     -- old rfc850 HTTP format
+ &#34;Tuesday, 08-Feb-1994 14:15:29 GMT&#34;   -- broken rfc850 HTTP format
+
+ &#34;03/Feb/1994:17:03:55 -0700&#34;   -- common logfile format
+ &#34;09 Feb 1994 22:23:32 GMT&#34;     -- HTTP format (no weekday)
+ &#34;08-Feb-94 14:15:29 GMT&#34;       -- rfc850 format (no weekday)
+ &#34;08-Feb-1994 14:15:29 GMT&#34;     -- broken rfc850 format (no weekday)
+
+ &#34;1994-02-03 14:15:29 -0100&#34;    -- ISO 8601 format
+ &#34;1994-02-03 14:15:29&#34;          -- zone is optional
+ &#34;1994-02-03&#34;                   -- only date
+ &#34;1994-02-03T14:15:29&#34;          -- Use T as separator
+ &#34;19940203T141529Z&#34;             -- ISO 8601 compact format
+ &#34;19940203&#34;                     -- only date
+
+ &#34;08-Feb-94&#34;         -- old rfc850 HTTP format    (no weekday, no time)
+ &#34;08-Feb-1994&#34;       -- broken rfc850 HTTP format (no weekday, no time)
+ &#34;09 Feb 1994&#34;       -- proposed new HTTP format  (no weekday, no time)
+ &#34;03/Feb/1994&#34;       -- common logfile format     (no time, no offset)
+
+ &#34;Feb  3  1994&#34;      -- Unix &#39;ls -l&#39; format
+ &#34;Feb  3 17:03&#34;      -- Unix &#39;ls -l&#39; format
+
+ &#34;11-15-96  03:52PM&#34; -- Windows &#39;dir&#39; format</pre>
+
+<p>The parser ignores leading and trailing whitespace. It also allow the seconds to be missing and the month to be numerical in most formats.</p>
+
+<p>If the year is missing, then we assume that the date is the first matching date <i>before</i> current month. If the year is given with only 2 digits, then parse_date() will select the century that makes the year closest to the current date.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="format_datetime()"
+>format_datetime()</a></h2>
+
+<p>The <code>format_datetime()</code> method converts a <a href="/perldoc?DateTime" class="podlinkpod"
+>DateTime</a> to a string. If the function is called without an argument, it will use the current time.</p>
+
+<p>The string returned is in the format preferred for the HTTP protocol. This is a fixed length subset of the format defined by RFC 1123, represented in Universal Time (GMT). An example of a time stamp in this format is:</p>
+
+<pre class="sh_perl">   Sun, 06 Nov 1994 08:49:37 GMT</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="format_iso(_[$time]_)"
+>format_iso( [$time] )</a></h2>
+
+<p>Same as format_datetime(), but returns a &#34;YYYY-MM-DD hh:mm:ss&#34;-formatted string representing time in the local time zone. It is <b>strongly</b> recommended that you use <code>format_isoz</code> or <code>format_datetime</code> instead (as these provide time zone indication).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="format_isoz(_[$dt]_)"
+>format_isoz( [$dt] )</a></h2>
+
+<p>Same as format_iso(), but returns a &#34;YYYY-MM-DD hh:mm:ssZ&#34;-formatted string representing Universal Time.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="THANKS"
+>THANKS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Gisle Aas (GAAS) for writing <a href="/perldoc?HTTP%3A%3ADate" class="podlinkpod"
+>HTTP::Date</a>.</p>
+
+<p>Iain, for never quite finishing <code>HTTP::Date::XS</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUPPORT"
+>SUPPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Support for this module is provided via the datetime@perl.org email list. See <a href="http://lists.perl.org/" class="podlinkurl"
+>http://lists.perl.org/</a> for more details.</p>
+
+<p>Alternatively, log them via the CPAN RT system via the web or email:</p>
+
+<pre class="sh_perl">    <a href="http://rt.cpan.org/NoAuth/ReportBug.html?Queue=DateTime%3A%3AFormat%3A%3AHTTP" class="podlinkurl"
+>http://rt.cpan.org/NoAuth/ReportBug.html?Queue=DateTime%3A%3AFormat%3A%3AHTTP</a>
+    bug-datetime-format-http@rt.cpan.org</pre>
+
+<p>This makes it much easier for me to track things and thus means your problem is less likely to be neglected.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENCE_AND_COPYRIGHT"
+>LICENCE AND COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright Iain Truskett, 2003. All rights reserved. Sections of the documentation Gisle Aas, 1995-1999. Changes since version 0.35 copyright David Rolsky, 2004.</p>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself, either Perl version 5.000 or, at your option, any later version of Perl 5 you may have available.</p>
+
+<p>The full text of the licences can be found in the <em>Artistic</em> and <em>COPYING</em> files included with this module, or in <a href="/perldoc?perlartistic" class="podlinkpod"
+>perlartistic</a> and <a href="/perldoc?perlgpl" class="podlinkpod"
+>perlgpl</a> as supplied with Perl 5.8.1 and later.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Originally written by Iain Truskett &#60;spoon@cpan.org&#62;, who died on December 29, 2003.</p>
+
+<p>Maintained by Dave Rolsky &#60;autarch@urth.org&#62; and Christiaan Kras &#60;ckras@cpan.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>datetime@perl.org</code> mailing list.</p>
+
+<p><a href="http://datetime.perl.org/" class="podlinkurl"
+>http://datetime.perl.org/</a></p>
+
+<p><a href="/perldoc?perl" class="podlinkpod"
+>perl</a>, <a href="/perldoc?DateTime" class="podlinkpod"
+>DateTime</a>, <a href="/perldoc?HTTP%3A%3ADate" class="podlinkpod"
+>HTTP::Date</a>, <a href="/perldoc?DateTime%3A%3ATimeZone" class="podlinkpod"
+>DateTime::TimeZone</a>.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78066 Uploads, 24685 Distributions
+105889 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 13:06:05 2012 GMT (0.06899094581604) @cpansearch1 -->
+ </body>
+</html>

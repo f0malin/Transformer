@@ -1,0 +1,214 @@
+Revision history for Perl extension IPC::System::Simple.
+
+1.21  Tue Mar 23 12:08:47 AUSEST 2010
+        * TEST: t/win32.t has more sane handling of skipped and
+          unimplimented tests.
+
+        * TEST: Author tests no longer leave the permissions of
+          not_an_exe.txt permanently changed.
+
+        * BUGFIX: capture/capturex no longer break STDOUT when
+          running an unknown command under Windows.  Many thanks
+          to Jan Krynicky for a fix.  (RT #48319)
+
+        * BUILD: Upgraded to Module::Install 0.93.
+
+1.20  Sat Jan  9 15:08:41 AUSEST 2010
+
+        * TEST: t/win32.t no longer claims to have more tests than
+          it really has.  This fixes an install issue under Windows.
+          RT #53124.  Thanks to Erez Schatz and Curtis Jewell for
+          spotting this.
+
+1.19  Fri Dec  4 14:14:25 AUSEST 2009
+
+        * TEST: Added tests to ensure correct behaviour when
+          calling commands in Windows which are contained in directories
+          that contain spaces. (These tests are currently skiped,
+          as they're testing for a known bug.)
+
+        * BUGFIX: Spurious warnings about redefining POSIX macros
+          no longer plague Windows systems.
+
+1.18  Sun Feb  8 19:09:15 AUSEDT 2009
+
+        * BUGFIX: IPC::System::Simple should now compile cleanly
+          under 5.6.0 and 5.6.1 (as well as 5.6.2+).  Many thanks
+          to David Golden for spotting this bug.  (RT #43098)
+
+        * DOCUMENTATION: "Advanced" is now spelt correctly under
+          in the section "Advanced Usage".  Many thanks to
+          Raymond Wan for spotting this typo.  (RT #42705)
+
+1.17  Fri Dec 19 00:45:16 AUSEDT 2008
+        * TEST: Tests to ensure that passing undefined values to
+          systemx() do not produce malformed errors, but instead
+          well-formed errors.  Many thanks to Nadim Khemir for
+          spotting this.  RT #41149.
+
+        * BUGFIX: Workaround for a bug under Perl 5.10 where on
+          some platforms coredumps were not being reported in $?.
+          Many thanks to the Debian Perl folks for finding this,
+          particularly Gregor Herrmann.
+
+        * TEST: Better diagnostics from t/08_core.t.
+
+        * TEST: t/08_core.t now cleans up its core files after running.
+          Thanks to Gregor Herrmann for spotting this.
+
+        * TEST: t/08_core.t is now a main test, rather than an
+          author-only test.
+
+        * BUGFIX: Attempting to call an undefined command is now
+          a fatal error.
+
+        * VERSION: Since ISS is now very stable, and provides a
+          significantly improved interface to the default system()
+          command, the major version number has been incremented.
+
+          There are no incompatible changes with previous version.
+          The increment of the major version number is to indicate
+          stability only.
+
+0.16  Sun Sep 14 11:29:17 AUSEST 2008
+        * DOCUMENTATION: Updated documentation on $EXITVAL to provide
+          extra clarification.  Many thanks again to Elliot Shank
+          for the feedback!
+
+        * DOCUMENTATION: Noted that run() and system() are aliases for each
+          other.  Thanks again for Elliot Shank for the feedback.
+
+        * DOCUMENTATION: Fixed a few missing double-quotes in the
+          systemx() documentation.  Thanks to Andrew Dent for spotting these!
+
+        * DOCUMENTATION: Added a feedback section.  If you find this module
+          useful, consider rating it at
+          http://cpanratings.perl.org/rate/?distribution=IPC-System-Simple
+
+        * BUILD: Upgraded to Module::Install 0.77
+
+0.15  Sat Jul 19 23:26:18 PDT 2008
+        - runx() is now correctly in @EXPORT_OK.  Many thanks
+          to Elliot "clonezone" Shank for spotting this in
+          RT #37793.
+        - Added exports test case.
+
+0.14  Sat Jul 19 00:26:01 AEST 2008
+        - We should now recognise "not implemented on this architecture"
+          POSIX errors from Perl 5.11.0
+        - Fixed an invalid specification of resources in META.yml.
+
+0.13  Thu Jul 17 20:36:42 AEST 2008
+        - Added examples directory with examples.
+        - Updated manifest to include error message regession tests.
+        - Test::Kwalitee is now marked as an author-only test.
+        - Added tests for correct handling of 32-bit values in
+          win32.t.  Corrected documentation regarding Win32 exitval
+          size.  Thanks to Jan Dubois for alerting me to the 32-bitness
+          of Windows exit values.
+        - Added tests to ensure that newlines are properly stripped
+          with single-arg system and capture.
+        - Pod and Pod Coverage tests are now marked as author-only.
+        - Added perl core identical rules for determining the Windows
+          shell.
+        - Added META.yml resources, including blog, bugtracker,
+          forum, and repository.
+        - Additional tests to ensure returns from capture() are
+          properly tainted (when running in taint mode).
+        - Added systemx() and capturex() that _never_ invoke the
+          shell.   Thanks to ikegami for prodding me on these.
+          (RT #37683)
+
+0.12  Fri Jun  6 17:15:52 AEST 2008
+        - Corrected doubled package names in some diagnostics
+          when used in taint mode, or when run() is called without
+          arguments.
+
+0.11  Fri Jun  6 12:15:39 AEST 2008
+        - Drop-in system() replacement available.
+        - Simplified synopsis statement.
+        - Provided advanced usage documentation.
+        - Added comparison to other system APIs.
+        - Updated Changes to put most recent changes at top.
+        - Makefile.PL tweaks to build cleanly under Debian's dh-make-perl.
+        - Upgraded to Module::Install 0.75 with custom bugfixes.
+
+0.10  Thu May 15 00:39:59 AEST 2008
+        - Multi-arg captures now work on Perl 5.6.x. (RT #35866)
+        - Minor corrections to diagnostics documentation.
+        - Adjusted module summary.
+
+0.09  Mon May 12 23:38:29 AEST 2008
+        - Test suite now provides better diagnostics if taint
+          tests fail unexpectedly early.
+        - Multi-argument run() will now search $ENV{PATH}
+          under Win32.
+        - Documented $ENV{PATH} foibles on Win32 systems under
+          the Windows-specific notes section of the documentation.
+        - Implemented capture(), which is the equivalent
+          of run() for backticks.
+        - General documentation improvements and clarifications,
+          thanks to Jacinta Richardson.
+        - The special value EXIT_ANY (aka [-1]) can be used to
+          indicate that any exit value is acceptable from a process.
+        - Added author-only Perl::Critic tests.
+        - Updated diagnostics section in POD.
+        - License changed to that of Perl 5.6.0, or any later version.
+        - LICENSE file added to distribution.
+        - Moved to Module::Install for build system.
+        - Better failures when seeing unexpected things from POSIX.pm
+        - Support for detecting core-dumps added.
+        - All failure messages now use double-quotes when quoting
+          variable sections.
+        - Diagnostics documentation rearraged to have most common
+          errors listed first.
+
+0.08  Sun Apr 13 13:38:49 AEST 2008
+        - Numerous documentation fixes thanks to Matt Kraai
+          (RT #34896)
+        - Updated t/07_taint.t to not fail on systems that have
+          zero-length environment strings.
+        - Updated taint checks to always run on 5.6.x, under
+          0.07 they would never run on older perls.
+
+0.07  Sat Apr 12 11:57:28 AEST 2008
+        - Changed tests to use SIGKILL rather than SIGINT to avoid
+          complications on systems where SIGINT is masked.
+        - All dependencies now explicitly stated in Makefile.PL.
+        - run() now explicitly checked for tainted arguments and
+          environment, and provides helpful diagnostics if found.
+        - Removed mention of unimplemented capture() command in
+          documentation.
+
+0.06  Thu Sep  6 18:09:50 AEST 2007
+        - Warnings are no longer emitted on failed calls to system().
+        - Multiple argument run() no longer uses the shell under Win32.
+        - 16-bit native exit values are now returned on Win32 systems.
+        - WIF* POSIX commands that are not defined are more correctly
+          handled, particularly under Perl 5.6.  Thanks to Laurent
+          Laporte for the bug report (RT #29080).
+        - README and POD improved.
+
+0.05  Mon Apr  9 16:22:22 AEST 2007
+        - Removed spurious double-quotes in error messages reporting
+          unexpected exit values and an internal error message.  Thanks
+          to Jon Swartz for spotting these.
+
+0.04  Mon Oct 30 15:14:53 AEST 2006
+        - Fixed path issue with tests that would cause them
+          to fail on some systems where "." was not in the
+          $ENV{PATH}
+        - Tests now always use the system-configured perl for
+          invoking commands.
+
+0.03  Tue Jul 25 12:07:09 AEST 2006
+        - Documentation improvements
+
+0.02  Tue Jul 25 12:05:50 AEST 2006
+        - Updated to emulate WIFEXITED on systems that don't provide them
+        - Signal tests skipped under Win32
+        - Better testing
+
+0.01  Fri Jul 21 19:27:45 2006
+        - original version; created by h2xs 1.23 with options
+                -b 5.6.0 -X IPC::System::Simple

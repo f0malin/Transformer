@@ -1,0 +1,462 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>PAR::Environment - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","PAR",3]);
+    _gaq.push(["_setCustomVar",5,"Release","PAR-1.005",3]);
+    _gaq.push(["_setCustomVar",4,"Document","PAR::Environment",3]);
+    _gaq.push(["_setCustomVar",1,"Author","RSCHUPP",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?PAR::Environment">permalink</a></div>
+  <a href="/~rschupp/">Roderich Schupp</a> &gt;
+  <a href="/~rschupp/PAR-1.005/">PAR-1.005</a> &gt;
+  PAR::Environment
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/12f1ea5df52a78cb3a11495a66e92444?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/R/RS/RSCHUPP/PAR-1.005.tar.gz">PAR-1.005.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~RSCHUPP/PAR-1.005/lib/PAR/Environment.pod">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 6</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 16</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 3</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=PAR">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/RSCHUPP/PAR-1.005/lib/PAR/Environment.pod">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#INDEX_OF_ENVIRONMENT_VARIABLES'>INDEX OF ENVIRONMENT VARIABLES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#PAR_0'>PAR_0</a>
+    <li class='indexItem indexItem2'><a href='#PAR_ARGC,_PAR_ARGV_0,_PAR_ARGV_...'>PAR_ARGC, PAR_ARGV_0, PAR_ARGV_...</a>
+    <li class='indexItem indexItem2'><a href='#PAR_CLEAN'>PAR_CLEAN</a>
+    <li class='indexItem indexItem2'><a href='#PAR_DEBUG'>PAR_DEBUG</a>
+    <li class='indexItem indexItem2'><a href='#PAR_GLOBAL_CLEAN'>PAR_GLOBAL_CLEAN</a>
+    <li class='indexItem indexItem2'><a href='#PAR_GLOBAL_DEBUG'>PAR_GLOBAL_DEBUG</a>
+    <li class='indexItem indexItem2'><a href='#PAR_GLOBAL_TEMP'>PAR_GLOBAL_TEMP</a>
+    <li class='indexItem indexItem2'><a href='#PAR_GLOBAL_TMPDIR'>PAR_GLOBAL_TMPDIR</a>
+    <li class='indexItem indexItem2'><a href='#PAR_INITIALIZED'>PAR_INITIALIZED</a>
+    <li class='indexItem indexItem2'><a href='#PAR_PROGNAME'>PAR_PROGNAME</a>
+    <li class='indexItem indexItem2'><a href='#PAR_APP_REUSE'>PAR_APP_REUSE</a>
+    <li class='indexItem indexItem2'><a href='#PAR_RUN'>PAR_RUN</a>
+    <li class='indexItem indexItem2'><a href='#PAR_SPAWNED'>PAR_SPAWNED</a>
+    <li class='indexItem indexItem2'><a href='#PAR_TEMP'>PAR_TEMP</a>
+    <li class='indexItem indexItem2'><a href='#PAR_TMPDIR'>PAR_TMPDIR</a>
+    <li class='indexItem indexItem2'><a href='#PAR_VERBATIM'>PAR_VERBATIM</a>
+    <li class='indexItem indexItem2'><a href='#PAR_VERBOSE'>PAR_VERBOSE</a>
+    <li class='indexItem indexItem2'><a href='#PP_OPTS'>PP_OPTS</a>
+    <li class='indexItem indexItem2'><a href='#TMP,_TEMP,_TMPDIR,_TEMPDIR'>TMP, TEMP, TMPDIR, TEMPDIR</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>PAR::Environment - Index and reference of PAR environment variables</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>PAR uses various environment variables both during the building process of executables or PAR archives and the <i>use</i> of them.
+Since the wealth of combinations and settings might confuse one or the other (like me),
+this document is intended to document all environment variables which PAR uses.</p>
+
+<p>Wherever I want to refer to the <code>$ENV{FOO}</code> environment hash entry,
+I will usually talk about the <code>FOO</code> variable for brevity.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INDEX_OF_ENVIRONMENT_VARIABLES"
+>INDEX OF ENVIRONMENT VARIABLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><b>Please note that this is still very,
+very incomplete!
+Contributions welcome!</b></p>
+
+<p>For each variable,
+there should be a description what it contains,
+when it can be expected to exist (and contain meaningful information),
+when it is sensible to define it yourself,
+and what effect this has.</p>
+
+<p>Of course,
+the description may use examples.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_0"
+>PAR_0</a></h2>
+
+<p>If the running program is run from within a PAR archive or pp-produced executable,
+this variable contains the name of the extracted program (i.e.
+.pl file).
+This is useful of you want to open the source code file of the running program.</p>
+
+<p>For example,
+if you package a file <em>foo.pl</em> into <em>bar.par</em> and run <em>foo.pl</em> with this command</p>
+
+<pre class="sh_perl">  par.pl foo.par bar.pl</pre>
+
+<p>then the <code>PAR_0</code> variable will contain something like <code>/tmp/par-youser/cache-b175f53eb731da9594e0dde337d66013ddf25a44/495829f0.pl</code> where <code>youser</code> is your username and <code>/tmp/par-youser/cache-b175f53eb731da9594e0dde337d66013ddf25a44/</code> is the PAR cache directory (<code>PAR_TEMP</code>).</p>
+
+<p>The name of the PAR cache directory can take a number of different forms, so use <code>PAR_0</code> if you want to find the extracted program&#39;s .pl file -- attempting to construct the name yourself requires complex logic that has already produced the value in <code>PAR_0</code>.</p>
+
+<p>This works the same for executable binaries (<em>.exe</em>, ...).</p>
+
+<p>If you are looking for the name and path of the pp-ed binary file, please refer to the <code>PAR_PROGNAME</code> variable.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_ARGC,_PAR_ARGV_0,_PAR_ARGV_..."
+>PAR_ARGC, PAR_ARGV_0, PAR_ARGV_...</a></h2>
+
+<p>You should not rely on these variables outside of the PAR binary loader code.</p>
+
+<p>These variables are set when a non-dependent pp-ed binary executable runs. The initially executed process extracts another binary and runs it as a child process. In order to pass its command line arguments to the child, the parent process sets <code>PAR_ARG*</code> as they would be used in C programs: <code>PAR_ARGC</code> has the number of arguments, <code>PAR_ARGV_0</code> has the name of the executable, <code>PAR_ARGV_*</code> are the command line arguments.</p>
+
+<p>If you would like to access the name of the running program (script or binary), please refer to <code>PAR_0</code> and <code>PAR_PROGNAME</code> instead!</p>
+
+<p>Related: <code>PAR_SPAWNED</code>, <code>PAR_0</code>, <code>PAR_PROGNAME</code></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_CLEAN"
+>PAR_CLEAN</a></h2>
+
+<p>Users should set <code>PAR_GLOBAL_CLEAN</code> instead. Recreated from <code>PAR_GLOBAL_CLEAN</code> and the value of <code>-C</code> from the YAML file by the PAR loader, and used within loader to control the initial behavior of extraction, and the final behavior of cleanup. The user can reference <code>PAR_CLEAN</code> in the application to determine which of these behaviors is being used for this run of the application.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_DEBUG"
+>PAR_DEBUG</a></h2>
+
+<p>Users should set <code>PAR_GLOBAL_DEBUG</code> instead.</p>
+
+<p>If this variable is set to a true value and <em>par.pl</em> is run, verbose output is sent to STDOUT or the logging filehandle. This is overridden by the <code>-q</code> option to <em>par.pl</em>, for steps after argument parsing occurs.</p>
+
+<p>This currently only influences <em>par.pl</em>. Whether this is the intended behaviour remains to be verified.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_GLOBAL_CLEAN"
+>PAR_GLOBAL_CLEAN</a></h2>
+
+<p>Setting <code>PAR_GLOBAL_CLEAN</code> alters the behavior of par applications which see that environment variable at launch. <code>PAR_GLOBAL_CLEAN</code> overrides the <code>-C</code> option. Settings of 0 and 1 are supported. 0 corresponds to not using <code>-C</code> on the pp command line; 1 corresponds to using <code>-C</code> on the pp command line. <code>PAR_GLOBAL_CLEAN</code> is ignored if <code>PAR_GLOBAL_TEMP</code> is set, yet it controls the form of <code>PAR_TEMP</code> when <code>PAR_GLOBAL_TEMP</code> is not set.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_GLOBAL_DEBUG"
+>PAR_GLOBAL_DEBUG</a></h2>
+
+<p>The PAR loader becomes more verbose when <code>PAR_DEBUG</code> is set. Setting <code>PAR_GLOBAL_DEBUG</code> guarantees that <code>PAR_DEBUG</code> will be set internally, initially. See <code>PAR_DEBUG</code> for more details.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_GLOBAL_TEMP"
+>PAR_GLOBAL_TEMP</a></h2>
+
+<p>Contributes to the calculation of <code>PAR_TEMP</code>, and is further explained there.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_GLOBAL_TMPDIR"
+>PAR_GLOBAL_TMPDIR</a></h2>
+
+<p>Contributes to the calculation of <code>PAR_TEMP</code>, and is further explained there.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_INITIALIZED"
+>PAR_INITIALIZED</a></h2>
+
+<p>This environment variable is for internal use by the PAR binary loader only. Documented only to avoid surprises if spawned applications expect to see a value initialized by the user.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_PROGNAME"
+>PAR_PROGNAME</a></h2>
+
+<p><code>PAR_PROGNAME</code> is set to the fully-qualified path name of the executable program. On Windows, this is reliably obtained from the <code>GetModuleFileName</code> API. On other OSes, if the C runtime is given a qualified path name, it is used, or the unqualified file name given is qualified by walking the path. This is reasonably reliable given normal program spawning conventions, but cannot be guaranteed to be correct in all circumstances.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_APP_REUSE"
+>PAR_APP_REUSE</a></h2>
+
+<p>Strictly internal. Skip this section if you&#39;re not a PAR developer.</p>
+
+<p>The variable shouldn&#39;t ever be exposed to user code and packaged applications should not depend on it being set or not.</p>
+
+<p>If an application has been packaged with the <code>--reusable</code> option, the bootstrapping code will set this environment variable to the name of the program that is to be run instead of the packaged program. The <em>main.pl</em> loader script fetches the file name, deletes the environment variable, and then runs the given program.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_RUN"
+>PAR_RUN</a></h2>
+
+<p>This environment variable was set during constructions of <code>PAR::Packer</code> objects (usually during <em>pp</em> runs only) by versions of PAR up to 0.957. Since PAR 0.958, this variable is unused.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_SPAWNED"
+>PAR_SPAWNED</a></h2>
+
+<p>This variable is used internally by the <em>parl</em> binary loader to signal the child process that it&#39;s the child.</p>
+
+<p>You should not rely on this variable outside of the PAR binary loader code. For a slightly more detailed discussion, please refer to the <em>who_am_i.txt</em> documentation file in the PAR source distribution which was contributed by Alan Stewart. Related: <code>PAR_ARGC</code>, <code>PAR_ARGV_*</code></p>
+
+<p>Documented only to avoid surprises if spawned applications expect to see a value initialized by the user.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_TEMP"
+>PAR_TEMP</a></h2>
+
+<p>Users should set <code>PAR_GLOBAL_TEMP</code> instead. <code>PAR_TEMP</code> is calculated from a variety of other variables. See the <code>NOTES</code> section in the pod for PAR.pm for a complete description of how the calculation proceeds. <code>PAR_TEMP</code>, once calculated, is used as the location where PAR stores its extracted, temporary file cache.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_TMPDIR"
+>PAR_TMPDIR</a></h2>
+
+<p>Contributes to the calculation of <code>PAR_TEMP</code>, and is further explained there. Users should set <code>PAR_GLOBAL_TMPDIR</code> instead.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_VERBATIM"
+>PAR_VERBATIM</a></h2>
+
+<p>The <code>PAR_VERBATIM</code> variable controls the way Perl code is packaged into a PAR archive or binary executable. If it is set to a true value during the packaging process, modules (and scripts) are <b>not</b> passed through the default <code>PAR::Filter::PodStrip</code> filter which removes all POD documentation from the code. Note that the <code>PAR::Filter::PatchContent</code> filter is still applied.</p>
+
+<p>The <code>-F</code> option to the <em>pp</em> tool overrides the <code>PAR_VERBATIM</code> setting. That means if you set <code>PAR_VERBATIM=1</code> but specify <code>-F PodStrip</code> on the <code>pp</code> command line, the <code>PodStrip</code> filter will be applied.</p>
+
+<p><code>PAR_VERBATIM</code> is not used by the PAR application.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_VERBOSE"
+>PAR_VERBOSE</a></h2>
+
+<p>Setting this environment variable to a positive integer has the same effect as using the <code>-verbose</code> switch to <em>pp</em>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PP_OPTS"
+>PP_OPTS</a></h2>
+
+<p>During a <em>pp</em> run, the contents of the <code>PP_OPTS</code> variable are treated as if they were part of the command line. In newer versions of PAR, you can also write options to a file and execute <em>pp</em> as follows to read the options from the file:</p>
+
+<pre class="sh_perl">  pp @FILENAME</pre>
+
+<p>That can, of course, be combined with other command line arguments to <em>pp</em> or the <code>PP_OPTS</code> variable.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="TMP,_TEMP,_TMPDIR,_TEMPDIR"
+>TMP, TEMP, TMPDIR, TEMPDIR</a></h2>
+
+<p>Please refer to <code>PAR_TMPDIR</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The PAR homepage at <a href="http://par.perl.org" class="podlinkurl"
+>http://par.perl.org</a>.</p>
+
+<p><a href="/~rschupp/PAR-1.005/lib/PAR.pm" class="podlinkpod"
+>PAR</a>, <a href="/~rschupp/PAR-1.005/lib/PAR/Tutorial.pod" class="podlinkpod"
+>PAR::Tutorial</a>, <a href="/~rschupp/PAR-1.005/lib/PAR/FAQ.pod" class="podlinkpod"
+>PAR::FAQ</a> (For a more current FAQ, refer to the homepage.)</p>
+
+<p><a href="/perldoc?par.pl" class="podlinkpod"
+>par.pl</a>, <a href="/perldoc?parl" class="podlinkpod"
+>parl</a>, <a href="/perldoc?pp" class="podlinkpod"
+>pp</a></p>
+
+<p><a href="/perldoc?PAR%3A%3ADist" class="podlinkpod"
+>PAR::Dist</a> for details on PAR distributions.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Steffen Mueller &#60;smueller@cpan.org&#62;</p>
+
+<p><a href="http://par.perl.org/" class="podlinkurl"
+>http://par.perl.org/</a> is the official PAR website. You can write to the mailing list at &#60;par@perl.org&#62;, or send an empty mail to &#60;par-subscribe@perl.org&#62; to participate in the discussion.</p>
+
+<p>Please submit bug reports to &#60;bug-par@rt.cpan.org&#62;. If you need support, however, joining the &#60;par@perl.org&#62; mailing list is preferred.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>PAR: Copyright 2003-2010 by Audrey Tang, &#60;cpan@audreyt.org&#62;.</p>
+
+<p>This document: Copyright 2006-2010 by Steffen Mueller, &#60;smueller@cpan.org&#62;</p>
+
+<p>Some information has been taken from Alan Stewart&#39;s extra documentation in the <em>contrib/</em> folder of the PAR distribution.</p>
+
+<p>This program or documentation is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>See <a href="http://www.perl.com/perl/misc/Artistic.html" class="podlinkurl"
+>http://www.perl.com/perl/misc/Artistic.html</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78124 Uploads, 24699 Distributions
+105950 Modules, 9642 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 07:37:59 2012 GMT (0.0698421001434326) @cpansearch1 -->
+ </body>
+</html>

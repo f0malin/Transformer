@@ -1,0 +1,49 @@
+---
+abstract: 'A date and time object'
+author:
+  - 'Dave Rolsky <autarch@urth.org>'
+build_requires:
+  ExtUtils::CBuilder: 0
+  Pod::Man: 1.14
+  Test::Exception: 0
+  Test::More: 0.88
+configure_requires:
+  Module::Build: 0.36
+generated_by: 'Module::Build version 0.3603'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: DateTime
+provides:
+  DateTime:
+    file: lib/DateTime.pm
+    version: 0.55
+  DateTime::Duration:
+    file: lib/DateTime/Duration.pm
+    version: 0.55
+  DateTime::Helpers:
+    file: lib/DateTime/Helpers.pm
+    version: 0.55
+  DateTime::Infinite:
+    file: lib/DateTime/Infinite.pm
+    version: 0.55
+  DateTime::Infinite::Future:
+    file: lib/DateTime/Infinite.pm
+  DateTime::Infinite::Past:
+    file: lib/DateTime/Infinite.pm
+  DateTime::LeapSecond:
+    file: lib/DateTime/LeapSecond.pm
+    version: 0.55
+requires:
+  DateTime::Locale: 0.41
+  DateTime::TimeZone: 1.09
+  Params::Validate: 0.76
+  Scalar::Util: 0
+  Time::Local: 1.04
+resources:
+  bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=DateTime
+  homepage: http://datetime.perl.org/
+  license: http://dev.perl.org/licenses/
+  repository: http://hg.urth.org/hg/DateTime.pm
+version: 0.55

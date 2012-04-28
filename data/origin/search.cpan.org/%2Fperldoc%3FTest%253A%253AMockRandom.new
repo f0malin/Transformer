@@ -1,0 +1,541 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Test::MockRandom - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Test-MockRandom",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Test-MockRandom-1.00",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Test::MockRandom",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DAGOLDEN",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Test::MockRandom">permalink</a></div>
+  <a href="/~dagolden/">David Golden</a> &gt;
+  <a href="/~dagolden/Test-MockRandom-1.00/">Test-MockRandom-1.00</a> &gt;
+  Test::MockRandom
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/bb755c989fcb9897f28a2c6e00df61e2?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DA/DAGOLDEN/Test-MockRandom-1.00.tar.gz">Test-MockRandom-1.00.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Test%3A%3AMockRandom;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DAGOLDEN/Test-MockRandom-1.00/lib/Test/MockRandom.pod">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Test%3A%3ALectroTest">Test::LectroTest</a><br>
+<a href="/perldoc?Test%3A%3AMore">Test::More</a><br>
+<a href="/perldoc?Class%3A%3ADBI">Class::DBI</a><br>
+<a href="/perldoc?Object%3A%3AInsideOut">Object::InsideOut</a><br>
+<a href="/perldoc?Math%3A%3ARandom%3A%3AMT">Math::Random::MT</a><br>
+<a href="/perldoc?Devel%3A%3ACover">Devel::Cover</a><br>
+<a href="/perldoc?Test%3A%3ASimple">Test::Simple</a><br>
+<a href="/perldoc?MIME%3A%3ALite">MIME::Lite</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Test%3A%3AMockRandom">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Test-MockRandom">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.00 &nbsp;
+<span class="noprint">
+  <a href="/src/DAGOLDEN/Test-MockRandom-1.00/lib/Test/MockRandom.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#USAGE'>USAGE</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#use_Test::MockRandom_&#39;Target::Package&#39;'>use Test::MockRandom &#39;Target::Package&#39;</a>
+    <li class='indexItem indexItem2'><a href='#use_Test::MockRandom_%customized'>use Test::MockRandom %customized</a>
+    <li class='indexItem indexItem2'><a href='#Test::MockRandom-&#62;export_rand_to()'>Test::MockRandom-&#62;export_rand_to()</a>
+    <li class='indexItem indexItem2'><a href='#Overriding_rand_globally:_use_Test::MockRandom_&#39;CORE::GLOBAL&#39;'>Overriding rand globally: use Test::MockRandom &#39;CORE::GLOBAL&#39;</a>
+    <li class='indexItem indexItem2'><a href='#Intercepting_rand_in_a_package_that_also_contains_a_rand_function'>Intercepting rand in a package that also contains a rand function</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#srand'>srand</a>
+    <li class='indexItem indexItem2'><a href='#rand'>rand</a>
+    <li class='indexItem indexItem2'><a href='#oneish'>oneish</a>
+    <li class='indexItem indexItem2'><a href='#export_rand_to'>export_rand_to</a>
+    <li class='indexItem indexItem2'><a href='#export_srand_to'>export_srand_to</a>
+    <li class='indexItem indexItem2'><a href='#export_oneish_to'>export_oneish_to</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Test::MockRandom - Replaces random number generation with non-random number generation</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This documentation describes version 1.00.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">   # intercept rand in another package
+   use Test::MockRandom &#39;Some::Other::Package&#39;;
+   use Some::Other::Package; # exports sub foo { return rand }
+   srand(0.13);
+   foo(); # returns 0.13
+ 
+   # using a seed list and &#34;oneish&#34;
+   srand(0.23, 0.34, oneish() );
+   foo(); # returns 0.23
+   foo(); # returns 0.34
+   foo(); # returns a number just barely less than one
+   foo(); # returns 0, as the seed array is empty
+ 
+   # object-oriented, for use in the current package
+   use Test::MockRandom ();
+   my $nrng = Test::MockRandom-&#62;new(0.42, 0.23);
+   $nrng-&#62;rand(); # returns 0.42</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This perhaps ridiculous-seeming module was created to test routines that manipulate random numbers by providing a known output from <code>rand</code>. Given a list of seeds with <code>srand</code>, it will return each in turn. After seeded random numbers are exhausted, it will always return 0. Seed numbers must be of a form that meets the expected output from <code>rand</code> as called with no arguments -- i.e. they must be between 0 (inclusive) and 1 (exclusive). In order to facilitate generating and testing a nearly-one number, this module exports the function <code>oneish</code>, which returns a number just fractionally less than one.</p>
+
+<p>Depending on how this module is called with <code>use</code>, it will export <code>rand</code> to a specified package (e.g. a class being tested) effectively overriding and intercepting calls in that package to the built-in <code>rand</code>. It can also override <code>rand</code> in the current package or even globally. In all of these cases, it also exports <code>srand</code> and <code>oneish</code> to the current package in order to control the output of <code>rand</code>. See <a href="#USAGE" class="podlinkpod"
+>&#34;USAGE&#34;</a> for details.</p>
+
+<p>Alternatively, this module can be used to generate objects, with each object maintaining its own distinct seed array.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="USAGE"
+>USAGE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>By default, Test::MockRandom does not export any functions. This still allows object-oriented use by calling <code>Test::MockRandom-&#62;new(@seeds)</code>. In order for Test::MockRandom to be more useful, arguments must be provided during the call to <code>use</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="use_Test::MockRandom_&#39;Target::Package&#39;"
+>use Test::MockRandom &#39;Target::Package&#39;</a></h2>
+
+<p>The simplest way to intercept <code>rand</code> in another package is to provide the name(s) of the package(s) for interception as arguments in the <code>use</code> statement. This will export <code>rand</code> to the listed packages and will export <code>srand</code> and <code>oneish</code> to the current package to control the behavior of <code>rand</code>. You <b>must</b> <code>use</code> Test::MockRandom before you <code>use</code> the target package. This is a typical case for testing a module that uses random numbers:</p>
+
+<pre class="sh_perl">  use Test::More &#39;no_plan&#39;;
+  use Test::MockRandom &#39;Some::Package&#39;;
+  BEGIN { use_ok( Some::Package ) }
+ 
+  # assume sub foo { return rand } was imported from Some::Package
+ 
+  srand(0.5)
+  is( foo(), 0.5, &#34;is foo() 0.5?&#34;) # test gives &#34;ok&#34;</pre>
+
+<p>If multiple package names are specified, <code>rand</code> will be exported to all of them.</p>
+
+<p>If you wish to export <code>rand</code> to the current package, simply provide <code>__PACKAGE__</code> as the parameter for <code>use</code>, or <code>main</code> if importing to a script without a specified package. This can be part of a list provided to <code>use</code>. All of the following idioms work:</p>
+
+<pre class="sh_perl">  use Test::MockRandom qw( main Some::Package ); # Assumes a script
+  use Test::MockRandom __PACKAGE__, &#39;Some::Package&#39;;
+ 
+  # The following doesn&#39;t interpolate __PACKAGE__ as above, but 
+  # Test::MockRandom will still DWIM and handle it correctly
+ 
+  use Test::MockRandom qw( __PACKAGE__ Some::Package );</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="use_Test::MockRandom_%customized"
+>use Test::MockRandom %customized</a></h2>
+
+<p>As an alternative to a package name as an argument to <code>use</code>, Test::MockRandom will also accept a hash reference with a custom set of instructions for how to export functions:</p>
+
+<pre class="sh_perl">  use Test::MockRandom {
+     rand   =&#62; [ Some::Package, {Another::Package =&#62; &#39;random&#39;} ],
+     srand  =&#62; { Another::Package =&#62; &#39;seed&#39; }, 
+     oneish =&#62; __PACKAGE__
+  };</pre>
+
+<p>The keys of the hash may be any of <code>rand</code>, <code>srand</code>, and <code>oneish</code>. The values of the hash give instructions for where to export the symbol corresponding to the key. These are interpreted as follows, depending on their type:</p>
+
+<ul>
+<li>String: a package to which Test::MockRandom will export the symbol</li>
+
+<li>Hash Reference: the key is the package to which Test::MockRandom will export the symbol and the value is the name under which it will be exported</li>
+
+<li>Array Reference: a list of strings or hash references which will be handled as above</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Test::MockRandom-&#62;export_rand_to()"
+>Test::MockRandom-&#62;export_rand_to()</a></h2>
+
+<p>In order to intercept the built-in <code>rand</code> in another package, Test::MockRandom must export its own <code>rand</code> function to the target package <b>before</b> the target package is compiled, thus overriding calls to the built-in. The simple approach (described above) of providing the target package name in the <code>use Test::MockRandom</code> statement accomplishes this because <code>use</code> is equivalent to a <code>require</code> and <code>import</code> within a <code>BEGIN</code> block. To explicitly intercept <code>rand</code> in another package, you can also call <code>export_rand_to</code>, but it must be enclosed in a <code>BEGIN</code> block of its own. The explicit form also support function aliasing just as with the custom approach with <code>use</code>, described above:</p>
+
+<pre class="sh_perl">  use Test::MockRandom;
+  BEGIN {Test::MockRandom-&#62;export_rand_to(&#39;AnotherPackage&#39;=&#62;&#39;random&#39;)}
+  use AnotherPackage;</pre>
+
+<p>This <code>BEGIN</code> block must not include a <code>use</code> statement for the package to be intercepted, or perl will compile the package to be intercepted before the <code>export_rand_to</code> function has a chance to execute and intercept calls to the built-in <code>rand</code>. This is very important in testing. The <code>export_rand_to</code> call must be in a separate <code>BEGIN</code> block from a <code>use</code> or <code>use_ok</code> test, which should be enclosed in a <code>BEGIN</code> block of its own:</p>
+
+<pre class="sh_perl">  use Test::More tests =&#62; 1;
+  use Test::MockRandom;
+  BEGIN { Test::MockRandom-&#62;export_rand_to( &#39;AnotherPackage&#39; ); }
+  BEGIN { use_ok( &#39;AnotherPackage&#39; ); }</pre>
+
+<p>Given these cautions, it&#39;s probably best to use either the simple or custom approach with <code>use</code>, which does the right thing in most circumstances. Should additional explicit customization be necessary, Test::MockRandom also provides <code>export_srand_to</code> and <code>export_oneish_to</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Overriding_rand_globally:_use_Test::MockRandom_&#39;CORE::GLOBAL&#39;"
+>Overriding <code>rand</code> globally: use Test::MockRandom &#39;CORE::GLOBAL&#39;</a></h2>
+
+<p>This is just like intercepting <code>rand</code> in a package, except that you do it globally by overriding the built-in function in <code>CORE::GLOBAL</code>.</p>
+
+<pre class="sh_perl">  use Test::MockRandom &#39;CORE::GLOBAL&#39;;
+ 
+  # or
+ 
+  BEGIN { Test::MockRandom-&#62;export_rand_to(&#39;CORE::GLOBAL&#39;) }</pre>
+
+<p>You can always access the real, built-in <code>rand</code> by calling it explicitly as <code>CORE::rand</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Intercepting_rand_in_a_package_that_also_contains_a_rand_function"
+>Intercepting <code>rand</code> in a package that also contains a <code>rand</code> function</a></h2>
+
+<p>This is tricky as the order in which the symbol table is manipulated will lead to very different results. This can be done safely (maybe) if the module uses the same rand syntax/prototype as the system call but offers them up as method calls which resolve at run-time instead of compile time. In this case, you will need to do an explicit intercept (as above) but do it <b>after</b> importing the package. I.e.:</p>
+
+<pre class="sh_perl">  use Test::MockRandom &#39;SomeRandPackage&#39;;
+  use SomeRandPackage;
+  BEGIN { Test::MockRandom-&#62;export_rand_to(&#39;SomeRandPackage&#39;);</pre>
+
+<p>The first line is necessary to get <code>srand</code> and <code>oneish</code> exported to the current package. The second line will define a <code>sub rand</code> in <code>SomeRandPackage</code>, overriding the results of the first line. The third line then re-overrides the <code>rand</code>. You may see warnings about <code>rand</code> being redefined.</p>
+
+<p>Depending on how your <code>rand</code> is written and used, there is a good likelihood that this isn&#39;t going to do what you&#39;re expecting, no matter what. If your package that defines <code>rand</code> relies internally upon the system <code>CORE::GLOBAL::rand</code> function, then you may be best off overriding that instead.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+><code>new</code></a></h2>
+
+<pre class="sh_perl">  $obj = new( LIST OF SEEDS );</pre>
+
+<p>Returns a new Test::MockRandom object with the specified list of seeds.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="srand"
+><code>srand</code></a></h2>
+
+<pre class="sh_perl">  srand( LIST OF SEEDS );
+  $obj-&#62;srand( LIST OF SEEDS);</pre>
+
+<p>If called as a bare function call or package method, sets the seed list for bare/package calls to <code>rand</code>. If called as an object method, sets the seed list for that object only.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="rand"
+><code>rand</code></a></h2>
+
+<pre class="sh_perl">  $rv = rand();
+  $rv = $obj-&#62;rand();
+  $rv = rand(3);</pre>
+
+<p>If called as a bare or package function, returns the next value from the package seed list. If called as an object method, returns the next value from the object seed list.</p>
+
+<p>If <code>rand</code> is called with a numeric argument, it follows the same behavior as the built-in function -- it multiplies the argument with the next value from the seed array (resulting in a random fractional value between 0 and the argument, just like the built-in). If the argument is 0, undef, or non-numeric, it is treated as if the argument is 1.</p>
+
+<p>Using this with an argument in testing may be complicated, as limits in floating point precision mean that direct numeric comparisons are not reliable. E.g.</p>
+
+<pre class="sh_perl">  srand(1/3);
+  rand(3);       # does this return 1.0 or .999999999 etc.</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="oneish"
+><code>oneish</code></a></h2>
+
+<pre class="sh_perl">  srand( oneish() );
+  if ( rand() == oneish() ) { print &#34;It&#39;s almost one.&#34; };</pre>
+
+<p>A utility function to return a nearly-one value. Equal to ( 2^32 - 1 ) / 2^32. Useful in <code>srand</code> and test functions.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="export_rand_to"
+><code>export_rand_to</code></a></h2>
+
+<pre class="sh_perl">  Test::MockRandom-&#62;export_rand_to( &#39;Some::Class&#39; );
+  Test::MockRandom-&#62;export_rand_to( &#39;Some::Class&#39; =&#62; &#39;random&#39; );</pre>
+
+<p>This function exports <code>rand</code> into the specified package namespace. It must be called as a class function. If a second argument is provided, it is taken as the symbol name used in the other package as the alias to <code>rand</code>:</p>
+
+<pre class="sh_perl">  use Test::MockRandom;
+  BEGIN { Test::MockRandom-&#62;export_rand_to( &#39;Some::Class&#39; =&#62; &#39;random&#39; ); }
+  use Some::Class;
+  srand (0.5);
+  print Some::Class::random(); # prints 0.5</pre>
+
+<p>It can also be used to explicitly intercept <code>rand</code> after Test::MockRandom has been loaded. The effect of this function is highly dependent on when it is called in the compile cycle and should usually called from within a BEGIN block. See <a href="#USAGE" class="podlinkpod"
+>&#34;USAGE&#34;</a> for details.</p>
+
+<p>Most users will not need this function.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="export_srand_to"
+><code>export_srand_to</code></a></h2>
+
+<pre class="sh_perl">  Test::MockRandom-&#62;export_srand_to( &#39;Some::Class&#39; );
+  Test::MockRandom-&#62;export_srand_to( &#39;Some::Class&#39; =&#62; &#39;seed&#39; );</pre>
+
+<p>This function exports <code>srand</code> into the specified package namespace. It must be called as a class function. If a second argument is provided, it is taken as the symbol name to use in the other package as the alias for <code>srand</code>. This function may be useful if another package wraps <code>srand</code>:</p>
+
+<pre class="sh_perl">  # In Some/Class.pm
+  package Some::Class;
+  sub seed { srand(shift) }
+  sub foo  { rand }
+ 
+  # In a script
+  use Test::MockRandom &#39;Some::Class&#39;;
+  BEGIN { Test::MockRandom-&#62;export_srand_to( &#39;Some::Class&#39; ); }
+  use Some::Class;
+  seed(0.5);
+  print foo();   # prints &#34;0.5&#34;</pre>
+
+<p>The effect of this function is highly dependent on when it is called in the compile cycle and should usually be called from within a BEGIN block. See <a href="#USAGE" class="podlinkpod"
+>&#34;USAGE&#34;</a> for details.</p>
+
+<p>Most users will not need this function.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="export_oneish_to"
+><code>export_oneish_to</code></a></h2>
+
+<pre class="sh_perl">  Test::MockRandom-&#62;export_oneish_to( &#39;Some::Class&#39; );
+  Test::MockRandom-&#62;export_oneish_to( &#39;Some::Class&#39; =&#62; &#39;nearly_one&#39; );</pre>
+
+<p>This function exports <code>oneish</code> into the specified package namespace. It must be called as a class function. If a second argument is provided, it is taken as the symbol name to use in the other package as the alias for <code>oneish</code>. Since <code>oneish</code> is usually only used in a test script, this function is likely only necessary to alias <code>oneish</code> to some other name in the current package:</p>
+
+<pre class="sh_perl">  use Test::MockRandom &#39;Some::Class&#39;;
+  BEGIN { Test::MockRandom-&#62;export_oneish_to( __PACKAGE__, &#34;one&#34; ); }
+  use Some::Class;
+  seed( one() );
+  print foo();   # prints a value very close to one</pre>
+
+<p>The effect of this function is highly dependent on when it is called in the compile cycle and should usually be called from within a BEGIN block. See <a href="#USAGE" class="podlinkpod"
+>&#34;USAGE&#34;</a> for details.</p>
+
+<p>Most users will not need this function.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Please report any bugs or feature requests using the CPAN Request Tracker. Bugs can be submitted through the web interface at <a href="http://rt.cpan.org/Dist/Display.html?Queue=Test::MockRandom" class="podlinkurl"
+>http://rt.cpan.org/Dist/Display.html?Queue=Test::MockRandom</a></p>
+
+<p>When submitting a bug or request, please include a test-file or a patch to an existing test-file that illustrates the bug or desired feature.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li><a href="/perldoc?Test%3A%3AMockObject" class="podlinkpod"
+>Test::MockObject</a></li>
+
+<li><a href="/perldoc?Test%3A%3AMockModule" class="podlinkpod"
+>Test::MockModule</a></li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>David A. Golden (DAGOLDEN)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2004-2007 by David A. Golden</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the &#34;License&#34;); you may not use this file except in compliance with the License. You may obtain a copy of the License at <a href="http://www.apache.org/licenses/LICENSE-2.0" class="podlinkurl"
+>http://www.apache.org/licenses/LICENSE-2.0</a></p>
+
+<p>Files produced as output though the use of this software, shall not be considered Derivative Works, but shall be considered the original work of the Licensor.</p>
+
+<p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &#34;AS IS&#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78068 Uploads, 24686 Distributions
+105902 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sun Apr 22 11:53:58 2012 GMT (0.430576086044312) @cpansearch1 -->
+ </body>
+</html>

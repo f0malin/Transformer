@@ -1,0 +1,370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Authen::PAM::FAQ - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Authen-PAM",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Authen-PAM-0.16",3]);
+    _gaq.push(["_setCustomVar",4,"Document","Authen::PAM::FAQ",3]);
+    _gaq.push(["_setCustomVar",1,"Author","NIKIP",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Authen::PAM::FAQ">permalink</a></div>
+  <a href="/~nikip/">Nikolay Pelov</a> &gt;
+  <a href="/~nikip/Authen-PAM-0.16/">Authen-PAM-0.16</a> &gt;
+  Authen::PAM::FAQ
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/b25e0f7779e5df15c778007227356f23?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/N/NI/NIKIP/Authen-PAM-0.16.tar.gz">Authen-PAM-0.16.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~NIKIP/Authen-PAM-0.16/PAM/FAQ.pod">Annotate this POD
+(1)
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 2</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Authen-PAM">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/NIKIP/Authen-PAM-0.16/PAM/FAQ.pod">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#1._Can_I_authenticate_a_user_non_interactively?'>1. Can I authenticate a user non interactively?</a>
+    <li class='indexItem indexItem2'><a href='#2._Can_I_change_a_password_non_interactively?'>2. Can I change a password non interactively?</a>
+    <li class='indexItem indexItem2'><a href='#3._Why_are_the_constants_PAM_AUTHTOK_and_PAM_OLDAUTHTOK_not_avaliable?'>3. Why are the constants PAM_AUTHTOK and PAM_OLDAUTHTOK not avaliable?</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Authen::PAM::FAQ - Frequently-Asked Questions about Authen::PAM.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>perldoc Authen::PAM::FAQ</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This document is currently at version <i>0.05</i>,
+as of <i>May 4,
+2005</i></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="1._Can_I_authenticate_a_user_non_interactively?"
+>1.
+Can I authenticate a user non interactively?</a></h2>
+
+<p>Yes,
+you can although not in a very clean way.
+The PAM library has a mechanism,
+in a form of a conversation function,
+to send and receive text data from the user.
+For details of the format of the conversation function consult the Authen::PAM manual.
+This function receives a list of code/string pairs.
+There are two codes (PAM_TEXT_INFO and PAM_ERROR_MSG) for displaying the associated string to the user and two codes (PAM_ECHO_ON and PAM_ECHO_OFF) for getting input from the user.
+As you can see the codes are rather general and you can not be completely sure when you are asked for a user name and when for a password.
+However,
+the common practice is that PAM_ECHO_ON is used for a user name and PAM_ECHO_OFF is used for a password.
+So,
+what you can do is to write your own conversation function which ignores the PAM_TEXT_INFO and PAM_ERROR_MSG codes and returns the user name for the code PAM_ECHO_ON and the password for the code PAM_ECHO_OFF.
+If you pass the user name in the initialization function then usually you will not be asked for it.
+Here is a simple example how to do this:</p>
+
+<pre class="sh_perl">  use Authen::PAM;
+  use POSIX qw(ttyname);
+
+  $service = &#34;login&#34;;
+  $username = &#34;foo&#34;;
+  $password = &#34;bar&#34;;
+  $tty_name = ttyname(fileno(STDIN));
+
+  sub my_conv_func {
+    my @res;
+    while ( @_ ) {
+        my $code = shift;
+        my $msg = shift;
+        my $ans = &#34;&#34;;
+
+        $ans = $username if ($code == PAM_PROMPT_ECHO_ON() );
+        $ans = $password if ($code == PAM_PROMPT_ECHO_OFF() );
+
+        push @res, (PAM_SUCCESS(),$ans);
+    }
+    push @res, PAM_SUCCESS();
+    return @res;
+  }
+
+  ref($pamh = new Authen::PAM($service, $username, \&#38;my_conv_func)) ||
+         die &#34;Error code $pamh during PAM init!&#34;;
+
+  $res = $pamh-&#62;pam_set_item(PAM_TTY(), $tty_name);
+  $res = $pamh-&#62;pam_authenticate;
+  print $pamh-&#62;pam_strerror($res),&#34;\n&#34; unless $res == PAM_SUCCESS();</pre>
+
+<p>The Authen::PAM module comes with a default conversation function which you can find in the file <em>PAM.pm</em>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="2._Can_I_change_a_password_non_interactively?"
+>2. Can I change a password non interactively?</a></h2>
+
+<p>All the discussion of the previous question also applies here. There is however one serious complication. When changing a password it is quite possible that the PAM library will send you at lest two PAM_ECHO_OFF prompts - one for the old password and one or two for the new one. Therefore, the first thing you should do is to see what sequence of prompts is produced by your service. Then the conversation function should include some state variable to distinguish the different prompts. Here is an example:</p>
+
+<pre class="sh_perl">  use Authen::PAM;
+
+  $service = &#34;passwd&#34;;
+  $username = &#34;foo&#34;;
+  $oldpassword = &#34;old_pass&#34;;
+  $newpassword = &#34;new_pass&#34;;
+
+  sub my_conv_func {
+    my @res;
+    while ( @_ ) {
+        my $code = shift;
+        my $msg = shift;
+        my $ans = &#34;&#34;;
+
+        $ans = $username if ($code == PAM_PROMPT_ECHO_ON() );
+        if ($code == PAM_PROMPT_ECHO_OFF() ) {
+          $ans = $oldpassword if ($state == 0);
+          $ans = $newpassword if ($state == 1);
+          $ans = $newpassword if ($state == 2);
+
+          $state++;
+        }
+
+        push @res, (PAM_SUCCESS(),$ans);
+    }
+    push @res, PAM_SUCCESS();
+    return @res;
+  }
+
+  ref($pamh = new Authen::PAM($service, $username, \&#38;my_conv_func)) ||
+         die &#34;Error code $pamh during PAM init!&#34;;
+
+  $state = 0;
+  $res = $pamh-&#62;pam_chauthtok;
+  print $pamh-&#62;pam_strerror($res),&#34;\n&#34; unless $res == PAM_SUCCESS();</pre>
+
+<p>If you are running the script as root then most likely you will not be prompted for an old password. In this case you can simply return the new password at the ECHO_OFF prompt.</p>
+
+<p>The $msg variable contains the text of the input prompt which you can use for additional test or for debugging purposes, e.g.</p>
+
+<pre class="sh_perl">  if ($code == PAM_PROMPT_ECHO_OFF() ) {
+    if ($state&#62;=1 || $msg=~/new/i) { # are we asked for a new password
+       $ans = $newpassword;
+    } else {
+       $ans = $oldpassword;
+    }
+    $state++;
+  }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="3._Why_are_the_constants_PAM_AUTHTOK_and_PAM_OLDAUTHTOK_not_avaliable?"
+>3. Why are the constants PAM_AUTHTOK and PAM_OLDAUTHTOK not avaliable?</a></h2>
+
+<p>The PAM_AUTHTOK and PAM_OLDAUTHTOK items can be used to pass authentication tokens (passwords) from one module to another. However, they are avaliable only to PAM modules and not to PAM applicatinos. If you have a special setup in which you really need to preset the password from the application (e.g. using a radius server) then you can use the pam_set_authtok module avaliable from <a href="http://www.uni-hohenheim.de/~schaefer/linux/pam/pam_set_authtok.html" class="podlinkurl"
+>http://www.uni-hohenheim.de/~schaefer/linux/pam/pam_set_authtok.html</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~nikip/Authen-PAM-0.16/d/PAM.pm" class="podlinkpod"
+>Authen::PAM</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Nikolay Pelov &#60;NIKIP at cpan.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 1998-2005 Nikolay Pelov. All rights reserved. This file is part of the Authen::PAM library. This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78218 Uploads, 24712 Distributions
+106010 Modules, 9646 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 18:27:54 2012 GMT (0.0320091247558594) @cpansearch1 -->
+ </body>
+</html>

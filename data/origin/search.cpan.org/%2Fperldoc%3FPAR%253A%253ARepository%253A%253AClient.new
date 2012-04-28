@@ -1,0 +1,539 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>PAR::Repository::Client - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","PAR-Repository-Client",3]);
+    _gaq.push(["_setCustomVar",5,"Release","PAR-Repository-Client-0.25",3]);
+    _gaq.push(["_setCustomVar",3,"Module","PAR::Repository::Client",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SMUELLER",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?PAR::Repository::Client">permalink</a></div>
+  <a href="/~smueller/">Steffen M&uuml;ller</a> &gt;
+  <a href="/~smueller/PAR-Repository-Client-0.25/">PAR-Repository-Client-0.25</a> &gt;
+  PAR::Repository::Client
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/ac0c0eab36df58cd3676c1f03f4d5185?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SM/SMUELLER/PAR-Repository-Client-0.25.tar.gz">PAR-Repository-Client-0.25.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=PAR%3A%3ARepository%3A%3AClient;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SMUELLER/PAR-Repository-Client-0.25/lib/PAR/Repository/Client.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=PAR-Repository-Client">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.25 &nbsp;
+<span class="noprint">
+  <a href="/src/SMUELLER/PAR-Repository-Client-0.25/lib/PAR/Repository/Client.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#PAR_REPOSITORIES'>PAR REPOSITORIES</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#PUBLIC_METHODS'>PUBLIC METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#require_module'>require_module</a>
+    <li class='indexItem indexItem2'><a href='#use_module'>use_module</a>
+    <li class='indexItem indexItem2'><a href='#get_module'>get_module</a>
+    <li class='indexItem indexItem2'><a href='#install_module'>install_module</a>
+    <li class='indexItem indexItem2'><a href='#upgrade_module'>upgrade_module</a>
+    <li class='indexItem indexItem2'><a href='#run_script'>run_script</a>
+    <li class='indexItem indexItem2'><a href='#get_module_dependencies'>get_module_dependencies</a>
+    <li class='indexItem indexItem2'><a href='#get_script_dependencies'>get_script_dependencies</a>
+    <li class='indexItem indexItem2'><a href='#installation_targets'>installation_targets</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#ACCESSORS'>ACCESSORS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#error'>error</a>
+    <li class='indexItem indexItem2'><a href='#perl_version'>perl_version</a>
+    <li class='indexItem indexItem2'><a href='#architecture'>architecture</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#OTHER_METHODS'>OTHER METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#prefered_distribution'>prefered_distribution</a>
+    <li class='indexItem indexItem2'><a href='#validate_repository_version'>validate_repository_version</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>PAR::Repository::Client - Access PAR repositories</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use PAR::Repository::Client;
+  
+  my $client = PAR::Repository::Client-&#62;new(
+    uri =&#62; &#39;<a href="http://foo/repository" class="podlinkurl"
+>http://foo/repository</a>&#39;,
+    http_timeout =&#62; 20, # default is 180s
+  );
+  
+  # This is happening at run-time, of course:
+  # But calling import from your namespace
+  $client-&#62;use_module(&#39;Foo::Bar&#39;) or die $client-&#62;error;
+  
+  $client-&#62;require_module(&#39;Bar::Baz&#39;) or die $client-&#62;error;
+  
+  $client-&#62;run_script(&#39;foo&#39;, &#39;arg1&#39;, &#39;arg2&#39;) or die $client-&#62;error;
+  # should not be reached since we ran &#39;foo&#39;!</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module represents the client for PAR repositories as implemented by the <a href="/perldoc?PAR%3A%3ARepository" class="podlinkpod"
+>PAR::Repository</a> module.</p>
+
+<p>Chances are you should be looking at the <a href="/perldoc?PAR" class="podlinkpod"
+>PAR</a> module instead. Starting with version 0.950, it supports automatically loading any modules that aren&#39;t found on your system from a repository. If you need finer control than that, then this module is the right one to use.</p>
+
+<p>You can use this module to access repositories in one of two ways: On your local filesystem or via HTTP(S?). The access methods are implemented in <a href="/~smueller/PAR-Repository-Client-0.25/lib/PAR/Repository/Client/HTTP.pm" class="podlinkpod"
+>PAR::Repository::Client::HTTP</a> and <a href="/~smueller/PAR-Repository-Client-0.25/lib/PAR/Repository/Client/Local.pm" class="podlinkpod"
+>PAR::Repository::Client::Local</a>. Any common code is in this module.</p>
+
+<p><a href="/perldoc?PAR%3A%3ARepository%3A%3AQuery" class="podlinkpod"
+>PAR::Repository::Query</a> implements the querying interface. The methods described in that module&#39;s documentation can be called on <code>PAR::Repository::Client</code> objects.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_REPOSITORIES"
+>PAR REPOSITORIES</a></h2>
+
+<p>For a detailed discussion of the structure of PAR repositories, please have a look at the <a href="/perldoc?PAR%3A%3ARepository" class="podlinkpod"
+>PAR::Repository</a> distribution.</p>
+
+<p>A PAR repository is, well, a repository of <em>.par</em> distributions which contain Perl modules and scripts. You can create <em>.par</em> distributions using the <a href="/perldoc?PAR%3A%3ADist" class="podlinkpod"
+>PAR::Dist</a> module or the <a href="/perldoc?PAR" class="podlinkpod"
+>PAR</a> module itself.</p>
+
+<p>If you are unsure what PAR archives are, then have a look at the <a href="#SEE_ALSO" class="podlinkpod"
+>&#34;SEE ALSO&#34;</a> section below, which points you at the relevant locations.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PUBLIC_METHODS"
+>PUBLIC METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Following is a list of class and instance methods. (Instance methods until otherwise mentioned.)</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+>new</a></h2>
+
+<p>Creates a new PAR::Repository::Client object. Takes named arguments.</p>
+
+<p>Mandatory parameter:</p>
+
+<p><i>uri</i> specifies the URI of the repository to use. Initially, http and file URIs will be supported, so you can access a repository locally using <code><a href="file:///path/to/repository" class="podlinkurl"
+>file:///path/to/repository</a></code> or just with <code>/path/to/repository</code>. HTTP accessible repositories can be specified as <code><a href="http://foo" class="podlinkurl"
+>http://foo</a></code> and <code><a href="https://foo" class="podlinkurl"
+>https://foo</a></code>.</p>
+
+<p>Optional parameters:</p>
+
+<pre class="sh_perl">  auto_install
+  auto_upgrade
+  static_dependencies
+  cache_dir
+  private_cache_dir
+  architecture
+  perl_version
+  installation_targets
+  http_timeout
+  checksums_timeout</pre>
+
+<p>If the optional <i>auto_install</i> parameter is set to a true value (default: false), any <em>.par</em> file that is about to be loaded is installed on the local system instead. In this context, please refer to the <code>install_module()</code> method.</p>
+
+<p>Similar to <i>auto_install</i>, the <i>auto_upgrade</i> parameter installs a distribution that is about to be loaded - but only if the specified module does not exist on the local system yet or is outdated.</p>
+
+<p>You cannot set both <i>auto_install</i> and <i>auto_upgrade</i>. If you do, you will get a fatal error.</p>
+
+<p>If you set the <code>static_dependencies</code> option to a true value, then the inter-distribution dependency information that is retrieved from the repository will be used to recursively apply your requested action to all dependencies. Essentially, this makes the <code>install_module</code> method act like a real package manager similar to PPM. In contrast, the default behaviour is to fetch distributions only on demand and potentially recursively.</p>
+
+<p>In order to control where the modules are installed to, you can use the <code>installation_targets</code> method.</p>
+
+<p>The optional <code>architecture</code> and <code>perl_version</code> parameters can be used to specify the architecture and perl version that are used to choose the right PAR archives from the repository. Defaults to your running perl, so please read the comments on <code>architecture</code> and <code>perl_version</code> below before blindly using this.</p>
+
+<p>Upon client creation, the repository&#39;s version is validated to be compatible with this version of the client.</p>
+
+<p>You may specify a <code>http_timeout</code> in seconds.</p>
+
+<p>The <code>cache_dir</code> parameter can be used to set the directory where you want the downloaded files to reside. It defaults to the <code>$ENV{PAR_TEMP}</code> directory or otherwise the <code>par</code> subdirectory of your system&#39;s temporary directory. If you set <code>cache_dir</code> to something other than the default, the downloaded files should be automatically cached when the HTTP transport layer is used as <code>LWP::mirror()</code> only checks for updates.</p>
+
+<p>By default, each repository client uses its own private cache directory. If you specify <code>private_cache_dir =&#62; 0</code>, caching will be mostly disabled. While a <code>private_cache_dir</code> and caching are the default, if you explicitly set a different cache directory with <code>cach_dir</code>, you also have to explicitly flag it as a repository-private cache directory (aka re-enable caching) with <code>private_cache_dir =&#62; 1</code>.</p>
+
+<p>By default, it is assumed that the package indices do not change all that often. Therefore, there is a default delay of 30 seconds before their checksums are re-checked as this may require a network request. You can specify in seconds or disable the delay using the <code>checksums_timeout =&#62; XX</code> option.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="require_module"
+>require_module</a></h2>
+
+<p>First argument must be a package name (namespace) to require. The method scans the repository for distributions that contain the specified package.</p>
+
+<p>When one or more distributions are found, it determines which distribution to use using the <code>prefered_distribution()</code> method.</p>
+
+<p>Then, it fetches the prefered <em>.par</em> distribution from the repository and opens it using the <a href="/perldoc?PAR" class="podlinkpod"
+>PAR</a> module. Finally, it loads the specified module from the downloaded <em>.par</em> distribution using <code>require()</code>.</p>
+
+<p>Returns 1 on success, the empty list on failure. In case of failure, an error message can be obtained with the <code>error()</code> method.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="use_module"
+>use_module</a></h2>
+
+<p>Works the same as the <code>require_module</code> method except that instead of only requiring the specified module, it also calls the <code>import</code> method if it exists. Any arguments to this methods after the package to load are passed to the <code>import</code> call.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="get_module"
+>get_module</a></h2>
+
+<p>First parameter must be a namespace, second parameter may be a boolean indicating whether the PAR is a fallback-PAR or one to load from preferably. (Defaults to false which means loading preferably.)</p>
+
+<p>Searches for a specified namespace in the repository and downloads the corresponding PAR distribution. Automatically loads PAR and appends the downloaded PAR distribution to the list of PARs to load from. If auto-installation or auto-upgrading was enabled, the contents of the PAR distribution will be installed in addition to loading the PAR.</p>
+
+<p>Returns the name of the local PAR file. Think of this as <code>require_module</code> without actually doing a <code>require()</code> of the module.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="install_module"
+>install_module</a></h2>
+
+<p>Works the same as <code>get_module</code> but instead of loading the <em>.par</em> file using PAR, it installs its contents using <a href="/perldoc?PAR%3A%3ADist" class="podlinkpod"
+>PAR::Dist</a>&#39;s <code>install_par()</code> routine.</p>
+
+<p>First argument must be the namespace of a module to install.</p>
+
+<p>Note that this method always installs the whole <em>.par</em> distribution that contains the newest version of the specified namespace and not only the <em>.pm</em> file from the distribution which contains the specified namespace.</p>
+
+<p>Returns the name of the local <em>.par</em> file which was installed or the empty list on failure.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="upgrade_module"
+>upgrade_module</a></h2>
+
+<p>Works the same as <code>get_module</code> but instead of loading the <em>.par</em> file using PAR, it checks whether the local version of the module is current. If it isn&#39;t, the distribution containing the newest version of the module is installed using <a href="/perldoc?PAR%3A%3ADist" class="podlinkpod"
+>PAR::Dist</a>&#39;s <code>install_par()</code> routine.</p>
+
+<p>First argument must be the namespace of a module to upgrade.</p>
+
+<p>Note that this method always installs the whole <em>.par</em> distribution that contains the newest version of the specified namespace and not only the <em>.pm</em> file from the distribution which contains the specified namespace.</p>
+
+<p>Returns the name of the local <em>.par</em> file which was installed or the empty list on failure or if the local version of the module is already current.</p>
+
+<p><i>CAVEAT:</i> This will first try to require a locally installed version of the module. If that succeeds, its version is compared to the highest version in the repository. If an upgrade is necessary, the new module will be installed. If the module hadn&#39;t been found locally before the installation, it will be loaded. If it was found locally (and thus loaded), <code>IT WILL NOT BE RELOADED SO YOU GET THE NEW VERSION</code>. This is because reloading of modules is not a simple issue. If you need this behaviour, you can get it manually using <a href="/perldoc?Class%3A%3AUnload" class="podlinkpod"
+>Class::Unload</a> and another require.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="run_script"
+>run_script</a></h2>
+
+<p>First parameter must be a script name.</p>
+
+<p>Searches for a specified script in the repository and downloads the corresponding PAR distribution. Automatically loads PAR and appends the downloaded PAR distribution to the list of PARs to load from.</p>
+
+<p>Then, it runs the script. It does not return unless some error occurrs.</p>
+
+<p>If either <i>auto_install</i> or <i>auto_upgrade</i> were specified as parameters to the constructor, the downloaded PAR distribution will be installed regardless of the versions of any previously installed scripts. This differs from the behaviour for mdoules.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="get_module_dependencies"
+>get_module_dependencies</a></h2>
+
+<p>Given a module name, determines the correct distribution in the repository that supplies the module. Returns a reference to an array containing that distribution and all distributions it depends on. The distribution that contains the given module is the first in the array.</p>
+
+<p>Returns the empty list on failure.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="get_script_dependencies"
+>get_script_dependencies</a></h2>
+
+<p>Given a script name, determines the correct distribution in the repository that supplies the script. Returns a reference to an array containing that distribution and all distributions it depends on. The distribution that contains the given script is the first in the array.</p>
+
+<p>Returns the empty list on failure.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="installation_targets"
+>installation_targets</a></h2>
+
+<p>Sets the installation targets for modules and scripts if any arguments are passed. Returns the current setting otherwise.</p>
+
+<p>Arguments should be key/value pairs of installation targets as recognized by the <code>install_par()</code> routine in <a href="/perldoc?PAR%3A%3ADist" class="podlinkpod"
+>PAR::Dist</a>. The contents of this hash are passed verbatim to every call to <code>install_par()</code> made by this package.</p>
+
+<p>In this context, note that aside from the normal i&#60;inst_lib&#62; and similar targets, you can also specify a <i>custom_targets</i> element starting with <code>PAR::Dist</code> version 0.20. For details, refer to the <a href="/perldoc?PAR%3A%3ADist" class="podlinkpod"
+>PAR::Dist</a> manual.</p>
+
+<p>Returns a hash reference to a hash containing the installation targets.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ACCESSORS"
+>ACCESSORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>These methods get or set some attributes of the repository client.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="error"
+>error</a></h2>
+
+<p>Returns the last error message if there was an error or the empty list otherwise.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="perl_version"
+>perl_version</a></h2>
+
+<p>Sets and/or returns the perl version which is used to choose the right <code>.par</code> packages from the repository. Defaults to the currently running perl version (from <code>%Config</code>).</p>
+
+<p>You&#39;d better know what you&#39;re doing if you plan to set this to something you&#39;re not actually running. One valid use is if you use the <code>installation_targets</code> possibly in conjunction with <a href="/perldoc?ExtUtils%3A%3AInferConfig" class="podlinkpod"
+>ExtUtils::InferConfig</a> to install into a different perl than the one that&#39;s running!</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="architecture"
+>architecture</a></h2>
+
+<p>Sets and/or returns the name of the architecture which is used to choose the right <code>.par</code> packages from the repository. Defaults to the currently running architecture (from <code>%Config</code>).</p>
+
+<p>You&#39;d better know what you&#39;re doing if you plan to set this to something you&#39;re not actually running. One valid use is if you use the <code>installation_targets</code> possibly in conjunction with <a href="/perldoc?ExtUtils%3A%3AInferConfig" class="podlinkpod"
+>ExtUtils::InferConfig</a> to install into a different perl than the one that&#39;s running!</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OTHER_METHODS"
+>OTHER METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>These methods, while part of the official interface, should need rarely be called by most users.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="prefered_distribution"
+>prefered_distribution</a></h2>
+
+<p>This method decides from which distribution a module will be loaded. It returns the corresponding distribution file name.</p>
+
+<p>Takes a namespace as first argument followed by a reference to a hash of distribution file names with associated module versions. Example:</p>
+
+<pre class="sh_perl">  &#39;Math::Symbolic&#39;,
+  { &#39;Math-Symbolic-0.502-x86_64-linux-gnu-thread-multi-5.8.7.par&#39; =&#62; &#39;0.502&#39;,
+    &#39;Math-Symbolic-0.128-any_arch-any_version.par&#39; =&#62; &#39;0.128&#39;
+  }</pre>
+
+<p>This means that the <code>Math::Symbolic</code> namespace was found in version <code>0.502</code> and <code>0.128</code> in said distribution files. If you were using linux on an x86_64 computer using perl 5.8.7, this would return the first file name. Otherwise, you would only get version <code>0.128</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="validate_repository_version"
+>validate_repository_version</a></h2>
+
+<p>Accesses the repository meta information and validates that it has a compatible version. This is done on object creation, so it should not normally be necessary to call this from user code.</p>
+
+<p>Returns a boolean indicating the outcome of the operation.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module is directly related to the <code>PAR</code> project. You need to have basic familiarity with it. Its homepage is at <a href="http://par.perl.org/" class="podlinkurl"
+>http://par.perl.org/</a></p>
+
+<p>See <a href="/perldoc?PAR" class="podlinkpod"
+>PAR</a>, <a href="/perldoc?PAR%3A%3ADist" class="podlinkpod"
+>PAR::Dist</a>, <a href="/perldoc?PAR%3A%3ARepository" class="podlinkpod"
+>PAR::Repository</a>, etc.</p>
+
+<p><a href="/perldoc?PAR%3A%3ARepository%3A%3AQuery" class="podlinkpod"
+>PAR::Repository::Query</a> implements the querying interface. The methods described in that module&#39;s documentation can be called on <code><a href="/~smueller/PAR-Repository-Client-0.25/lib/PAR/Repository/Client.pm" class="podlinkpod"
+>PAR::Repository::Client</a></code> objects.</p>
+
+<p><a href="/perldoc?PAR%3A%3ARepository" class="podlinkpod"
+>PAR::Repository</a> implements the server side creation and manipulation of PAR repositories.</p>
+
+<p><a href="/perldoc?PAR%3A%3AWebStart" class="podlinkpod"
+>PAR::WebStart</a> is doing something similar but is otherwise unrelated.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Steffen Mueller, &#60;smueller@cpan.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2006-2009 by Steffen Mueller</p>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself, either Perl version 5.6 or, at your option, any later version of Perl 5 you may have available.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78177 Uploads, 24708 Distributions
+105988 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 02:54:05 2012 GMT (0.145190000534058) @cpansearch1 -->
+ </body>
+</html>

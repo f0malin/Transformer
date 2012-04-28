@@ -1,0 +1,41 @@
+Template-Plugin-Lingua-Conjunction version 0.02
+===============================================
+
+Lingua::Conjunction is a module to create sentence-style, human-readable lists 
+of items from a Perl list.  For example, given the list ("foo", "bar", "baz") 
+it would return the string "foo, bar, and baz".  If any of the strings in the 
+list had a comma in them, it would switch to using a semicolon.  It supports 
+multiple languages and use of arbitrary separator characters.  It handles any 
+number of items gracefully, even two or one.
+
+Template::Plugin::Lingua::Conjunction is a wrapper around this module so that 
+it can be used from the Template Toolkit.
+
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+  Lingua::Conjunction
+  Template
+
+COPYRIGHT AND LICENCE
+
+Put the correct copyright and licence information here.
+
+Copyright (C) 2006-2008 by Brent Royal-Gordon
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.7 or,
+at your option, any later version of Perl 5 you may have available.
+
+

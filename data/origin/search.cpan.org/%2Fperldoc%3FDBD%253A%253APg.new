@@ -1,0 +1,2879 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>DBD::Pg - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","DBD-Pg",3]);
+    _gaq.push(["_setCustomVar",5,"Release","DBD-Pg-2.19.2",3]);
+    _gaq.push(["_setCustomVar",3,"Module","DBD::Pg",3]);
+    _gaq.push(["_setCustomVar",1,"Author","TURNSTEP",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?DBD::Pg">permalink</a></div>
+  <a href="/~turnstep/">Greg Sabino Mullane</a> &gt;
+  <a href="/~turnstep/DBD-Pg-2.19.2/">DBD-Pg-2.19.2</a> &gt;
+  DBD::Pg
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/95e200de08ae88aa603a441f249b23f3?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/T/TU/TURNSTEP/DBD-Pg-2.19.2.tar.gz">DBD-Pg-2.19.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=DBD%3A%3APg;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~TURNSTEP/DBD-Pg-2.19.2/Pg.pm">Annotate this POD
+(3)
+</a></p>
+     <p style="text-align:right"><a href="http://search.cpan.org/dist/DBD-Pg/">Website</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?DBD%3A%3Amysql">DBD::mysql</a><br>
+<a href="/perldoc?Class%3A%3ADBI">Class::DBI</a><br>
+<a href="/perldoc?SQL%3A%3AStatement">SQL::Statement</a><br>
+<a href="/perldoc?DBD%3A%3ASybase">DBD::Sybase</a><br>
+<a href="/perldoc?DBD%3A%3APgPP">DBD::PgPP</a><br>
+<a href="/perldoc?DBD%3A%3AODBC">DBD::ODBC</a><br>
+<a href="/perldoc?Win32%3A%3AODBC">Win32::ODBC</a><br>
+<a href="/perldoc?HTML%3A%3ATemplate">HTML::Template</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?DBD%3A%3AOracle">DBD::Oracle</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=DBD%3A%3APg">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 10</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 26</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="http://rt.cpan.org/Public/Dist/Display.html?Name=DBD-Pg">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  v2.19.2 &nbsp;
+<span class="noprint">
+  <a href="/src/TURNSTEP/DBD-Pg-2.19.2/Pg.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#MODULE_DOCUMENTATION'>MODULE DOCUMENTATION</a>
+  <li class='indexItem indexItem1'><a href='#THE_DBI_CLASS'>THE DBI CLASS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#DBI_Class_Methods'>DBI Class Methods</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#connect'>connect</a>
+      <li class='indexItem indexItem3'><a href='#connect_cached'>connect_cached</a>
+      <li class='indexItem indexItem3'><a href='#data_sources'>data_sources</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Methods_Common_To_All_Handles'>Methods Common To All Handles</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#err'>err</a>
+      <li class='indexItem indexItem3'><a href='#errstr'>errstr</a>
+      <li class='indexItem indexItem3'><a href='#state'>state</a>
+      <li class='indexItem indexItem3'><a href='#trace'>trace</a>
+      <li class='indexItem indexItem3'><a href='#trace_msg'>trace_msg</a>
+      <li class='indexItem indexItem3'><a href='#parse_trace_flag_and_parse_trace_flags'>parse_trace_flag and parse_trace_flags</a>
+      <li class='indexItem indexItem3'><a href='#func'>func</a>
+      <li class='indexItem indexItem3'><a href='#private_attribute_info'>private_attribute_info</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#ATTRIBUTES_COMMON_TO_ALL_HANDLES'>ATTRIBUTES COMMON TO ALL HANDLES</a>
+  <ul   class='indexList indexList2'>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#InactiveDestroy_(boolean)'>InactiveDestroy (boolean)</a>
+      <li class='indexItem indexItem3'><a href='#RaiseError_(boolean,_inherited)'>RaiseError (boolean, inherited)</a>
+      <li class='indexItem indexItem3'><a href='#PrintError_(boolean,_inherited)'>PrintError (boolean, inherited)</a>
+      <li class='indexItem indexItem3'><a href='#ShowErrorStatement_(boolean,_inherited)'>ShowErrorStatement (boolean, inherited)</a>
+      <li class='indexItem indexItem3'><a href='#Warn_(boolean,_inherited)'>Warn (boolean, inherited)</a>
+      <li class='indexItem indexItem3'><a href='#Executed_(boolean,_read-only)'>Executed (boolean, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#TraceLevel_(integer,_inherited)'>TraceLevel (integer, inherited)</a>
+      <li class='indexItem indexItem3'><a href='#Active_(boolean,_read-only)'>Active (boolean, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#Kids_(integer,_read-only)'>Kids (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#ActiveKids_(integer,_read-only)'>ActiveKids (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#CachedKids_(hash_ref)'>CachedKids (hash ref)</a>
+      <li class='indexItem indexItem3'><a href='#ChildHandles_(array_ref)'>ChildHandles (array ref)</a>
+      <li class='indexItem indexItem3'><a href='#PrintWarn_(boolean,_inherited)'>PrintWarn (boolean, inherited)</a>
+      <li class='indexItem indexItem3'><a href='#HandleError_(boolean,_inherited)'>HandleError (boolean, inherited)</a>
+      <li class='indexItem indexItem3'><a href='#HandleSetErr_(code_ref,_inherited)'>HandleSetErr (code ref, inherited)</a>
+      <li class='indexItem indexItem3'><a href='#ErrCount_(unsigned_integer)'>ErrCount (unsigned integer)</a>
+      <li class='indexItem indexItem3'><a href='#FetchHashKeyName_(string,_inherited)'>FetchHashKeyName (string, inherited)</a>
+      <li class='indexItem indexItem3'><a href='#ChopBlanks_(boolean,_inherited)'>ChopBlanks (boolean, inherited)</a>
+      <li class='indexItem indexItem3'><a href='#Taint_(boolean,_inherited)'>Taint (boolean, inherited)</a>
+      <li class='indexItem indexItem3'><a href='#TaintIn_(boolean,_inherited)'>TaintIn (boolean, inherited)</a>
+      <li class='indexItem indexItem3'><a href='#TaintOut_(boolean,_inherited)'>TaintOut (boolean, inherited)</a>
+      <li class='indexItem indexItem3'><a href='#Profile_(inherited)'>Profile (inherited)</a>
+      <li class='indexItem indexItem3'><a href='#Type_(scalar)'>Type (scalar)</a>
+      <li class='indexItem indexItem3'><a href='#LongReadLen'>LongReadLen</a>
+      <li class='indexItem indexItem3'><a href='#LongTruncOk'>LongTruncOk</a>
+      <li class='indexItem indexItem3'><a href='#CompatMode'>CompatMode</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DBI_DATABASE_HANDLE_OBJECTS'>DBI DATABASE HANDLE OBJECTS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Database_Handle_Methods'>Database Handle Methods</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#selectall_arrayref'>selectall_arrayref</a>
+      <li class='indexItem indexItem3'><a href='#selectall_hashref'>selectall_hashref</a>
+      <li class='indexItem indexItem3'><a href='#selectcol_arrayref'>selectcol_arrayref</a>
+      <li class='indexItem indexItem3'><a href='#prepare'>prepare</a>
+      <ul   class='indexList indexList4'>
+        <li class='indexItem indexItem4'><a href='#Placeholders'>Placeholders</a>
+      </ul>
+      <li class='indexItem indexItem3'><a href='#prepare_cached'>prepare_cached</a>
+      <li class='indexItem indexItem3'><a href='#do'>do</a>
+      <li class='indexItem indexItem3'><a href='#last_insert_id'>last_insert_id</a>
+      <li class='indexItem indexItem3'><a href='#commit'>commit</a>
+      <li class='indexItem indexItem3'><a href='#rollback'>rollback</a>
+      <li class='indexItem indexItem3'><a href='#begin_work'>begin_work</a>
+      <li class='indexItem indexItem3'><a href='#disconnect'>disconnect</a>
+      <li class='indexItem indexItem3'><a href='#quote'>quote</a>
+      <li class='indexItem indexItem3'><a href='#quote_identifier'>quote_identifier</a>
+      <li class='indexItem indexItem3'><a href='#pg_notifies'>pg_notifies</a>
+      <li class='indexItem indexItem3'><a href='#ping'>ping</a>
+      <li class='indexItem indexItem3'><a href='#pg_ping'>pg_ping</a>
+      <li class='indexItem indexItem3'><a href='#get_info'>get_info</a>
+      <li class='indexItem indexItem3'><a href='#table_info'>table_info</a>
+      <li class='indexItem indexItem3'><a href='#column_info'>column_info</a>
+      <li class='indexItem indexItem3'><a href='#primary_key_info'>primary_key_info</a>
+      <li class='indexItem indexItem3'><a href='#primary_key'>primary_key</a>
+      <li class='indexItem indexItem3'><a href='#foreign_key_info'>foreign_key_info</a>
+      <li class='indexItem indexItem3'><a href='#statistics_info'>statistics_info</a>
+      <li class='indexItem indexItem3'><a href='#tables'>tables</a>
+      <li class='indexItem indexItem3'><a href='#type_info_all'>type_info_all</a>
+      <li class='indexItem indexItem3'><a href='#type_info'>type_info</a>
+      <li class='indexItem indexItem3'><a href='#pg_server_trace'>pg_server_trace</a>
+      <li class='indexItem indexItem3'><a href='#pg_server_untrace'>pg_server_untrace</a>
+      <li class='indexItem indexItem3'><a href='#selectrow_array'>selectrow_array</a>
+      <li class='indexItem indexItem3'><a href='#selectrow_arrayref'>selectrow_arrayref</a>
+      <li class='indexItem indexItem3'><a href='#selectrow_hashref'>selectrow_hashref</a>
+      <li class='indexItem indexItem3'><a href='#clone'>clone</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Database_Handle_Attributes'>Database Handle Attributes</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#AutoCommit_(boolean)'>AutoCommit (boolean)</a>
+      <li class='indexItem indexItem3'><a href='#pg_bool_tf_(boolean)'>pg_bool_tf (boolean)</a>
+      <li class='indexItem indexItem3'><a href='#ReadOnly_(boolean)'>ReadOnly (boolean)</a>
+      <li class='indexItem indexItem3'><a href='#pg_server_prepare_(integer)'>pg_server_prepare (integer)</a>
+      <li class='indexItem indexItem3'><a href='#pg_placeholder_dollaronly_(boolean)'>pg_placeholder_dollaronly (boolean)</a>
+      <li class='indexItem indexItem3'><a href='#pg_enable_utf8_(boolean)'>pg_enable_utf8 (boolean)</a>
+      <li class='indexItem indexItem3'><a href='#pg_errorlevel_(integer)'>pg_errorlevel (integer)</a>
+      <li class='indexItem indexItem3'><a href='#pg_lib_version_(integer,_read-only)'>pg_lib_version (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_server_version_(integer,_read-only)'>pg_server_version (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#Name_(string,_read-only)'>Name (string, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#Username_(string,_read-only)'>Username (string, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_db_(string,_read-only)'>pg_db (string, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_user_(string,_read-only)'>pg_user (string, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_host_(string,_read-only)'>pg_host (string, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_port_(integer,_read-only)'>pg_port (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_socket_(integer,_read-only)'>pg_socket (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_pass_(string,_read-only)'>pg_pass (string, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_options_(string,_read-only)'>pg_options (string, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_default_port_(integer,_read-only)'>pg_default_port (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_pid_(integer,_read-only)'>pg_pid (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_prepare_now_(boolean)'>pg_prepare_now (boolean)</a>
+      <li class='indexItem indexItem3'><a href='#pg_expand_array_(boolean)'>pg_expand_array (boolean)</a>
+      <li class='indexItem indexItem3'><a href='#pg_async_status_(integer,_read-only)'>pg_async_status (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_standard_conforming_strings_(boolean,_read-only)'>pg_standard_conforming_strings (boolean, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_INV_READ_(integer,_read-only)'>pg_INV_READ (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_INV_WRITE_(integer,_read-only)'>pg_INV_WRITE (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#Driver_(handle,_read-only)'>Driver (handle, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_protocol_(integer,_read-only)'>pg_protocol (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#RowCacheSize'>RowCacheSize</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DBI_STATEMENT_HANDLE_OBJECTS'>DBI STATEMENT HANDLE OBJECTS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Statement_Handle_Methods'>Statement Handle Methods</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#bind_param'>bind_param</a>
+      <li class='indexItem indexItem3'><a href='#bind_param_inout'>bind_param_inout</a>
+      <li class='indexItem indexItem3'><a href='#bind_param_array'>bind_param_array</a>
+      <li class='indexItem indexItem3'><a href='#execute'>execute</a>
+      <li class='indexItem indexItem3'><a href='#execute_array'>execute_array</a>
+      <li class='indexItem indexItem3'><a href='#execute_for_fetch'>execute_for_fetch</a>
+      <li class='indexItem indexItem3'><a href='#fetchrow_arrayref'>fetchrow_arrayref</a>
+      <li class='indexItem indexItem3'><a href='#fetchrow_array'>fetchrow_array</a>
+      <li class='indexItem indexItem3'><a href='#fetchrow_hashref'>fetchrow_hashref</a>
+      <li class='indexItem indexItem3'><a href='#fetchall_arrayref'>fetchall_arrayref</a>
+      <li class='indexItem indexItem3'><a href='#fetchall_hashref'>fetchall_hashref</a>
+      <li class='indexItem indexItem3'><a href='#finish'>finish</a>
+      <li class='indexItem indexItem3'><a href='#rows'>rows</a>
+      <li class='indexItem indexItem3'><a href='#bind_col'>bind_col</a>
+      <li class='indexItem indexItem3'><a href='#bind_columns'>bind_columns</a>
+      <li class='indexItem indexItem3'><a href='#dump_results'>dump_results</a>
+      <li class='indexItem indexItem3'><a href='#blob_read'>blob_read</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Statement_Handle_Attributes'>Statement Handle Attributes</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#NUM_OF_FIELDS_(integer,_read-only)'>NUM_OF_FIELDS (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#NUM_OF_PARAMS_(integer,_read-only)'>NUM_OF_PARAMS (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#NAME_(arrayref,_read-only)'>NAME (arrayref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#NAME_lc_(arrayref,_read-only)'>NAME_lc (arrayref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#NAME_uc_(arrayref,_read-only)'>NAME_uc (arrayref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#NAME_hash_(hashref,_read-only)'>NAME_hash (hashref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#NAME_lc_hash_(hashref,_read-only)'>NAME_lc_hash (hashref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#NAME_uc_hash_(hashref,_read-only)'>NAME_uc_hash (hashref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#TYPE_(arrayref,_read-only)'>TYPE (arrayref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#PRECISION_(arrayref,_read-only)'>PRECISION (arrayref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#SCALE_(arrayref,_read-only)'>SCALE (arrayref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#NULLABLE_(arrayref,_read-only)'>NULLABLE (arrayref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#Database_(dbh,_read-only)'>Database (dbh, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#ParamValues_(hash_ref,_read-only)'>ParamValues (hash ref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#ParamTypes_(hash_ref,_read-only)'>ParamTypes (hash ref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#Statement_(string,_read-only)'>Statement (string, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_current_row_(integer,_read-only)'>pg_current_row (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_numbound_(integer,_read-only)'>pg_numbound (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_bound_(hashref,_read-only)'>pg_bound (hashref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_size_(arrayref,_read-only)'>pg_size (arrayref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_type_(arrayref,_read-only)'>pg_type (arrayref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_segments_(arrayref,_read-only)'>pg_segments (arrayref, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_oid_status_(integer,_read-only)'>pg_oid_status (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_cmd_status_(integer,_read-only)'>pg_cmd_status (integer, read-only)</a>
+      <li class='indexItem indexItem3'><a href='#pg_direct_(boolean)'>pg_direct (boolean)</a>
+      <li class='indexItem indexItem3'><a href='#pg_prepare_now_(boolean)'>pg_prepare_now (boolean)</a>
+      <li class='indexItem indexItem3'><a href='#pg_prepare_name_(string)'>pg_prepare_name (string)</a>
+      <li class='indexItem indexItem3'><a href='#pg_server_prepare_(integer)'>pg_server_prepare (integer)</a>
+      <li class='indexItem indexItem3'><a href='#pg_placeholder_dollaronly_(boolean)'>pg_placeholder_dollaronly (boolean)</a>
+      <li class='indexItem indexItem3'><a href='#pg_async_(integer)'>pg_async (integer)</a>
+      <li class='indexItem indexItem3'><a href='#RowsInCache'>RowsInCache</a>
+      <li class='indexItem indexItem3'><a href='#RowCache'>RowCache</a>
+      <li class='indexItem indexItem3'><a href='#CursorName'>CursorName</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#FURTHER_INFORMATION'>FURTHER INFORMATION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Transactions'>Transactions</a>
+    <li class='indexItem indexItem2'><a href='#Savepoints'>Savepoints</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#pg_savepoint'>pg_savepoint</a>
+      <li class='indexItem indexItem3'><a href='#pg_rollback_to'>pg_rollback_to</a>
+      <li class='indexItem indexItem3'><a href='#pg_release'>pg_release</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Asynchronous_Queries'>Asynchronous Queries</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Asynchronous_Constants'>Asynchronous Constants</a>
+      <li class='indexItem indexItem3'><a href='#Asynchronous_Methods'>Asynchronous Methods</a>
+      <li class='indexItem indexItem3'><a href='#Asynchronous_Examples'>Asynchronous Examples</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Array_support'>Array support</a>
+    <li class='indexItem indexItem2'><a href='#COPY_support'>COPY support</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#pg_getcopydata'>pg_getcopydata</a>
+      <li class='indexItem indexItem3'><a href='#pg_putcopydata'>pg_putcopydata</a>
+      <li class='indexItem indexItem3'><a href='#pg_putcopyend'>pg_putcopyend</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Large_Objects'>Large Objects</a>
+    <li class='indexItem indexItem2'><a href='#Cursors'>Cursors</a>
+    <li class='indexItem indexItem2'><a href='#Datatype_bool'>Datatype bool</a>
+    <li class='indexItem indexItem2'><a href='#Schema_support'>Schema support</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#DEVELOPMENT'>DEVELOPMENT</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DBD::Pg - PostgreSQL database driver for the DBI module</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use DBI;
+
+  $dbh = DBI-&#62;connect(&#34;dbi:Pg:dbname=$dbname&#34;, &#39;&#39;, &#39;&#39;, {AutoCommit =&#62; 0});
+  # The AutoCommit attribute should always be explicitly set
+
+  # For some advanced uses you may need PostgreSQL type values:
+  use DBD::Pg qw(:pg_types);
+
+  # For asynchronous calls, import the async constants:
+  use DBD::Pg qw(:async);
+
+  $dbh-&#62;do(&#39;INSERT INTO mytable(a) VALUES (1)&#39;);
+
+  $sth = $dbh-&#62;prepare(&#39;INSERT INTO mytable(a) VALUES (?)&#39;);
+  $sth-&#62;execute();</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This documents version 2.19.2 of the DBD::Pg module</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DBD::Pg is a Perl module that works with the DBI module to provide access to PostgreSQL databases.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MODULE_DOCUMENTATION"
+>MODULE DOCUMENTATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This documentation describes driver specific behavior and restrictions. It is not supposed to be used as the only reference for the user. In any case consult the <b>DBI</b> documentation first!</p>
+
+<a href="http://search.cpan.org/~timb/DBI/DBI.pm">Latest DBI docmentation.</a>
+
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="THE_DBI_CLASS"
+>THE DBI CLASS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="DBI_Class_Methods"
+>DBI Class Methods</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="connect"
+><b>connect</b></a></h3>
+
+<p>This method creates a database handle by connecting to a database, and is the DBI equivalent of the &#34;new&#34; method. To connect to a Postgres database with a minimum of parameters, use the following syntax:</p>
+
+<pre class="sh_perl">  $dbh = DBI-&#62;connect(&#34;dbi:Pg:dbname=$dbname&#34;, &#39;&#39;, &#39;&#39;, {AutoCommit =&#62; 0});</pre>
+
+<p>This connects to the database named in the <code>$dbname</code> variable on the default port (usually 5432) without any user authentication.</p>
+
+<p>The following connect statement shows almost all possible parameters:</p>
+
+<pre class="sh_perl">  $dbh = DBI-&#62;connect(&#34;dbi:Pg:dbname=$dbname;host=$host;port=$port;options=$options&#34;,
+                      $username,
+                      $password,
+                      {AutoCommit =&#62; 0, RaiseError =&#62; 1, PrintError =&#62; 0}
+                     );</pre>
+
+<p>If a parameter is not given, the connect() method will first look for specific environment variables, and then fall back to hard-coded defaults:</p>
+
+<pre class="sh_perl">  parameter    environment variable    hard coded default
+  ------------------------------------------------------
+  host         PGHOST                  local domain socket
+  hostaddr     PGHOSTADDR              local domain socket
+  port         PGPORT                  5432
+  dbname*      PGDATABASE              current userid
+  username     PGUSER                  current userid
+  password     PGPASSWORD              (none)
+  options      PGOPTIONS               (none)
+  service      PGSERVICE               (none)
+  sslmode      PGSSLMODE               (none)</pre>
+
+<p>* May also use the aliases <code>db</code> or <code>database</code></p>
+
+<p>If the username and password values passed via <code>connect()</code> are undefined (as opposed to merely being empty strings), DBI will use the environment variables <i>DBI_USER</i> and <i>DBI_PASS</i> if they exist.</p>
+
+<p>You can also connect by using a service connection file, which is named <em>pg_service.conf</em>. The location of this file can be controlled by setting the <i>PGSYSCONFDIR</i> environment variable. To use one of the named services within the file, set the name by using either the <i>service</i> parameter or the environment variable <i>PGSERVICE</i>. Note that when connecting this way, only the minimum parameters should be used. For example, to connect to a service named &#34;zephyr&#34;, you could use:</p>
+
+<pre class="sh_perl">  $dbh = DBI-&#62;connect(&#34;dbi:Pg:service=zephyr&#34;, &#39;&#39;, &#39;&#39;);</pre>
+
+<p>You could also set <code>$ENV{PGSERVICE}</code> to &#34;zephyr&#34; and connect like this:</p>
+
+<pre class="sh_perl">  $dbh = DBI-&#62;connect(&#34;dbi:Pg:&#34;, &#39;&#39;, &#39;&#39;);</pre>
+
+<p>The format of the <em>pg_service.conf</em> file is simply a bracketed service name, followed by one parameter per line in the format name=value. For example:</p>
+
+<pre class="sh_perl">  [zephyr]
+  dbname=winds
+  user=wisp
+  password=W$2Hc00YSgP
+  port=6543</pre>
+
+<p>There are four valid arguments to the <i>sslmode</i> parameter, which controls whether to use SSL to connect to the database:</p>
+
+<ul>
+<li>disable: SSL connections are never used</li>
+
+<li>allow: try non-SSL, then SSL</li>
+
+<li>prefer: try SSL, then non-SSL</li>
+
+<li>require: connect only with SSL</li>
+</ul>
+
+<p>You can also connect using sockets in a specific directory. This may be needed if the server you are connecting to has a different default socket directory from the one used to compile DBD::Pg. Use the complete path to the socket directory as the name of the host, like this:</p>
+
+<pre class="sh_perl">  $dbh = DBI-&#62;connect(&#39;dbi:Pg:dbname=foo;host=/var/tmp/socket&#39;,
+    $username,
+    $password,
+    {AutoCommit =&#62; 0, RaiseError =&#62; 1});</pre>
+
+<p>The attribute hash can also contain a key named <code>dbd_verbose</code>, which simply calls <code>$dbh-&#62;trace(&#39;DBD&#39;)</code> after the handle is created. This attribute is not recommended, as it is clearer to simply explicitly call <code>trace</code> explicitly in your script.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="connect_cached"
+><b>connect_cached</b></a></h3>
+
+<pre class="sh_perl">  $dbh = DBI-&#62;connect_cached(&#34;dbi:Pg:dbname=$dbname&#34;, $username, $password, \%options);</pre>
+
+<p>Implemented by DBI, no driver-specific impact.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="data_sources"
+><b>data_sources</b></a></h3>
+
+<pre class="sh_perl">  @data_sources = DBI-&#62;data_sources(&#39;Pg&#39;);
+  @data_sources = $dbh-&#62;data_sources();</pre>
+
+<p>Returns a list of available databases. Unless the environment variable <code>DBI_DSN</code> is set, a connection will be attempted to the database <code>template1</code>. The normal connection environment variables also apply, such as <code>PGHOST</code>, <code>PGPORT</code>, <code>DBI_USER</code>, <code>DBI_PASS</code>, and <code>PGSERVICE</code>.</p>
+
+<p>You can also pass in options to add to the connection string For example, to specify an alternate port and host:</p>
+
+<pre class="sh_perl">  @data_sources = DBI-&#62;data_sources(&#39;Pg&#39;, &#39;port=5824;host=example.com&#39;);
+
+  or:
+
+  @data_sources = $dbh-&#62;data_sources(&#39;port=5824;host=example.com&#39;);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Methods_Common_To_All_Handles"
+>Methods Common To All Handles</a></h2>
+
+<p>For all of the methods below, <b>$h</b> can be either a database handle (<b>$dbh</b>) or a statement handle (<b>$sth</b>). Note that <i>$dbh</i> and <i>$sth</i> can be replaced with any variable name you choose: these are just the names most often used. Another common variable used in this documentation is $<i>rv</i>, which stands for &#34;return value&#34;.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="err"
+><b>err</b></a></h3>
+
+<pre class="sh_perl">  $rv = $h-&#62;err;</pre>
+
+<p>Returns the error code from the last method called. For the connect method it returns <code>PQstatus</code>, which is a number used by <i>libpq</i> (the Postgres connection library). A value of 0 indicates no error (CONNECTION_OK), while any other number indicates a failed connection. The only other number commonly seen is 1 (CONNECTION_BAD). See the libpq documentation for the complete list of return codes.</p>
+
+<p>In all other non-connect methods <code>$h-&#62;err</code> returns the <code>PQresultStatus</code> of the current handle. This is a number used by libpq and is one of:</p>
+
+<pre class="sh_perl">  0  Empty query string
+  1  A command that returns no data successfully completed.
+  2  A command that returns data sucessfully completed.
+  3  A COPY OUT command is still in progress.
+  4  A COPY IN command is still in progress.
+  5  A bad response was received from the backend.
+  6  A nonfatal error occurred (a notice or warning message)
+  7  A fatal error was returned: the last query failed.</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="errstr"
+><b>errstr</b></a></h3>
+
+<pre class="sh_perl">  $str = $h-&#62;errstr;</pre>
+
+<p>Returns the last error that was reported by Postgres. This message is affected by the <a href="#pg_errorlevel" class="podlinkpod"
+>&#34;pg_errorlevel&#34;</a> setting.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="state"
+><b>state</b></a></h3>
+
+<pre class="sh_perl">  $str = $h-&#62;state;</pre>
+
+<p>Returns a five-character &#34;SQLSTATE&#34; code. Success is indicated by a <code>00000</code> code, which gets mapped to an empty string by DBI. A code of <code>S8006</code> indicates a connection failure, usually because the connection to the Postgres server has been lost.</p>
+
+<p>While this method can be called as either <code>$sth-&#62;state</code> or <code>$dbh-&#62;state</code>, it is usually clearer to always use <code>$dbh-&#62;state</code>.</p>
+
+<p>The list of codes used by PostgreSQL can be found at: <a href="http://www.postgresql.org/docs/current/static/errcodes-appendix.html" class="podlinkurl"
+>http://www.postgresql.org/docs/current/static/errcodes-appendix.html</a></p>
+
+<p>Note that these codes are part of the SQL standard and only a small number of them will be used by PostgreSQL.</p>
+
+<p>Common codes:</p>
+
+<pre class="sh_perl">  00000 Successful completion
+  25P01 No active SQL transaction
+  25P02 In failed SQL transaction
+  S8006 Connection failure</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="trace"
+><b>trace</b></a></h3>
+
+<pre class="sh_perl">  $h-&#62;trace($trace_settings);
+  $h-&#62;trace($trace_settings, $trace_filename);
+  $trace_settings = $h-&#62;trace;</pre>
+
+<p>Changes the trace settings on a database or statement handle. The optional second argument specifies a file to write the trace information to. If no filename is given, the information is written to <em>STDERR</em>. Note that tracing can be set globally as well by setting <code>DBI-&#62;trace</code>, or by using the environment variable <i>DBI_TRACE</i>.</p>
+
+<p>The value is either a numeric level or a named flag. For the flags that DBD::Pg uses, see <a href="#parse_trace_flag_and_parse_trace_flags" class="podlinkpod"
+>parse_trace_flag</a>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="trace_msg"
+><b>trace_msg</b></a></h3>
+
+<pre class="sh_perl">  $h-&#62;trace_msg($message_text);
+  $h-&#62;trace_msg($message_text, $min_level);</pre>
+
+<p>Writes a message to the current trace output (as set by the <a href="#trace" class="podlinkpod"
+>&#34;trace&#34;</a> method). If a second argument is given, the message is only written if the current tracing level is equal to or greater than the <code>$min_level</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="parse_trace_flag_and_parse_trace_flags"
+><b>parse_trace_flag</b> and <b>parse_trace_flags</b></a></h3>
+
+<pre class="sh_perl">  $h-&#62;trace($h-&#62;parse_trace_flags(&#39;SQL|pglibpq&#39;));
+  $h-&#62;trace($h-&#62;parse_trace_flags(&#39;1|pgstart&#39;));
+
+  ## Simpler:
+  $h-&#62;trace(&#39;SQL|pglibpq&#39;);
+  $h-&#62;trace(&#39;1|pgstart&#39;);
+
+  my $value = DBD::Pg-&#62;parse_trace_flag(&#39;pglibpq&#39;);
+  DBI-&#62;trace($value);</pre>
+
+<p>The parse_trace_flags method is used to convert one or more named flags to a number which can passed to the <a href="#trace" class="podlinkpod"
+>&#34;trace&#34;</a> method. DBD::Pg currently supports the DBI-specific flag, <code>SQL</code>, as well as the ones listed below.</p>
+
+<p>Flags can be combined by using the parse_trace_flags method, which simply calls <code>parse_trace_flag</code> on each item and combines them.</p>
+
+<p>Sometimes you may wish to turn the tracing on before you connect to the database. The second example above shows a way of doing this: the call to <code>DBD::Pg-&#62;parse_trace_flags</code> provides a number than can be fed to <code>DBI-&#62;trace</code> before you create a database handle.</p>
+
+<p>DBD::Pg supports the following trace flags:</p>
+
+<dl>
+<dt><a name="SQL"
+>SQL</a></dt>
+
+<dd>
+<p>Outputs all SQL statements. Note that the output provided will not necessarily be in a form suitable to passing directly to Postgres, as server-side prepared statements are used extensively by DBD::Pg. For maximum portability of output (but with a potential performance hit), use with <code>$dbh-&#62;{pg_server_prepare} = 0</code>.</p>
+
+<dt><a name="DBD"
+>DBD</a></dt>
+
+<dd>
+<p>Turns on all non-DBI flags, in other words, only the ones that are specific to DBD::Pg (all those below which start with the letters &#39;pg&#39;).</p>
+
+<dt><a name="pglibpq"
+>pglibpq</a></dt>
+
+<dd>
+<p>Outputs the name of each libpq function (without arguments) immediately before running it. This is a good way to trace the flow of your program at a low level. This information is also output if the trace level is set to 4 or greater.</p>
+
+<dt><a name="pgstart"
+>pgstart</a></dt>
+
+<dd>
+<p>Outputs the name of each internal DBD::Pg function, and other information such as the function arguments or important global variables, as each function starts. This information is also output if the trace level is set to 4 or greater.</p>
+
+<dt><a name="pgend"
+>pgend</a></dt>
+
+<dd>
+<p>Outputs a simple message at the very end of each internal DBD::Pg function. This is also output if the trace level is set to 4 or greater.</p>
+
+<dt><a name="pgprefix"
+>pgprefix</a></dt>
+
+<dd>
+<p>Forces each line of trace output to begin with the string <b><code>dbdpg: </code></b>. This helps to differentiate it from the normal DBI trace output.</p>
+
+<dt><a name="pglogin"
+>pglogin</a></dt>
+
+<dd>
+<p>Outputs a message showing the connection string right before a new database connection is attempted, a message when the connection was successful, and a message right after the database has been disconnected. Also output if trace level is 5 or greater.</p>
+</dd>
+</dl>
+
+See the <a href="http://search.cpan.org/~timb/DBI/DBI.pm#TRACING">DBI section on TRACING</a> for more information.<br />
+
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="func"
+><b>func</b></a></h3>
+
+<p>DBD::Pg uses the <code>func</code> method to support a variety of functions. Note that the name of the function comes <i>last</i>, after the arguments.</p>
+
+<dl>
+<dt><a name="table_attributes"
+>table_attributes</a></dt>
+
+<dd>
+<pre class="sh_perl">  $attrs = $dbh-&#62;func($table, &#39;table_attributes&#39;);</pre>
+
+<p>Use of the tables_attributes function is no longer recommended. Instead, you can use the more portable <code>column_info</code> and <code>primary_key</code> methods to access the same information.</p>
+
+<p>The table_attributes method returns, for the given table argument, a reference to an array of hashes, each of which contains the following keys:</p>
+
+<pre class="sh_perl">  NAME        attribute name
+  TYPE        attribute type
+  SIZE        attribute size (-1 for variable size)
+  NULLABLE    flag nullable
+  DEFAULT     default value
+  CONSTRAINT  constraint
+  PRIMARY_KEY flag is_primary_key
+  REMARKS     attribute description</pre>
+
+<dt><a name="pg_lo_creat"
+>pg_lo_creat</a></dt>
+
+<dd>
+<pre class="sh_perl">  $lobjId = $dbh-&#62;pg_lo_creat($mode);</pre>
+
+<p>Creates a new large object and returns the object-id. <code>$mode</code> is a bitmask describing read and write access to the new object. This setting is ignored since Postgres version 8.1. For backwards compatibility, however, you should set a valid mode anyway (see <a href="#pg_lo_open" class="podlinkpod"
+>&#34;pg_lo_open&#34;</a> for a list of valid modes).</p>
+
+<p>Upon failure it returns <code>undef</code>. This function cannot be used if AutoCommit is enabled.</p>
+
+<p>The old way of calling large objects functions is deprecated: $dbh-&#62;func(.., &#39;lo_);</p>
+
+<dt><a name="lo_open"
+>lo_open</a></dt>
+
+<dd>
+<pre class="sh_perl">  $lobj_fd = $dbh-&#62;pg_lo_open($lobjId, $mode);</pre>
+
+<p>Opens an existing large object and returns an object-descriptor for use in subsequent <code>lo_*</code> calls. <code>$mode</code> is a bitmask describing read and write access to the opened object. It may be one of:</p>
+
+<pre class="sh_perl">  $dbh-&#62;{pg_INV_READ}
+  $dbh-&#62;{pg_INV_WRITE}
+  $dbh-&#62;{pg_INV_READ} | $dbh-&#62;{pg_INV_WRITE}</pre>
+
+<p><code>pg_INV_WRITE</code> and <code>pg_INV_WRITE | pg_INV_READ</code> modes are identical; in both modes, the large object can be read from or written to. Reading from the object will provide the object as written in other committed transactions, along with any writes performed by the current transaction. Objects opened with <code>pg_INV_READ</code> cannot be written to. Reading from this object will provide the stored data at the time of the transaction snapshot which was active when <code>lo_write</code> was called.</p>
+
+<p>Returns <code>undef</code> upon failure. Note that 0 is a perfectly correct (and common) object descriptor! This function cannot be used if AutoCommit is enabled.</p>
+
+<dt><a name="lo_write"
+>lo_write</a></dt>
+
+<dd>
+<pre class="sh_perl">  $nbytes = $dbh-&#62;pg_lo_write($lobj_fd, $buffer, $len);</pre>
+
+<p>Writes <code>$len</code> bytes of c&#60;$buffer&#62; into the large object <code>$lobj_fd</code>. Returns the number of bytes written and <code>undef</code> upon failure. This function cannot be used if AutoCommit is enabled.</p>
+
+<dt><a name="lo_read"
+>lo_read</a></dt>
+
+<dd>
+<pre class="sh_perl">  $nbytes = $dbh-&#62;pg_lo_read($lobj_fd, $buffer, $len);</pre>
+
+<p>Reads <code>$len</code> bytes into c&#60;$buffer&#62; from large object <code>$lobj_fd</code>. Returns the number of bytes read and <code>undef</code> upon failure. This function cannot be used if AutoCommit is enabled.</p>
+
+<dt><a name="lo_lseek"
+>lo_lseek</a></dt>
+
+<dd>
+<pre class="sh_perl">  $loc = $dbh-&#62;pg_lo_lseek($lobj_fd, $offset, $whence);</pre>
+
+<p>Changes the current read or write location on the large object <code>$obj_id</code>. Currently <code>$whence</code> can only be 0 (which is L_SET). Returns the current location and <code>undef</code> upon failure. This function cannot be used if AutoCommit is enabled.</p>
+
+<dt><a name="lo_tell"
+>lo_tell</a></dt>
+
+<dd>
+<pre class="sh_perl">  $loc = $dbh-&#62;pg_lo_tell($lobj_fd);</pre>
+
+<p>Returns the current read or write location on the large object <code>$lobj_fd</code> and <code>undef</code> upon failure. This function cannot be used if AutoCommit is enabled.</p>
+
+<dt><a name="lo_close"
+>lo_close</a></dt>
+
+<dd>
+<pre class="sh_perl">  $lobj_fd = $dbh-&#62;pg_lo_close($lobj_fd);</pre>
+
+<p>Closes an existing large object. Returns true upon success and false upon failure. This function cannot be used if AutoCommit is enabled.</p>
+
+<dt><a name="lo_unlink"
+>lo_unlink</a></dt>
+
+<dd>
+<pre class="sh_perl">  $ret = $dbh-&#62;pg_lo_unlink($lobjId);</pre>
+
+<p>Deletes an existing large object. Returns true upon success and false upon failure. This function cannot be used if AutoCommit is enabled.</p>
+
+<dt><a name="lo_import"
+>lo_import</a></dt>
+
+<dd>
+<pre class="sh_perl">  $lobjId = $dbh-&#62;pg_lo_import($filename);</pre>
+
+<p>Imports a Unix file as a large object and returns the object id of the new object or <code>undef</code> upon failure.</p>
+
+<dt><a name="lo_import_with_oid"
+>lo_import_with_oid</a></dt>
+
+<dd>
+<pre class="sh_perl">  $lobjId = $dbh-&#62;pg_lo_import($filename, $OID);</pre>
+
+<p>Same as lo_import, but attempts to use the supplied OID as the large object number. If this number is 0, it falls back to the behavior of lo_import (which assigns the next available OID).</p>
+
+<p>This is only available when DBD::Pg is compiled against a Postgres server version 8.4 or later.</p>
+
+<dt><a name="lo_export"
+>lo_export</a></dt>
+
+<dd>
+<pre class="sh_perl">  $ret = $dbh-&#62;pg_lo_export($lobjId, $filename);</pre>
+
+<p>Exports a large object into a Unix file. Returns false upon failure, true otherwise.</p>
+
+<dt><a name="getfd"
+>getfd</a></dt>
+
+<dd>
+<pre class="sh_perl">  $fd = $dbh-&#62;func(&#39;getfd&#39;);</pre>
+
+<p>Deprecated, use <a href="#pg_socket" class="podlinkpod"
+>$dbh-&#62;{pg_socket}</a> instead.</p>
+</dd>
+</dl>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="private_attribute_info"
+><b>private_attribute_info</b></a></h3>
+
+<pre class="sh_perl">  $hashref = $dbh-&#62;private_attribute_info();
+  $hashref = $sth-&#62;private_attribute_info();</pre>
+
+<p>Returns a hash of all private attributes used by DBD::Pg, for either a database or a statement handle. Currently, all the hash values are undef.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ATTRIBUTES_COMMON_TO_ALL_HANDLES"
+>ATTRIBUTES COMMON TO ALL HANDLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="InactiveDestroy_(boolean)"
+><b>InactiveDestroy</b> (boolean)</a></h3>
+
+<p>If set to true, then the <a href="#disconnect" class="podlinkpod"
+>&#34;disconnect&#34;</a> method will not be automatically called when the database handle goes out of scope. This is required if you are forking, and even then you must tread carefully and ensure that either the parent or the child (but not both!) handles all database calls from that point forwards, so that messages from the Postgres backend are only handled by one of the processes. If you don&#39;t set things up properly, you will see messages such as &#34;<i>server closed the connection unexpectedly</i>&#34;, and &#34;<i>message type 0x32 arrived from server while idle</i>&#34;. The best solution is to either have the child process reconnect to the database with a fresh database handle, or to rewrite your application not to use use forking. See the section on <a href="#Asynchronous_Queries" class="podlinkpod"
+>&#34;Asynchronous Queries&#34;</a> for a way to have your script continue to work while the database is processing a request.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="RaiseError_(boolean,_inherited)"
+><b>RaiseError</b> (boolean, inherited)</a></h3>
+
+<p>Forces errors to always raise an exception. Although it defaults to off, it is recommended that this be turned on, as the alternative is to check the return value of every method (prepare, execute, fetch, etc.) manually, which is easy to forget to do.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="PrintError_(boolean,_inherited)"
+><b>PrintError</b> (boolean, inherited)</a></h3>
+
+<p>Forces database errors to also generate warnings, which can then be filtered with methods such as locally redefining <i>$SIG{__WARN__}</i> or using modules such as <code>CGI::Carp</code>. This attribute is on by default.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="ShowErrorStatement_(boolean,_inherited)"
+><b>ShowErrorStatement</b> (boolean, inherited)</a></h3>
+
+<p>Appends information about the current statement to error messages. If placeholder information is available, adds that as well. Defaults to false.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Warn_(boolean,_inherited)"
+><b>Warn</b> (boolean, inherited)</a></h3>
+
+<p>Enables warnings. This is on by default, and should only be turned off in a local block for a short a time only when absolutely needed.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Executed_(boolean,_read-only)"
+><b>Executed</b> (boolean, read-only)</a></h3>
+
+<p>Indicates if a handle has been executed. For database handles, this value is true after the <a href="#do" class="podlinkpod"
+>&#34;do&#34;</a> method has been called, or when one of the child statement handles has issued an <a href="#execute" class="podlinkpod"
+>&#34;execute&#34;</a>. Issuing a <a href="#commit" class="podlinkpod"
+>&#34;commit&#34;</a> or <a href="#rollback" class="podlinkpod"
+>&#34;rollback&#34;</a> always resets the attribute to false for database handles. For statement handles, any call to <a href="#execute" class="podlinkpod"
+>&#34;execute&#34;</a> or its variants will flip the value to true for the lifetime of the statement handle.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="TraceLevel_(integer,_inherited)"
+><b>TraceLevel</b> (integer, inherited)</a></h3>
+
+<p>Sets the trace level, similar to the <a href="#trace" class="podlinkpod"
+>&#34;trace&#34;</a> method. See the sections on <a href="#trace" class="podlinkpod"
+>&#34;trace&#34;</a> and <a href="#parse_trace_flag" class="podlinkpod"
+>&#34;parse_trace_flag&#34;</a> for more details.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Active_(boolean,_read-only)"
+><b>Active</b> (boolean, read-only)</a></h3>
+
+<p>Indicates if a handle is active or not. For database handles, this indicates if the database has been disconnected or not. For statement handles, it indicates if all the data has been fetched yet or not. Use of this attribute is not encouraged.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Kids_(integer,_read-only)"
+><b>Kids</b> (integer, read-only)</a></h3>
+
+<p>Returns the number of child processes created for each handle type. For a driver handle, indicates the number of database handles created. For a database handle, indicates the number of statement handles created. For statement handles, it always returns zero, because statement handles do not create kids.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="ActiveKids_(integer,_read-only)"
+><b>ActiveKids</b> (integer, read-only)</a></h3>
+
+<p>Same as <code>Kids</code>, but only returns those that are active.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="CachedKids_(hash_ref)"
+><b>CachedKids</b> (hash ref)</a></h3>
+
+<p>Returns a hashref of handles. If called on a database handle, returns all statement handles created by use of the <code>prepare_cached</code> method. If called on a driver handle, returns all database handles created by the <a href="#connect_cached" class="podlinkpod"
+>&#34;connect_cached&#34;</a> method.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="ChildHandles_(array_ref)"
+><b>ChildHandles</b> (array ref)</a></h3>
+
+<p>Implemented by DBI, no driver-specific impact.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="PrintWarn_(boolean,_inherited)"
+><b>PrintWarn</b> (boolean, inherited)</a></h3>
+
+<p>Implemented by DBI, no driver-specific impact.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="HandleError_(boolean,_inherited)"
+><b>HandleError</b> (boolean, inherited)</a></h3>
+
+<p>Implemented by DBI, no driver-specific impact.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="HandleSetErr_(code_ref,_inherited)"
+><b>HandleSetErr</b> (code ref, inherited)</a></h3>
+
+<p>Implemented by DBI, no driver-specific impact.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="ErrCount_(unsigned_integer)"
+><b>ErrCount</b> (unsigned integer)</a></h3>
+
+<p>Implemented by DBI, no driver-specific impact.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="FetchHashKeyName_(string,_inherited)"
+><b>FetchHashKeyName</b> (string, inherited)</a></h3>
+
+<p>Implemented by DBI, no driver-specific impact.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="ChopBlanks_(boolean,_inherited)"
+><b>ChopBlanks</b> (boolean, inherited)</a></h3>
+
+<p>Supported by DBD::Pg as proposed by DBI. This method is similar to the SQL function <code>RTRIM</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Taint_(boolean,_inherited)"
+><b>Taint</b> (boolean, inherited)</a></h3>
+
+<p>Implemented by DBI, no driver-specific impact.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="TaintIn_(boolean,_inherited)"
+><b>TaintIn</b> (boolean, inherited)</a></h3>
+
+<p>Implemented by DBI, no driver-specific impact.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="TaintOut_(boolean,_inherited)"
+><b>TaintOut</b> (boolean, inherited)</a></h3>
+
+<p>Implemented by DBI, no driver-specific impact.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Profile_(inherited)"
+><b>Profile</b> (inherited)</a></h3>
+
+<p>Implemented by DBI, no driver-specific impact.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Type_(scalar)"
+><b>Type</b> (scalar)</a></h3>
+
+<p>Returns <code>dr</code> for a driver handle, <code>db</code> for a database handle, and <code>st</code> for a statement handle. Should be rarely needed.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="LongReadLen"
+><b>LongReadLen</b></a></h3>
+
+<p>Not used by DBD::Pg</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="LongTruncOk"
+><b>LongTruncOk</b></a></h3>
+
+<p>Not used by DBD::Pg</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="CompatMode"
+><b>CompatMode</b></a></h3>
+
+<p>Not used by DBD::Pg</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DBI_DATABASE_HANDLE_OBJECTS"
+>DBI DATABASE HANDLE OBJECTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Database_Handle_Methods"
+>Database Handle Methods</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="selectall_arrayref"
+><b>selectall_arrayref</b></a></h3>
+
+<pre class="sh_perl">  $ary_ref = $dbh-&#62;selectall_arrayref($sql);
+  $ary_ref = $dbh-&#62;selectall_arrayref($sql, \%attr);
+  $ary_ref = $dbh-&#62;selectall_arrayref($sql, \%attr, @bind_values);</pre>
+
+<p>Returns a reference to an array containing the rows returned by preparing and executing the SQL string. See the DBI documentation for full details.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="selectall_hashref"
+><b>selectall_hashref</b></a></h3>
+
+<pre class="sh_perl">  $hash_ref = $dbh-&#62;selectall_hashref($sql, $key_field);</pre>
+
+<p>Returns a reference to a hash containing the rows returned by preparing and executing the SQL string. See the DBI documentation for full details.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="selectcol_arrayref"
+><b>selectcol_arrayref</b></a></h3>
+
+<pre class="sh_perl">  $ary_ref = $dbh-&#62;selectcol_arrayref($sql, \%attr, @bind_values);</pre>
+
+<p>Returns a reference to an array containing the first column from each rows returned by preparing and executing the SQL string. It is possible to specify exactly which columns to return. See the DBI documentation for full details.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="prepare"
+><b>prepare</b></a></h3>
+
+<pre class="sh_perl">  $sth = $dbh-&#62;prepare($statement, \%attr);</pre>
+
+<p>WARNING: DBD::Pg now (as of version 1.40) uses true prepared statements by sending them to the backend to be prepared by the Postgres server. Statements that were legal before may no longer work. See below for details.</p>
+
+<p>The prepare method prepares a statement for later execution. PostgreSQL supports prepared statements, which enables DBD::Pg to only send the query once, and simply send the arguments for every subsequent call to <a href="#execute" class="podlinkpod"
+>&#34;execute&#34;</a>. DBD::Pg can use these server-side prepared statements, or it can just send the entire query to the server each time. The best way is automatically chosen for each query. This will be sufficient for most users: keep reading for a more detailed explanation and some optional flags.</p>
+
+<p>Queries that do not begin with the word &#34;SELECT&#34;, &#34;INSERT&#34;, &#34;UPDATE&#34;, or &#34;DELETE&#34; are never sent as server-side prepared statements.</p>
+
+<p>Deciding whether or not to use prepared statements depends on many factors, but you can force them to be used or not used by using the <a href="#pg_server_prepare" class="podlinkpod"
+>&#34;pg_server_prepare&#34;</a> attribute when calling <a href="#prepare" class="podlinkpod"
+>&#34;prepare&#34;</a>. Setting this to &#34;0&#34; means to never use prepared statements. Setting <a href="#pg_server_prepare" class="podlinkpod"
+>&#34;pg_server_prepare&#34;</a> to &#34;1&#34; means that prepared statements should be used whenever possible. This is the default when connected to Postgres servers version 8.0 or higher. Servers that are version 7.4 get a special default value of &#34;2&#34;, because server-side statements were only partially supported in that version. In this case, it only uses server-side prepares if all parameters are specifically bound.</p>
+
+<p>The <a href="#pg_server_prepare" class="podlinkpod"
+>&#34;pg_server_prepare&#34;</a> attribute can also be set at connection time like so:</p>
+
+<pre class="sh_perl">  $dbh = DBI-&#62;connect($DBNAME, $DBUSER, $DBPASS,
+                      { AutoCommit =&#62; 0,
+                        RaiseError =&#62; 1,
+                        pg_server_prepare =&#62; 0,
+                      });</pre>
+
+<p>or you may set it after your database handle is created:</p>
+
+<pre class="sh_perl">  $dbh-&#62;{pg_server_prepare} = 1;</pre>
+
+<p>To enable it for just one particular statement:</p>
+
+<pre class="sh_perl">  $sth = $dbh-&#62;prepare(&#34;SELECT id FROM mytable WHERE val = ?&#34;,
+                       { pg_server_prepare =&#62; 1 });</pre>
+
+<p>You can even toggle between the two as you go:</p>
+
+<pre class="sh_perl">  $sth-&#62;{pg_server_prepare} = 1;
+  $sth-&#62;execute(22);
+  $sth-&#62;{pg_server_prepare} = 0;
+  $sth-&#62;execute(44);
+  $sth-&#62;{pg_server_prepare} = 1;
+  $sth-&#62;execute(66);</pre>
+
+<p>In the above example, the first execute will use the previously prepared statement. The second execute will not, but will build the query into a single string and send it to the server. The third one will act like the first and only send the arguments. Even if you toggle back and forth, a statement is only prepared once.</p>
+
+<p>Using prepared statements is in theory quite a bit faster: not only does the PostgreSQL backend only have to prepare the query only once, but DBD::Pg no longer has to worry about quoting each value before sending it to the server.</p>
+
+<p>However, there are some drawbacks. The server cannot always choose the ideal parse plan because it will not know the arguments before hand. But for most situations in which you will be executing similar data many times, the default plan will probably work out well. Programs such as PgBouncer which cache connections at a low level should not use prepared statements via DBD::Pg, or must take extra care in the application to account for the fact that prepared statements are not shared across database connections. Further discussion on this subject is beyond the scope of this documentation: please consult the pgsql-performance mailing list, <a href="http://archives.postgresql.org/pgsql-performance/" class="podlinkurl"
+>http://archives.postgresql.org/pgsql-performance/</a></p>
+
+<p>Only certain commands will be sent to a server-side prepare: currently these include <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, and <code>DELETE</code>. DBD::Pg uses a simple naming scheme for the prepared statements themselves: <b>dbdpg_XY_Z</b>, where <b>Y</b> is the current PID, <b>X</b> is either &#39;p&#39; or &#39;n&#39; (depending on if the PID is a positive or negative number), and <b>Z</b> is a number that starts at 1 and increases each time a new statement is prepared. This number is tracked at the database handle level, so multiple statement handles will not collide.</p>
+
+<p>You cannot send more than one command at a time in the same prepare command (by separating them with semi-colons) when using server-side prepares.</p>
+
+<p>The actual <code>PREPARE</code> is usually not performed until the first execute is called, due to the fact that information on the data types (provided by <a href="#bind_param" class="podlinkpod"
+>&#34;bind_param&#34;</a>) may be provided after the prepare but before the execute.</p>
+
+<p>A server-side prepare may happen before the first <a href="#execute" class="podlinkpod"
+>&#34;execute&#34;</a>, but only if the server can handle the server-side prepare, and the statement contains no placeholders. It will also be prepared if the <a href="#pg_prepare_now" class="podlinkpod"
+>&#34;pg_prepare_now&#34;</a> attribute is passed in and set to a true value. Similarly, the <a href="#pg_prepare_now" class="podlinkpod"
+>&#34;pg_prepare_now&#34;</a> attribute can be set to 0 to ensure that the statement is <b>not</b> prepared immediately, although the cases in which you would want this are very rare. Finally, you can set the default behavior of all prepare statements by setting the <a href="#pg_prepare_now" class="podlinkpod"
+>&#34;pg_prepare_now&#34;</a> attribute on the database handle:</p>
+
+<pre class="sh_perl">  $dbh-&#62;{pg_prepare_now} = 1;</pre>
+
+<p>The following two examples will be prepared right away:</p>
+
+<pre class="sh_perl">  $sth-&#62;prepare(&#34;SELECT 123&#34;); ## no placeholders
+
+  $sth-&#62;prepare(&#34;SELECT 123, ?&#34;, {pg_prepare_now =&#62; 1});</pre>
+
+<p>The following two examples will NOT be prepared right away:</p>
+
+<pre class="sh_perl">  $sth-&#62;prepare(&#34;SELECT 123, ?&#34;); ## has a placeholder
+
+  $sth-&#62;prepare(&#34;SELECT 123&#34;, {pg_prepare_now =&#62; 0});</pre>
+
+<p>There are times when you may want to prepare a statement yourself. To do this, simply send the <code>PREPARE</code> statement directly to the server (e.g. with the <a href="#do" class="podlinkpod"
+>&#34;do&#34;</a> method). Create a statement handle and set the prepared name via the <a href="#pg_prepare_name" class="podlinkpod"
+>&#34;pg_prepare_name&#34;</a> attribute. The statement handle can be created with a dummy statement, as it will not be executed. However, it should have the same number of placeholders as your prepared statement. Example:</p>
+
+<pre class="sh_perl">  $dbh-&#62;do(&#39;PREPARE mystat AS SELECT COUNT(*) FROM pg_class WHERE reltuples &#60; ?&#39;);
+  $sth = $dbh-&#62;prepare(&#39;SELECT ?&#39;);
+  $sth-&#62;bind_param(1, 1, SQL_INTEGER);
+  $sth-&#62;{pg_prepare_name} = &#39;mystat&#39;;
+  $sth-&#62;execute(123);</pre>
+
+<p>The above will run the equivalent of this query on the backend:</p>
+
+<pre class="sh_perl">  EXECUTE mystat(123);</pre>
+
+<p>which is the equivalent of:</p>
+
+<pre class="sh_perl">  SELECT COUNT(*) FROM pg_class WHERE reltuples &#60; 123;</pre>
+
+<p>You can force DBD::Pg to send your query directly to the server by adding the <a href="#pg_direct" class="podlinkpod"
+>&#34;pg_direct&#34;</a> attribute to your prepare call. This is not recommended, but is added just in case you need it.</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name="Placeholders"
+><b>Placeholders</b></a></h4>
+
+<p>There are three types of placeholders that can be used in DBD::Pg. The first is the &#34;question mark&#34; type, in which each placeholder is represented by a single question mark character. This is the method recommended by the DBI specs and is the most portable. Each question mark is internally replaced by a &#34;dollar sign number&#34; in the order in which they appear in the query (important when using <a href="#bind_param" class="podlinkpod"
+>&#34;bind_param&#34;</a>).</p>
+
+<p>The method second type of placeholder is &#34;dollar sign numbers&#34;. This is the method that Postgres uses internally and is overall probably the best method to use if you do not need compatibility with other database systems. DBD::Pg, like PostgreSQL, allows the same number to be used more than once in the query. Numbers must start with &#34;1&#34; and increment by one value (but can appear in any order within the query). If the same number appears more than once in a query, it is treated as a single parameter and all instances are replaced at once. Examples:</p>
+
+<p>Not legal:</p>
+
+<pre class="sh_perl">  $SQL = &#39;SELECT count(*) FROM pg_class WHERE relpages &#62; $2&#39;; # Does not start with 1
+
+  $SQL = &#39;SELECT count(*) FROM pg_class WHERE relpages BETWEEN $1 AND $3&#39;; # Missing 2</pre>
+
+<p>Legal:</p>
+
+<pre class="sh_perl">  $SQL = &#39;SELECT count(*) FROM pg_class WHERE relpages &#62; $1&#39;;
+
+  $SQL = &#39;SELECT count(*) FROM pg_class WHERE relpages BETWEEN $1 AND $2&#39;;
+
+  $SQL = &#39;SELECT count(*) FROM pg_class WHERE relpages BETWEEN $2 AND $1&#39;; # legal but confusing
+
+  $SQL = &#39;SELECT count(*) FROM pg_class WHERE relpages BETWEEN $1 AND $2 AND reltuples &#62; $1&#39;;
+
+  $SQL = &#39;SELECT count(*) FROM pg_class WHERE relpages &#62; $1 AND reltuples &#62; $1&#39;;</pre>
+
+<p>In the final statement above, DBI thinks there is only one placeholder, so this statement will replace both placeholders:</p>
+
+<pre class="sh_perl">  $sth-&#62;bind_param(1, 2045);</pre>
+
+<p>While a simple execute with no bind_param calls requires only a single argument as well:</p>
+
+<pre class="sh_perl">  $sth-&#62;execute(2045);</pre>
+
+<p>The final placeholder type is &#34;named parameters&#34; in the format &#34;:foo&#34;. While this syntax is supported by DBD::Pg, its use is discouraged in favor of dollar-sign numbers.</p>
+
+<p>The different types of placeholders cannot be mixed within a statement, but you may use different ones for each statement handle you have. This is confusing at best, so stick to one style within your program.</p>
+
+<p>If your queries use operators that contain question marks (e.g. some of the native Postgres geometric operators) or array slices (e.g. <code>data[100:300]</code>), you can tell DBD::Pg to ignore any non-dollar sign placeholders by setting the <a href="#pg_placeholder_dollaronly" class="podlinkpod"
+>&#34;pg_placeholder_dollaronly&#34;</a> attribute at either the database handle or the statement handle level. Examples:</p>
+
+<pre class="sh_perl">  $dbh-&#62;{pg_placeholder_dollaronly} = 1;
+  $sth = $dbh-&#62;prepare(q{SELECT * FROM mytable WHERE lseg1 ?# lseg2 AND name = $1});
+  $sth-&#62;execute(&#39;segname&#39;);</pre>
+
+<p>Alternatively, you can set it at prepare time:</p>
+
+<pre class="sh_perl">  $sth = $dbh-&#62;prepare(q{SELECT * FROM mytable WHERE lseg1 ?-| lseg2 AND name = $1},
+    {pg_placeholder_dollaronly = 1});
+  $sth-&#62;execute(&#39;segname&#39;);</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="prepare_cached"
+><b>prepare_cached</b></a></h3>
+
+<pre class="sh_perl">  $sth = $dbh-&#62;prepare_cached($statement, \%attr);</pre>
+
+<p>Implemented by DBI, no driver-specific impact. This method is most useful when using a server that supports server-side prepares, and you have asked the prepare to happen immediately via the <a href="#pg_prepare_now" class="podlinkpod"
+>&#34;pg_prepare_now&#34;</a> attribute.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="do"
+><b>do</b></a></h3>
+
+<pre class="sh_perl">  $rv = $dbh-&#62;do($statement);
+  $rv = $dbh-&#62;do($statement, \%attr);
+  $rv = $dbh-&#62;do($statement, \%attr, @bind_values);</pre>
+
+<p>Prepare and execute a single statement. Returns the number of rows affected if the query was successful, returns undef if an error occurred, and returns -1 if the number of rows is unknown or not available. Note that this method will return <b>0E0</b> instead of 0 for &#39;no rows were affected&#39;, in order to always return a true value if no error occurred.</p>
+
+<p>If neither <code>\%attr</code> nor <code>@bind_values</code> is given, the query will be sent directly to the server without the overhead of internally creating a statement handle and running prepare and execute, for a measurable speed increase.</p>
+
+<p>Note that an empty statement (a string with no length) will not be passed to the server; if you want a simple test, use &#34;SELECT 123&#34; or the <a href="#ping" class="podlinkpod"
+>&#34;ping&#34;</a> method.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="last_insert_id"
+><b>last_insert_id</b></a></h3>
+
+<pre class="sh_perl">  $rv = $dbh-&#62;last_insert_id(undef, $schema, $table, undef);
+  $rv = $dbh-&#62;last_insert_id(undef, $schema, $table, undef, {sequence =&#62; $seqname});</pre>
+
+<p>Attempts to return the id of the last value to be inserted into a table. You can either provide a sequence name (preferred) or provide a table name with optional schema, and DBD::Pg will attempt to find the sequence itself. The current value of the sequence is returned by a call to the <code>CURRVAL()</code> PostgreSQL function. This will fail if the sequence has not yet been used in the current database connection.</p>
+
+<p>If you do not know the name of the sequence, you can provide a table name and DBD::Pg will attempt to return the correct value. To do this, there must be at least one column in the table with a <code>NOT NULL</code> constraint, that has a unique constraint, and which uses a sequence as a default value. If more than one column meets these conditions, the primary key will be used. This involves some looking up of things in the system table, so DBD::Pg will cache the sequence name for subsequent calls. If you need to disable this caching for some reason, (such as the sequence name changing), you can control it by adding <code>pg_cache =&#62; 0</code> to the final (hashref) argument for last_insert_id.</p>
+
+<p>Please keep in mind that this method is far from foolproof, so make your script use it properly. Specifically, make sure that it is called immediately after the insert, and that the insert does not add a value to the column that is using the sequence as a default value. However, because we are using sequences, you can be sure that the value you got back has not been used by any other process.</p>
+
+<p>Some examples:</p>
+
+<pre class="sh_perl">  $dbh-&#62;do(&#39;CREATE SEQUENCE lii_seq START 1&#39;);
+  $dbh-&#62;do(q{CREATE TABLE lii (
+    foobar INTEGER NOT NULL UNIQUE DEFAULT nextval(&#39;lii_seq&#39;),
+    baz VARCHAR)});
+  $SQL = &#39;INSERT INTO lii(baz) VALUES (?)&#39;;
+  $sth = $dbh-&#62;prepare($SQL);
+  for (qw(uno dos tres cuatro)) {
+    $sth-&#62;execute($_);
+    my $newid = $dbh-&#62;last_insert_id(undef,undef,undef,undef,{sequence=&#62;&#39;lii_seq&#39;});
+    print &#34;Last insert id was $newid\n&#34;;
+  }</pre>
+
+<p>If you did not want to worry about the sequence name:</p>
+
+<pre class="sh_perl">  $dbh-&#62;do(&#39;CREATE TABLE lii2 (
+    foobar SERIAL UNIQUE,
+    baz VARCHAR)&#39;);
+  $SQL = &#39;INSERT INTO lii2(baz) VALUES (?)&#39;;
+  $sth = $dbh-&#62;prepare($SQL);
+  for (qw(uno dos tres cuatro)) {
+    $sth-&#62;execute($_);
+    my $newid = $dbh-&#62;last_insert_id(undef,undef,&#34;lii2&#34;,undef);
+    print &#34;Last insert id was $newid\n&#34;;
+  }</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="commit"
+><b>commit</b></a></h3>
+
+<pre class="sh_perl">  $rv = $dbh-&#62;commit;</pre>
+
+<p>Issues a COMMIT to the server, indicating that the current transaction is finished and that all changes made will be visible to other processes. If AutoCommit is enabled, then a warning is given and no COMMIT is issued. Returns true on success, false on error. See also the the section on <a href="#Transactions" class="podlinkpod"
+>&#34;Transactions&#34;</a>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="rollback"
+><b>rollback</b></a></h3>
+
+<pre class="sh_perl">  $rv = $dbh-&#62;rollback;</pre>
+
+<p>Issues a ROLLBACK to the server, which discards any changes made in the current transaction. If AutoCommit is enabled, then a warning is given and no ROLLBACK is issued. Returns true on success, and false on error. See also the the section on <a href="#Transactions" class="podlinkpod"
+>&#34;Transactions&#34;</a>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="begin_work"
+><b>begin_work</b></a></h3>
+
+<p>This method turns on transactions until the next call to <a href="#commit" class="podlinkpod"
+>&#34;commit&#34;</a> or <a href="#rollback" class="podlinkpod"
+>&#34;rollback&#34;</a>, if <a href="#AutoCommit" class="podlinkpod"
+>&#34;AutoCommit&#34;</a> is currently enabled. If it is not enabled, calling begin_work will issue an error. Note that the transaction will not actually begin until the first statement after begin_work is called. Example:</p>
+
+<pre class="sh_perl">  $dbh-&#62;{AutoCommit} = 1;
+  $dbh-&#62;do(&#39;INSERT INTO foo VALUES (123)&#39;); ## Changes committed immediately
+  $dbh-&#62;begin_work();
+  ## Not in a transaction yet, but AutoCommit is set to 0
+
+  $dbh-&#62;do(&#34;INSERT INTO foo VALUES (345)&#34;);
+  ## DBD::PG actually issues two statements here:
+  ## BEGIN;
+  ## INSERT INTO foo VALUES (345)
+  ## We are now in a transaction
+
+  $dbh-&#62;commit();
+  ## AutoCommit is now set to 1 again</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="disconnect"
+><b>disconnect</b></a></h3>
+
+<pre class="sh_perl">  $rv = $dbh-&#62;disconnect;</pre>
+
+<p>Disconnects from the Postgres database. Any uncommitted changes will be rolled back upon disconnection. It&#39;s good policy to always explicitly call commit or rollback at some point before disconnecting, rather than relying on the default rollback behavior.</p>
+
+<p>This method may give warnings about &#34;disconnect invalidates X active statement handle(s)&#34;. This means that you called <code>$sth-&#62;execute()</code> but did not finish fetching all the rows from them. To avoid seeing this warning, either fetch all the rows or call <code>$sth-&#62;finish()</code> for each executed statement handle.</p>
+
+<p>If the script exits before disconnect is called (or, more precisely, if the database handle is no longer referenced by anything), then the database handle&#39;s DESTROY method will call the rollback() and disconnect() methods automatically. It is best to explicitly disconnect rather than rely on this behavior.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="quote"
+><b>quote</b></a></h3>
+
+<pre class="sh_perl">  $rv = $dbh-&#62;quote($value, $data_type);</pre>
+
+<p>This module implements its own <code>quote</code> method. For simple string types, both backslashes and single quotes are doubled. You may also quote arrayrefs and receive a string suitable for passing into Postgres array columns.</p>
+
+<p>If the value contains backslashes, and the server is version 8.1 or higher, then the escaped string syntax will be used (which places a capital E before the first single quote). This syntax is always used when quoting bytea values on servers 8.1 and higher.</p>
+
+<p>The <code>data_type</code> argument is optional and should be one of the type constants exported by DBD::Pg (such as PG_BYTEA). In addition to string, bytea, char, bool, and other standard types, the following geometric types are supported: point, line, lseg, box, path, polygon, and circle (PG_POINT, PG_LINE, PG_LSEG, PG_BOX, PG_PATH, PG_POLYGON, and PG_CIRCLE respectively). To quote a Postgres-specific data type, you must use a &#39;hashref&#39; argument like so:</p>
+
+<pre class="sh_perl">  my $quotedval = $dbh-&#62;quote($value, { pg_type =&#62; PG_VARCHAR });</pre>
+
+<p><b>NOTE:</b> The undocumented (and invalid) support for the <code>SQL_BINARY</code> data type is officially deprecated. Use <code>PG_BYTEA</code> with <code>bind_param()</code> instead:</p>
+
+<pre class="sh_perl">  $rv = $sth-&#62;bind_param($param_num, $bind_value,
+                         { pg_type =&#62; PG_BYTEA });</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="quote_identifier"
+><b>quote_identifier</b></a></h3>
+
+<pre class="sh_perl">  $string = $dbh-&#62;quote_identifier( $name );
+  $string = $dbh-&#62;quote_identifier( undef, $schema, $table);</pre>
+
+<p>Returns a quoted version of the supplied string, which is commonly a schema, table, or column name. The three argument form will return the schema and the table together, separated by a dot. Examples:</p>
+
+<pre class="sh_perl">  print $dbh-&#62;quote_identifier(&#39;grapefruit&#39;); ## Prints: &#34;grapefruit&#34;
+
+  print $dbh-&#62;quote_identifier(&#39;juicy fruit&#39;); ## Prints: &#34;juicy fruit&#34;
+
+  print $dbh-&#62;quote_identifier(undef, &#39;public&#39;, &#39;pg_proc&#39;);
+  ## Prints: &#34;public&#34;.&#34;pg_proc&#34;</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_notifies"
+><b>pg_notifies</b></a></h3>
+
+<pre class="sh_perl">  $ret = $dbh-&#62;pg_notifies;</pre>
+
+<p>Looks for any asynchronous notifications received and returns either <code>undef</code> or a reference to a three-element array consisting of an event name, the PID of the backend that sent the NOTIFY command, and the optional payload string. Note that this does not check if the connection to the database is still valid first - for that, use the c&#60;ping&#62; method. You may need to commit if not in autocommit mode - new notices will not be picked up while in the middle of a transaction. An example:</p>
+
+<pre class="sh_perl">  $dbh-&#62;do(&#34;LISTEN abc&#34;);
+  $dbh-&#62;do(&#34;LISTEN def&#34;);
+
+  ## Hang around until we get the message we want
+  LISTENLOOP: {
+    while (my $notify = $dbh-&#62;pg_notifies) {
+      my ($name, $pid, $payload) = @$notify;
+      print qq{I received notice &#34;$name&#34; from PID $pid, payload was &#34;$payload&#34;\n};
+      ## Do something based on the notice received
+    }
+    $dbh-&#62;ping() or die qq{Ping failed!};
+    $dbh-&#62;commit();
+    sleep(5);
+    redo;
+  }</pre>
+
+<p>Payloads will always be an empty string unless you are connecting to a Postgres server version 9.0 or higher.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="ping"
+><b>ping</b></a></h3>
+
+<pre class="sh_perl">  $rv = $dbh-&#62;ping;</pre>
+
+<p>This <code>ping</code> method is used to check the validity of a database handle. The value returned is either 0, indicating that the connection is no longer valid, or a positive integer, indicating the following:</p>
+
+<pre class="sh_perl">  Value    Meaning
+  --------------------------------------------------
+    1      Database is idle (not in a transaction)
+    2      Database is active, there is a command in progress (usually seen after a COPY command)
+    3      Database is idle within a transaction
+    4      Database is idle, within a failed transaction</pre>
+
+<p>Additional information on why a handle is not valid can be obtained by using the <a href="#pg_ping" class="podlinkpod"
+>&#34;pg_ping&#34;</a> method.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_ping"
+><b>pg_ping</b></a></h3>
+
+<pre class="sh_perl">  $rv = $dbh-&#62;pg_ping;</pre>
+
+<p>This is a DBD::Pg-specific extension to the <a href="#ping" class="podlinkpod"
+>&#34;ping&#34;</a> method. This will check the validity of a database handle in exactly the same way as <code>ping</code>, but instead of returning a 0 for an invalid connection, it will return a negative number. So in addition to returning the positive numbers documented for <code>ping</code>, it may also return the following:</p>
+
+<pre class="sh_perl">  Value    Meaning
+  --------------------------------------------------
+   -1      There is no connection to the database at all (e.g. after disconnect)
+   -2      An unknown transaction status was returned (e.g. after forking)
+   -3      The handle exists, but no data was returned from a test query.</pre>
+
+<p>In practice, you should only ever see -1 and -2.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="get_info"
+><b>get_info</b></a></h3>
+
+<pre class="sh_perl">  $value = $dbh-&#62;get_info($info_type);</pre>
+
+<p>Supports a very large set (&#62; 250) of the information types, including the minimum recommended by DBI.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="table_info"
+><b>table_info</b></a></h3>
+
+<pre class="sh_perl">  $sth = $dbh-&#62;table_info(undef, $schema, $table, $type);</pre>
+
+<p>Returns all tables and views visible to the current user. The schema and table arguments will do a <code>LIKE</code> search if a percent sign (<code>%</code>) or an underscore (<code>_</code>) is detected in the argument. The <code>$type</code> argument accepts a value of either &#34;TABLE&#34; or &#34;VIEW&#34; (using both is the default action). Note that a statement handle is returned, and not a direct list of tables. See the examples below for ways to handle this.</p>
+
+<p>The following fields are returned:</p>
+
+<p><b>TABLE_CAT</b>: Always NULL, as Postgres does not have the concept of catalogs.</p>
+
+<p><b>TABLE_SCHEM</b>: The name of the schema that the table or view is in.</p>
+
+<p><b>TABLE_NAME</b>: The name of the table or view.</p>
+
+<p><b>TABLE_TYPE</b>: The type of object returned. Will be one of &#34;TABLE&#34;, &#34;VIEW&#34;, or &#34;SYSTEM TABLE&#34;.</p>
+
+<p>The TABLE_SCHEM and TABLE_NAME will be quoted via <code>quote_ident()</code>.</p>
+
+<p>Two additional fields specific to DBD::Pg are returned:</p>
+
+<p><b>pg_schema</b>: the unquoted name of the schema</p>
+
+<p><b>pg_table</b>: the unquoted name of the table</p>
+
+<p>If your database supports tablespaces (version 8.0 or greater), two additional DBD::Pg specific fields are returned:</p>
+
+<p><b>pg_tablespace_name</b>: the name of the tablespace the table is in</p>
+
+<p><b>pg_tablespace_location</b>: the location of the tablespace the table is in</p>
+
+<p>Tables that have not been assigned to a particular tablespace (or views) will return NULL (<code>undef</code>) for both of the above field.</p>
+
+<p>Rows are returned alphabetically, with all tables first, and then all views.</p>
+
+<p>Examples of use:</p>
+
+<pre class="sh_perl">  ## Display all tables and views in the public schema:
+  $sth = $dbh-&#62;table_info(&#39;&#39;, &#39;public&#39;, undef, undef);
+  for my $rel (@{$sth-&#62;fetchall_arrayref({})}) {
+    print &#34;$rel-&#62;{TABLE_TYPE} name is $rel-&#62;{TABLE_NAME}\n&#34;;
+  }
+
+
+  # Display the schema of all tables named &#39;foo&#39;:
+  $sth = $dbh-&#62;table_info(&#39;&#39;, undef, &#39;foo&#39;, &#39;TABLE&#39;);
+  for my $rel (@{$sth-&#62;fetchall_arrayref({})}) {
+    print &#34;Table name is $rel-&#62;{TABLE_SCHEM}.$rel-&#62;{TABLE_NAME}\n&#34;;
+  }</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="column_info"
+><b>column_info</b></a></h3>
+
+<pre class="sh_perl">  $sth = $dbh-&#62;column_info( undef, $schema, $table, $column );</pre>
+
+<p>Supported by this driver as proposed by DBI with the follow exceptions. These fields are currently always returned with NULL (<code>undef</code>) values:</p>
+
+<pre class="sh_perl">   TABLE_CAT
+   BUFFER_LENGTH
+   DECIMAL_DIGITS
+   NUM_PREC_RADIX
+   SQL_DATA_TYPE
+   SQL_DATETIME_SUB
+   CHAR_OCTET_LENGTH</pre>
+
+<p>Also, six additional non-standard fields are returned:</p>
+
+<p><b>pg_type</b>: data type with additional info i.e. &#34;character varying(20)&#34;</p>
+
+<p><b>pg_constraint</b>: holds column constraint definition</p>
+
+<p><b>pg_schema</b>: the unquoted name of the schema</p>
+
+<p><b>pg_table</b>: the unquoted name of the table</p>
+
+<p><b>pg_column</b>: the unquoted name of the column</p>
+
+<p><b>pg_enum_values</b>: an array reference of allowed values for an enum column</p>
+
+<p>Note that the TABLE_SCHEM, TABLE_NAME, and COLUMN_NAME fields all return output wrapped in quote_ident(). If you need the unquoted version, use the pg_ fields above.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="primary_key_info"
+><b>primary_key_info</b></a></h3>
+
+<pre class="sh_perl">  $sth = $dbh-&#62;primary_key_info( undef, $schema, $table, \%attr );</pre>
+
+<p>Supported by this driver as proposed by DBI. There are no search patterns allowed, but leaving the $schema argument blank will cause the first table found in the schema search path to be used. An additional field, &#34;DATA_TYPE&#34;, is returned and shows the data type for each of the arguments in the &#34;COLUMN_NAME&#34; field.</p>
+
+<p>This method will also return tablespace information for servers that support tablespaces. See the <a href="#table_info" class="podlinkpod"
+>&#34;table_info&#34;</a> entry for more information.</p>
+
+<p>The five additional custom fields returned are:</p>
+
+<p><b>pg_tablespace_name</b>: name of the tablespace, if any</p>
+
+<p><b>pg_tablespace_location</b>: location of the tablespace</p>
+
+<p><b>pg_schema</b>: the unquoted name of the schema</p>
+
+<p><b>pg_table</b>: the unquoted name of the table</p>
+
+<p><b>pg_column</b>: the unquoted name of the column</p>
+
+<p>In addition to the standard format of returning one row for each column found for the primary key, you can pass the <code>pg_onerow</code> attribute to force a single row to be used. If the primary key has multiple columns, the &#34;KEY_SEQ&#34;, &#34;COLUMN_NAME&#34;, and &#34;DATA_TYPE&#34; fields will return a comma-delimited string. If the <code>pg_onerow</code> attribute is set to &#34;2&#34;, the fields will be returned as an arrayref, which can be useful when multiple columns are involved:</p>
+
+<pre class="sh_perl">  $sth = $dbh-&#62;primary_key_info(&#39;&#39;, &#39;&#39;, &#39;dbd_pg_test&#39;, {pg_onerow =&#62; 2});
+  if (defined $sth) {
+    my $pk = $sth-&#62;fetchall_arrayref()-&#62;[0];
+    print &#34;Table $pk-&#62;[2] has a primary key on these columns:\n&#34;;
+    for (my $x=0; defined $pk-&#62;[3][$x]; $x++) {
+      print &#34;Column: $pk-&#62;[3][$x]  (data type: $pk-&#62;[6][$x])\n&#34;;
+    }
+  }</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="primary_key"
+><b>primary_key</b></a></h3>
+
+<pre class="sh_perl">  @key_column_names = $dbh-&#62;primary_key(undef, $schema, $table);</pre>
+
+<p>Simple interface to the <a href="#primary_key_info" class="podlinkpod"
+>&#34;primary_key_info&#34;</a> method. Returns a list of the column names that comprise the primary key of the specified table. The list is in primary key column sequence order. If there is no primary key then an empty list is returned.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="foreign_key_info"
+><b>foreign_key_info</b></a></h3>
+
+<pre class="sh_perl">  $sth = $dbh-&#62;foreign_key_info( $pk_catalog, $pk_schema, $pk_table,
+                                 $fk_catalog, $fk_schema, $fk_table );</pre>
+
+<p>Supported by this driver as proposed by DBI, using the SQL/CLI variant. There are no search patterns allowed, but leaving the <code>$schema</code> argument blank will cause the first table found in the schema search path to be used. Two additional fields, &#34;UK_DATA_TYPE&#34; and &#34;FK_DATA_TYPE&#34;, are returned to show the data type for the unique and foreign key columns. Foreign keys that have no named constraint (where the referenced column only has an unique index) will return <code>undef</code> for the &#34;UK_NAME&#34; field.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="statistics_info"
+><b>statistics_info</b></a></h3>
+
+<pre class="sh_perl">  $sth = $dbh-&#62;statistics_info( undef, $schema, $table, $unique_only, $quick );</pre>
+
+<p>Returns a statement handle that can be fetched from to give statistics information on a specific table and its indexes. The <code>$table</code> argument is mandatory. The <code>$schema</code> argument is optional but recommended. The <code>$unique_only</code> argument, if true, causes only information about unique indexes to be returned. The <code>$quick</code> argument is not used by DBD::Pg. For information on the format of the rows returned, please see the DBI documentation.</p>
+
+<a href="http://search.cpan.org/~timb/DBI/DBI.pm#statistics_info">DBI section on statistics_info</a>
+
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="tables"
+><b>tables</b></a></h3>
+
+<pre class="sh_perl">  @names = $dbh-&#62;tables( undef, $schema, $table, $type, \%attr );</pre>
+
+<p>Supported by this driver as proposed by DBI. This method returns all tables and/or views which are visible to the current user: see <a href="#table_info" class="podlinkpod"
+>&#34;table_info&#34;</a> for more information about the arguments. The name of the schema appears before the table or view name. This can be turned off by adding in the <code>pg_noprefix</code> attribute:</p>
+
+<pre class="sh_perl">  my @tables = $dbh-&#62;tables( &#39;&#39;, &#39;&#39;, &#39;dbd_pg_test&#39;, &#39;&#39;, {pg_noprefix =&#62; 1} );</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="type_info_all"
+><b>type_info_all</b></a></h3>
+
+<pre class="sh_perl">  $type_info_all = $dbh-&#62;type_info_all;</pre>
+
+<p>Supported by this driver as proposed by DBI. Information is only provided for SQL datatypes and for frequently used datatypes. The mapping between the PostgreSQL typename and the SQL92 datatype (if possible) has been done according to the following table:</p>
+
+<pre class="sh_perl">  +---------------+------------------------------------+
+  | typname       | SQL92                              |
+  |---------------+------------------------------------|
+  | bool          | BOOL                               |
+  | text          | /                                  |
+  | bpchar        | CHAR(n)                            |
+  | varchar       | VARCHAR(n)                         |
+  | int2          | SMALLINT                           |
+  | int4          | INT                                |
+  | int8          | /                                  |
+  | money         | /                                  |
+  | float4        | FLOAT(p)   p&#60;7=float4, p&#60;16=float8 |
+  | float8        | REAL                               |
+  | abstime       | /                                  |
+  | reltime       | /                                  |
+  | tinterval     | /                                  |
+  | date          | /                                  |
+  | time          | /                                  |
+  | datetime      | /                                  |
+  | timespan      | TINTERVAL                          |
+  | timestamp     | TIMESTAMP                          |
+  +---------------+------------------------------------+</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="type_info"
+><b>type_info</b></a></h3>
+
+<pre class="sh_perl">  @type_info = $dbh-&#62;type_info($data_type);</pre>
+
+<p>Returns a list of hash references holding information about one or more variants of $data_type. See the DBI documentation for more details.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_server_trace"
+><b>pg_server_trace</b></a></h3>
+
+<pre class="sh_perl">  $dbh-&#62;pg_server_trace($filehandle);</pre>
+
+<p>Writes debugging information from the PostgreSQL backend to a file. This is not related to the DBI <a href="#trace" class="podlinkpod"
+>&#34;trace&#34;</a> method and you should not use this method unless you know what you are doing. If you do enable this, be aware that the file will grow very large, very quick. To stop logging to the file, use the <a href="#pg_server_untrace" class="podlinkpod"
+>&#34;pg_server_untrace&#34;</a> method. The first argument must be a file handle, not a filename. Example:</p>
+
+<pre class="sh_perl">  my $pid = $dbh-&#62;{pg_pid};
+  my $file = &#34;pgbackend.$pid.debug.log&#34;;
+  open(my $fh, &#34;&#62;$file&#34;) or die qq{Could not open &#34;$file&#34;: $!\n};
+  $dbh-&#62;pg_server_trace($fh);
+  ## Run code you want to trace here
+  $dbh-&#62;pg_server_untrace;
+  close($fh);</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_server_untrace"
+><b>pg_server_untrace</b></a></h3>
+
+<pre class="sh_perl">  $dbh-&#62;pg_server_untrace;</pre>
+
+<p>Stop server logging to a previously opened file.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="selectrow_array"
+><b>selectrow_array</b></a></h3>
+
+<pre class="sh_perl">  @row_ary = $dbh-&#62;selectrow_array($sql);
+  @row_ary = $dbh-&#62;selectrow_array($sql, \%attr);
+  @row_ary = $dbh-&#62;selectrow_array($sql, \%attr, @bind_values);</pre>
+
+<p>Returns an array of row information after preparing and executing the provided SQL string. The rows are returned by calling <a href="#fetchrow_array" class="podlinkpod"
+>&#34;fetchrow_array&#34;</a>. The string can also be a statement handle generated by a previous prepare. Note that only the first row of data is returned. If called in a scalar context, only the first column of the first row is returned. Because this is not portable, it is not recommended that you use this method in that way.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="selectrow_arrayref"
+><b>selectrow_arrayref</b></a></h3>
+
+<pre class="sh_perl">  $ary_ref = $dbh-&#62;selectrow_arrayref($statement);
+  $ary_ref = $dbh-&#62;selectrow_arrayref($statement, \%attr);
+  $ary_ref = $dbh-&#62;selectrow_arrayref($statement, \%attr, @bind_values);</pre>
+
+<p>Exactly the same as <a href="#selectrow_array" class="podlinkpod"
+>&#34;selectrow_array&#34;</a>, except that it returns a reference to an array, by internal use of the <a href="#fetchrow_arrayref" class="podlinkpod"
+>&#34;fetchrow_arrayref&#34;</a> method.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="selectrow_hashref"
+><b>selectrow_hashref</b></a></h3>
+
+<pre class="sh_perl">  $hash_ref = $dbh-&#62;selectrow_hashref($sql);
+  $hash_ref = $dbh-&#62;selectrow_hashref($sql, \%attr);
+  $hash_ref = $dbh-&#62;selectrow_hashref($sql, \%attr, @bind_values);</pre>
+
+<p>Exactly the same as <a href="#selectrow_array" class="podlinkpod"
+>&#34;selectrow_array&#34;</a>, except that it returns a reference to an hash, by internal use of the <a href="#fetchrow_hashref" class="podlinkpod"
+>&#34;fetchrow_hashref&#34;</a> method.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="clone"
+><b>clone</b></a></h3>
+
+<pre class="sh_perl">  $other_dbh = $dbh-&#62;clone();</pre>
+
+<p>Creates a copy of the database handle by connecting with the same parameters as the original handle, then trying to merge the attributes. See the DBI documentation for complete usage.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Database_Handle_Attributes"
+>Database Handle Attributes</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="AutoCommit_(boolean)"
+><b>AutoCommit</b> (boolean)</a></h3>
+
+<p>Supported by DBD::Pg as proposed by DBI. According to the classification of DBI, PostgreSQL is a database in which a transaction must be explicitly started. Without starting a transaction, every change to the database becomes immediately permanent. The default of AutoCommit is on, but this may change in the future, so it is highly recommended that you explicitly set it when calling <a href="#connect" class="podlinkpod"
+>&#34;connect&#34;</a>. For details see the notes about <a href="#Transactions" class="podlinkpod"
+>&#34;Transactions&#34;</a> elsewhere in this document.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_bool_tf_(boolean)"
+><b>pg_bool_tf</b> (boolean)</a></h3>
+
+<p>DBD::Pg specific attribute. If true, boolean values will be returned as the characters &#39;t&#39; and &#39;f&#39; instead of &#39;1&#39; and &#39;0&#39;.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="ReadOnly_(boolean)"
+><b>ReadOnly</b> (boolean)</a></h3>
+
+<p>$dbh-&#62;{ReadOnly} = 1;</p>
+
+<p>Specifies if the current database connection should be in read-only mode or not. In this mode, changes that change the database are not allowed and will throw an error. Note: this method will <b>not</b> work if <a href="#AutoCommit" class="podlinkpod"
+>&#34;AutoCommit&#34;</a> is true. The read-only effect is accomplished by sending a SET&#160;TRANSACTION&#160;READ&#160;ONLY after every begin. For more details, please see:</p>
+
+<p><a href="http://www.postgresql.org/docs/current/interactive/sql-set-transaction.html" class="podlinkurl"
+>http://www.postgresql.org/docs/current/interactive/sql-set-transaction.html</a></p>
+
+<p>Please not that this method is not foolproof: there are still ways to update the database. Consider this a safety net to catch applications that should not be issuing commands such as INSERT, UPDATE, or DELETE.</p>
+
+<p>This method method requires DBI version 1.55 or better.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_server_prepare_(integer)"
+><b>pg_server_prepare</b> (integer)</a></h3>
+
+<p>DBD::Pg specific attribute. Indicates if DBD::Pg should attempt to use server-side prepared statements. The default value, 1, indicates that prepared statements should be used whenever possible. See the section on the <a href="#prepare" class="podlinkpod"
+>&#34;prepare&#34;</a> method for more information.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_placeholder_dollaronly_(boolean)"
+><b>pg_placeholder_dollaronly</b> (boolean)</a></h3>
+
+<p>DBD::Pg specific attribute. Defaults to false. When true, question marks inside of statements are not treated as <a href="#Placeholders" class="podlinkpod"
+>placeholders</a>. Useful for statements that contain unquoted question marks, such as geometric operators.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_enable_utf8_(boolean)"
+><b>pg_enable_utf8</b> (boolean)</a></h3>
+
+<p>DBD::Pg specific attribute. If true, then the <code>utf8</code> flag will be turned on for returned character data (if the data is valid UTF-8). For details about the <code>utf8</code> flag, see the <code>Encode</code> module. This attribute is only relevant under perl 5.8 and later.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_errorlevel_(integer)"
+><b>pg_errorlevel</b> (integer)</a></h3>
+
+<p>DBD::Pg specific attribute. Sets the amount of information returned by the server&#39;s error messages. Valid entries are 0, 1, and 2. Any other number will be forced to the default value of 1.</p>
+
+<p>A value of 0 (&#34;TERSE&#34;) will show severity, primary text, and position only and will usually fit on a single line. A value of 1 (&#34;DEFAULT&#34;) will also show any detail, hint, or context fields. A value of 2 (&#34;VERBOSE&#34;) will show all available information.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_lib_version_(integer,_read-only)"
+><b>pg_lib_version</b> (integer, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Indicates which version of PostgreSQL that DBD::Pg was compiled against. In other words, which libraries were used. Returns a number with major, minor, and revision together; version 8.1.4 would be returned as <code>80104</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_server_version_(integer,_read-only)"
+><b>pg_server_version</b> (integer, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Indicates which version of PostgreSQL that the current database handle is connected to. Returns a number with major, minor, and revision together; version 8.0.1 would be <code>80001</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Name_(string,_read-only)"
+><b>Name</b> (string, read-only)</a></h3>
+
+<p>Returns the name of the current database. This is the same as the DSN, without the &#34;dbi:Pg:&#34; part. Before version 2.0.0, this only returned the bare database name (e.g. &#39;foo&#39;). From version 2.0.0 onwards, it returns the more correct output (e.g. &#39;dbname=foo&#39;)</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Username_(string,_read-only)"
+><b>Username</b> (string, read-only)</a></h3>
+
+<p>Returns the name of the user connected to the database.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_db_(string,_read-only)"
+><b>pg_db</b> (string, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns the name of the current database.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_user_(string,_read-only)"
+><b>pg_user</b> (string, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns the name of the user that connected to the server.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_host_(string,_read-only)"
+><b>pg_host</b> (string, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns the host of the current server connection. Locally connected hosts will return an empty string.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_port_(integer,_read-only)"
+><b>pg_port</b> (integer, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns the port of the connection to the server.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_socket_(integer,_read-only)"
+><b>pg_socket</b> (integer, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns the file description number of the connection socket to the server.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_pass_(string,_read-only)"
+><b>pg_pass</b> (string, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns the password used to connect to the server.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_options_(string,_read-only)"
+><b>pg_options</b> (string, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns the command-line options passed to the server. May be an empty string.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_default_port_(integer,_read-only)"
+><b>pg_default_port</b> (integer, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns the default port used if none is specifically given.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_pid_(integer,_read-only)"
+><b>pg_pid</b> (integer, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns the process id (PID) of the backend server process handling the connection.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_prepare_now_(boolean)"
+><b>pg_prepare_now</b> (boolean)</a></h3>
+
+<p>DBD::Pg specific attribute. Default is off. If true, then the <a href="#prepare" class="podlinkpod"
+>&#34;prepare&#34;</a> method will immediately prepare commands, rather than waiting until the first execute.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_expand_array_(boolean)"
+><b>pg_expand_array</b> (boolean)</a></h3>
+
+<p>DBD::Pg specific attribute. Defaults to true. If false, arrays returned from the server will not be changed into a Perl arrayref, but remain as a string.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_async_status_(integer,_read-only)"
+><b>pg_async_status</b> (integer, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns the current status of an <a href="#Asynchronous_Queries" class="podlinkpod"
+>asynchronous</a> command. 0 indicates no asynchronous command is in progress, 1 indicates that an asynchronous command has started and -1 indicated that an asynchronous command has been cancelled.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_standard_conforming_strings_(boolean,_read-only)"
+><b>pg_standard_conforming_strings</b> (boolean, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns true if the server is currently using standard conforming strings. Only available if the target server is version 8.2 or better.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_INV_READ_(integer,_read-only)"
+><b>pg_INV_READ</b> (integer, read-only)</a></h3>
+
+<p>Constant to be used for the mode in <a href="#lo_creat" class="podlinkpod"
+>&#34;lo_creat&#34;</a> and <a href="#lo_open" class="podlinkpod"
+>&#34;lo_open&#34;</a>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_INV_WRITE_(integer,_read-only)"
+><b>pg_INV_WRITE</b> (integer, read-only)</a></h3>
+
+<p>Constant to be used for the mode in <a href="#lo_creat" class="podlinkpod"
+>&#34;lo_creat&#34;</a> and <a href="#lo_open" class="podlinkpod"
+>&#34;lo_open&#34;</a>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Driver_(handle,_read-only)"
+><b>Driver</b> (handle, read-only)</a></h3>
+
+<p>Holds the handle of the parent driver. The only recommended use for this is to find the name of the driver using:</p>
+
+<pre class="sh_perl">  $dbh-&#62;{Driver}-&#62;{Name}</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_protocol_(integer,_read-only)"
+><b>pg_protocol</b> (integer, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns the version of the PostgreSQL server. If DBD::Pg is unable to figure out the version, it will return a &#34;0&#34;. Otherwise, a &#34;3&#34; is returned.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="RowCacheSize"
+><b>RowCacheSize</b></a></h3>
+
+<p>Not used by DBD::Pg</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DBI_STATEMENT_HANDLE_OBJECTS"
+>DBI STATEMENT HANDLE OBJECTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Statement_Handle_Methods"
+>Statement Handle Methods</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="bind_param"
+><b>bind_param</b></a></h3>
+
+<pre class="sh_perl">  $rv = $sth-&#62;bind_param($param_num, $bind_value);
+  $rv = $sth-&#62;bind_param($param_num, $bind_value, $bind_type);
+  $rv = $sth-&#62;bind_param($param_num, $bind_value, \%attr);</pre>
+
+<p>Allows the user to bind a value and/or a data type to a placeholder. This is especially important when using server-side prepares. See the <a href="#prepare" class="podlinkpod"
+>&#34;prepare&#34;</a> method for more information.</p>
+
+<p>The value of <code>$param_num</code> is a number if using the &#39;?&#39; or &#39;$1&#39; style placeholders. If using &#34;:foo&#34; style placeholders, the complete name (e.g. &#34;:foo&#34;) must be given. For numeric values, you can either use a number or use a literal &#39;$1&#39;. See the examples below.</p>
+
+<p>The <code>$bind_value</code> argument is fairly self-explanatory. A value of <code>undef</code> will bind a <code>NULL</code> to the placeholder. Using <code>undef</code> is useful when you want to change just the type and will be overwriting the value later. (Any value is actually usable, but <code>undef</code> is easy and efficient).</p>
+
+<p>The <code>\%attr</code> hash is used to indicate the data type of the placeholder. The default value is &#34;varchar&#34;. If you need something else, you must use one of the values provided by DBI or by DBD::Pg. To use a SQL value, modify your &#34;use DBI&#34; statement at the top of your script as follows:</p>
+
+<pre class="sh_perl">  use DBI qw(:sql_types);</pre>
+
+<p>This will import some constants into your script. You can plug those directly into the <a href="#bind_param" class="podlinkpod"
+>&#34;bind_param&#34;</a> call. Some common ones that you will encounter are:</p>
+
+<pre class="sh_perl">  SQL_INTEGER</pre>
+
+<p>To use PostgreSQL data types, import the list of values like this:</p>
+
+<pre class="sh_perl">  use DBD::Pg qw(:pg_types);</pre>
+
+<p>You can then set the data types by setting the value of the <code>pg_type</code> key in the hash passed to <a href="#bind_param" class="podlinkpod"
+>&#34;bind_param&#34;</a>. The current list of Postgres data types exported is:</p>
+
+<pre class="sh_perl"> PG_ABSTIME PG_ABSTIMEARRAY PG_ACLITEM PG_ACLITEMARRAY PG_ANY PG_ANYARRAY
+ PG_ANYELEMENT PG_ANYENUM PG_ANYNONARRAY PG_BIT PG_BITARRAY PG_BOOL
+ PG_BOOLARRAY PG_BOX PG_BOXARRAY PG_BPCHAR PG_BPCHARARRAY PG_BYTEA
+ PG_BYTEAARRAY PG_CHAR PG_CHARARRAY PG_CID PG_CIDARRAY PG_CIDR
+ PG_CIDRARRAY PG_CIRCLE PG_CIRCLEARRAY PG_CSTRING PG_CSTRINGARRAY PG_DATE
+ PG_DATEARRAY PG_FDW_HANDLER PG_FLOAT4 PG_FLOAT4ARRAY PG_FLOAT8 PG_FLOAT8ARRAY
+ PG_GTSVECTOR PG_GTSVECTORARRAY PG_INET PG_INETARRAY PG_INT2 PG_INT2ARRAY
+ PG_INT2VECTOR PG_INT2VECTORARRAY PG_INT4 PG_INT4ARRAY PG_INT8 PG_INT8ARRAY
+ PG_INTERNAL PG_INTERVAL PG_INTERVALARRAY PG_LANGUAGE_HANDLER PG_LINE PG_LINEARRAY
+ PG_LSEG PG_LSEGARRAY PG_MACADDR PG_MACADDRARRAY PG_MONEY PG_MONEYARRAY
+ PG_NAME PG_NAMEARRAY PG_NUMERIC PG_NUMERICARRAY PG_OID PG_OIDARRAY
+ PG_OIDVECTOR PG_OIDVECTORARRAY PG_OPAQUE PG_PATH PG_PATHARRAY PG_PG_ATTRIBUTE
+ PG_PG_CLASS PG_PG_NODE_TREE PG_PG_PROC PG_PG_TYPE PG_POINT PG_POINTARRAY
+ PG_POLYGON PG_POLYGONARRAY PG_RECORD PG_RECORDARRAY PG_REFCURSOR PG_REFCURSORARRAY
+ PG_REGCLASS PG_REGCLASSARRAY PG_REGCONFIG PG_REGCONFIGARRAY PG_REGDICTIONARY PG_REGDICTIONARYARRAY
+ PG_REGOPER PG_REGOPERARRAY PG_REGOPERATOR PG_REGOPERATORARRAY PG_REGPROC PG_REGPROCARRAY
+ PG_REGPROCEDURE PG_REGPROCEDUREARRAY PG_REGTYPE PG_REGTYPEARRAY PG_RELTIME PG_RELTIMEARRAY
+ PG_SMGR PG_TEXT PG_TEXTARRAY PG_TID PG_TIDARRAY PG_TIME
+ PG_TIMEARRAY PG_TIMESTAMP PG_TIMESTAMPARRAY PG_TIMESTAMPTZ PG_TIMESTAMPTZARRAY PG_TIMETZ
+ PG_TIMETZARRAY PG_TINTERVAL PG_TINTERVALARRAY PG_TRIGGER PG_TSQUERY PG_TSQUERYARRAY
+ PG_TSVECTOR PG_TSVECTORARRAY PG_TXID_SNAPSHOT PG_TXID_SNAPSHOTARRAY PG_UNKNOWN PG_UUID
+ PG_UUIDARRAY PG_VARBIT PG_VARBITARRAY PG_VARCHAR PG_VARCHARARRAY PG_VOID
+ PG_XID PG_XIDARRAY PG_XML PG_XMLARRAY</pre>
+
+<p>Data types are &#34;sticky,&#34; in that once a data type is set to a certain placeholder, it will remain for that placeholder, unless it is explicitly set to something else afterwards. If the statement has already been prepared, and you switch the data type to something else, DBD::Pg will re-prepare the statement for you before doing the next execute.</p>
+
+<p>Examples:</p>
+
+<pre class="sh_perl">  use DBI qw(:sql_types);
+  use DBD::Pg qw(:pg_types);
+
+  $SQL = &#34;SELECT id FROM ptable WHERE size &#62; ? AND title = ?&#34;;
+  $sth = $dbh-&#62;prepare($SQL);
+
+  ## Both arguments below are bound to placeholders as &#34;varchar&#34;
+  $sth-&#62;execute(123, &#34;Merk&#34;);
+
+  ## Reset the datatype for the first placeholder to an integer
+  $sth-&#62;bind_param(1, undef, SQL_INTEGER);
+
+  ## The &#34;undef&#34; bound above is not used, since we supply params to execute
+  $sth-&#62;execute(123, &#34;Merk&#34;);
+
+  ## Set the first placeholder&#39;s value and data type
+  $sth-&#62;bind_param(1, 234, { pg_type =&#62; PG_TIMESTAMP });
+
+  ## Set the second placeholder&#39;s value and data type.
+  ## We don&#39;t send a third argument, so the default &#34;varchar&#34; is used
+  $sth-&#62;bind_param(&#39;$2&#39;, &#34;Zool&#34;);
+
+  ## We realize that the wrong data type was set above, so we change it:
+  $sth-&#62;bind_param(&#39;$1&#39;, 234, { pg_type =&#62; SQL_INTEGER });
+
+  ## We also got the wrong value, so we change that as well.
+  ## Because the data type is sticky, we don&#39;t need to change it
+  $sth-&#62;bind_param(1, 567);
+
+  ## This executes the statement with 567 (integer) and &#34;Zool&#34; (varchar)
+  $sth-&#62;execute();</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="bind_param_inout"
+><b>bind_param_inout</b></a></h3>
+
+<pre class="sh_perl">  $rv = $sth-&#62;bind_param_inout($param_num, \$scalar, 0);</pre>
+
+<p>Experimental support for this feature is provided. The first argument to bind_param_inout should be a placeholder number. The second argument should be a reference to a scalar variable in your script. The third argument is not used and should simply be set to 0. Note that what this really does is assign a returned column to the variable, in the order in which the column appears. For example:</p>
+
+<pre class="sh_perl">  my $foo = 123;
+  $sth = $dbh-&#62;prepare(&#34;SELECT 1+?::int&#34;);
+  $sth-&#62;bind_param_inout(1, \$foo, 0);
+  $foo = 222;
+  $sth-&#62;execute(444);
+  $sth-&#62;fetch;</pre>
+
+<p>The above will cause $foo to have a new value of &#34;223&#34; after the final fetch. Note that the variables bound in this manner are very sticky, and will trump any values passed in to execute. This is because the binding is done as late as possible, at the execute() stage, allowing the value to be changed between the time it was bound and the time the query is executed. Thus, the above execute is the same as:</p>
+
+<pre class="sh_perl">  $sth-&#62;execute();</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="bind_param_array"
+><b>bind_param_array</b></a></h3>
+
+<pre class="sh_perl">  $rv = $sth-&#62;bind_param_array($param_num, $array_ref_or_value)
+  $rv = $sth-&#62;bind_param_array($param_num, $array_ref_or_value, $bind_type)
+  $rv = $sth-&#62;bind_param_array($param_num, $array_ref_or_value, \%attr)</pre>
+
+<p>Binds an array of values to a placeholder, so that each is used in turn by a call to the <a href="#execute_array" class="podlinkpod"
+>&#34;execute_array&#34;</a> method.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="execute"
+><b>execute</b></a></h3>
+
+<pre class="sh_perl">  $rv = $sth-&#62;execute(@bind_values);</pre>
+
+<p>Executes a previously prepared statement. In addition to <code>UPDATE</code>, <code>DELETE</code>, <code>INSERT</code> statements, for which it returns always the number of affected rows, the <code>execute</code> method can also be used for <code>SELECT ... INTO table</code> statements.</p>
+
+<p>The &#34;prepare/bind/execute&#34; process has changed significantly for PostgreSQL servers 7.4 and later: please see the <code>prepare()</code> and <code>bind_param()</code> entries for much more information.</p>
+
+<p>Setting one of the bind_values to &#34;undef&#34; is the equivalent of setting the value to NULL in the database. Setting the bind_value to $DBDPG_DEFAULT is equivalent to sending the literal string &#39;DEFAULT&#39; to the backend. Note that using this option will force server-side prepares off until such time as PostgreSQL supports using DEFAULT in prepared statements.</p>
+
+<p>DBD::Pg also supports passing in arrays to execute: simply pass in an arrayref, and DBD::Pg will flatten it into a string suitable for input on the backend.</p>
+
+<p>If you are using Postgres version 8.2 or greater, you can also use any of the fetch methods to retrieve the values of a <code>RETURNING</code> clause after you execute an <code>UPDATE</code>, <code>DELETE</code>, or <code>INSERT</code>. For example:</p>
+
+<pre class="sh_perl">  $dbh-&#62;do(q{CREATE TABLE abc (id SERIAL, country TEXT)});
+  $SQL = q{INSERT INTO abc (country) VALUES (?) RETURNING id};
+  $sth = $dbh-&#62;prepare($SQL);
+  $sth-&#62;execute(&#39;France&#39;);
+  $countryid = $sth-&#62;fetch()-&#62;[0];
+  $sth-&#62;execute(&#39;New Zealand&#39;);
+  $countryid = $sth-&#62;fetch()-&#62;[0];</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="execute_array"
+><b>execute_array</b></a></h3>
+
+<pre class="sh_perl">  $tuples = $sth-&#62;execute_array() or die $sth-&#62;errstr;
+  $tuples = $sth-&#62;execute_array(\%attr) or die $sth-&#62;errstr;
+  $tuples = $sth-&#62;execute_array(\%attr, @bind_values) or die $sth-&#62;errstr;
+
+  ($tuples, $rows) = $sth-&#62;execute_array(\%attr) or die $sth-&#62;errstr;
+  ($tuples, $rows) = $sth-&#62;execute_array(\%attr, @bind_values) or die $sth-&#62;errstr;</pre>
+
+<p>Execute a prepared statement once for each item in a passed-in hashref, or items that were previously bound via the <a href="#bind_param_array" class="podlinkpod"
+>&#34;bind_param_array&#34;</a> method. See the DBI documentation for more details.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="execute_for_fetch"
+><b>execute_for_fetch</b></a></h3>
+
+<pre class="sh_perl">  $tuples = $sth-&#62;execute_for_fetch($fetch_tuple_sub);
+  $tuples = $sth-&#62;execute_for_fetch($fetch_tuple_sub, \@tuple_status);
+
+  ($tuples, $rows) = $sth-&#62;execute_for_fetch($fetch_tuple_sub);
+  ($tuples, $rows) = $sth-&#62;execute_for_fetch($fetch_tuple_sub, \@tuple_status);</pre>
+
+<p>Used internally by the <a href="#execute_array" class="podlinkpod"
+>&#34;execute_array&#34;</a> method, and rarely used directly. See the DBI documentation for more details.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="fetchrow_arrayref"
+><b>fetchrow_arrayref</b></a></h3>
+
+<pre class="sh_perl">  $ary_ref = $sth-&#62;fetchrow_arrayref;</pre>
+
+<p>Fetches the next row of data from the statement handle, and returns a reference to an array holding the column values. Any columns that are NULL are returned as undef within the array.</p>
+
+<p>If there are no more rows or if an error occurs, the this method return undef. You should check <code>$sth-&#62;err</code> afterwards (or use the <a href="#RaiseError" class="podlinkpod"
+>&#34;RaiseError&#34;</a> attribute) to discover if the undef returned was due to an error.</p>
+
+<p>Note that the same array reference is returned for each fetch, so don&#39;t store the reference and then use it after a later fetch. Also, the elements of the array are also reused for each row, so take care if you want to take a reference to an element. See also <a href="#bind_columns" class="podlinkpod"
+>&#34;bind_columns&#34;</a>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="fetchrow_array"
+><b>fetchrow_array</b></a></h3>
+
+<pre class="sh_perl">  @ary = $sth-&#62;fetchrow_array;</pre>
+
+<p>Similar to the <a href="#fetchrow_arrayref" class="podlinkpod"
+>&#34;fetchrow_arrayref&#34;</a> method, but returns a list of column information rather than a reference to a list. Do not use this in a scalar context.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="fetchrow_hashref"
+><b>fetchrow_hashref</b></a></h3>
+
+<pre class="sh_perl">  $hash_ref = $sth-&#62;fetchrow_hashref;
+  $hash_ref = $sth-&#62;fetchrow_hashref($name);</pre>
+
+<p>Fetches the next row of data and returns a hashref containing the name of the columns as the keys and the data itself as the values. Any NULL value is returned as as undef value.</p>
+
+<p>If there are no more rows or if an error occurs, the this method return undef. You should check <code>$sth-&#62;err</code> afterwards (or use the <a href="#RaiseError" class="podlinkpod"
+>&#34;RaiseError&#34;</a> attribute) to discover if the undef returned was due to an error.</p>
+
+<p>The optional <code>$name</code> argument should be either <code>NAME</code>, <code>NAME_lc</code> or <code>NAME_uc</code>, and indicates what sort of transformation to make to the keys in the hash.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="fetchall_arrayref"
+><b>fetchall_arrayref</b></a></h3>
+
+<pre class="sh_perl">  $tbl_ary_ref = $sth-&#62;fetchall_arrayref();
+  $tbl_ary_ref = $sth-&#62;fetchall_arrayref( $slice );
+  $tbl_ary_ref = $sth-&#62;fetchall_arrayref( $slice, $max_rows );</pre>
+
+<p>Returns a reference to an array of arrays that contains all the remaining rows to be fetched from the statement handle. If there are no more rows, an empty arrayref will be returned. If an error occurs, the data read in so far will be returned. Because of this, you should always check <code>$sth-&#62;err</code> after calling this method, unless <a href="#RaiseError" class="podlinkpod"
+>&#34;RaiseError&#34;</a> has been enabled.</p>
+
+<p>If <code>$slice</code> is an array reference, fetchall_arrayref uses the <a href="#fetchrow_arrayref" class="podlinkpod"
+>&#34;fetchrow_arrayref&#34;</a> method to fetch each row as an array ref. If the <code>$slice</code> array is not empty then it is used as a slice to select individual columns by perl array index number (starting at 0, unlike column and parameter numbers which start at 1).</p>
+
+<p>With no parameters, or if $slice is undefined, fetchall_arrayref acts as if passed an empty array ref.</p>
+
+<p>If <code>$slice</code> is a hash reference, fetchall_arrayref uses <a href="#fetchrow_hashref" class="podlinkpod"
+>&#34;fetchrow_hashref&#34;</a> to fetch each row as a hash reference.</p>
+
+<p>See the DBI documentation for a complete discussion.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="fetchall_hashref"
+><b>fetchall_hashref</b></a></h3>
+
+<pre class="sh_perl">  $hash_ref = $sth-&#62;fetchall_hashref( $key_field );</pre>
+
+<p>Returns a hashref containing all rows to be fetched from the statement handle. See the DBI documentation for a full discussion.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="finish"
+><b>finish</b></a></h3>
+
+<pre class="sh_perl">  $rv = $sth-&#62;finish;</pre>
+
+<p>Indicates to DBI that you are finished with the statement handle and are not going to use it again. Only needed when you have not fetched all the possible rows.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="rows"
+><b>rows</b></a></h3>
+
+<pre class="sh_perl">  $rv = $sth-&#62;rows;</pre>
+
+<p>Returns the number of rows returned by the last query. In contrast to many other DBD modules, the number of rows is available immediately after calling <code>$sth-&#62;execute</code>. Note that the <a href="#execute" class="podlinkpod"
+>&#34;execute&#34;</a> method itself returns the number of rows itself, which means that this method is rarely needed.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="bind_col"
+><b>bind_col</b></a></h3>
+
+<pre class="sh_perl">  $rv = $sth-&#62;bind_col($column_number, \$var_to_bind);
+  $rv = $sth-&#62;bind_col($column_number, \$var_to_bind, \%attr );
+  $rv = $sth-&#62;bind_col($column_number, \$var_to_bind, $bind_type );</pre>
+
+<p>Binds a Perl variable and/or some attributes to an output column of a SELECT statement. Column numbers count up from 1. You do not need to bind output columns in order to fetch data.</p>
+
+<p>See the DBI documentation for a discussion of the optional parameters <code>\%attr</code> and <code>$bind_type</code></p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="bind_columns"
+><b>bind_columns</b></a></h3>
+
+<pre class="sh_perl">  $rv = $sth-&#62;bind_columns(@list_of_refs_to_vars_to_bind);</pre>
+
+<p>Calls the <a href="#bind_col" class="podlinkpod"
+>&#34;bind_col&#34;</a> method for each column in the SELECT statement, using the supplied list.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="dump_results"
+><b>dump_results</b></a></h3>
+
+<pre class="sh_perl">  $rows = $sth-&#62;dump_results($maxlen, $lsep, $fsep, $fh);</pre>
+
+<p>Fetches all the rows from the statement handle, calls <code>DBI::neat_list</code> for each row, and prints the results to <code>$fh</code> (which defaults to <em>STDOUT</em>). Rows are separated by <code>$lsep</code> (which defaults to a newline). Columns are separated by <code>$fsep</code> (which defaults to a comma). The <code>$maxlen</code> controls how wide the output can be, and defaults to 35.</p>
+
+<p>This method is designed as a handy utility for prototyping and testing queries. Since it uses &#34;neat_list&#34; to format and edit the string for reading by humans, it is not recommended for data transfer applications.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="blob_read"
+><b>blob_read</b></a></h3>
+
+<pre class="sh_perl">  $blob = $sth-&#62;blob_read($id, $offset, $len);</pre>
+
+<p>Supported by DBD::Pg. This method is implemented by DBI but not currently documented by DBI, so this method might change.</p>
+
+<p>This method seems to be heavily influenced by the current implementation of blobs in Oracle. Nevertheless we try to be as compatible as possible. Whereas Oracle suffers from the limitation that blobs are related to tables and every table can have only one blob (datatype LONG), PostgreSQL handles its blobs independent of any table by using so-called object identifiers. This explains why the <code>blob_read</code> method is blessed into the STATEMENT package and not part of the DATABASE package. Here the field parameter has been used to handle this object identifier. The offset and len parameters may be set to zero, in which case the whole blob is fetched at once.</p>
+
+<p>See also the PostgreSQL-specific functions concerning blobs, which are available via the <code>func</code> interface.</p>
+
+<p>For further information and examples about blobs, please read the chapter about Large Objects in the PostgreSQL Programmer&#39;s Guide at <a href="http://www.postgresql.org/docs/current/static/largeobjects.html" class="podlinkurl"
+>http://www.postgresql.org/docs/current/static/largeobjects.html</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Statement_Handle_Attributes"
+>Statement Handle Attributes</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="NUM_OF_FIELDS_(integer,_read-only)"
+><b>NUM_OF_FIELDS</b> (integer, read-only)</a></h3>
+
+<p>Returns the number of columns returned by the current statement. A number will only be returned for SELECT statements, for SHOW statements (which always return <code>1</code>), and for INSERT, UPDATE, and DELETE statements which contain a RETURNING clause. This method returns undef if called before <code>execute()</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="NUM_OF_PARAMS_(integer,_read-only)"
+><b>NUM_OF_PARAMS</b> (integer, read-only)</a></h3>
+
+<p>Returns the number of placeholders in the current statement.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="NAME_(arrayref,_read-only)"
+><b>NAME</b> (arrayref, read-only)</a></h3>
+
+<p>Returns an arrayref of column names for the current statement. This method will only work for SELECT statements, for SHOW statements, and for INSERT, UPDATE, and DELETE statements which contain a RETURNING clause. This method returns undef if called before <code>execute()</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="NAME_lc_(arrayref,_read-only)"
+><b>NAME_lc</b> (arrayref, read-only)</a></h3>
+
+<p>The same as the <code>NAME</code> attribute, except that all column names are forced to lower case.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="NAME_uc_(arrayref,_read-only)"
+><b>NAME_uc</b> (arrayref, read-only)</a></h3>
+
+<p>The same as the <code>NAME</code> attribute, except that all column names are forced to upper case.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="NAME_hash_(hashref,_read-only)"
+><b>NAME_hash</b> (hashref, read-only)</a></h3>
+
+<p>Similar to the <code>NAME</code> attribute, but returns a hashref of column names instead of an arrayref. The names of the columns are the keys of the hash, and the values represent the order in which the columns are returned, starting at 0. This method returns undef if called before <code>execute()</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="NAME_lc_hash_(hashref,_read-only)"
+><b>NAME_lc_hash</b> (hashref, read-only)</a></h3>
+
+<p>The same as the <code>NAME_hash</code> attribute, except that all column names are forced to lower case.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="NAME_uc_hash_(hashref,_read-only)"
+><b>NAME_uc_hash</b> (hashref, read-only)</a></h3>
+
+<p>The same as the <code>NAME_hash</code> attribute, except that all column names are forced to lower case.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="TYPE_(arrayref,_read-only)"
+><b>TYPE</b> (arrayref, read-only)</a></h3>
+
+<p>Returns an arrayref indicating the data type for each column in the statement. This method returns undef if called before <code>execute()</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="PRECISION_(arrayref,_read-only)"
+><b>PRECISION</b> (arrayref, read-only)</a></h3>
+
+<p>Returns an arrayref of integer values for each column returned by the statement. The number indicates the precision for <code>NUMERIC</code> columns, the size in number of characters for <code>CHAR</code> and <code>VARCHAR</code> columns, and for all other types of columns it returns the number of <i>bytes</i>. This method returns undef if called before <code>execute()</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="SCALE_(arrayref,_read-only)"
+><b>SCALE</b> (arrayref, read-only)</a></h3>
+
+<p>Returns an arrayref of integer values for each column returned by the statement. The number indicates the scale of the that column. The only type that will return a value is <code>NUMERIC</code>. This method returns undef if called before <code>execute()</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="NULLABLE_(arrayref,_read-only)"
+><b>NULLABLE</b> (arrayref, read-only)</a></h3>
+
+<p>Returns an arrayref of integer values for each column returned by the statement. The number indicates if the column is nullable or not. 0 = not nullable, 1 = nullable, 2 = unknown. This method returns undef if called before <code>execute()</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Database_(dbh,_read-only)"
+><b>Database</b> (dbh, read-only)</a></h3>
+
+<p>Returns the database handle this statement handle was created from.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="ParamValues_(hash_ref,_read-only)"
+><b>ParamValues</b> (hash ref, read-only)</a></h3>
+
+<p>Returns a reference to a hash containing the values currently bound to placeholders. If the &#34;named parameters&#34; type of placeholders are being used (such as &#34;:foo&#34;), then the keys of the hash will be the names of the placeholders (without the colon). If the &#34;dollar sign numbers&#34; type of placeholders are being used, the keys of the hash will be the numbers, without the dollar signs. If the &#34;question mark&#34; type is used, integer numbers will be returned, starting at one and increasing for every placeholder.</p>
+
+<p>If this method is called before <a href="#execute" class="podlinkpod"
+>&#34;execute&#34;</a>, the literal values passed in are returned. If called after <a href="#execute" class="podlinkpod"
+>&#34;execute&#34;</a>, then the quoted versions of the values are returned.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="ParamTypes_(hash_ref,_read-only)"
+><b>ParamTypes</b> (hash ref, read-only)</a></h3>
+
+<p>Returns a reference to a hash containing the type names currently bound to placeholders. The keys are the same as returned by the ParamValues method. The values are hashrefs containing a single key value pair, in which the key is either &#39;TYPE&#39; if the type has a generic SQL equivalent, and &#39;pg_type&#39; if the type can only be expressed by a Postgres type. The value is the internal number corresponding to the type originally passed in. (Placeholders that have not yet been bound will return undef as the value). This allows the output of ParamTypes to be passed back to the <a href="#bind_param" class="podlinkpod"
+>&#34;bind_param&#34;</a> method.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Statement_(string,_read-only)"
+><b>Statement</b> (string, read-only)</a></h3>
+
+<p>Returns the statement string passed to the most recent &#34;prepare&#34; method called in this database handle, even if that method failed. This is especially useful where &#34;RaiseError&#34; is enabled and the exception handler checks $@ and sees that a <code>prepare</code> method call failed.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_current_row_(integer,_read-only)"
+><b>pg_current_row</b> (integer, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns the number of the tuple (row) that was most recently fetched. Returns zero before and after fetching is performed.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_numbound_(integer,_read-only)"
+><b>pg_numbound</b> (integer, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns the number of placeholders that are currently bound (via bind_param).</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_bound_(hashref,_read-only)"
+><b>pg_bound</b> (hashref, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns a hash of all named placeholders. The key is the name of the placeholder, and the value is a 0 or a 1, indicating if the placeholder has been bound yet (e.g. via bind_param)</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_size_(arrayref,_read-only)"
+><b>pg_size</b> (arrayref, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. It returns a reference to an array of integer values for each column. The integer shows the size of the column in bytes. Variable length columns are indicated by -1.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_type_(arrayref,_read-only)"
+><b>pg_type</b> (arrayref, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. It returns a reference to an array of strings for each column. The string shows the name of the data_type.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_segments_(arrayref,_read-only)"
+><b>pg_segments</b> (arrayref, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. Returns an arrayref of the query split on the placeholders.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_oid_status_(integer,_read-only)"
+><b>pg_oid_status</b> (integer, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. It returns the OID of the last INSERT command.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_cmd_status_(integer,_read-only)"
+><b>pg_cmd_status</b> (integer, read-only)</a></h3>
+
+<p>DBD::Pg specific attribute. It returns the type of the last command. Possible types are: &#34;INSERT&#34;, &#34;DELETE&#34;, &#34;UPDATE&#34;, &#34;SELECT&#34;.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_direct_(boolean)"
+><b>pg_direct</b> (boolean)</a></h3>
+
+<p>DBD::Pg specific attribute. Default is false. If true, the query is passed directly to the backend without parsing for placeholders.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_prepare_now_(boolean)"
+><b>pg_prepare_now</b> (boolean)</a></h3>
+
+<p>DBD::Pg specific attribute. Default is off. If true, the query will be immediately prepared, rather than waiting for the <a href="#execute" class="podlinkpod"
+>&#34;execute&#34;</a> call.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_prepare_name_(string)"
+><b>pg_prepare_name</b> (string)</a></h3>
+
+<p>DBD::Pg specific attribute. Specifies the name of the prepared statement to use for this statement handle. Not normally needed, see the section on the <a href="#prepare" class="podlinkpod"
+>&#34;prepare&#34;</a> method for more information.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_server_prepare_(integer)"
+><b>pg_server_prepare</b> (integer)</a></h3>
+
+<p>DBD::Pg specific attribute. Indicates if DBD::Pg should attempt to use server-side prepared statements for this statement handle. The default value, 1, indicates that prepared statements should be used whenever possible. See the section on the <a href="#prepare" class="podlinkpod"
+>&#34;prepare&#34;</a> method for more information.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_placeholder_dollaronly_(boolean)"
+><b>pg_placeholder_dollaronly</b> (boolean)</a></h3>
+
+<p>DBD::Pg specific attribute. Defaults to off. When true, question marks inside of the query being prepared are not treated as placeholders. Useful for statements that contain unquoted question marks, such as geometric operators.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_async_(integer)"
+><b>pg_async</b> (integer)</a></h3>
+
+<p>DBD::Pg specific attribute. Indicates the current behavior for asynchronous queries. See the section on <a href="#Asynchronous_Constants" class="podlinkpod"
+>&#34;Asynchronous Constants&#34;</a> for more information.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="RowsInCache"
+><b>RowsInCache</b></a></h3>
+
+<p>Not used by DBD::Pg</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="RowCache"
+><b>RowCache</b></a></h3>
+
+<p>Not used by DBD::Pg</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="CursorName"
+><b>CursorName</b></a></h3>
+
+<p>Not used by DBD::Pg. See the note about <a href="#Cursors" class="podlinkpod"
+>&#34;Cursors&#34;</a> elsewhere in this document.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FURTHER_INFORMATION"
+>FURTHER INFORMATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Transactions"
+>Transactions</a></h2>
+
+<p>Transaction behavior is controlled via the <a href="#AutoCommit" class="podlinkpod"
+>&#34;AutoCommit&#34;</a> attribute. For a complete definition of <code>AutoCommit</code> please refer to the DBI documentation.</p>
+
+<p>According to the DBI specification the default for <code>AutoCommit</code> is a true value. In this mode, any change to the database becomes valid immediately. Any <code>BEGIN</code>, <code>COMMIT</code> or <code>ROLLBACK</code> statements will be rejected. DBD::Pg implements <code>AutoCommit</code> by issuing a <code>BEGIN</code> statement immediately before executing a statement, and a <code>COMMIT</code> afterwards. Note that preparing a statement is not always enough to trigger the first <code>BEGIN</code>, as the actual <code>PREPARE</code> is usually postponed until the first call to <a href="#execute" class="podlinkpod"
+>&#34;execute&#34;</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Savepoints"
+>Savepoints</a></h2>
+
+<p>PostgreSQL version 8.0 introduced the concept of savepoints, which allows transactions to be rolled back to a certain point without affecting the rest of the transaction. DBD::Pg encourages using the following methods to control savepoints:</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_savepoint"
+><code>pg_savepoint</code></a></h3>
+
+<p>Creates a savepoint. This will fail unless you are inside of a transaction. The only argument is the name of the savepoint. Note that PostgreSQL DOES allow multiple savepoints with the same name to exist.</p>
+
+<pre class="sh_perl">  $dbh-&#62;pg_savepoint(&#34;mysavepoint&#34;);</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_rollback_to"
+><code>pg_rollback_to</code></a></h3>
+
+<p>Rolls the database back to a named savepoint, discarding any work performed after that point. If more than one savepoint with that name exists, rolls back to the most recently created one.</p>
+
+<pre class="sh_perl">  $dbh-&#62;pg_rollback_to(&#34;mysavepoint&#34;);</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_release"
+><code>pg_release</code></a></h3>
+
+<p>Releases (or removes) a named savepoint. If more than one savepoint with that name exists, it will only destroy the most recently created one. Note that all savepoints created after the one being released are also destroyed.</p>
+
+<pre class="sh_perl">  $dbh-&#62;pg_release(&#34;mysavepoint&#34;);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Asynchronous_Queries"
+>Asynchronous Queries</a></h2>
+
+<p>It is possible to send a query to the backend and have your script do other work while the query is running on the backend. Both queries sent by the <a href="#do" class="podlinkpod"
+>&#34;do&#34;</a> method, and by the <a href="#execute" class="podlinkpod"
+>&#34;execute&#34;</a> method can be sent asynchronously. (NOTE: This will only work if DBD::Pg has been compiled against Postgres libraries of version 8.0 or greater) The basic usage is as follows:</p>
+
+<pre class="sh_perl">  use DBD::Pg &#39;:async&#39;;
+
+  print &#34;Async do() example:\n&#34;;
+  $dbh-&#62;do(&#34;SELECT long_running_query()&#34;, {pg_async =&#62; PG_ASYNC});
+  do_something_else();
+  {
+    if ($dbh-&#62;pg_ready()) {
+      $res = $dbh-&#62;pg_result();
+      print &#34;Result of do(): $res\n&#34;;
+    }
+    print &#34;Query is still running...\n&#34;;
+    if (cancel_request_received) {
+      $dbh-&#62;pg_cancel();
+    }
+    sleep 1;
+    redo;
+  }
+
+  print &#34;Async prepare/execute example:\n&#34;;
+  $sth = $dbh-&#62;prepare(&#34;SELECT long_running_query(1)&#34;, {pg_async =&#62; PG_ASYNC});
+  $sth-&#62;execute();
+
+  ## Changed our mind, cancel and run again:
+  $sth = $dbh-&#62;prepare(&#34;SELECT 678&#34;, {pg_async =&#62; PG_ASYNC + PG_OLDQUERY_CANCEL});
+  $sth-&#62;execute();
+
+  do_something_else();
+
+  if (!$sth-&#62;pg_ready) {
+    do_another_thing();
+  }
+
+  ## We wait until it is done, and get the result:
+  $res = $dbh-&#62;pg_result();</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Asynchronous_Constants"
+>Asynchronous Constants</a></h3>
+
+<p>There are currently three asynchronous constants exported by DBD::Pg. You can import all of them by putting either of these at the top of your script:</p>
+
+<pre class="sh_perl">  use DBD::Pg;
+
+  use DBD::Pg &#39;:async&#39;;</pre>
+
+<p>You may also use the numbers instead of the constants, but using the constants is recommended as it makes your script more readable.</p>
+
+<dl>
+<dt><a name="PG_ASYNC"
+>PG_ASYNC</a></dt>
+
+<dd>
+<p>This is a constant for the number 1. It is passed to either the <a href="#do" class="podlinkpod"
+>&#34;do&#34;</a> or the <a href="#prepare" class="podlinkpod"
+>&#34;prepare&#34;</a> method as a value to the pg_async key and indicates that the query should be sent asynchronously.</p>
+
+<dt><a name="PG_OLDQUERY_CANCEL"
+>PG_OLDQUERY_CANCEL</a></dt>
+
+<dd>
+<p>This is a constant for the number 2. When passed to either the <a href="#do" class="podlinkpod"
+>&#34;do&#34;</a> or the <a href="#prepare" class="podlinkpod"
+>&#34;prepare&#34;</a> method, it causes any currently running asynchronous query to be cancelled and rolled back. It has no effect if no asynchronous query is currently running.</p>
+
+<dt><a name="PG_OLDQUERY_WAIT"
+>PG_OLDQUERY_WAIT</a></dt>
+
+<dd>
+<p>This is a constant for the number 4. When passed to either the <a href="#do" class="podlinkpod"
+>&#34;do&#34;</a> or the <a href="#prepare" class="podlinkpod"
+>&#34;prepare&#34;</a> method, it waits for any currently running asynchronous query to complete. It has no effect if there is no asynchronous query currently running.</p>
+</dd>
+</dl>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Asynchronous_Methods"
+>Asynchronous Methods</a></h3>
+
+<dl>
+<dt><a name="pg_cancel"
+><b>pg_cancel</b></a></dt>
+
+<dd>
+<p>This database-level method attempts to cancel any currently running asynchronous query. It returns true if the cancel succeeded, and false otherwise. Note that a query that has finished before this method is executed will also return false. <b>WARNING</b>: a successful cancellation may leave the database in an unusable state, so you may need to ROLLBACK or ROLLBACK TO a savepoint. As of version 2.17.0 of DBD::Pg, rollbacks are not done automatically.</p>
+
+<pre class="sh_perl">  $result = $dbh-&#62;pg_cancel();</pre>
+
+<dt><a name="pg_ready"
+><b>pg_ready</b></a></dt>
+
+<dd>
+<p>This method can be called as a database handle method or (for convenience) as a statement handle method. Both simply see if a previously issued asynchronous query has completed yet. It returns true if the statement has finished, in which case you should then call the <a href="#pg_result" class="podlinkpod"
+>&#34;pg_result&#34;</a> method. Calls to <code>pg_ready()</code> should only be used when you have other things to do while the query is running. If you simply want to wait until the query is done, do not call pg_ready() over and over, but simply call the pg_result() method.</p>
+
+<pre class="sh_perl">  my $time = 0;
+  while (!$dbh-&#62;pg_ready) {
+    print &#34;Query is still running. Seconds: $time\n&#34;;
+    $time++;
+    sleep 1;
+  }
+  $result = $dbh-&#62;pg_result;</pre>
+
+<dt><a name="pg_result"
+><b>pg_result</b></a></dt>
+
+<dd>
+<p>This database handle method returns the results of a previously issued asynchronous query. If the query is still running, this method will wait until it has finished. The result returned is the number of rows: the same thing that would have been returned by the asynchronous <a href="#do" class="podlinkpod"
+>&#34;do&#34;</a> or <a href="#execute" class="podlinkpod"
+>&#34;execute&#34;</a> if it had been called without an asynchronous flag.</p>
+
+<pre class="sh_perl">  $result = $dbh-&#62;pg_result;</pre>
+</dd>
+</dl>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Asynchronous_Examples"
+>Asynchronous Examples</a></h3>
+
+<p>Here are some working examples of asynchronous queries. Note that we&#39;ll use the <b>pg_sleep</b> function to emulate a long-running query.</p>
+
+<pre class="sh_perl">  use strict;
+  use warnings;
+  use Time::HiRes &#39;sleep&#39;;
+  use DBD::Pg &#39;:async&#39;;
+
+  my $dbh = DBI-&#62;connect(&#39;dbi:Pg:dbname=postgres&#39;, &#39;postgres&#39;, &#39;&#39;, {AutoCommit=&#62;0,RaiseError=&#62;1});
+
+  ## Kick off a long running query on the first database:
+  my $sth = $dbh-&#62;prepare(&#34;SELECT pg_sleep(?)&#34;, {pg_async =&#62; PG_ASYNC});
+  $sth-&#62;execute(5);
+
+  ## While that is running, do some other things
+  print &#34;Your query is processing. Thanks for waiting\n&#34;;
+  check_on_the_kids(); ## Expensive sub, takes at least three seconds.
+
+  while (!$dbh-&#62;pg_ready) {
+    check_on_the_kids();
+    ## If the above function returns quickly for some reason, we add a small sleep
+    sleep 0.1;
+  }
+
+  print &#34;The query has finished. Gathering results\n&#34;;
+  my $result = $sth-&#62;pg_result;
+  print &#34;Result: $result\n&#34;;
+  my $info = $sth-&#62;fetchall_arrayref();</pre>
+
+<p>Without asynchronous queries, the above script would take about 8 seconds to run: five seconds waiting for the execute to finish, then three for the check_on_the_kids() function to return. With asynchronous queries, the script takes about 6 seconds to run, and gets in two iterations of check_on_the_kids in the process.</p>
+
+<p>Here&#39;s an example showing the ability to cancel a long-running query. Imagine two slave databases in different geographic locations over a slow network. You need information as quickly as possible, so you query both at once. When you get an answer, you tell the other one to stop working on your query, as you don&#39;t need it anymore.</p>
+
+<pre class="sh_perl">  use strict;
+  use warnings;
+  use Time::HiRes &#39;sleep&#39;;
+  use DBD::Pg &#39;:async&#39;;
+
+  my $dbhslave1 = DBI-&#62;connect(&#39;dbi:Pg:dbname=postgres;host=slave1&#39;, &#39;postgres&#39;, &#39;&#39;, {AutoCommit=&#62;0,RaiseError=&#62;1});
+  my $dbhslave2 = DBI-&#62;connect(&#39;dbi:Pg:dbname=postgres;host=slave2&#39;, &#39;postgres&#39;, &#39;&#39;, {AutoCommit=&#62;0,RaiseError=&#62;1});
+
+  $SQL = &#34;SELECT count(*) FROM largetable WHERE flavor=&#39;blueberry&#39;&#34;;
+
+  my $sth1 = $dbhslave1-&#62;prepare($SQL, {pg_async =&#62; PG_ASYNC});
+  my $sth2 = $dbhslave2-&#62;prepare($SQL, {pg_async =&#62; PG_ASYNC});
+
+  $sth1-&#62;execute();
+  $sth2-&#62;execute();
+
+  my $winner;
+  while (!defined $winner) {
+    if ($sth1-&#62;pg_ready) {
+      $winner = 1;
+    }
+    elsif ($sth2-&#62;pg_ready) {
+      $winner = 2;
+    }
+    Time::HiRes::sleep 0.05;
+  }
+
+  my $count;
+  if ($winner == 1) {
+    $sth2-&#62;pg_cancel();
+    $sth1-&#62;pg_result();
+    $count = $sth1-&#62;fetchall_arrayref()-&#62;[0][0];
+  }
+  else {
+    $sth1-&#62;pg_cancel();
+    $sth2-&#62;pg_result();
+    $count = $sth2-&#62;fetchall_arrayref()-&#62;[0][0];
+  }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Array_support"
+>Array support</a></h2>
+
+<p>DBD::Pg allows arrays (as arrayrefs) to be passed in to both the <a href="#quote" class="podlinkpod"
+>&#34;quote&#34;</a> and the <a href="#execute" class="podlinkpod"
+>&#34;execute&#34;</a> methods. In both cases, the array is flattened into a string representing a Postgres array.</p>
+
+<p>When fetching rows from a table that contains a column with an array type, the result will be passed back to your script as an arrayref.</p>
+
+<p>To turn off the automatic parsing of returned arrays into arrayrefs, you can set the attribute <a href="#pg_expand_array_(boolean)" class="podlinkpod"
+>pg_expand_array</a>, which is true by default.</p>
+
+<pre class="sh_perl">  $dbh-&#62;{pg_expand_array} = 0;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="COPY_support"
+>COPY support</a></h2>
+
+<p>DBD::Pg allows for quick (bulk) reading and storing of data by using the <b>COPY</b> command. The basic process is to use <code>$dbh-&#62;do</code> to issue a COPY command, and then to either add rows using <a href="#pg_putcopydata" class="podlinkpod"
+>&#34;pg_putcopydata&#34;</a>, or to read them by using <a href="#pg_getcopydata" class="podlinkpod"
+>&#34;pg_getcopydata&#34;</a>.</p>
+
+<p>The first step is to put the server into &#34;COPY&#34; mode. This is done by sending a complete COPY command to the server, by using the <a href="#do" class="podlinkpod"
+>&#34;do&#34;</a> method. For example:</p>
+
+<pre class="sh_perl">  $dbh-&#62;do(&#34;COPY foobar FROM STDIN&#34;);</pre>
+
+<p>This would tell the server to enter a COPY IN mode (yes, that&#39;s confusing, but the <i>mode</i> is COPY IN because of the <i>command</i> COPY FROM). It is now ready to receive information via the <a href="#pg_putcopydata" class="podlinkpod"
+>&#34;pg_putcopydata&#34;</a> method. The complete syntax of the COPY command is more complex and not documented here: the canonical PostgreSQL documentation for COPY can be found at:</p>
+
+<p><a href="http://www.postgresql.org/docs/current/static/sql-copy.html" class="podlinkurl"
+>http://www.postgresql.org/docs/current/static/sql-copy.html</a></p>
+
+<p>Once a COPY command has been issued, no other SQL commands are allowed until <a href="#pg_putcopyend" class="podlinkpod"
+>&#34;pg_putcopyend&#34;</a> has been issued (for COPY FROM), or the final <a href="#pg_getcopydata" class="podlinkpod"
+>&#34;pg_getcopydata&#34;</a> has been called (for COPY TO).</p>
+
+<p>Note: All other COPY methods (pg_putline, pg_getline, etc.) are now heavily deprecated in favor of the pg_getcopydata, pg_putcopydata, and pg_putcopyend methods.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_getcopydata"
+><b>pg_getcopydata</b></a></h3>
+
+<p>Used to retrieve data from a table after the server has been put into a COPY OUT mode by calling &#34;COPY tablename TO STDOUT&#34;. Data is always returned one data row at a time. The first argument to pg_getcopydata is the variable into which the data will be stored (this variable should not be undefined, or it may throw a warning, although it may be a reference). The pg_gecopydata method returns a number greater than 1 indicating the new size of the variable, or a -1 when the COPY has finished. Once a -1 has been returned, no other action is necessary, as COPY mode will have already terminated. Example:</p>
+
+<pre class="sh_perl">  $dbh-&#62;do(&#34;COPY mytable TO STDOUT&#34;);
+  my @data;
+  my $x=0;
+  1 while $dbh-&#62;pg_getcopydata($data[$x++]) &#62;= 0;</pre>
+
+<p>There is also a variation of this method called <b>pg_getcopydata_async</b>, which, as the name suggests, returns immediately. The only difference from the original method is that this version may return a 0, indicating that the row is not ready to be delivered yet. When this happens, the variable has not been changed, and you will need to call the method again until you get a non-zero result. (Data is still always returned one data row at a time.)</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_putcopydata"
+><b>pg_putcopydata</b></a></h3>
+
+<p>Used to put data into a table after the server has been put into COPY IN mode by calling &#34;COPY tablename FROM STDIN&#34;. The only argument is the data you want inserted. Issue a pg_putcopyend() when you have added all your rows.</p>
+
+<p>The default delimiter is a tab character, but this can be changed in the COPY statement. Returns a 1 on successful input. Examples:</p>
+
+<pre class="sh_perl">  ## Simple example:
+  $dbh-&#62;do(&#34;COPY mytable FROM STDIN&#34;);
+  $dbh-&#62;pg_putcopydata(&#34;123\tPepperoni\t3\n&#34;);
+  $dbh-&#62;pg_putcopydata(&#34;314\tMushroom\t8\n&#34;);
+  $dbh-&#62;pg_putcopydata(&#34;6\tAnchovies\t100\n&#34;);
+  $dbh-&#62;pg_putcopyend();
+
+  ## This example uses explicit columns and a custom delimiter
+  $dbh-&#62;do(&#34;COPY mytable(flavor, slices) FROM STDIN WITH DELIMITER &#39;~&#39;&#34;);
+  $dbh-&#62;pg_putcopydata(&#34;Pepperoni~123\n&#34;);
+  $dbh-&#62;pg_putcopydata(&#34;Mushroom~314\n&#34;);
+  $dbh-&#62;pg_putcopydata(&#34;Anchovies~6\n&#34;);
+  $dbh-&#62;pg_putcopyend();</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pg_putcopyend"
+><b>pg_putcopyend</b></a></h3>
+
+<p>When you are finished with pg_putcopydata, call pg_putcopyend to let the server know that you are done, and it will return to a normal, non-COPY state. Returns a 1 on success. This method will fail if called when not in COPY IN mode.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Large_Objects"
+>Large Objects</a></h2>
+
+<p>DBD::Pg supports all largeobject functions provided by libpq via the <code>$dbh-&#62;pg_lo*</code> methods. Please note that access to a large object, even read-only large objects, must be put into a transaction.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Cursors"
+>Cursors</a></h2>
+
+<p>Although PostgreSQL supports cursors, they have not been used in the current implementation. When DBD::Pg was created, cursors in PostgreSQL could only be used inside a transaction block. Because only one transaction block at a time is allowed, this would have implied the restriction not to use any nested <code>SELECT</code> statements. Therefore the <a href="#execute" class="podlinkpod"
+>&#34;execute&#34;</a> method fetches all data at once into data structures located in the front-end application. This fact must to be considered when selecting large amounts of data!</p>
+
+<p>You can use cursors in your application, but you&#39;ll need to do a little work. First you must declare your cursor. Now you can issue queries against the cursor, then select against your queries. This typically results in a double loop, like this:</p>
+
+<pre class="sh_perl">  # WITH HOLD is not needed if AutoCommit is off
+  $dbh-&#62;do(&#34;DECLARE csr CURSOR WITH HOLD FOR $sql&#34;);
+  while (1) {
+    my $sth = $dbh-&#62;prepare(&#34;fetch 1000 from csr&#34;);
+    $sth-&#62;execute;
+    last if 0 == $sth-&#62;rows;
+
+    while (my $row = $sth-&#62;fetchrow_hashref) {
+      # Do something with the data.
+    }
+  }
+  $dbh-&#62;do(&#34;CLOSE csr&#34;);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Datatype_bool"
+>Datatype bool</a></h2>
+
+<p>The current implementation of PostgreSQL returns &#39;t&#39; for true and &#39;f&#39; for false. From the Perl point of view, this is a rather unfortunate choice. DBD::Pg therefore translates the result for the <code>BOOL</code> data type in a Perlish manner: &#39;f&#39; becomes the number <code>0</code> and &#39;t&#39; becomes the number <code>1</code>. This way the application does not have to check the database-specific returned values for the data-type <code>BOOL</code> because Perl treats <code>0</code> as false and <code>1</code> as true. You may set the <a href="#pg_bool_tf_(boolean)" class="podlinkpod"
+>pg_bool_tf</a> attribute to a true value to change the values back to &#39;t&#39; and &#39;f&#39; if you wish.</p>
+
+<p>Boolean values can be passed to PostgreSQL as TRUE, &#39;t&#39;, &#39;true&#39;, &#39;y&#39;, &#39;yes&#39; or &#39;1&#39; for true and FALSE, &#39;f&#39;, &#39;false&#39;, &#39;n&#39;, &#39;no&#39; or &#39;0&#39; for false.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Schema_support"
+>Schema support</a></h2>
+
+<p>The PostgreSQL schema concept may differ from those of other databases. In a nutshell, a schema is a named collection of objects within a single database. Please refer to the PostgreSQL documentation for more details:</p>
+
+<p><a href="http://www.postgresql.org/docs/current/static/ddl-schemas.html" class="podlinkurl"
+>http://www.postgresql.org/docs/current/static/ddl-schemas.html</a></p>
+
+<p>DBD::Pg does not provide explicit support for PostgreSQL schemas. However, schema functionality may be used without any restrictions by explicitly addressing schema objects, e.g.</p>
+
+<pre class="sh_perl">  my $res = $dbh-&#62;selectall_arrayref(&#34;SELECT * FROM my_schema.my_table&#34;);</pre>
+
+<p>or by manipulating the schema search path with <code>SET search_path</code>, e.g.</p>
+
+<pre class="sh_perl">  $dbh-&#62;do(&#34;SET search_path TO my_schema, public&#34;);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<a href="http://search.cpan.org/~timb/DBI/DBI.pm">The DBI module</a>
+
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>To report a bug, or view the current list of bugs, please visit <a href="http://rt.cpan.org/Public/Dist/Display.html?Name=DBD-Pg" class="podlinkurl"
+>http://rt.cpan.org/Public/Dist/Display.html?Name=DBD-Pg</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DEVELOPMENT"
+>DEVELOPMENT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Patches can be submitted to rt.cpan.org. Detailed information on how to help out with this module can be found in the README.dev file. The latest development version can be obtained via: git clone <a href="git://bucardo.org/dbdpg.git" class="podlinkurl"
+>git://bucardo.org/dbdpg.git</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DBI by Tim Bunce <a href="http://www.tim.bunce.name" class="podlinkurl"
+>http://www.tim.bunce.name</a></p>
+
+<p>The original DBD-Pg was by Edmund Mergl (E.Mergl@bawue.de) and Jeffrey W. Baker (jwbaker@acm.org). Major developers include David Wheeler &#60;david@justatheory.com&#62;, Jason Stewart &#60;jason@openinformatics.com&#62;, Bruce Momjian &#60;pgman@candle.pha.pa.us&#62;, and Greg Sabino Mullane &#60;greg@turnstep.com&#62;, with help from many others: see the <em>Changes</em> file for a complete list.</p>
+
+<p>Parts of this package were originally copied from DBI and DBD-Oracle.</p>
+
+<p><b>Mailing List</b></p>
+
+<p>The current maintainers may be reached through the &#39;dbd-pg&#39; mailing list: &#60;dbd-pg@perl.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (C) 1994-2012, Greg Sabino Mullane</p>
+
+<p>This module (DBD::Pg) is free software; you can redistribute it and/or modify it under the same terms as Perl 5.10.0. For more details, see the full text of the licenses in the directory LICENSES.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78259 Uploads, 24725 Distributions
+106040 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 08:20:23 2012 GMT (0.317419052124023) @cpansearch1 -->
+ </body>
+</html>

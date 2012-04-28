@@ -1,0 +1,511 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Perl6::Pod - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Perl6-Pod",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Perl6-Pod-0.35",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Perl6::Pod",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ZAG",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Perl6::Pod">permalink</a></div>
+  <a href="/~zag/">Zahatski Aliaksandr</a> &gt;
+  <a href="/~zag/Perl6-Pod-0.35/">Perl6-Pod-0.35</a> &gt;
+  Perl6::Pod
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/4325b08f86fbde1e06b0c005ec94f67b?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/Z/ZA/ZAG/Perl6-Pod-0.35.tar.gz">Perl6-Pod-0.35.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Perl6%3A%3APod;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ZAG/Perl6-Pod-0.35/lib/Perl6/Pod.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="http://rt.cpan.org/Public/Dist/Display.html?Name=Perl6::Pod">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.35 &nbsp;
+<span class="noprint">
+  <a href="/src/ZAG/Perl6-Pod-0.35/lib/Perl6/Pod.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#General_syntactic_structure'>General syntactic structure</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Delimited_blocks'>Delimited blocks</a>
+      <li class='indexItem indexItem3'><a href='#Paragraph_blocks'>Paragraph blocks</a>
+      <li class='indexItem indexItem3'><a href='#Abbreviated_blocks'>Abbreviated blocks</a>
+      <li class='indexItem indexItem3'><a href='#Block_equivalence'>Block equivalence</a>
+      <li class='indexItem indexItem3'><a href='#Standard_configuration_options'>Standard configuration options</a>
+      <ul   class='indexList indexList4'>
+        <li class='indexItem indexItem4'><a href='#:numbered'>:numbered</a>
+        <li class='indexItem indexItem4'><a href='#:term'>:term</a>
+        <li class='indexItem indexItem4'><a href='#:formatted'>:formatted</a>
+        <li class='indexItem indexItem4'><a href='#:like'>:like</a>
+        <li class='indexItem indexItem4'><a href='#:allow'>:allow</a>
+      </ul>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Blocks'>Blocks</a>
+    <li class='indexItem indexItem2'><a href='#Formatting_codes'>Formatting codes</a>
+    <li class='indexItem indexItem2'><a href='#Diffs_to_SYNOPSIS_26_by_25_Apr_2007_edition'>Diffs to SYNOPSIS 26 by 25 Apr 2007 edition</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Perl6::Pod - use Perl6&#39;s pod in perl5 programms</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Perl6::Pod;
+
+    =comment
+    Some text
+
+    =head1 Head title
+    =para
+    Some text of para</pre>
+
+<p>Delimited style, paragraph style, or abbreviated style of blocks</p>
+
+<pre class="sh_perl">    =begin para :formatted&#60;B I&#62;
+    Perl is a stable, cross platform programming language. 
+    =end para
+
+    =for para :formatted&#60;B I&#62;
+    Perl is a stable, cross platform programming language. 
+
+    =para
+    Perl is a stable, cross platform programming language. </pre>
+
+<p>Unordered lists</p>
+
+<pre class="sh_perl">    =item FreeBSD
+    =item Linux
+    =item Windows
+    =item MacOS</pre>
+
+<p>Definition lists</p>
+
+<pre class="sh_perl">    =defn XML
+    Extensible Markup Language
+    =defn HTML
+    Hyper Text Markup Language</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Pod is an evolution of Perl 5&#39;s Plain Old Documentation (POD) markup. Compared to Perl 5 POD, Perldoc&#39;s Pod dialect is much more uniform, somewhat more compact, and considerably more expressive. The Pod dialect also differs in that it is a purely descriptive mark-up notation, with no presentational components.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="General_syntactic_structure"
+>General syntactic structure</a></h2>
+
+<p>Pod documents are specified using directives, which are used to declare configuration information and to delimit blocks of textual content. Every directive starts with an equals sign (=) in the first column.</p>
+
+<p>The content of a document is specified within one or more blocks. Every Pod block may be declared in any of three equivalent forms: delimited style, paragraph style, or abbreviated style.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Delimited_blocks"
+>Delimited blocks</a></h3>
+
+<p>The general syntax is:</p>
+
+<pre class="sh_perl">    =begin BLOCK_TYPE  OPTIONAL CONFIG INFO
+    =                  OPTIONAL EXTRA CONFIG INFO
+    BLOCK CONTENTS
+    =end BLOCK_TYPE</pre>
+
+<p>For example:</p>
+
+<pre class="sh_perl">    =begin table  :caption&#60;Table of Contents&#62;
+        Constants           1
+        Variables           10
+        Subroutines         33
+        Everything else     57
+    =end table
+
+    =begin Name  :required
+    =            :width(50)
+    The applicant&#39;s full name
+    =end Name
+
+    =begin Contact  :optional
+    The applicant&#39;s contact details
+    =end Contact</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Paragraph_blocks"
+>Paragraph blocks</a></h3>
+
+<p>Paragraph blocks are introduced by a =for marker and terminated by the next Pod directive or the first blank line (which is not considered to be part of the block&#39;s contents). The =for marker is followed by the name of the block and optional configuration information. The general syntax is:</p>
+
+<pre class="sh_perl">    =for BLOCK_TYPE  OPTIONAL CONFIG INFO
+    =                OPTIONAL EXTRA CONFIG INFO
+    BLOCK DATA</pre>
+
+<p>For example:</p>
+
+<pre class="sh_perl">    =for table  :caption&#60;Table of Contents&#62;
+        Constants           1
+        Variables           10
+        Subroutines         33
+        Everything else     57
+
+    =for Name  :required
+    =          :width(50)
+    The applicant&#39;s full name
+
+    =for Contact  :optional
+    The applicant&#39;s contact details</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Abbreviated_blocks"
+>Abbreviated blocks</a></h3>
+
+<p>Abbreviated blocks are introduced by an &#39;=&#39; sign in the first column, which is followed immediately by the typename of the block. The rest of the line is treated as block data, rather than as configuration. The content terminates at the next Pod directive or the first blank line (which is not part of the block data). The general syntax is:</p>
+
+<pre class="sh_perl">    =BLOCK_TYPE  BLOCK DATA
+    MORE BLOCK DATA</pre>
+
+<p>For example:</p>
+
+<pre class="sh_perl">    =table
+        Constants           1
+        Variables           10
+        Subroutines         33
+        Everything else     57
+
+    =Name     The applicant&#39;s full name
+    =Contact  The applicant&#39;s contact details</pre>
+
+<p>Note that abbreviated blocks cannot specify configuration information. If configuration is required, use a =for or =begin/=end instead.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Block_equivalence"
+>Block equivalence</a></h3>
+
+<p>The three block specifications (delimited, paragraph, and abbreviated) are treated identically by the underlying documentation model, so you can use whichever form is most convenient for a particular documentation task. In the descriptions that follow, the abbreviated form will generally be used, but should be read as standing for all three forms equally.</p>
+
+<p>For example, although Headings shows only:</p>
+
+<pre class="sh_perl">    =head1 Top Level Heading</pre>
+
+<p>this automatically implies that you could also write that block as:</p>
+
+<pre class="sh_perl">    =for head1
+    Top Level Heading</pre>
+
+<p>or:</p>
+
+<pre class="sh_perl">    =begin head1
+    Top Level Heading
+    =end head1</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Standard_configuration_options"
+>Standard configuration options</a></h3>
+
+<p>Pod predefines a small number of standard configuration options that can be applied uniformly to built-in block types. These include:</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name=":numbered"
+>:numbered</a></h4>
+
+<p>This option specifies that the block is to be numbered. The most common use of this option is to create numbered headings and ordered lists, but it can be applied to any block.</p>
+
+<p>It is up to individual renderers to decide how to display any numbering associated with other types of blocks.</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name=":term"
+>:term</a></h4>
+
+<p>This option specifies that a list item is the definition of a term. See Definition lists.</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name=":formatted"
+>:formatted</a></h4>
+
+<p>This option specifies that the contents of the block should be treated as if they had one or more formatting codes placed around them.</p>
+
+<p>For example, instead of:</p>
+
+<pre class="sh_perl">        =for comment
+            The next para is both important and fundamental,
+            so doubly emphasize it...
+
+        =begin para
+        B&#60;I&#60;
+        Warning: Do not immerse in water. Do not expose to bright light.
+        Do not feed after midnight.
+        &#62;&#62;
+        =end para</pre>
+
+<p>you can just write:</p>
+
+<pre class="sh_perl">        =begin para :formatted&#60;B I&#62;
+        Warning: Do not immerse in water. Do not expose to bright light.
+        Do not feed after midnight.
+        =end para</pre>
+
+<p>The internal representations of these two versions are exactly the same, except that the second one retains the :formatted option information as part of the resulting block object.</p>
+
+<p>Like all formatting codes, codes applied via a :formatted are inherently cumulative. For example, if the block itself is already inside a formatting code, that formatting code will still apply, in addition to the extra &#34;basis&#34; and &#34;important&#34; formatting specified by :formatted&#60;B I&#62;.</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name=":like"
+>:like</a></h4>
+
+<p>This option specifies that a block or config has the same formatting properties as the type named by its value. This is useful for creating related configurations. For example:</p>
+
+<pre class="sh_perl">        =config head2  :like&#60;head1&#62; :formatted&#60;I&#62;</pre>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name=":allow"
+>:allow</a></h4>
+
+<p>This option expects a list of formatting codes that are to be recognized within any  codes that appear in (or are implicitly applied to) the current block. The option is most often used on =code blocks to allow mark-up within those otherwise verbatim blocks, though it can be used in any block that contains verbatim text. See Formatting within code blocks.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Blocks"
+>Blocks</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Formatting_codes"
+>Formatting codes</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Diffs_to_SYNOPSIS_26_by_25_Apr_2007_edition"
+>Diffs to SYNOPSIS 26 by 25 Apr 2007 edition</a></h2>
+
+<dl>
+<dt><a name='delete'></a><a name="delete_&#34;Code&#34;_type_from_perl6-ish_option_pairs_due_security_and_portability(compatibilitty)_issues"
+>delete &#34;Code&#34; type from perl6-ish option pairs due security and portability(compatibilitty) issues</a></dt>
+
+<dd>
+<dt><a name='use'></a><a name="use_:allow_attribute_for_any_block_or_formatting_codes"
+>use :allow attribute for any block or formatting codes</a></dt>
+</dl>
+
+<p>Perl6::Pod - in general, a set of classes, scripts and modules for maintance Perl6&#39;s pod documentation using perl5.</p>
+
+<p>The suite contain the following classes:</p>
+
+<ul>
+<li><a href="/~zag/Perl6-Pod-0.35/lib/Perl6/Pod/Parser.pm" class="podlinkpod"
+>Perl6::Pod::Parser</a> - base class for perl6&#39;s pod parsers</li>
+
+<li><a href="/~zag/Perl6-Pod-0.35/lib/Perl6/Pod/Block.pm" class="podlinkpod"
+>Perl6::Pod::Block</a> - base class for Perldoc blocks</li>
+
+<li><a href="/~zag/Perl6-Pod-0.35/lib/Perl6/Pod/FormattingCode.pm" class="podlinkpod"
+>Perl6::Pod::FormattingCode</a> - base class for formatting code</li>
+
+<li><a href="/~zag/Perl6-Pod-0.35/lib/Perl6/Pod/To.pm" class="podlinkpod"
+>Perl6::Pod::To</a> - base class for output formatters</li>
+</ul>
+
+<p>DOCUMENTING !DOCUMENTING !DOCUMENTING !DOCUMENTING !DOCUMENTING !</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="http://zag.ru/perl6-pod/S26.html" class="podlinkurl"
+>http://zag.ru/perl6-pod/S26.html</a>, Perldoc Pod to HTML converter: <a href="http://zag.ru/perl6-pod/" class="podlinkurl"
+>http://zag.ru/perl6-pod/</a>, <a href="/perldoc?Perl6%3A%3APod%3A%3ALib" class="podlinkpod"
+>Perl6::Pod::Lib</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Zahatski Aliaksandr, &#60;zag@cpan.org&#62;</p>
+
+<p>(Perl6::Pod derived from Perl6::Perldoc by Damian Conway <code>&#60;DCONWAY@CPAN.org&#62;</code>)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (C) 2009-2010 by Zahatski Aliaksandr</p>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself, either Perl version 5.8.8 or, at your option, any later version of Perl 5 you may have available.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78248 Uploads, 24724 Distributions
+106031 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 05:15:33 2012 GMT (0.141649961471558) @cpansearch1 -->
+ </body>
+</html>

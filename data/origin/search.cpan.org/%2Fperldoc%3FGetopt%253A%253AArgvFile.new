@@ -1,0 +1,695 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Getopt::ArgvFile - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Getopt-ArgvFile",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Getopt-ArgvFile-1.11",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Getopt::ArgvFile",3]);
+    _gaq.push(["_setCustomVar",1,"Author","JSTENZEL",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Getopt::ArgvFile">permalink</a></div>
+  <a href="/~jstenzel/">Jochen Stenzel</a> &gt;
+  <a href="/~jstenzel/Getopt-ArgvFile-1.11/">Getopt-ArgvFile-1.11</a> &gt;
+  Getopt::ArgvFile
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/7187fd6076a304b39dbe7e1542c4f4e1?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/J/JS/JSTENZEL/Getopt-ArgvFile-1.11.tar.gz">Getopt-ArgvFile-1.11.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Getopt%3A%3AArgvFile;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~JSTENZEL/Getopt-ArgvFile-1.11/ArgvFile.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Getopt%3A%3ALong">Getopt::Long</a><br>
+<a href="/perldoc?Getopt%3A%3ADeclare">Getopt::Declare</a><br>
+<a href="/perldoc?Getopt%3A%3AAttribute">Getopt::Attribute</a><br>
+<a href="/perldoc?WWW%3A%3AMechanize">WWW::Mechanize</a><br>
+<a href="/perldoc?WWW%3A%3ASearch%3A%3AEbay">WWW::Search::Ebay</a><br>
+<a href="/perldoc?Mail%3A%3ASender">Mail::Sender</a><br>
+<a href="/perldoc?File%3A%3ASlurp">File::Slurp</a><br>
+<a href="/perldoc?Getopt%3A%3ATiny">Getopt::Tiny</a><br>
+<a href="/perldoc?Getopt%3A%3AGetArgs">Getopt::GetArgs</a><br>
+<a href="/perldoc?Getopt%3A%3AStd">Getopt::Std</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Getopt%3A%3AArgvFile">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 3</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 2</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Getopt-ArgvFile">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.11 &nbsp;
+<span class="noprint">
+  <a href="/src/JSTENZEL/Getopt-ArgvFile-1.11/ArgvFile.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#EXPORTS'>EXPORTS</a>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#argvFile()'>argvFile()</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#ONE_LINE_INVOCATION'>ONE LINE INVOCATION</a>
+  <li class='indexItem indexItem1'><a href='#NOTES'>NOTES</a>
+  <li class='indexItem indexItem1'><a href='#LIMITS'>LIMITS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Getopt::ArgvFile - interpolates script options from files into @ARGV or another array</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This manual describes version <b>1.11</b>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>One line invocation - option hints are processed while the module is loaded:</p>
+
+<pre class="sh_perl">  # load module and process option file hints in @ARGV
+  use Getopt::ArgvFile default=&#62;1;
+   
+  # load another module to evaluate the options, e.g.:
+  use Getopt::Long;
+  ...
+
+  # evaluate options, e.g. this common way:
+  GetOptions(\%options, &#39;any&#39;);    # this function is defined in Getopt::Long</pre>
+
+<p>Or suppress option hint processing when the module is loaded, to perform it later on:</p>
+
+<pre class="sh_perl">  # load module, do *not* process option file hints
+  use Getopt::ArgvFile justload=&#62;1;
+   
+  # load another module to evaluate the options, e.g.:
+  use Getopt::Long;
+  ...
+
+  # *now*, solve option file hints
+  Getopt::ArgvFile::argvFile(default=&#62;1);
+
+  # evaluate options, e.g. this common way:
+  GetOptions(\%options, &#39;any&#39;);    # this function is defined in Getopt::Long</pre>
+
+<p>Or use the traditional two step invocation of module loading with <i>symbol import</i> and <i>explicit</i> option file handling:</p>
+
+<pre class="sh_perl">  # Load the module and import the &#38;argvFile symbol
+  # - this will *not* process option hints.
+  # Use *this* syntax to do so, *exactly*.
+  use Getopt::ArgvFile qw(argvFile);
+
+  # load another module to evaluate the options, e.g.:
+  use Getopt::Long;
+  ...
+
+  # *now*, solve option file hints
+  argvFile(default=&#62;1);
+
+  # evaluate options, e.g. this common way:
+  GetOptions(\%options, &#39;any&#39;);    # this function is defined in Getopt::Long</pre>
+
+<p>If options should be processed into another array, this can be done this way:</p>
+
+<pre class="sh_perl">  # prepare target array
+  my @options=(&#39;@options1&#39;, &#39;@options2&#39;, &#39;@options3&#39;);
+
+  ...
+
+  # replace file hints by the options stored in the files
+  argvFile(array=&#62;\@options);</pre>
+
+<p>In case you do not like the &#34;@&#34; prefix it is possible to define an option to be used instead:</p>
+
+<pre class="sh_perl">  # prepare target array
+  my @options=(&#39;-options&#39;, &#39;options1&#39;, &#39;-options&#39;, &#39;options2&#39;);
+
+  ...
+
+  # replace file hints by the options stored in the files
+  argvFile(fileOption=&#62;&#39;options&#39;, array=&#62;\@options);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module simply interpolates option file hints in @ARGV by the contents of the pointed files. This enables option reading from <i>files</i> instead of or additional to the usual reading from the command line.</p>
+
+<p>Alternatively, you can process any array instead of @ARGV which is used by default and mentioned mostly in this manual.</p>
+
+<p>The interpolated @ARGV could be subsequently processed by the usual option handling, e.g. by a Getopt::xxx module. Getopt::ArgvFile does <i>not</i> perform any option handling itself, it only prepares the array @ARGV.</p>
+
+<p>Option files can significantly simplify the call of a script. Imagine the following:</p>
+
+<dl>
+<dt><a name='Breaking'></a><a name="Breaking_command_line_limits"
+>Breaking command line limits</a></dt>
+
+<dd>
+<p>A script may offer a lot of options, with possibly a few of them even taking parameters. If these options and their parameters are passed onto the program call directly, the number of characters accepted by your shells command line may be exceeded.</p>
+
+<p>Perl itself does <i>not</i> limit the number of characters passed to a script by parameters, but the shell or command interpreter often <i>sets</i> a limit here. The same problem may occur if you want to store a long call in a system file like crontab.</p>
+
+<p>If such a limit restricts you, options and parameters may be moved into option files, which will result in a shorter command line call.</p>
+
+<dt><a name='Script'></a><a name="Script_calls_prepared_by_scripts"
+>Script calls prepared by scripts</a></dt>
+
+<dd>
+<p>Sometimes a script calls another script. The options passed onto the nested script could depend on variable situations, such as a users input or the detected environment. In such a case, it <i>can</i> be easier to generate an intermediate option file which is then passed to the nested script.</p>
+
+<p>Or imagine two cron jobs one preparing the other: the first may generate an option file which is then used by the second.</p>
+
+<dt><a name='Simple'></a><a name="Simple_access_to_typical_calling_scenarios"
+>Simple access to typical calling scenarios</a></dt>
+
+<dd>
+<p>If several options need to be set, but in certain circumstances are always the same, it could become sligthly nerveracking to type them in again and again. With an option file, they can be stored <i>once</i> and recalled easily as often as necessary.</p>
+
+<p>Further more, option files may be used to group options. Several settings may set up one certain behaviour of the program, while others influence another. Or a certain set of options may be useful in one typical situation, while another one should be used elsewhere. Or there is a common set of options which has to be used in every call, while other options are added depending on the current needs. Or there are a few user groups with different but typical ways to call your script. In all these cases, option files may collect options belonging together, and may be combined by the script users to set up a certain call. In conjunction with the possiblity to <i>nest</i> such collections, this is perhaps the most powerful feature provided by this method.</p>
+
+<dt><a name='Individual'></a><a name="Individual_and_installationwide_default_options"
+>Individual and installationwide default options</a></dt>
+
+<dd>
+<p>The module allows the programmer to enable user setups of default options; for both individual users or generally <i>all</i> callers of a script. This is especially useful for administrators who can configure the <i>default</i> behaviour of a script by setting up its installationwide startup option file. All script users are free then to completely forget every already configured setup option. And if one of them regularly adds certain options to every call, he could store them in his <i>individual</i> startup option file.</p>
+
+<p>For example, I use this feature to make my scripts both flexible <i>and</i> usable. I have several scripts accessing a database via DBI. The database account parameters as well as the DBI startup settings should not be coded inside the scripts because this is not very flexible, so I implemented them by options. But on the other hand, there should be no need for a normal user to pass all these settings to every script call. My solution for this is to use <i>default</i> option files set up and maintained by an administrator. This is very transparent, most of the users know nothing of these (documented ;-) configuration settings ... and if anything changes, only the option files have to be adapted.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORTS"
+>EXPORTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>No symbol is exported by default, but you may explicitly import the &#34;argvFile()&#34; function <i>using the exact syntax of the following example</i>:</p>
+
+<pre class="sh_perl">  use Getopt::ArgvFile qw(argvFile);</pre>
+
+<p>Please note that this interface is provided for backwards compatibility with versions up to 1.06. By loading the module this way, the traditional import mechanisms take affect and <i><code>argvFile()</code> is not called implicitly</i>.</p>
+
+<p>This means that while option file hints are usually processed implicitly when <code>Getopt::ArgvFile</code> is loaded, the syntax</p>
+
+<pre class="sh_perl">  use Getopt::ArgvFile qw(argvFile);</pre>
+
+<p>requires an <i>extra</i> call of <i>argvFile()</i> to process option files.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>There is only one function, <i>argvFile()</i>, which does all the work of option file hint processing.</p>
+
+<p>Please note that with version 1.07 and above <code>argvFile()</code> is called <i>implicitly</i> when the module is loaded, except this is done in one of the following ways:</p>
+
+<pre class="sh_perl">  # the traditional interface - provided for
+  # backwards compatibility - this loads the
+  # module and imports the &#38;argvFile symbol
+  use Getopt::ArgvFile qw(argvFile);
+
+  --
+
+  # option file processing is explicitly suppressed
+  use Getopt::ArgvFile justload=&#62;1;</pre>
+
+<p>Except for the traditional loading, the complete interface of <code>argvFile()</code> is available via <code>use</code>, but in the typical <code>use</code> syntax without parantheses.</p>
+
+<pre class="sh_perl">  # implicit call of argvFile(default=&#62;1, home=&#62;1)
+  use Getopt::ArgvFile default=&#62;1, home=&#62;1;</pre>
+
+<p>See <i>ONE LINE INVOCATION</i> for further details.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="argvFile()"
+>argvFile()</a></h2>
+
+<p>Scans the command line parameters (stored in @ARGV or an alternatively passed array) for option file hints (see <i>Basics</i> below), reads the pointed files and makes their contents part of the source array (@ARGV by default) replacing the hints.</p>
+
+<p>Because the function was intentionally designed to work on @ARGV and this is still the default behaviour, this manual mostly speaks about @ARGV. Please note that it is possible to process <i>any</i> other array as well.</p>
+
+<p><b>Basics</b></p>
+
+<p>An option file hint is simply the filename preceeded by (at least) one &#34;@&#34; character:</p>
+
+<pre class="sh_perl">  &#62; script -optA argA -optB @optionFile -optC argC</pre>
+
+<p>This will cause argvFile() to scan &#34;optionFile&#34; for options. The element &#34;@optionFile&#34; will be removed from the @ARGV array and will be replaced by the options found.</p>
+
+<p>Note: you can choose another prefix by using the &#34;prefix&#34; parameter, see below.</p>
+
+<p>An option file which cannot be found is quietly skipped.</p>
+
+<p>Well, what is <i>within</i> an option file? It is intended to store <i>command line arguments</i> which should be passed to the called script. They can be stored exactly as they would be written in the command line, but may be spread to multiple lines. To make the file more readable, space and comment lines (starting with a &#34;#&#34;) are allowed additionally. POD comments are supported as well. For example, the call</p>
+
+<pre class="sh_perl">  &#62; script -optA argA -optB -optC cArg par1 par2</pre>
+
+<p>could be transformed into</p>
+
+<pre class="sh_perl">  &#62; script @scriptOptions par1 par2</pre>
+
+<p>where the file &#34;scriptOptions&#34; may look like this:</p>
+
+<pre class="sh_perl">  # option a
+  -optA argA</pre>
+
+<p><code></code></p>
+
+<pre class="sh_perl">  =pod
+  option b
+  =cut
+  -optB</pre>
+
+<p><code></code></p>
+
+<pre class="sh_perl">  # option c
+  -optC cArg</pre>
+
+<p><b>Nested option files</b></p>
+
+<p>Option files can be nested. Recursion is avoided globally, that means that every file will be opened only <i>once</i> (the first time argvFile() finds a hint pointing to it). This is the simplest implementation, indeed, but should be suitable. (Unfortunately, there are <i>LIMITS</i>.)</p>
+
+<p>By using this feature, you may combine groups of typical options into a top level option file, e.g.:</p>
+
+<pre class="sh_perl">  File ab:</pre>
+
+<p><code></code></p>
+
+<pre class="sh_perl">  # option a
+  -optA argA
+  # option b
+  -optB</pre>
+
+<p><code></code></p>
+
+<pre class="sh_perl">  File c:</pre>
+
+<p><code></code></p>
+
+<pre class="sh_perl">  # option c
+  -optC cArg</pre>
+
+<p><code></code></p>
+
+<pre class="sh_perl">  File abc:</pre>
+
+<p><code></code></p>
+
+<pre class="sh_perl">  # combine ab and c
+  @ab @c</pre>
+
+<p>If anyone provides these files, a user can use a very short call:</p>
+
+<pre class="sh_perl">  &#62; script @abc</pre>
+
+<p>and argvFile() will recursively move all the filed program parameters into @ARGV.</p>
+
+<p><b>Relative pathes</b></p>
+
+<p>Pathes in option files might be relative, as in</p>
+
+<pre class="sh_perl">  -file ../file @../../configs/nested</pre>
+
+<p>If written with the (prepared) start directory in mind, that will work, but it can fail when it was written relatively to the option file location because by default those pathes will not be resolved when written from an option file.</p>
+
+<p>Use parameter <code>resolveRelativePathes</code> to switch to path resolution:</p>
+
+<pre class="sh_perl">   argvFile(resolveRelativePathes=&#62;1);</pre>
+
+<p>will cause <code>argvFile()</code> to expand those pathes, both in standard strings and nested option files.</p>
+
+<pre class="sh_perl">   With resolveRelativePathes, both pathes
+   will be resolved:
+
+   -file ../file @../../configs/nested</pre>
+
+<p>A path is resolved <i>relative to the option file</i> it is found in.</p>
+
+<p><b>Environment variables</b></p>
+
+<p>Similar to relative pathes, environment variables are handled differently depending if the option is specified at the commandline or from an option file, due to bypassed shell processing. By default, <code>argvFile()</code> does not resolve environment variables. But if required it can be commanded to do so via parameter <code>resolveEnvVars</code>.</p>
+
+<pre class="sh_perl">  argvFile(resolveEnvVars=&#62;1);</pre>
+
+<p><b>Startup support</b></p>
+
+<p>By setting several named parameters, you can enable automatic processing of <i>startup option files</i>. There are three of them:</p>
+
+<p>The <i>default option file</i> is searched in the installation path of the calling script, the <i>home option file</i> is searched in the users home (evaluated via environment variable &#34;HOME&#34;), and the <i>current option script</i> is searched in the current directory.</p>
+
+<p>By default, all startup option files are expected to be named like the script, preceeded by a dot, but this can be adapted to individual needs if preferred, see below.</p>
+
+<pre class="sh_perl"> Examples:
+  If a script located in &#34;/path/script&#34; is invoked in directory
+  /the/current/dir by a user &#34;user&#34; whoms &#34;HOME&#34; variable points
+  to &#34;/homes/user&#34;, the following happens:</pre>
+
+<p><code></code></p>
+
+<pre class="sh_perl">  argvFile()                    # ignores all startup option files;
+  argvFile(default=&#62;1)          # searches and expands &#34;/path/.script&#34;,
+                                # if available (the &#34;default&#34; settings);
+  argvFile(home=&#62;1)             # searches and expands &#34;/homes/user/.script&#34;,
+                                # if available (the &#34;home&#34; settings);
+  argvFile(current=&#62;1)          # searches and expands &#34;/the/current/dir/.script&#34;,
+                                # if available (the &#34;current&#34; settings);
+  argvFile(
+           default =&#62; 1,
+           home    =&#62; 1,
+           current =&#62; 1
+          )                     # tries to handle all startups.</pre>
+
+<p>Any true value will activate the setting it is assigned to.</p>
+
+<p>In case the &#34;.script&#34; name rule does not meet your needs or does not fit into a certain policy, the expected startup filenames can be set up by an option <code>startupFilename</code>. The option value may be a scalar used as the expected filename, or a reference to an array of accepted choices, or a reference to code returning the name - plainly or as a reference to an array of names. Such callback code will be called <i>once</i> and will receive the name of the script.</p>
+
+<pre class="sh_perl">  # use &#34;.config&#34;
+  argvFile(startupFilename =&#62; &#39;.config&#39;);
+
+  # use &#34;.config&#34; or &#34;config&#34;
+  argvFile(startupFilename =&#62; [qw(.config config)]);
+
+  # emulate the default behaviour,
+  # but use an extra dot postfix
+  my $nameBuilder=sub {join(&#39;&#39;, &#39;.&#39;, basename($_[0]), &#39;.&#39;);};
+  argvFile(startupFilename =&#62; $nameBuilder);
+
+  # use .(script)rc or .(script)/config
+  my $nameBuilder=sub
+                   {
+                    my $sname=basename($_[0]);
+                    [&#34;.${sname}rc&#34;, &#34;.${sname}/config&#34;];
+                   };
+  argvFile(startupFilename =&#62; $nameBuilder);</pre>
+
+<p>Note that the list variants will use the first matching filename in each possible startup-file path. For example if your array is <code>[&#39;.scriptrc&#39;, &#39;.script.config&#39;]</code> and you have both a <code>.scriptrc</code> and a <code>.script.config</code> file in (say) your current directory, only the <code>.scriptrc</code> file will be used, as it is the first found.</p>
+
+<p>The contents found in a startup file is placed <i>before</i> all explicitly set command line arguments. This enables to overwrite a default setting by an explicit option. If all startup files are read, <i>current</i> startup files can overwrite <i>home</i> files which have preceedence over <i>default</i> ones, so that the <i>default</i> startups are most common. In other words, if the module would not support startup files, you could get the same result with &#34;script @/path/.script @/homes/user/.script @/the/current/dir/.script&#34;.</p>
+
+<p>Note: There is one certain case when overwriting will <i>not</i> work completely because duplicates are sorted out: if all three types of startup files are used and the script is started in the installation directory, the default file will be identical to the current file. The default file is processed, but the current file is skipped as a duplicate later on and will <i>not</i> overwrite settings made caused by the intermediately processed home file. If started in another directory, it <i>will</i> overwrite the home settings. But the alternative seems to be even more confusing: the script would behave differently if just started in its installation path. Because a user might be more aware of configuration editing then of the current path, I choose the current implementation, but this preceedence might become configurable in a future version.</p>
+
+<p>If there is no <i>HOME</i> environment variable, the <i>home</i> setting takes no effect to avoid trouble accessing the root directory.</p>
+
+<p><b>Cascades</b></p>
+
+<p>The function supports multi-level (or so called <i>cascaded</i>) option files. If a filename in an option file hint starts with a &#34;@&#34; again, this complete name is the resolution written back to @ARGV - assuming there will be another utility reading option files.</p>
+
+<pre class="sh_perl"> Examples:
+  @rfile          rfile will be opened, its contents is
+                  made part of @ARGV.
+  @@rfile         cascade: &#34;@rfile&#34; is written back to
+                  @ARGV assuming that there is a subsequent
+                  tool called by the script to which this
+                  hint will be passed to solve it by an own
+                  call of argvFile().</pre>
+
+<p>The number of cascaded hints is unlimited.</p>
+
+<p><b>Processing an alternative array</b></p>
+
+<p>Although the function was designed to process @ARGV, it is possible to process another array as well if you prefer. To do this, simply pass a <i>reference</i> to this array by parameter <b>array</b>.</p>
+
+<pre class="sh_perl"> Examples:
+  argvFile()                    # processes @ARGV;
+  argvFile(array=&#62;\@options);   # processes @options;</pre>
+
+<p><b>Choosing an alternative hint prefix</b></p>
+
+<p>By default, &#34;@&#34; is the prefix used to mark an option file. This can be changed by using the optional parameter <b>prefix</b>:</p>
+
+<pre class="sh_perl"> Examples:
+  argvFile();                   # use &#34;@&#34;;
+  argvFile(prefix=&#62;&#39;~&#39;);        # use &#34;~&#34;;</pre>
+
+<p>Note that the strings &#34;#&#34;, &#34;=&#34;, &#34;-&#34; and &#34;+&#34; are reserved and <i>cannot</i> be chosen here because they are used to start plain or POD comments or are typically option prefixes.</p>
+
+<p><b>Using an option instead of a hint prefix</b></p>
+
+<p>People not familiar with option files might be confused by file prefixes. This can be avoided by offering an <i>option</i> that can be used instead of a prefix, using the optional parameter <b>fileOption</b>:</p>
+
+<pre class="sh_perl">  # install a file option
+  # (all lines are equivalent)
+  argvFile(fileOption=&#62;&#39;options&#39;);
+  argvFile(fileOption=&#62;&#39;-options&#39;);
+  argvFile(fileOption=&#62;&#39;+options&#39;);
+  argvFile(fileOption=&#62;&#39;--options&#39;);</pre>
+
+<p>The name of the option can be specified with or without the usual option prefixes <code>-</code>, <code>--</code> and <code>+</code>.</p>
+
+<p>Once an option is declared, it <i>can</i> replace a prefix. (Prefixes remain in action as well.)</p>
+
+<pre class="sh_perl">   # with -options declared to be a file option,
+   # these sequences are equivalent
+   @file
+   -options file
+
+   # five equivalent cascades
+   @@@@file
+   -options @@@file
+   -options -options @@file
+   -options -options -options @file
+   -options -options -options -options file</pre>
+
+<p>Please note that prefixes are attached to the filename with no spaces in between, while the option declared via -fileOption is separated from the filename by whitespace, as for normal options.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ONE_LINE_INVOCATION"
+>ONE LINE INVOCATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The traditional two line sequence</p>
+
+<pre class="sh_perl">  # load the module
+  use Getopt::ArgvFile qw(argvFile);
+
+  ...
+
+  # solve option files
+  argvFile(default=&#62;1);</pre>
+
+<p>can be reduced to one line - just pass the parameters of <code>argvFile()</code> to <code>use()</code>:</p>
+
+<pre class="sh_perl">  # load module and process option file hints in @ARGV
+  use Getopt::ArgvFile default=&#62;1;</pre>
+
+<p>Please note that in this case option file hints are processed at compile time. This means that if you want to process alternative arrays, these arrays have to be prepared before, usually in a <code>BEGIN</code> block.</p>
+
+<p>In versions 1.07 and above, implicit option file handling is the <i>default</i> and only suppressed for the traditional</p>
+
+<pre class="sh_perl">  use Getopt::ArgvFile qw(argvFile);</pre>
+
+<p>loading, for reasons of backwards compatibility. A simple loading like</p>
+
+<pre class="sh_perl">  use Getopt::ArgvFile;</pre>
+
+<p><i>will</i> process option hints! If you want to suppress this, use the <b><code>justload</code></b> switch:</p>
+
+<pre class="sh_perl">  use Getopt::ArgvFile justload=&#62;1;</pre>
+
+<p>See <i>FUNCTIONS</i> for additional informations.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTES"
+>NOTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If a script calling <code>argvFile()</code> with the <code>default</code> switch is invoked using a relative path, it is strongly recommended to perform the call of <code>argvFile()</code> in the startup directory because <code>argvFile()</code> then uses the <i>relative</i> script path as well.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LIMITS"
+>LIMITS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If an option file does not exist, argvFile() simply ignores it. No message will be displayed, no special return code will be set.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Jochen Stenzel &#60;mailto:perl@jochen-stenzel.de&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 1993-2007 Jochen Stenzel. All rights reserved.</p>
+
+<p>This program is free software, you can redistribute it and/or modify it under the terms of the Artistic License distributed with Perl version 5.003 or (at your option) any later version. Please refer to the Artistic License that came with your Perl distribution for more details.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78060 Uploads, 24682 Distributions
+105862 Modules, 9635 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 05:50:46 2012 GMT (0.136529922485352) @cpansearch1 -->
+ </body>
+</html>

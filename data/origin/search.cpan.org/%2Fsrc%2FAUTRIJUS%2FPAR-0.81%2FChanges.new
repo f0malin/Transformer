@@ -1,0 +1,3601 @@
+____________________________________________________________________________
+[ 10649] By: autrijus                              on 2004/05/22  19:07:05
+        Log: * This be PAR, version 0.81.
+             * Update README.
+	   ! README
+____________________________________________________________________________
+[ 10648] By: autrijus                              on 2004/05/22  18:31:56
+        Log: * Prepare for 0.81: changelog, authors, release date.
+	   ! AUTHORS ChangeLog lib/PAR.pm
+____________________________________________________________________________
+[ 10646] By: autrijus                              on 2004/05/22  17:13:01
+        Log: * On non-Win32 systems, invoking pp-generated executable
+             from PATH now works.
+	   ! lib/PAR.pm myldr/utils.c script/par.pl
+	   ! script/pp
+____________________________________________________________________________
+[ 10645] By: autrijus                              on 2004/05/22  16:40:40
+        Log: * PATH and TEMP env were truncated to the first entry
+             in them, due to a destructive par_findprog().
+             We now strdup() the env value before passing it.
+	   ! myldr/mktmpdir.c myldr/static.c
+____________________________________________________________________________
+[ 10644] By: autrijus                              on 2004/05/22  16:33:24
+        Log: * note clearly that error messages are harmless as long as
+	       tests pass.
+	   ! t/2-pp.t
+____________________________________________________________________________
+[ 10626] By: autrijus                              on 2004/05/22  11:10:19
+        Log: * update Module::Install to 0.33.
+	   ! inc/ExtUtils/AutoInstall.pm
+	   ! inc/Module/Install.pm
+	   ! inc/Module/Install/AutoInstall.pm
+	   ! inc/Module/Install/Base.pm
+	   ! inc/Module/Install/Can.pm
+	   ! inc/Module/Install/Fetch.pm
+	   ! inc/Module/Install/Include.pm
+	   ! inc/Module/Install/Makefile.pm
+	   ! inc/Module/Install/Metadata.pm
+	   ! inc/Module/Install/PAR.pm
+	   ! inc/Module/Install/Win32.pm
+	   ! inc/Module/Install/WriteAll.pm
+	   ! inc/Test/Builder.pm inc/Test/More.pm
+____________________________________________________________________________
+[ 10609] By: autrijus                              on 2004/05/17  18:35:48
+        Log: * require IO::Handle explicitly.
+	   ! script/par.pl
+____________________________________________________________________________
+[ 10608] By: autrijus                              on 2004/05/17  18:35:31
+        Log: * Oops, the HAS_PROCSELFEXE was inadvertently disabled.
+	   ! myldr/internals.c myldr/main.c
+____________________________________________________________________________
+[ 10602] By: autrijus                              on 2004/05/17  16:05:05
+        Log: * Make it build on Perl 5.8.0 on MacOSX.
+	   ! myldr/main.c
+____________________________________________________________________________
+[ 10569] By: autrijus                              on 2004/04/30  20:02:40
+        Log: * bump version.
+             * bump Module::ScanDeps requirement to 0.42.
+	   ! Makefile.PL lib/PAR.pm
+____________________________________________________________________________
+[ 10562] By: autrijus                              on 2004/04/30  19:40:32
+        Log: * "-f Bleach" did not work for ActivePerl on Win32, due to
+	       its use of s///ee.
+	   ! lib/PAR/Filter/Bleach.pm
+____________________________________________________________________________
+[ 10561] By: autrijus                              on 2004/04/30  19:07:34
+        Log: * Pod::Usage now works with PAR.
+             Reported by Steve Hey.
+	   ! lib/PAR.pm lib/PAR/Filter/PatchContent.pm
+____________________________________________________________________________
+[ 10560] By: autrijus                              on 2004/04/30  18:46:49
+        Log: * do not wait until "make" time to perform
+             autoinstall.
+	   ! Makefile.PL
+____________________________________________________________________________
+[ 10559] By: autrijus                              on 2004/04/30  18:45:38
+        Log: * closed an age-long bug: due to XSLoader.pm,
+             stand-alone exe will use the auto/IO/IO.dll
+             of an existing perl install if the pathname
+             is the same as the original.  It manifests 
+             as "tripping over" old perl installations.
+	   ! lib/PAR/Filter/PatchContent.pm script/par.pl
+____________________________________________________________________________
+[ 10558] By: autrijus                              on 2004/04/30  17:38:32
+        Log: * add bug reporters with confirmed bugs to AUTHORS.
+	   ! AUTHORS
+____________________________________________________________________________
+[ 10557] By: autrijus                              on 2004/04/30  17:22:19
+        Log: * add lots of contributors.
+	   ! AUTHORS
+____________________________________________________________________________
+[ 10556] By: autrijus                              on 2004/04/30  17:21:59
+        Log: * Martin Hosken reports that this breaks:
+             % pp -p -o multi.par 1.pl 2.pl
+             % parl multi.par 1.pl
+             It now works, but "-p" is mandatory.
+	   ! script/pp
+____________________________________________________________________________
+[ 10555] By: autrijus                              on 2004/04/30  16:19:56
+        Log: * Alvin Belden reports that AIX no longer builds PAR;
+             take a guess that the same fix for Tru64 will work for it.
+	   ! AUTHORS myldr/Makefile.PL
+____________________________________________________________________________
+[ 10554] By: autrijus                              on 2004/04/30  16:03:14
+        Log: * Let Cygwin and MinGW build EXEs with icons, too; MinGW
+	       can update the icons, but Cygwin can't.
+	       Patch from Darek Adamkiewicz.
+	   + myldr/win32.coff
+	   ! AUTHORS myldr/Makefile.PL
+____________________________________________________________________________
+[ 10553] By: autrijus                              on 2004/04/30  15:15:13
+        Log: * Update to ExtUtils::AutoInstall 0.59.
+	   ! inc/ExtUtils/AutoInstall.pm
+____________________________________________________________________________
+[ 10552] By: autrijus                              on 2004/04/30  15:05:04
+        Log: * MinGW is now officially supported.
+	   ! lib/PAR/Tutorial.pod myldr/static.c
+____________________________________________________________________________
+[ 10551] By: autrijus                              on 2004/04/30  15:04:08
+        Log: * style fix for -Wall cleaniness.
+	   ! myldr/env.c
+____________________________________________________________________________
+[ 10550] By: autrijus                              on 2004/04/30  15:03:31
+        Log: * Give Win9x a chance to use $ENV{USER} etc 
+             to specify the user name.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[ 10549] By: autrijus                              on 2004/04/30  15:02:58
+        Log: * ULONG is always defined for MinGW; remove
+             duplicate definition from sha1.c.
+	   ! myldr/sha1.c
+____________________________________________________________________________
+[ 10548] By: autrijus                              on 2004/04/29  20:12:06
+        Log: * Jesse Vincent reports that readdir()
+             was redefined in static.c.
+             * Beginning of MinGW support.
+	   ! myldr/static.c
+____________________________________________________________________________
+[ 10547] By: autrijus                              on 2004/04/29  19:40:39
+        Log: * reclaim Cygwin. it turns out when 'par.exe'
+             is present, cygperl fakes file tests so
+             (-M 'par'), (-s 'par') etc all work, but
+             open() still fails.  So we test open()
+             instead of relying on filetests.
+	   ! script/par.pl
+____________________________________________________________________________
+[ 10546] By: autrijus                              on 2004/04/29  19:12:52
+        Log: * find libperl for mingw.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[ 10545] By: autrijus                              on 2004/04/29  18:55:11
+        Log: * require Digest.pm too
+	   ! Makefile.PL
+____________________________________________________________________________
+[ 10544] By: autrijus                              on 2004/04/29  18:33:09
+        Log: * Remark that Tru64 is now supported.
+             * Rename 'Darwin' to 'MacOSX' for better understandability.
+	   ! lib/PAR/Tutorial.pod
+____________________________________________________________________________
+[ 10543] By: autrijus                              on 2004/04/29  18:29:12
+        Log: * Final patch from Peter Klewinghaus for building on Tru64.
+             * Also reformatted the Makefile.PL a little.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[ 10540] By: autrijus                              on 2004/04/29  18:13:41
+        Log: * do not let PAUSE index packages in contrib/.
+	   ! Makefile.PL
+____________________________________________________________________________
+[ 10534] By: autrijus                              on 2004/04/28  19:45:07
+        Log: * PL_statbuf needs to be redefined since
+             we don't have myperl at this point.
+	   ! myldr/static.c
+____________________________________________________________________________
+[ 10532] By: autrijus                              on 2004/04/28  19:25:01
+        Log: * include perl.h to reliably get configs and macros.
+             * probe byteorders correctly in sha1.c; this should
+             make solve building problems on Tru64.
+             
+             Reported By: Peter Klewinghaus
+	   ! AUTHORS myldr/sha1.c myldr/static.c
+____________________________________________________________________________
+[ 10512] By: autrijus                              on 2004/04/21  14:47:15
+        Log: * revert the previous patch since it, well, does not work.
+	   ! script/pp
+____________________________________________________________________________
+[ 10510] By: autrijus                              on 2004/04/21  12:54:46
+        Log: * Alan's patch to fix the problem that --icon bloats
+             the program size.
+             * Also, Tk.dll is now properly compressed after a change
+             in icons.
+	   ! script/pp
+____________________________________________________________________________
+[ 10502] By: autrijus                              on 2004/04/17  15:59:38
+        Log: * leftover quote-mark in "C:\TEMP pointed out by
+             Rick Fitzsimmons.
+	   ! AUTHORS lib/PAR.pm script/par.pl
+____________________________________________________________________________
+[ 10501] By: autrijus                              on 2004/04/17  11:51:41
+        Log: * make tabs agree.
+	   ! myldr/env.c
+____________________________________________________________________________
+[ 10500] By: autrijus                              on 2004/04/17  06:54:07
+        Log: Patches from Alan:
+             * static.c: Two places where par_getenv was called with an
+	       incorrect
+             second parameter.
+             * mktmpdir.c: If the necessary dynamic load path was not
+	       defined, the
+             cache dir was not prepended, and the cached copy of libperl
+	     was not
+             used. Malcolm confirmed this patch on his Linux. By
+	     default, his
+             LD_LIBRARY_PATH was not defined. A side effect of this
+	     change is that
+             all possible dynamic load environment variables are created
+	     whether
+             used on a given system or not. Does no harm, but creates
+	     unused values
+             during par execution.
+             * env.c: Removed unused parameter to par_setenv. This had
+	       been reported
+             on the bug list. In __findenv, made string comparison "case
+             insensitive" for Win32. On some systems (like mine) the
+	     PATH variable
+             name is actually "Path", so the cache dir was never
+	     prepended to
+             "Path". Found while fixing the bug in mktmpdir.c
+	   ! myldr/env.c myldr/mktmpdir.c myldr/static.c
+____________________________________________________________________________
+[ 10442] By: autrijus                              on 2004/03/28  14:05:12
+        Log: * This be PAR 0.80_99, "YAPC::Taipei::2004" release.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[ 10420] By: autrijus                              on 2004/03/17  19:12:03
+        Log: * bump version
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[ 10416] By: autrijus                              on 2004/03/17  15:14:13
+        Log: * don't bother looking at the constant string
+             for changes; contributed by TP Diffenbach.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[ 10405] By: autrijus                              on 2004/03/17  11:54:09
+        Log: * Mike Campbell reported that "pp -C" does not work
+             with POSIX.pm.
+	   ! AUTHORS TODO
+____________________________________________________________________________
+[ 10404] By: autrijus                              on 2004/03/17  11:50:19
+        Log: * TP Diffenbach reported that on Win9x, when the
+             user had not logged in, Win32::LoginName() is not
+             the expected empty string, but actually "\n"!
+             That of course broke the cache mechanism.
+	   ! AUTHORS lib/PAR.pm myldr/mktmpdir.c
+	   ! script/par.pl
+____________________________________________________________________________
+[ 10403] By: autrijus                              on 2004/03/17  06:59:23
+        Log: * oops, we require Win32::IconFile.
+	   ! script/pp
+____________________________________________________________________________
+[ 10400] By: autrijus                              on 2004/03/16  16:59:01
+        Log: * changes.
+	   ! ChangeLog Changes
+____________________________________________________________________________
+[ 10399] By: autrijus                              on 2004/03/16  16:25:41
+        Log: * This be PAR, version 0.80.
+             * don't use File::Temp if we are loading
+             File::Temp itself.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[ 10398] By: autrijus                              on 2004/03/16  16:05:51
+        Log: * remove unused variable "i".
+	   ! myldr/utils.c
+____________________________________________________________________________
+[ 10386] By: autrijus                              on 2004/03/15  10:52:37
+        Log: * nooning's revised test suite, with correct par.pl lookup 
+	   ! contrib/automated_pp_test/automated_pp_test.pl
+____________________________________________________________________________
+[ 10385] By: autrijus                              on 2004/03/15  10:52:22
+        Log: * fix grammo in signature test msg
+	   ! t/0-signature.t
+____________________________________________________________________________
+[ 10382] By: autrijus                              on 2004/03/13  20:18:33
+        Log: * Alan's patch to use par_getenv all the way;
+             this is needed for WinNT to work reliably.
+             * Alan also fixed a bogus rv checking on _findfirst.
+	   ! myldr/env.c myldr/internals.c myldr/main.c
+	   ! myldr/mktmpdir.c myldr/static.c myldr/utils.c
+____________________________________________________________________________
+[ 10380] By: autrijus                              on 2004/03/13  20:16:31
+        Log: * correct a small typo.
+	   ! t/2-pp.t
+____________________________________________________________________________
+[ 10363] By: autrijus                              on 2004/03/11  15:43:55
+        Log: * test our copy of pp, not the installed one.
+	   ! t/2-pp.t
+____________________________________________________________________________
+[ 10362] By: autrijus                              on 2004/03/11  15:41:00
+        Log: * do not run the test if "parl" is not built.
+	   ! t/2-pp.t
+____________________________________________________________________________
+[ 10361] By: autrijus                              on 2004/03/11  15:38:33
+        Log: * rename it to pp.t.
+	  +> t/2-pp.t
+	   - t/2-automated.t
+	   ! MANIFEST
+____________________________________________________________________________
+[ 10360] By: autrijus                              on 2004/03/11  15:35:05
+        Log: * up to newer M::I
+	   ! inc/ExtUtils/AutoInstall.pm
+	   ! inc/Module/Install/Metadata.pm
+____________________________________________________________________________
+[ 10359] By: autrijus                              on 2004/03/11  15:30:35
+        Log: * add the test as part of the standard test suite.
+	   + t/2-automated.t
+	   ! MANIFEST
+____________________________________________________________________________
+[ 10358] By: autrijus                              on 2004/03/11  15:29:58
+        Log: * include Test::More and Test::Builder for Malcolm's test.
+	   + inc/Test/Builder.pm inc/Test/More.pm
+	   ! Makefile.PL
+____________________________________________________________________________
+[ 10357] By: autrijus                              on 2004/03/11  15:29:04
+        Log: * handle the rare case that _find_in_inc returns ().
+	   ! script/pp
+____________________________________________________________________________
+[ 10356] By: autrijus                              on 2004/03/11  15:28:31
+        Log: * move pp_new and ppack into their own subdirs.
+	   + contrib/object_oriented_pp/pp_new
+	   + contrib/object_oriented_pp/ppack
+	   - contrib/pp_new contrib/ppack
+____________________________________________________________________________
+[ 10355] By: autrijus                              on 2004/03/11  15:28:04
+        Log: * incoporate Alan's gpp into contrib/.
+	   + contrib/gui_pp/gpp
+	   + contrib/gui_pp/gpp_readme.txt
+____________________________________________________________________________
+[ 10354] By: autrijus                              on 2004/03/11  15:22:41
+        Log: * Macolm Nooning's excellent test case.
+	   + contrib/automated_pp_test/automated_pp_test.pl
+	   + contrib/automated_pp_test/back_tick_a_command.
+	   + pm contrib/automated_pp_test/hello_tk.pl
+	   + contrib/automated_pp_test/hi.ico
+	   + contrib/automated_pp_test/prior_to_test.pm
+	   + contrib/automated_pp_test/remove_file_and_try_
+	   + executable_again.pm
+	   + contrib/automated_pp_test/test_in_further_subd
+	   + ir.pm
+____________________________________________________________________________
+[ 10328] By: autrijus                              on 2004/03/05  06:51:23
+        Log: * patch from Alan to correctly set PAR_GLOBAL_*.
+	   ! myldr/utils.c script/par.pl
+____________________________________________________________________________
+[ 10327] By: autrijus                              on 2004/03/05  06:16:44
+        Log: * Alan reported VC++ does not like us explicitly
+             declaring environ in main.c.
+	   ! myldr/main.c
+____________________________________________________________________________
+[ 10326] By: autrijus                              on 2004/03/05  06:14:23
+        Log: * changes.
+	   ! Changes
+____________________________________________________________________________
+[ 10314] By: autrijus                              on 2004/03/04  00:31:35
+        Log: * tentative fix for missing 'environ' on NEXTish platforms.
+	   ! myldr/main.c
+____________________________________________________________________________
+[ 10300] By: autrijus                              on 2004/03/03  04:07:09
+        Log: * two tiny corrections from Alan.
+	   ! myldr/mktmpdir.c myldr/utils.c
+____________________________________________________________________________
+[ 10299] By: autrijus                              on 2004/03/03  01:01:23
+        Log: * patch from Alan: carry the environment all the
+             way from static=>main=>perl_parse on Win32.
+	   ! myldr/main.c myldr/static.c myldr/utils.c
+____________________________________________________________________________
+[ 10298] By: autrijus                              on 2004/03/02  14:44:42
+        Log: * better patch from Alan to properly test for
+             the existence of embedded PAR_CLEAN.
+             * also removed unneccessary tests for HAS_SETENV
+             and HAS_UNSETENV.
+	   ! myldr/env.c myldr/utils.c
+____________________________________________________________________________
+[ 10297] By: autrijus                              on 2004/03/02  12:51:26
+        Log: * set the default PAR_CLEAN flag as null, not
+             lots of spaces.
+             * update changelog.
+	   ! ChangeLog myldr/utils.c
+____________________________________________________________________________
+[ 10296] By: autrijus                              on 2004/03/02  12:45:32
+        Log: * update TODO.
+             * bump version.
+	   ! TODO lib/PAR.pm
+____________________________________________________________________________
+[ 10295] By: autrijus                              on 2004/03/02  12:40:26
+        Log: * add "-L" to par.pl/parl so their output can
+             be written to a log file instead of STDERR.
+	   ! script/par.pl script/pp
+____________________________________________________________________________
+[ 10294] By: autrijus                              on 2004/03/02  11:58:21
+        Log: * suppress type casting errors.
+	   ! myldr/env.c myldr/utils.c
+____________________________________________________________________________
+[ 10293] By: autrijus                              on 2004/03/02  09:51:42
+        Log: * restore known-good res.
+             * remove a signedness warning from env.c.
+	   ! myldr/env.c myldr/win32.res
+____________________________________________________________________________
+[ 10290] By: autrijus                              on 2004/03/02  08:00:44
+        Log: * use Perl's setenv where able
+	   ! myldr/env.c myldr/static.c myldr/utils.c
+	   ! myldr/win32.res
+____________________________________________________________________________
+[ 10289] By: autrijus                              on 2004/03/02  05:51:08
+        Log: * provide an implementation of setenv()
+             for platforms without it.
+	   + myldr/env.c
+	   ! MANIFEST myldr/static.c myldr/utils.c
+____________________________________________________________________________
+[ 10232] By: autrijus                              on 2004/02/29  06:25:52
+        Log: * oops, I really meant Perl_my_setenv
+	   ! myldr/utils.c
+____________________________________________________________________________
+[ 10231] By: autrijus                              on 2004/02/29  04:43:56
+        Log: * recursive rmdir patch from Alan.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[ 10229] By: autrijus                              on 2004/02/29  01:34:30
+        Log: * remove a commented-out putenv() by request from Alan
+	   ! myldr/internals.c
+____________________________________________________________________________
+[ 10228] By: autrijus                              on 2004/02/28  03:31:50
+        Log: * minor update in M::I
+	   ! inc/Module/Install.pm
+	   ! inc/Module/Install/Metadata.pm
+	   ! inc/Module/Install/WriteAll.pm
+____________________________________________________________________________
+[ 10227] By: autrijus                              on 2004/02/28  03:29:18
+        Log: * switch all putenv() to setenv(), because putenv
+             leaks massively on glibc and causes segfaults.
+             Thanks to Rafael for reporting the problem.
+	   ! AUTHORS myldr/mktmpdir.c myldr/static.c
+	   ! myldr/utils.c
+____________________________________________________________________________
+[ 10226] By: autrijus                              on 2004/02/27  23:56:33
+        Log: * spurious warnings about uninitialized -s.
+	   ! lib/PAR.pm lib/PAR/Heavy.pm
+____________________________________________________________________________
+[ 10225] By: autrijus                              on 2004/02/27  23:52:18
+        Log: * gah. a typo persists.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[ 10223] By: autrijus                              on 2004/02/27  15:27:46
+        Log: * changes.
+	   ! ChangeLog Changes
+____________________________________________________________________________
+[ 10222] By: autrijus                              on 2004/02/27  15:13:01
+        Log: * This be 0.97_78.
+             * attempt to solve case-insensitive DLL problems
+             reported by various folks.
+             * also fix "-S" behaviour, as reported by Malcolm.
+	   ! AUTHORS lib/PAR.pm lib/PAR/Heavy.pm script/pp
+____________________________________________________________________________
+[ 10219] By: autrijus                              on 2004/02/27  01:18:33
+        Log: * remove an spurious putend("PAR_INITIALIZED=1").
+             * PAR_GLOBAL_CLEAN now works again; it was getting
+             flushed by incorrect PAR_TEMP detection code.
+             * closed a buffer overflow in Alan's patch by using
+             strncpy instead of strcpy.
+	   ! myldr/static.c myldr/utils.c
+____________________________________________________________________________
+[ 10218] By: autrijus                              on 2004/02/26  23:44:36
+        Log: * patch from Roderich Schupp to catch spurious =cut
+             during PodStripping.
+	   ! lib/PAR/Filter/PodStrip.pm
+____________________________________________________________________________
+[ 10217] By: autrijus                              on 2004/02/26  23:32:51
+        Log: * Jody Belka reported that we're still linking
+             against libperl on *nix.  Oops.
+	   ! AUTHORS myldr/Makefile.PL
+____________________________________________________________________________
+[ 10216] By: autrijus                              on 2004/02/26  23:27:23
+        Log: * update M::I to 0.23
+	   ! inc/Module/Install.pm
+	   ! inc/Module/Install/AutoInstall.pm
+	   ! inc/Module/Install/Base.pm
+	   ! inc/Module/Install/Can.pm
+	   ! inc/Module/Install/Fetch.pm
+	   ! inc/Module/Install/Include.pm
+	   ! inc/Module/Install/Makefile.pm
+	   ! inc/Module/Install/Metadata.pm
+	   ! inc/Module/Install/PAR.pm
+	   ! inc/Module/Install/PRIVATE/PAR.pm
+	   ! inc/Module/Install/Win32.pm
+	   ! inc/Module/Install/WriteAll.pm
+____________________________________________________________________________
+[ 10210] By: autrijus                              on 2004/02/26  09:10:54
+        Log: * ditto.
+	   ! lib/App/Packer/Backend/PAR.pm
+____________________________________________________________________________
+[ 10209] By: autrijus                              on 2004/02/26  09:10:09
+        Log: * fixed a potential buggy "my ... if ..." construct.
+	   ! lib/PAR/Heavy.pm
+____________________________________________________________________________
+[ 10199] By: autrijus                              on 2004/02/24  18:14:30
+        Log: * should've been checkin basename of parentdir, not the
+	       fullname.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[ 10198] By: autrijus                              on 2004/02/24  18:05:09
+        Log: * Iain Cass discovered a pretty bad case of
+             par.pl, failing on non-static perl in the compile
+             phase (such as "parl -v"), will inadvertently
+             delete everything in the current directory.  Oops.
+	   ! myldr/main.c myldr/mktmpdir.c
+____________________________________________________________________________
+[ 10175] By: autrijus                              on 2004/02/21  21:23:08
+        Log: * Alan Stewart's patch to separate global and local envs.
+             * Global PAR environment variables are now PAR_GLOBAL_xxx,
+	       i.e.:
+             pp -o foo.exe foo.pl
+             set PAR_GLOBAL_CLEAN=1
+             foo.exe
+             will cause foo.exe to use PAR_CLEAN=1 internally.
+             * This solved the problem that prevents one pp-generated
+             executable from exec() or system()'ing another.
+	   ! myldr/internals.c myldr/main.c myldr/utils.c
+	   ! script/par.pl
+____________________________________________________________________________
+[ 10079] By: autrijus                              on 2004/02/17  01:36:59
+        Log: * The previous patch by Alan broke on my WinXP.
+             For now, limit it to only happen when $ENV{PP_TK_ICONFIX}
+	     is true.
+	   ! script/pp
+____________________________________________________________________________
+[ 10078] By: autrijus                              on 2004/02/17  00:21:12
+        Log: * patch from Alan Stewart for replacing the Tk icons as
+	       well.
+	   ! script/pp
+____________________________________________________________________________
+[ 10077] By: autrijus                              on 2004/02/17  00:16:14
+        Log: * slight improvement in pod wording
+	   ! script/pp
+____________________________________________________________________________
+[ 10064] By: autrijus                              on 2004/02/15  23:05:53
+        Log: * changes.
+	   ! Changes
+____________________________________________________________________________
+[ 10063] By: autrijus                              on 2004/02/15  23:00:43
+        Log: * This be PAR, version 0.79_97.
+             * Update various documentations.
+	   - contrib/file2resourceadder.c
+	   - contrib/replaceicon.exe
+	   - contrib/replaceicon.html
+	   ! AUTHORS ChangeLog MANIFEST TODO
+	   ! lib/App/Packer/Backend/PAR.pm script/pp
+____________________________________________________________________________
+[ 10062] By: autrijus                              on 2004/02/15  22:36:52
+        Log: * bump version to 0.79_97.
+             * bump dependency to Win32::Exe 0.04.
+	   ! Makefile.PL lib/PAR.pm
+____________________________________________________________________________
+[ 10061] By: autrijus                              on 2004/02/15  22:33:33
+        Log: * alright, it really, really works.
+	   ! script/pp
+____________________________________________________________________________
+[ 10059] By: autrijus                              on 2004/02/15  22:19:24
+        Log: * ok, it's confirmed as working.
+	   ! script/pp
+____________________________________________________________________________
+[ 10056] By: autrijus                              on 2004/02/15  21:58:39
+        Log: * try adapting to the new, working Win32::Exe
+	   ! script/pp
+____________________________________________________________________________
+[ 10048] By: autrijus                              on 2004/02/15  14:53:31
+        Log: * "pp -m" was broken. duh.  thanks draven
+	   ! script/pp
+____________________________________________________________________________
+[ 10047] By: autrijus                              on 2004/02/15  14:14:46
+        Log: * the second Win32::Exe->new()->update is redundant.
+             as reported by Jouke.
+	   ! script/pp
+____________________________________________________________________________
+[ 10036] By: autrijus                              on 2004/02/14  20:01:04
+        Log: * add optional support for Win32::Exe
+	   ! Makefile.PL
+____________________________________________________________________________
+[ 10027] By: autrijus                              on 2004/02/13  22:56:52
+        Log: * Since now "-v 0" is the same as "-v 1", reflect
+             this fact in pp and tkpp's documentation by redefining
+             the verbosity range to 1..3.
+	   ! script/pp script/tkpp
+____________________________________________________________________________
+[ 10023] By: autrijus                              on 2004/02/13  20:41:25
+        Log: * -v should take an integer, not a string.
+	   ! script/pp
+____________________________________________________________________________
+[ 10014] By: autrijus                              on 2004/02/12  22:47:48
+        Log: * various documentation patches from Malcolm Nooning.
+	   ! AUTHORS script/pp
+____________________________________________________________________________
+[  9958] By: autrijus                              on 2004/02/08  23:19:59
+        Log: * --info, --gui and --icon may now use
+             Win32::Exe where available.
+	   ! script/pp
+____________________________________________________________________________
+[  9956] By: autrijus                              on 2004/02/08  22:09:46
+        Log: * preliminary support for -N/--info.
+	   ! script/pp
+____________________________________________________________________________
+[  9938] By: autrijus                              on 2004/02/07  17:48:23
+        Log: * --info should take an array of values.
+	   ! script/pp
+____________________________________________________________________________
+[  9884] By: autrijus                              on 2004/02/03  23:23:54
+        Log: * don't extract needlessly for cached directories.
+             * we don't need File::Spec anyway.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  9883] By: autrijus                              on 2004/02/03  22:59:55
+        Log: * preemptive extraction now happens only when
+             $ENV{PAR_CLEAN} is not set.
+             * also, put preemptive things under inc/ to
+             keep it from clobbering other temp files,
+             as well as respecting the directory naming
+             conventions.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  9868] By: autrijus                              on 2004/02/02  23:25:21
+        Log: * unpar($0) now preemptively extracts everything;
+             contributed by Barries.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  9867] By: autrijus                              on 2004/02/02  23:24:48
+        Log: * miscellanous debug messages and make rules
+             suggested by Barrie Slaymaker.
+	   ! myldr/Makefile.PL script/par.pl
+____________________________________________________________________________
+[  9808] By: autrijus                              on 2004/01/30  14:46:58
+        Log: * patch from Ian Cass to suppress error when 
+             $ENV{$Config{ldlibpthname}} is not there.
+	   ! lib/App/Packer/Backend/PAR.pm script/pp
+____________________________________________________________________________
+[  9804] By: autrijus                              on 2004/01/30  05:39:42
+        Log: * Alan noted a bad case of RCS expansion
+	   ! lib/App/Packer/Backend/PAR.pm
+____________________________________________________________________________
+[  9770] By: autrijus                              on 2004/01/26  10:59:48
+        Log: * merged Edward's App::Packer::Backend::PAR
+             refactoring.
+	   + contrib/pp_new contrib/ppack
+	   + lib/App/Packer/Temp.pm
+	   ! lib/App/Packer/Backend/PAR.pm
+____________________________________________________________________________
+[  9769] By: autrijus                              on 2004/01/26  07:45:49
+        Log: * "pp -M Module" was not adding the module
+             itself correctly.
+	   ! script/pp
+____________________________________________________________________________
+[  9768] By: autrijus                              on 2004/01/26  05:21:34
+        Log: * oops, forgot a =back directive in POD
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  9765] By: autrijus                              on 2004/01/25  16:09:58
+        Log: * Daniel Cohen-Laroque reported that FindBin.pm doess not
+             play well with "foo.exe" being invoked with "foo" on Win32.
+	   ! AUTHORS script/par.pl
+____________________________________________________________________________
+[  9731] By: autrijus                              on 2004/01/18  15:57:49
+        Log: * initial check-in for a pure-perl replace_icon.
+	   ! script/pp
+____________________________________________________________________________
+[  9704] By: autrijus                              on 2004/01/14  10:41:47
+        Log: * fix manifest.
+             * unlink temp dir even if no DLLs are extracted
+	   ! MANIFEST script/par.pl
+____________________________________________________________________________
+[  9672] By: autrijus                              on 2004/01/11  14:34:02
+        Log: * wrong ifndef detection in sha1.c.
+	   ! myldr/sha1.c
+____________________________________________________________________________
+[  9671] By: autrijus                              on 2004/01/11  14:33:54
+        Log: * use Digest::SHA1 and Digest::MD5 in pure-perl
+             mode if we can.
+	   ! lib/PAR.pm script/par.pl
+____________________________________________________________________________
+[  9660] By: autrijus                              on 2004/01/10  19:33:57
+        Log: * Set $INC to an actual file, as requested
+             by Barrie Slaymaker.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  9659] By: autrijus                              on 2004/01/10  19:08:20
+        Log: * Alan Stewart contributed SHA-1 based
+             cache name, instead of mtime.  Code
+             taken from Digest::SHA1.
+	   + myldr/sha1.c
+	   ! myldr/mktmpdir.c myldr/mktmpdir.h
+____________________________________________________________________________
+[  9658] By: autrijus                              on 2004/01/10  18:57:57
+        Log: * Alan spotted that "pp -d -C" did not work
+             because par_init_env() is called too late.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  9630] By: autrijus                              on 2004/01/08  10:59:30
+        Log: * This be PAR, version 0.79.
+	   ! ChangeLog lib/PAR.pm
+____________________________________________________________________________
+[  9629] By: autrijus                              on 2004/01/07  16:50:29
+        Log: * Damn double negatives.  par_env_clean()
+             is finally fixed to be correct, thanks
+             to Alan Stweart.
+	   ! myldr/mktmpdir.c myldr/utils.c
+____________________________________________________________________________
+[  9627] By: autrijus                              on 2004/01/07  10:58:09
+        Log: * Alan Stewart noticed that ->contents
+             in Archive::Zip returns an extra \x30;
+             it turns out to really want scalar
+             context.
+             * testing for re-using cache filesnames
+             are flawed; this should fix it.
+	   ! lib/PAR/Heavy.pm
+____________________________________________________________________________
+[  9626] By: autrijus                              on 2004/01/07  10:55:02
+        Log: * ouch! par_clean() has the meaning of
+             PAR_CLEAN defined exactly backwards!
+	   ! myldr/utils.c
+____________________________________________________________________________
+[  9624] By: autrijus                              on 2004/01/06  21:13:27
+        Log: * last-minute bugfix: setting PAR_CLEAN=0
+             now actually works.
+	   ! myldr/utils.c
+____________________________________________________________________________
+[  9623] By: autrijus                              on 2004/01/06  21:02:47
+        Log: * This be PAR, version 0.78.
+	   ! ChangeLog lib/PAR.pm
+____________________________________________________________________________
+[  9622] By: autrijus                              on 2004/01/06  20:48:51
+        Log: * Make PAR::Heavy -w safe.
+	   ! lib/PAR/Heavy.pm
+____________________________________________________________________________
+[  9612] By: autrijus                              on 2004/01/05  06:11:27
+        Log: * setting PAR_CLEAN to 0 sould overwrite
+             the -C setting. also spotted by Alan.
+	   ! myldr/main.c myldr/mktmpdir.c myldr/static.c
+	   ! myldr/utils.c
+____________________________________________________________________________
+[  9611] By: autrijus                              on 2004/01/05  05:54:43
+        Log: * typo, pointed out by Alan.
+	   ! myldr/utils.c
+____________________________________________________________________________
+[  9610] By: autrijus                              on 2004/01/04  20:26:54
+        Log: * changes.
+	   ! Changes
+____________________________________________________________________________
+[  9609] By: autrijus                              on 2004/01/04  20:20:53
+        Log: * forgot to require File::Spec.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  9608] By: autrijus                              on 2004/01/04  20:17:28
+        Log: * misspelled PAR_INITIALIZED. :-/
+             * also, par_init_env was called twice.
+	   ! lib/PAR/Heavy.pm myldr/internals.c
+	   ! myldr/main.c myldr/static.c script/par.pl
+____________________________________________________________________________
+[  9607] By: autrijus                              on 2004/01/04  19:44:20
+        Log: * This be 0.77_99.
+	   ! ChangeLog lib/PAR.pm
+____________________________________________________________________________
+[  9606] By: autrijus                              on 2004/01/04  19:35:50
+        Log: * "--clean" now works for "--perlscript" too.
+	   ! lib/PAR.pm script/par.pl
+____________________________________________________________________________
+[  9605] By: autrijus                              on 2004/01/04  19:20:58
+        Log: * new option, "pp -C" / "pp --clean", makes the generated
+             executable clean up itself.
+	   ! lib/PAR/Tutorial.pod myldr/internals.c
+	   ! myldr/main.c myldr/static.c myldr/utils.c
+	   ! script/par.pl script/pp
+____________________________________________________________________________
+[  9604] By: autrijus                              on 2004/01/04  18:08:49
+        Log: * PAR_CLEARTEMP is now PAR_CLEAN.
+             * implement rudimentary loader-rewriting code,
+             courtesy of Randy W. Sims.
+	   ! AUTHORS lib/PAR.pm lib/PAR/Heavy.pm
+	   ! myldr/main.c myldr/mktmpdir.c myldr/static.c
+	   ! script/par.pl t/1-basic.t
+____________________________________________________________________________
+[  9602] By: autrijus                              on 2004/01/04  18:06:34
+        Log: * update manifest for utils.c.
+	   ! MANIFEST
+____________________________________________________________________________
+[  9596] By: autrijus                              on 2004/01/04  07:43:08
+        Log: * rename which.c to utils.c for accuracy.
+	  +> myldr/utils.c
+	   - myldr/which.c
+	   ! myldr/mktmpdir.h
+____________________________________________________________________________
+[  9595] By: autrijus                              on 2004/01/04  07:42:48
+        Log: * oops, forgot to include File::Spec
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  9593] By: autrijus                              on 2004/01/04  07:32:52
+        Log: * set PAR_PROGNAME only once.
+	   ! myldr/which.c
+____________________________________________________________________________
+[  9592] By: autrijus                              on 2004/01/04  07:24:27
+        Log: * implement consistent _tempfile,
+             _set_progname and _set_par_temp() in
+             pure perl.
+	   ! lib/PAR.pm script/par.pl
+____________________________________________________________________________
+[  9591] By: autrijus                              on 2004/01/04  06:36:12
+        Log: * consolidate %DLCache into %FullCache.
+             * fix incorrect loading of Tk/* DLLs
+             reported by Alan.
+	   ! lib/PAR/Heavy.pm script/par.pl
+____________________________________________________________________________
+[  9590] By: autrijus                              on 2004/01/04  06:19:29
+        Log: * Windows does not have unsetenv(), alas.
+             * remove the unused _basename().
+	   ! myldr/main.c myldr/static.c
+____________________________________________________________________________
+[  9589] By: autrijus                              on 2004/01/04  03:34:39
+        Log: * move basename to which.c; add dirname.
+             * per suggestion from Alan Stewart, also 
+             remove the par-$USER directory if
+             PAR_CLEARTEMP is set.
+	   ! myldr/main.c myldr/mktmpdir.c myldr/static.c
+	   ! myldr/which.c
+____________________________________________________________________________
+[  9583] By: autrijus                              on 2004/01/03  18:30:04
+        Log: * never do PAR_CLEARTEMP when PAR_TEMP is set
+             by the user.
+	   ! myldr/main.c myldr/static.c
+____________________________________________________________________________
+[  9582] By: autrijus                              on 2004/01/03  18:21:37
+        Log: * misc changes.
+	   ! Changes MANIFEST inc/Module/Install.pm
+	   ! inc/Module/Install/Base.pm
+	   ! inc/Module/Install/Makefile.pm
+____________________________________________________________________________
+[  9581] By: autrijus                              on 2004/01/03  16:18:29
+        Log: * This be 0.77_98.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  9561] By: autrijus                              on 2004/01/03  04:22:17
+        Log: * typo.
+	   ! script/par.pl
+____________________________________________________________________________
+[  9559] By: autrijus                              on 2004/01/02  18:51:17
+        Log: * self-contained scripts should also use the same
+             temporary directory semantics as self-contained
+             executables, so a pure-perl version of the logic
+             inside mktmpdir.c is reproduced.  (need to think
+             about the PAR.pm case.)
+	   ! script/par.pl
+____________________________________________________________________________
+[  9558] By: autrijus                              on 2004/01/02  18:50:23
+        Log: * slight reordering of arguments.
+             * the last-resort directory is now "." instead of "/".
+             * OS2 should also use Win32-style separators.
+	   ! myldr/mktmpdir.c myldr/mktmpdir.h
+____________________________________________________________________________
+[  9557] By: autrijus                              on 2004/01/02  18:10:04
+        Log: * oops, got the path separators wrong.
+	   ! myldr/mktmpdir.h
+____________________________________________________________________________
+[  9556] By: autrijus                              on 2004/01/02  18:03:07
+        Log: * update manifest.
+	   ! MANIFEST
+____________________________________________________________________________
+[  9555] By: autrijus                              on 2004/01/02  18:02:59
+        Log: * correct use of strtok().
+	   ! myldr/which.c
+____________________________________________________________________________
+[  9554] By: autrijus                              on 2004/01/02  18:02:24
+        Log: * properly initialize NULL pointers.
+             * "procname" should really be "progname".
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[  9553] By: autrijus                              on 2004/01/02  18:01:45
+        Log: * turn debug off by default.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  9552] By: autrijus                              on 2004/01/02  18:01:30
+        Log: * update to EU::AI 0.56.
+	   ! inc/ExtUtils/AutoInstall.pm
+	   ! inc/Module/Install/AutoInstall.pm
+____________________________________________________________________________
+[  9551] By: autrijus                              on 2004/01/02  17:59:52
+        Log: * let the "$0" in usage display use argv[0],
+             instead of the full $progname.
+	   ! script/par.pl
+____________________________________________________________________________
+[  9550] By: autrijus                              on 2004/01/02  17:36:39
+        Log: * oops, was setting username to 'SYSTEM'
+             unconditionally.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[  9549] By: autrijus                              on 2004/01/02  17:29:36
+        Log: * heavy refactoring and cleanup of C code.
+             * use OpenBSD's which.c to determine the
+             correct progname from argv[0].
+	   + myldr/mktmpdir.h myldr/which.c
+	   ! myldr/mktmpdir.c myldr/static.c script/par.pl
+____________________________________________________________________________
+[  9546] By: autrijus                              on 2004/01/02  06:36:46
+        Log: * complete the transition to cache-$MTIME
+             and temp-$PID.
+	   ! myldr/mktmpdir.c myldr/static.c
+____________________________________________________________________________
+[  9543] By: autrijus                              on 2004/01/01  17:25:29
+        Log: * The beginning of non-CLEARTEMP behaviour,
+             by re-using whatever files we can in
+             PAR_TEMP.  Requested by Morbus Iff.
+	   ! lib/PAR.pm myldr/Makefile.PL myldr/main.c
+	   ! myldr/static.c script/par.pl
+____________________________________________________________________________
+[  9536] By: autrijus                              on 2004/01/01  07:13:35
+        Log: * add '#defaults' to MANIFEST.SKIP in anticipation
+             of future support from ExtUtils::MakeMaker.
+	   ! MANIFEST.SKIP
+____________________________________________________________________________
+[  9534] By: autrijus                              on 2004/01/01  06:54:24
+        Log: * By popular demand, default autoinstall to not
+             happen, since people may wish to use PPM or
+             search.cpan.org to install the modules themselves.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  9533] By: autrijus                              on 2004/01/01  06:52:55
+        Log: * Morbus notices that we're needlessly skipping the
+             __DATA__ test for people without IO::Scalar/PerlIO::scalar.
+	   ! t/1-basic.t
+____________________________________________________________________________
+[  9529] By: autrijus                              on 2004/01/01  05:20:38
+        Log: * Alan Stewart pointed out we were not cleaning
+             after temp files correctly.  duh.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[  9527] By: autrijus                              on 2003/12/31  15:27:49
+        Log: * changes.
+	   ! ChangeLog Changes
+____________________________________________________________________________
+[  9525] By: autrijus                              on 2003/12/31  15:12:28
+        Log: * This be PAR 0.77.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  9521] By: autrijus                              on 2003/12/31  14:25:44
+        Log: * updates AUTHORS and last-minute changelog
+	   ! AUTHORS ChangeLog
+____________________________________________________________________________
+[  9520] By: autrijus                              on 2003/12/31  14:15:38
+        Log: * bump version, update build infrastucture
+	   - inc/Module/Install/Bundle.pm
+	   ! MANIFEST Makefile.PL inc/Module/Install.pm
+	   ! inc/Module/Install/Can.pm
+	   ! inc/Module/Install/PRIVATE.pm
+	   ! inc/Module/Install/PRIVATE/PAR.pm lib/PAR.pm
+____________________________________________________________________________
+[  9519] By: autrijus                              on 2003/12/31  14:14:46
+        Log: * README falsly stated we will ask user before
+             downloading nmake.exe.	We won't.
+	   ! README
+____________________________________________________________________________
+[  9518] By: autrijus                              on 2003/12/31  14:09:50
+        Log: * ditto for scripts.
+	   ! script/par.pl script/parl.pod script/pp
+	   ! script/tkpp
+____________________________________________________________________________
+[  9517] By: autrijus                              on 2003/12/31  14:04:33
+        Log: * update copyright strings to 2004.
+	   ! lib/PAR/FAQ.pod lib/PAR/Filter.pm
+	   ! lib/PAR/Filter/Bleach.pm
+	   ! lib/PAR/Filter/Bytecode.pm
+	   ! lib/PAR/Filter/Obfuscate.pm
+	   ! lib/PAR/Filter/PatchContent.pm
+	   ! lib/PAR/Filter/PodStrip.pm lib/PAR/Heavy.pm
+	   ! lib/PAR/Tutorial.pod
+____________________________________________________________________________
+[  9487] By: autrijus                              on 2003/12/30  02:18:42
+        Log: * work around utf8_heavy.pl swash bug in perl 5.6.x.
+	   ! lib/PAR/Filter/PatchContent.pm script/pp
+____________________________________________________________________________
+[  9486] By: autrijus                              on 2003/12/29  16:59:56
+        Log: * be less verbose during make.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  9485] By: autrijus                              on 2003/12/29  16:57:24
+        Log: * removed the ".out" part from the default
+             "a.out.par" and "a.out.pl" names.
+             * "pp -r" now works against -p and -P.
+	   ! script/pp
+____________________________________________________________________________
+[  9484] By: autrijus                              on 2003/12/29  16:56:24
+        Log: * redraw camel to improve edges contrast
+	   ! myldr/win32.res
+____________________________________________________________________________
+[  9467] By: autrijus                              on 2003/12/28  05:22:50
+        Log: * remove the gpg input box altogether.
+	   ! script/tkpp
+____________________________________________________________________________
+[  9466] By: autrijus                              on 2003/12/28  05:14:18
+        Log: * Patch from Alan Stewart to make tkpp
+             work against Tk800.024.
+	   ! script/tkpp
+____________________________________________________________________________
+[  9465] By: autrijus                              on 2003/12/28  05:01:09
+        Log: * use strcmpi() instead of the very kludgy
+             tolower() from ctype.h
+	   ! myldr/static.c
+____________________________________________________________________________
+[  9462] By: autrijus                              on 2003/12/28  02:28:50
+        Log: * changes.
+	   ! ChangeLog Changes
+____________________________________________________________________________
+[  9460] By: autrijus                              on 2003/12/28  02:00:30
+        Log: * This be 0.76_99, for real.
+	   ! Makefile.PL myldr/Makefile.PL myldr/static.c
+____________________________________________________________________________
+[  9459] By: autrijus                              on 2003/12/28  01:18:54
+        Log: * This be PAR, 0.76_99.
+	   ! MANIFEST lib/PAR.pm
+____________________________________________________________________________
+[  9458] By: autrijus                              on 2003/12/28  01:08:37
+        Log: * the static .exe now launches not par.exe,
+             but the same name as the full .exe file.
+             * fix infinite loop trying to free par.exe
+             as a library.
+	   ! myldr/mktmpdir.c myldr/static.c
+____________________________________________________________________________
+[  9457] By: autrijus                              on 2003/12/28  00:41:15
+        Log: * fix Ilya's typo that nilled $link_exe.
+             * made it compile under VS.NET now.
+	   ! Makefile.PL myldr/Makefile.PL myldr/static.c
+____________________________________________________________________________
+[  9387] By: autrijus                              on 2003/12/23  07:08:48
+        Log: * New Filter, PAR::Filter::Obfuscate, based on
+	       B::Deobfuscate.
+	   + lib/PAR/Filter/Obfuscate.pm
+	   ! MANIFEST lib/PAR/Filter.pm
+____________________________________________________________________________
+[  9363] By: autrijus                              on 2003/12/20  01:17:25
+        Log: * Rob Dixon reported that Win9x's "make" does not work
+             due to extra "@[" and "]" pairs.  Let's fix it.
+	   ! inc/ExtUtils/AutoInstall.pm
+	   ! inc/Module/Install/AutoInstall.pm
+	   ! inc/Module/Install/Include.pm
+	   ! inc/Module/Install/PRIVATE/PAR.pm
+____________________________________________________________________________
+[  9362] By: autrijus                              on 2003/12/20  01:14:38
+        Log: * add license metadata.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  9359] By: autrijus                              on 2003/12/19  22:28:54
+        Log: * Merge 1.1 from Doug Gruber.  Mostly cosmetic changes.
+	   ! script/tkpp
+____________________________________________________________________________
+[  9357] By: autrijus                              on 2003/12/19  13:34:07
+        Log: * add Bundle and WriteAll, in preparation to
+             the eventual bundling of everything.
+	   + inc/Module/Install/Bundle.pm
+	   + inc/Module/Install/WriteAll.pm
+____________________________________________________________________________
+[  9356] By: autrijus                              on 2003/12/19  13:33:42
+        Log: * update to a newer Module::Install.
+	   ! inc/Module/Install.pm
+	   ! inc/Module/Install/Base.pm
+	   ! inc/Module/Install/Can.pm
+	   ! inc/Module/Install/Fetch.pm
+	   ! inc/Module/Install/Makefile.pm
+	   ! inc/Module/Install/Metadata.pm
+	   ! inc/Module/Install/PAR.pm
+	   ! inc/Module/Install/Win32.pm
+____________________________________________________________________________
+[  9355] By: autrijus                              on 2003/12/19  13:12:28
+        Log: * Ilya Zakharevich made PAR support OS2.  Yay!
+	   ! AUTHORS myldr/Makefile.PL myldr/internals.c
+	   ! myldr/main.c myldr/static.c
+____________________________________________________________________________
+[  9276] By: autrijus                              on 2003/12/11  22:46:02
+        Log: * This be PAR 0.76_98, the version that fixes
+             interoperation with newer Archive::Zip.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  9275] By: autrijus                              on 2003/12/11  22:45:00
+        Log: * update todo.
+	   ! TODO
+____________________________________________________________________________
+[  9274] By: autrijus                              on 2003/12/11  22:42:56
+        Log: * starting to implement Morbus Iff's suggestiong
+             in renaming par.exe to agree with static.exe's
+             current name.
+	   ! myldr/static.c
+____________________________________________________________________________
+[  9273] By: autrijus                              on 2003/12/11  22:09:17
+        Log: * Ned Konz enlightened me on how to write correct
+             EOCD headers into embedded PAR files.
+	   ! AUTHORS script/par.pl
+____________________________________________________________________________
+[  9196] By: autrijus                              on 2003/12/08  11:00:42
+        Log: * Ryan Briones pointed out that App::Packer::Backend::PAR
+             has been misplaced into App/Packer/PAR.
+	  +> lib/App/Packer/Backend/PAR.pm
+	   - lib/App/Packer/PAR.pm
+	   ! AUTHORS MANIFEST
+____________________________________________________________________________
+[  8985] By: autrijus                              on 2003/11/22  00:22:08
+        Log: * Scott R. Godin pointed out that new EU::MM
+             warrants a new entry in MANIFEST.SKIP.
+	   ! MANIFEST.SKIP
+____________________________________________________________________________
+[  8981] By: autrijus                              on 2003/11/20  13:29:03
+        Log: * patch from Roderish to fix win32 short/long pathname
+             confusions
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  8889] By: autrijus                              on 2003/11/15  16:49:10
+        Log: * fix autobuilder for activestate ppm machine.
+	   ! MANIFEST.SKIP
+____________________________________________________________________________
+[  8777] By: autrijus                              on 2003/11/11  07:05:37
+        Log: * _find_in_inc could return an empty list.
+	   ! script/pp
+____________________________________________________________________________
+[  8653] By: autrijus                              on 2003/11/01  17:30:44
+        Log: * we gained NetBSD.
+	   ! lib/PAR/Tutorial.pod
+____________________________________________________________________________
+[  8621] By: autrijus                              on 2003/10/29  17:03:20
+        Log: * add podmaster to authors.
+	   ! AUTHORS
+____________________________________________________________________________
+[  8611] By: autrijus                              on 2003/10/29  03:25:28
+        Log: * depend on Zlib 1.30 for its static compilation.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  8609] By: autrijus                              on 2003/10/28  23:22:25
+        Log: * Forgot to add Doug Gruber (author of tkpp)
+             to AUTHORS.  Sorry, Doug.
+	   ! AUTHORS
+____________________________________________________________________________
+[  8607] By: autrijus                              on 2003/10/28  12:04:24
+        Log: * This be PAR, Version 0.76.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  8606] By: autrijus                              on 2003/10/28  11:48:53
+        Log: * do not probe for an executable par.pl.
+	   ! script/pp
+____________________________________________________________________________
+[  8595] By: autrijus                              on 2003/10/28  04:38:21
+        Log: * We now warn for missing files, thanks to Matthew Braid.
+	   ! script/pp
+____________________________________________________________________________
+[  8594] By: autrijus                              on 2003/10/28  04:23:56
+        Log: * upgrade M::I.
+	   ! inc/Module/Install.pm
+	   ! inc/Module/Install/Makefile.pm
+	   ! inc/Module/Install/Metadata.pm
+____________________________________________________________________________
+[  8593] By: autrijus                              on 2003/10/28  04:23:11
+        Log: * Add Digest::SHA1 as a pre-prerequisite for
+             Module::Signature.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  8586] By: autrijus                              on 2003/10/27  12:08:42
+        Log: * Mention Bleach and Bytecode filters in changelog.
+	   ! ChangeLog
+____________________________________________________________________________
+[  8585] By: autrijus                              on 2003/10/27  12:06:44
+        Log: * Fully document -f and -F.
+	   ! script/pp
+____________________________________________________________________________
+[  8584] By: autrijus                              on 2003/10/27  11:44:43
+        Log: * Add the long-awaited, PHP-friendly Bytecode filter.
+             We can sa "Perl is equally obscurable as Java" now!
+	   + lib/PAR/Filter/Bytecode.pm
+	   ! MANIFEST lib/PAR/Filter.pm
+____________________________________________________________________________
+[  8583] By: autrijus                              on 2003/10/27  11:27:17
+        Log: * Fix typo.
+	   ! lib/PAR/Filter/Bleach.pm
+____________________________________________________________________________
+[  8582] By: autrijus                              on 2003/10/27  11:27:03
+        Log: * Update documentations
+	   ! README lib/PAR/Tutorial.pod
+____________________________________________________________________________
+[  8581] By: autrijus                              on 2003/10/27  11:26:34
+        Log: * Update authors.
+	   ! AUTHORS
+____________________________________________________________________________
+[  8579] By: autrijus                              on 2003/10/27  10:10:06
+        Log: * proper version detection and explain of the bug.
+	   ! myldr/internals.c
+____________________________________________________________________________
+[  8577] By: autrijus                              on 2003/10/27  09:27:42
+        Log: * We are saddened to learn that 5.9.0 is similarly broken,
+             despite the inclusion of my mg.c patch, against all reason.
+	   ! myldr/internals.c
+____________________________________________________________________________
+[  8575] By: autrijus                              on 2003/10/27  06:31:16
+        Log: * Excise the gpg prompt.
+             * Display the preference setup dialog automatically on the
+	       first time.
+	   ! script/tkpp
+____________________________________________________________________________
+[  8574] By: autrijus                              on 2003/10/27  05:08:02
+        Log: * make it runnable with just Core Tk.
+	   ! script/tkpp
+____________________________________________________________________________
+[  8573] By: autrijus                              on 2003/10/27  02:32:10
+        Log: * another approach, as suggested by Abhijit.
+	   ! myldr/internals.c
+____________________________________________________________________________
+[  8570] By: autrijus                              on 2003/10/26  11:24:43
+        Log: * jouke reports abhijit's fix does not really work.
+	   ! myldr/internals.c
+____________________________________________________________________________
+[  8569] By: autrijus                              on 2003/10/26  10:54:32
+        Log: * requiring M::SD 0.32.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  8567] By: autrijus                              on 2003/10/26  09:16:48
+        Log: * Proper, non-corrupting perl 5.8.1 fix from Abhijit.
+	   ! myldr/internals.c
+____________________________________________________________________________
+[  8566] By: autrijus                              on 2003/10/26  09:11:44
+        Log: * try a more robust open.
+	   ! lib/PAR/Filter.pm
+____________________________________________________________________________
+[  8565] By: autrijus                              on 2003/10/26  08:13:06
+        Log: * Patch from Alan Stewart to fix tkpp's clobbering of
+	       prefs.
+	   ! script/tkpp
+____________________________________________________________________________
+[  8564] By: autrijus                              on 2003/10/26  08:12:54
+        Log: * also manify tkpp.
+	   ! inc/Module/Install/PRIVATE.pm
+	   ! inc/Module/Install/PRIVATE/PAR.pm
+____________________________________________________________________________
+[  8561] By: autrijus                              on 2003/10/26  02:39:27
+        Log: * Add FAQ and Tutorial to MANIFEST and remove Intro.
+	   ! MANIFEST
+____________________________________________________________________________
+[  8560] By: autrijus                              on 2003/10/26  02:39:01
+        Log: * rework README and changelog a bit to reflect new
+	       additions.
+	   ! ChangeLog README
+____________________________________________________________________________
+[  8559] By: autrijus                              on 2003/10/26  02:37:51
+        Log: * Bump version.
+             * Mention tkpp, PAR::Tutorial and PAR::FAQ.
+	   ! lib/PAR.pm script/pp
+____________________________________________________________________________
+[  8558] By: autrijus                              on 2003/10/26  02:37:17
+        Log: * Work around perl 5.8.1 off-by-one bug in mg.c.
+	   ! myldr/internals.c
+____________________________________________________________________________
+[  8557] By: autrijus                              on 2003/10/26  02:36:51
+        Log: * Refactor pod_strip out to use PAR::Filter::PodStrip.
+	   ! myldr/file2c.pl script/par.pl
+____________________________________________________________________________
+[  8556] By: autrijus                              on 2003/10/26  02:35:41
+        Log: * Use __DATA__, not __END__, so "pp" can pack "tkpp".
+	   ! script/tkpp
+____________________________________________________________________________
+[  8555] By: autrijus                              on 2003/10/26  02:34:51
+        Log: * PAR::Intro retired.
+             * Adds PAR::FAQ and PAR::Tutorial.
+	   + lib/PAR/FAQ.pod lib/PAR/Tutorial.pod
+	   - lib/PAR/Intro.pod
+____________________________________________________________________________
+[  8554] By: autrijus                              on 2003/10/26  02:34:27
+        Log: * The PAR filter suite.
+	   ! lib/PAR/Filter.pm lib/PAR/Filter/Bleach.pm
+	   ! lib/PAR/Filter/PatchContent.pm
+	   ! lib/PAR/Filter/PodStrip.pm
+____________________________________________________________________________
+[  8553] By: autrijus                              on 2003/10/26  02:29:48
+        Log: * Run tkpp through perltidy to remove the unsightly tabs.
+             * Re-coded documentations.
+	   ! script/tkpp
+____________________________________________________________________________
+[  8552] By: autrijus                              on 2003/10/24  09:29:01
+        Log: * try letting Tk add image with -M.
+	   ! lib/PAR/Filter/PatchContent.pm
+____________________________________________________________________________
+[  8551] By: autrijus                              on 2003/10/24  09:28:01
+        Log: * update the inc/.
+	   ! MANIFEST inc/ExtUtils/AutoInstall.pm
+	   ! inc/Module/Install/AutoInstall.pm
+	   ! inc/Module/Install/Can.pm
+	   ! inc/Module/Install/Fetch.pm
+	   ! inc/Module/Install/Include.pm
+	   ! inc/Module/Install/Makefile.pm
+	   ! inc/Module/Install/Metadata.pm
+	   ! inc/Module/Install/Win32.pm
+____________________________________________________________________________
+[  8547] By: autrijus                              on 2003/10/24  01:34:05
+        Log: * modified pp and tkpp to make them work with Filters.
+	   ! script/pp script/tkpp
+____________________________________________________________________________
+[  8546] By: autrijus                              on 2003/10/24  01:33:41
+        Log: * upgrade to newer M::I
+	   ! inc/Module/Install.pm
+	   ! inc/Module/Install/Base.pm
+	   ! inc/Module/Install/PAR.pm
+____________________________________________________________________________
+[  8545] By: autrijus                              on 2003/10/24  01:30:02
+        Log: * add PAR::Filter, the input filter suite.
+	   + lib/PAR/Filter.pm
+	   ! lib/PAR/Filter/Bleach.pm
+	   ! lib/PAR/Filter/PatchContent.pm
+	   ! lib/PAR/Filter/PodStrip.pm
+____________________________________________________________________________
+[  8544] By: autrijus                              on 2003/10/23  21:12:21
+        Log: * Filters support landed, as "pp -f" and "pp -F".
+	   + lib/PAR/Filter/Bleach.pm
+	   + lib/PAR/Filter/PatchContent.pm
+	   + lib/PAR/Filter/PodStrip.pm
+	   ! script/pp
+____________________________________________________________________________
+[  8540] By: autrijus                              on 2003/10/23  04:42:43
+        Log: * This be 0.75_99, stopgap release to fix 5.8.1
+	       compatibility.
+	   ! MANIFEST Makefile.PL lib/PAR.pm
+	   ! myldr/internals.c
+____________________________________________________________________________
+[  8510] By: autrijus                              on 2003/10/20  23:35:17
+        Log: * Implement "pp -P"/"pp --perlscript" to produce
+             stand-alone perl scripts.
+             * Add documentations for -N/--info.
+             * Add documentations for -f/--filter and -F/--modfilter.
+	   ! script/pp
+____________________________________________________________________________
+[  8509] By: autrijus                              on 2003/10/20  18:49:25
+        Log: * add sensible POD section to tkpp.
+	   ! script/tkpp
+____________________________________________________________________________
+[  8507] By: autrijus                              on 2003/10/20  16:57:49
+        Log: * tkpp, graphical pp frontend, contributed by Doug Gruber.
+	   + script/tkpp
+____________________________________________________________________________
+[  8491] By: autrijus                              on 2003/10/19  15:19:48
+        Log: * make par.pl pass use strict; although we can't use it
+	   ! script/par.pl
+____________________________________________________________________________
+[  8450] By: autrijus                              on 2003/10/17  10:41:19
+        Log: * change SvPV_nolen to SvPVX to avoid GET magic
+	   ! myldr/internals.c
+____________________________________________________________________________
+[  8424] By: autrijus                              on 2003/10/15  23:58:36
+        Log: * add Iain Cass to authors.
+	   ! AUTHORS
+____________________________________________________________________________
+[  8423] By: autrijus                              on 2003/10/15  23:58:19
+        Log: * Ian Cass notes that fakeargv[0] becomes garbled
+             after we execute the SET magic.  Try to compensate
+             it by getting it back.
+	   ! myldr/internals.c
+____________________________________________________________________________
+[  8326] By: autrijus                              on 2003/10/03  23:06:55
+        Log: * move the par temp directory from /tmp/par into ./_par/.
+             (on suggestion from brian ingerson.)
+             * add support for 'use lib "http://freepan.org/par.cgi?";'
+             so when the URI ends in /[?&;]/, "pm=$filename" is appended
+             to the request.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  8309] By: autrijus                              on 2003/10/01  08:58:16
+        Log: * add SYS_INIT3 and other stuff from the revised
+             perlembed.pod -- cargo cult at its best.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  8308] By: autrijus                              on 2003/09/30  12:26:10
+        Log: * remove spurious UTF8 BOM bytes that breaks
+             Jouke's pVoice modules.
+             * move patch_content before pod_strip and other
+             input filters in the future.
+	   ! script/pp
+____________________________________________________________________________
+[  8199] By: autrijus                              on 2003/09/21  10:45:03
+        Log: * This be PAR, version 0.75.
+             * On Win32, the PE info headers should no longer show
+	       PAR_XXXXXXXXXXX.
+	   ! ChangeLog myldr/win32.res
+____________________________________________________________________________
+[  8195] By: autrijus                              on 2003/09/20  20:37:54
+        Log: * depends on Module::ScanDeps 0.30 to fix the "use base"
+             problem reported by Jouke.
+	   ! ChangeLog Makefile.PL
+____________________________________________________________________________
+[  8193] By: autrijus                              on 2003/09/20  19:22:31
+        Log: * prepares for 0.75 release.
+	   ! ChangeLog lib/PAR.pm
+____________________________________________________________________________
+[  8164] By: autrijus                              on 2003/09/17  20:30:36
+        Log: * Up dependencies to Module::ScanDeps 0.29
+             and Module::Signature 0.35.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  8163] By: autrijus                              on 2003/09/17  20:28:23
+        Log: * update to Module::Install 0.23.
+	   ! inc/ExtUtils/AutoInstall.pm
+	   ! inc/Module/Install.pm
+	   ! inc/Module/Install/Base.pm
+	   ! inc/Module/Install/Metadata.pm
+	   ! inc/Module/Install/PAR.pm
+____________________________________________________________________________
+[  8162] By: autrijus                              on 2003/09/17  20:25:55
+        Log: * bump version.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  8161] By: autrijus                              on 2003/09/17  20:25:20
+        Log: * Implements Karl Forner's suggestion to allow
+             "pp file.par" to process existing PAR files.
+	   ! script/pp
+____________________________________________________________________________
+[  8160] By: autrijus                              on 2003/09/17  20:06:10
+        Log: * Mike Stok reports that "pp" against multiple
+             scripts was broken.
+	   ! AUTHORS script/pp
+____________________________________________________________________________
+[  8159] By: autrijus                              on 2003/09/17  20:00:48
+        Log: * Karl Forner catches a bug preventing "-M data.file"
+             from being included.  Fixed.
+	   ! AUTHORS script/pp
+____________________________________________________________________________
+[  7864] By: autrijus                              on 2003/09/04  15:19:49
+        Log: * [cpan #3723] Exit code not propagated from PAR-packed
+	       executables
+             (patch from RSHUPP.)
+	   ! myldr/main.c
+____________________________________________________________________________
+[  7648] By: autrijus                              on 2003/08/21  21:16:16
+        Log: * an extra # sign during output.
+	   ! t/0-signature.t
+____________________________________________________________________________
+[  7621] By: autrijus                              on 2003/08/20  09:46:48
+        Log: * This be PAR, version 0.74.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  7620] By: autrijus                              on 2003/08/20  09:45:10
+        Log: * revise changelog a bit.
+	   ! ChangeLog
+____________________________________________________________________________
+[  7619] By: autrijus                              on 2003/08/20  09:37:38
+        Log: * bump requirement to PAR::Dist 0.05, ScanDeps 0.28.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  7618] By: autrijus                              on 2003/08/20  09:29:59
+        Log: * do not exit() inside par.pl's BEGIN block.
+	   ! script/par.pl
+____________________________________________________________________________
+[  7617] By: autrijus                              on 2003/08/20  09:28:48
+        Log: * prettier (at least imho) icon.
+	   ! myldr/win32.res
+____________________________________________________________________________
+[  7615] By: autrijus                              on 2003/08/20  08:55:55
+        Log: * remove debug flag.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  7614] By: autrijus                              on 2003/08/20  08:54:50
+        Log: * eliminates "callback called on exit" warnings.
+             * also fixed access violations on win32 when such warnings
+	       are warranted.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  7606] By: autrijus                              on 2003/08/19  15:29:29
+        Log: * add Daniel Shane to authors list.
+	   ! AUTHORS
+____________________________________________________________________________
+[  7605] By: autrijus                              on 2003/08/19  15:17:43
+        Log: * Daniel Shane's cygwin doesn't built because
+             it wants libperl.dll.a.  Fancy that.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  7591] By: autrijus                              on 2003/08/18  16:06:58
+        Log: * update changelog to mention recursive reentrancy.
+	   ! ChangeLog
+____________________________________________________________________________
+[  7590] By: autrijus                              on 2003/08/18  16:03:39
+        Log: * Correct deal with multi-layer reentrancy by files in PAR
+             that "use PAR 'otherfile.par'" themselves.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  7589] By: autrijus                              on 2003/08/18  15:48:29
+        Log: * reverts to the old auto-run-$0 behaviour.
+	   ! lib/PAR.pm script/par.pl
+____________________________________________________________________________
+[  7558] By: autrijus                              on 2003/08/16  04:32:39
+        Log: * patch from Alan Stewart to properly cleanup allocated
+	       Dlls.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[  7542] By: autrijus                              on 2003/08/14  16:21:14
+        Log: * changelog.
+	   ! ChangeLog
+____________________________________________________________________________
+[  7525] By: autrijus                              on 2003/08/14  08:45:06
+        Log: * -X was broken; it only handled full pathnames.  Now it
+             can take Module::Name or Module/Name.pm.
+             * now unconditionally prefix "-X PAR"; PAR.pm is strictly
+             unneccessary for pp-generated PAR files anyway.
+             * remove $PAR::__reading since it's not used naymore.
+	   ! script/pp
+____________________________________________________________________________
+[  7523] By: autrijus                              on 2003/08/14  08:33:52
+        Log: * 
+	   ! script/pp
+____________________________________________________________________________
+[  7522] By: autrijus                              on 2003/08/14  08:22:48
+        Log: * remove $PAR::__reading and the horrible ->tell kluge.
+	   ! lib/PAR.pm lib/PAR/Heavy.pm script/par.pl
+____________________________________________________________________________
+[  7520] By: autrijus                              on 2003/08/14  08:14:03
+        Log: * remove PAR_MKTMPDIR from internals.c.
+	   ! myldr/internals.c
+____________________________________________________________________________
+[  7519] By: autrijus                              on 2003/08/14  08:11:54
+        Log: * Alan Stewart suggests to drop _rmtmpdir for main.c
+             if it's spawned by static.c.
+             * also drop PAR_MKTMPDIR flag since it's now mandatory.
+	   ! myldr/main.c myldr/mktmpdir.c myldr/static.c
+____________________________________________________________________________
+[  7518] By: autrijus                              on 2003/08/14  07:50:47
+        Log: * Nathan's doc patch to mention reload_libs.
+	   ! lib/PAR/Intro.pod
+____________________________________________________________________________
+[  7438] By: autrijus                              on 2003/08/11  08:06:45
+        Log: * document the auto-completion feature available
+             in parl -i and par.pl -i.
+	   ! script/par.pl script/parl.pod
+____________________________________________________________________________
+[  7435] By: autrijus                              on 2003/08/11  06:32:55
+        Log: * ScanDeps 0.26.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  7433] By: autrijus                              on 2003/08/11  05:34:39
+        Log: * supports diagnostics.pm on win32.
+	   ! script/pp
+____________________________________________________________________________
+[  7432] By: autrijus                              on 2003/08/11  05:29:19
+        Log: * Cleaned-up patch from Nathan Byrd: implement reload_libs
+             to reload modules from PAR files.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  7429] By: autrijus                              on 2003/08/11  02:12:18
+        Log: * don't use constant.pm since it's unneccessary.
+	   ! script/pp
+____________________________________________________________________________
+[  7423] By: autrijus                              on 2003/08/10  16:58:02
+        Log: * add PatchContent rules for Win32::API::Type,
+	       Win32::SystemInfo and SQL::Parser.
+	   ! script/pp
+____________________________________________________________________________
+[  7421] By: autrijus                              on 2003/08/10  15:49:56
+        Log: * pp now requires Module::Signature 0.25 to sign stuff.
+	   ! script/pp
+____________________________________________________________________________
+[  7420] By: autrijus                              on 2003/08/10  15:48:27
+        Log: * upgrade deps to PAR::Dist 0.04 (with url autocompletion)
+             and Module::ScanDeps 0.25 (with correct POD/END/PAR::*)
+	   ! Makefile.PL
+____________________________________________________________________________
+[  7418] By: autrijus                              on 2003/08/10  15:40:21
+        Log: * refactor pp's module modification into content_modify.
+             * add support for SQL::Parser and diagnostics.
+	   ! script/pp
+____________________________________________________________________________
+[  7416] By: autrijus                              on 2003/08/10  15:38:31
+        Log: * Alan Stewart reported that PAR::read_file was broken.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  7400] By: autrijus                              on 2003/08/08  01:56:54
+        Log: * add nathan byrd.  should've done so long ago.
+	   ! AUTHORS
+____________________________________________________________________________
+[  7366] By: autrijus                              on 2003/08/06  13:07:55
+        Log: * oops, "local $^W" doesn't prevent lexical warnings.
+	   ! script/pp
+____________________________________________________________________________
+[  7365] By: autrijus                              on 2003/08/06  13:00:03
+        Log: * Roderich Schupp reports that Net::LDAP::Constants
+             reads its own DATA and podstrip failed it.
+             Fixed by preserving everything after __DATA__.
+	   ! myldr/file2c.pl script/par.pl script/pp
+____________________________________________________________________________
+[  7364] By: autrijus                              on 2003/08/06  12:04:43
+        Log: * revert, since it can't help debian at all
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  7362] By: autrijus                              on 2003/08/06  11:12:25
+        Log: * Try to amend Debian patching repored by Rob Casey.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  7359] By: autrijus                              on 2003/08/06  09:21:21
+        Log: * fix typo
+	   ! ChangeLog
+____________________________________________________________________________
+[  7358] By: autrijus                              on 2003/08/06  08:59:07
+        Log: * changes.
+	   ! ChangeLog Changes
+____________________________________________________________________________
+[  7356] By: autrijus                              on 2003/08/06  08:43:25
+        Log: * This be 0.73.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  7354] By: autrijus                              on 2003/08/06  08:24:36
+        Log: * properly handle Tk->findINC so xbm files can be loaded.
+	   ! script/pp
+____________________________________________________________________________
+[  7353] By: autrijus                              on 2003/08/06  07:50:26
+        Log: * fix failure on win32 when parl.exe is launched from GUI
+	       instead
+             of command line. instead of properly quoting things, we
+	     store the
+             argc/argv array into the environment table.
+	   ! myldr/static.c script/par.pl
+____________________________________________________________________________
+[  7349] By: autrijus                              on 2003/08/05  17:22:57
+        Log: * mention http://par.perl.org/.
+	   ! README lib/App/Packer/PAR.pm lib/PAR.pm
+	   ! lib/PAR/Heavy.pm lib/PAR/Intro.pod
+	   ! script/par.pl script/parl.pod script/pp
+____________________________________________________________________________
+[  7348] By: autrijus                              on 2003/08/05  17:22:36
+        Log: * add doug and alan.
+	   ! AUTHORS
+____________________________________________________________________________
+[  7344] By: autrijus                              on 2003/08/05  04:32:37
+        Log: * properly allow PAR_CLEARSTACK at internals.c level.
+	   ! myldr/internals.c myldr/main.c
+____________________________________________________________________________
+[  7337] By: autrijus                              on 2003/08/04  14:33:22
+        Log: * misc. build fixes. still segfaults on win32.
+	   ! myldr/Makefile.PL myldr/internals.c
+	   ! myldr/main.c myldr/mktmpdir.c
+____________________________________________________________________________
+[  7332] By: autrijus                              on 2003/08/04  10:46:58
+        Log: * Alan Stewart suggests using "rm -f" to avoid spuriois
+	       warnings
+             during "make clean".
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  7328] By: autrijus                              on 2003/08/04  05:50:23
+        Log: * patch from Alan Stewart: properly cleanse temporary
+             directory on win32.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[  7315] By: autrijus                              on 2003/08/03  10:15:07
+        Log: * typo.
+	   ! ChangeLog
+____________________________________________________________________________
+[  7314] By: autrijus                              on 2003/08/03  09:20:20
+        Log: * also consult libpth.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  7313] By: autrijus                              on 2003/08/03  09:17:15
+        Log: * Rob Casey reported that it still doesn't build on debian.
+	   ! AUTHORS myldr/Makefile.PL
+____________________________________________________________________________
+[  7310] By: autrijus                              on 2003/08/03  02:08:13
+        Log: * Randal Schwartz reports that OpenBSD's libperl is in
+	       /usr/lib,
+             not archlibexp/CORE.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  7307] By: autrijus                              on 2003/08/02  14:07:44
+        Log: * changes.
+	   ! Changes
+____________________________________________________________________________
+[  7306] By: autrijus                              on 2003/08/02  12:53:31
+        Log: * This be 0.72, really.
+             * fix --gui by passing $chunk_size from Makefile.PL.
+	   ! myldr/Makefile.PL myldr/file2c.pl
+	   ! myldr/parlsig.pl
+____________________________________________________________________________
+[  7305] By: autrijus                              on 2003/08/02  10:46:54
+        Log: * This be 0.72.
+	   ! AUTHORS ChangeLog
+____________________________________________________________________________
+[  7304] By: autrijus                              on 2003/08/02  10:34:39
+        Log: * oops.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  7303] By: autrijus                              on 2003/08/02  10:33:05
+        Log: * bump version.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  7302] By: autrijus                              on 2003/08/02  10:33:03
+        Log: * work around redhat bug.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  7301] By: autrijus                              on 2003/08/02  10:29:58
+        Log: * stop confusing integer with pointers
+	   ! myldr/static.c
+____________________________________________________________________________
+[  7300] By: autrijus                              on 2003/08/02  10:18:47
+        Log: * explicitly not splitting my_par_pl.c
+	   ! myldr/Makefile.PL myldr/file2c.pl
+____________________________________________________________________________
+[  7299] By: autrijus                              on 2003/08/02  10:18:26
+        Log: * oops, $SIG{__WARN__} hook should be local.
+	   ! script/par.pl
+____________________________________________________________________________
+[  7298] By: autrijus                              on 2003/08/02  10:05:51
+        Log: * oops
+	   ! myldr/internals.c
+____________________________________________________________________________
+[  7297] By: autrijus                              on 2003/08/02  09:55:38
+        Log: * implemented chunked file2c.pl to help RedHat compliation.
+             * move everything to BEGIN stage
+             * initialization code moved to Internals::PAR::BOOT()
+	   ! MANIFEST myldr/Makefile.PL myldr/file2c.pl
+	   ! myldr/internals.c myldr/main.c myldr/static.c
+	   ! script/par.pl
+____________________________________________________________________________
+[  7296] By: autrijus                              on 2003/08/02  07:54:22
+        Log: * move execution to BEGIN block so CHECK blocks inside
+             PAR files gets a chance to run
+	   + myldr/internals.c
+	   ! myldr/main.c script/par.pl
+____________________________________________________________________________
+[  7279] By: autrijus                              on 2003/07/30  16:08:05
+        Log: * oops. must clear all fprintf.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[  7277] By: autrijus                              on 2003/07/30  15:14:08
+        Log: * Module::ScanDeps up to .21.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  7268] By: autrijus                              on 2003/07/30  14:01:04
+        Log: * changes and new todo
+	   ! Changes TODO
+____________________________________________________________________________
+[  7267] By: autrijus                              on 2003/07/30  13:43:29
+        Log: * the previous fix to make RH Linux compile subsequently
+	       breaks Win32.  refixing.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[  7266] By: autrijus                              on 2003/07/30  13:33:07
+        Log: * update changelog.
+	   ! ChangeLog
+____________________________________________________________________________
+[  7265] By: autrijus                              on 2003/07/30  13:32:01
+        Log: * This be 0.71, emergency release.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  7264] By: autrijus                              on 2003/07/30  13:27:48
+        Log: * DATA LOSS BUG under win32, par_rmtmpdir can possibly wipe
+	       all files in the root directory.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[  7242] By: autrijus                              on 2003/07/29  14:29:24
+        Log: * Joseph Landman reports that Red Hat Perl thinks
+             readdir() wants my_perl.  Strange, but fixed.
+	   ! AUTHORS myldr/main.c
+____________________________________________________________________________
+[  7241] By: autrijus                              on 2003/07/29  14:28:49
+        Log: * changes.
+	   ! Changes
+____________________________________________________________________________
+[  7238] By: autrijus                              on 2003/07/29  07:22:42
+        Log: * This be PAR, version 0.70.
+	   ! TODO
+____________________________________________________________________________
+[  7237] By: autrijus                              on 2003/07/29  07:19:11
+        Log: * oops. MSVC at -W3 doesn't like casting const int* to
+	       const char* .
+	   ! myldr/file2c.pl
+____________________________________________________________________________
+[  7236] By: autrijus                              on 2003/07/29  07:00:35
+        Log: * PAR_CLEARSTACK should undef by default.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  7235] By: autrijus                              on 2003/07/29  06:38:37
+        Log: * document @INC fix.
+	   ! ChangeLog
+____________________________________________________________________________
+[  7234] By: autrijus                              on 2003/07/29  06:38:20
+        Log: * new PAR_CLEARSTACK compiler directive to try
+             removing the calling stack so main.pl will see
+             an empty caller(). works, but also memory leaks,
+             so #define it to 0 for now.
+	   ! lib/PAR.pm myldr/main.c script/pp
+____________________________________________________________________________
+[  7233] By: autrijus                              on 2003/07/29  06:37:06
+        Log: * Paul Miller reported that sometimes $ENV{PAR_TEMP}
+             is set but is not a directory.
+	   ! AUTHORS lib/PAR/Heavy.pm
+____________________________________________________________________________
+[  7232] By: autrijus                              on 2003/07/29  03:55:38
+        Log: * because parl's @INC is '.', "parl -i" and friends were
+	       not working.
+             * additionally, pp-generated executables may miss IO.dll
+	       and friends.
+	   ! script/par.pl
+____________________________________________________________________________
+[  7231] By: autrijus                              on 2003/07/29  03:44:59
+        Log: * do not auto-extract DLLs in subdirs, only those that
+             in the same auto/ directory
+	   ! lib/PAR/Heavy.pm
+____________________________________________________________________________
+[  7230] By: autrijus                              on 2003/07/29  03:44:17
+        Log: * don't prompt for Module::Signature if the user can't
+	       install it anyway
+	   ! Makefile.PL
+____________________________________________________________________________
+[  7228] By: autrijus                              on 2003/07/29  01:11:52
+        Log: * update changelog.
+	   ! ChangeLog
+____________________________________________________________________________
+[  7227] By: autrijus                              on 2003/07/29  01:09:51
+        Log: * correctly implement loading of .so files inside
+             the same auto/ path.
+	   ! lib/PAR/Heavy.pm
+____________________________________________________________________________
+[  7226] By: autrijus                              on 2003/07/29  01:09:21
+        Log: * new global variable, $PAR::LastAccessedPAR,
+             stores the $zip handle for the previous unpar.
+             * doc tweaks.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  7224] By: autrijus                              on 2003/07/29  01:06:10
+        Log: * use par_rmtmpdir() to clean up after ourselves.
+             * the rebooting execv(SvPV_nolen(GvSV(tmpgv))
+             was failing -- tmpgv was wrong, and should use
+             execvp instead.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  7223] By: autrijus                              on 2003/07/29  01:03:22
+        Log: * a newer 'make par' that simply uses PAR::Dist.
+	   ! inc/Module/Install/PAR.pm
+____________________________________________________________________________
+[  7220] By: autrijus                              on 2003/07/28  16:33:49
+        Log: * massive typos fixed
+	   ! lib/PAR/Heavy.pm
+____________________________________________________________________________
+[  7219] By: autrijus                              on 2003/07/28  16:21:52
+        Log: * add support for automatically extracting additional
+             shared objects under the same auto/ directory with
+             a dl_file.
+	   ! lib/PAR.pm lib/PAR/Heavy.pm
+____________________________________________________________________________
+[  7214] By: autrijus                              on 2003/07/28  14:35:12
+        Log: * less noisy signature test, thanks to schwern.
+	   ! t/0-signature.t
+____________________________________________________________________________
+[  7209] By: autrijus                              on 2003/07/28  13:01:21
+        Log: * update todo and authors.
+	   ! AUTHORS TODO
+____________________________________________________________________________
+[  7208] By: autrijus                              on 2003/07/28  12:57:19
+        Log: * delete $ENV{PAR_TEMP} during PAR::Dist
+             so as not to mislead recursive spawning.
+             This needs to be seriously fixed later.
+	   ! script/par.pl
+____________________________________________________________________________
+[  7206] By: autrijus                              on 2003/07/28  12:49:24
+        Log: * typo.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  7205] By: autrijus                              on 2003/07/28  12:45:47
+        Log: * update manifest.
+	   ! MANIFEST
+____________________________________________________________________________
+[  7204] By: autrijus                              on 2003/07/28  12:35:38
+        Log: * --icon --gui now works in combination.
+	   + myldr/parlsig.pl
+	   ! myldr/Makefile.PL script/pp
+____________________________________________________________________________
+[  7200] By: autrijus                              on 2003/07/28  11:49:21
+        Log: * foo.
+	   ! myldr/file2c.pl
+____________________________________________________________________________
+[  7199] By: autrijus                              on 2003/07/28  11:49:04
+        Log: * fix replaceicon for real.
+	   ! script/pp
+____________________________________________________________________________
+[  7196] By: autrijus                              on 2003/07/28  11:27:42
+        Log: * Jouke reported that ReplaceIcon.exe may cripple .exe
+	       files.
+             Try fixing it by letting it try on parl.exe first.
+	   ! script/pp
+____________________________________________________________________________
+[  7194] By: autrijus                              on 2003/07/28  11:08:25
+        Log: * more dynperl.
+	   ! inc/Module/Install/PRIVATE/PAR.pm
+____________________________________________________________________________
+[  7193] By: autrijus                              on 2003/07/28  11:08:18
+        Log: * only use long literals for file2c under gcc
+	   ! myldr/Makefile.PL myldr/file2c.pl
+____________________________________________________________________________
+[  7191] By: autrijus                              on 2003/07/28  09:57:14
+        Log: * use $Config{useshrplib} to correctly determine
+	       dynperlness
+	   ! myldr/Makefile.PL script/pp
+____________________________________________________________________________
+[  7189] By: autrijus                              on 2003/07/28  09:28:19
+        Log: * document --multiarch, --icon in ChangeLog.
+             * bump version to 0.70 and starts testing.
+	   ! ChangeLog lib/PAR.pm
+____________________________________________________________________________
+[  7187] By: autrijus                              on 2003/07/28  09:11:49
+        Log: * regen manifest.
+	   ! MANIFEST MANIFEST.SKIP
+____________________________________________________________________________
+[  7186] By: autrijus                              on 2003/07/28  09:09:27
+        Log: * --multiarch support.
+	   ! script/pp
+____________________________________________________________________________
+[  7185] By: autrijus                              on 2003/07/28  09:09:16
+        Log: * oops. was considering everybody as dynperl.
+	   ! inc/Module/Install/PRIVATE/PAR.pm
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  7184] By: autrijus                              on 2003/07/28  08:21:28
+        Log: * style cleanup.
+	   ! myldr/Makefile.PL myldr/static.c
+____________________________________________________________________________
+[  7183] By: autrijus                              on 2003/07/28  08:20:54
+        Log: * much better file2c, using "" instead of {}.
+	   ! myldr/file2c.pl
+____________________________________________________________________________
+[  7181] By: autrijus                              on 2003/07/28  06:18:05
+        Log: * renew manifest.skip
+	   ! MANIFEST.SKIP
+____________________________________________________________________________
+[  7178] By: autrijus                              on 2003/07/28  06:02:31
+        Log: * fix win32 building of static.obj.
+             * pp --icon now officially work.
+	   ! myldr/Makefile.PL script/pp
+____________________________________________________________________________
+[  7176] By: autrijus                              on 2003/07/28  05:44:22
+        Log: * implement --icon support.
+	   ! TODO inc/Module/Install/PRIVATE/PAR.pm
+	   ! myldr/Makefile.PL myldr/static.c script/pp
+____________________________________________________________________________
+[  7173] By: autrijus                              on 2003/07/28  04:19:52
+        Log: * import a new PRIVATE/PAR so win32 builds parldyn too
+	   ! inc/Module/Install/PRIVATE/PAR.pm
+____________________________________________________________________________
+[  7171] By: autrijus                              on 2003/07/28  04:16:06
+        Log: * finally, the correct rmdir routine.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[  7170] By: autrijus                              on 2003/07/28  04:03:56
+        Log: * try properly cleaning up
+	   + contrib/file2resourceadder.c
+	   ! myldr/mktmpdir.c myldr/static.c
+____________________________________________________________________________
+[  7169] By: autrijus                              on 2003/07/28  02:57:00
+        Log: * add replaceicon as contrib.
+	   + contrib/replaceicon.exe
+	   + contrib/replaceicon.html
+____________________________________________________________________________
+[  7168] By: autrijus                              on 2003/07/28  02:30:59
+        Log: * we now have an win32 icon.
+	   + myldr/win32.res
+	   ! myldr/Makefile.PL myldr/static.c
+____________________________________________________________________________
+[  7162] By: autrijus                              on 2003/07/27  15:29:23
+        Log: * make it (barely) compile on win32.
+	   ! myldr/mktmpdir.c myldr/static.c
+____________________________________________________________________________
+[  7159] By: autrijus                              on 2003/07/27  14:05:08
+        Log: * This be 0.69_93.
+	   ! ChangeLog lib/PAR.pm
+____________________________________________________________________________
+[  7153] By: autrijus                              on 2003/07/27  08:39:43
+        Log: * "pp --dependent"
+	   ! MANIFEST MANIFEST.SKIP script/pp
+____________________________________________________________________________
+[  7152] By: autrijus                              on 2003/07/27  08:39:23
+        Log: * tentative changelog for 0.70.
+	   ! ChangeLog
+____________________________________________________________________________
+[  7151] By: autrijus                              on 2003/07/27  08:31:51
+        Log: * new static wrapper (static.c) that extracts libperl first
+             and loads it, for dynamically-linked perls
+             * faster file2c.pl; high-bit chars is now properly handled
+	   + myldr/static.c
+	   ! myldr/Makefile.PL myldr/file2c.pl myldr/main.c
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[  7148] By: autrijus                              on 2003/07/27  07:21:03
+        Log: * "par.pl" and "parl" now interfaces PAR::Dist
+             with -p, -i, -u, -s and -v.
+             * PAR::Dist is now a mandatory prerequisite and
+             bundled inside parl.
+	   ! Makefile.PL script/par.pl script/parl.pod
+____________________________________________________________________________
+[  7001] By: autrijus                              on 2003/07/16  08:16:33
+        Log: * Richard Soderberg's last-minute suggestion about
+             explicitly stating "pp" is bunbled by PAR.pm.
+	   ! AUTHORS lib/PAR.pm
+____________________________________________________________________________
+[  7000] By: autrijus                              on 2003/07/16  08:10:37
+        Log: * This be 0.69_91.
+             * upgrade to Module::Install 0.22.
+	   ! ChangeLog README inc/Module/Install.pm
+	   ! inc/Module/Install/Makefile.pm
+	   ! inc/Module/Install/Metadata.pm
+	   ! inc/Module/Install/PAR.pm
+____________________________________________________________________________
+[  6999] By: autrijus                              on 2003/07/16  07:52:01
+        Log: * three major todo cleaned.
+	   ! TODO
+____________________________________________________________________________
+[  6998] By: autrijus                              on 2003/07/16  07:50:06
+        Log: * add explicit PAR::Dist prerequisite for signing.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  6997] By: autrijus                              on 2003/07/16  07:46:33
+        Log: * Brigitte Jellinek suggested that shlib/ should
+             be made architecture-specific by "pp -l".
+             * In addition, par.pl also recognizes perl-version-specific
+             shlibs.
+             * par/ is now also arch- and perl-version-specific.
+	   ! AUTHORS lib/PAR.pm lib/PAR/Intro.pod
+	   ! script/par.pl script/pp
+____________________________________________________________________________
+[  6983] By: autrijus                              on 2003/07/15  21:53:16
+        Log: * Changes and some todo from oscon.
+	   ! Changes TODO
+____________________________________________________________________________
+[  6899] By: autrijus                              on 2003/07/08  15:33:44
+        Log: * changelog.
+	   ! ChangeLog
+____________________________________________________________________________
+[  6898] By: autrijus                              on 2003/07/08  15:29:29
+        Log: * This be 0.69_90, OSCON tutorial release.
+	   ! Makefile.PL lib/PAR.pm lib/PAR/Heavy.pm
+	   ! script/pp
+____________________________________________________________________________
+[  6650] By: autrijus                              on 2003/06/20  15:32:48
+        Log: * add rshupp to authors
+	   ! AUTHORS
+____________________________________________________________________________
+[  6649] By: autrijus                              on 2003/06/20  15:30:05
+        Log: * patch from Roderich Schupp (RSCHUPP) to fix mkstemp
+             failing from a resetted ENV.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  6487] By: autrijus                              on 2003/06/12  13:24:11
+        Log: * Markus's compiler-friendly patch to add proper
+             linebreaks to file2c.pl.
+	   ! myldr/file2c.pl
+____________________________________________________________________________
+[  6460] By: autrijus                              on 2003/06/11  17:57:47
+        Log: * from Barry Jaspan: spurious warnings about undefined
+             $key in @INC hook.
+             * fixed pod_stripping so it respects the #! line.
+	   ! myldr/file2c.pl script/par.pl script/pp
+____________________________________________________________________________
+[  6319] By: autrijus                              on 2003/06/05  10:56:45
+        Log: * Nathan Byrd suggests par/ to recursively contain
+             subPAR (heh) files inside a PAR file.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  6235] By: autrijus                              on 2003/06/01  16:32:59
+        Log: * don't pollute LibCache with unneccessary duplicate key.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  6234] By: autrijus                              on 2003/06/01  16:29:14
+        Log: * crazyinsomniac pointed out that MANIFEST.SKIP doesn't
+	       work on win32.
+	   ! MANIFEST.SKIP
+____________________________________________________________________________
+[  6217] By: autrijus                              on 2003/05/31  19:41:59
+        Log: * make LibCache respect the unescaped PAR; this 
+             is needed for omit-extension and URL-style PARs.
+	   ! lib/PAR.pm script/par.pl
+____________________________________________________________________________
+[  6216] By: autrijus                              on 2003/05/31  19:24:24
+        Log: * "use PAR 'http://example.com/foo.par'" now works!
+             * perl -MPAR -Ihttp://example.com/foo.par also works!
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  6215] By: autrijus                              on 2003/05/31  17:10:35
+        Log: * oops. --multiarch has slipped into the POD. it really
+             has not been implemented.
+	   ! script/pp
+____________________________________________________________________________
+[  6212] By: autrijus                              on 2003/05/31  13:07:56
+        Log: * changes.
+	   ! Changes
+____________________________________________________________________________
+[  6211] By: autrijus                              on 2003/05/31  12:59:45
+        Log: * changelog.
+	   ! ChangeLog
+____________________________________________________________________________
+[  6210] By: autrijus                              on 2003/05/31  12:42:06
+        Log: * This be PAR 0.69.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  6209] By: autrijus                              on 2003/05/31  12:34:59
+        Log: * store shared files in PAR_TEMP instead of TEMP if
+	       possible.
+             * don't do deferred_unlink on win32.
+	   ! lib/PAR/Heavy.pm
+____________________________________________________________________________
+[  6206] By: autrijus                              on 2003/05/31  12:24:14
+        Log: * turns debug off by default.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  6205] By: autrijus                              on 2003/05/31  12:23:55
+        Log: * use Perl's version of mkdir, fprintf, stderr.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  6204] By: autrijus                              on 2003/05/31  12:23:24
+        Log: * Sisyphus reported that 5.6.1's Zlib cannot recognize
+             the additional directory entries meant for Apache::PAR;
+             disable them for the time being.
+	   ! script/pp
+____________________________________________________________________________
+[  6199] By: autrijus                              on 2003/05/31  09:39:37
+        Log: * win32 should use \, not /, when creating stmpdir.
+             * mkdir() should reuse existing directories and make them
+	       ao+rx.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  6198] By: autrijus                              on 2003/05/31  09:34:02
+        Log: * redundant pod.
+	   ! script/parl.pod
+____________________________________________________________________________
+[  6172] By: autrijus                              on 2003/05/29  19:48:24
+        Log: * This be 0.69.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  6171] By: autrijus                              on 2003/05/29  19:26:20
+        Log: * "pp -o out.par -p -e '...'" now honors -o.
+             * "pp -M filename" now adds it to /, not /lib/,
+             unless filename ends in (pm|ix|al).
+             * "pp -l" now searchs in system library paths, and
+             appends "lib" / prepends ".$dl_ext" where necessary.
+             * generated PAR files now works with Apache::PAR
+             * turned off uninitialized warnings on podstripping
+	   ! script/pp
+____________________________________________________________________________
+[  6169] By: autrijus                              on 2003/05/29  18:53:54
+        Log: * split using /\Q$Config{path_sep}\E/, not
+	       $Config{path_sep}
+	   ! lib/App/Packer/PAR.pm lib/PAR/Heavy.pm
+	   ! script/par.pl
+____________________________________________________________________________
+[  6141] By: autrijus                              on 2003/05/28  04:45:51
+        Log: * Nicholas Clark caught my fubar'ing Markus's mktmp
+             code, which caused Linux and Solaris to segfault.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[  6085] By: autrijus                              on 2003/05/25  18:32:18
+        Log: * This be PAR, 0.68.
+	   ! ChangeLog MANIFEST lib/PAR.pm
+____________________________________________________________________________
+[  6084] By: autrijus                              on 2003/05/25  18:06:55
+        Log: * minor style tweaks suggested by gcc.
+	   ! myldr/mktmpdir.c
+____________________________________________________________________________
+[  6083] By: autrijus                              on 2003/05/25  17:55:55
+        Log: * "pp -l" works on Win32!
+	   ! myldr/Makefile.PL myldr/mktmpdir.c
+	   ! script/par.pl
+____________________________________________________________________________
+[  6082] By: autrijus                              on 2003/05/25  16:37:26
+        Log: * shlib loading now works via "execv(argv[0], argv);".
+	   ! myldr/main.c myldr/mktmpdir.c script/par.pl
+____________________________________________________________________________
+[  6081] By: autrijus                              on 2003/05/25  16:03:59
+        Log: * trying to fix shlib loading.
+	   ! inc/Module/Install/Metadata.pm
+	   ! inc/Module/Install/PAR.pm lib/PAR.pm
+	   ! myldr/mktmpdir.c script/par.pl script/pp
+____________________________________________________________________________
+[  6080] By: autrijus                              on 2003/05/25  15:30:28
+        Log: * shlib.diff ported to win32.
+	   + myldr/mktmpdir.c
+	   ! myldr/main.c script/par.pl
+____________________________________________________________________________
+[  6073] By: autrijus                              on 2003/05/24  19:54:08
+        Log: * up to Module::Install 0.19_99.
+             * bump version in antitipation of imminent release.
+             * pp-generated PAR file may now be browsed via Gecko-based
+             browsers as jar:file:///path/to/FILE.par!/MANIFEST
+	   ! inc/Module/Install.pm
+	   ! inc/Module/Install/PAR.pm lib/PAR.pm script/pp
+____________________________________________________________________________
+[  5961] By: autrijus                              on 2003/05/19  02:25:40
+        Log: * Sisyphus reported that on ActivePerl 626 $Config{ld} is
+	       mysteriously gone.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  5908] By: autrijus                              on 2003/05/16  17:26:55
+        Log: * update to newer EU::AI.
+	   ! inc/ExtUtils/AutoInstall.pm
+____________________________________________________________________________
+[  5907] By: autrijus                              on 2003/05/16  17:21:03
+        Log: * changes.
+	   ! Changes
+____________________________________________________________________________
+[  5905] By: autrijus                              on 2003/05/16  17:17:49
+        Log: * 0.67_89, experimental release.
+             * shlib.diff is merged and thus deleted.
+	   - patches/shlib.diff
+	   ! MANIFEST lib/PAR.pm
+____________________________________________________________________________
+[  5902] By: autrijus                              on 2003/05/16  17:12:13
+        Log: * disable the patch for win32 for now.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  5901] By: autrijus                              on 2003/05/16  16:39:23
+        Log: * shlib's main.c. this probably breaks win32.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  5898] By: autrijus                              on 2003/05/16  16:30:10
+        Log: * more regex tweaks.
+	   ! myldr/file2c.pl script/par.pl script/pp
+____________________________________________________________________________
+[  5895] By: autrijus                              on 2003/05/16  16:12:09
+        Log: * more regex tweaks.
+	   ! myldr/file2c.pl script/par.pl script/pp
+____________________________________________________________________________
+[  5894] By: autrijus                              on 2003/05/16  15:58:18
+        Log: * potentially destablizing (and slowing) patch that merged
+	       the shlib.
+	   ! lib/PAR/Intro.pod myldr/file2c.pl
+	   ! script/par.pl script/pp
+____________________________________________________________________________
+[  5892] By: autrijus                              on 2003/05/16  15:08:26
+        Log: * fully implemented Barry Jaspan's #line suggestion.
+	   - package/podstrip.pl
+	   ! MANIFEST myldr/file2c.pl script/par.pl
+	   ! script/pp
+____________________________________________________________________________
+[  5888] By: autrijus                              on 2003/05/16  14:32:03
+        Log: * ditch lowercased.
+	   - inc/Module/Install/private.pm
+	   - inc/Module/Install/private/PAR.pm
+____________________________________________________________________________
+[  5887] By: autrijus                              on 2003/05/16  14:27:57
+        Log: * add private extensions.
+	   + inc/Module/Install/PRIVATE.pm
+	   + inc/Module/Install/PRIVATE/PAR.pm
+____________________________________________________________________________
+[  5883] By: autrijus                              on 2003/05/16  13:31:32
+        Log: * fix inc/.
+	   ! MANIFEST inc/ExtUtils/AutoInstall.pm
+	   ! inc/Module/Install.pm
+	   ! inc/Module/Install/AutoInstall.pm
+	   ! inc/Module/Install/Base.pm
+	   ! inc/Module/Install/Can.pm
+	   ! inc/Module/Install/Fetch.pm
+	   ! inc/Module/Install/Include.pm
+	   ! inc/Module/Install/Makefile.pm
+	   ! inc/Module/Install/Metadata.pm
+	   ! inc/Module/Install/PAR.pm
+	   ! inc/Module/Install/Win32.pm
+____________________________________________________________________________
+[  5836] By: autrijus                              on 2003/05/14  03:45:50
+        Log: * Sisyphus reported that it no longer builds on activeperl
+	       561; trying a fix.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  5829] By: autrijus                              on 2003/05/13  16:34:01
+        Log: * parl used to pack the in-parl dynamic library (Zlib.so)
+	       with the
+             outside module (Zlib.pm) into newly made executables.  this
+	     breaks
+             stuff for people with a newer Zlib than parl's.  fixed.
+	   ! script/par.pl
+____________________________________________________________________________
+[  5825] By: autrijus                              on 2003/05/13  14:33:08
+        Log: * proof-of-concept new podstrip code.
+	   + package/podstrip.pl
+____________________________________________________________________________
+[  5709] By: autrijus                              on 2003/05/08  12:28:40
+        Log: * upgrade M::I.
+	   ! inc/Module/Install.pm
+	   ! inc/Module/Install/AutoInstall.pm
+	   ! inc/Module/Install/Makefile.pm
+	   ! inc/Module/Install/Metadata.pm
+	   ! inc/Module/Install/PAR.pm
+____________________________________________________________________________
+[  5708] By: autrijus                              on 2003/05/08  12:27:44
+        Log: * bumpingn version.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  5707] By: autrijus                              on 2003/05/08  12:27:01
+        Log: * chmod +x for Heavy too, as pointed out by Markus.
+	   ! lib/PAR/Heavy.pm
+____________________________________________________________________________
+[  5706] By: autrijus                              on 2003/05/08  11:36:00
+        Log: * oops. Markus pointed out that we're infinite recursing.
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  5705] By: autrijus                              on 2003/05/08  11:35:42
+        Log: * doc tweaks.
+	   ! script/pp
+____________________________________________________________________________
+[  5367] By: autrijus                              on 2003/04/15  02:31:22
+        Log: * patch from Phil Sallee to dynload in cygwin with correct
+	       permission.
+	   ! AUTHORS script/par.pl
+____________________________________________________________________________
+[  5233] By: autrijus                              on 2003/04/07  18:11:43
+        Log: * add --gui to "pp -h" usage.
+	   ! script/pp
+____________________________________________________________________________
+[  5222] By: autrijus                              on 2003/04/07  15:27:57
+        Log: * special-case for win32 $^X that contains whitespace.
+	   ! inc/Module/Install/PAR.pm myldr/Makefile.PL
+____________________________________________________________________________
+[  5098] By: autrijus                              on 2003/04/02  18:08:27
+        Log: * "use PAR 'name.par'" now unshift()s instead of push()es
+	       into @INC.
+             * same for "par.pl -A" and "parl -A".
+             (issue raised by Paritosh Tyagi)
+	   ! lib/PAR.pm script/par.pl
+____________________________________________________________________________
+[  5074] By: autrijus                              on 2003/04/01  13:01:47
+        Log: * changes.
+	   ! Changes
+____________________________________________________________________________
+[  5072] By: autrijus                              on 2003/03/31  19:44:00
+        Log: * last-second fix of perl 5.6 vs Tk.
+	   ! script/pp
+____________________________________________________________________________
+[  5071] By: autrijus                              on 2003/03/31  18:52:32
+        Log: * This be PAR 0.67, the "April Fools" release.
+	   ! ChangeLog lib/PAR.pm
+____________________________________________________________________________
+[  5008] By: autrijus                              on 2003/03/29  09:53:05
+        Log: * changelog for 0.67.
+	   ! ChangeLog
+____________________________________________________________________________
+[  5007] By: autrijus                              on 2003/03/29  09:34:26
+        Log: * schwern says, 'loose the base.pm'
+	   ! inc/Module/Install/private.pm
+	   ! inc/Module/Install/private/PAR.pm
+____________________________________________________________________________
+[  5005] By: autrijus                              on 2003/03/29  09:10:50
+        Log: * bring up shlib.diff to modern code.
+             * start release engineering toward 0.67.
+	   ! lib/PAR.pm patches/shlib.diff
+____________________________________________________________________________
+[  5004] By: autrijus                              on 2003/03/29  09:10:29
+        Log: * up to Module::Install 0.19_95 (on cpan).
+	   ! inc/ExtUtils/AutoInstall.pm
+	   ! inc/Module/Install.pm
+	   ! inc/Module/Install/AutoInstall.pm
+	   ! inc/Module/Install/Can.pm
+	   ! inc/Module/Install/Makefile.pm
+____________________________________________________________________________
+[  4906] By: autrijus                              on 2003/03/23  21:56:35
+        Log: * introducing ChangeLog.
+	   + ChangeLog
+	   ! MANIFEST
+____________________________________________________________________________
+[  4902] By: autrijus                              on 2003/03/23  17:58:56
+        Log: * add the --gui (-g) option to make no-console win32
+	       executables.
+             (thanks to H. Wade Minter for suggesting it and Jan Dubois
+	     for
+             writing the original exetype.pl)
+             * order the options alphabetically in pp's POD.
+             * --module is now --add to reduce confusion; likewise,
+	       --include
+             becomes --lib.
+	   ! script/pp
+____________________________________________________________________________
+[  4880] By: autrijus                              on 2003/03/22  17:23:12
+        Log: * up the stake to 0.19 scandeps.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  4879] By: autrijus                              on 2003/03/22  17:11:38
+        Log: * add prominient notice to par.pl and parl.pod too.
+	   ! script/par.pl script/parl.pod
+____________________________________________________________________________
+[  4878] By: autrijus                              on 2003/03/22  17:03:06
+        Log: * follow the GNU documentation convention.
+	   ! script/pp
+____________________________________________________________________________
+[  4877] By: autrijus                              on 2003/03/22  16:51:38
+        Log: * all 'pp' options has both a short form and a long form
+	       now.
+	   ! script/pp
+____________________________________________________________________________
+[  4876] By: autrijus                              on 2003/03/22  16:20:01
+        Log: * explain myself a bit better.
+             * no longer show the obsolete (and redundant) usage
+             when there's no command line; instead die like gcc does.
+	   ! script/pp
+____________________________________________________________________________
+[  4875] By: autrijus                              on 2003/03/22  16:04:05
+        Log: * the licensing disclaimer is such a good idea, I want
+             to add it to the POD.
+	   ! script/pp
+____________________________________________________________________________
+[  4874] By: autrijus                              on 2003/03/22  15:58:15
+        Log: * Nicholas suggests that "in accordance with" is more
+	       Englishlike.
+	   ! script/pp
+____________________________________________________________________________
+[  4872] By: autrijus                              on 2003/03/22  15:12:01
+        Log: * implement Paritosh's suggestion a bit smarter --
+             ditch eval '' in favor of calling File::Glob::glob
+             explicitly to avoid bad parser magic
+	   ! lib/PAR.pm
+____________________________________________________________________________
+[  4871] By: autrijus                              on 2003/03/22  15:11:05
+        Log: * better pod stripping as prompted by Markus Jansen.
+             * pp --version now prints a version + license statement,
+             thanks to H. Wade Minter.
+	   ! script/par.pl script/pp
+____________________________________________________________________________
+[  4870] By: autrijus                              on 2003/03/22  15:05:44
+        Log: * cygwin reclaimed!
+	   ! inc/Module/Install/private/PAR.pm
+	   ! lib/PAR/Intro.pod
+____________________________________________________________________________
+[  4863] By: autrijus                              on 2003/03/22  13:12:24
+        Log: * Paritosh Tyagi suggests that use PAR '/dir/*.pm'
+             should DWIM, so we now glob when there's metacharacters.
+	   ! AUTHORS lib/PAR.pm
+____________________________________________________________________________
+[  4844] By: autrijus                              on 2003/03/21  06:26:07
+        Log: * Jonathan Leffler reported that stock darwin perl doesn't
+	       like -s.
+	   ! AUTHORS myldr/Makefile.PL
+____________________________________________________________________________
+[  4840] By: autrijus                              on 2003/03/21  04:39:22
+        Log: * Trying to apply Mattia's suggestion on cygwin
+	       portability.
+	   ! script/par.pl
+____________________________________________________________________________
+[  4839] By: autrijus                              on 2003/03/21  04:39:05
+        Log: * Bruce Winter commented that Tk::Widget magix
+             did not work on win32; fixed.
+	   ! script/pp
+____________________________________________________________________________
+[  4824] By: autrijus                              on 2003/03/20  04:38:06
+        Log: * doc revamping.
+	   ! README lib/PAR/Intro.pod
+____________________________________________________________________________
+[  4819] By: autrijus                              on 2003/03/19  18:51:21
+        Log: * * changes and signatures.
+	   ! Changes
+____________________________________________________________________________
+[  4818] By: autrijus                              on 2003/03/19  15:30:30
+        Log: * This be PAR 0.66, the "Too Many Fixes To Note" edition.
+	   ! README
+____________________________________________________________________________
+[  4817] By: autrijus                              on 2003/03/19  15:27:16
+        Log: * the topmost TODO has been resolved.
+	   ! TODO
+____________________________________________________________________________
+[  4816] By: autrijus                              on 2003/03/19  15:26:40
+        Log: * ...but mingw have unistd.h...
+	   ! inc/Module/Install/private/PAR.pm
+____________________________________________________________________________
+[  4814] By: autrijus                              on 2003/03/19  15:23:54
+        Log: * skip asking for shlib on platforms without parl or
+	       unistd.h.
+	   ! inc/Module/Install/private/PAR.pm
+____________________________________________________________________________
+[  4811] By: autrijus                              on 2003/03/19  15:13:21
+        Log: * regenerate the patchset.
+	   ! patches/shlib.diff
+____________________________________________________________________________
+[  4810] By: autrijus                              on 2003/03/19  15:03:49
+        Log: * document and note that Cygwin fails.
+	   ! inc/Module/Install/private/PAR.pm
+	   ! lib/PAR/Intro.pod
+____________________________________________________________________________
+[  4808] By: autrijus                              on 2003/03/19  14:12:06
+        Log: * John McMahon pointed out the redundant 'parl.exe.bat'.
+	   ! AUTHORS Makefile.PL
+	   ! inc/Module/Install/private.pm
+	   ! inc/Module/Install/private/PAR.pm
+____________________________________________________________________________
+[  4806] By: autrijus                              on 2003/03/19  13:46:56
+        Log: * cosmetic change. 
+	   ! inc/ExtUtils/AutoInstall.pm
+____________________________________________________________________________
+[  4803] By: autrijus                              on 2003/03/19  13:34:15
+        Log: * Mattia agreed for me to carry over A::P::PAR.
+	   + lib/App/Packer/PAR.pm
+____________________________________________________________________________
+[  4802] By: autrijus                              on 2003/03/19  13:33:53
+        Log: * switch from PAR... etc for lib/PAR...
+             * trying to fix the dmake bug reported by Sisyphus
+	  +> lib/PAR.pm lib/PAR/Heavy.pm lib/PAR/Intro.pod
+	   - PAR.pm PAR/Heavy.pm PAR/Intro.pod
+	   ! MANIFEST Makefile.PL
+	   ! inc/ExtUtils/AutoInstall.pm
+____________________________________________________________________________
+[  4799] By: autrijus                              on 2003/03/19  13:03:23
+        Log: * the last change is correlated to Reini Urban's bug
+	       report.
+	   ! AUTHORS
+____________________________________________________________________________
+[  4798] By: autrijus                              on 2003/03/19  13:01:31
+        Log: * ported to cygwin.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  4797] By: autrijus                              on 2003/03/19  12:44:29
+        Log: * fix ftp_base's trailing /.
+	   ! inc/Module/Install/PAR.pm
+____________________________________________________________________________
+[  4796] By: autrijus                              on 2003/03/19  08:35:25
+        Log: * Simon Andrews prompted me to write the
+	       clean-after-0.63-mess code.
+	   ! AUTHORS
+____________________________________________________________________________
+[  4792] By: autrijus                              on 2003/03/19  05:04:00
+        Log: * Markus reported that his 'patch' doesn't like read-only
+             files.	Fixed.
+	   ! inc/Module/Install/private/PAR.pm
+____________________________________________________________________________
+[  4790] By: autrijus                              on 2003/03/18  20:25:57
+        Log: * fix autoinstall + patching.
+	   ! inc/Module/Install/AutoInstall.pm
+	   ! inc/Module/Install/Base.pm
+	   ! inc/Module/Install/Include.pm
+	   ! inc/Module/Install/Makefile.pm
+	   ! inc/Module/Install/Metadata.pm
+	   ! inc/Module/Install/private/PAR.pm
+____________________________________________________________________________
+[  4789] By: autrijus                              on 2003/03/18  20:25:33
+        Log: * explicitly depend on Compress::Zlib.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  4787] By: autrijus                              on 2003/03/18  20:10:07
+        Log: * add -p0 to 'patch'.
+	   ! inc/Module/Install/private/PAR.pm
+____________________________________________________________________________
+[  4785] By: autrijus                              on 2003/03/18  20:06:54
+        Log: * self-referencial patches considered harmful
+	   ! patches/shlib.diff
+____________________________________________________________________________
+[  4784] By: autrijus                              on 2003/03/18  20:00:03
+        Log: * update manifest and EU::AI version.
+	   ! MANIFEST inc/ExtUtils/AutoInstall.pm
+____________________________________________________________________________
+[  4781] By: autrijus                              on 2003/03/18  19:46:56
+        Log: * now supports http downloading of nmake.exe if needed.
+	   ! inc/Module/Install/Fetch.pm
+	   ! inc/Module/Install/PAR.pm
+	   ! inc/Module/Install/Win32.pm
+____________________________________________________________________________
+[  4780] By: autrijus                              on 2003/03/18  19:34:15
+        Log: * new round of Module::Install.
+             * supports http fetching over ftp via LWP::Simple
+             (this should make firewalled people happier.)
+	   ! inc/Module/Install.pm
+	   ! inc/Module/Install/Can.pm
+	   ! inc/Module/Install/Fetch.pm
+	   ! inc/Module/Install/PAR.pm
+	   ! inc/Module/Install/private.pm
+	   ! inc/Module/Install/private/PAR.pm
+____________________________________________________________________________
+[  4779] By: autrijus                              on 2003/03/18  19:22:24
+        Log: * fix up manifest.
+             * 0.66-rc1.
+	   ! MANIFEST PAR.pm README
+____________________________________________________________________________
+[  4777] By: autrijus                              on 2003/03/18  18:44:10
+        Log: * clears broken pre-0.63 dll files in TEMP instead
+             of reusing it accidentally.
+	   ! PAR/Heavy.pm
+____________________________________________________________________________
+[  4776] By: autrijus                              on 2003/03/18  18:25:54
+        Log: * update the diff in preperation to 0.66.
+	   ! patches/shlib.diff
+____________________________________________________________________________
+[  4775] By: autrijus                              on 2003/03/18  18:17:25
+        Log: * switch _Autrijus to 'private'.
+	   + inc/Module/Install/private.pm
+	   + inc/Module/Install/private/PAR.pm
+	   - inc/Module/Install/_Autrijus.pm
+	   - inc/Module/Install/_Autrijus/PAR.pm
+	   ! MANIFEST
+____________________________________________________________________________
+[  4764] By: autrijus                              on 2003/03/18  10:13:48
+        Log: * Ask Bjoern Hansen reports that File::Temp dep is missing.
+	   ! AUTHORS Makefile.PL
+____________________________________________________________________________
+[  4752] By: autrijus                              on 2003/03/17  01:54:41
+        Log: * shlib.diff seems to be working now.
+             * detect for symlinks in addition to dirs.
+	   ! patches/shlib.diff
+____________________________________________________________________________
+[  4751] By: autrijus                              on 2003/03/17  01:14:21
+        Log: * bump the version in anticipation of 0.66.
+	   ! PAR.pm
+____________________________________________________________________________
+[  4750] By: autrijus                              on 2003/03/17  01:08:51
+        Log: * Germain Garand points out that pp includes
+             the wrong interpreter on multiperl sites.
+	   ! script/pp
+____________________________________________________________________________
+[  4749] By: autrijus                              on 2003/03/17  01:06:47
+        Log: * default to !$quiet at pack time.
+	   ! script/par.pl
+____________________________________________________________________________
+[  4748] By: autrijus                              on 2003/03/17  01:01:28
+        Log: * supress messages unless $ENV{PAR_DEBUG} is set.
+	   ! script/par.pl
+____________________________________________________________________________
+[  4745] By: autrijus                              on 2003/03/17  00:45:19
+        Log: * check in inc/ to p4 so snapshots can run.
+	   + inc/ExtUtils/AutoInstall.pm
+	   + inc/Module/Install.pm
+	   + inc/Module/Install/AutoInstall.pm
+	   + inc/Module/Install/Base.pm
+	   + inc/Module/Install/Can.pm
+	   + inc/Module/Install/Fetch.pm
+	   + inc/Module/Install/Include.pm
+	   + inc/Module/Install/Makefile.pm
+	   + inc/Module/Install/Metadata.pm
+	   + inc/Module/Install/PAR.pm
+	   + inc/Module/Install/Win32.pm
+	   + inc/Module/Install/_Autrijus.pm
+	   + inc/Module/Install/_Autrijus/PAR.pm
+____________________________________________________________________________
+[  4744] By: autrijus                              on 2003/03/17  00:32:14
+        Log: * update manifest.
+	   ! MANIFEST
+____________________________________________________________________________
+[  4742] By: autrijus                              on 2003/03/17  00:25:54
+        Log: * retab; better Tk::Widget overriding.
+	   ! script/pp
+____________________________________________________________________________
+[  4741] By: autrijus                              on 2003/03/17  00:25:28
+        Log: * retab.
+	   ! myldr/main.c script/par.pl
+____________________________________________________________________________
+[  4740] By: autrijus                              on 2003/03/17  00:24:47
+        Log: * now strips the loader if there's gcc in disguise as cc.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  4739] By: autrijus                              on 2003/03/17  00:24:11
+        Log: * reflect last change in PAR::Intro.
+             * retab.
+	   ! PAR.pm PAR/Intro.pod
+____________________________________________________________________________
+[  4738] By: autrijus                              on 2003/03/17  00:22:59
+        Log: * search script/modules in '/' LAST instead of first now.
+	   ! PAR.pm
+____________________________________________________________________________
+[  4736] By: autrijus                              on 2003/03/15  21:25:02
+        Log: * H. Wade Minter reported that Tk::Widget autoloading
+             failes with PAR.  let's workaround it for now.
+	   ! AUTHORS script/pp
+____________________________________________________________________________
+[  4734] By: autrijus                              on 2003/03/15  06:46:18
+        Log: * update AUTHORS.
+             * remove spurious comment in myldr.
+             * Tina Mueller reported that CSH stuff doesn't work
+             on 5.6 perl.
+	   ! AUTHORS myldr/main.c
+____________________________________________________________________________
+[  4723] By: autrijus                              on 2003/03/13  20:22:14
+        Log: * Barry Jaspan metioned that darwin perl seems not liking
+	       this.
+	   ! script/pp
+____________________________________________________________________________
+[  4713] By: autrijus                              on 2003/03/12  14:57:33
+        Log: * merge par.pl doc changes to parl.pod.
+	  !> script/parl.pod
+____________________________________________________________________________
+[  4712] By: autrijus                              on 2003/03/12  14:52:13
+        Log: * bump year.
+             * clean wordings.
+	   ! script/par.pl
+____________________________________________________________________________
+[  4711] By: autrijus                              on 2003/03/12  14:35:07
+        Log: * Germain Garand pointed out that -I should unshift, not
+             push, into the @INC array.
+	   ! AUTHORS script/pp
+____________________________________________________________________________
+[  4688] By: autrijus                              on 2003/03/10  15:55:11
+        Log: * DM reported that pp'ing C:\* breaks.	this is also
+             reported by "luke".
+	   ! script/pp
+____________________________________________________________________________
+[  4685] By: autrijus                              on 2003/03/10  10:54:41
+        Log: * merge PAR::Intro.
+	   + PAR/Intro.pod
+	   ! MANIFEST PAR.pm README
+____________________________________________________________________________
+[  4674] By: autrijus                              on 2003/03/09  13:35:34
+        Log: * This be PAR 0.65, the "binary install, pod-stripping,
+	       5.6-reclaimed" edition.
+             * $ENV{PAR_VERBATIM} now control pod-stripping.
+             * add several par: keys into META.yml now.
+             * revamped docs a bit.
+	   ! PAR.pm script/par.pl script/pp
+____________________________________________________________________________
+[  4673] By: autrijus                              on 2003/03/09  12:59:32
+        Log: * -I.. will create misleading INC; uses ../myldr/..
+	       instead.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  4668] By: autrijus                              on 2003/03/09  10:46:40
+        Log: * better pod-stripping.
+             * win32 xsloading redone.
+	   ! myldr/file2c.pl script/par.pl script/pp
+____________________________________________________________________________
+[  4657] By: autrijus                              on 2003/03/08  19:17:25
+        Log: * bump the version number.
+             * welcome Simon Cozens to the AUTHORS list.
+	   ! AUTHORS PAR.pm
+____________________________________________________________________________
+[  4656] By: autrijus                              on 2003/03/08  19:16:37
+        Log: * fixes the bug preventing self-contained programs
+             to load when the target machine has a different
+             version of Perl shared libraries.
+	   ! PAR/Heavy.pm script/par.pl
+____________________________________________________________________________
+[  4655] By: autrijus                              on 2003/03/08  19:09:16
+        Log: * added bundled EU::AI, thanks to Simon Cozens.
+	   ! MANIFEST Makefile.PL
+____________________________________________________________________________
+[  4651] By: autrijus                              on 2003/03/08  16:49:51
+        Log: * don't attempt to compile if we're using the binary
+	       installation.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  4650] By: autrijus                              on 2003/03/08  16:07:09
+        Log: * update README to talk about PAR installation.
+	   ! README
+____________________________________________________________________________
+[  4649] By: autrijus                              on 2003/03/08  15:51:27
+        Log: * whoops, wasn't shipping parl.pod. my bad.
+	   ! MANIFEST MANIFEST.SKIP
+____________________________________________________________________________
+[  4648] By: autrijus                              on 2003/03/08  15:38:01
+        Log: * oops.
+	   ! script/pp
+____________________________________________________________________________
+[  4647] By: autrijus                              on 2003/03/08  15:37:51
+        Log: * switch to full-blown Module::Install.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  4644] By: autrijus                              on 2003/03/08  14:26:08
+        Log: * binary loading support for 'pp'.
+	   ! script/pp
+____________________________________________________________________________
+[  4589] By: autrijus                              on 2003/03/05  07:07:36
+        Log: * POD stripping implemented.
+	   ! script/par.pl script/pp
+____________________________________________________________________________
+[  4549] By: autrijus                              on 2003/03/03  15:41:21
+        Log: * PTHREAD_ATFORK isn't available on Perl 5.6.
+             (reported by Sisyphus)
+	   ! AUTHORS myldr/main.c
+____________________________________________________________________________
+[  4504] By: autrijus                              on 2003/03/01  15:50:24
+        Log: * This be PAR 0.64, the "Win32 binmode bug fixed" edition.
+             * adjust manifest for Module::Install.
+             * mention that activestate has PAR PPMs built in their
+	       repository.
+	   ! MANIFEST README
+____________________________________________________________________________
+[  4503] By: autrijus                              on 2003/03/01  15:17:57
+        Log: * bump versions.
+	   ! PAR.pm PAR/Heavy.pm
+____________________________________________________________________________
+[  4502] By: autrijus                              on 2003/03/01  15:17:41
+        Log: * add D.M. to the authors.
+	   ! AUTHORS
+____________________________________________________________________________
+[  4501] By: autrijus                              on 2003/03/01  15:02:18
+        Log: * Move to the Module::Install framework.
+	   ! MANIFEST Makefile.PL
+____________________________________________________________________________
+[  4500] By: autrijus                              on 2003/03/01  14:48:38
+        Log: * BIll Atkins et all reported win32 failings of loading
+	       dylibs; turns out to be a missing binmode().
+	   ! PAR.pm PAR/Heavy.pm myldr/main.c script/par.pl
+	   ! script/pp
+____________________________________________________________________________
+[  4117] By: autrijus                              on 2003/02/07  00:05:28
+        Log: * revisit TODO.
+	   ! TODO
+____________________________________________________________________________
+[  4116] By: autrijus                              on 2003/02/06  23:43:43
+        Log: * more $^X quotedness.
+	   ! t/1-basic.t
+____________________________________________________________________________
+[  4115] By: autrijus                              on 2003/02/06  23:43:38
+        Log: * re-enable signature test.
+	   ! t/0-signature.t
+____________________________________________________________________________
+[  4114] By: autrijus                              on 2003/02/06  23:41:10
+        Log: * win32 quoting.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  4103] By: autrijus                              on 2003/02/06  00:30:50
+        Log: * 0.63.
+             * also from Jerry Veldhuis: document --par-options.
+	   ! PAR.pm script/par.pl script/parl.pod
+____________________________________________________________________________
+[  4101] By: autrijus                              on 2003/02/05  23:45:02
+        Log: * Jerry Veldhuis points out that the -B option of 'parl' is
+	       broken.
+	   ! AUTHORS script/par.pl
+____________________________________________________________________________
+[  3652] By: autrijus                              on 2003/01/19  14:54:34
+        Log: * mention various resource for par.
+	   ! README
+____________________________________________________________________________
+[  3309] By: autrijus                              on 2003/01/07  13:30:13
+        Log: * hm.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  3308] By: autrijus                              on 2003/01/07  13:24:51
+        Log: * don't use libs please.
+	   ! PAR/Heavy.pm
+____________________________________________________________________________
+[  3307] By: autrijus                              on 2003/01/07  13:15:04
+        Log: * errata.
+	   ! Makefile.PL myldr/Makefile.PL
+____________________________________________________________________________
+[  3304] By: autrijus                              on 2003/01/07  12:23:04
+        Log: * This be 0.62, the 'parl' edition.
+	   ! package/parl.nsi
+____________________________________________________________________________
+[  3303] By: autrijus                              on 2003/01/07  12:02:36
+        Log: * add documentation for parl.
+             * reflect this in makefile.pl and manifest.
+	   ! MANIFEST Makefile.PL script/parl.pod
+____________________________________________________________________________
+[  3302] By: autrijus                              on 2003/01/07  12:01:26
+        Log: * mention parl in documentations.
+	   ! PAR.pm script/par.pl script/pp
+____________________________________________________________________________
+[  3287] By: autrijus                              on 2003/01/07  03:50:52
+        Log: * 2.51, not 0.51.
+	   ! script/pp
+____________________________________________________________________________
+[  3280] By: autrijus                              on 2003/01/06  22:35:28
+        Log: * pp -M and -I was just taking a single value; fixed.
+	   ! script/pp
+____________________________________________________________________________
+[  3251] By: autrijus                              on 2003/01/05  22:04:13
+        Log: * never mind.
+	   ! package/parl.nsi
+____________________________________________________________________________
+[  3250] By: autrijus                              on 2003/01/05  22:02:19
+        Log: * make package from script/, not perl/bin/.
+	   ! package/parl.nsi
+____________________________________________________________________________
+[  3249] By: autrijus                              on 2003/01/05  21:43:41
+        Log: * use windows color.
+	   ! package/parl.nsi
+____________________________________________________________________________
+[  3195] By: autrijus                              on 2003/01/05  06:02:20
+        Log: * the binary par.pl is now called 'parl'.
+	   + script/parl.pod
+	   ! Makefile.PL myldr/Makefile.PL script/pp
+____________________________________________________________________________
+[  3177] By: autrijus                              on 2003/01/04  19:28:43
+        Log: * update manifest.
+	   ! MANIFEST
+____________________________________________________________________________
+[  3176] By: autrijus                              on 2003/01/04  19:09:46
+        Log: * make binary packages.
+	   + package/parl.nsi
+	   - parl.nsi
+	   ! MANIFEST.SKIP Makefile.PL
+____________________________________________________________________________
+[  3170] By: autrijus                              on 2003/01/04  16:26:50
+        Log: * take care of win32 path escaping.
+	   ! Makefile.PL myldr/Makefile.PL
+____________________________________________________________________________
+[  3168] By: autrijus                              on 2003/01/04  16:09:08
+        Log: * Adding another executable: 'parl', the binary
+             par loader (basically just binary par.pl with PAR deps).
+	   ! Makefile.PL myldr/Makefile.PL script/par.pl
+____________________________________________________________________________
+[  2818] By: autrijus                              on 2002/12/21  07:06:32
+        Log: * documentation cleanup.
+             * fix a typo: pp takes '-o', not '-O'.
+	   ! PAR.pm script/pp
+____________________________________________________________________________
+[  2776] By: autrijus                              on 2002/12/19  04:50:01
+        Log: * correctly produce usage information when no args
+	       specified. 
+	   ! script/pp
+____________________________________________________________________________
+[  2737] By: autrijus                              on 2002/12/17  11:26:03
+        Log: * This be 0.61, the 'emergency fix' edition.
+	   ! PAR.pm
+____________________________________________________________________________
+[  2736] By: autrijus                              on 2002/12/17  11:25:00
+        Log: * uptodateness of TODO.
+	   ! TODO
+____________________________________________________________________________
+[  2735] By: autrijus                              on 2002/12/17  11:23:57
+        Log: * Extraction of pp-generated scripts were broken due
+             to offset mismatch.  Oops.
+	   ! script/pp
+____________________________________________________________________________
+[  2731] By: autrijus                              on 2002/12/17  04:54:59
+        Log: * updated tests.
+	   ! AUTHORS t/1-basic.t
+____________________________________________________________________________
+[  2728] By: autrijus                              on 2002/12/17  03:40:38
+        Log: * This be version 0.60.
+             * Document the PAR_CLEARTEMP environment variable
+             and its implications.
+             * Refactor the $0 execution code into _run_member().
+	   ! PAR.pm
+____________________________________________________________________________
+[  2727] By: autrijus                              on 2002/12/17  03:33:08
+        Log: * POD nits.
+             * For self-contained executables, use the .pm files
+             inside PAR by default, instead of external ones.
+	   ! script/par.pl
+____________________________________________________________________________
+[  2726] By: autrijus                              on 2002/12/17  03:12:34
+        Log: * implement and document multiple input program
+             support for pp.
+	   ! script/pp
+____________________________________________________________________________
+[  2725] By: autrijus                              on 2002/12/17  03:11:34
+        Log: * Fix compilation on darwin, as reported by
+             Randal L. Schwartz.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  2721] By: autrijus                              on 2002/12/15  16:40:41
+        Log: * CRC32-based temp file for all files inside .par,
+             unless $ENV{PAR_CLEARTEMP} is true.
+	   ! PAR.pm
+____________________________________________________________________________
+[  2720] By: autrijus                              on 2002/12/15  16:31:20
+        Log: * implement persistent tempfile for .so inside PARs.
+	   ! PAR/Heavy.pm
+____________________________________________________________________________
+[  2719] By: autrijus                              on 2002/12/15  16:30:29
+        Log: * Add CRC of FILE into the associated sections.
+             (this is backward-compatible because of '/' as separator)
+             * unless $ENV{PAR_CLEARTEMP} is set, the .so (or .dll)
+	       files
+             will *not* be cleared away now.
+	   ! script/par.pl
+____________________________________________________________________________
+[  2718] By: autrijus                              on 2002/12/15  15:14:51
+        Log: * changed script/* invocation from $ARGV[0] to
+             $0, as suggested by Chia-Liang Kao.
+             * starting to implement CRC-based temp file
+             persistence, as suggested by Bill Atkins.
+	   ! AUTHORS PAR.pm PAR/Heavy.pm script/par.pl
+	   ! script/pp
+____________________________________________________________________________
+[  2691] By: autrijus                              on 2002/12/12  06:50:05
+        Log: * minor typo.
+	   ! PAR.pm
+____________________________________________________________________________
+[  2663] By: autrijus                              on 2002/12/11  01:34:41
+        Log: * This be 0.51.
+             * Fixed incorrect PATH initialization problem on
+             Solaris, as reported by Markus Jansen.
+	   ! PAR.pm script/par.pl
+____________________________________________________________________________
+[  2577] By: autrijus                              on 2002/12/03  00:33:18
+        Log: * This be 0.50, the 'thanks to Markus Jansen' edition.
+	   ! AUTHORS PAR.pm
+____________________________________________________________________________
+[  2576] By: autrijus                              on 2002/12/03  00:32:31
+        Log: * Packaged executables will no longer swallow any ARGV
+             options, unless $ARGV[0] happens to be '--par-options'.
+	   ! script/par.pl
+____________________________________________________________________________
+[  2575] By: autrijus                              on 2002/12/03  00:31:38
+        Log: * make -Wall and -Wno-comments to be debug-only;
+             not every compiler is GCC.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  2574] By: autrijus                              on 2002/12/03  00:27:26
+        Log: * Test for absolute pathname in $Config{cc};
+             also test for -x first in case of erroneous
+	     MM->maybe_command.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  2334] By: autrijus                              on 2002/11/23  21:31:54
+        Log: * patch from Robert Allerstorfer to enable buildilng on
+             Win32 with MinGW.
+	   ! AUTHORS myldr/Makefile.PL
+____________________________________________________________________________
+[  2323] By: autrijus                              on 2002/11/23  14:21:11
+        Log: * Version 0.49.
+	   ! PAR.pm
+____________________________________________________________________________
+[  2322] By: autrijus                              on 2002/11/23  14:20:39
+        Log: * Now generate META.yml instead of META.yaml in accord
+             with Module::Build's convention.
+	   ! script/pp
+____________________________________________________________________________
+[  2294] By: autrijus                              on 2002/11/22  14:55:30
+        Log: * use $Config{version} as the perl version number instead 
+             of the old, kludged way.
+	   ! PAR.pm
+____________________________________________________________________________
+[  2193] By: autrijus                              on 2002/11/15  17:58:13
+        Log: * generalized nmake fetching device.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  2191] By: autrijus                              on 2002/11/15  15:04:38
+        Log: * adding the nmake fetching device.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  2146] By: autrijus                              on 2002/11/14  00:22:12
+        Log: * evil ideas that struck me in the dreams.
+	   ! TODO
+____________________________________________________________________________
+[  2105] By: autrijus                              on 2002/11/13  11:00:51
+        Log: * This be 0.48, the "ActivePerl 5.6 works" edition.
+	   ! PAR.pm
+____________________________________________________________________________
+[  2104] By: autrijus                              on 2002/11/13  10:59:21
+        Log: * turns out that Win32 doesn't need UNLINK => 1 at all.
+	   ! PAR.pm script/par.pl
+____________________________________________________________________________
+[  2103] By: autrijus                              on 2002/11/13  10:58:51
+        Log: * when we say -q we mean -q.
+	   ! script/pp
+____________________________________________________________________________
+[  2102] By: autrijus                              on 2002/11/13  09:55:09
+        Log: * in earlier perl there's no returning of _destruct.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  2101] By: autrijus                              on 2002/11/13  09:51:40
+        Log: * handles ithreads initiation.
+             * fixed ActiverPerl 5.6's memory allocation problem
+             reported by Glenn and Hirosi Taguti.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  2100] By: autrijus                              on 2002/11/13  09:48:48
+        Log: * fix suffixes used by temporary perl modules
+             * merge Mattia's PAR.pm patch to par.pl.
+	   ! script/par.pl
+____________________________________________________________________________
+[  2076] By: autrijus                              on 2002/11/10  06:34:19
+        Log: * This be 0.47.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  2075] By: autrijus                              on 2002/11/10  06:33:51
+        Log: * Perl 5.6.1 doesn't have PERL_EXIT_DESTRUCT_END, and
+             needs some additional tweaking. (Reported by Hirosi Taguti)
+	   ! AUTHORS PAR.pm
+____________________________________________________________________________
+[  2073] By: autrijus                              on 2002/11/09  23:35:00
+        Log: * pod nits.
+	   ! script/pp
+____________________________________________________________________________
+[  2071] By: autrijus                              on 2002/11/09  22:42:14
+        Log: * This be 0.46, the 'Win32 standalone exe works' edition.
+             * Updates information about a shared Perl58.dll (or
+	       Perl56.dll)
+             is still needed for stand-alone binaries on Win32.
+	   ! PAR.pm README script/pp
+____________________________________________________________________________
+[  2070] By: autrijus                              on 2002/11/09  22:35:42
+        Log: * some missing binmode() for win32.
+	   ! script/par.pl
+____________________________________________________________________________
+[  2069] By: autrijus                              on 2002/11/09  22:31:04
+        Log: * fix for Win32 where %:: doesn't contain the .pm
+             files needed to bundle modules in par.pl -B.
+             (Reported by Glenn Mabbutt)
+	   ! script/par.pl
+____________________________________________________________________________
+[  2063] By: autrijus                              on 2002/11/08  20:39:30
+        Log: * Version 0.45.
+             * Add Tim Conrow to AUTHORS.
+	   ! AUTHORS PAR.pm
+____________________________________________________________________________
+[  2062] By: autrijus                              on 2002/11/08  20:36:23
+        Log: * 'pp -r' was unable to run without '.' in PATH. fixed.
+             * the external 'file' magic checker does not exist
+             everywhere -- now checks for its availability first.
+	   ! script/pp
+____________________________________________________________________________
+[  2061] By: autrijus                              on 2002/11/08  20:34:22
+        Log: * handles END blocks during destruction.
+             (originally reported by Tim Conrow)
+             * excised unneeded prepare_args().
+             * moves load_me_2 from eval_pv into the -e argument --
+             otherwise pp_exit fails jumping out.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  2060] By: autrijus                              on 2002/11/08  20:31:07
+        Log: * applied patch from Tim Conrow: prevent Makefile.PL's
+             argument from being passed to xsinit().
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  2059] By: autrijus                              on 2002/11/08  20:29:56
+        Log: * add selected _tmpfile patch from Mattia Barbon to
+             skip File::Temp::_deferred_unlink on win32.
+             * removed manual flushing code because it inhibits
+             other package's END block.
+	   ! PAR.pm
+____________________________________________________________________________
+[  2055] By: autrijus                              on 2002/11/08  14:37:59
+        Log: * This be 0.44.
+             * Documentation changes.
+	   ! README TODO
+____________________________________________________________________________
+[  2054] By: autrijus                              on 2002/11/08  14:37:27
+        Log: * fixed the mis-loading SO files problem in Heavy.pm.
+	   ! PAR/Heavy.pm script/par.pl
+____________________________________________________________________________
+[  2053] By: autrijus                              on 2002/11/08  14:36:57
+        Log: * mention 'pp' in docs.
+             * allows using pp-packaged executables as PAR files.
+             * applied Martia Barbon's _tempfile patch as a fail-back
+             to IO::File->new_tmpfile.
+	   ! PAR.pm
+____________________________________________________________________________
+[  2052] By: autrijus                              on 2002/11/08  14:35:33
+        Log: * 'pp' is useful without binary 'par', so install it
+	       anyway.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  2051] By: autrijus                              on 2002/11/08  14:34:59
+        Log: * refactored 'pp' to excise unused code.
+             * MANIFEST and META.yaml are now generated.
+             * s/compile/package/ in docs.
+	   ! script/pp
+____________________________________________________________________________
+[  2041] By: autrijus                              on 2002/11/07  14:20:27
+        Log: * 0.43.
+             * retracted par.pl unzip hook because it breaks dynamic
+	       loading.
+	   ! PAR.pm script/par.pl
+____________________________________________________________________________
+[  2030] By: autrijus                              on 2002/11/07  00:23:11
+        Log: * changes. (signature temporarily out of commission)
+	   ! Changes
+____________________________________________________________________________
+[  2029] By: autrijus                              on 2002/11/07  00:22:37
+        Log: * This be 0.42, the "Win32 Works!" edition.
+	   ! PAR.pm
+____________________________________________________________________________
+[  2028] By: autrijus                              on 2002/11/07  00:13:50
+        Log: * par now officially works on win32.
+	   ! PAR.pm script/par.pl
+____________________________________________________________________________
+[  2027] By: autrijus                              on 2002/11/06  23:01:46
+        Log: * nmake doesn't support .DEFAULTS, duh.
+	   ! myldr/Makefile.PL
+____________________________________________________________________________
+[  2026] By: autrijus                              on 2002/11/06  23:01:32
+        Log: * utilize HAS_PROCSELFEXE to correctly get $0.
+             * fix $0 by finding it in path on other systems.
+	   ! myldr/main.c script/par.pl
+____________________________________________________________________________
+[  2022] By: autrijus                              on 2002/11/06  12:05:07
+        Log: * Version 0.41.
+	   ! PAR.pm
+____________________________________________________________________________
+[  2021] By: autrijus                              on 2002/11/06  12:04:04
+        Log: * pp -M was broken. fixed.
+	   ! script/pp
+____________________________________________________________________________
+[  2020] By: autrijus                              on 2002/11/06  10:54:32
+        Log: * now IO::File only gets overridden when $PAR::__reading
+             is true -- that makes normal use of IO::File possible.
+	   ! PAR.pm script/par.pl
+____________________________________________________________________________
+[  2019] By: autrijus                              on 2002/11/06  10:53:56
+        Log: * add jeff goff to authors for the name 'pp'.
+	   ! AUTHORS
+____________________________________________________________________________
+[  2016] By: autrijus                              on 2002/11/05  22:02:09
+        Log: * This be version 0.40.
+             * The 'pp' program, a clone of perlcc, now supercedes
+             'makepar.pl'; please type 'perldoc pp' after installation.
+	   ! PAR.pm
+____________________________________________________________________________
+[  2015] By: autrijus                              on 2002/11/05  21:56:38
+        Log: * option and message tweaks.
+	   ! script/pp
+____________________________________________________________________________
+[  2014] By: autrijus                              on 2002/11/05  21:47:18
+        Log: * fix warnings.
+	   ! script/pp
+____________________________________________________________________________
+[  2013] By: autrijus                              on 2002/11/05  21:43:37
+        Log: * POD typo and style fix.
+	   ! script/pp
+____________________________________________________________________________
+[  2012] By: autrijus                              on 2002/11/05  21:40:13
+        Log: * par.pl now takes -q to be quiet.
+	   ! script/par.pl
+____________________________________________________________________________
+[  2011] By: autrijus                              on 2002/11/05  21:39:54
+        Log: * reflect last change in support files.
+	   ! MANIFEST MANIFEST.SKIP Makefile.PL README
+____________________________________________________________________________
+[  2010] By: autrijus                              on 2002/11/05  21:39:16
+        Log: * 'pp', with an interface mimicking perlcc, now
+             officially supercedes makepar.pl.
+	   + script/pp
+	   - script/makepar.pl
+____________________________________________________________________________
+[  2007] By: autrijus                              on 2002/11/05  19:54:09
+        Log: * bump version.
+	   ! PAR.pm
+____________________________________________________________________________
+[  2006] By: autrijus                              on 2002/11/05  19:45:50
+        Log: * oops. i meant 0.10.
+	   ! Makefile.PL script/makepar.pl
+____________________________________________________________________________
+[  2005] By: autrijus                              on 2002/11/05  19:45:13
+        Log: * update to scandeps 0.03.
+	   ! script/makepar.pl
+____________________________________________________________________________
+[  2004] By: autrijus                              on 2002/11/05  19:37:18
+        Log: * better diagnostics when no program file specified.
+	   ! PAR.pm
+____________________________________________________________________________
+[  2003] By: autrijus                              on 2002/11/05  19:36:54
+        Log: * make perl 5.6 happy.
+	   ! myldr/main.c
+____________________________________________________________________________
+[  1988] By: autrijus                              on 2002/11/05  14:18:45
+        Log: * fix manifest, again.
+	   + MANIFEST.SKIP
+	   ! MANIFEST
+____________________________________________________________________________
+[  1987] By: autrijus                              on 2002/11/05  14:12:21
+        Log: * 0.30, for real.
+             * Thank Mattia Barbon and his App::Packer!
+	   ! AUTHORS
+____________________________________________________________________________
+[  1986] By: autrijus                              on 2002/11/05  14:12:01
+        Log: * fix manifest.
+	   ! MANIFEST
+____________________________________________________________________________
+[  1985] By: autrijus                              on 2002/11/05  14:10:43
+        Log: * 0.30.
+             * full stand-alone binary support for PAR landed!
+	   + myldr/Makefile.PL myldr/file2c.pl myldr/main.c
+	   - patches/perl580.diff
+	   ! MANIFEST Makefile.PL README TODO
+	   ! script/makepar.pl script/par.pl
+____________________________________________________________________________
+[  1923] By: autrijus                              on 2002/11/04  13:29:44
+        Log: * add a hint to self.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1907] By: autrijus                              on 2002/11/04  08:04:07
+        Log: * we're a toolkit now.
+	   ! Makefile.PL PAR.pm README
+____________________________________________________________________________
+[  1873] By: autrijus                              on 2002/11/03  19:22:45
+        Log: * reword 0-signature.t a bit for readability.
+	   ! t/0-signature.t
+____________________________________________________________________________
+[  1857] By: autrijus                              on 2002/11/03  12:45:26
+        Log: * This be 0.22.
+             * %DATACache no longer used.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1856] By: autrijus                              on 2002/11/03  12:42:26
+        Log: * oops, the DL extension loading was bad.
+             * stub __DATA__ handle no longer needed.
+	   ! PAR/Heavy.pm
+____________________________________________________________________________
+[  1855] By: autrijus                              on 2002/11/03  12:41:13
+        Log: * Matt Sergeant's suggestion obsoletes PerlIO::scalar
+             and IO::Scalar with IO::File.
+	   ! AUTHORS Makefile.PL PAR.pm script/par.pl
+____________________________________________________________________________
+[  1847] By: autrijus                              on 2002/11/02  21:08:04
+        Log: * 0.21, the General Availability (for non-perlcc usage)
+	       edition.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1846] By: autrijus                              on 2002/11/02  21:06:21
+        Log: * adjust load sequence and complain when loading fails.
+             * excise BSDPAN.
+	   ! script/par.pl
+____________________________________________________________________________
+[  1845] By: autrijus                              on 2002/11/02  21:03:41
+        Log: * list caveats pointer to TODO
+	   ! README script/makepar.pl
+____________________________________________________________________________
+[  1843] By: autrijus                              on 2002/11/02  20:34:25
+        Log: * doc tweak for par.pl.
+	   ! script/par.pl
+____________________________________________________________________________
+[  1842] By: autrijus                              on 2002/11/02  20:33:51
+        Log: * provide minimal documentation for PAR::Heavy.
+	   ! PAR/Heavy.pm
+____________________________________________________________________________
+[  1841] By: autrijus                              on 2002/11/02  20:33:29
+        Log: * Module::ScanDeps 0.01 was broken. Bump dep to 0.02.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  1822] By: autrijus                              on 2002/11/02  02:02:32
+        Log: * This be 0.20.
+             * Mention my slides at
+             <http://www.autrijus.org/par-intro/slide001.html>.
+	   ! PAR.pm README
+____________________________________________________________________________
+[  1821] By: autrijus                              on 2002/11/02  01:59:51
+        Log: * Add perlcc caveats into TODO.
+	   ! TODO
+____________________________________________________________________________
+[  1820] By: autrijus                              on 2002/11/02  01:53:52
+        Log: * massively refactored into Module::ScanDeps.
+	   ! script/makepar.pl
+____________________________________________________________________________
+[  1819] By: autrijus                              on 2002/11/02  01:51:12
+        Log: * we now depend on Module::ScanDeps for makepar.pl.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  1814] By: autrijus                              on 2002/11/01  22:07:29
+        Log: * add comments.
+             * load external PerlIO::scalar and File::Temp if possible.
+	   ! script/par.pl
+____________________________________________________________________________
+[  1813] By: autrijus                              on 2002/11/01  16:20:10
+        Log: * reflect -b/-B distinction in documentation.
+	   ! README script/makepar.pl
+____________________________________________________________________________
+[  1812] By: autrijus                              on 2002/11/01  16:19:49
+        Log: * complete self-loading sequence.
+             * -b now ditches core modules; -B includes them.
+	   ! script/par.pl
+____________________________________________________________________________
+[  1811] By: autrijus                              on 2002/11/01  16:19:11
+        Log: * complement last change.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1810] By: autrijus                              on 2002/11/01  16:18:49
+        Log: * refactor _init_dynaloader() into PAR::Heavy.
+	   + PAR/Heavy.pm
+	   ! MANIFEST
+____________________________________________________________________________
+[  1792] By: autrijus                              on 2002/10/30  21:52:34
+        Log: * pod tweaks.
+	   ! README script/makepar.pl
+____________________________________________________________________________
+[  1790] By: autrijus                              on 2002/10/30  19:00:24
+        Log: * copying the doc into README.
+             * binary bundling cannot use makepar.pl -S, fixed docs.
+	   ! README script/makepar.pl
+____________________________________________________________________________
+[  1789] By: autrijus                              on 2002/10/30  18:54:59
+        Log: * document tweak, suggested by coral.
+	   ! script/makepar.pl
+____________________________________________________________________________
+[  1788] By: autrijus                              on 2002/10/30  18:48:54
+        Log: * finally, a working perl2exe/perlapp alone.
+	   ! script/makepar.pl
+____________________________________________________________________________
+[  1787] By: autrijus                              on 2002/10/30  18:48:40
+        Log: * -B now bundles the necessary .pm and .ix too.
+	   ! script/par.pl
+____________________________________________________________________________
+[  1786] By: autrijus                              on 2002/10/30  18:48:21
+        Log: * fix mis-podifying paragraph.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1785] By: autrijus                              on 2002/10/30  17:24:11
+        Log: * add core module ignore feature: -s and -S
+	   ! script/makepar.pl
+____________________________________________________________________________
+[  1781] By: autrijus                              on 2002/10/30  10:30:55
+        Log: * include it in the distribution.
+	   ! MANIFEST Makefile.PL
+____________________________________________________________________________
+[  1780] By: autrijus                              on 2002/10/30  10:30:45
+        Log: * documentations, -M and -I support, and some more.
+	   ! script/makepar.pl
+____________________________________________________________________________
+[  1779] By: autrijus                              on 2002/10/30  10:05:38
+        Log: * making it -w clean.
+             * now prints percentage of things written.
+	   ! script/makepar.pl
+____________________________________________________________________________
+[  1778] By: autrijus                              on 2002/10/30  09:30:11
+        Log: * now with -B support for script/ inclusion.
+	   ! script/makepar.pl
+____________________________________________________________________________
+[  1777] By: autrijus                              on 2002/10/30  09:21:00
+        Log: * finished!
+	   ! script/makepar.pl
+____________________________________________________________________________
+[  1776] By: autrijus                              on 2002/10/30  09:12:54
+        Log: * rename to makepar.
+	  +> script/makepar.pl
+	   - script/depscan.pl
+____________________________________________________________________________
+[  1774] By: autrijus                              on 2002/10/30  08:12:32
+        Log: * some tweaks to separate warnings.
+	   ! script/depscan.pl
+____________________________________________________________________________
+[  1773] By: autrijus                              on 2002/10/30  08:10:35
+        Log: * depscan, courtesy of Indy Singh.
+	   + script/depscan.pl
+____________________________________________________________________________
+[  1709] By: autrijus                              on 2002/10/27  22:02:16
+        Log: * tpyo.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1708] By: autrijus                              on 2002/10/27  20:53:08
+        Log: * updates test case.
+	   ! t/1-basic.t t/hello.par
+____________________________________________________________________________
+[  1707] By: autrijus                              on 2002/10/27  20:52:53
+        Log: * see the last two changes, applied to par.pl this time.
+	   ! script/par.pl
+____________________________________________________________________________
+[  1706] By: autrijus                              on 2002/10/27  20:51:25
+        Log: * use warnings. that helped us catch a (nonserious) bug.
+             * no strict nor warnings for the included program.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1705] By: autrijus                              on 2002/10/27  20:49:01
+        Log: * Win32 doesn't want PerlIO::scalar at all.
+             * Glenn reported that earlier Archive::Zip doesn't work.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  1703] By: autrijus                              on 2002/10/27  17:33:48
+        Log: * This be version 0.15.
+             * Added contributor list.
+	   + AUTHORS
+	   ! MANIFEST PAR.pm
+____________________________________________________________________________
+[  1702] By: autrijus                              on 2002/10/27  17:24:23
+        Log: * More PerlIO::scalar unwelcomeness on MSWin32.
+             * This makes all test pass on that platform.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1700] By: autrijus                              on 2002/10/27  17:19:33
+        Log: * Win32 doesn't like single quotes in qx().
+	   ! t/1-basic.t
+____________________________________________________________________________
+[  1698] By: autrijus                              on 2002/10/27  17:12:31
+        Log: * For some reason, the PerlIO::scalar way doesn't work on
+	       win32.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1693] By: autrijus                              on 2002/10/27  10:16:25
+        Log: * RCS headers.
+	   ! script/par.pl
+____________________________________________________________________________
+[  1692] By: autrijus                              on 2002/10/27  10:15:27
+        Log: * 0.14.
+             * Fixed -B omission bug pointed out by Glenn Mabbutt.
+             * style fixes.
+	   ! PAR.pm script/par.pl
+____________________________________________________________________________
+[  1653] By: autrijus                              on 2002/10/24  22:04:57
+        Log: * let's start anew with some reformatting.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1596] By: autrijus                              on 2002/10/21  20:30:14
+        Log: * suggestion from #perl.
+	   ! TODO
+____________________________________________________________________________
+[  1595] By: autrijus                              on 2002/10/21  20:28:13
+        Log: * Beginning backporting to Perl 5.004.
+             * Jan Dubois pointed out a chunk of code that needs
+	       comment,
+             lest it obfusticates itself too much.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1593] By: autrijus                              on 2002/10/21  17:10:15
+        Log: * Version 0.13.
+             * Implemented suggestion from Nicholas Clark: on PerlIO
+             environments, return PerlIO::scalar in the @INC hook,
+             instead of line-by-line filtering.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1592] By: autrijus                              on 2002/10/21  17:08:24
+        Log: * added -B to par.pl to allow packaging of shared objects.
+             * that completed one of the many TODOs.
+	   ! TODO script/par.pl
+____________________________________________________________________________
+[  1574] By: autrijus                              on 2002/10/20  19:05:20
+        Log: * experimental support for embedded .so files for full
+	       self-bootstrapping.
+	   ! PAR.pm script/par.pl
+____________________________________________________________________________
+[  1569] By: autrijus                              on 2002/10/20  12:45:22
+        Log: * oops. should require Archive::Zip explicitly lest it
+	       fails loading.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1568] By: autrijus                              on 2002/10/20  12:41:04
+        Log: * (documents and really implements the last change)
+	   ! PAR.pm
+____________________________________________________________________________
+[  1567] By: autrijus                              on 2002/10/20  12:27:25
+        Log: * Version 0.12.
+             * Patch from Nicholas Clark: coderef in @INC can just
+	       return a coderef.
+             * Multiple-perl version PAR files. Search path is now
+	       (e.g.):
+             lib/
+             arch/
+             5.6.0/
+             i386-freebsd/
+             5.6.0/i386-freebsd/
+	   ! PAR.pm
+____________________________________________________________________________
+[  1566] By: autrijus                              on 2002/10/20  12:22:25
+        Log: * update tests to reflect changed main.pl semantic.
+	   ! t/1-basic.t
+____________________________________________________________________________
+[  1565] By: autrijus                              on 2002/10/20  12:22:12
+        Log: * patch from Nicholas Clark: 5.6.0 doesn't have File::Temp
+	       core.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  1560] By: autrijus                              on 2002/10/19  22:15:26
+        Log: * Thie be 0.11.
+             * removed obsoleted test files.
+	   ! PAR.pm t/hello.par
+____________________________________________________________________________
+[  1559] By: autrijus                              on 2002/10/19  21:38:12
+        Log: * todo, manifest, changes to default main.pl semantic.
+	   + TODO
+	   ! MANIFEST PAR.pm script/par.pl
+____________________________________________________________________________
+[  1544] By: autrijus                              on 2002/10/19  17:23:23
+        Log: * 0.10.
+             * XS modules are now supported!
+             * looks in $Config{archname}/ in addition to arch/ for
+	       cross-platform
+             PAR files support.
+	   ! PAR.pm script/par.pl
+____________________________________________________________________________
+[  1541] By: autrijus                              on 2002/10/19  15:17:50
+        Log: * This be 0.06.
+             * cleaned up the documentations.
+             * documents the stand-alone executable's format.
+	   ! PAR.pm README script/par.pl
+____________________________________________________________________________
+[  1540] By: autrijus                              on 2002/10/19  15:17:09
+        Log: * oops, PerlIO::Scalar should read IO::Scalar.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  1537] By: autrijus                              on 2002/10/19  14:18:37
+        Log: * Version 0.05.
+             * Full DATA section support with PerlIO::scalar or
+	       IO::Scalar.
+             * script/par.pl now dies if the .par file is not found.
+	   ! Makefile.PL PAR.pm script/par.pl t/1-basic.t
+	   ! t/hello.par
+____________________________________________________________________________
+[  1522] By: autrijus                              on 2002/10/19  02:31:09
+        Log: * This be 0.04.
+             * updated manifest and test files.
+	   ! MANIFEST t/1-basic.t t/hello.par
+____________________________________________________________________________
+[  1521] By: autrijus                              on 2002/10/19  02:30:49
+        Log: * feature request from Antti Lankila: stand-alone
+             par executable via -O.
+             * now automatically executes 'main.pl' from .par files.
+             * incoporate a patch for 5.8.0's broken B::C.
+             * updated manpage and instructions.
+	   + patches/perl580.diff
+	   ! PAR.pm README script/par.pl
+____________________________________________________________________________
+[  1519] By: autrijus                              on 2002/10/18  22:00:34
+        Log: * oops.
+	   ! Makefile.PL
+____________________________________________________________________________
+[  1518] By: autrijus                              on 2002/10/18  21:59:19
+        Log: * 0.03.
+             * added par.pl, a stand-alone invocation utility for PAR.
+             * added README.
+	   + README script/par.pl
+	   ! MANIFEST Makefile.PL PAR.pm
+____________________________________________________________________________
+[  1516] By: autrijus                              on 2002/10/18  20:52:38
+        Log: * Officially 0.02.
+	   ! PAR.pm
+____________________________________________________________________________
+[  1515] By: autrijus                              on 2002/10/18  20:51:53
+        Log: * all tests are now mandatory.
+	   ! t/1-basic.t
+____________________________________________________________________________
+[  1514] By: autrijus                              on 2002/10/18  20:49:57
+        Log: * 0.02.
+             * thanks to ton hospel, we don't need Filter::Simple
+	       anymore.
+	   - PAR/Filter.pm
+	   ! MANIFEST Makefile.PL PAR.pm
+____________________________________________________________________________
+[  1512] By: autrijus                              on 2002/10/18  20:23:57
+        Log: * The Perl Archive Library, version 0.01.
+	   + MANIFEST Makefile.PL PAR.pm PAR/Filter.pm
+	   + t/0-signature.t t/1-basic.t t/hello.par

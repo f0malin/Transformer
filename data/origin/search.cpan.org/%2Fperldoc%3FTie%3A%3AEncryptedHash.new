@@ -1,0 +1,420 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Tie::EncryptedHash - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Tie-EncryptedHash",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Tie-EncryptedHash-1.24",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Tie::EncryptedHash",3]);
+    _gaq.push(["_setCustomVar",1,"Author","VIPUL",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Tie::EncryptedHash">permalink</a></div>
+  <a href="/~vipul/">Vipul Ved Prakash</a> &gt;
+  <a href="/~vipul/Tie-EncryptedHash-1.24/">Tie-EncryptedHash-1.24</a> &gt;
+  Tie::EncryptedHash
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/f64a9e9d7042d5006d7fc972c94eae19?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/V/VI/VIPUL/Tie-EncryptedHash-1.24.tar.gz">Tie-EncryptedHash-1.24.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Tie%3A%3AEncryptedHash;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~VIPUL/Tie-EncryptedHash-1.24/lib/Tie/EncryptedHash.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Tie-EncryptedHash">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.8 &nbsp;
+<span class="noprint">
+  <a href="/src/VIPUL/Tie-EncryptedHash-1.24/lib/Tie/EncryptedHash.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#MOTIVATION'>MOTIVATION</a>
+  <li class='indexItem indexItem1'><a href='#CONSTRUCTION'>CONSTRUCTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Tied_Hash'>Tied Hash</a>
+    <li class='indexItem indexItem2'><a href='#Blessed_Object'>Blessed Object</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#RESERVED_ATTRIBUTES'>RESERVED ATTRIBUTES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#__password'>__password</a>
+    <li class='indexItem indexItem2'><a href='#__cipher'>__cipher</a>
+    <li class='indexItem indexItem2'><a href='#__hide'>__hide</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#BEHAVIOR'>BEHAVIOR</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#References'>References</a>
+    <li class='indexItem indexItem2'><a href='#Opaque_Mode'>Opaque Mode</a>
+    <li class='indexItem indexItem2'><a href='#Multiple_Passwords_and_Ciphers'>Multiple Passwords and Ciphers</a>
+    <li class='indexItem indexItem2'><a href='#Error_Handling'>Error Handling</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#QUIRKS'>QUIRKS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Autovivification'>Autovivification</a>
+    <li class='indexItem indexItem2'><a href='#Data::Dumper'>Data::Dumper</a>
+    <li class='indexItem indexItem2'><a href='#Speed'>Speed</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#STANDARD_USAGE'>STANDARD USAGE</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#ACKNOWLEDGEMENTS'>ACKNOWLEDGEMENTS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Tie::EncryptedHash - Hashes (and objects based on hashes) with encrypting fields.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Tie::EncryptedHash;
+
+    my %s = ();
+    tie %s, Tie::EncryptedHash, &#39;passwd&#39;;
+
+    $s{foo}  = &#34;plaintext&#34;;     # Normal field, stored in plaintext.
+    print $s{foo};              # (plaintext)
+                                
+    $s{_bar} = &#34;signature&#34;;     # Fieldnames that begin in single
+                                # underscore are encrypted.
+    print $s{_bar};             # (signature)  Though, while the password 
+                                # is set, they behave like normal fields.
+    delete $s{__password};      # Delete password to disable access 
+                                # to encrypting fields.
+    print $s{_bar};             # (Blowfish NuRVFIr8UCAJu5AWY0w...)
+
+    $s{__password} = &#39;passwd&#39;;  # Restore password to gain access.
+    print $s{_bar};             # (signature)
+                                
+    $s{_baz}{a}{b} = 42;        # Refs are fine, we encrypt them too.</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Tie::EncryptedHash augments Perl hash semantics to build secure, encrypting containers of data. Tie::EncryptedHash introduces special hash fields that are coupled with encrypt/decrypt routines to encrypt assignments at STORE() and decrypt retrievals at FETCH(). By design, <i>encrypting fields</i> are associated with keys that begin in single underscore. The remaining keyspace is used for accessing normal hash fields, which are retained without modification.</p>
+
+<p>While the password is set, a Tie::EncryptedHash behaves exactly like a standard Perl hash. This is its <i>transparent mode</i> of access. Encrypting and normal fields are identical in this mode. When password is deleted, encrypting fields are accessible only as ciphertext. This is Tie::EncryptedHash&#39;s <i>opaque mode</i> of access, optimized for serialization.</p>
+
+<p>Encryption is done with Crypt::CBC(3) which encrypts in the cipher block chaining mode with Blowfish, DES or IDEA. Tie::EncryptedHash uses Blowfish by default, but can be instructed to employ any cipher supported by Crypt::CBC(3).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MOTIVATION"
+>MOTIVATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Tie::EncryptedHash was designed for storage and communication of key material used in public key cryptography algorithms. I abstracted out the mechanism for encrypting selected fields of a structured data record because of the sheer convenience of this data security method.</p>
+
+<p>Quite often, applications that require data confidentiality eschew strong cryptography in favor of OS-based access control mechanisms because of the additional costs of cryptography integration. Besides cipher implementations, which are available as ready-to-deploy perl modules, use of cryptography in an application requires code to aid conversion and representation of encrypted data. This code is usually encapsulated in a data access layer that manages encryption, decryption, access control and re-structuring of flat plaintext according to a data model. Tie::EncryptedHash provides these functions under the disguise of a Perl hash so perl applications can use strong cryptography without the cost of implementing a complex data access layer.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONSTRUCTION"
+>CONSTRUCTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Tied_Hash"
+>Tied Hash</a></h2>
+
+<p><code>tie %h, Tie::EncryptedHash, &#39;Password&#39;, &#39;Cipher&#39;;</code></p>
+
+<p>Ties %h to Tie::EncryptedHash and sets the value of password and cipher to &#39;Password&#39; and &#39;Cipher&#39;. Both arguments are optional.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Blessed_Object"
+>Blessed Object</a></h2>
+
+<p><code>$h = new Tie::EncryptedHash __password =</code> &#39;Password&#39;, __cipher =&#62; &#39;Cipher&#39;;&#62;</p>
+
+<p>The new() constructor returns an object that is both tied and blessed into Tie::EncryptedHash. Both arguments are optional. When used in this manner, Tie::EncryptedHash behaves like a class with encrypting data members.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="RESERVED_ATTRIBUTES"
+>RESERVED ATTRIBUTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The attributes __password, __cipher and __hide are reserved for communication with object methods. They are &#34;write-only&#34; from everywhere except the class to which the hash is tied. __scaffolding is inaccessible. Tie::EncryptedHash stores the current encryption password and some transient data structures in these fields and restricts access to them on need-to-know basis.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="__password"
+>__password</a></h2>
+
+<p><code>$h{__password} = &#34;new password&#34;; delete $h{__password};</code></p>
+
+<p>The password is stored under the attribute <code>__password</code>. In addition to specifying a password at construction, assigning to the __password attribute sets the current encryption password to the assigned value. Deleting the __password unsets it and switches the hash into opaque mode.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="__cipher"
+>__cipher</a></h2>
+
+<p><code>$h{__cipher} = &#39;DES&#39;; $h{__cipher} = &#39;Blowfish&#39;;</code></p>
+
+<p>The cipher used for encryption/decryption is stored under the attribute __cipher. The value defaults to &#39;Blowfish&#39;.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="__hide"
+>__hide</a></h2>
+
+<p><code>$h{__hide} = 1;</code></p>
+
+<p>Setting this attribute <i>hides</i> encrypting fields in opaque mode. &#39;undef&#39; is returned at FETCH() and EXISTS().</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BEHAVIOR"
+>BEHAVIOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="References"
+>References</a></h2>
+
+<p>A reference stored in an encrypting field is serialized before encryption. The data structure represented by the reference is folded into a single line of ciphertext which is stored under the first level key. In the opaque mode, therefore, only the first level of keys of the hash will be visible.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Opaque_Mode"
+>Opaque Mode</a></h2>
+
+<p>The opaque mode introduces several other constraints on access of encrypting fields. Encrypting fields return ciphertext on FETCH() unless __hide attribute is set, which forces Tie::EncryptedHash to behave as if encrypting fields don&#39;t exist. Irrespective of __hide, however, DELETE() and CLEAR() fail in opaque mode. So does STORE() on an existing encrypting field. Plaintext assignments to encrypting fields are silently ignored, but ciphertext assignments are fine. Ciphertext assignments can be used to move data between different EncryptedHashes.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Multiple_Passwords_and_Ciphers"
+>Multiple Passwords and Ciphers</a></h2>
+
+<p>Modality of Tie::EncryptedHash&#39;s access system breaks down when more than one password is used to with different encrypting fields. This is a feature. Tie::EncryptedHash lets you mix passwords and ciphers in the same hash. Assign new values to __password and __cipher and create a new encrypting field. Transparent mode will be restricted to fields encrypted with the current password.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Error_Handling"
+>Error Handling</a></h2>
+
+<p>Tie::Encrypted silently ignores access errors. It doesn&#39;t carp/croak when you perform an illegal operation (like assign plaintext to an encrypting field in opaque mode). This is to prevent data lossage, the kind that results from abnormal termination of applications.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="QUIRKS"
+>QUIRKS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Autovivification"
+>Autovivification</a></h2>
+
+<p>Due to the nature of autovivified references (which spring into existence when an undefined reference is dereferenced), references are stored as plaintext in transparent mode. Analogous ciphertext representations are maintained in parallel and restored to encrypting fields when password is deleted. This process is completely transparent to the user, though it&#39;s advisable to delete the password after the final assignment to a Tie::EncryptedHash. This ensures plaintext representations and scaffolding data structures are duly flushed.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Data::Dumper"
+>Data::Dumper</a></h2>
+
+<p>Serialization of references is done with Data::Dumper, therefore the nature of data that can be assigned to encrypting fields is limited by what Data::Dumper can grok. We set $Data::Dumper::Purity = 1, so self-referential and recursive structures should be OK.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Speed"
+>Speed</a></h2>
+
+<p>Tie::EncryptedHash&#39;es keep their contents encrypted as much as possible, so there&#39;s a rather severe speed penalty. With Blowfish, STORE() on EncryptedHash can be upto 70 times slower than a standard perl hash. Reference STORE()&#39;es will be quicker, but speed gain will be adjusted at FETCH(). FETCH() is about 35 times slower than a standard perl hash. DES affords speed improvements of upto 2x, but is not considered secure for long-term storage of data. These values were computed on a DELL PIII-300 Mhz notebook with 128 Mb RAM running perl 5.003 on Linux 2.2.16. Variations in speed might be different on your machine.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="STANDARD_USAGE"
+>STANDARD USAGE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The standard usage for this module would be something along the lines of: populate Tie::EncryptedHash with sensitive data, delete the password, serialize the encrypted hash with Data::Dumper, store the result on disk or send it over the wire to another machine. Later, when the sensitive data is required, procure the EncryptedHash, set the password and accesses the encrypted data fields.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Data%3A%3ADumper" class="podlinkpod"
+>Data::Dumper</a>(3), <a href="/perldoc?Crypt%3A%3ACBC" class="podlinkpod"
+>Crypt::CBC</a>(3), <a href="/perldoc?Crypt%3A%3ADES" class="podlinkpod"
+>Crypt::DES</a>(3), <a href="/perldoc?Crypt%3A%3ABlowfish" class="podlinkpod"
+>Crypt::Blowfish</a>(3), <a href="/perldoc?Tie%3A%3ASecureHash" class="podlinkpod"
+>Tie::SecureHash</a>(3)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ACKNOWLEDGEMENTS"
+>ACKNOWLEDGEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The framework of Tie::EncryptedHash derives heavily from Damian Conway&#39;s Tie::SecureHash. Objects that are blessed as well as tied are just one of the pleasant side-effects of stealing Damian&#39;s code. Thanks to Damian for this brilliant module.</p>
+
+<p>PacificNet (<a href="http://www.pacificnet.net" class="podlinkurl"
+>http://www.pacificnet.net</a>) loaned me the aforementioned notebook to hack from the comfort of my bed. Thanks folks!</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Vipul Ved Prakash &#60;mail@vipul.net&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module is distributed under the same license as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78163 Uploads, 24704 Distributions
+105968 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 20:51:20 2012 GMT (0.104119062423706) @cpansearch1 -->
+ </body>
+</html>

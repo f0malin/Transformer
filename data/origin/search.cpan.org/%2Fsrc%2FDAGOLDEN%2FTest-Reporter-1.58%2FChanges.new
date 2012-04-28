@@ -1,0 +1,366 @@
+Revision history for Perl extension Test::Reporter.
+
+For the complete changelog, visit:
+http://github.com/dagolden/test-reporter/commits/master
+
+1.58      2011-07-19 12:07:53 America/New_York
+
+        - Deprecates email-transport related attributes and methods
+
+        - Adds new 'Null' transport as default
+
+        - Removes legacy transport classes
+          (See Test::Reporter::Transport::Legacy if needed)
+
+        - Removes 'cpantest' command line program
+
+1.57      2010-03-26 00:13:18 EST5EDT
+
+        - Includes full 'perl -V' output, not just Config::mychanges
+
+        - Adds new 'X-Test-Reporter-Perl' header with Perl version 
+          and optional "RCx" suffix to positively identify tests from
+          RC Perls
+
+        - Minimum perl version is now 5.006, matching the rest of the Perl toolchain
+
+1.56      2010-03-14 23:26:00 EST5EDT
+
+        - Convert line endings during read() [Issue identified
+          by Serguei Trouchelle]
+
+1.55      2010-03-12 11:44:05 EST5EDT
+
+        - Preserve distfile through write() and read() 
+          [patch by Dan Collins]
+
+        - Regenerate _myconfig data during read() method
+
+        - Switched to Dist::Zilla for release management
+
+1.54 Sun May 31 21:39:12 EDT 2009
+
+        - POD updates.
+
+        - Update Module::Install to 0.91.
+
+1.53_03 Thu Apr 16 12:30:49 EDT 2009
+
+        - Transmit report body line-by-line with Net::SMTP (or Net::SMTP::TLS).
+
+1.53_02 Wed Apr 15 13:30:53 EDT 2009
+
+        - With Net::SMTP transport, if lines are longer than 100 characters,
+          the email will be encoded with quoted-printable.
+
+1.53_01 Tue Apr  7 11:01:37 EDT 2009
+
+        - Added optional 'distfile' argument to support
+          T::R::Transport::Metabase.
+
+        - Reports link to the wiki rather than www.cpantesters.org; also added
+          cpan-testers-discuss as place to send Q's.
+
+        - Improved diagnostic output if editor fails to launch.
+
+        - Changed Makefile.Pl to Module::Install.
+
+1.5203 Tue Jan 20 15:25:07 EST 2009
+
+        - Updates CPAN Testers urls to www.cpantesters.org (David Westbrook).
+
+1.5202 Mon Nov  3 11:48:44 EST 2008
+
+        - Fixed bug in Mail::Send transport (GoogleCode issue 19; patch by
+          Moshe Kamensky).
+
+1.5201 Tue Sep 23 11:18:34 EDT 2008
+
+        - All tests now use Test::More (not Test) for better diagnostics.
+
+        - Removed unused signature test.
+
+1.52 Mon Sep  8 11:45:12 EDT 2008
+
+        - Fixed extraneous-newlines bug in reading reports saved to a file
+          (Sleven Rezick).
+
+1.51_02 Sun Sep  7 23:24:47 EDT 2008
+
+        - Cache mail domain; shorten mail domain timeout; add 'smtp' as a
+          hostname to check (KANE).
+
+1.51_01 Sat Sep  6 14:34:13 EDT 2008
+
+        - Avoid exclusive lock on tempfile for editing report (Slaven Rezick).
+
+1.50 Sat Sep  6 14:04:22 EDT 2008
+
+        - Deprecated sending reports to anywhere other than the cpan-testers
+          mailing list.  This means that authors will no longer be copied on
+          report emails by individual testers. (CPAN Testers is switching to
+          an opt-in philosophy with central author notifications).
+
+        - Doc fix on usage of read() in Test::Reporter::Transport::File.
+
+1.4002 Wed Jun 25 17:21:10 EDT 2008
+
+        - Fixed bug in error handling when using TLS transport.
+
+1.4001 Wed May 21 12:34:28 EDT 2008
+
+        - Fixed bug where send() would crash when no explicit transport was
+          set.
+
+1.40 Sun May 18 14:54:46 EDT 2008
+
+        - No change from 1.39_06.
+
+1.39_06 Thu Apr 17 06:15:45 EDT 2008
+
+        - Fixed bug setting transport_args in constructor.
+
+1.39_05 Wed Apr  9 12:43:55 EDT 2008
+
+        - Removed use of File::Temp->newdir() for backwards compatibility with
+          older versions of File::Temp.
+
+1.39_04 Mon Apr  7 17:25:35 EDT 2008
+
+        - Added Test::Reporter::Transport::File subclass.
+
+1.39_03 Mon Apr  7 10:00:00 EDT 2008
+
+        - Added documentation for transport.
+
+1.39_02 Sun Apr  6 14:40:00 EDT 2008
+
+        - Refactored transport into Test::Reporter::Transport subclasses.
+
+1.39_01 Sun Apr  6 01:16:10 EDT 2008
+
+        - Whoops! Devel versions are supposed to be odd.
+
+        - t/2-http-transport.t left out of MANIFEST.
+
+        - Copyright notice updates.
+
+1.38_01 Sat Apr  5 18:00:00 EDT 2008
+
+        - Add support for 'HTTP' transport to a Test::Reporter::HTTPGateway
+          server.
+
+1.38 Tue Oct 09 21:00:00 EDT 2007
+
+        - Additional compatibility improvements for VMS. Many thanks to Peter
+          (Stig) Edwards!
+
+1.36 Mon Oct 08 21:00:00 EDT 2007
+
+        - Compat for perl-5.005_05 per David Golden and Slaven Rezic.
+
+        - Per 29690@RT cleaning up cpantest's -dump output (thanks janus!).
+
+        - Per 9@Google compat fixes for VMS courtesy of Peter (Stig) Edwards.
+
+1.34 Sun Aug 12 23:00:00 EDT 2007
+
+        - It is now possible to override the automatic selection of a transport
+          by making use of the transport() method (per WYANT and ANDK).
+
+        - A dozen new tests added to support transport().
+
+        - Internal debugging improvements.
+
+        - Various documentation improvements.
+
+        - Removing subversion artifacts; This project is now under git control.
+
+1.32 Sun Jul 29 06:30:00 EDT 2007
+
+        - Fixed an issue (8@Google) whereby test reports had Date headers that
+          were not RFC-822 complaint (reported by Serguei Trouchelle).
+
+1.30 Wed Jul 18 04:50:00 EDT 2007
+
+        - Public release of all activity against 1.29_0* (see below).
+
+        - Additionally, updated some documentation and added more tests.
+
+1.29_04 Wed Jun 27 13:20:00 CDT 2007
+
+        - Added t/0-signature.t to test the SIGNATURE.
+
+        - Renamed t/reporter.t to t/1-reporter.t.
+
+        - Adjusted Makefile.PL to support dist-time signing.
+
+1.29_03 Wed Jun 27 02:30:00 CDT 2007
+
+        - We now explicitly specify the license (same terms as perl itself) in
+          the Makefile.PL, which eventually makes it into the auto-generated
+          META.yml.
+
+1.29_02 Tue Jun 26 16:00:00 CDT 2007
+
+        - Fixed a portability bug in t/reporter.t. Reported by David Golden.
+          See 6@Google for more information.
+
+1.29_01 Tue Jun 26 01:30:00 CDT 2007
+
+        - Switched from RT to Google Code for defect and enhancement tracking.
+          Please visit: http://code.google.com/p/test-reporter/
+
+        - warnings enabled for Reporter.pm.
+
+        - TODO file removed; moved to POD.
+
+        - MacPerl (i.e., pre OS X) support dropped for Test::Reporter.
+
+        - MacPerl (i.e., pre OS X) support dropped for cpantest.
+
+        - Incorporated suggestion from MIROD; add documentation to describe
+          what a package should look like (14376).
+
+        - Incorporated patch from SAPER; compatibility for write() under 5.004
+          (14148).
+
+        - Incorporated suggestion from CLACO; updated MX for perl.org (11370).
+
+        - Incorporated suggestion from an anonymous individual: when an MX
+          connection failure occurs, show the failing MX server, if debugging
+          is on (14626).
+
+        - Changes indentation style of code from tabs to spaces.
+
+        - Added Id and HeadURL subversion tokens.
+
+        - Removed dependencies on Date::Format and Time::Zone.
+
+        - Unbundled Mail::Util; Now integrated into Reporter.pm.
+
+        - Incorporated patch from MIROD; support for reporting tests on
+          non-standard versions of perl (14375).
+
+        - Added more tests to the T::R test suite (more than doubled quantity).
+
+        - We now refuse to report results against perl itself; use perlbug.
+
+        - Added Message-IDs to emails sent via SMTP per tom at eborcom dot com.
+
+1.27 Mon Jan 17 15:51:00 EDT 2005
+
+        - Don't try to use Mail::Send on Windows.
+
+1.26 Thu Dec 30 19:03:00 EDT 2004
+
+        - Add support for a user-specified suffix in edit_comments().
+
+        - Add a suffix of '.txt' to the tempfile when editing comments.
+
+        - Update changes.
+
+1.25 Thu Dec 30 19:02:00 EDT 2004
+
+        - Reintegrate Reporter.pod into Reporter.pm.
+
+1.24 Thu Dec 30 19:02:00 EDT 2004
+
+        - Correct MAN3EXT in Makefile.PL for Reporter.pod.
+
+1.23 Sun Dec 26 10:17:00 EDT 2004
+
+        - Add cpantest -from and -dump.
+
+        - Update T:R->write() to accept a second argument, filehandle object.
+
+        - ucfirst'd globals that were lowercase.
+
+        - Fix pod man3 extension.
+
+        - Make tests autodetect release version.
+
+1.22 Sun Dec 26 09:23:00 EDT 2004
+
+        - Restructured mx, recipient filter logic.
+
+        - Remove commented $VERSION to fix mlc 0.06 (cpanplus <= 0.050_04).
+
+1.21 Sun Dec 26 07:57:00 EDT 2004
+
+        - Fixed local hostname logic to skip /\.local$/ domains under OS X.
+
+1.20 Wed Mar  5 04:03:07 EDT 2003
+
+        - Fixed a minor bug with read().
+
+1.19 Wed Mar  5 03:03:07 EDT 2003
+
+        - Added dir() -- specifies default directory to write report files to.
+
+        - Added write() -- writes a test report to disk.
+
+        - Added read() -- reads a test report from disk.
+
+        - These three methods are used in situations where you test on a
+          machine that has port 25 blocked and there is no local MTA. You use
+          write() on the machine that you are testing from, and use read() on
+          the machine that you want to actually submit the reports from.
+
+1.16 Tue Feb 25 04:00:00 EDT 2003
+
+        - Abstract now matches PAUSE meta-data for this distribution.
+
+        - Better POD documentation.
+
+        - Header pass-through for X-Reported-Via, via via(). This is useful for
+          third-party distributions, like CPANPLUS, that use Test::Reporter.
+
+        - Added 'debug' get/set method -- this is extremely verbose and
+          primarily of use for debugging Test::Reporter itself.
+
+        - Added 'address' get/set method -- specifies the e-mail address that
+          the reports should be sent to -- you shouldn't need this unless the
+          CPAN Tester's change the e-mail address to send report's to.
+
+        - Added 'from' get/set method -- specifies the e-mail address of the
+          individual doing the reporting -- you generally shouldn't need this
+          as Test::Reporter tries very hard to guess your e-mail address
+          automatically.
+
+        - Added 'mx' get/set method -- specifies the MX's for perl.org -- you
+          really shouldn't need to use this unless the hardcoded MX's have
+          become wrong and you don't have Net::DNS installed.
+
+        - The constructor now takes named parameters.
+
+        - We now use Net::DNS to get MX's if Net::DNS is available.
+
+        - We now use Net::Domain to better auto-guess the reporter's email
+          address.
+
+        - We now use Mail::Send to send reports, if it's available.
+
+        - Now cycles through all available MX servers, when using Net::SMTP.
+
+        - Added bin/cpantest.
+
+        - T::R now allows testers to edit the report interactively via the
+          edit_comments() method.
+
+        - T::R report's have been made less susceptible to being marked as spam.
+
+        - "can't call method "mail" on an undefined value" bug fixed.
+
+        - Doubled the number of tests.
+
+        - Memoized certain methods.
+
+        - Bundling Date::Format and Time::Zone to assist in SMTP sends (for
+          'Date').
+
+        - Bundling an updated Mail::Util.
+
+1.13 Sun Aug 12 03:20:08 EDT 2002
+
+        - Initial beta release.

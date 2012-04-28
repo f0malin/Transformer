@@ -1,0 +1,595 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>load - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","load",3]);
+    _gaq.push(["_setCustomVar",5,"Release","load-0.21",3]);
+    _gaq.push(["_setCustomVar",3,"Module","load",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ELIZABETH",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?load">permalink</a></div>
+  <a href="/~elizabeth/">Elizabeth Mattijsen</a> &gt;
+  <a href="/~elizabeth/load-0.21/">load-0.21</a> &gt;
+  load
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/f6f8083d758244cb1b1df1997adc1791?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/E/EL/ELIZABETH/load-0.21.tar.gz">load-0.21.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=load;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ELIZABETH/load-0.21/lib/load.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=load">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.21 &nbsp;
+<span class="noprint">
+  <a href="/src/ELIZABETH/load-0.21/lib/load.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#MODES_OF_OPERATION'>MODES OF OPERATION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#inside_a_module'>inside a module</a>
+    <li class='indexItem indexItem2'><a href='#inside_an_application'>inside an application</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#KEYWORDS'>KEYWORDS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#ondemand'>ondemand</a>
+    <li class='indexItem indexItem2'><a href='#now'>now</a>
+    <li class='indexItem indexItem2'><a href='#dontscan'>dontscan</a>
+    <li class='indexItem indexItem2'><a href='#autoload'>autoload</a>
+    <li class='indexItem indexItem2'><a href='#inherit'>inherit</a>
+    <li class='indexItem indexItem2'><a href='#AutoLoader'>AutoLoader</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#REQUIRED_MODULES'>REQUIRED MODULES</a>
+  <li class='indexItem indexItem1'><a href='#DIFFERENCES_WITH_SIMILAR_MODULES'>DIFFERENCES WITH SIMILAR MODULES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#AutoSplit_/_AutoLoader'>AutoSplit / AutoLoader</a>
+    <li class='indexItem indexItem2'><a href='#SelfLoader'>SelfLoader</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#UNIVERSAL::can'>UNIVERSAL::can</a>
+  <li class='indexItem indexItem1'><a href='#CAVEATS'>CAVEATS</a>
+  <li class='indexItem indexItem1'><a href='#EXAMPLES'>EXAMPLES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#base_class'>base class</a>
+    <li class='indexItem indexItem2'><a href='#sub_class'>sub class</a>
+    <li class='indexItem indexItem2'><a href='#custom_AUTOLOAD'>custom AUTOLOAD</a>
+    <li class='indexItem indexItem2'><a href='#mod_perl_prefork'>mod_perl prefork</a>
+    <li class='indexItem indexItem2'><a href='#threaded_applications_and_mod_perl_worker'>threaded applications and mod_perl worker</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SOURCE_FILTERS'>SOURCE FILTERS</a>
+  <li class='indexItem indexItem1'><a href='#TODO'>TODO</a>
+  <li class='indexItem indexItem1'><a href='#MODULE_RATING'>MODULE RATING</a>
+  <li class='indexItem indexItem1'><a href='#ACKNOWLEDGEMENTS'>ACKNOWLEDGEMENTS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>load - control when subroutines will be loaded</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use load;            # default, same as &#39;autoload&#39;
+
+  use load &#39;autoload&#39;; # export AUTOLOAD handler to this namespace
+
+  use load &#39;ondemand&#39;; # load subroutines after __END__ when requested, default
+
+  use load &#39;now&#39;;      # load subroutines after __END__ now
+
+  use load ();         # same as qw(dontscan inherit)
+
+  use load &#39;dontscan&#39;; # don&#39;t scan module until it is really needed
+
+  use load &#39;inherit&#39;;  # do NOT export AUTOLOAD handler to this namespace</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This documentation describes version 0.21.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The &#34;load&#34; pragma allows a module developer to give the application developer more options with regards to optimize for memory or CPU usage. The &#34;load&#34; pragma gives more control on the moment when subroutines are loaded and start taking up memory. This allows the application developer to optimize for CPU usage (by loading all of a module at compile time and thus reducing the amount of CPU used during the execution of an application). Or allow the application developer to optimize for memory usage, by loading subroutines only when they are actually needed, thereby however increasing the amount of CPU needed during execution.</p>
+
+<p>The &#34;load&#34; pragma combines the best of both worlds from <a href="/perldoc?AutoLoader" class="podlinkpod"
+>AutoLoader</a> and <a href="/perldoc?SelfLoader" class="podlinkpod"
+>SelfLoader</a>. And adds some more features.</p>
+
+<p>In a situation where you want to use as little memory as possible, the &#34;load&#34; pragma (in the context of a module) is a drop-in replacement for <a href="/perldoc?AutoLoader" class="podlinkpod"
+>AutoLoader</a>. But for situations where you want to have a module load everything it could ever possibly need (e.g. when starting a mod_perl server in pre-fork mode), the &#34;load&#34; pragma can be used (in the context of an application) to have all subroutines of a module loaded without having to make any change to the source of the module in question.</p>
+
+<p>So the typical use inside a module is to have:</p>
+
+<pre class="sh_perl"> package Your::Module;
+ use load;</pre>
+
+<p>in the source. And to place all subroutines that you want to be loadable on demand after the (first) __END__.</p>
+
+<p>If an application developer decides that all subroutines should be loaded at compile time, (s)he can say in the application:</p>
+
+<pre class="sh_perl"> use load &#39;now&#39;;
+ use Your::Module;</pre>
+
+<p>This will cause the subroutines of Your::Module to all be loaded at compile time.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MODES_OF_OPERATION"
+>MODES OF OPERATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>There are basically two places where you can call the &#34;load&#34; pragma:</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="inside_a_module"
+>inside a module</a></h2>
+
+<p>When you call the &#34;load&#34; pragma inside a module, you&#39;re basically enabling that module for having an external control when certain subroutines will be loaded. As with AutoLoader, any subroutines that should be loaded on demand, should be located <b>after</b> an __END__ line.</p>
+
+<p>If no parameters are specified with the <code>use load</code>, then the &#34;autoload&#34; parameter is assumed. Whether the module&#39;s subroutines are loaded at compile time or on demand, is determined by the calling application. If the application doesn&#39;t specify anything specific, the &#34;ondemand&#34; keyword will also be assumed.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="inside_an_application"
+>inside an application</a></h2>
+
+<p>When you call the &#34;load&#34; pragma inside an application, you&#39;re basically specifying when subroutines will be loaded by &#34;load&#34; enhanced modules. As an application developer, you can basically use two keywords: &#34;ondemand&#34; and &#34;now&#34;.</p>
+
+<p>If an application does not call the &#34;load&#34; pragma, the &#34;ondemand&#34; keyword will be assumed. With &#34;ondemand&#34;, subroutines will only be loaded when they are actually executed. This saves memory at the expense of extra CPU the first time the subroutine is called.</p>
+
+<p>The &#34;now&#34; keyword indicates that all subroutines of all modules that are enhanced with the &#34;load&#34; pragma, will be loaded at compile time (thus using more memory, but <b>not</b> having an extra CPU overhead the first time the subroutine is executed).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="KEYWORDS"
+>KEYWORDS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following keywords are recognized with the <code>use</code> command:</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="ondemand"
+>ondemand</a></h2>
+
+<p>The &#34;ondemand&#34; keyword indicates that subroutines, of modules that are enhanced with the &#34;load&#34; pragma, will only be loaded when they are actually called.</p>
+
+<p>If the &#34;ondemand&#34; keyword is used in the context of an application, all modules that are subsequently <code>use</code>d, will be forced to load subroutines only when they are actually called (unless the module itself forces a specific setting).</p>
+
+<p>If the &#34;ondemand&#34; keyword is used in the context of a module, it indicates that the subroutines of that module, should <b>always</b> be loaded when they are actually needed. Since this takes away the choice from the application developer, the use of the &#34;ondemand&#34; keyword in module context is not encouraged. See also the <a href="/perldoc?now" class="podlinkpod"
+>now</a> and <a href="/perldoc?dontscan" class="podlinkpod"
+>dontscan</a> keywords.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="now"
+>now</a></h2>
+
+<p>The &#34;now&#34; keyword indicates that subroutines, of modules that are enhanced with the &#34;load&#34; pragma, will be loaded at compile time.</p>
+
+<p>If the &#34;now&#34; keyword is used in the context of an application, all modules that are subsequently <code>use</code>d, will be forced to load all subroutines at compile time (unless the module forces a specific setting itself).</p>
+
+<p>If the &#34;now&#34; keyword is used in the context of a module, it indicates that the subroutines of that module, should <b>always</b> be loaded at compile time. Since this takes away the choice from the application developer, the use of the &#34;now&#34; keyword in module context is not encouraged. See also the <a href="/perldoc?ondemand" class="podlinkpod"
+>ondemand</a> keyword.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="dontscan"
+>dontscan</a></h2>
+
+<p>The &#34;dontscan&#34; keyword only makes sense when used in the context of a module. Normally, when a module that is enhanced with the &#34;load&#34; pragma is compiled, the source after the __END__ is scanned for the locations of the subroutines. This makes the compiling of modules a little slower, but allows for a faster (initial) lookup of (yet) unloaded subroutines during execution.</p>
+
+<p>If the &#34;dontscan&#34; keyword is specified, this scanning of the source is skipped at compile time. However, as soon as an attempt is made to ececute a subroutine from this module, then first the scanning of the source is performed, before the subroutine in question is loaded.</p>
+
+<p>So, you should use the &#34;dontscan&#34; keyword if you are reasonably sure that you will only need subroutines from the module in special cases. In all other cases it will make more sense to have the source scanned at compile time.</p>
+
+<p>The &#34;dontscan&#34; keyword will be ignored if an application developer forces subroutines to be loaded at compile time with the <a href="/perldoc?now" class="podlinkpod"
+>now</a> keyword.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="autoload"
+>autoload</a></h2>
+
+<p>The &#34;autoload&#34; keyword only makes sense when used in the context of a module. It indicates that a generic AUTOLOAD subroutine will be exported to the module&#39;s namespace. It is selected by default if you use the &#34;load&#34; pragma without parameters in the source of a module. See also the <a href="/perldoc?inherit" class="podlinkpod"
+>inherit</a> keyword to <b>not</b> export the generic AUTOLOAD subroutine.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="inherit"
+>inherit</a></h2>
+
+<p>The &#34;inherit&#34; keyword only makes sense when used in the context of a module. It indicates that <b>no</b> AUTOLOAD subroutine will be exported to the module&#39;s namespace. This can e.g. be used when you need to have your own AUTOLOAD routine. That AUTOLOAD routine should then contain:</p>
+
+<pre class="sh_perl"> $load::AUTOLOAD = $sub;
+ goto &#38;load::AUTOLOAD;</pre>
+
+<p>to access the &#34;load&#34; pragma functionality. Another case to use the &#34;inherit&#34; keyword would be in a sub-class of a module which also is &#34;load&#34; enhanced. In that case, the inheritance will cause the AUTOLOAD subroutine of the base class to be used, thereby accessing the &#34;load&#34; pragma automagically (and hence the naming of the keyword of course). See also the <a href="/perldoc?autoload" class="podlinkpod"
+>autoload</a> keyword to have the module use the generic AUTOLOAD subroutine.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="AutoLoader"
+>AutoLoader</a></h2>
+
+<p>The &#34;AutoLoader&#34; keyword enables AutoLoader emulation mode. It basically takes over the functionality of the AutoLoader module (which is part of Perl&#39;s core, and which is used by many of Perl&#39;s core modules).</p>
+
+<p>Use of AutoLoader emulation mode usually only makes sense in a mod_perl prefork environment (in combination with the &#34;now&#34; keyword), or a threaded Perl environment.</p>
+
+<p>It basically adds the flexibility of subroutine loading options of the &#34;load&#34; pragma to the existing codebase of Perl&#39;s core and CPAN modules. It is typically invoked from the command line:</p>
+
+<pre class="sh_perl"> perl -Mload=AutoLoader</pre>
+
+<p>or in a mod_perl configuration:</p>
+
+<pre class="sh_perl"> &#60;Perl&#62;
+ use load qw(AutoLoader now); # as early as possible
+                              # rest of modules to be loaded
+ &#60;/Perl&#62;</pre>
+
+<p>The AutoLoader emulation mode has the further advantage for modules being developed with AutoLoader, as it is possible to run the module before having to have installed the module (which is normally a requirement with using AutoLoader).</p>
+
+<p>Please note that AutoLoader emulation will only work properly for any modules loaded <b>after</b> the &#34;load&#34; module is loaded. It is therefore important to activate the AutoLoader as soon as possible, before <b>any</b> other modules have been loaded. Of particular interest in this respect are the <a href="/perldoc?threads" class="podlinkpod"
+>threads</a> and the <a href="/perldoc?ifdef" class="podlinkpod"
+>ifdef</a> modules.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="REQUIRED_MODULES"
+>REQUIRED MODULES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> (none)</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIFFERENCES_WITH_SIMILAR_MODULES"
+>DIFFERENCES WITH SIMILAR MODULES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>There are a number of (core) modules that more or less do the same thing as the &#34;load&#34; pragma.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="AutoSplit_/_AutoLoader"
+>AutoSplit / AutoLoader</a></h2>
+
+<p>The &#34;load&#34; pragma is very similar to the AutoSplit / AutoLoader combination. The main difference is that the splitting takes place when the &#34;load&#34; import is called in a module and that there are no external files created. Instead, just the offsets and lengths are recorded in a hash (when &#34;ondemand&#34; is active) or all the source after __END__ is eval&#39;led (when &#34;now&#34; is active).</p>
+
+<p>From a module developer point of view, the advantage is that you do not need to install a module before you can test it. From an application developer point of view, you have the flexibility of having everything loaded now or later (on demand).</p>
+
+<p>From a memory usage point of view, the &#34;load&#34; offset/length hash takes up more memory than the equivalent AutoLoader setup. On the other hand, accessing the source of a subroutine may generally be faster because the file is more likely to reside in the operating system&#39;s buffers already.</p>
+
+<p>As an extra feature, the &#34;load&#34; pragma allows an application to force all subroutines to be loaded at compile time, which is not possible with AutoLoader.</p>
+
+<p>The &#34;AutoLoader emulation&#34; mode causes AutoLoader to be replaced by &#34;load&#34;, increasing further flexibility in loading options (which can be particularly important in the <a href="#mod_perl_prefork" class="podlinkpod"
+>&#34;mod_perl prefork&#34;</a> situation) and ease of use during development of modules using AutoLoader (as you don&#39;t need to install the module before you can test it).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SelfLoader"
+>SelfLoader</a></h2>
+
+<p>The &#34;load&#34; pragma also has some functionality in common with the SelfLoader module. But it gives more granularity: with SelfLoader, all subroutines that are not loaded directly, will be loaded if <b>any</b> not yet loaded subroutine is requested. It also adds complexities if your module needs to use the &#60;DATA&#62; handle. So the &#34;load&#34; pragma gives more flexibility and fewer development complexities. And of course, an application can force all subroutines to be loaded at compile time when needed with the &#34;load&#34; pragma.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="UNIVERSAL::can"
+>UNIVERSAL::can <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>To ensure the functioning of the -&#62;can class method and &#38;UNIVERSAL::can, the &#34;load&#34; pragma hijacks the standard UNIVERSAL::can routine so that it can check whether the subroutine/method that you want to check for, actually exists and have a code reference to it returned. This has a side effect that you the subroutine checked for, is loaded. You can use this side effect to load subroutines without calling them.</p>
+
+<pre class="sh_perl"> Your::Module-&#62;can( &#39;loadthisnow&#39; );</pre>
+
+<p>will load the subroutine &#34;loadthisnow&#34; of the Your::Module module without actually calling it.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEATS"
+>CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Currently you may not have multiple packages in the same file, nor can you have fully qualified subroutine names.</p>
+
+<p>The parser that looks for package names and subroutines, is not very smart. This is intentionally so, as making it smarter will make it a lot slower, but probably still not smart enough. Therefore, the <code>package</code> and <code>sub</code>&#39;s <b>must</b> be at the start of a line. And the name of the <code>sub</code> <b>must</b> be on the same line as the <code>sub</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Some code examples. Please note that these are just a part of an actual situation.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="base_class"
+>base class</a></h2>
+
+<pre class="sh_perl"> package Your::Module;
+ use load;</pre>
+
+<p>Exports the generic AUTOLOAD subroutine and adheres to whatever the application developer specifies as mode of operation.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="sub_class"
+>sub class</a></h2>
+
+<pre class="sh_perl"> package Your::Module::Adapted;
+ @ISA = qw(Your::Module);
+ use load ();</pre>
+
+<p>Does <b>not</b> export the generic AUTOLOAD subroutine, but inherits it from its base class. Also implicitely specifies the &#34;dontscan&#34; keyword, causing the source of the module to be scanned only when the first not yet loaded subroutine is about to be executed. If you only want to have the &#34;inherit&#34; keyword functionality, then you must specify that explicitely:</p>
+
+<pre class="sh_perl"> package Your::Module::Adapted;
+ @ISA = qw(Your::Module);
+ use load &#39;inherit&#39;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="custom_AUTOLOAD"
+>custom AUTOLOAD</a></h2>
+
+<pre class="sh_perl"> package Your::Module;
+ use load &#39;inherit&#39;;
+ 
+ sub AUTOLOAD {
+   if (some condition) {
+     $load::AUTOLOAD = $Your::Module::AUTOLOAD;
+     goto &#38;load::AUTOLOAD;
+   }
+   # do your own stuff
+ }</pre>
+
+<p>If you want to use your own AUTOLOAD subroutine, but still want to use the functionality offered by the &#34;load&#34; pragma, you can use the above construct.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="mod_perl_prefork"
+>mod_perl prefork</a></h2>
+
+<pre class="sh_perl"> use load qw(AutoLoader now);
+ use Your::Module;</pre>
+
+<p>In pre-fork mod_perl applications (the default mod_perl applications before mod_perl 2.0), it is advantageous to load all possible subroutines when the Apache process is started. This is because the operating system will share memory using a process called &#34;Copy On Write&#34;. So even though it will take more memory initially, that memory loss is easily evened out by the gains of having everything shared. Loading a not yet loaded subroutine in that situation, will cause otherwise shared memory to become unshared. Thereby increasing the overall memory usage, because the amount that becomes unshared is typically a lot more than the extra memory used by the subroutine (which is caused by fragmentation of allocated memory).</p>
+
+<p>The <b>AutoLoader</b> emulation mode causes all modules that use <code>AutoLoader</code> to be handled by <code>load</code>. In combination with the &#34;now&#34; mode, this means that many system modules will also be loaded completely at server startup (causing a grow in initial use of memory, but sharing more memory means that overall memory usage is significantly reduced.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="threaded_applications_and_mod_perl_worker"
+>threaded applications and mod_perl worker</a></h2>
+
+<pre class="sh_perl"> use Your::Module;</pre>
+
+<p>Threaded Perl applications, of which mod_perl applications using the &#34;worker&#34; module are a special case, function best when subroutines are only loaded when they are actually needed. This is caused by the nature of the threading model of Perl, in which all data-structures are <b>copied</b> to each thread (essentially forcing them to become unshared as far as the operating system is concerned).</p>
+
+<p>Benchmarks have shown that the overhead of the extra CPU is easily offset by the reduction of the amount of data that needs to be copied (and processed) when a thread is created.</p>
+
+<p>A little additional memory reduction can be achieved with the <a href="/perldoc?AutoLoader" class="podlinkpod"
+>AutoLoader</a> emulation mode: this will prevent the AutoLoader module to be loaded (but have its functionality handled by the &#34;load&#34; pragma).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SOURCE_FILTERS"
+>SOURCE FILTERS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If your module wants to use &#34;load&#34; to load subroutines on demand <b>and</b> that module needs a source filter (which is usually activated with a &#34;use&#34; statement), then those modules need to be used when the source of the subroutine is compiled. The class method &#34;register&#34; is intended to be used from such a module, typicallly like this:</p>
+
+<pre class="sh_perl"> sub import {
+   my $package = caller();
+   load-&#62;register( $package,__PACKAGE__ )  # register caller&#39;s package
+    if defined( $load::VERSION )           # if load.pm loaded
+     and $load::VERSION &#62; 0.11;            # and recent enough
+ }</pre>
+
+<p>The first parameter is the name of the package <b>in</b> which subroutines need extra modules &#34;use&#34;d. The second parameter is the name of the module that needs to be &#34;use&#34;d.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TODO"
+>TODO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The coordinates of a subroutine in a module (start,number of bytes) are stored in a hash in the load namespace. Ideally, this information should be stored in the stash of the module to which they apply. Then the internals that check for the existence of a subroutine, would see that the subroutine doesn&#39;t exist (yet), but that there is an offset and length (and implicitely, a file from %INC) from which the source could be read and evalled.</p>
+
+<p>Loading all of the subroutines should maybe be handled inside the Perl parser, having it skip __END__ when the global &#34;now&#34; flag is set.</p>
+
+<p>Possibly we should use the &#60;DATA&#62; handle from a module if there is one, or dup it and use that, rather than opening the file again.</p>
+
+<p>Add <a href="/perldoc?SelfLoader" class="podlinkpod"
+>SelfLoader</a> emulation mode.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MODULE_RATING"
+>MODULE RATING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you want to find out how this module is appreciated by other people, please check out this module&#39;s rating at <a href="http://cpanratings.perl.org/l/load" class="podlinkurl"
+>http://cpanratings.perl.org/l/load</a> (if there are any ratings for this module). If you like this module, or otherwise would like to have your opinion known, you can add your rating of this module at <a href="http://cpanratings.perl.org/rate/?distribution=load" class="podlinkurl"
+>http://cpanratings.perl.org/rate/?distribution=load</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ACKNOWLEDGEMENTS"
+>ACKNOWLEDGEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Frank Tolstrup for helping ironing out all of the Windows related issues.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Elizabeth Mattijsen, &#60;liz@dijkmat.nl&#62;.</p>
+
+<p>Please report bugs to &#60;perlbugs@dijkmat.nl&#62;.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2002, 2003, 2004, 2005, 2006, 2007, 2010, 2012 Elizabeth Mattijsen &#60;liz@dijkmat.nl&#62;. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?AutoLoader" class="podlinkpod"
+>AutoLoader</a>, <a href="/perldoc?SelfLoader" class="podlinkpod"
+>SelfLoader</a>, <a href="/perldoc?ifdef" class="podlinkpod"
+>ifdef</a>, <a href="/perldoc?threads" class="podlinkpod"
+>threads</a>.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78111 Uploads, 24694 Distributions
+105940 Modules, 9641 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Mon Apr 23 22:07:34 2012 GMT (0.225055932998657) @cpansearch1 -->
+ </body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Task::Moose - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Task-Moose",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Task-Moose-0.03",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Task::Moose",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DOY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Task::Moose">permalink</a></div>
+  <a href="/~doy/">Jesse Luehrs</a> &gt;
+  <a href="/~doy/Task-Moose-0.03/">Task-Moose-0.03</a> &gt;
+  Task::Moose
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/88766de7a058697d3d0335b8d384fd2a?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DO/DOY/Task-Moose-0.03.tar.gz">Task-Moose-0.03.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Task%3A%3AMoose;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DOY/Task-Moose-0.03/lib/Task/Moose.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Task-Moose">View/Report Bugs</a><br/>
+
+</div>
+</div>
+  Module Version:  0.03 &nbsp;
+<span class="noprint">
+  <a href="/src/DOY/Task-Moose-0.03/lib/Task/Moose.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#MODULES'>MODULES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Make_Moose_Stricter'>Make Moose Stricter</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#MooseX::StrictConstructor'>MooseX::StrictConstructor</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Params::Validate'>MooseX::Params::Validate</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Traits_/_Roles'>Traits / Roles</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#MooseX::Role::TraitConstructor'>MooseX::Role::TraitConstructor</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Traits'>MooseX::Traits</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Object::Pluggable'>MooseX::Object::Pluggable</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Role::Parameterized'>MooseX::Role::Parameterized</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Instance_Types'>Instance Types</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#MooseX::GlobRef'>MooseX::GlobRef</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::InsideOut'>MooseX::InsideOut</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Singleton'>MooseX::Singleton</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::NonMoose'>MooseX::NonMoose</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Declarative_Syntax'>Declarative Syntax</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#MooseX::Declare'>MooseX::Declare</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Method::Signatures'>MooseX::Method::Signatures</a>
+      <li class='indexItem indexItem3'><a href='#TryCatch'>TryCatch</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Types'>Types</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#MooseX::Types'>MooseX::Types</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Types::Structured'>MooseX::Types::Structured</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Types::Path::Class'>MooseX::Types::Path::Class</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Types::Set::Object'>MooseX::Types::Set::Object</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Types::DateTime'>MooseX::Types::DateTime</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Command_Line_Integration'>Command Line Integration</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#MooseX::Getopt'>MooseX::Getopt</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::ConfigFromFile'>MooseX::ConfigFromFile</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::SimpleConfig'>MooseX::SimpleConfig</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::App::Cmd'>MooseX::App::Cmd</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Role::Cmd'>MooseX::Role::Cmd</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Logging'>Logging</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#MooseX::LogDispatch'>MooseX::LogDispatch</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::LazyLogDispatch'>MooseX::LazyLogDispatch</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Log::Log4perl'>MooseX::Log::Log4perl</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Async'>Async</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#MooseX::POE'>MooseX::POE</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Workers'>MooseX::Workers</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Utility_Roles'>Utility Roles</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#MooseX::Daemonize'>MooseX::Daemonize</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Param'>MooseX::Param</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Iterator'>MooseX::Iterator</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Clone'>MooseX::Clone</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::Storage'>MooseX::Storage</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Other_Useful_Extensions'>Other Useful Extensions</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Moose::Autobox'>Moose::Autobox</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::ClassAttribute'>MooseX::ClassAttribute</a>
+      <li class='indexItem indexItem3'><a href='#MooseX::SemiAffordanceAccessor'>MooseX::SemiAffordanceAccessor</a>
+      <li class='indexItem indexItem3'><a href='#namespace::autoclean'>namespace::autoclean</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Utilities'>Utilities</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Pod::Coverage::Moose'>Pod::Coverage::Moose</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#NOTES'>NOTES</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Task::Moose - Moose in a box</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This Task installs Moose and then optionally installs a number of Moose extensions listed below.
+This list is meant to be comprehensive,
+so if I missed something please let me know.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MODULES"
+>MODULES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Make_Moose_Stricter"
+>Make Moose Stricter</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::StrictConstructor"
+><a href="/perldoc?MooseX%3A%3AStrictConstructor" class="podlinkpod"
+>MooseX::StrictConstructor</a></a></h3>
+
+<p>Making Moose constructors stricter</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Params::Validate"
+><a href="/perldoc?MooseX%3A%3AParams%3A%3AValidate" class="podlinkpod"
+>MooseX::Params::Validate</a></a></h3>
+
+<p>Moose-ish method parameter handling</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Traits_/_Roles"
+>Traits / Roles</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Role::TraitConstructor"
+><a href="/perldoc?MooseX%3A%3ARole%3A%3ATraitConstructor" class="podlinkpod"
+>MooseX::Role::TraitConstructor</a></a></h3>
+
+<p>Runtime trait application in constructors</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Traits"
+><a href="/perldoc?MooseX%3A%3ATraits" class="podlinkpod"
+>MooseX::Traits</a></a></h3>
+
+<p>Easy creation of objects with traits</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Object::Pluggable"
+><a href="/perldoc?MooseX%3A%3AObject%3A%3APluggable" class="podlinkpod"
+>MooseX::Object::Pluggable</a></a></h3>
+
+<p>Moose-ish plugin system</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Role::Parameterized"
+><a href="/perldoc?MooseX%3A%3ARole%3A%3AParameterized" class="podlinkpod"
+>MooseX::Role::Parameterized</a></a></h3>
+
+<p>Parameterized roles</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Instance_Types"
+>Instance Types</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::GlobRef"
+><a href="/perldoc?MooseX%3A%3AGlobRef" class="podlinkpod"
+>MooseX::GlobRef</a></a></h3>
+
+<p>Globref instance type for Moose</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::InsideOut"
+><a href="/perldoc?MooseX%3A%3AInsideOut" class="podlinkpod"
+>MooseX::InsideOut</a></a></h3>
+
+<p>Inside out instance type for Moose</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Singleton"
+><a href="/perldoc?MooseX%3A%3ASingleton" class="podlinkpod"
+>MooseX::Singleton</a></a></h3>
+
+<p>Singleton instance type for Moose</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::NonMoose"
+><a href="/perldoc?MooseX%3A%3ANonMoose" class="podlinkpod"
+>MooseX::NonMoose</a></a></h3>
+
+<p>Subclassing of non-Moose classes</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Declarative_Syntax"
+>Declarative Syntax</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Declare"
+><a href="/perldoc?MooseX%3A%3ADeclare" class="podlinkpod"
+>MooseX::Declare</a></a></h3>
+
+<p>Declarative syntax with <a href="/perldoc?Devel%3A%3ADeclare" class="podlinkpod"
+>Devel::Declare</a></p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Method::Signatures"
+><a href="/perldoc?MooseX%3A%3AMethod%3A%3ASignatures" class="podlinkpod"
+>MooseX::Method::Signatures</a></a></h3>
+
+<p>Declarative method syntax</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="TryCatch"
+><a href="/perldoc?TryCatch" class="podlinkpod"
+>TryCatch</a></a></h3>
+
+<p>Declarative exception handling</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Types"
+>Types</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Types"
+><a href="/perldoc?MooseX%3A%3ATypes" class="podlinkpod"
+>MooseX::Types</a></a></h3>
+
+<p>Moose type extensions</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Types::Structured"
+><a href="/perldoc?MooseX%3A%3ATypes%3A%3AStructured" class="podlinkpod"
+>MooseX::Types::Structured</a></a></h3>
+
+<p>Structured type constraints</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Types::Path::Class"
+><a href="/perldoc?MooseX%3A%3ATypes%3A%3APath%3A%3AClass" class="podlinkpod"
+>MooseX::Types::Path::Class</a></a></h3>
+
+<p><a href="/perldoc?Path%3A%3AClass" class="podlinkpod"
+>Path::Class</a> Moose type extension</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Types::Set::Object"
+><a href="/perldoc?MooseX%3A%3ATypes%3A%3ASet%3A%3AObject" class="podlinkpod"
+>MooseX::Types::Set::Object</a></a></h3>
+
+<p><a href="/perldoc?Set%3A%3AObject" class="podlinkpod"
+>Set::Object</a> Moose type extension</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Types::DateTime"
+><a href="/perldoc?MooseX%3A%3ATypes%3A%3ADateTime" class="podlinkpod"
+>MooseX::Types::DateTime</a></a></h3>
+
+<p><a href="/perldoc?DateTime" class="podlinkpod"
+>DateTime</a> Moose type extension</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Command_Line_Integration"
+>Command Line Integration</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Getopt"
+><a href="/perldoc?MooseX%3A%3AGetopt" class="podlinkpod"
+>MooseX::Getopt</a></a></h3>
+
+<p>Better script writing with Moose</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::ConfigFromFile"
+><a href="/perldoc?MooseX%3A%3AConfigFromFile" class="podlinkpod"
+>MooseX::ConfigFromFile</a></a></h3>
+
+<p>Support for config with <a href="/perldoc?MooseX%3A%3AGetopt" class="podlinkpod"
+>MooseX::Getopt</a></p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::SimpleConfig"
+><a href="/perldoc?MooseX%3A%3ASimpleConfig" class="podlinkpod"
+>MooseX::SimpleConfig</a></a></h3>
+
+<p>Config file support for <a href="/perldoc?MooseX%3A%3AGetopt" class="podlinkpod"
+>MooseX::Getopt</a> with <a href="/perldoc?Config%3A%3AAny" class="podlinkpod"
+>Config::Any</a></p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::App::Cmd"
+><a href="/perldoc?MooseX%3A%3AApp%3A%3ACmd" class="podlinkpod"
+>MooseX::App::Cmd</a></a></h3>
+
+<p><a href="/perldoc?App%3A%3ACmd" class="podlinkpod"
+>App::Cmd</a> integration for Moose</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Role::Cmd"
+><a href="/perldoc?MooseX%3A%3ARole%3A%3ACmd" class="podlinkpod"
+>MooseX::Role::Cmd</a></a></h3>
+
+<p>Easily wrap command line apps with Moose</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Logging"
+>Logging</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::LogDispatch"
+><a href="/perldoc?MooseX%3A%3ALogDispatch" class="podlinkpod"
+>MooseX::LogDispatch</a></a></h3>
+
+<p><a href="/perldoc?Log%3A%3ADispatch" class="podlinkpod"
+>Log::Dispatch</a> support for Moose</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::LazyLogDispatch"
+><a href="/perldoc?MooseX%3A%3ALazyLogDispatch" class="podlinkpod"
+>MooseX::LazyLogDispatch</a></a></h3>
+
+<p>Lazy loaded <a href="/perldoc?Log%3A%3ADispatch" class="podlinkpod"
+>Log::Dispatch</a> support for Moose</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Log::Log4perl"
+><a href="/perldoc?MooseX%3A%3ALog%3A%3ALog4perl" class="podlinkpod"
+>MooseX::Log::Log4perl</a></a></h3>
+
+<p><a href="/perldoc?Log%3A%3ALog4perl" class="podlinkpod"
+>Log::Log4perl</a> support for Moose</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Async"
+>Async</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::POE"
+><a href="/perldoc?MooseX%3A%3APOE" class="podlinkpod"
+>MooseX::POE</a></a></h3>
+
+<p>Moose wrapped <a href="/perldoc?POE" class="podlinkpod"
+>POE</a></p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Workers"
+><a href="/perldoc?MooseX%3A%3AWorkers" class="podlinkpod"
+>MooseX::Workers</a></a></h3>
+
+<p>Sub-process management for asynchronous tasks using Moose and <a href="/perldoc?POE" class="podlinkpod"
+>POE</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Utility_Roles"
+>Utility Roles</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Daemonize"
+><a href="/perldoc?MooseX%3A%3ADaemonize" class="podlinkpod"
+>MooseX::Daemonize</a></a></h3>
+
+<p>Daemonization support roles for Moose</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Param"
+><a href="/perldoc?MooseX%3A%3AParam" class="podlinkpod"
+>MooseX::Param</a></a></h3>
+
+<p>CGI-style parameter role</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Iterator"
+><a href="/perldoc?MooseX%3A%3AIterator" class="podlinkpod"
+>MooseX::Iterator</a></a></h3>
+
+<p>Moose-ish iterator support role</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Clone"
+><a href="/perldoc?MooseX%3A%3AClone" class="podlinkpod"
+>MooseX::Clone</a></a></h3>
+
+<p>More robust and flexible cloning support</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::Storage"
+><a href="/perldoc?MooseX%3A%3AStorage" class="podlinkpod"
+>MooseX::Storage</a></a></h3>
+
+<p>Moose serialization</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Other_Useful_Extensions"
+>Other Useful Extensions</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Moose::Autobox"
+><a href="/perldoc?Moose%3A%3AAutobox" class="podlinkpod"
+>Moose::Autobox</a></a></h3>
+
+<p><a href="/perldoc?autobox" class="podlinkpod"
+>Autoboxing</a> support</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::ClassAttribute"
+><a href="/perldoc?MooseX%3A%3AClassAttribute" class="podlinkpod"
+>MooseX::ClassAttribute</a></a></h3>
+
+<p>Class attributes for Moose</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="MooseX::SemiAffordanceAccessor"
+><a href="/perldoc?MooseX%3A%3ASemiAffordanceAccessor" class="podlinkpod"
+>MooseX::SemiAffordanceAccessor</a></a></h3>
+
+<p>Support for PBP style accessors</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="namespace::autoclean"
+><a href="/perldoc?namespace%3A%3Aautoclean" class="podlinkpod"
+>namespace::autoclean</a></a></h3>
+
+<p>Keep imported subroutines out of your class&#39;s namespace</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Utilities"
+>Utilities</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Pod::Coverage::Moose"
+><a href="/perldoc?Pod%3A%3ACoverage%3A%3AMoose" class="podlinkpod"
+>Pod::Coverage::Moose</a></a></h3>
+
+<p><a href="/perldoc?Pod%3A%3ACoverage" class="podlinkpod"
+>Pod::Coverage</a> extension for Moose</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTES"
+>NOTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?MooseX%3A%3AAttributeHelpers" class="podlinkpod"
+>MooseX::AttributeHelpers</a> has been removed from this list because its functionality has been subsumed into <a href="/perldoc?Moose" class="podlinkpod"
+>Moose</a> itself.
+See <a href="/perldoc?Moose%3A%3AMeta%3A%3AAttribute%3A%3ANative" class="podlinkpod"
+>Moose::Meta::Attribute::Native</a> for more details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>All complex software has bugs lurking in it,
+and this module is no exception.
+If you find a bug please either email me,
+or add the bug to cpan-RT.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Stevan Little &#60;stevan.little@iinteractive.com&#62;</p>
+
+<p>Jesse Luehrs &#60;doy at tozt dot net&#62;</p>
+
+<p>Chris Prather &#60;chris@prather.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2008-2009 Infinity Interactive,
+Inc.</p>
+
+<p><a href="http://www.iinteractive.com" class="podlinkurl"
+>http://www.iinteractive.com</a></p>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78254 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 09:41:33 2012 GMT (0.165369987487793) @cpansearch1 -->
+ </body>
+</html>

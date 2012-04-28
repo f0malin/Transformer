@@ -1,0 +1,572 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Moose::Cookbook - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Moose",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Moose-2.0403",3]);
+    _gaq.push(["_setCustomVar",4,"Document","Moose::Cookbook",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DOY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Moose::Cookbook">permalink</a></div>
+  <a href="/~doy/">Jesse Luehrs</a> &gt;
+  <a href="/~doy/Moose/">Moose</a> &gt;
+  Moose::Cookbook
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/88766de7a058697d3d0335b8d384fd2a?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DO/DOY/Moose-2.0403.tar.gz">Moose-2.0403.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DOY/Moose-2.0403/lib/Moose/Cookbook.pod">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 13</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 27</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 4</td></tr>
+</table>
+<a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Moose">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/DOY/Moose-2.0403/lib/Moose/Cookbook.pod">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~doy/Moose/lib/Moose/Cookbook.pod">Moose-2.0502-TRIAL</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#RECIPES'>RECIPES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Basic_Moose'>Basic Moose</a>
+    <li class='indexItem indexItem2'><a href='#Moose_Roles'>Moose Roles</a>
+    <li class='indexItem indexItem2'><a href='#Meta_Moose'>Meta Moose</a>
+    <li class='indexItem indexItem2'><a href='#Extending_Moose'>Extending Moose</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SNACKS'>SNACKS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose::Cookbook - How to cook a Moose</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 2.0403</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The Moose cookbook is a series of recipes showing various Moose features.
+Most recipes present some code demonstrating some feature,
+and then explain the details of the code.</p>
+
+<p>You should probably read the <a href="/~doy/Moose-2.0403/lib/Moose/Manual.pod" class="podlinkpod"
+>Moose::Manual</a> first.
+The manual explains Moose concepts without being too code-heavy.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="RECIPES"
+>RECIPES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Basic_Moose"
+>Basic Moose</a></h2>
+
+<p>These recipes will give you a good overview of Moose&#39;s capabilities,
+starting with simple attribute declaration,
+and moving on to more powerful features like laziness,
+types,
+type coercion,
+method modifiers,
+and more.</p>
+
+<dl>
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Basics::Recipe1_-_The_(always_classic)_Point_example"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Basics/Recipe1.pod" class="podlinkpod"
+>Moose::Cookbook::Basics::Recipe1</a> - The (always classic) <b>Point</b> example</a></dt>
+
+<dd>
+<p>A simple Moose-based class.
+Demonstrates Moose attributes and subclassing.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Basics::Recipe2_-_A_simple_BankAccount_example"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Basics/Recipe2.pod" class="podlinkpod"
+>Moose::Cookbook::Basics::Recipe2</a> - A simple <b>BankAccount</b> example</a></dt>
+
+<dd>
+<p>A slightly more complex Moose class.
+Demonstrates using a method modifier in a subclass.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Basics::Recipe3_-_A_lazy_BinaryTree_example"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Basics/Recipe3.pod" class="podlinkpod"
+>Moose::Cookbook::Basics::Recipe3</a> - A lazy <b>BinaryTree</b> example</a></dt>
+
+<dd>
+<p>Demonstrates several attribute features,
+including types,
+weak references,
+predicates (&#34;does this object have a foo?&#34;),
+defaults,
+laziness,
+and triggers.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Basics::Recipe4_-_Subtypes,_and_modeling_a_simple_Company_class_hierarchy"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Basics/Recipe4.pod" class="podlinkpod"
+>Moose::Cookbook::Basics::Recipe4</a> - Subtypes,
+and modeling a simple <b>Company</b> class hierarchy</a></dt>
+
+<dd>
+<p>Introduces the creation and use of custom types,
+a <code>BUILD</code> method,
+and the use of <code>override</code> in a subclass.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Basics::Recipe5_-_More_subtypes,_coercion_in_a_Request_class"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Basics/Recipe5.pod" class="podlinkpod"
+>Moose::Cookbook::Basics::Recipe5</a> - More subtypes,
+coercion in a <b>Request</b> class</a></dt>
+
+<dd>
+<p>More type examples,
+including the use of type coercions.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Basics::Recipe6_-_The_augment/inner_example"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Basics/Recipe6.pod" class="podlinkpod"
+>Moose::Cookbook::Basics::Recipe6</a> - The augment/inner example</a></dt>
+
+<dd>
+<p>Demonstrates the use of <code>augment</code> method modifiers,
+a way of turning the usual method overriding style &#34;inside-out&#34;.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Basics::Recipe7_-_Making_Moose_fast_with_immutable"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Basics/Recipe7.pod" class="podlinkpod"
+>Moose::Cookbook::Basics::Recipe7</a> - Making Moose fast with immutable</a></dt>
+
+<dd>
+<p>Making a class immutable greatly increases the speed of accessors and object construction.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Basics::Recipe8_-_Builder_methods_and_lazy_build"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Basics/Recipe8.pod" class="podlinkpod"
+>Moose::Cookbook::Basics::Recipe8</a> - Builder methods and lazy_build</a></dt>
+
+<dd>
+<p>The builder feature provides an inheritable and role-composable way to provide a default attribute value.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Basics::Recipe9_-_Operator_overloading,_subtypes,_and_coercion"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Basics/Recipe9.pod" class="podlinkpod"
+>Moose::Cookbook::Basics::Recipe9</a> - Operator overloading,
+subtypes,
+and coercion</a></dt>
+
+<dd>
+<p>Demonstrates using operator overloading,
+coercion,
+and subtypes to model how eye color is determined during reproduction.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Basics::Recipe10_-_Using_BUILDARGS_and_BUILD_to_hook_into_object_construction"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Basics/Recipe10.pod" class="podlinkpod"
+>Moose::Cookbook::Basics::Recipe10</a> - Using BUILDARGS and BUILD to hook into object construction</a></dt>
+
+<dd>
+<p>This recipe demonstrates the use of <code>BUILDARGS</code> and <code>BUILD</code> to hook into object construction.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Basics::Recipe11_-_Extending_a_non-Moose_base_class"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Basics/Recipe11.pod" class="podlinkpod"
+>Moose::Cookbook::Basics::Recipe11</a> - Extending a non-Moose base class</a></dt>
+
+<dd>
+<p>In this recipe,
+we make a Moose-based subclass of <a href="/perldoc?DateTime" class="podlinkpod"
+>DateTime</a>,
+a module which does not use Moose itself.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Moose_Roles"
+>Moose Roles</a></h2>
+
+<p>These recipes will show you how to use Moose roles.</p>
+
+<dl>
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Roles::Recipe1_-_The_Moose::Role_example"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Roles/Recipe1.pod" class="podlinkpod"
+>Moose::Cookbook::Roles::Recipe1</a> - The Moose::Role example</a></dt>
+
+<dd>
+<p>Demonstrates roles,
+which are also sometimes known as traits or mix-ins.
+Roles provide a method of code re-use which is orthogonal to subclassing.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Roles::Recipe2_-_Advanced_Role_Composition_-_method_exclusion_and_aliasing"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Roles/Recipe2.pod" class="podlinkpod"
+>Moose::Cookbook::Roles::Recipe2</a> - Advanced Role Composition - method exclusion and aliasing</a></dt>
+
+<dd>
+<p>Sometimes you just want to include part of a role in your class.
+Sometimes you want the whole role but one of its methods conflicts with one in your class.
+With method exclusion and aliasing,
+you can work around these problems.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Roles::Recipe3_-_Applying_a_role_to_an_object_instance"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Roles/Recipe3.pod" class="podlinkpod"
+>Moose::Cookbook::Roles::Recipe3</a> - Applying a role to an object instance</a></dt>
+
+<dd>
+<p>In this recipe,
+we apply a role to an existing object instance.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Meta_Moose"
+>Meta Moose</a></h2>
+
+<p>These recipes show you how to write your own meta classes,
+which lets you extend the object system provided by Moose.</p>
+
+<dl>
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Meta::Recipe1_-_Welcome_to_the_meta-world_(Why_Go_Meta?)"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe1.pod" class="podlinkpod"
+>Moose::Cookbook::Meta::Recipe1</a> - Welcome to the meta-world (Why Go Meta?)</a></dt>
+
+<dd>
+<p>If you&#39;re wondering what all this &#34;meta&#34; stuff is,
+and why you should care about it,
+read this &#34;recipe&#34;.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Meta::Recipe2_-_A_meta-attribute,_attributes_with_labels"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe2.pod" class="podlinkpod"
+>Moose::Cookbook::Meta::Recipe2</a> - A meta-attribute,
+attributes with labels</a></dt>
+
+<dd>
+<p>One way to extend Moose is to provide your own attribute metaclasses.
+Attribute metaclasses let you extend attribute declarations (with <code>has</code>) and behavior to provide additional attribute functionality.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Meta::Recipe3_-_Labels_implemented_via_attribute_traits"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe3.pod" class="podlinkpod"
+>Moose::Cookbook::Meta::Recipe3</a> - Labels implemented via attribute traits</a></dt>
+
+<dd>
+<p>Extending Moose&#39;s attribute metaclass is a great way to add functionality.
+However,
+attributes can only have one metaclass.
+Applying roles to the attribute metaclass lets you provide composable attribute functionality.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Meta::Recipe4_-_Adding_a_&#34;table&#34;_attribute_to_the_metaclass"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe4.pod" class="podlinkpod"
+>Moose::Cookbook::Meta::Recipe4</a> - Adding a &#34;table&#34; attribute to the metaclass</a></dt>
+
+<dd>
+<p>If you want to store more information about your classes,
+you&#39;ll have to extend <code>Moose::Meta::Class</code>.
+Doing so is simple,
+but you&#39;ll probably also want to provide some sugar,
+so see <a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Extending/Recipe2.pod" class="podlinkpod"
+>Moose::Cookbook::Extending::Recipe2</a> as well.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Meta::Recipe5_-_The_&#34;table&#34;_attribute_implemented_as_a_metaclass_trait"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe5.pod" class="podlinkpod"
+>Moose::Cookbook::Meta::Recipe5</a> - The &#34;table&#34; attribute implemented as a metaclass trait</a></dt>
+
+<dd>
+<p>This recipe takes the class metaclass we saw in the previous recipe and reimplements it as a metaclass trait.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Meta::Recipe6_-_A_method_metaclass_for_marking_methods_public_or_private"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe6.pod" class="podlinkpod"
+>Moose::Cookbook::Meta::Recipe6</a> - A method metaclass for marking methods public or private</a></dt>
+
+<dd>
+<p>This recipe shows a custom method metaclass that implements making a method private.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Meta::Recipe7_-_Using_a_blessed_array_reference_as_an_object_instance"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe7.pod" class="podlinkpod"
+>Moose::Cookbook::Meta::Recipe7</a> - Using a blessed array reference as an object instance</a></dt>
+
+<dd>
+<p>This recipe shows an example of how you create your own meta-instance class.
+The meta-instance determines the internal structure of object instances and provide access to attribute slots.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Meta::Recipe8_-_Hooking_into_immutabilization_(TODO)"
+>Moose::Cookbook::Meta::Recipe8 - Hooking into immutabilization (TODO)</a></dt>
+
+<dd>
+<p>Moose has a feature known as &#34;immutabilization&#34;.
+By calling <code>__PACKAGE__-&#62;meta()-&#62;make_immutable()</code> after defining your class (attributes,
+roles,
+etc),
+you tell Moose to optimize things like object creation,
+attribute access,
+and so on.</p>
+
+<p>If you are creating your own metaclasses,
+you may need to hook into the immutabilization system.
+This cuts across a number of spots,
+including the metaclass class,
+meta method classes,
+and possibly the meta-instance class as well.</p>
+
+<p>This recipe shows you how to write extensions which immutabilize properly.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Extending_Moose"
+>Extending Moose</a></h2>
+
+<p>These recipes cover some more ways to extend Moose,
+and will be useful if you plan to write your own <code>MooseX</code> module.</p>
+
+<dl>
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Extending::Recipe1_-_Moose_extension_overview"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Extending/Recipe1.pod" class="podlinkpod"
+>Moose::Cookbook::Extending::Recipe1</a> - Moose extension overview</a></dt>
+
+<dd>
+<p>There are quite a few ways to extend Moose.
+This recipe provides an overview of each method,
+and provides recommendations for when each is appropriate.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Extending::Recipe2_-_Providing_a_base_object_class_role"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Extending/Recipe2.pod" class="podlinkpod"
+>Moose::Cookbook::Extending::Recipe2</a> - Providing a base object class role</a></dt>
+
+<dd>
+<p>Many base object class extensions can be implemented as roles.
+This example shows how to provide a base object class debugging role that is applied to any class that uses a notional <code>MooseX::Debugging</code> module.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Extending::Recipe3_-_Providing_an_alternate_base_object_class"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Extending/Recipe3.pod" class="podlinkpod"
+>Moose::Cookbook::Extending::Recipe3</a> - Providing an alternate base object class</a></dt>
+
+<dd>
+<p>You may find that you want to provide an alternate base object class along with a meta extension,
+or maybe you just want to add some functionality to all your classes without typing <code>extends &#39;MyApp::Base&#39;</code> over and over.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Extending::Recipe4_-_Acting_like_Moose.pm_and_providing_sugar_Moose-style"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Extending/Recipe4.pod" class="podlinkpod"
+>Moose::Cookbook::Extending::Recipe4</a> - Acting like Moose.pm and providing sugar Moose-style</a></dt>
+
+<dd>
+<p>This recipe shows how to provide a replacement for <code>Moose.pm</code>.
+You may want to do this as part of the API for a <code>MooseX</code> module,
+especially if you want to default to a new metaclass class or base object class.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SNACKS"
+>SNACKS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Snack::Keywords"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Snack/Keywords.pod" class="podlinkpod"
+>Moose::Cookbook::Snack::Keywords</a></a></dt>
+
+<dd>
+<dt><a name='Moose'></a><a name="Moose::Cookbook::Snack::Types"
+><a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Snack/Types.pod" class="podlinkpod"
+>Moose::Cookbook::Snack::Types</a></a></dt>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='http'></a><a name="http://www.gsph.com/index.php?Lang=En&#38;ID=291"
+><a href="http://www.gsph.com/index.php?Lang=En&#38;ID=291" class="podlinkurl"
+>http://www.gsph.com/index.php?Lang=En&#38;ID=291</a></a></dt>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose is maintained by the Moose Cabal,
+along with the help of many contributors.
+See <a href="/~doy/Moose-2.0403/lib/Moose.pm#CABAL" class="podlinkpod"
+>&#34;CABAL&#34; in Moose</a> and <a href="/~doy/Moose-2.0403/lib/Moose.pm#CONTRIBUTORS" class="podlinkpod"
+>&#34;CONTRIBUTORS&#34; in Moose</a> for details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This software is copyright (c) 2012 by Infinity Interactive,
+Inc..</p>
+
+<p>This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78260 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 14:17:20 2012 GMT (0.0932869911193848) @cpansearch1 -->
+ </body>
+</html>

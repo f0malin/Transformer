@@ -1,0 +1,788 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Class::MOP::Attribute - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Moose",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Moose-2.0403",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Class::MOP::Attribute",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DOY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Class::MOP::Attribute">permalink</a></div>
+  <a href="/~doy/">Jesse Luehrs</a> &gt;
+  <a href="/~doy/Moose-2.0403/">Moose-2.0403</a> &gt;
+  Class::MOP::Attribute
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/88766de7a058697d3d0335b8d384fd2a?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DO/DOY/Moose-2.0403.tar.gz">Moose-2.0403.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Class%3A%3AMOP%3A%3AAttribute;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DOY/Moose-2.0403/lib/Class/MOP/Attribute.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 13</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 27</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 4</td></tr>
+</table>
+<a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Moose">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.0403 &nbsp;
+<span class="noprint">
+  <a href="/src/DOY/Moose-2.0403/lib/Class/MOP/Attribute.pm">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~doy/Moose/lib/Class/MOP/Attribute.pm">Moose-2.0501-TRIAL</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Creation'>Creation</a>
+    <li class='indexItem indexItem2'><a href='#Informational'>Informational</a>
+    <li class='indexItem indexItem2'><a href='#Informational_predicates'>Informational predicates</a>
+    <li class='indexItem indexItem2'><a href='#Value_management'>Value management</a>
+    <li class='indexItem indexItem2'><a href='#Class_association'>Class association</a>
+    <li class='indexItem indexItem2'><a href='#Attribute_Accessor_generation'>Attribute Accessor generation</a>
+    <li class='indexItem indexItem2'><a href='#Introspection'>Introspection</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Class::MOP::Attribute - Attribute Meta Object</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 2.0403</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  Class::MOP::Attribute-&#62;new(
+      foo =&#62; (
+          accessor  =&#62; &#39;foo&#39;,           # dual purpose get/set accessor
+          predicate =&#62; &#39;has_foo&#39;,       # predicate check for defined-ness
+          init_arg  =&#62; &#39;-foo&#39;,          # class-&#62;new will look for a -foo key
+          default   =&#62; &#39;BAR IS BAZ!&#39;    # if no -foo key is provided, use this
+      )
+  );
+
+  Class::MOP::Attribute-&#62;new(
+      bar =&#62; (
+          reader    =&#62; &#39;bar&#39;,           # getter
+          writer    =&#62; &#39;set_bar&#39;,       # setter
+          predicate =&#62; &#39;has_bar&#39;,       # predicate check for defined-ness
+          init_arg  =&#62; &#39;:bar&#39;,          # class-&#62;new will look for a :bar key
+                                        # no default value means it is undef
+      )
+  );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The Attribute Protocol is almost entirely an invention of <code>Class::MOP</code>. Perl 5 does not have a consistent notion of attributes. There are so many ways in which this is done, and very few (if any) are easily discoverable by this module.</p>
+
+<p>With that said, this module attempts to inject some order into this chaos, by introducing a consistent API which can be used to create object attributes.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Creation"
+>Creation</a></h2>
+
+<dl>
+<dt><a name='Class'></a><a name="Class::MOP::Attribute-&#62;new($name,_?%options)"
+><b>Class::MOP::Attribute-&#62;new($name, ?%options)</b></a></dt>
+
+<dd>
+<p>An attribute must (at the very least), have a <code>$name</code>. All other <code>%options</code> are added as key-value pairs.</p>
+
+<ul>
+<li>init_arg
+<p>This is a string value representing the expected key in an initialization hash. For instance, if we have an <code>init_arg</code> value of <code>-foo</code>, then the following code will Just Work.</p>
+
+<pre class="sh_perl">  MyClass-&#62;meta-&#62;new_object( -foo =&#62; &#39;Hello There&#39; );</pre>
+
+<p>If an init_arg is not assigned, it will automatically use the attribute&#39;s name. If <code>init_arg</code> is explicitly set to <code>undef</code>, the attribute cannot be specified during initialization.</p>
+</li>
+
+<li>builder
+<p>This provides the name of a method that will be called to initialize the attribute. This method will be called on the object after it is constructed. It is expected to return a valid value for the attribute.</p>
+</li>
+
+<li>default
+<p>This can be used to provide an explicit default for initializing the attribute. If the default you provide is a subroutine reference, then this reference will be called <i>as a method</i> on the object.</p>
+
+<p>If the value is a simple scalar (string or number), then it can be just passed as is. However, if you wish to initialize it with a HASH or ARRAY ref, then you need to wrap that inside a subroutine reference:</p>
+
+<pre class="sh_perl">  Class::MOP::Attribute-&#62;new(
+      &#39;foo&#39; =&#62; (
+          default =&#62; sub { [] },
+      )
+  );
+
+  # or ...
+
+  Class::MOP::Attribute-&#62;new(
+      &#39;foo&#39; =&#62; (
+          default =&#62; sub { {} },
+      )
+  );</pre>
+
+<p>If you wish to initialize an attribute with a subroutine reference itself, then you need to wrap that in a subroutine as well:</p>
+
+<pre class="sh_perl">  Class::MOP::Attribute-&#62;new(
+      &#39;foo&#39; =&#62; (
+          default =&#62; sub {
+              sub { print &#34;Hello World&#34; }
+          },
+      )
+  );</pre>
+
+<p>And lastly, if the value of your attribute is dependent upon some other aspect of the instance structure, then you can take advantage of the fact that when the <code>default</code> value is called as a method:</p>
+
+<pre class="sh_perl">  Class::MOP::Attribute-&#62;new(
+      &#39;object_identity&#39; =&#62; (
+          default =&#62; sub { Scalar::Util::refaddr( $_[0] ) },
+      )
+  );</pre>
+
+<p>Note that there is no guarantee that attributes are initialized in any particular order, so you cannot rely on the value of some other attribute when generating the default.</p>
+</li>
+
+<li>initializer
+<p>This option can be either a method name or a subroutine reference. This method will be called when setting the attribute&#39;s value in the constructor. Unlike <code>default</code> and <code>builder</code>, the initializer is only called when a value is provided to the constructor. The initializer allows you to munge this value during object construction.</p>
+
+<p>The initializer is called as a method with three arguments. The first is the value that was passed to the constructor. The second is a subroutine reference that can be called to actually set the attribute&#39;s value, and the last is the associated <code>Class::MOP::Attribute</code> object.</p>
+
+<p>This contrived example shows an initializer that sets the attribute to twice the given value.</p>
+
+<pre class="sh_perl">  Class::MOP::Attribute-&#62;new(
+      &#39;doubled&#39; =&#62; (
+          initializer =&#62; sub {
+              my ( $self, $value, $set, $attr ) = @_;
+              $set-&#62;( $value * 2 );
+          },
+      )
+  );</pre>
+
+<p>Since an initializer can be a method name, you can easily make attribute initialization use the writer:</p>
+
+<pre class="sh_perl">  Class::MOP::Attribute-&#62;new(
+      &#39;some_attr&#39; =&#62; (
+          writer      =&#62; &#39;some_attr&#39;,
+          initializer =&#62; &#39;some_attr&#39;,
+      )
+  );</pre>
+
+<p>Your writer (actually, a wrapper around the writer, using <a href="/~doy/Moose-2.0403/lib/Moose/Manual/MethodModifiers.pod" class="podlinkpod"
+>method modifications</a>) will need to examine <code>@_</code> and determine under which context it is being called:</p>
+
+<pre class="sh_perl">  around &#39;some_attr&#39; =&#62; sub {
+      my $orig = shift;
+      my $self = shift;
+      # $value is not defined if being called as a reader
+      # $setter and $attr are only defined if being called as an initializer
+      my ($value, $setter, $attr) = @_;
+
+      # the reader behaves normally
+      return $self-&#62;$orig if not @_;
+
+      # mutate $value as desired
+      # $value = &#60;something($value);
+
+      # if called as an initializer, set the value and we&#39;re done
+      return $setter-&#62;($row) if $setter;
+
+      # otherwise, call the real writer with the new value
+      $self-&#62;$orig($row);
+  };</pre>
+</li>
+</ul>
+
+<p>The <code>accessor</code>, <code>reader</code>, <code>writer</code>, <code>predicate</code> and <code>clearer</code> options all accept the same parameters. You can provide the name of the method, in which case an appropriate default method will be generated for you. Or instead you can also provide hash reference containing exactly one key (the method name) and one value. The value should be a subroutine reference, which will be installed as the method itself.</p>
+
+<ul>
+<li>accessor
+<p>An <code>accessor</code> is a standard Perl-style read/write accessor. It will return the value of the attribute, and if a value is passed as an argument, it will assign that value to the attribute.</p>
+
+<p>Note that <code>undef</code> is a legitimate value, so this will work:</p>
+
+<pre class="sh_perl">  $object-&#62;set_something(undef);</pre>
+</li>
+
+<li>reader
+<p>This is a basic read-only accessor. It returns the value of the attribute.</p>
+</li>
+
+<li>writer
+<p>This is a basic write accessor, it accepts a single argument, and assigns that value to the attribute.</p>
+
+<p>Note that <code>undef</code> is a legitimate value, so this will work:</p>
+
+<pre class="sh_perl">  $object-&#62;set_something(undef);</pre>
+</li>
+
+<li>predicate
+<p>The predicate method returns a boolean indicating whether or not the attribute has been explicitly set.</p>
+
+<p>Note that the predicate returns true even if the attribute was set to a false value (<code>0</code> or <code>undef</code>).</p>
+</li>
+
+<li>clearer
+<p>This method will uninitialize the attribute. After an attribute is cleared, its <code>predicate</code> will return false.</p>
+</li>
+
+<li>definition_context
+<p>Mostly, this exists as a hook for the benefit of Moose.</p>
+
+<p>This option should be a hash reference containing several keys which will be used when inlining the attribute&#39;s accessors. The keys should include <code>line</code>, the line number where the attribute was created, and either <code>file</code> or <code>description</code>.</p>
+
+<p>This information will ultimately be used when eval&#39;ing inlined accessor code so that error messages report a useful line and file name.</p>
+</li>
+</ul>
+
+<dt><a name='attr'></a><a name="$attr-&#62;clone(%options)"
+><b>$attr-&#62;clone(%options)</b></a></dt>
+
+<dd>
+<p>This clones the attribute. Any options you provide will override the settings of the original attribute. You can change the name of the new attribute by passing a <code>name</code> key in <code>%options</code>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Informational"
+>Informational</a></h2>
+
+<p>These are all basic read-only accessors for the values passed into the constructor.</p>
+
+<dl>
+<dt><a name='attr'></a><a name="$attr-&#62;name"
+><b>$attr-&#62;name</b></a></dt>
+
+<dd>
+<p>Returns the attribute&#39;s name.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;accessor"
+><b>$attr-&#62;accessor</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;reader"
+><b>$attr-&#62;reader</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;writer"
+><b>$attr-&#62;writer</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;predicate"
+><b>$attr-&#62;predicate</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;clearer"
+><b>$attr-&#62;clearer</b></a></dt>
+
+<dd>
+<p>The <code>accessor</code>, <code>reader</code>, <code>writer</code>, <code>predicate</code>, and <code>clearer</code> methods all return exactly what was passed to the constructor, so it can be either a string containing a method name, or a hash reference.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;initializer"
+><b>$attr-&#62;initializer</b></a></dt>
+
+<dd>
+<p>Returns the initializer as passed to the constructor, so this may be either a method name or a subroutine reference.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;init_arg"
+><b>$attr-&#62;init_arg</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;is_default_a_coderef"
+><b>$attr-&#62;is_default_a_coderef</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;default($instance)"
+><b>$attr-&#62;default($instance)</b></a></dt>
+
+<dd>
+<p>The <code>$instance</code> argument is optional. If you don&#39;t pass it, the return value for this method is exactly what was passed to the constructor, either a simple scalar or a subroutine reference.</p>
+
+<p>If you <i>do</i> pass an <code>$instance</code> and the default is a subroutine reference, then the reference is called as a method on the <code>$instance</code> and the generated value is returned.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;slots"
+><b>$attr-&#62;slots</b></a></dt>
+
+<dd>
+<p>Return a list of slots required by the attribute. This is usually just one, the name of the attribute.</p>
+
+<p>A slot is the name of the hash key used to store the attribute in an object instance.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;get_read_method"
+><b>$attr-&#62;get_read_method</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;get_write_method"
+><b>$attr-&#62;get_write_method</b></a></dt>
+
+<dd>
+<p>Returns the name of a method suitable for reading or writing the value of the attribute in the associated class.</p>
+
+<p>If an attribute is read- or write-only, then these methods can return <code>undef</code> as appropriate.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;has_read_method"
+><b>$attr-&#62;has_read_method</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;has_write_method"
+><b>$attr-&#62;has_write_method</b></a></dt>
+
+<dd>
+<p>This returns a boolean indicating whether the attribute has a <i>named</i> read or write method.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;get_read_method_ref"
+><b>$attr-&#62;get_read_method_ref</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;get_write_method_ref"
+><b>$attr-&#62;get_write_method_ref</b></a></dt>
+
+<dd>
+<p>Returns the subroutine reference of a method suitable for reading or writing the attribute&#39;s value in the associated class. These methods always return a subroutine reference, regardless of whether or not the attribute is read- or write-only.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;insertion_order"
+><b>$attr-&#62;insertion_order</b></a></dt>
+
+<dd>
+<p>If this attribute has been inserted into a class, this returns a zero based index regarding the order of insertion.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Informational_predicates"
+>Informational predicates</a></h2>
+
+<p>These are all basic predicate methods for the values passed into <code>new</code>.</p>
+
+<dl>
+<dt><a name='attr'></a><a name="$attr-&#62;has_accessor"
+><b>$attr-&#62;has_accessor</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;has_reader"
+><b>$attr-&#62;has_reader</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;has_writer"
+><b>$attr-&#62;has_writer</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;has_predicate"
+><b>$attr-&#62;has_predicate</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;has_clearer"
+><b>$attr-&#62;has_clearer</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;has_initializer"
+><b>$attr-&#62;has_initializer</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;has_init_arg"
+><b>$attr-&#62;has_init_arg</b></a></dt>
+
+<dd>
+<p>This will be <i>false</i> if the <code>init_arg</code> was set to <code>undef</code>.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;has_default"
+><b>$attr-&#62;has_default</b></a></dt>
+
+<dd>
+<p>This will be <i>false</i> if the <code>default</code> was set to <code>undef</code>, since <code>undef</code> is the default <code>default</code> anyway.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;has_builder"
+><b>$attr-&#62;has_builder</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;has_insertion_order"
+><b>$attr-&#62;has_insertion_order</b></a></dt>
+
+<dd>
+<p>This will be <i>false</i> if this attribute has not be inserted into a class</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Value_management"
+>Value management</a></h2>
+
+<p>These methods are basically &#34;back doors&#34; to the instance, and can be used to bypass the regular accessors, but still stay within the MOP.</p>
+
+<p>These methods are not for general use, and should only be used if you really know what you are doing.</p>
+
+<dl>
+<dt><a name='attr'></a><a name="$attr-&#62;initialize_instance_slot($meta_instance,_$instance,_$params)"
+><b>$attr-&#62;initialize_instance_slot($meta_instance, $instance, $params)</b></a></dt>
+
+<dd>
+<p>This method is used internally to initialize the attribute&#39;s slot in the object <code>$instance</code>.</p>
+
+<p>The <code>$params</code> is a hash reference of the values passed to the object constructor.</p>
+
+<p>It&#39;s unlikely that you&#39;ll need to call this method yourself.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;set_value($instance,_$value)"
+><b>$attr-&#62;set_value($instance, $value)</b></a></dt>
+
+<dd>
+<p>Sets the value without going through the accessor. Note that this works even with read-only attributes.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;set_raw_value($instance,_$value)"
+><b>$attr-&#62;set_raw_value($instance, $value)</b></a></dt>
+
+<dd>
+<p>Sets the value with no side effects such as a trigger.</p>
+
+<p>This doesn&#39;t actually apply to Class::MOP attributes, only to subclasses.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;set_initial_value($instance,_$value)"
+><b>$attr-&#62;set_initial_value($instance, $value)</b></a></dt>
+
+<dd>
+<p>Sets the value without going through the accessor. This method is only called when the instance is first being initialized.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;get_value($instance)"
+><b>$attr-&#62;get_value($instance)</b></a></dt>
+
+<dd>
+<p>Returns the value without going through the accessor. Note that this works even with write-only accessors.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;get_raw_value($instance)"
+><b>$attr-&#62;get_raw_value($instance)</b></a></dt>
+
+<dd>
+<p>Returns the value without any side effects such as lazy attributes.</p>
+
+<p>Doesn&#39;t actually apply to Class::MOP attributes, only to subclasses.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;has_value($instance)"
+><b>$attr-&#62;has_value($instance)</b></a></dt>
+
+<dd>
+<p>Return a boolean indicating whether the attribute has been set in <code>$instance</code>. This how the default <code>predicate</code> method works.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;clear_value($instance)"
+><b>$attr-&#62;clear_value($instance)</b></a></dt>
+
+<dd>
+<p>This will clear the attribute&#39;s value in <code>$instance</code>. This is what the default <code>clearer</code> calls.</p>
+
+<p>Note that this works even if the attribute does not have any associated read, write or clear methods.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Class_association"
+>Class association</a></h2>
+
+<p>These methods allow you to manage the attributes association with the class that contains it. These methods should not be used lightly, nor are they very magical, they are mostly used internally and by metaclass instances.</p>
+
+<dl>
+<dt><a name='attr'></a><a name="$attr-&#62;associated_class"
+><b>$attr-&#62;associated_class</b></a></dt>
+
+<dd>
+<p>This returns the <code>Class::MOP::Class</code> with which this attribute is associated, if any.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;attach_to_class($metaclass)"
+><b>$attr-&#62;attach_to_class($metaclass)</b></a></dt>
+
+<dd>
+<p>This method stores a weakened reference to the <code>$metaclass</code> object internally.</p>
+
+<p>This method does not remove the attribute from its old class, nor does it create any accessors in the new class.</p>
+
+<p>It is probably best to use the <a href="/~doy/Moose-2.0403/lib/Class/MOP/Class.pm" class="podlinkpod"
+>Class::MOP::Class</a> <code>add_attribute</code> method instead.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;detach_from_class"
+><b>$attr-&#62;detach_from_class</b></a></dt>
+
+<dd>
+<p>This method removes the associate metaclass object from the attribute it has one.</p>
+
+<p>This method does not remove the attribute itself from the class, or remove its accessors.</p>
+
+<p>It is probably best to use the <a href="/~doy/Moose-2.0403/lib/Class/MOP/Class.pm" class="podlinkpod"
+>Class::MOP::Class</a> <code>remove_attribute</code> method instead.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Attribute_Accessor_generation"
+>Attribute Accessor generation</a></h2>
+
+<dl>
+<dt><a name='attr'></a><a name="$attr-&#62;accessor_metaclass"
+><b>$attr-&#62;accessor_metaclass</b></a></dt>
+
+<dd>
+<p>Accessor methods are generated using an accessor metaclass. By default, this is <a href="/~doy/Moose-2.0403/lib/Class/MOP/Method/Accessor.pm" class="podlinkpod"
+>Class::MOP::Method::Accessor</a>. This method returns the name of the accessor metaclass that this attribute uses.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;associate_method($method)"
+><b>$attr-&#62;associate_method($method)</b></a></dt>
+
+<dd>
+<p>This associates a <a href="/~doy/Moose-2.0403/lib/Class/MOP/Method.pm" class="podlinkpod"
+>Class::MOP::Method</a> object with the attribute. Typically, this is called internally when an attribute generates its accessors.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;associated_methods"
+><b>$attr-&#62;associated_methods</b></a></dt>
+
+<dd>
+<p>This returns the list of methods which have been associated with the attribute.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;install_accessors"
+><b>$attr-&#62;install_accessors</b></a></dt>
+
+<dd>
+<p>This method generates and installs code the attributes various accessors. It is typically called from the <a href="/~doy/Moose-2.0403/lib/Class/MOP/Class.pm" class="podlinkpod"
+>Class::MOP::Class</a> <code>add_attribute</code> method.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;remove_accessors"
+><b>$attr-&#62;remove_accessors</b></a></dt>
+
+<dd>
+<p>This method removes all of the accessors associated with the attribute.</p>
+
+<p>This does not currently remove methods from the list returned by <code>associated_methods</code>.</p>
+
+<dt><a name='attr'></a><a name="$attr-&#62;inline_get"
+><b>$attr-&#62;inline_get</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;inline_set"
+><b>$attr-&#62;inline_set</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;inline_has"
+><b>$attr-&#62;inline_has</b></a></dt>
+
+<dd>
+<dt><a name='attr'></a><a name="$attr-&#62;inline_clear"
+><b>$attr-&#62;inline_clear</b></a></dt>
+
+<dd>
+<p>These methods return a code snippet suitable for inlining the relevant operation. They expect strings containing variable names to be used in the inlining, like <code>&#39;$self&#39;</code> or <code>&#39;$_[1]&#39;</code>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Introspection"
+>Introspection</a></h2>
+
+<dl>
+<dt><a name='Class'></a><a name="Class::MOP::Attribute-&#62;meta"
+><b>Class::MOP::Attribute-&#62;meta</b></a></dt>
+
+<dd>
+<p>This will return a <a href="/~doy/Moose-2.0403/lib/Class/MOP/Class.pm" class="podlinkpod"
+>Class::MOP::Class</a> instance for this class.</p>
+
+<p>It should also be noted that <a href="/~doy/Moose-2.0403/lib/Class/MOP.pm" class="podlinkpod"
+>Class::MOP</a> will actually bootstrap this module by installing a number of attribute meta-objects into its metaclass.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose is maintained by the Moose Cabal, along with the help of many contributors. See <a href="/~doy/Moose-2.0403/lib/Moose.pm#CABAL" class="podlinkpod"
+>&#34;CABAL&#34; in Moose</a> and <a href="/~doy/Moose-2.0403/lib/Moose.pm#CONTRIBUTORS" class="podlinkpod"
+>&#34;CONTRIBUTORS&#34; in Moose</a> for details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This software is copyright (c) 2012 by Infinity Interactive, Inc..</p>
+
+<p>This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78179 Uploads, 24710 Distributions
+106004 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 07:35:22 2012 GMT (0.1788010597229) @cpansearch1 -->
+ </body>
+</html>

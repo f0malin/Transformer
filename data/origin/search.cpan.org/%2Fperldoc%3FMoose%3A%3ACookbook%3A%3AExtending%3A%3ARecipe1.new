@@ -1,0 +1,557 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Moose::Cookbook::Extending::Recipe1 - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Moose",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Moose-2.0403",3]);
+    _gaq.push(["_setCustomVar",4,"Document","Moose::Cookbook::Extending::Recipe1",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DOY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Moose::Cookbook::Extending::Recipe1">permalink</a></div>
+  <a href="/~doy/">Jesse Luehrs</a> &gt;
+  <a href="/~doy/Moose-2.0403/">Moose-2.0403</a> &gt;
+  Moose::Cookbook::Extending::Recipe1
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/88766de7a058697d3d0335b8d384fd2a?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DO/DOY/Moose-2.0403.tar.gz">Moose-2.0403.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DOY/Moose-2.0403/lib/Moose/Cookbook/Extending/Recipe1.pod">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 13</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 27</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 4</td></tr>
+</table>
+<a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Moose">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/DOY/Moose-2.0403/lib/Moose/Cookbook/Extending/Recipe1.pod">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Playing_Nice_With_Others'>Playing Nice With Others</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#PARTS_OF_Moose_YOU_CAN_EXTEND'>PARTS OF Moose YOU CAN EXTEND</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Metaclass_Extensions'>Metaclass Extensions</a>
+    <li class='indexItem indexItem2'><a href='#Providing_Sugar_Functions'>Providing Sugar Functions</a>
+    <li class='indexItem indexItem2'><a href='#Object_Class_Extensions'>Object Class Extensions</a>
+    <li class='indexItem indexItem2'><a href='#Providing_a_Role'>Providing a Role</a>
+    <li class='indexItem indexItem2'><a href='#New_Types'>New Types</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#ROLES_VS_TRAITS_VS_SUBCLASSES'>ROLES VS TRAITS VS SUBCLASSES</a>
+  <li class='indexItem indexItem1'><a href='#USING_YOUR_EXTENSION'>USING YOUR EXTENSION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Extensions_as_Metaclass_Traits'>Extensions as Metaclass Traits</a>
+    <li class='indexItem indexItem2'><a href='#Extensions_as_Metaclass_(and_Base_Object)_Subclasses'>Extensions as Metaclass (and Base Object) Subclasses</a>
+    <li class='indexItem indexItem2'><a href='#Extensions_as_Metaclass_(and_Base_Object)_Roles'>Extensions as Metaclass (and Base Object) Roles</a>
+    <li class='indexItem indexItem2'><a href='#Providing_Sugar'>Providing Sugar</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#LEGACY_EXTENSION_MECHANISMS'>LEGACY EXTENSION MECHANISMS</a>
+  <li class='indexItem indexItem1'><a href='#CONCLUSION'>CONCLUSION</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose::Cookbook::Extending::Recipe1 - Moose extension overview</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 2.0403</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose provides several ways in which extensions can hook into Moose and change its behavior.
+Moose also has a lot of behavior that can be changed.
+This recipe will provide an overview of each extension method and give you some recommendations on what tools to use.</p>
+
+<p>If you haven&#39;t yet read the recipes on metaclasses,
+go read those first.
+You can&#39;t write Moose extensions without understanding the metaclasses,
+and those recipes also demonstrate some basic extension mechanisms,
+such as metaclass subclasses and traits.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Playing_Nice_With_Others"
+>Playing Nice With Others</a></h2>
+
+<p>One of the goals of this overview is to help you build extensions that cooperate well with other extensions.
+This is especially important if you plan to release your extension to CPAN.</p>
+
+<p>Moose comes with several modules that exist to help your write cooperative extensions.
+These are <a href="/~doy/Moose-2.0403/lib/Moose/Exporter.pm" class="podlinkpod"
+>Moose::Exporter</a> and <a href="/~doy/Moose-2.0403/lib/Moose/Util/MetaRole.pm" class="podlinkpod"
+>Moose::Util::MetaRole</a>.
+By using these two modules,
+you will ensure that your extension works with both the Moose core features and any other CPAN extension using those modules.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PARTS_OF_Moose_YOU_CAN_EXTEND"
+>PARTS OF Moose YOU CAN EXTEND <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The types of things you might want to do in Moose extensions fall into a few broad categories.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Metaclass_Extensions"
+>Metaclass Extensions</a></h2>
+
+<p>One way of extending Moose is by extending one or more Moose metaclasses.
+For example,
+in <a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe4.pod" class="podlinkpod"
+>Moose::Cookbook::Meta::Recipe4</a> we saw a metaclass subclass that added a <code>table</code> attribute to the metaclass.
+If you were writing an ORM,
+this would be a logical extension.</p>
+
+<p>Many of the Moose extensions on CPAN work by providing an attribute metaclass extension.
+For example,
+the <a href="/perldoc?MooseX%3A%3AAliases" class="podlinkpod"
+>MooseX::Aliases</a> module provides an attribute metaclass trait that lets you specify aliases to install for methods and attribute accessors.</p>
+
+<p>A metaclass extension can be packaged as a subclass or a role/trait.
+If you can,
+we recommend using traits instead of subclasses,
+since it&#39;s much easier to combine disparate traits than it is to combine a bunch of subclasses.</p>
+
+<p>When your extensions are implemented as roles,
+you can apply them with the <a href="/~doy/Moose-2.0403/lib/Moose/Util/MetaRole.pm" class="podlinkpod"
+>Moose::Util::MetaRole</a> module.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Providing_Sugar_Functions"
+>Providing Sugar Functions</a></h2>
+
+<p>As part of a metaclass extension,
+you may also want to provide some sugar functions,
+just like <a href="/~doy/Moose-2.0403/lib/Moose.pm" class="podlinkpod"
+>Moose.pm</a> does.
+Moose provides a helper module called <a href="/~doy/Moose-2.0403/lib/Moose/Exporter.pm" class="podlinkpod"
+>Moose::Exporter</a> that makes this much simpler.
+We will be use <a href="/~doy/Moose-2.0403/lib/Moose/Exporter.pm" class="podlinkpod"
+>Moose::Exporter</a> in several of the extension recipes.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Object_Class_Extensions"
+>Object Class Extensions</a></h2>
+
+<p>Another common Moose extension technique is to change the default object class&#39;s behavior.
+For example,
+the <a href="/perldoc?MooseX%3A%3ASingleton" class="podlinkpod"
+>MooseX::Singleton</a> extension changes the behavior of your objects so that they are singletons.
+The <a href="/perldoc?MooseX%3A%3AStrictConstructor" class="podlinkpod"
+>MooseX::StrictConstructor</a> extension makes the constructor reject arguments which don&#39;t match its attributes.</p>
+
+<p>Object class extensions often include metaclass extensions as well.
+In particular,
+if you want your object extension to work when a class is made immutable,
+you may need to extend some or all of the <a href="/~doy/Moose-2.0403/lib/Moose/Meta/Instance.pm" class="podlinkpod"
+>Moose::Meta::Instance</a>,
+<a href="/~doy/Moose-2.0403/lib/Moose/Meta/Method/Constructor.pm" class="podlinkpod"
+>Moose::Meta::Method::Constructor</a>,
+and <a href="/~doy/Moose-2.0403/lib/Moose/Meta/Method/Destructor.pm" class="podlinkpod"
+>Moose::Meta::Method::Destructor</a> objects.</p>
+
+<p>The <a href="/~doy/Moose-2.0403/lib/Moose/Util/MetaRole.pm" class="podlinkpod"
+>Moose::Util::MetaRole</a> module lets you apply roles to the base object class,
+as well as the meta classes just mentioned.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Providing_a_Role"
+>Providing a Role</a></h2>
+
+<p>Some extensions come in the form of a role for you to consume.
+The <a href="/perldoc?MooseX%3A%3AObject%3A%3APluggable" class="podlinkpod"
+>MooseX::Object::Pluggable</a> extension is a great example of this.
+In fact,
+despite the <code>MooseX</code> name,
+it does not actually change anything about Moose&#39;s behavior.
+Instead,
+it is just a role that an object which wants to be pluggable can consume.</p>
+
+<p>If you are implementing this sort of extension,
+you don&#39;t need to do anything special.
+You simply create a role and document that it should be used via the normal <code>with</code> sugar:</p>
+
+<pre class="sh_perl">   package MyApp::User;
+
+   use Moose;
+
+   with &#39;MooseX::My::Role&#39;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="New_Types"
+>New Types</a></h2>
+
+<p>Another common Moose extension is a new type for the Moose type system. In this case, you simply create a type in your module. When people load your module, the type is created, and they can refer to it by name after that. The <a href="/perldoc?MooseX%3A%3ATypes%3A%3AURI" class="podlinkpod"
+>MooseX::Types::URI</a> and <a href="/perldoc?MooseX%3A%3ATypes%3A%3ADateTime" class="podlinkpod"
+>MooseX::Types::DateTime</a> distributions are two good examples of how this works. These both build on top of the <a href="/perldoc?MooseX%3A%3ATypes" class="podlinkpod"
+>MooseX::Types</a> extension.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ROLES_VS_TRAITS_VS_SUBCLASSES"
+>ROLES VS TRAITS VS SUBCLASSES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>It is important to understand that <b>roles and traits are the same thing</b>. A trait is simply a role applied to a instance. The only thing that may distinguish the two is that a trait can be packaged in a way that lets Moose resolve a short name to a class name. In other words, with a trait, the caller can refer to it by a short name like &#34;Big&#34;, and Moose will resolve it to a class like <code>MooseX::Embiggen::Meta::Attribute::Role::Big</code>.</p>
+
+<p>See <a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe3.pod" class="podlinkpod"
+>Moose::Cookbook::Meta::Recipe3</a> and <a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe5.pod" class="podlinkpod"
+>Moose::Cookbook::Meta::Recipe5</a> for examples of traits in action. In particular, both of these recipes demonstrate the trait resolution mechanism.</p>
+
+<p>Implementing an extension as a (set of) metaclass or base object role(s) will make your extension more cooperative. It is hard for an end-user to effectively combine together multiple metaclass subclasses, but it is very easy to combine roles.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="USING_YOUR_EXTENSION"
+>USING YOUR EXTENSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>There are a number of ways in which an extension can be applied. In some cases you can provide multiple ways of consuming your extension.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Extensions_as_Metaclass_Traits"
+>Extensions as Metaclass Traits</a></h2>
+
+<p>If your extension is available as a trait, you can ask end users to simply specify it in a list of traits. Currently, this only works for (class) metaclass and attribute metaclass traits:</p>
+
+<pre class="sh_perl">  use Moose -traits =&#62; [ &#39;Big&#39;, &#39;Blue&#39; ];
+
+  has &#39;animal&#39; =&#62; (
+      traits =&#62; [ &#39;Big&#39;, &#39;Blue&#39; ],
+      ...
+  );</pre>
+
+<p>If your extension applies to any other metaclass, or the object base class, you cannot use the trait mechanism.</p>
+
+<p>The benefit of the trait mechanism is that is very easy to see where a trait is applied in the code, and consumers have fine-grained control over what the trait applies to. This is especially true for attribute traits, where you can apply the trait to just one attribute in a class.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Extensions_as_Metaclass_(and_Base_Object)_Subclasses"
+>Extensions as Metaclass (and Base Object) Subclasses</a></h2>
+
+<p>Moose does not provide any simple APIs for consumers to use a subclass extension, except for attribute metaclasses. The attribute declaration options include a <code>metaclass</code> option a consumer of your extension can use to specify your subclass.</p>
+
+<p>This is one reason why implementing an extension as a subclass can be a poor choice. However, you can force the use of certain subclasses at import time by calling <code>Moose-&#62;init_meta</code> for the caller, and providing an alternate metaclass or base object class.</p>
+
+<p>If you do want to do this, you should look at using <a href="/~doy/Moose-2.0403/lib/Moose/Exporter.pm" class="podlinkpod"
+>Moose::Exporter</a> to re-export the <a href="/~doy/Moose-2.0403/lib/Moose.pm" class="podlinkpod"
+>Moose.pm</a> sugar function. With <a href="/~doy/Moose-2.0403/lib/Moose/Exporter.pm" class="podlinkpod"
+>Moose::Exporter</a>, if your exporting class has an <code>init_meta</code> method, <a href="/~doy/Moose-2.0403/lib/Moose/Exporter.pm" class="podlinkpod"
+>Moose::Exporter</a> makes sure that this <code>init_meta</code> method gets called when your class is imported.</p>
+
+<p>Then in your <code>init_meta</code> you can arrange for the caller to use your subclasses:</p>
+
+<pre class="sh_perl">  package MooseX::Embiggen;
+
+  use Moose ();
+  use Moose::Exporter;
+
+  use MooseX::Embiggen::Meta::Class;
+  use MooseX::Embiggen::Object;
+
+  Moose::Exporter-&#62;setup_import_methods( also =&#62; &#39;Moose&#39; );
+
+  sub init_meta {
+      shift;    # just your package name
+      my %options = @_;
+
+      return Moose-&#62;init_meta(
+          for_class  =&#62; $options{for_class},
+          metaclass  =&#62; &#39;MooseX::Embiggen::Meta::Class&#39;,
+          base_class =&#62; &#39;MooseX::Embiggen::Object&#39;,
+      );
+  }</pre>
+
+<p>NOTE: Make sure that your <code>init_meta</code> returns the metaclass object, just as <code>Moose-&#62;init_meta</code> does.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Extensions_as_Metaclass_(and_Base_Object)_Roles"
+>Extensions as Metaclass (and Base Object) Roles</a></h2>
+
+<p>Implementing your extensions as metaclass roles makes your extensions easy to apply, and cooperative with other role-based extensions for metaclasses.</p>
+
+<p>Just as with a subclass, you will probably want to package your extensions for consumption with a single module that uses <a href="/~doy/Moose-2.0403/lib/Moose/Exporter.pm" class="podlinkpod"
+>Moose::Exporter</a>. However, in this case, you will use <a href="/~doy/Moose-2.0403/lib/Moose/Util/MetaRole.pm" class="podlinkpod"
+>Moose::Util::MetaRole</a> to apply all of your roles. The advantage of using this module is that <i>it preserves any subclassing or roles already applied to the user&#39;s metaclasses</i>. This means that your extension is cooperative <i>by default</i>, and consumers of your extension can easily use it with other role-based extensions. Most uses of <a href="/~doy/Moose-2.0403/lib/Moose/Util/MetaRole.pm" class="podlinkpod"
+>Moose::Util::MetaRole</a> can be handled by <a href="/~doy/Moose-2.0403/lib/Moose/Exporter.pm" class="podlinkpod"
+>Moose::Exporter</a> directly; see the <a href="/~doy/Moose-2.0403/lib/Moose/Exporter.pm" class="podlinkpod"
+>Moose::Exporter</a> docs.</p>
+
+<pre class="sh_perl">  package MooseX::Embiggen;
+
+  use Moose ();
+  use Moose::Exporter;
+
+  use MooseX::Embiggen::Role::Meta::Class;
+  use MooseX::Embiggen::Role::Meta::Attribute;
+  use MooseX::Embiggen::Role::Meta::Method::Constructor;
+  use MooseX::Embiggen::Role::Object;
+
+  my ( $import, $unimport, $init_meta ) = Moose::Exporter-&#62;build_import_methods(
+      also =&#62; [&#39;Moose&#39;], metaclass_roles =&#62;
+          [&#39;MooseX::Embiggen::Role::Meta::Class&#39;],
+      attribute_metaclass_roles =&#62; [&#39;MooseX::Embiggen::Role::Meta::Attribute&#39;],
+      constructor_class_roles =&#62;
+          [&#39;MooseX::Embiggen::Role::Meta::Method::Constructor&#39;],
+      base_class_roles =&#62; [&#39;MooseX::Embiggen::Role::Object&#39;],
+      install          =&#62; [qw(import unimport)],
+  );
+
+  sub init_meta {
+      my $package = shift;
+      my %options = @_;
+      Moose-&#62;init_meta(%options);
+      return $package-&#62;$init_meta(%options);
+  }</pre>
+
+<p>As you can see from this example, you can use <a href="/~doy/Moose-2.0403/lib/Moose/Util/MetaRole.pm" class="podlinkpod"
+>Moose::Util::MetaRole</a> to apply roles to any metaclass, as well as the base object class. If some other extension has already applied its own roles, they will be preserved when your extension applies its roles, and vice versa.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Providing_Sugar"
+>Providing Sugar</a></h2>
+
+<p>With <a href="/~doy/Moose-2.0403/lib/Moose/Exporter.pm" class="podlinkpod"
+>Moose::Exporter</a>, you can also export your own sugar functions, as well as those from other modules:</p>
+
+<pre class="sh_perl">  package MooseX::Embiggen;
+
+  use Moose ();
+  use Moose::Exporter;
+
+  Moose::Exporter-&#62;setup_import_methods(
+      with_meta =&#62; [&#39;embiggen&#39;],
+      also      =&#62; &#39;Moose&#39;,
+  );
+
+  sub embiggen {
+      my $meta = shift;
+      $meta-&#62;embiggen(@_);
+  }</pre>
+
+<p>And then the consumer of your extension can use your <code>embiggen</code> sub:</p>
+
+<pre class="sh_perl">  package Consumer;
+
+  use MooseX::Embiggen;
+
+  extends &#39;Thing&#39;;
+
+  embiggen ...;</pre>
+
+<p>This can be combined with metaclass and base class roles quite easily.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LEGACY_EXTENSION_MECHANISMS"
+>LEGACY EXTENSION MECHANISMS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Before the existence of <a href="/~doy/Moose-2.0403/lib/Moose/Exporter.pm" class="podlinkpod"
+>Moose::Exporter</a> and <a href="/~doy/Moose-2.0403/lib/Moose/Util/MetaRole.pm" class="podlinkpod"
+>Moose::Util::MetaRole</a>, there were a number of other ways to extend Moose. In general, these methods were less cooperative, and only worked well with a single extension.</p>
+
+<p>These methods include <a href="/~doy/Moose-2.0403/lib/metaclass.pm" class="podlinkpod"
+>metaclass.pm</a>, <a href="/perldoc?Moose%3A%3APolicy" class="podlinkpod"
+>Moose::Policy</a> (which uses <a href="/~doy/Moose-2.0403/lib/metaclass.pm" class="podlinkpod"
+>metaclass.pm</a> under the hood), and various hacks to do what <a href="/~doy/Moose-2.0403/lib/Moose/Exporter.pm" class="podlinkpod"
+>Moose::Exporter</a> does. Please do not use these for your own extensions.</p>
+
+<p>Note that if you write a cooperative extension, it should cooperate with older extensions, though older extensions generally do not cooperate with each other.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONCLUSION"
+>CONCLUSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you can write your extension as one or more metaclass and base object roles, please consider doing so. Make sure to read the docs for <a href="/~doy/Moose-2.0403/lib/Moose/Exporter.pm" class="podlinkpod"
+>Moose::Exporter</a> and <a href="/~doy/Moose-2.0403/lib/Moose/Util/MetaRole.pm" class="podlinkpod"
+>Moose::Util::MetaRole</a> as well.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose is maintained by the Moose Cabal, along with the help of many contributors. See <a href="/~doy/Moose-2.0403/lib/Moose.pm#CABAL" class="podlinkpod"
+>&#34;CABAL&#34; in Moose</a> and <a href="/~doy/Moose-2.0403/lib/Moose.pm#CONTRIBUTORS" class="podlinkpod"
+>&#34;CONTRIBUTORS&#34; in Moose</a> for details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This software is copyright (c) 2012 by Infinity Interactive, Inc..</p>
+
+<p>This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78183 Uploads, 24710 Distributions
+106004 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 09:26:01 2012 GMT (0.118549108505249) @cpansearch1 -->
+ </body>
+</html>

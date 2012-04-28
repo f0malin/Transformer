@@ -1,0 +1,92 @@
+2006-02-05  John Peacock <jpeacock@cpan.org>
+	Changed paths:
+	  M  /version-AlphaBeta/trunk/README
+	  M  /version-AlphaBeta/trunk/lib/version/AlphaBeta.pm
+	  M  /version-AlphaBeta/trunk/t/002_base.t
+
+	Implement the numify() operator to override base class.
+
+2005-11-03  John Peacock <jpeacock@cpan.org>
+	Changed paths:
+	  M  /version-AlphaBeta/trunk/README
+	  M  /version-AlphaBeta/trunk/lib/version/AlphaBeta.pm
+	  M  /version-AlphaBeta/trunk/t/002_base.t
+
+	When creating a v::AB object during overloaded comparison, make
+	sure that the upgraded object is valid before comparing.
+
+	Reported by Bhavesh Jardosh <perltastic@gmail.com>
+
+2005-03-10  John Peacock <jpeacock@cpan.org>
+	Changed paths:
+	  M  /version-AlphaBeta/trunk/Build.PL
+
+	Forgot to update Build.pl to use svk instead of svn for Changes
+
+2004-04-07  John Peacock <jpeacock@cpan.org>
+	Changed paths:
+	  M  /version-AlphaBeta/trunk/Build.PL
+
+	Override the ACTION_dist() method and use it the generate 'Changes' each
+	time a release is generated, rather than requiring a special step
+
+2004-04-07  John Peacock <jpeacock@cpan.org>
+	Changed paths:
+	  M  /version-AlphaBeta/trunk/Build.PL
+	  D  /version-AlphaBeta/trunk/Changes
+	  M  /version-AlphaBeta/trunk/MANIFEST
+
+	Subclass Module::Build and create ACTION_Changes class method
+	Remove 'Changes' from the MANIFEST and generate using ACTION_Changes
+
+2004-04-06  John Peacock <jpeacock@cpan.org>
+	Changed paths:
+	  M  /version-AlphaBeta/trunk/README
+	  M  /version-AlphaBeta/trunk/lib/version/AlphaBeta.pm
+
+	First release to CPAN as standalone distribution.
+
+2004-04-06  John Peacock <jpeacock@cpan.org>
+	Changed paths:
+	  M  /version-AlphaBeta/trunk/README
+	  M  /version-AlphaBeta/trunk/lib/version/AlphaBeta.pm
+	  M  /version-AlphaBeta/trunk/t/002_base.t
+
+	Last retroactive release; files copied from version-0.32 distro
+
+2004-04-06  John Peacock <jpeacock@cpan.org>
+	Changed paths:
+	  M  /version-AlphaBeta/trunk/README
+	  M  /version-AlphaBeta/trunk/lib/version/AlphaBeta.pm
+	  M  /version-AlphaBeta/trunk/t/002_base.t
+
+	Second retroactive version; files copied from version-0.29 distro
+
+2004-04-06  John Peacock <jpeacock@cpan.org>
+	Changed paths:
+	  A  /version-AlphaBeta/trunk/Build.PL
+	  A  /version-AlphaBeta/trunk/Changes
+	  A  /version-AlphaBeta/trunk/LICENSE
+	  A  /version-AlphaBeta/trunk/MANIFEST
+	  A  /version-AlphaBeta/trunk/Makefile.PL
+	  A  /version-AlphaBeta/trunk/README
+	  A  /version-AlphaBeta/trunk/Todo
+	  A  /version-AlphaBeta/trunk/lib
+	  A  /version-AlphaBeta/trunk/lib/version
+	  A  /version-AlphaBeta/trunk/lib/version/AlphaBeta.pm
+	  A  /version-AlphaBeta/trunk/t
+	  A  /version-AlphaBeta/trunk/t/001_load.t
+	  A  /version-AlphaBeta/trunk/t/002_base.t
+
+	Initial checkin of standalone distribution.
+	AlphaBeta.pm and t/002_base.t copied from main version-0.28 distribution
+
+2004-04-06  John Peacock <jpeacock@cpan.org>
+	Changed paths:
+	  A  /version-AlphaBeta/trunk
+
+	Mainline development of this module
+
+;; Local Variables:
+;; coding: utf-8
+;; End:

@@ -1,0 +1,120 @@
+This is the README file for PAR-Packer, a part of the PAR toolkit.
+PAR-Packer is the PAR component that can generate stand-alone executables
+and ".par" archives.
+
+The main front-end for PAR-Packer is the "pp" utility.
+
+Please type "perldoc PAR::FAQ" for frequently answered questions.
+
+For packing scripts with prerequisite modules into stand-alone scripts
+or executables (aka PerlApp, Perl2exe, or 'perlcc that works'), see
+"perldoc pp" and "perldoc tkpp".
+
+For running ".par" files directly, see "perldoc parl".
+
+To generate/execute self-contained perl scripts, see "perldoc pp"
+or "perldoc par.pl".
+
+An extensive "Cross-Platform Packaging and Deployment with PAR" tutorial
+is available as "perldoc PAR::Tutorial" from the PAR distribution which is
+a prerequisite for this distribution.
+
+* Installation
+
+If you have cpanm, you only need one line:
+
+  cpanm PAR::Packer
+
+Alternatively, if your CPAN shell is set up, you should just be able to do:
+
+  cpan PAR:Packer
+
+As a last resort, you can manually install it. Download the tarball, untar it,
+then build it:
+  
+  perl Makefile.PL
+  make                # or 'dmake' on Win32
+  make test
+  make install
+
+Note that all of the above require that you have a C compiler installed.
+
+* Notes for Windows users
+
+If your Perl distribution is Strawberry Perl, you already have the
+MinGW C compiler installed. If you are using ActiveState Perl, 
+you may want to install the MinGW C compiler with:
+
+  ppm install MinGW
+
+* Typical Usage
+
+Here are some recipes showing how to utilize pp to bundle source.pl with
+all its dependencies, on target machines with different expected
+settings:
+
+- Stand-alone setup
+
+    % pp -o packed.exe source.pl	# makes packed.exe
+    # Now, deploy 'packed.exe' to target machine...
+    $ packed.exe			# run it
+
+- Perl interpreter only, without core modules:
+
+    % pp -B -p source.pl		# makes source.par
+    % par.pl -B -Opacked.pl source.par  # makes packed.pl
+    # Now, deploy 'packed.pl' to target machine...
+    $ perl packed.pl			# run it
+
+- Perl with core module installed:
+
+    % pp -p source.pl			# makes source.par
+    % par.pl -b -Opacked.pl source.par	# makes packed.pl
+    # Now, deploy 'packed.pl' to target machine...
+    $ perl packed.pl			# run it
+
+- Perl with PAR.pm and its dependencies installed:
+
+    % pp -p source.pl                   # makes source.par
+    % echo "use PAR 'source.par';" > packed.pl;
+    % cat source.pl >> packed.pl;       # makes packed.pl
+    # Now, deploy 'source.par' and 'packed.pl' to target machine...
+    $ perl packed.pl                    # run it
+
+Note that if your perl was built with a shared library, the
+'Stand-alone setup' above will still need a separate perl5x.dll or
+libperl.so to function correctly.  Patches to include a copy
+of libperl with the executable are most welcome. (Note: This might not
+apply any more.)
+
+Please consult the documentation of 'pp' for more information.
+
+* Source Repository
+
+You can check out the most recent revision from PAR's Subversion repository:
+
+    http://svn.openfoundry.org/par/PAR-Packer
+
+Same applies to the main PAR distribution:
+
+    http://svn.openfoundry.org/par/trunk
+
+There is anonymous access to all. Commit access is handed out liberally;
+contact the mailing list for details.
+
+* Contact
+
+<http://par.perl.org/> is the official PAR website.  You can write
+to the mailing list at <par@perl.org>, or send an empty mail to
+<par-subscribe@perl.org> to participate in the discussion.
+
+Please submit bug reports to <bug-par@rt.cpan.org>.
+
+* Copyright
+
+Copyright 2002-2010 by Audrey Tang <cpan@audreyt.org>.
+
+All rights reserved.  You can redistribute and/or modify
+this bundle under the same terms as Perl itself.
+
+See <http://www.perl.com/perl/misc/Artistic.html>.

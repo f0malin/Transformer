@@ -1,0 +1,2377 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>perlvar - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",4,"Document","perlvar",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?perlvar">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  perlvar
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/pod/perlvar.pod">Annotate this POD
+(1)
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/pod/perlvar.pod">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~abigail/perl/pod/perlvar.pod">perl-5.15.9</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#The_Syntax_of_Variable_Names'>The Syntax of Variable Names</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SPECIAL_VARIABLES'>SPECIAL VARIABLES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#General_Variables'>General Variables</a>
+    <li class='indexItem indexItem2'><a href='#Variables_related_to_regular_expressions'>Variables related to regular expressions</a>
+    <li class='indexItem indexItem2'><a href='#Variables_related_to_filehandles'>Variables related to filehandles</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Variables_related_to_formats'>Variables related to formats</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Error_Variables'>Error Variables  </a>
+    <li class='indexItem indexItem2'><a href='#Deprecated_and_removed_variables'>Deprecated and removed variables</a>
+  </ul>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>perlvar - Perl predefined variables</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_Syntax_of_Variable_Names"
+>The Syntax of Variable Names</a></h2>
+
+<p>Variable names in Perl can have several formats.
+Usually,
+they must begin with a letter or underscore,
+in which case they can be arbitrarily long (up to an internal limit of 251 characters) and may contain letters,
+digits,
+underscores,
+or the special sequence <code>::</code> or <code>&#39;</code>.
+In this case,
+the part before the last <code>::</code> or <code>&#39;</code> is taken to be a <i>package qualifier</i>; see <a href="/~flora/perl-5.14.2/pod/perlmod.pod" class="podlinkpod"
+>perlmod</a>.</p>
+
+<p>Perl variable names may also be a sequence of digits or a single punctuation or control character.
+These names are all reserved for special uses by Perl; for example,
+the all-digits names are used to hold data captured by backreferences after a regular expression match.
+Perl has a special syntax for the single-control-character names: It understands <code>^X</code> (caret <code>X</code>) to mean the control-<code>X</code> character.
+For example,
+the notation <code>$^W</code> (dollar-sign caret <code>W</code>) is the scalar variable whose name is the single character control-<code>W</code>.
+This is better than typing a literal control-<code>W</code> into your program.</p>
+
+<p>Since Perl 5.6,
+Perl variable names may be alphanumeric strings that begin with control characters (or better yet,
+a caret).
+These variables must be written in the form <code>${^Foo}</code>; the braces are not optional.
+<code>${^Foo}</code> denotes the scalar variable whose name is a control-<code>F</code> followed by two <code>o</code>&#39;s.
+These variables are reserved for future special uses by Perl,
+except for the ones that begin with <code>^_</code> (control-underscore or caret-underscore).
+No control-character name that begins with <code>^_</code> will acquire a special meaning in any future version of Perl; such names may therefore be used safely in programs.
+<code>$^_</code> itself,
+however,
+<i>is</i> reserved.</p>
+
+<p>Perl identifiers that begin with digits,
+control characters,
+or punctuation characters are exempt from the effects of the <code>package</code> declaration and are always forced to be in package <code>main</code>; they are also exempt from <code>strict &#39;vars&#39;</code> errors.
+A few other names are also exempt in these ways:</p>
+
+<pre class="sh_perl">        ENV      STDIN
+        INC      STDOUT
+        ARGV     STDERR
+        ARGVOUT
+        SIG</pre>
+
+<p>In particular, the special <code>${^_XYZ}</code> variables are always taken to be in package <code>main</code>, regardless of any <code>package</code> declarations presently in scope.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SPECIAL_VARIABLES"
+>SPECIAL VARIABLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following names have special meaning to Perl. Most punctuation names have reasonable mnemonics, or analogs in the shells. Nevertheless, if you wish to use long variable names, you need only say:</p>
+
+<pre class="sh_perl">        use English;</pre>
+
+<p>at the top of your program. This aliases all the short names to the long names in the current package. Some even have medium names, generally borrowed from <b>awk</b>. To avoid a performance hit, if you don&#39;t need the <code>$PREMATCH</code>, <code>$MATCH</code>, or <code>$POSTMATCH</code> it&#39;s best to use the <code>English</code> module without them:</p>
+
+<pre class="sh_perl">        use English &#39;-no_match_vars&#39;;</pre>
+
+<p>Before you continue, note the sort order for variables. In general, we first list the variables in case-insensitive, almost-lexigraphical order (ignoring the <code>{</code> or <code>^</code> preceding words, as in <code>${^UNICODE}</code> or <code>$^T</code>), although <code>$_</code> and <code>@_</code> move up to the top of the pile. For variables with the same identifier, we list it in order of scalar, array, hash, and bareword.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="General_Variables"
+>General Variables</a></h2>
+
+<dl>
+<dt><a name='ARG'></a><a name="$ARG"
+>$ARG</a></dt>
+
+<dd>
+<dt><a name='_'></a><a name="$_"
+>$_ <!--
+	INDEX: $_
+--> <!--
+	INDEX: $ARG
+--></a></dt>
+
+<dd>
+<p>The default input and pattern-searching space. The following pairs are equivalent:</p>
+
+<pre class="sh_perl">        while (&#60;&#62;) {...}    # equivalent only in while!
+        while (defined($_ = &#60;&#62;)) {...}
+
+        /^Subject:/
+        $_ =~ /^Subject:/
+
+        tr/a-z/A-Z/
+        $_ =~ tr/a-z/A-Z/
+
+        chomp
+        chomp($_)</pre>
+
+<p>Here are the places where Perl will assume <code>$_</code> even if you don&#39;t use it:</p>
+
+<ul>
+<li>The following functions use <code>$_</code> as a default argument:
+<p>abs, alarm, chomp, chop, chr, chroot, cos, defined, eval, exp, glob, hex, int, lc, lcfirst, length, log, lstat, mkdir, oct, ord, pos, print, quotemeta, readlink, readpipe, ref, require, reverse (in scalar context only), rmdir, sin, split (on its second argument), sqrt, stat, study, uc, ucfirst, unlink, unpack.</p>
+</li>
+
+<li>All file tests (<code>-f</code>, <code>-d</code>) except for <code>-t</code>, which defaults to STDIN. See <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#-X" class="podlinkpod"
+>&#34;-X&#34; in perlfunc</a></li>
+
+<li>The pattern matching operations <code>m//</code>, <code>s///</code> and <code>tr///</code> (aka <code>y///</code>) when used without an <code>=~</code> operator.</li>
+
+<li>The default iterator variable in a <code>foreach</code> loop if no other variable is supplied.</li>
+
+<li>The implicit iterator variable in the <code>grep()</code> and <code>map()</code> functions.</li>
+
+<li>The implicit variable of <code>given()</code>.</li>
+
+<li>The default place to put an input record when a <code>&#60;FH&#62;</code> operation&#39;s result is tested by itself as the sole criterion of a <code>while</code> test. Outside a <code>while</code> test, this will not happen.</li>
+</ul>
+
+<p>As <code>$_</code> is a global variable, this may lead in some cases to unwanted side-effects. As of perl 5.9.1, you can now use a lexical version of <code>$_</code> by declaring it in a file or in a block with <code>my</code>. Moreover, declaring <code>our $_</code> restores the global <code>$_</code> in the current scope.</p>
+
+<p>Mnemonic: underline is understood in certain operations.</p>
+
+<dt><a name='ARG'></a><a name="@ARG"
+>@ARG</a></dt>
+
+<dd>
+<dt><a name='_'></a><a name="@_"
+>@_ <!--
+	INDEX: @_
+--> <!--
+	INDEX: @ARG
+--></a></dt>
+
+<dd>
+<p>Within a subroutine the array <code>@_</code> contains the parameters passed to that subroutine. Inside a subroutine, <code>@_</code> is the default array for the array operators <code>push</code>, <code>pop</code>, <code>shift</code>, and <code>unshift</code>.</p>
+
+<p>See <a href="/~flora/perl-5.14.2/pod/perlsub.pod" class="podlinkpod"
+>perlsub</a>.</p>
+
+<dt><a name='LIST_SEPARATOR'></a><a name="$LIST_SEPARATOR"
+>$LIST_SEPARATOR</a></dt>
+
+<dd>
+<dt><a name="$&#34;"
+>$&#34; <!--
+	INDEX: $&#34;
+--> <!--
+	INDEX: $LIST_SEPARATOR
+--></a></dt>
+
+<dd>
+<p>When an array or an array slice is interpolated into a double-quoted string or a similar context such as <code>/.../</code>, its elements are separated by this value. Default is a space. For example, this:</p>
+
+<pre class="sh_perl">        print &#34;The array is: @array\n&#34;;</pre>
+
+<p>is equivalent to this:</p>
+
+<pre class="sh_perl">        print &#34;The array is: &#34; . join($&#34;, @array) . &#34;\n&#34;;</pre>
+
+<p>Mnemonic: works in double-quoted context.</p>
+
+<dt><a name='PROCESS_ID'></a><a name="$PROCESS_ID"
+>$PROCESS_ID</a></dt>
+
+<dd>
+<dt><a name='PID'></a><a name="$PID"
+>$PID</a></dt>
+
+<dd>
+<dt><a name="$$"
+>$$ <!--
+	INDEX: $$
+--> <!--
+	INDEX: $PID
+--> <!--
+	INDEX: $PROCESS_ID
+--></a></dt>
+
+<dd>
+<p>The process number of the Perl running this script. You should consider this variable read-only, although it will be altered across <code>fork()</code> calls.</p>
+
+<p>Note for Linux users: on Linux, the C functions <code>getpid()</code> and <code>getppid()</code> return different values from different threads. In order to be portable, this behavior is not reflected by <code>$$</code>, whose value remains consistent across threads. If you want to call the underlying <code>getpid()</code>, you may use the CPAN module <code>Linux::Pid</code>.</p>
+
+<p>Mnemonic: same as shells.</p>
+
+<dt><a name='REAL_GROUP_ID'></a><a name="$REAL_GROUP_ID"
+>$REAL_GROUP_ID</a></dt>
+
+<dd>
+<dt><a name='GID'></a><a name="$GID"
+>$GID</a></dt>
+
+<dd>
+<dt><a name="$("
+>$( <!--
+	INDEX: $(
+--> <!--
+	INDEX: $GID
+--> <!--
+	INDEX: $REAL_GROUP_ID
+--></a></dt>
+
+<dd>
+<p>The real gid of this process. If you are on a machine that supports membership in multiple groups simultaneously, gives a space separated list of groups you are in. The first number is the one returned by <code>getgid()</code>, and the subsequent ones by <code>getgroups()</code>, one of which may be the same as the first number.</p>
+
+<p>However, a value assigned to <code>$(</code> must be a single number used to set the real gid. So the value given by <code>$(</code> should <i>not</i> be assigned back to <code>$(</code> without being forced numeric, such as by adding zero. Note that this is different to the effective gid (<code>$)</code>) which does take a list.</p>
+
+<p>You can change both the real gid and the effective gid at the same time by using <code>POSIX::setgid()</code>. Changes to <code>$(</code> require a check to <code>$!</code> to detect any possible errors after an attempted change.</p>
+
+<p>Mnemonic: parentheses are used to <i>group</i> things. The real gid is the group you <i>left</i>, if you&#39;re running setgid.</p>
+
+<dt><a name='EFFECTIVE_GROUP_ID'></a><a name="$EFFECTIVE_GROUP_ID"
+>$EFFECTIVE_GROUP_ID</a></dt>
+
+<dd>
+<dt><a name='EGID'></a><a name="$EGID"
+>$EGID</a></dt>
+
+<dd>
+<dt><a name="$)"
+>$) <!--
+	INDEX: $)
+--> <!--
+	INDEX: $EGID
+--> <!--
+	INDEX: $EFFECTIVE_GROUP_ID
+--></a></dt>
+
+<dd>
+<p>The effective gid of this process. If you are on a machine that supports membership in multiple groups simultaneously, gives a space separated list of groups you are in. The first number is the one returned by <code>getegid()</code>, and the subsequent ones by <code>getgroups()</code>, one of which may be the same as the first number.</p>
+
+<p>Similarly, a value assigned to <code>$)</code> must also be a space-separated list of numbers. The first number sets the effective gid, and the rest (if any) are passed to <code>setgroups()</code>. To get the effect of an empty list for <code>setgroups()</code>, just repeat the new effective gid; that is, to force an effective gid of 5 and an effectively empty <code>setgroups()</code> list, say <code> $) = &#34;5 5&#34; </code>.</p>
+
+<p>You can change both the effective gid and the real gid at the same time by using <code>POSIX::setgid()</code> (use only a single numeric argument). Changes to <code>$)</code> require a check to <code>$!</code> to detect any possible errors after an attempted change.</p>
+
+<p><code>$&#60;</code>, <code>$&#62;</code>, <code>$(</code> and <code>$)</code> can be set only on machines that support the corresponding <i>set[re][ug]id()</i> routine. <code>$(</code> and <code>$)</code> can be swapped only on machines supporting <code>setregid()</code>.</p>
+
+<p>Mnemonic: parentheses are used to <i>group</i> things. The effective gid is the group that&#39;s <i>right</i> for you, if you&#39;re running setgid.</p>
+
+<dt><a name='PROGRAM_NAME'></a><a name="$PROGRAM_NAME"
+>$PROGRAM_NAME</a></dt>
+
+<dd>
+<dt><a name='0'></a><a name="$0"
+>$0 <!--
+	INDEX: $0
+--> <!--
+	INDEX: $PROGRAM_NAME
+--></a></dt>
+
+<dd>
+<p>Contains the name of the program being executed.</p>
+
+<p>On some (but not all) operating systems assigning to <code>$0</code> modifies the argument area that the <code>ps</code> program sees. On some platforms you may have to use special <code>ps</code> options or a different <code>ps</code> to see the changes. Modifying the <code>$0</code> is more useful as a way of indicating the current program state than it is for hiding the program you&#39;re running.</p>
+
+<p>Note that there are platform-specific limitations on the maximum length of <code>$0</code>. In the most extreme case it may be limited to the space occupied by the original <code>$0</code>.</p>
+
+<p>In some platforms there may be arbitrary amount of padding, for example space characters, after the modified name as shown by <code>ps</code>. In some platforms this padding may extend all the way to the original length of the argument area, no matter what you do (this is the case for example with Linux 2.2).</p>
+
+<p>Note for BSD users: setting <code>$0</code> does not completely remove &#34;perl&#34; from the ps(1) output. For example, setting <code>$0</code> to <code>&#34;foobar&#34;</code> may result in <code>&#34;perl: foobar (perl)&#34;</code> (whether both the <code>&#34;perl: &#34;</code> prefix and the &#34; (perl)&#34; suffix are shown depends on your exact BSD variant and version). This is an operating system feature, Perl cannot help it.</p>
+
+<p>In multithreaded scripts Perl coordinates the threads so that any thread may modify its copy of the <code>$0</code> and the change becomes visible to ps(1) (assuming the operating system plays along). Note that the view of <code>$0</code> the other threads have will not change since they have their own copies of it.</p>
+
+<p>If the program has been given to perl via the switches <code>-e</code> or <code>-E</code>, <code>$0</code> will contain the string <code>&#34;-e&#34;</code>.</p>
+
+<p>On Linux as of perl 5.14 the legacy process name will be set with <code>prctl(2)</code>, in addition to altering the POSIX name via <code>argv[0]</code> as perl has done since version 4.000. Now system utilities that read the legacy process name such as ps, top and killall will recognize the name you set when assigning to <code>$0</code>. The string you supply will be cut off at 16 bytes, this is a limitation imposed by Linux.</p>
+
+<p>Mnemonic: same as <b>sh</b> and <b>ksh</b>.</p>
+
+<dt><a name='SUBSCRIPT_SEPARATOR'></a><a name="$SUBSCRIPT_SEPARATOR"
+>$SUBSCRIPT_SEPARATOR</a></dt>
+
+<dd>
+<dt><a name='SUBSEP'></a><a name="$SUBSEP"
+>$SUBSEP</a></dt>
+
+<dd>
+<dt><a name="$;"
+>$; <!--
+	INDEX: $;
+--> <!--
+	INDEX: $SUBSEP
+--> <!--
+	INDEX: SUBSCRIPT_SEPARATOR
+--></a></dt>
+
+<dd>
+<p>The subscript separator for multidimensional array emulation. If you refer to a hash element as</p>
+
+<pre class="sh_perl">        $foo{$a,$b,$c}</pre>
+
+<p>it really means</p>
+
+<pre class="sh_perl">        $foo{join($;, $a, $b, $c)}</pre>
+
+<p>But don&#39;t put</p>
+
+<pre class="sh_perl">        @foo{$a,$b,$c}  # a slice--note the @</pre>
+
+<p>which means</p>
+
+<pre class="sh_perl">        ($foo{$a},$foo{$b},$foo{$c})</pre>
+
+<p>Default is &#34;\034&#34;, the same as SUBSEP in <b>awk</b>. If your keys contain binary data there might not be any safe value for <code>$;</code>.</p>
+
+<p>Consider using &#34;real&#34; multidimensional arrays as described in <a href="/~flora/perl-5.14.2/pod/perllol.pod" class="podlinkpod"
+>perllol</a>.</p>
+
+<p>Mnemonic: comma (the syntactic subscript separator) is a semi-semicolon.</p>
+
+<dt><a name='REAL_USER_ID'></a><a name="$REAL_USER_ID"
+>$REAL_USER_ID</a></dt>
+
+<dd>
+<dt><a name='UID'></a><a name="$UID"
+>$UID</a></dt>
+
+<dd>
+<dt><a name="$&#60;"
+>$&#60; <!--
+	INDEX: $&#60;
+--> <!--
+	INDEX: $UID
+--> <!--
+	INDEX: $REAL_USER_ID
+--></a></dt>
+
+<dd>
+<p>The real uid of this process. You can change both the real uid and the effective uid at the same time by using <code>POSIX::setuid()</code>. Since changes to <code>$&#60;</code> require a system call, check <code>$!</code> after a change attempt to detect any possible errors.</p>
+
+<p>Mnemonic: it&#39;s the uid you came <i>from</i>, if you&#39;re running setuid.</p>
+
+<dt><a name='EFFECTIVE_USER_ID'></a><a name="$EFFECTIVE_USER_ID"
+>$EFFECTIVE_USER_ID</a></dt>
+
+<dd>
+<dt><a name='EUID'></a><a name="$EUID"
+>$EUID</a></dt>
+
+<dd>
+<dt><a name="$&#62;"
+>$&#62; <!--
+	INDEX: $&#62;
+--> <!--
+	INDEX: $EUID
+--> <!--
+	INDEX: $EFFECTIVE_USER_ID
+--></a></dt>
+
+<dd>
+<p>The effective uid of this process. For example:</p>
+
+<pre class="sh_perl">        $&#60; = $&#62;;            # set real to effective uid
+        ($&#60;,$&#62;) = ($&#62;,$&#60;);  # swap real and effective uids</pre>
+
+<p>You can change both the effective uid and the real uid at the same time by using <code>POSIX::setuid()</code>. Changes to <code>$&#62;</code> require a check to <code>$!</code> to detect any possible errors after an attempted change.</p>
+
+<p><code>$&#60;</code> and <code>$&#62;</code> can be swapped only on machines supporting <code>setreuid()</code>.</p>
+
+<p>Mnemonic: it&#39;s the uid you went <i>to</i>, if you&#39;re running setuid.</p>
+
+<dt><a name='a'></a><a name="$a"
+>$a</a></dt>
+
+<dd>
+<dt><a name='b'></a><a name="$b"
+>$b <!--
+	INDEX: $a
+--> <!--
+	INDEX: $b
+--></a></dt>
+
+<dd>
+<p>Special package variables when using <code>sort()</code>, see <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#sort" class="podlinkpod"
+>&#34;sort&#34; in perlfunc</a>. Because of this specialness <code>$a</code> and <code>$b</code> don&#39;t need to be declared (using <code>use vars</code>, or <code>our()</code>) even when using the <code>strict &#39;vars&#39;</code> pragma. Don&#39;t lexicalize them with <code>my $a</code> or <code>my $b</code> if you want to be able to use them in the <code>sort()</code> comparison block or function.</p>
+
+<dt><a name='COMPILING'></a><a name="$COMPILING"
+>$COMPILING</a></dt>
+
+<dd>
+<dt><a name='C'></a><a name="$^C"
+>$^C <!--
+	INDEX: $^C
+--> <!--
+	INDEX: $COMPILING
+--></a></dt>
+
+<dd>
+<p>The current value of the flag associated with the <b>-c</b> switch. Mainly of use with <b>-MO=...</b> to allow code to alter its behavior when being compiled, such as for example to <code>AUTOLOAD</code> at compile time rather than normal, deferred loading. Setting <code>$^C = 1</code> is similar to calling <code>B::minus_c</code>.</p>
+
+<p>This variable was added in Perl 5.6.</p>
+
+<dt><a name='DEBUGGING'></a><a name="$DEBUGGING"
+>$DEBUGGING</a></dt>
+
+<dd>
+<dt><a name='D'></a><a name="$^D"
+>$^D <!--
+	INDEX: $^D
+--> <!--
+	INDEX: $DEBUGGING
+--></a></dt>
+
+<dd>
+<p>The current value of the debugging flags. May be read or set. Like its command-line equivalent, you can use numeric or symbolic values, eg <code>$^D = 10</code> or <code>$^D = &#34;st&#34;</code>.</p>
+
+<p>Mnemonic: value of <b>-D</b> switch.</p>
+
+<dt><a name='ENCODING'></a><a name="${^ENCODING}"
+>${^ENCODING} <!--
+	INDEX: ${^ENCODING}
+--></a></dt>
+
+<dd>
+<p>The <i>object reference</i> to the <code>Encode</code> object that is used to convert the source code to Unicode. Thanks to this variable your Perl script does not have to be written in UTF-8. Default is <i>undef</i>. The direct manipulation of this variable is highly discouraged.</p>
+
+<p>This variable was added in Perl 5.8.2.</p>
+
+<dt><a name='ENV'></a><a name="%ENV"
+>%ENV <!--
+	INDEX: %ENV
+--></a></dt>
+
+<dd>
+<p>The hash <code>%ENV</code> contains your current environment. Setting a value in <code>ENV</code> changes the environment for any child processes you subsequently <code>fork()</code> off.</p>
+
+<dt><a name='SYSTEM_FD_MAX'></a><a name="$SYSTEM_FD_MAX"
+>$SYSTEM_FD_MAX</a></dt>
+
+<dd>
+<dt><a name='F'></a><a name="$^F"
+>$^F <!--
+	INDEX: $^F
+--> <!--
+	INDEX: $SYSTEM_FD_MAX
+--></a></dt>
+
+<dd>
+<p>The maximum system file descriptor, ordinarily 2. System file descriptors are passed to <code>exec()</code>ed processes, while higher file descriptors are not. Also, during an <code>open()</code>, system file descriptors are preserved even if the <code>open()</code> fails (ordinary file descriptors are closed before the <code>open()</code> is attempted). The close-on-exec status of a file descriptor will be decided according to the value of <code>$^F</code> when the corresponding file, pipe, or socket was opened, not the time of the <code>exec()</code>.</p>
+
+<dt><a name='F'></a><a name="@F"
+>@F <!--
+	INDEX: @F
+--></a></dt>
+
+<dd>
+<p>The array <code>@F</code> contains the fields of each line read in when autosplit mode is turned on. See <a href="/~flora/perl-5.14.2/pod/perlrun.pod" class="podlinkpod"
+>perlrun</a> for the <b>-a</b> switch. This array is package-specific, and must be declared or given a full package name if not in package main when running under <code>strict &#39;vars&#39;</code>.</p>
+
+<dt><a name='GLOBAL_PHASE'></a><a name="${^GLOBAL_PHASE}"
+>${^GLOBAL_PHASE} <!--
+	INDEX: ${^GLOBAL_PHASE}
+--></a></dt>
+
+<dd>
+<p>The current phase of the perl interpreter.</p>
+
+<p>Possible values are:</p>
+
+<dl>
+<dt><a name="CONSTRUCT"
+>CONSTRUCT</a></dt>
+
+<dd>
+<p>The <code>PerlInterpreter*</code> is being constructed via <code>perl_construct</code>. This value is mostly there for completeness and for use via the underlying C variable <code>PL_phase</code>. It&#39;s not really possible for Perl code to be executed unless construction of the interpreter is finished.</p>
+
+<dt><a name="START"
+>START</a></dt>
+
+<dd>
+<p>This is the global compile-time. That includes, basically, every <code>BEGIN</code> block executed directly or indirectly from during the compile-time of the top-level program.</p>
+
+<p>This phase is not called &#34;BEGIN&#34; to avoid confusion with <code>BEGIN</code>-blocks, as those are executed during compile-time of any compilation unit, not just the top-level program. A new, localised compile-time entered at run-time, for example by constructs as <code>eval &#34;use SomeModule&#34;</code> are not global interpreter phases, and therefore aren&#39;t reflected by <code>${^GLOBAL_PHASE}</code>.</p>
+
+<dt><a name="CHECK"
+>CHECK</a></dt>
+
+<dd>
+<p>Execution of any <code>CHECK</code> blocks.</p>
+
+<dt><a name="INIT"
+>INIT</a></dt>
+
+<dd>
+<p>Similar to &#34;CHECK&#34;, but for <code>INIT</code>-blocks, not <code>CHECK</code> blocks.</p>
+
+<dt><a name="RUN"
+>RUN</a></dt>
+
+<dd>
+<p>The main run-time, i.e. the execution of <code>PL_main_root</code>.</p>
+
+<dt><a name="END"
+>END</a></dt>
+
+<dd>
+<p>Execution of any <code>END</code> blocks.</p>
+
+<dt><a name="DESTRUCT"
+>DESTRUCT</a></dt>
+
+<dd>
+<p>Global destruction.</p>
+</dd>
+</dl>
+
+<p>Also note that there&#39;s no value for UNITCHECK-blocks. That&#39;s because those are run for each compilation unit individually, and therefore is not a global interpreter phase.</p>
+
+<p>Not every program has to go through each of the possible phases, but transition from one phase to another can only happen in the order described in the above list.</p>
+
+<p>An example of all of the phases Perl code can see:</p>
+
+<pre class="sh_perl">    BEGIN { print &#34;compile-time: ${^GLOBAL_PHASE}\n&#34; }
+
+    INIT  { print &#34;init-time: ${^GLOBAL_PHASE}\n&#34; }
+
+    CHECK { print &#34;check-time: ${^GLOBAL_PHASE}\n&#34; }
+
+    {
+        package Print::Phase;
+
+        sub new {
+            my ($class, $time) = @_;
+            return bless \$time, $class;
+        }
+
+        sub DESTROY {
+            my $self = shift;
+            print &#34;$$self: ${^GLOBAL_PHASE}\n&#34;;
+        }
+    }
+
+    print &#34;run-time: ${^GLOBAL_PHASE}\n&#34;;
+
+    my $runtime = Print::Phase-&#62;new(
+        &#34;lexical variables are garbage collected before END&#34;
+    );
+
+    END   { print &#34;end-time: ${^GLOBAL_PHASE}\n&#34; }
+
+    our $destruct = Print::Phase-&#62;new(
+        &#34;package variables are garbage collected after END&#34;
+    );</pre>
+
+<p>This will print out</p>
+
+<pre class="sh_perl">    compile-time: START
+    check-time: CHECK
+    init-time: INIT
+    run-time: RUN
+    lexical variables are garbage collected before END: RUN
+    end-time: END
+    package variables are garbage collected after END: DESTRUCT</pre>
+
+<p>This variable was added in Perl 5.14.0.</p>
+
+<dt><a name='H'></a><a name="$^H"
+>$^H <!--
+	INDEX: $^H
+--></a></dt>
+
+<dd>
+<p>WARNING: This variable is strictly for internal use only. Its availability, behavior, and contents are subject to change without notice.</p>
+
+<p>This variable contains compile-time hints for the Perl interpreter. At the end of compilation of a BLOCK the value of this variable is restored to the value when the interpreter started to compile the BLOCK.</p>
+
+<p>When perl begins to parse any block construct that provides a lexical scope (e.g., eval body, required file, subroutine body, loop body, or conditional block), the existing value of <code>$^H</code> is saved, but its value is left unchanged. When the compilation of the block is completed, it regains the saved value. Between the points where its value is saved and restored, code that executes within BEGIN blocks is free to change the value of <code>$^H</code>.</p>
+
+<p>This behavior provides the semantic of lexical scoping, and is used in, for instance, the <code>use strict</code> pragma.</p>
+
+<p>The contents should be an integer; different bits of it are used for different pragmatic flags. Here&#39;s an example:</p>
+
+<pre class="sh_perl">        sub add_100 { $^H |= 0x100 }
+
+        sub foo {
+                BEGIN { add_100() }
+                bar-&#62;baz($boon);
+        }</pre>
+
+<p>Consider what happens during execution of the BEGIN block. At this point the BEGIN block has already been compiled, but the body of <code>foo()</code> is still being compiled. The new value of <code>$^H</code> will therefore be visible only while the body of <code>foo()</code> is being compiled.</p>
+
+<p>Substitution of <code>BEGIN { add_100() }</code> block with:</p>
+
+<pre class="sh_perl">        BEGIN { require strict; strict-&#62;import(&#39;vars&#39;) }</pre>
+
+<p>demonstrates how <code>use strict &#39;vars&#39;</code> is implemented. Here&#39;s a conditional version of the same lexical pragma:</p>
+
+<pre class="sh_perl">        BEGIN { require strict; strict-&#62;import(&#39;vars&#39;) if $condition }</pre>
+
+<p>This variable was added in Perl 5.003.</p>
+
+<dt><a name='H'></a><a name="%^H"
+>%^H <!--
+	INDEX: %^H
+--></a></dt>
+
+<dd>
+<p>The <code>%^H</code> hash provides the same scoping semantic as <code>$^H</code>. This makes it useful for implementation of lexically scoped pragmas. See <a href="/~flora/perl-5.14.2/pod/perlpragma.pod" class="podlinkpod"
+>perlpragma</a>.</p>
+
+<p>This variable was added in Perl 5.6.</p>
+
+<dt><a name='INC'></a><a name="@INC"
+>@INC <!--
+	INDEX: @INC
+--></a></dt>
+
+<dd>
+<p>The array <code>@INC</code> contains the list of places that the <code>do EXPR</code>, <code>require</code>, or <code>use</code> constructs look for their library files. It initially consists of the arguments to any <b>-I</b> command-line switches, followed by the default Perl library, probably <em>/usr/local/lib/perl</em>, followed by &#34;.&#34;, to represent the current directory. (&#34;.&#34; will not be appended if taint checks are enabled, either by <code>-T</code> or by <code>-t</code>.) If you need to modify this at runtime, you should use the <code>use lib</code> pragma to get the machine-dependent library properly loaded also:</p>
+
+<pre class="sh_perl">        use lib &#39;/mypath/libdir/&#39;;
+        use SomeMod;</pre>
+
+<p>You can also insert hooks into the file inclusion system by putting Perl code directly into <code>@INC</code>. Those hooks may be subroutine references, array references or blessed objects. See <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#require" class="podlinkpod"
+>&#34;require&#34; in perlfunc</a> for details.</p>
+
+<dt><a name='INC'></a><a name="%INC"
+>%INC <!--
+	INDEX: %INC
+--></a></dt>
+
+<dd>
+<p>The hash <code>%INC</code> contains entries for each filename included via the <code>do</code>, <code>require</code>, or <code>use</code> operators. The key is the filename you specified (with module names converted to pathnames), and the value is the location of the file found. The <code>require</code> operator uses this hash to determine whether a particular file has already been included.</p>
+
+<p>If the file was loaded via a hook (e.g. a subroutine reference, see <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#require" class="podlinkpod"
+>&#34;require&#34; in perlfunc</a> for a description of these hooks), this hook is by default inserted into <code>%INC</code> in place of a filename. Note, however, that the hook may have set the <code>%INC</code> entry by itself to provide some more specific info.</p>
+
+<dt><a name='INPLACE_EDIT'></a><a name="$INPLACE_EDIT"
+>$INPLACE_EDIT</a></dt>
+
+<dd>
+<dt><a name='I'></a><a name="$^I"
+>$^I <!--
+	INDEX: $^I
+--> <!--
+	INDEX: $INPLACE_EDIT
+--></a></dt>
+
+<dd>
+<p>The current value of the inplace-edit extension. Use <code>undef</code> to disable inplace editing.</p>
+
+<p>Mnemonic: value of <b>-i</b> switch.</p>
+
+<dt><a name='M'></a><a name="$^M"
+>$^M <!--
+	INDEX: $^M
+--></a></dt>
+
+<dd>
+<p>By default, running out of memory is an untrappable, fatal error. However, if suitably built, Perl can use the contents of <code>$^M</code> as an emergency memory pool after <code>die()</code>ing. Suppose that your Perl were compiled with <code>-DPERL_EMERGENCY_SBRK</code> and used Perl&#39;s malloc. Then</p>
+
+<pre class="sh_perl">        $^M = &#39;a&#39; x (1 &#60;&#60; 16);</pre>
+
+<p>would allocate a 64K buffer for use in an emergency. See the <em>INSTALL</em> file in the Perl distribution for information on how to add custom C compilation flags when compiling perl. To discourage casual use of this advanced feature, there is no <a href="/~flora/perl-5.14.2/lib/English.pm" class="podlinkpod"
+>English</a> long name for this variable.</p>
+
+<p>This variable was added in Perl 5.004.</p>
+
+<dt><a name='OSNAME'></a><a name="$OSNAME"
+>$OSNAME</a></dt>
+
+<dd>
+<dt><a name='O'></a><a name="$^O"
+>$^O <!--
+	INDEX: $^O
+--> <!--
+	INDEX: $OSNAME
+--></a></dt>
+
+<dd>
+<p>The name of the operating system under which this copy of Perl was built, as determined during the configuration process. For examples see <a href="/~flora/perl-5.14.2/pod/perlport.pod#PLATFORMS" class="podlinkpod"
+>&#34;PLATFORMS&#34; in perlport</a>.</p>
+
+<p>The value is identical to <code>$Config{&#39;osname&#39;}</code>. See also <a href="/~flora/perl-5.14.2/configpm" class="podlinkpod"
+>Config</a> and the <b>-V</b> command-line switch documented in <a href="/~flora/perl-5.14.2/pod/perlrun.pod" class="podlinkpod"
+>perlrun</a>.</p>
+
+<p>In Windows platforms, <code>$^O</code> is not very helpful: since it is always <code>MSWin32</code>, it doesn&#39;t tell the difference between 95/98/ME/NT/2000/XP/CE/.NET. Use <code>Win32::GetOSName()</code> or Win32::GetOSVersion() (see <a href="/perldoc?Win32" class="podlinkpod"
+>Win32</a> and <a href="/~flora/perl-5.14.2/pod/perlport.pod" class="podlinkpod"
+>perlport</a>) to distinguish between the variants.</p>
+
+<p>This variable was added in Perl 5.003.</p>
+
+<dt><a name='OPEN'></a><a name="${^OPEN}"
+>${^OPEN} <!--
+	INDEX: ${^OPEN}
+--></a></dt>
+
+<dd>
+<p>An internal variable used by PerlIO. A string in two parts, separated by a <code>\0</code> byte, the first part describes the input layers, the second part describes the output layers.</p>
+
+<p>This variable was added in Perl 5.8.2.</p>
+
+<dt><a name='PERLDB'></a><a name="$PERLDB"
+>$PERLDB</a></dt>
+
+<dd>
+<dt><a name='P'></a><a name="$^P"
+>$^P <!--
+	INDEX: $^P
+--> <!--
+	INDEX: $PERLDB
+--></a></dt>
+
+<dd>
+<p>The internal variable for debugging support. The meanings of the various bits are subject to change, but currently indicate:</p>
+
+<dl>
+<dt><a name="0x01"
+>0x01</a></dt>
+
+<dd>
+<p>Debug subroutine enter/exit.</p>
+
+<dt><a name="0x02"
+>0x02</a></dt>
+
+<dd>
+<p>Line-by-line debugging. Causes <code>DB::DB()</code> subroutine to be called for each statement executed. Also causes saving source code lines (like 0x400).</p>
+
+<dt><a name="0x04"
+>0x04</a></dt>
+
+<dd>
+<p>Switch off optimizations.</p>
+
+<dt><a name="0x08"
+>0x08</a></dt>
+
+<dd>
+<p>Preserve more data for future interactive inspections.</p>
+
+<dt><a name="0x10"
+>0x10</a></dt>
+
+<dd>
+<p>Keep info about source lines on which a subroutine is defined.</p>
+
+<dt><a name="0x20"
+>0x20</a></dt>
+
+<dd>
+<p>Start with single-step on.</p>
+
+<dt><a name="0x40"
+>0x40</a></dt>
+
+<dd>
+<p>Use subroutine address instead of name when reporting.</p>
+
+<dt><a name="0x80"
+>0x80</a></dt>
+
+<dd>
+<p>Report <code>goto &#38;subroutine</code> as well.</p>
+
+<dt><a name="0x100"
+>0x100</a></dt>
+
+<dd>
+<p>Provide informative &#34;file&#34; names for evals based on the place they were compiled.</p>
+
+<dt><a name="0x200"
+>0x200</a></dt>
+
+<dd>
+<p>Provide informative names to anonymous subroutines based on the place they were compiled.</p>
+
+<dt><a name="0x400"
+>0x400</a></dt>
+
+<dd>
+<p>Save source code lines into <code>@{&#34;_&#60;$filename&#34;}</code>.</p>
+</dd>
+</dl>
+
+<p>Some bits may be relevant at compile-time only, some at run-time only. This is a new mechanism and the details may change. See also <a href="/~flora/perl-5.14.2/pod/perldebguts.pod" class="podlinkpod"
+>perldebguts</a>.</p>
+
+<dt><a name='SIG'></a><a name="%SIG"
+>%SIG <!--
+	INDEX: %SIG
+--></a></dt>
+
+<dd>
+<p>The hash <code>%SIG</code> contains signal handlers for signals. For example:</p>
+
+<pre class="sh_perl">        sub handler {   # 1st argument is signal name
+                my($sig) = @_;
+                print &#34;Caught a SIG$sig--shutting down\n&#34;;
+                close(LOG);
+                exit(0);
+                }
+
+        $SIG{&#39;INT&#39;}  = \&#38;handler;
+        $SIG{&#39;QUIT&#39;} = \&#38;handler;
+        ...
+        $SIG{&#39;INT&#39;}  = &#39;DEFAULT&#39;;   # restore default action
+        $SIG{&#39;QUIT&#39;} = &#39;IGNORE&#39;;    # ignore SIGQUIT</pre>
+
+<p>Using a value of <code>&#39;IGNORE&#39;</code> usually has the effect of ignoring the signal, except for the <code>CHLD</code> signal. See <a href="/~flora/perl-5.14.2/pod/perlipc.pod" class="podlinkpod"
+>perlipc</a> for more about this special case.</p>
+
+<p>Here are some other examples:</p>
+
+<pre class="sh_perl">        $SIG{&#34;PIPE&#34;} = &#34;Plumber&#34;;   # assumes main::Plumber (not recommended)
+        $SIG{&#34;PIPE&#34;} = \&#38;Plumber;   # just fine; assume current Plumber
+        $SIG{&#34;PIPE&#34;} = *Plumber;    # somewhat esoteric
+        $SIG{&#34;PIPE&#34;} = Plumber();   # oops, what did Plumber() return??</pre>
+
+<p>Be sure not to use a bareword as the name of a signal handler, lest you inadvertently call it.</p>
+
+<p>If your system has the <code>sigaction()</code> function then signal handlers are installed using it. This means you get reliable signal handling.</p>
+
+<p>The default delivery policy of signals changed in Perl 5.8.0 from immediate (also known as &#34;unsafe&#34;) to deferred, also known as &#34;safe signals&#34;. See <a href="/~flora/perl-5.14.2/pod/perlipc.pod" class="podlinkpod"
+>perlipc</a> for more information.</p>
+
+<p>Certain internal hooks can be also set using the <code>%SIG</code> hash. The routine indicated by <code>$SIG{__WARN__}</code> is called when a warning message is about to be printed. The warning message is passed as the first argument. The presence of a <code>__WARN__</code> hook causes the ordinary printing of warnings to <code>STDERR</code> to be suppressed. You can use this to save warnings in a variable, or turn warnings into fatal errors, like this:</p>
+
+<pre class="sh_perl">        local $SIG{__WARN__} = sub { die $_[0] };
+        eval $proggie;</pre>
+
+<p>As the <code>&#39;IGNORE&#39;</code> hook is not supported by <code>__WARN__</code>, you can disable warnings using the empty subroutine:</p>
+
+<pre class="sh_perl">        local $SIG{__WARN__} = sub {};</pre>
+
+<p>The routine indicated by <code>$SIG{__DIE__}</code> is called when a fatal exception is about to be thrown. The error message is passed as the first argument. When a <code>__DIE__</code> hook routine returns, the exception processing continues as it would have in the absence of the hook, unless the hook routine itself exits via a <code>goto</code>, a loop exit, or a <code>die()</code>. The <code>__DIE__</code> handler is explicitly disabled during the call, so that you can die from a <code>__DIE__</code> handler. Similarly for <code>__WARN__</code>.</p>
+
+<p>Due to an implementation glitch, the <code>$SIG{__DIE__}</code> hook is called even inside an <code>eval()</code>. Do not use this to rewrite a pending exception in <code>$@</code>, or as a bizarre substitute for overriding <code>CORE::GLOBAL::die()</code>. This strange action at a distance may be fixed in a future release so that <code>$SIG{__DIE__}</code> is only called if your program is about to exit, as was the original intent. Any other use is deprecated.</p>
+
+<p><code>__DIE__</code>/<code>__WARN__</code> handlers are very special in one respect: they may be called to report (probable) errors found by the parser. In such a case the parser may be in inconsistent state, so any attempt to evaluate Perl code from such a handler will probably result in a segfault. This means that warnings or errors that result from parsing Perl should be used with extreme caution, like this:</p>
+
+<pre class="sh_perl">        require Carp if defined $^S;
+        Carp::confess(&#34;Something wrong&#34;) if defined &#38;Carp::confess;
+        die &#34;Something wrong, but could not load Carp to give backtrace...
+           To see backtrace try starting Perl with -MCarp switch&#34;;</pre>
+
+<p>Here the first line will load <code>Carp</code> <i>unless</i> it is the parser who called the handler. The second line will print backtrace and die if <code>Carp</code> was available. The third line will be executed only if <code>Carp</code> was not available.</p>
+
+<p>Having to even think about the <code>$^S</code> variable in your exception handlers is simply wrong. <code>$SIG{__DIE__}</code> as currently implemented invites grievous and difficult to track down errors. Avoid it and use an <code>END{}</code> or CORE::GLOBAL::die override instead.</p>
+
+<p>See <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#die" class="podlinkpod"
+>&#34;die&#34; in perlfunc</a>, <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#warn" class="podlinkpod"
+>&#34;warn&#34; in perlfunc</a>, <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#eval" class="podlinkpod"
+>&#34;eval&#34; in perlfunc</a>, and <a href="/~flora/perl-5.14.2/lib/warnings.pm" class="podlinkpod"
+>warnings</a> for additional information.</p>
+
+<dt><a name='BASETIME'></a><a name="$BASETIME"
+>$BASETIME</a></dt>
+
+<dd>
+<dt><a name='T'></a><a name="$^T"
+>$^T <!--
+	INDEX: $^T
+--> <!--
+	INDEX: $BASETIME
+--></a></dt>
+
+<dd>
+<p>The time at which the program began running, in seconds since the epoch (beginning of 1970). The values returned by the <b>-M</b>, <b>-A</b>, and <b>-C</b> filetests are based on this value.</p>
+
+<dt><a name='TAINT'></a><a name="${^TAINT}"
+>${^TAINT} <!--
+	INDEX: ${^TAINT}
+--></a></dt>
+
+<dd>
+<p>Reflects if taint mode is on or off. 1 for on (the program was run with <b>-T</b>), 0 for off, -1 when only taint warnings are enabled (i.e. with <b>-t</b> or <b>-TU</b>).</p>
+
+<p>This variable is read-only.</p>
+
+<p>This variable was added in Perl 5.8.</p>
+
+<dt><a name='UNICODE'></a><a name="${^UNICODE}"
+>${^UNICODE} <!--
+	INDEX: ${^UNICODE}
+--></a></dt>
+
+<dd>
+<p>Reflects certain Unicode settings of Perl. See <a href="/~flora/perl-5.14.2/pod/perlrun.pod" class="podlinkpod"
+>perlrun</a> documentation for the <code>-C</code> switch for more information about the possible values.</p>
+
+<p>This variable is set during Perl startup and is thereafter read-only.</p>
+
+<p>This variable was added in Perl 5.8.2.</p>
+
+<dt><a name='UTF8CACHE'></a><a name="${^UTF8CACHE}"
+>${^UTF8CACHE} <!--
+	INDEX: ${^UTF8CACHE}
+--></a></dt>
+
+<dd>
+<p>This variable controls the state of the internal UTF-8 offset caching code. 1 for on (the default), 0 for off, -1 to debug the caching code by checking all its results against linear scans, and panicking on any discrepancy.</p>
+
+<p>This variable was added in Perl 5.8.9.</p>
+
+<dt><a name='UTF8LOCALE'></a><a name="${^UTF8LOCALE}"
+>${^UTF8LOCALE} <!--
+	INDEX: ${^UTF8LOCALE}
+--></a></dt>
+
+<dd>
+<p>This variable indicates whether a UTF-8 locale was detected by perl at startup. This information is used by perl when it&#39;s in adjust-utf8ness-to-locale mode (as when run with the <code>-CL</code> command-line switch); see <a href="/~flora/perl-5.14.2/pod/perlrun.pod" class="podlinkpod"
+>perlrun</a> for more info on this.</p>
+
+<p>This variable was added in Perl 5.8.8.</p>
+
+<dt><a name='PERL_VERSION'></a><a name="$PERL_VERSION"
+>$PERL_VERSION</a></dt>
+
+<dd>
+<dt><a name='V'></a><a name="$^V"
+>$^V <!--
+	INDEX: $^V
+--> <!--
+	INDEX: $PERL_VERSION
+--></a></dt>
+
+<dd>
+<p>The revision, version, and subversion of the Perl interpreter, represented as a <code>version</code> object.</p>
+
+<p>This variable first appeared in perl 5.6.0; earlier versions of perl will see an undefined value. Before perl 5.10.0 <code>$^V</code> was represented as a v-string.</p>
+
+<p><code>$^V</code> can be used to determine whether the Perl interpreter executing a script is in the right range of versions. For example:</p>
+
+<pre class="sh_perl">        warn &#34;Hashes not randomized!\n&#34; if !$^V or $^V lt v5.8.1</pre>
+
+<p>To convert <code>$^V</code> into its string representation use <code>sprintf()</code>&#39;s <code>&#34;%vd&#34;</code> conversion:</p>
+
+<pre class="sh_perl">        printf &#34;version is v%vd\n&#34;, $^V;  # Perl&#39;s version</pre>
+
+<p>See the documentation of <code>use VERSION</code> and <code>require VERSION</code> for a convenient way to fail if the running Perl interpreter is too old.</p>
+
+<p>See also <code>$]</code> for an older representation of the Perl version.</p>
+
+<p>This variable was added in Perl 5.6.</p>
+
+<p>Mnemonic: use ^V for Version Control.</p>
+
+<dt><a name='WIN32_SLOPPY_STAT'></a><a name="${^WIN32_SLOPPY_STAT}"
+>${^WIN32_SLOPPY_STAT} <!--
+	INDEX: ${^WIN32_SLOPPY_STAT}
+--> <!--
+	INDEX: sitecustomize
+--> <!--
+	INDEX: sitecustomize.pl
+--></a></dt>
+
+<dd>
+<p>If this variable is set to a true value, then <code>stat()</code> on Windows will not try to open the file. This means that the link count cannot be determined and file attributes may be out of date if additional hardlinks to the file exist. On the other hand, not opening the file is considerably faster, especially for files on network drives.</p>
+
+<p>This variable could be set in the <em>sitecustomize.pl</em> file to configure the local Perl installation to use &#34;sloppy&#34; <code>stat()</code> by default. See the documentation for <b>-f</b> in <a href="/~flora/perl-5.14.2/pod/perlrun.pod#Command_Switches" class="podlinkpod"
+>perlrun</a> for more information about site customization.</p>
+
+<p>This variable was added in Perl 5.10.</p>
+
+<dt><a name='EXECUTABLE_NAME'></a><a name="$EXECUTABLE_NAME"
+>$EXECUTABLE_NAME</a></dt>
+
+<dd>
+<dt><a name='X'></a><a name="$^X"
+>$^X <!--
+	INDEX: $^X
+--> <!--
+	INDEX: $EXECUTABLE_NAME
+--></a></dt>
+
+<dd>
+<p>The name used to execute the current copy of Perl, from C&#39;s <code>argv[0]</code> or (where supported) <em>/proc/self/exe</em>.</p>
+
+<p>Depending on the host operating system, the value of <code>$^X</code> may be a relative or absolute pathname of the perl program file, or may be the string used to invoke perl but not the pathname of the perl program file. Also, most operating systems permit invoking programs that are not in the PATH environment variable, so there is no guarantee that the value of <code>$^X</code> is in PATH. For VMS, the value may or may not include a version number.</p>
+
+<p>You usually can use the value of <code>$^X</code> to re-invoke an independent copy of the same perl that is currently running, e.g.,</p>
+
+<pre class="sh_perl">        @first_run = `$^X -le &#34;print int rand 100 for 1..100&#34;`;</pre>
+
+<p>But recall that not all operating systems support forking or capturing of the output of commands, so this complex statement may not be portable.</p>
+
+<p>It is not safe to use the value of <code>$^X</code> as a path name of a file, as some operating systems that have a mandatory suffix on executable files do not require use of the suffix when invoking a command. To convert the value of <code>$^X</code> to a path name, use the following statements:</p>
+
+<pre class="sh_perl">        # Build up a set of file names (not command names).
+        use Config;
+        my $this_perl = $^X;
+        if ($^O ne &#39;VMS&#39;) {
+                $this_perl .= $Config{_exe}
+                  unless $this_perl =~ m/$Config{_exe}$/i;
+                }</pre>
+
+<p>Because many operating systems permit anyone with read access to the Perl program file to make a copy of it, patch the copy, and then execute the copy, the security-conscious Perl programmer should take care to invoke the installed copy of perl, not the copy referenced by <code>$^X</code>. The following statements accomplish this goal, and produce a pathname that can be invoked as a command or referenced as a file.</p>
+
+<pre class="sh_perl">        use Config;
+        my $secure_perl_path = $Config{perlpath};
+        if ($^O ne &#39;VMS&#39;) {
+                $secure_perl_path .= $Config{_exe}
+                        unless $secure_perl_path =~ m/$Config{_exe}$/i;
+                }</pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Variables_related_to_regular_expressions"
+>Variables related to regular expressions</a></h2>
+
+<p>Most of the special variables related to regular expressions are side effects. Perl sets these variables when it has a successful match, so you should check the match result before using them. For instance:</p>
+
+<pre class="sh_perl">        if( /P(A)TT(ER)N/ ) {
+                print &#34;I found $1 and $2\n&#34;;
+                }</pre>
+
+<p>These variables are read-only and dynamically-scoped, unless we note otherwise.</p>
+
+<p>The dynamic nature of the regular expression variables means that their value is limited to the block that they are in, as demonstrated by this bit of code:</p>
+
+<pre class="sh_perl">        my $outer = &#39;Wallace and Grommit&#39;;
+        my $inner = &#39;Mutt and Jeff&#39;;
+
+        my $pattern = qr/(\S+) and (\S+)/;
+
+        sub show_n { print &#34;\$1 is $1; \$2 is $2\n&#34; }
+
+        {
+        OUTER:
+                show_n() if $outer =~ m/$pattern/;
+
+                INNER: {
+                        show_n() if $inner =~ m/$pattern/;
+                        }
+
+                show_n();
+        }</pre>
+
+<p>The output shows that while in the <code>OUTER</code> block, the values of <code>$1</code> and <code>$2</code> are from the match against <code>$outer</code>. Inside the <code>INNER</code> block, the values of <code>$1</code> and <code>$2</code> are from the match against <code>$inner</code>, but only until the end of the block (i.e. the dynamic scope). After the <code>INNER</code> block completes, the values of <code>$1</code> and <code>$2</code> return to the values for the match against <code>$outer</code> even though we have not made another match:</p>
+
+<pre class="sh_perl">        $1 is Wallace; $2 is Grommit
+        $1 is Mutt; $2 is Jeff
+        $1 is Wallace; $2 is Grommit</pre>
+
+<p>Due to an unfortunate accident of Perl&#39;s implementation, <code>use English</code> imposes a considerable performance penalty on all regular expression matches in a program because it uses the <code>$`</code>, <code>$&#38;</code>, and <code>$&#39;</code>, regardless of whether they occur in the scope of <code>use English</code>. For that reason, saying <code>use English</code> in libraries is strongly discouraged unless you import it without the match variables:</p>
+
+<pre class="sh_perl">        use English &#39;-no_match_vars&#39;</pre>
+
+<p>The <code>Devel::NYTProf</code> and <code>Devel::FindAmpersand</code> modules can help you find uses of these problematic match variables in your code.</p>
+
+<p>Since Perl 5.10, you can use the <code>/p</code> match operator flag and the <code>${^PREMATCH}</code>, <code>${^MATCH}</code>, and <code>${^POSTMATCH}</code> variables instead so you only suffer the performance penalties.</p>
+
+<dl>
+<dt><a name='digits'></a><a name="$&#60;digits&#62;_($1,_$2,_...)"
+>$&#60;<i>digits</i>&#62; ($1, $2, ...) <!--
+	INDEX: $1
+--> <!--
+	INDEX: $2
+--> <!--
+	INDEX: $3
+--></a></dt>
+
+<dd>
+<p>Contains the subpattern from the corresponding set of capturing parentheses from the last successful pattern match, not counting patterns matched in nested blocks that have been exited already.</p>
+
+<p>These variables are read-only and dynamically-scoped.</p>
+
+<p>Mnemonic: like \digits.</p>
+
+<dt><a name='MATCH'></a><a name="$MATCH"
+>$MATCH</a></dt>
+
+<dd>
+<dt><a name="$&#38;"
+>$&#38; <!--
+	INDEX: $&#38;
+--> <!--
+	INDEX: $MATCH
+--></a></dt>
+
+<dd>
+<p>The string matched by the last successful pattern match (not counting any matches hidden within a BLOCK or <code>eval()</code> enclosed by the current BLOCK).</p>
+
+<p>The use of this variable anywhere in a program imposes a considerable performance penalty on all regular expression matches. To avoid this penalty, you can extract the same substring by using <a href="#@-" class="podlinkpod"
+>&#34;@-&#34;</a>. Starting with Perl 5.10, you can use the &#60;/p&#62; match flag and the <code>${^MATCH}</code> variable to do the same thing for particular match operations.</p>
+
+<p>This variable is read-only and dynamically-scoped.</p>
+
+<p>Mnemonic: like <code>&#38;</code> in some editors.</p>
+
+<dt><a name='MATCH'></a><a name="${^MATCH}"
+>${^MATCH} <!--
+	INDEX: ${^MATCH}
+--></a></dt>
+
+<dd>
+<p>This is similar to <code>$&#38;</code> (<code>$MATCH</code>) except that it does not incur the performance penalty associated with that variable, and is only guaranteed to return a defined value when the pattern was compiled or executed with the <code>/p</code> modifier.</p>
+
+<p>This variable was added in Perl 5.10.</p>
+
+<p>This variable is read-only and dynamically-scoped.</p>
+
+<dt><a name='PREMATCH'></a><a name="$PREMATCH"
+>$PREMATCH</a></dt>
+
+<dd>
+<dt><a name="$`"
+>$` <!--
+	INDEX: $`
+--> <!--
+	INDEX: $PREMATCH
+--> <!--
+	INDEX: ${^PREMATCH}
+--></a></dt>
+
+<dd>
+<p>The string preceding whatever was matched by the last successful pattern match, not counting any matches hidden within a BLOCK or <code>eval</code> enclosed by the current BLOCK.</p>
+
+<p>The use of this variable anywhere in a program imposes a considerable performance penalty on all regular expression matches. To avoid this penalty, you can extract the same substring by using <a href="#@-" class="podlinkpod"
+>&#34;@-&#34;</a>. Starting with Perl 5.10, you can use the &#60;/p&#62; match flag and the <code>${^PREMATCH}</code> variable to do the same thing for particular match operations.</p>
+
+<p>This variable is read-only and dynamically-scoped.</p>
+
+<p>Mnemonic: <code>`</code> often precedes a quoted string.</p>
+
+<dt><a name='PREMATCH'></a><a name="${^PREMATCH}"
+>${^PREMATCH} <!--
+	INDEX: $`
+--> <!--
+	INDEX: ${^PREMATCH}
+--></a></dt>
+
+<dd>
+<p>This is similar to <code>$`</code> ($PREMATCH) except that it does not incur the performance penalty associated with that variable, and is only guaranteed to return a defined value when the pattern was compiled or executed with the <code>/p</code> modifier.</p>
+
+<p>This variable was added in Perl 5.10</p>
+
+<p>This variable is read-only and dynamically-scoped.</p>
+
+<dt><a name='POSTMATCH'></a><a name="$POSTMATCH"
+>$POSTMATCH</a></dt>
+
+<dd>
+<dt><a name="$&#39;"
+>$&#39; <!--
+	INDEX: $&#39;
+--> <!--
+	INDEX: $POSTMATCH
+--> <!--
+	INDEX: ${^POSTMATCH}
+--> <!--
+	INDEX: @-
+--></a></dt>
+
+<dd>
+<p>The string following whatever was matched by the last successful pattern match (not counting any matches hidden within a BLOCK or <code>eval()</code> enclosed by the current BLOCK). Example:</p>
+
+<pre class="sh_perl">        local $_ = &#39;abcdefghi&#39;;
+        /def/;
+        print &#34;$`:$&#38;:$&#39;\n&#34;;     # prints abc:def:ghi</pre>
+
+<p>The use of this variable anywhere in a program imposes a considerable performance penalty on all regular expression matches. To avoid this penalty, you can extract the same substring by using <a href="#@-" class="podlinkpod"
+>&#34;@-&#34;</a>. Starting with Perl 5.10, you can use the &#60;/p&#62; match flag and the <code>${^POSTMATCH}</code> variable to do the same thing for particular match operations.</p>
+
+<p>This variable is read-only and dynamically-scoped.</p>
+
+<p>Mnemonic: <code>&#39;</code> often follows a quoted string.</p>
+
+<dt><a name='POSTMATCH'></a><a name="${^POSTMATCH}"
+>${^POSTMATCH} <!--
+	INDEX: ${^POSTMATCH}
+--> <!--
+	INDEX: $&#39;
+--> <!--
+	INDEX: $POSTMATCH
+--></a></dt>
+
+<dd>
+<p>This is similar to <code>$&#39;</code> (<code>$POSTMATCH</code>) except that it does not incur the performance penalty associated with that variable, and is only guaranteed to return a defined value when the pattern was compiled or executed with the <code>/p</code> modifier.</p>
+
+<p>This variable was added in Perl 5.10.</p>
+
+<p>This variable is read-only and dynamically-scoped.</p>
+
+<dt><a name='LAST_PAREN_MATCH'></a><a name="$LAST_PAREN_MATCH"
+>$LAST_PAREN_MATCH</a></dt>
+
+<dd>
+<dt><a name="$+"
+>$+ <!--
+	INDEX: $+
+--> <!--
+	INDEX: $LAST_PAREN_MATCH
+--></a></dt>
+
+<dd>
+<p>The text matched by the last bracket of the last successful search pattern. This is useful if you don&#39;t know which one of a set of alternative patterns matched. For example:</p>
+
+<pre class="sh_perl">        /Version: (.*)|Revision: (.*)/ &#38;&#38; ($rev = $+);</pre>
+
+<p>This variable is read-only and dynamically-scoped.</p>
+
+<p>Mnemonic: be positive and forward looking.</p>
+
+<dt><a name='LAST_SUBMATCH_RESULT'></a><a name="$LAST_SUBMATCH_RESULT"
+>$LAST_SUBMATCH_RESULT</a></dt>
+
+<dd>
+<dt><a name='N'></a><a name="$^N"
+>$^N <!--
+	INDEX: $^N
+--> <!--
+	INDEX: $LAST_SUBMATCH_RESULT
+--></a></dt>
+
+<dd>
+<p>The text matched by the used group most-recently closed (i.e. the group with the rightmost closing parenthesis) of the last successful search pattern.</p>
+
+<p>This is primarily used inside <code>(?{...})</code> blocks for examining text recently matched. For example, to effectively capture text to a variable (in addition to <code>$1</code>, <code>$2</code>, etc.), replace <code>(...)</code> with</p>
+
+<pre class="sh_perl">        (?:(...)(?{ $var = $^N }))</pre>
+
+<p>By setting and then using <code>$var</code> in this way relieves you from having to worry about exactly which numbered set of parentheses they are.</p>
+
+<p>This variable was added in Perl 5.8.</p>
+
+<p>Mnemonic: the (possibly) Nested parenthesis that most recently closed.</p>
+
+<dt><a name='LAST_MATCH_END'></a><a name="@LAST_MATCH_END"
+>@LAST_MATCH_END</a></dt>
+
+<dd>
+<dt><a name="@+"
+>@+ <!--
+	INDEX: @+
+--> <!--
+	INDEX: @LAST_MATCH_END
+--></a></dt>
+
+<dd>
+<p>This array holds the offsets of the ends of the last successful submatches in the currently active dynamic scope. <code>$+[0]</code> is the offset into the string of the end of the entire match. This is the same value as what the <code>pos</code> function returns when called on the variable that was matched against. The <i>n</i>th element of this array holds the offset of the <i>n</i>th submatch, so <code>$+[1]</code> is the offset past where <code>$1</code> ends, <code>$+[2]</code> the offset past where <code>$2</code> ends, and so on. You can use <code>$#+</code> to determine how many subgroups were in the last successful match. See the examples given for the <code>@-</code> variable.</p>
+
+<p>This variable was added in Perl 5.6.</p>
+
+<dt><a name='LAST_PAREN_MATCH'></a><a name="%LAST_PAREN_MATCH"
+>%LAST_PAREN_MATCH</a></dt>
+
+<dd>
+<dt><a name="%+"
+>%+ <!--
+	INDEX: %+
+--> <!--
+	INDEX: %LAST_PAREN_MATCH
+--></a></dt>
+
+<dd>
+<p>Similar to <code>@+</code>, the <code>%+</code> hash allows access to the named capture buffers, should they exist, in the last successful match in the currently active dynamic scope.</p>
+
+<p>For example, <code>$+{foo}</code> is equivalent to <code>$1</code> after the following match:</p>
+
+<pre class="sh_perl">        &#39;foo&#39; =~ /(?&#60;foo&#62;foo)/;</pre>
+
+<p>The keys of the <code>%+</code> hash list only the names of buffers that have captured (and that are thus associated to defined values).</p>
+
+<p>The underlying behaviour of <code>%+</code> is provided by the <a href="/~flora/perl-5.14.2/ext/Tie-Hash-NamedCapture/NamedCapture.pm" class="podlinkpod"
+>Tie::Hash::NamedCapture</a> module.</p>
+
+<p><b>Note:</b> <code>%-</code> and <code>%+</code> are tied views into a common internal hash associated with the last successful regular expression. Therefore mixing iterative access to them via <code>each</code> may have unpredictable results. Likewise, if the last successful match changes, then the results may be surprising.</p>
+
+<p>This variable was added in Perl 5.10.</p>
+
+<p>This variable is read-only and dynamically-scoped.</p>
+
+<dt><a name='LAST_MATCH_START'></a><a name="@LAST_MATCH_START"
+>@LAST_MATCH_START</a></dt>
+
+<dd>
+<dt><a name="@-"
+>@- <!--
+	INDEX: @-
+--> <!--
+	INDEX: @LAST_MATCH_START
+--></a></dt>
+
+<dd>
+<p><code>$-[0]</code> is the offset of the start of the last successful match. <code>$-[</code><i>n</i><code>]</code> is the offset of the start of the substring matched by <i>n</i>-th subpattern, or undef if the subpattern did not match.</p>
+
+<p>Thus, after a match against <code>$_</code>, <code>$&#38;</code> coincides with <code>substr $_, $-[0], $+[0] - $-[0]</code>. Similarly, $<i>n</i> coincides with <code>substr $_, $-[n], $+[n] - $-[n]</code> if <code>$-[n]</code> is defined, and $+ coincides with <code>substr $_, $-[$#-], $+[$#-] - $-[$#-]</code>. One can use <code>$#-</code> to find the last matched subgroup in the last successful match. Contrast with <code>$#+</code>, the number of subgroups in the regular expression. Compare with <code>@+</code>.</p>
+
+<p>This array holds the offsets of the beginnings of the last successful submatches in the currently active dynamic scope. <code>$-[0]</code> is the offset into the string of the beginning of the entire match. The <i>n</i>th element of this array holds the offset of the <i>n</i>th submatch, so <code>$-[1]</code> is the offset where <code>$1</code> begins, <code>$-[2]</code> the offset where <code>$2</code> begins, and so on.</p>
+
+<p>After a match against some variable <code>$var</code>:</p>
+
+<dl>
+<dt><a name='is'></a><a name="$`_is_the_same_as_substr($var,_0,_$-[0])"
+><code>$`</code> is the same as <code>substr($var, 0, $-[0])</code></a></dt>
+
+<dd>
+<dt><a name='is'></a><a name="$&#38;_is_the_same_as_substr($var,_$-[0],_$+[0]_-_$-[0])"
+><code>$&#38;</code> is the same as <code>substr($var, $-[0], $+[0] - $-[0])</code></a></dt>
+
+<dd>
+<dt><a name='is'></a><a name="$&#39;_is_the_same_as_substr($var,_$+[0])"
+><code>$&#39;</code> is the same as <code>substr($var, $+[0])</code></a></dt>
+
+<dd>
+<dt><a name='1'></a><a name="$1_is_the_same_as_substr($var,_$-[1],_$+[1]_-_$-[1])"
+><code>$1</code> is the same as <code>substr($var, $-[1], $+[1] - $-[1])</code></a></dt>
+
+<dd>
+<dt><a name='2'></a><a name="$2_is_the_same_as_substr($var,_$-[2],_$+[2]_-_$-[2])"
+><code>$2</code> is the same as <code>substr($var, $-[2], $+[2] - $-[2])</code></a></dt>
+
+<dd>
+<dt><a name='3'></a><a name="$3_is_the_same_as_substr($var,_$-[3],_$+[3]_-_$-[3])"
+><code>$3</code> is the same as <code>substr($var, $-[3], $+[3] - $-[3])</code></a></dt>
+</dl>
+
+<p>This variable was added in Perl 5.6.</p>
+
+<dt><a name='LAST_MATCH_START'></a><a name="%LAST_MATCH_START"
+>%LAST_MATCH_START</a></dt>
+
+<dd>
+<dt><a name="%-"
+>%- <!--
+	INDEX: %-
+--> <!--
+	INDEX: %LAST_MATCH_START
+--></a></dt>
+
+<dd>
+<p>Similar to <code>%+</code>, this variable allows access to the named capture groups in the last successful match in the currently active dynamic scope. To each capture group name found in the regular expression, it associates a reference to an array containing the list of values captured by all buffers with that name (should there be several of them), in the order where they appear.</p>
+
+<p>Here&#39;s an example:</p>
+
+<pre class="sh_perl">    if (&#39;1234&#39; =~ /(?&#60;A&#62;1)(?&#60;B&#62;2)(?&#60;A&#62;3)(?&#60;B&#62;4)/) {
+        foreach my $bufname (sort keys %-) {
+            my $ary = $-{$bufname};
+            foreach my $idx (0..$#$ary) {
+                print &#34;\$-{$bufname}[$idx] : &#34;,
+                      (defined($ary-&#62;[$idx]) ? &#34;&#39;$ary-&#62;[$idx]&#39;&#34; : &#34;undef&#34;),
+                      &#34;\n&#34;;
+            }
+        }
+    }</pre>
+
+<p>would print out:</p>
+
+<pre class="sh_perl">        $-{A}[0] : &#39;1&#39;
+        $-{A}[1] : &#39;3&#39;
+        $-{B}[0] : &#39;2&#39;
+        $-{B}[1] : &#39;4&#39;</pre>
+
+<p>The keys of the <code>%-</code> hash correspond to all buffer names found in the regular expression.</p>
+
+<p>The behaviour of <code>%-</code> is implemented via the <a href="/~flora/perl-5.14.2/ext/Tie-Hash-NamedCapture/NamedCapture.pm" class="podlinkpod"
+>Tie::Hash::NamedCapture</a> module.</p>
+
+<p><b>Note:</b> <code>%-</code> and <code>%+</code> are tied views into a common internal hash associated with the last successful regular expression. Therefore mixing iterative access to them via <code>each</code> may have unpredictable results. Likewise, if the last successful match changes, then the results may be surprising.</p>
+
+<p>This variable was added in Perl 5.10</p>
+
+<p>This variable is read-only and dynamically-scoped.</p>
+
+<dt><a name='LAST_REGEXP_CODE_RESULT'></a><a name="$LAST_REGEXP_CODE_RESULT"
+>$LAST_REGEXP_CODE_RESULT</a></dt>
+
+<dd>
+<dt><a name='R'></a><a name="$^R"
+>$^R <!--
+	INDEX: $^R
+--> <!--
+	INDEX: $LAST_REGEXP_CODE_RESULT
+--></a></dt>
+
+<dd>
+<p>The result of evaluation of the last successful <code>(?{ code })</code> regular expression assertion (see <a href="/~flora/perl-5.14.2/pod/perlre.pod" class="podlinkpod"
+>perlre</a>). May be written to.</p>
+
+<p>This variable was added in Perl 5.005.</p>
+
+<dt><a name='RE_DEBUG_FLAGS'></a><a name="${^RE_DEBUG_FLAGS}"
+>${^RE_DEBUG_FLAGS} <!--
+	INDEX: ${^RE_DEBUG_FLAGS}
+--></a></dt>
+
+<dd>
+<p>The current value of the regex debugging flags. Set to 0 for no debug output even when the <code>re &#39;debug&#39;</code> module is loaded. See <a href="/~flora/perl-5.14.2/ext/re/re.pm" class="podlinkpod"
+>re</a> for details.</p>
+
+<p>This variable was added in Perl 5.10.</p>
+
+<dt><a name='RE_TRIE_MAXBUF'></a><a name="${^RE_TRIE_MAXBUF}"
+>${^RE_TRIE_MAXBUF} <!--
+	INDEX: ${^RE_TRIE_MAXBUF}
+--></a></dt>
+
+<dd>
+<p>Controls how certain regex optimisations are applied and how much memory they utilize. This value by default is 65536 which corresponds to a 512kB temporary cache. Set this to a higher value to trade memory for speed when matching large alternations. Set it to a lower value if you want the optimisations to be as conservative of memory as possible but still occur, and set it to a negative value to prevent the optimisation and conserve the most memory. Under normal situations this variable should be of no interest to you.</p>
+
+<p>This variable was added in Perl 5.10.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Variables_related_to_filehandles"
+>Variables related to filehandles</a></h2>
+
+<p>Variables that depend on the currently selected filehandle may be set by calling an appropriate object method on the <code>IO::Handle</code> object, although this is less efficient than using the regular built-in variables. (Summary lines below for this contain the word HANDLE.) First you must say</p>
+
+<pre class="sh_perl">        use IO::Handle;</pre>
+
+<p>after which you may use either</p>
+
+<pre class="sh_perl">        method HANDLE EXPR</pre>
+
+<p>or more safely,</p>
+
+<pre class="sh_perl">        HANDLE-&#62;method(EXPR)</pre>
+
+<p>Each method returns the old value of the <code>IO::Handle</code> attribute. The methods each take an optional EXPR, which, if supplied, specifies the new value for the <code>IO::Handle</code> attribute in question. If not supplied, most methods do nothing to the current value--except for <code>autoflush()</code>, which will assume a 1 for you, just to be different.</p>
+
+<p>Because loading in the <code>IO::Handle</code> class is an expensive operation, you should learn how to use the regular built-in variables.</p>
+
+<p>A few of these variables are considered &#34;read-only&#34;. This means that if you try to assign to this variable, either directly or indirectly through a reference, you&#39;ll raise a run-time exception.</p>
+
+<p>You should be very careful when modifying the default values of most special variables described in this document. In most cases you want to localize these variables before changing them, since if you don&#39;t, the change may affect other modules which rely on the default values of the special variables that you have changed. This is one of the correct ways to read the whole file at once:</p>
+
+<pre class="sh_perl">        open my $fh, &#34;&#60;&#34;, &#34;foo&#34; or die $!;
+        local $/; # enable localized slurp mode
+        my $content = &#60;$fh&#62;;
+        close $fh;</pre>
+
+<p>But the following code is quite bad:</p>
+
+<pre class="sh_perl">        open my $fh, &#34;&#60;&#34;, &#34;foo&#34; or die $!;
+        undef $/; # enable slurp mode
+        my $content = &#60;$fh&#62;;
+        close $fh;</pre>
+
+<p>since some other module, may want to read data from some file in the default &#34;line mode&#34;, so if the code we have just presented has been executed, the global value of <code>$/</code> is now changed for any other code running inside the same Perl interpreter.</p>
+
+<p>Usually when a variable is localized you want to make sure that this change affects the shortest scope possible. So unless you are already inside some short <code>{}</code> block, you should create one yourself. For example:</p>
+
+<pre class="sh_perl">        my $content = &#39;&#39;;
+        open my $fh, &#34;&#60;&#34;, &#34;foo&#34; or die $!;
+        {
+                local $/;
+                $content = &#60;$fh&#62;;
+        }
+        close $fh;</pre>
+
+<p>Here is an example of how your own code can go broken:</p>
+
+<pre class="sh_perl">        for ( 1..3 ){
+                $\ = &#34;\r\n&#34;;
+                nasty_break();
+                print &#34;$_&#34;;
+        }
+
+        sub nasty_break {
+        $\ = &#34;\f&#34;;
+        # do something with $_
+        }</pre>
+
+<p>You probably expect this code to print the equivalent of</p>
+
+<pre class="sh_perl">    &#34;1\r\n2\r\n3\r\n&#34;</pre>
+
+<p>but instead you get:</p>
+
+<pre class="sh_perl">    &#34;1\f2\f3\f&#34;</pre>
+
+<p>Why? Because <code>nasty_break()</code> modifies <code>$\</code> without localizing it first. The value you set in <code>nasty_break()</code> is still there when you return. The fix is to add <code>local()</code> so the value doesn&#39;t leak out of <code>nasty_break()</code>:</p>
+
+<pre class="sh_perl">        local $\ = &#34;\f&#34;;</pre>
+
+<p>It&#39;s easy to notice the problem in such a short example, but in more complicated code you are looking for trouble if you don&#39;t localize changes to the special variables.</p>
+
+<dl>
+<dt><a name='ARGV'></a><a name="$ARGV"
+>$ARGV <!--
+	INDEX: $ARGV
+--></a></dt>
+
+<dd>
+<p>Contains the name of the current file when reading from <code>&#60;&#62;</code>.</p>
+
+<dt><a name='ARGV'></a><a name="@ARGV"
+>@ARGV <!--
+	INDEX: @ARGV
+--></a></dt>
+
+<dd>
+<p>The array <code>@ARGV</code> contains the command-line arguments intended for the script. <code>$#ARGV</code> is generally the number of arguments minus one, because <code>$ARGV[0]</code> is the first argument, <i>not</i> the program&#39;s command name itself. See <code>$0</code> for the command name.</p>
+
+<dt><a name='ARGV'></a><a name="ARGV"
+>ARGV <!--
+	INDEX: ARGV
+--></a></dt>
+
+<dd>
+<p>The special filehandle that iterates over command-line filenames in <code>@ARGV</code>. Usually written as the null filehandle in the angle operator <code>&#60;&#62;</code>. Note that currently <code>ARGV</code> only has its magical effect within the <code>&#60;&#62;</code> operator; elsewhere it is just a plain filehandle corresponding to the last file opened by <code>&#60;&#62;</code>. In particular, passing <code>\*ARGV</code> as a parameter to a function that expects a filehandle may not cause your function to automatically read the contents of all the files in <code>@ARGV</code>.</p>
+
+<dt><a name='ARGVOUT'></a><a name="ARGVOUT"
+>ARGVOUT <!--
+	INDEX: ARGVOUT
+--></a></dt>
+
+<dd>
+<p>The special filehandle that points to the currently open output file when doing edit-in-place processing with <b>-i</b>. Useful when you have to do a lot of inserting and don&#39;t want to keep modifying <code>$_</code>. See <a href="/~flora/perl-5.14.2/pod/perlrun.pod" class="podlinkpod"
+>perlrun</a> for the <b>-i</b> switch.</p>
+
+<dt><a name='Handle'></a><a name="Handle-&#62;output_field_separator(_EXPR_)"
+>Handle-&#62;output_field_separator( EXPR )</a></dt>
+
+<dd>
+<dt><a name='OUTPUT_FIELD_SEPARATOR'></a><a name="$OUTPUT_FIELD_SEPARATOR"
+>$OUTPUT_FIELD_SEPARATOR</a></dt>
+
+<dd>
+<dt><a name='OFS'></a><a name="$OFS"
+>$OFS</a></dt>
+
+<dd>
+<dt><a name="$,"
+>$, <!--
+	INDEX: $,
+--> <!--
+	INDEX: $OFS
+--> <!--
+	INDEX: $OUTPUT_FIELD_SEPARATOR
+--></a></dt>
+
+<dd>
+<p>The output field separator for the print operator. If defined, this value is printed between each of print&#39;s arguments. Default is <code>undef</code>.</p>
+
+<p>Mnemonic: what is printed when there is a &#34;,&#34; in your print statement.</p>
+
+<dt><a name='HANDLE'></a><a name="HANDLE-&#62;input_line_number(_EXPR_)"
+>HANDLE-&#62;input_line_number( EXPR )</a></dt>
+
+<dd>
+<dt><a name='INPUT_LINE_NUMBER'></a><a name="$INPUT_LINE_NUMBER"
+>$INPUT_LINE_NUMBER</a></dt>
+
+<dd>
+<dt><a name='NR'></a><a name="$NR"
+>$NR</a></dt>
+
+<dd>
+<dt><a name="$."
+>$. <!--
+	INDEX: $.
+--> <!--
+	INDEX: $NR
+--> <!--
+	INDEX: $INPUT_LINE_NUMBER
+--> <!--
+	INDEX: line number
+--></a></dt>
+
+<dd>
+<p>Current line number for the last filehandle accessed.</p>
+
+<p>Each filehandle in Perl counts the number of lines that have been read from it. (Depending on the value of <code>$/</code>, Perl&#39;s idea of what constitutes a line may not match yours.) When a line is read from a filehandle (via <code>readline()</code> or <code>&#60;&#62;</code>), or when <code>tell()</code> or <code>seek()</code> is called on it, <code>$.</code> becomes an alias to the line counter for that filehandle.</p>
+
+<p>You can adjust the counter by assigning to <code>$.</code>, but this will not actually move the seek pointer. <i>Localizing <code>$.</code> will not localize the filehandle&#39;s line count</i>. Instead, it will localize perl&#39;s notion of which filehandle <code>$.</code> is currently aliased to.</p>
+
+<p><code>$.</code> is reset when the filehandle is closed, but <b>not</b> when an open filehandle is reopened without an intervening <code>close()</code>. For more details, see <a href="/~flora/perl-5.14.2/pod/perlop.pod#I/O_Operators" class="podlinkpod"
+>&#34;I/O Operators&#34; in perlop</a>. Because <code>&#60;&#62;</code> never does an explicit close, line numbers increase across <code>ARGV</code> files (but see examples in <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#eof" class="podlinkpod"
+>&#34;eof&#34; in perlfunc</a>).</p>
+
+<p>You can also use <code>HANDLE-&#62;input_line_number(EXPR)</code> to access the line counter for a given filehandle without having to worry about which handle you last accessed.</p>
+
+<p>Mnemonic: many programs use &#34;.&#34; to mean the current line number.</p>
+
+<dt><a name='HANDLE'></a><a name="HANDLE-&#62;input_record_separator(_EXPR_)"
+>HANDLE-&#62;input_record_separator( EXPR )</a></dt>
+
+<dd>
+<dt><a name='INPUT_RECORD_SEPARATOR'></a><a name="$INPUT_RECORD_SEPARATOR"
+>$INPUT_RECORD_SEPARATOR</a></dt>
+
+<dd>
+<dt><a name='RS'></a><a name="$RS"
+>$RS</a></dt>
+
+<dd>
+<dt><a name="$/"
+>$/ <!--
+	INDEX: $/
+--> <!--
+	INDEX: $RS
+--> <!--
+	INDEX: $INPUT_RECORD_SEPARATOR
+--></a></dt>
+
+<dd>
+<p>The input record separator, newline by default. This influences Perl&#39;s idea of what a &#34;line&#34; is. Works like <b>awk</b>&#39;s RS variable, including treating empty lines as a terminator if set to the null string (an empty line cannot contain any spaces or tabs). You may set it to a multi-character string to match a multi-character terminator, or to <code>undef</code> to read through the end of file. Setting it to <code>&#34;\n\n&#34;</code> means something slightly different than setting to <code>&#34;&#34;</code>, if the file contains consecutive empty lines. Setting to <code>&#34;&#34;</code> will treat two or more consecutive empty lines as a single empty line. Setting to <code>&#34;\n\n&#34;</code> will blindly assume that the next input character belongs to the next paragraph, even if it&#39;s a newline.</p>
+
+<pre class="sh_perl">    local $/;           # enable &#34;slurp&#34; mode
+    local $_ = &#60;FH&#62;;    # whole file now here
+    s/\n[ \t]+/ /g;</pre>
+
+<p>Remember: the value of <code>$/</code> is a string, not a regex. <b>awk</b> has to be better for something. :-)</p>
+
+<p>Setting <code>$/</code> to a reference to an integer, scalar containing an integer, or scalar that&#39;s convertible to an integer will attempt to read records instead of lines, with the maximum record size being the referenced integer. So this:</p>
+
+<pre class="sh_perl">    local $/ = \32768; # or \&#34;32768&#34;, or \$var_containing_32768
+    open my $fh, &#34;&#60;&#34;, $myfile or die $!;
+    local $_ = &#60;$fh&#62;;</pre>
+
+<p>will read a record of no more than 32768 bytes from FILE. If you&#39;re not reading from a record-oriented file (or your OS doesn&#39;t have record-oriented files), then you&#39;ll likely get a full chunk of data with every read. If a record is larger than the record size you&#39;ve set, you&#39;ll get the record back in pieces. Trying to set the record size to zero or less will cause reading in the (rest of the) whole file.</p>
+
+<p>On VMS, record reads are done with the equivalent of <code>sysread</code>, so it&#39;s best not to mix record and non-record reads on the same file. (This is unlikely to be a problem, because any file you&#39;d want to read in record mode is probably unusable in line mode.) Non-VMS systems do normal I/O, so it&#39;s safe to mix record and non-record reads of a file.</p>
+
+<p>See also <a href="/~flora/perl-5.14.2/pod/perlport.pod#Newlines" class="podlinkpod"
+>&#34;Newlines&#34; in perlport</a>. Also see <code>$.</code>.</p>
+
+<p>Mnemonic: / delimits line boundaries when quoting poetry.</p>
+
+<dt><a name='Handle'></a><a name="Handle-&#62;output_record_separator(_EXPR_)"
+>Handle-&#62;output_record_separator( EXPR )</a></dt>
+
+<dd>
+<dt><a name='OUTPUT_RECORD_SEPARATOR'></a><a name="$OUTPUT_RECORD_SEPARATOR"
+>$OUTPUT_RECORD_SEPARATOR</a></dt>
+
+<dd>
+<dt><a name='ORS'></a><a name="$ORS"
+>$ORS</a></dt>
+
+<dd>
+<dt><a name="$\"
+>$\ <!--
+	INDEX: $\
+--> <!--
+	INDEX: $ORS
+--> <!--
+	INDEX: $OUTPUT_RECORD_SEPARATOR
+--></a></dt>
+
+<dd>
+<p>The output record separator for the print operator. If defined, this value is printed after the last of print&#39;s arguments. Default is <code>undef</code>.</p>
+
+<p>Mnemonic: you set <code>$\</code> instead of adding &#34;\n&#34; at the end of the print. Also, it&#39;s just like <code>$/</code>, but it&#39;s what you get &#34;back&#34; from Perl.</p>
+
+<dt><a name='HANDLE'></a><a name="HANDLE-&#62;autoflush(_EXPR_)"
+>HANDLE-&#62;autoflush( EXPR )</a></dt>
+
+<dd>
+<dt><a name='OUTPUT_AUTOFLUSH'></a><a name="$OUTPUT_AUTOFLUSH"
+>$OUTPUT_AUTOFLUSH</a></dt>
+
+<dd>
+<dt><a name="$|"
+>$| <!--
+	INDEX: $|
+--> <!--
+	INDEX: autoflush
+--> <!--
+	INDEX: flush
+--> <!--
+	INDEX: $OUTPUT_AUTOFLUSH
+--></a></dt>
+
+<dd>
+<p>If set to nonzero, forces a flush right away and after every write or print on the currently selected output channel. Default is 0 (regardless of whether the channel is really buffered by the system or not; <code>$|</code> tells you only whether you&#39;ve asked Perl explicitly to flush after each write). STDOUT will typically be line buffered if output is to the terminal and block buffered otherwise. Setting this variable is useful primarily when you are outputting to a pipe or socket, such as when you are running a Perl program under <b>rsh</b> and want to see the output as it&#39;s happening. This has no effect on input buffering. See <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#getc" class="podlinkpod"
+>&#34;getc&#34; in perlfunc</a> for that. See <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#select" class="podlinkpod"
+>&#34;select&#34; in perlfunc</a> on how to select the output channel. See also <a href="/perldoc?IO%3A%3AHandle" class="podlinkpod"
+>IO::Handle</a>.</p>
+
+<p>Mnemonic: when you want your pipes to be piping hot.</p>
+</dd>
+</dl>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Variables_related_to_formats"
+>Variables related to formats</a></h3>
+
+<p>The special variables for formats are a subset of those for filehandles. See <a href="/~flora/perl-5.14.2/pod/perlform.pod" class="podlinkpod"
+>perlform</a> for more information about Perl&#39;s formats.</p>
+
+<dl>
+<dt><a name='ACCUMULATOR'></a><a name="$ACCUMULATOR"
+>$ACCUMULATOR</a></dt>
+
+<dd>
+<dt><a name='A'></a><a name="$^A"
+>$^A <!--
+	INDEX: $^A
+--> <!--
+	INDEX: $ACCUMULATOR
+--></a></dt>
+
+<dd>
+<p>The current value of the <code>write()</code> accumulator for <code>format()</code> lines. A format contains <code>formline()</code> calls that put their result into <code>$^A</code>. After calling its format, <code>write()</code> prints out the contents of <code>$^A</code> and empties. So you never really see the contents of <code>$^A</code> unless you call <code>formline()</code> yourself and then look at it. See <a href="/~flora/perl-5.14.2/pod/perlform.pod" class="podlinkpod"
+>perlform</a> and <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#formline_PICTURE,LIST" class="podlinkpod"
+>&#34;formline PICTURE,LIST&#34; in perlfunc</a>.</p>
+
+<dt><a name='HANDLE'></a><a name="HANDLE-&#62;format_formfeed(EXPR)"
+>HANDLE-&#62;format_formfeed(EXPR)</a></dt>
+
+<dd>
+<dt><a name='FORMAT_FORMFEED'></a><a name="$FORMAT_FORMFEED"
+>$FORMAT_FORMFEED</a></dt>
+
+<dd>
+<dt><a name='L'></a><a name="$^L"
+>$^L <!--
+	INDEX: $^L
+--> <!--
+	INDEX: $FORMAT_FORMFEED
+--></a></dt>
+
+<dd>
+<p>What formats output as a form feed. The default is <code>\f</code>.</p>
+
+<dt><a name='HANDLE'></a><a name="HANDLE-&#62;format_page_number(EXPR)"
+>HANDLE-&#62;format_page_number(EXPR)</a></dt>
+
+<dd>
+<dt><a name='FORMAT_PAGE_NUMBER'></a><a name="$FORMAT_PAGE_NUMBER"
+>$FORMAT_PAGE_NUMBER</a></dt>
+
+<dd>
+<dt><a name="$%"
+>$% <!--
+	INDEX: $%
+--> <!--
+	INDEX: $FORMAT_PAGE_NUMBER
+--></a></dt>
+
+<dd>
+<p>The current page number of the currently selected output channel.</p>
+
+<p>Mnemonic: <code>%</code> is page number in <b>nroff</b>.</p>
+
+<dt><a name='HANDLE'></a><a name="HANDLE-&#62;format_lines_left(EXPR)"
+>HANDLE-&#62;format_lines_left(EXPR)</a></dt>
+
+<dd>
+<dt><a name='FORMAT_LINES_LEFT'></a><a name="$FORMAT_LINES_LEFT"
+>$FORMAT_LINES_LEFT</a></dt>
+
+<dd>
+<dt><a name="$-"
+>$- <!--
+	INDEX: $-
+--> <!--
+	INDEX: $FORMAT_LINES_LEFT
+--></a></dt>
+
+<dd>
+<p>The number of lines left on the page of the currently selected output channel.</p>
+
+<p>Mnemonic: lines_on_page - lines_printed.</p>
+
+<dt><a name='Handle'></a><a name="Handle-&#62;format_line_break_characters_EXPR"
+>Handle-&#62;format_line_break_characters EXPR</a></dt>
+
+<dd>
+<dt><a name='FORMAT_LINE_BREAK_CHARACTERS'></a><a name="$FORMAT_LINE_BREAK_CHARACTERS"
+>$FORMAT_LINE_BREAK_CHARACTERS</a></dt>
+
+<dd>
+<dt><a name="$:"
+>$: <!--
+	INDEX: $:
+--> <!--
+	INDEX: FORMAT_LINE_BREAK_CHARACTERS
+--></a></dt>
+
+<dd>
+<p>The current set of characters after which a string may be broken to fill continuation fields (starting with <code>^</code>) in a format. The default is &#34;&#160;\n-&#34;, to break on a space, newline, or a hyphen.</p>
+
+<p>Mnemonic: a &#34;colon&#34; in poetry is a part of a line.</p>
+
+<dt><a name='HANDLE'></a><a name="HANDLE-&#62;format_lines_per_page(EXPR)"
+>HANDLE-&#62;format_lines_per_page(EXPR)</a></dt>
+
+<dd>
+<dt><a name='FORMAT_LINES_PER_PAGE'></a><a name="$FORMAT_LINES_PER_PAGE"
+>$FORMAT_LINES_PER_PAGE</a></dt>
+
+<dd>
+<dt><a name="$="
+>$= <!--
+	INDEX: $=
+--> <!--
+	INDEX: $FORMAT_LINES_PER_PAGE
+--></a></dt>
+
+<dd>
+<p>The current page length (printable lines) of the currently selected output channel. The default is 60.</p>
+
+<p>Mnemonic: = has horizontal lines.</p>
+
+<dt><a name='HANDLE'></a><a name="HANDLE-&#62;format_top_name(EXPR)"
+>HANDLE-&#62;format_top_name(EXPR)</a></dt>
+
+<dd>
+<dt><a name='FORMAT_TOP_NAME'></a><a name="$FORMAT_TOP_NAME"
+>$FORMAT_TOP_NAME</a></dt>
+
+<dd>
+<dt><a name="$^"
+>$^ <!--
+	INDEX: $^
+--> <!--
+	INDEX: $FORMAT_TOP_NAME
+--></a></dt>
+
+<dd>
+<p>The name of the current top-of-page format for the currently selected output channel. The default is the name of the filehandle with <code>_TOP</code> appended. For example, the default format top name for the <code>STDOUT</code> filehanlde is <code>STDOUT_TOP</code>.</p>
+
+<p>Mnemonic: points to top of page.</p>
+
+<dt><a name='HANDLE'></a><a name="HANDLE-&#62;format_name(EXPR)"
+>HANDLE-&#62;format_name(EXPR)</a></dt>
+
+<dd>
+<dt><a name='FORMAT_NAME'></a><a name="$FORMAT_NAME"
+>$FORMAT_NAME</a></dt>
+
+<dd>
+<dt><a name="$~"
+>$~ <!--
+	INDEX: $~
+--> <!--
+	INDEX: $FORMAT_NAME
+--></a></dt>
+
+<dd>
+<p>The name of the current report format for the currently selected output channel. The default format name is the same as the filehandle name. For example, the default format name for the <code>STDOUT</code> filehandle is just <code>STDOUT</code>.</p>
+
+<p>Mnemonic: brother to <code>$^</code>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Error_Variables"
+>Error Variables <!--
+	INDEX: error
+--> <!--
+	INDEX: exception
+--></a></h2>
+
+<p>The variables <code>$@</code>, <code>$!</code>, <code>$^E</code>, and <code>$?</code> contain information about different types of error conditions that may appear during execution of a Perl program. The variables are shown ordered by the &#34;distance&#34; between the subsystem which reported the error and the Perl process. They correspond to errors detected by the Perl interpreter, C library, operating system, or an external program, respectively.</p>
+
+<p>To illustrate the differences between these variables, consider the following Perl expression, which uses a single-quoted string. After execution of this statement, perl may have set all four special error variables:</p>
+
+<pre class="sh_perl">        eval q{
+                open my $pipe, &#34;/cdrom/install |&#34; or die $!;
+                my @res = &#60;$pipe&#62;;
+                close $pipe or die &#34;bad pipe: $?, $!&#34;;
+            };</pre>
+
+<p>When perl executes the <code>eval()</code> expression, it translates the <code>open()</code>, <code>&#60;PIPE&#62;</code>, and <code>close</code> calls in the C run-time library and thence to the operating system kernel. perl sets <code>$!</code> to the C library&#39;s <code>errno</code> if one of these calls fails.</p>
+
+<p><code>$@</code> is set if the string to be <code>eval</code>-ed did not compile (this may happen if <code>open</code> or <code>close</code> were imported with bad prototypes), or if Perl code executed during evaluation <code>die()</code>d. In these cases the value of <code>$@</code> is the compile error, or the argument to <code>die</code> (which will interpolate <code>$!</code> and <code>$?</code>). (See also <a href="/perldoc?Fatal" class="podlinkpod"
+>Fatal</a>, though.)</p>
+
+<p>Under a few operating systems, <code>$^E</code> may contain a more verbose error indicator, such as in this case, &#34;CDROM tray not closed.&#34; Systems that do not support extended error messages leave <code>$^E</code> the same as <code>$!</code>.</p>
+
+<p>Finally, <code>$?</code> may be set to non-0 value if the external program <em>/cdrom/install</em> fails. The upper eight bits reflect specific error conditions encountered by the program (the program&#39;s <code>exit()</code> value). The lower eight bits reflect mode of failure, like signal death and core dump information. See <code>wait(2)</code> for details. In contrast to <code>$!</code> and <code>$^E</code>, which are set only if error condition is detected, the variable <code>$?</code> is set on each <code>wait</code> or pipe <code>close</code>, overwriting the old value. This is more like <code>$@</code>, which on every <code>eval()</code> is always set on failure and cleared on success.</p>
+
+<p>For more details, see the individual descriptions at <code>$@</code>, <code>$!</code>, <code>$^E</code>, and <code>$?</code>.</p>
+
+<dl>
+<dt><a name='CHILD_ERROR_NATIVE'></a><a name="${^CHILD_ERROR_NATIVE}"
+>${^CHILD_ERROR_NATIVE} <!--
+	INDEX: $^CHILD_ERROR_NATIVE
+--></a></dt>
+
+<dd>
+<p>The native status returned by the last pipe close, backtick (<code>``</code>) command, successful call to <code>wait()</code> or <code>waitpid()</code>, or from the <code>system()</code> operator. On POSIX-like systems this value can be decoded with the WIFEXITED, WEXITSTATUS, WIFSIGNALED, WTERMSIG, WIFSTOPPED, WSTOPSIG and WIFCONTINUED functions provided by the <a href="/~flora/perl-5.14.2/ext/POSIX/lib/POSIX.pod" class="podlinkpod"
+>POSIX</a> module.</p>
+
+<p>Under VMS this reflects the actual VMS exit status; i.e. it is the same as <code>$?</code> when the pragma <code>use vmsish &#39;status&#39;</code> is in effect.</p>
+
+<p>This variable was added in Perl 5.8.9.</p>
+
+<dt><a name='EXTENDED_OS_ERROR'></a><a name="$EXTENDED_OS_ERROR"
+>$EXTENDED_OS_ERROR</a></dt>
+
+<dd>
+<dt><a name='E'></a><a name="$^E"
+>$^E <!--
+	INDEX: $^E
+--> <!--
+	INDEX: $EXTENDED_OS_ERROR
+--></a></dt>
+
+<dd>
+<p>Error information specific to the current operating system. At the moment, this differs from <code>$!</code> under only VMS, OS/2, and Win32 (and for MacPerl). On all other platforms, <code>$^E</code> is always just the same as <code>$!</code>.</p>
+
+<p>Under VMS, <code>$^E</code> provides the VMS status value from the last system error. This is more specific information about the last system error than that provided by <code>$!</code>. This is particularly important when <code>$!</code> is set to <b>EVMSERR</b>.</p>
+
+<p>Under OS/2, <code>$^E</code> is set to the error code of the last call to OS/2 API either via CRT, or directly from perl.</p>
+
+<p>Under Win32, <code>$^E</code> always returns the last error information reported by the Win32 call <code>GetLastError()</code> which describes the last error from within the Win32 API. Most Win32-specific code will report errors via <code>$^E</code>. ANSI C and Unix-like calls set <code>errno</code> and so most portable Perl code will report errors via <code>$!</code>.</p>
+
+<p>Caveats mentioned in the description of <code>$!</code> generally apply to <code>$^E</code>, also.</p>
+
+<p>This variable was added in Perl 5.003.</p>
+
+<p>Mnemonic: Extra error explanation.</p>
+
+<dt><a name='EXCEPTIONS_BEING_CAUGHT'></a><a name="$EXCEPTIONS_BEING_CAUGHT"
+>$EXCEPTIONS_BEING_CAUGHT</a></dt>
+
+<dd>
+<dt><a name='S'></a><a name="$^S"
+>$^S <!--
+	INDEX: $^S
+--> <!--
+	INDEX: $EXCEPTIONS_BEING_CAUGHT
+--></a></dt>
+
+<dd>
+<p>Current state of the interpreter.</p>
+
+<pre class="sh_perl">        $^S         State
+        ---------   -------------------
+        undef       Parsing module/eval
+        true (1)    Executing an eval
+        false (0)   Otherwise</pre>
+
+<p>The first state may happen in <code>$SIG{__DIE__}</code> and <code>$SIG{__WARN__}</code> handlers.</p>
+
+<p>This variable was added in Perl 5.004.</p>
+
+<dt><a name='WARNING'></a><a name="$WARNING"
+>$WARNING</a></dt>
+
+<dd>
+<dt><a name='W'></a><a name="$^W"
+>$^W <!--
+	INDEX: $^W
+--> <!--
+	INDEX: $WARNING
+--></a></dt>
+
+<dd>
+<p>The current value of the warning switch, initially true if <b>-w</b> was used, false otherwise, but directly modifiable.</p>
+
+<p>See also <a href="/~flora/perl-5.14.2/lib/warnings.pm" class="podlinkpod"
+>warnings</a>.</p>
+
+<p>Mnemonic: related to the <b>-w</b> switch.</p>
+
+<dt><a name='WARNING_BITS'></a><a name="${^WARNING_BITS}"
+>${^WARNING_BITS} <!--
+	INDEX: ${^WARNING_BITS}
+--></a></dt>
+
+<dd>
+<p>The current set of warning checks enabled by the <code>use warnings</code> pragma. See the documentation of <code>warnings</code> for more details.</p>
+
+<p>This variable was added in Perl 5.10.</p>
+
+<dt><a name='OS_ERROR'></a><a name="$OS_ERROR"
+>$OS_ERROR</a></dt>
+
+<dd>
+<dt><a name='ERRNO'></a><a name="$ERRNO"
+>$ERRNO</a></dt>
+
+<dd>
+<dt><a name="$!"
+>$! <!--
+	INDEX: $!
+--> <!--
+	INDEX: $ERRNO
+--> <!--
+	INDEX: $OS_ERROR
+--></a></dt>
+
+<dd>
+<p>If used numerically, yields the current value of the C <code>errno</code> variable, or in other words, if a system or library call fails, it sets this variable. This means that the value of <code>$!</code> is meaningful only <i>immediately</i> after a <b>failure</b>:</p>
+
+<pre class="sh_perl">        if (open my $fh, &#34;&#60;&#34;, $filename) {
+                # Here $! is meaningless.
+                ...
+    }
+    else {
+                # ONLY here is $! meaningful.
+                ...
+                # Already here $! might be meaningless.
+    }
+    # Since here we might have either success or failure,
+    # here $! is meaningless.</pre>
+
+<p>The <i>meaningless</i> stands for anything: zero, non-zero, <code>undef</code>. A successful system or library call does <b>not</b> set the variable to zero.</p>
+
+<p>If used as a string, yields the corresponding system error string. You can assign a number to <code>$!</code> to set <i>errno</i> if, for instance, you want <code>&#34;$!&#34;</code> to return the string for error <i>n</i>, or you want to set the exit value for the <code>die()</code> operator.</p>
+
+<p>Mnemonic: What just went bang?</p>
+
+<dt><a name='OS_ERROR'></a><a name="%OS_ERROR"
+>%OS_ERROR</a></dt>
+
+<dd>
+<dt><a name='ERRNO'></a><a name="%ERRNO"
+>%ERRNO</a></dt>
+
+<dd>
+<dt><a name="%!"
+>%! <!--
+	INDEX: %!
+--> <!--
+	INDEX: %OS_ERROR
+--> <!--
+	INDEX: %ERRNO
+--></a></dt>
+
+<dd>
+<p>Each element of <code>%!</code> has a true value only if <code>$!</code> is set to that value. For example, <code>$!{ENOENT}</code> is true if and only if the current value of <code>$!</code> is <code>ENOENT</code>; that is, if the most recent error was &#34;No such file or directory&#34; (or its moral equivalent: not all operating systems give that exact error, and certainly not all languages). To check if a particular key is meaningful on your system, use <code>exists $!{the_key}</code>; for a list of legal keys, use <code>keys %!</code>. See <a href="/~flora/perl-5.14.2/ext/Errno/Errno_pm.PL" class="podlinkpod"
+>Errno</a> for more information, and also see <a href="#$!" class="podlinkpod"
+>&#34;$!&#34;</a>.</p>
+
+<p>This variable was added in Perl 5.005.</p>
+
+<dt><a name='CHILD_ERROR'></a><a name="$CHILD_ERROR"
+>$CHILD_ERROR</a></dt>
+
+<dd>
+<dt><a name="$?"
+>$? <!--
+	INDEX: $?
+--> <!--
+	INDEX: $CHILD_ERROR
+--></a></dt>
+
+<dd>
+<p>The status returned by the last pipe close, backtick (<code>``</code>) command, successful call to <code>wait()</code> or <code>waitpid()</code>, or from the <code>system()</code> operator. This is just the 16-bit status word returned by the traditional Unix <code>wait()</code> system call (or else is made up to look like it). Thus, the exit value of the subprocess is really (<code>$? &#62;&#62; 8</code>), and <code>$? &#38; 127</code> gives which signal, if any, the process died from, and <code>$? &#38; 128</code> reports whether there was a core dump.</p>
+
+<p>Additionally, if the <code>h_errno</code> variable is supported in C, its value is returned via <code>$?</code> if any <code>gethost*()</code> function fails.</p>
+
+<p>If you have installed a signal handler for <code>SIGCHLD</code>, the value of <code>$?</code> will usually be wrong outside that handler.</p>
+
+<p>Inside an <code>END</code> subroutine <code>$?</code> contains the value that is going to be given to <code>exit()</code>. You can modify <code>$?</code> in an <code>END</code> subroutine to change the exit status of your program. For example:</p>
+
+<pre class="sh_perl">    END {
+        $? = 1 if $? == 255;  # die would make it 255
+    }</pre>
+
+<p>Under VMS, the pragma <code>use vmsish &#39;status&#39;</code> makes <code>$?</code> reflect the actual VMS exit status, instead of the default emulation of POSIX status; see <a href="/~flora/perl-5.14.2/pod/perlvms.pod#$?" class="podlinkpod"
+>&#34;$?&#34; in perlvms</a> for details.</p>
+
+<p>Mnemonic: similar to <b>sh</b> and <b>ksh</b>.</p>
+
+<dt><a name='EVAL_ERROR'></a><a name="$EVAL_ERROR"
+>$EVAL_ERROR</a></dt>
+
+<dd>
+<dt><a name="$@"
+>$@ <!--
+	INDEX: $@
+--> <!--
+	INDEX: $EVAL_ERROR
+--></a></dt>
+
+<dd>
+<p>The Perl syntax error message from the last <code>eval()</code> operator. If <code>$@</code> is the null string, the last <code>eval()</code> parsed and executed correctly (although the operations you invoked may have failed in the normal fashion).</p>
+
+<p>Warning messages are not collected in this variable. You can, however, set up a routine to process warnings by setting <code>$SIG{__WARN__}</code> as described in <a href="#%SIG" class="podlinkpod"
+>&#34;%SIG&#34;</a>.</p>
+
+<p>Mnemonic: Where was the syntax error &#34;at&#34;?</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Deprecated_and_removed_variables"
+>Deprecated and removed variables</a></h2>
+
+<p>Deprecating a variable announces the intent of the perl maintainers to eventually remove the variable from the langauge. It may still be available despite its status. Using a deprecated variable triggers a warning.</p>
+
+<p>Once a variable is removed, its use triggers an error telling you the variable is unsupported.</p>
+
+<p>See <a href="/~flora/perl-5.14.2/pod/perldiag.pod" class="podlinkpod"
+>perldiag</a> for details about error messages.</p>
+
+<dl>
+<dt><a name='OFMT'></a><a name="$OFMT"
+>$OFMT</a></dt>
+
+<dd>
+<dt><a name="$#"
+>$# <!--
+	INDEX: $#
+--> <!--
+	INDEX: $OFMT
+--></a></dt>
+
+<dd>
+<p><code>$#</code> was a variable that you could be use to format printed numbers. After a deprecation cycle, its magic was removed in Perl 5.10 and using it now triggers a warning: <code>$# is no longer supported</code>.</p>
+
+<p>This is not the sigil you use in front of an array name to get the last index, like <code>$#array</code>. That&#39;s still how you get the last index of an array in Perl. The two have nothing to do with each other.</p>
+
+<p>Deprecated in Perl 5.</p>
+
+<p>Removed in Perl 5.10.</p>
+
+<dt><a name="$*"
+>$* <!--
+	INDEX: $*
+--></a></dt>
+
+<dd>
+<p><code>$*</code> was a variable that you could use to enable multiline matching. After a deprecation cycle, its magic was removed in Perl 5.10. Using it now triggers a warning: <code>$* is no longer supported</code>. You should use the <code>/s</code> and <code>/m</code> regexp modifiers instead.</p>
+
+<p>Deprecated in Perl 5.</p>
+
+<p>Removed in Perl 5.10.</p>
+
+<dt><a name='ARRAY_BASE'></a><a name="$ARRAY_BASE"
+>$ARRAY_BASE</a></dt>
+
+<dd>
+<dt><a name="$["
+>$[ <!--
+	INDEX: $[
+--> <!--
+	INDEX: $ARRAY_BASE
+--></a></dt>
+
+<dd>
+<p>This variable stores the index of the first element in an array, and of the first character in a substring. The default is 0, but you could theoretically set it to 1 to make Perl behave more like <b>awk</b> (or Fortran) when subscripting and when evaluating the index() and substr() functions.</p>
+
+<p>As of release 5 of Perl, assignment to <code>$[</code> is treated as a compiler directive, and cannot influence the behavior of any other file. (That&#39;s why you can only assign compile-time constants to it.) Its use is highly discouraged.</p>
+
+<p>Prior to Perl 5.10, assignment to <code>$[</code> could be seen from outer lexical scopes in the same file, unlike other compile-time directives (such as <a href="/~flora/perl-5.14.2/lib/strict.pm" class="podlinkpod"
+>strict</a>). Using local() on it would bind its value strictly to a lexical block. Now it is always lexically scoped.</p>
+
+<p>Mnemonic: [ begins subscripts.</p>
+
+<p>Deprecated in Perl 5.12.</p>
+
+<dt><a name='OLD_PERL_VERSION'></a><a name="$OLD_PERL_VERSION"
+>$OLD_PERL_VERSION</a></dt>
+
+<dd>
+<dt><a name="$]"
+>$] <!--
+	INDEX: $]
+--> <!--
+	INDEX: $OLD_PERL_VERSION
+--></a></dt>
+
+<dd>
+<p>See <code>$^V</code> for a more modern representation of the Perl version that allows accurate string comparisons.</p>
+
+<p>The version + patchlevel / 1000 of the Perl interpreter. This variable can be used to determine whether the Perl interpreter executing a script is in the right range of versions:</p>
+
+<pre class="sh_perl">    warn &#34;No checksumming!\n&#34; if $] &#60; 3.019;</pre>
+
+<p>The floating point representation can sometimes lead to inaccurate numeric comparisons.</p>
+
+<p>See also the documentation of <code>use VERSION</code> and <code>require VERSION</code> for a convenient way to fail if the running Perl interpreter is too old.</p>
+
+<p>Mnemonic: Is this version of perl in the right bracket?</p>
+
+<p>Deprecated in Perl 5.6.</p>
+</dd>
+</dl>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78231 Uploads, 24723 Distributions
+106029 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Thu Apr 26 21:56:10 2012 GMT (0.386032104492188) @cpansearch1 -->
+ </body>
+</html>

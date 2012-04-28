@@ -1,0 +1,23 @@
+OVERVIEW
+
+The DateTime::Incomplete module aims to complement the
+complete, correct, and easy date/time object implementation (DateTime). 
+Currently it handles many date calculations, provides no date math 
+(addition and subtraction), and provides many convenient methods 
+for retrieving portions of a date/time.
+
+This module properly supports the Olson time zone database, meaning
+that historical time zone information, and more importantly, daylight
+saving time rules, can be handled transparently, simply by setting the
+correct time zone. This is done by using the DateTime::TimeZone
+module.
+
+INSTALLATION
+
+To install this module type the following in the distribution
+directory:
+
+   perl Makefile.PL
+   make
+   make test
+   make install

@@ -1,0 +1,1354 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>CPAN::Meta::Spec - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","CPAN-Meta",3]);
+    _gaq.push(["_setCustomVar",5,"Release","CPAN-Meta-2.120921",3]);
+    _gaq.push(["_setCustomVar",3,"Module","CPAN::Meta::Spec",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DAGOLDEN",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?CPAN::Meta::Spec">permalink</a></div>
+  <a href="/~dagolden/">David Golden</a> &gt;
+  <a href="/~dagolden/CPAN-Meta-2.120921/">CPAN-Meta-2.120921</a> &gt;
+  CPAN::Meta::Spec
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/bb755c989fcb9897f28a2c6e00df61e2?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DA/DAGOLDEN/CPAN-Meta-2.120921.tar.gz">CPAN-Meta-2.120921.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=CPAN%3A%3AMeta%3A%3ASpec;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DAGOLDEN/CPAN-Meta-2.120921/lib/CPAN/Meta/Spec.pm">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="https://github.com/dagolden/cpan-meta">Website</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 4</td></tr>
+</table>
+<a href="http://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Meta">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.120921 &nbsp;
+<span class="noprint">
+  <a href="/src/DAGOLDEN/CPAN-Meta-2.120921/lib/CPAN/Meta/Spec.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#TERMINOLOGY'>TERMINOLOGY</a>
+  <li class='indexItem indexItem1'><a href='#DATA_TYPES'>DATA TYPES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Boolean'>Boolean</a>
+    <li class='indexItem indexItem2'><a href='#String'>String</a>
+    <li class='indexItem indexItem2'><a href='#List'>List</a>
+    <li class='indexItem indexItem2'><a href='#Map'>Map</a>
+    <li class='indexItem indexItem2'><a href='#License_String'>License String</a>
+    <li class='indexItem indexItem2'><a href='#URL'>URL</a>
+    <li class='indexItem indexItem2'><a href='#Version'>Version</a>
+    <li class='indexItem indexItem2'><a href='#Version_Range'>Version Range</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#STRUCTURE'>STRUCTURE</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#REQUIRED_FIELDS'>REQUIRED FIELDS</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#abstract'>abstract</a>
+      <li class='indexItem indexItem3'><a href='#author'>author</a>
+      <li class='indexItem indexItem3'><a href='#dynamic_config'>dynamic_config</a>
+      <li class='indexItem indexItem3'><a href='#generated_by'>generated_by</a>
+      <li class='indexItem indexItem3'><a href='#license'>license</a>
+      <li class='indexItem indexItem3'><a href='#meta-spec'>meta-spec</a>
+      <li class='indexItem indexItem3'><a href='#name'>name</a>
+      <li class='indexItem indexItem3'><a href='#release_status'>release_status</a>
+      <li class='indexItem indexItem3'><a href='#version'>version</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#OPTIONAL_FIELDS'>OPTIONAL FIELDS</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#description'>description</a>
+      <li class='indexItem indexItem3'><a href='#keywords'>keywords</a>
+      <li class='indexItem indexItem3'><a href='#no_index'>no_index</a>
+      <li class='indexItem indexItem3'><a href='#optional_features'>optional_features</a>
+      <li class='indexItem indexItem3'><a href='#prereqs'>prereqs</a>
+      <li class='indexItem indexItem3'><a href='#provides'>provides</a>
+      <li class='indexItem indexItem3'><a href='#resources'>resources</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#DEPRECATED_FIELDS'>DEPRECATED FIELDS</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#build_requires'>build_requires</a>
+      <li class='indexItem indexItem3'><a href='#configure_requires'>configure_requires</a>
+      <li class='indexItem indexItem3'><a href='#conflicts'>conflicts</a>
+      <li class='indexItem indexItem3'><a href='#distribution_type'>distribution_type</a>
+      <li class='indexItem indexItem3'><a href='#license_uri'>license_uri</a>
+      <li class='indexItem indexItem3'><a href='#private'>private</a>
+      <li class='indexItem indexItem3'><a href='#recommends'>recommends</a>
+      <li class='indexItem indexItem3'><a href='#requires'>requires</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#VERSION_NUMBERS'>VERSION NUMBERS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Version_Formats'>Version Formats</a>
+    <li class='indexItem indexItem2'><a href='#Version_Ranges'>Version Ranges</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#PREREQUISITES'>PREREQUISITES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Prereq_Spec'>Prereq Spec</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Phases'>Phases</a>
+      <li class='indexItem indexItem3'><a href='#Relationships'>Relationships</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Merging_and_Resolving_Prerequisites'>Merging and Resolving Prerequisites</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SERIALIZATION'>SERIALIZATION</a>
+  <li class='indexItem indexItem1'><a href='#NOTES_FOR_IMPLEMENTORS'>NOTES FOR IMPLEMENTORS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Extracting_Version_Numbers_from_Perl_Modules'>Extracting Version Numbers from Perl Modules</a>
+    <li class='indexItem indexItem2'><a href='#Comparing_Version_Numbers'>Comparing Version Numbers</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#CONTRIBUTORS'>CONTRIBUTORS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>CPAN::Meta::Spec - specification for CPAN distribution metadata</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 2.120921</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  my $distmeta = {
+    name =&#62; &#39;Module-Build&#39;,
+    abstract =&#62; &#39;Build and install Perl modules&#39;,
+    description =&#62;  &#34;Module::Build is a system for &#34;
+      . &#34;building, testing, and installing Perl modules. &#34;
+      . &#34;It is meant to ... blah blah blah ...&#34;,
+    version  =&#62; &#39;0.36&#39;,
+    release_status =&#62; &#39;stable&#39;,
+    author   =&#62; [
+      &#39;Ken Williams &#60;kwilliams@cpan.org&#62;&#39;,
+      &#39;Module-Build List &#60;module-build@perl.org&#62;&#39;, # additional contact
+    ],
+    license  =&#62; [ &#39;perl_5&#39; ],
+    prereqs =&#62; {
+      runtime =&#62; {
+        requires =&#62; {
+          &#39;perl&#39;   =&#62; &#39;5.006&#39;,
+          &#39;ExtUtils::Install&#39; =&#62; &#39;0&#39;,
+          &#39;File::Basename&#39; =&#62; &#39;0&#39;,
+          &#39;File::Compare&#39;  =&#62; &#39;0&#39;,
+          &#39;IO::File&#39;   =&#62; &#39;0&#39;,
+        },
+        recommends =&#62; {
+          &#39;Archive::Tar&#39; =&#62; &#39;1.00&#39;,
+          &#39;ExtUtils::Install&#39; =&#62; &#39;0.3&#39;,
+          &#39;ExtUtils::ParseXS&#39; =&#62; &#39;2.02&#39;,
+        },
+      },
+      build =&#62; {
+        requires =&#62; {
+          &#39;Test::More&#39; =&#62; &#39;0&#39;,
+        },
+      }
+    },
+    resources =&#62; {
+      license =&#62; [&#39;<a href="http://dev.perl.org/licenses/" class="podlinkurl"
+>http://dev.perl.org/licenses/</a>&#39;],
+    },
+    optional_features =&#62; {
+      domination =&#62; {
+        description =&#62; &#39;Take over the world&#39;,
+        prereqs     =&#62; {
+          develop =&#62; { requires =&#62; { &#39;Genius::Evil&#39;     =&#62; &#39;1.234&#39; } },
+          runtime =&#62; { requires =&#62; { &#39;Machine::Weather&#39; =&#62; &#39;2.0&#39;   } },
+        },
+      },
+    },
+    dynamic_config =&#62; 1,
+    keywords =&#62; [ qw/ toolchain cpan dual-life / ],
+    &#39;meta-spec&#39; =&#62; {
+      version =&#62; &#39;2&#39;,
+      url     =&#62; &#39;<a href="http://search.cpan.org/perldoc?CPAN::Meta::Spec" class="podlinkurl"
+>http://search.cpan.org/perldoc?CPAN::Meta::Spec</a>&#39;,
+    },
+    generated_by =&#62; &#39;Module::Build version 0.36&#39;,
+  };</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This document describes version 2 of the CPAN distribution metadata specification, also known as the &#34;CPAN Meta Spec&#34;.</p>
+
+<p>Revisions of this specification for typo corrections and prose clarifications may be issued as CPAN::Meta::Spec 2.<i>x</i>. These revisions will never change semantics or add or remove specified behavior.</p>
+
+<p>Distribution metadata describe important properties of Perl distributions. Distribution building tools like Module::Build, Module::Install, ExtUtils::MakeMaker or Dist::Zilla should create a metadata file in accordance with this specification and include it with the distribution for use by automated tools that index, examine, package or install Perl distributions.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TERMINOLOGY"
+>TERMINOLOGY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name="distribution"
+>distribution</a></dt>
+
+<dd>
+<p>This is the primary object described by the metadata. In the context of this document it usually refers to a collection of modules, scripts, and/or documents that are distributed together for other developers to use. Examples of distributions are <code>Class-Container</code>, <code>libwww-perl</code>, or <code>DBI</code>.</p>
+
+<dt><a name="module"
+>module</a></dt>
+
+<dd>
+<p>This refers to a reusable library of code contained in a single file. Modules usually contain one or more packages and are often referred to by the name of a primary package that can be mapped to the file name. For example, one might refer to <code>File::Spec</code> instead of <em>File/Spec.pm</em></p>
+
+<dt><a name="package"
+>package</a></dt>
+
+<dd>
+<p>This refers to a namespace declared with the Perl <code>package</code> statement. In Perl, packages often have a version number property given by the <code>$VERSION</code> variable in the namespace.</p>
+
+<dt><a name="consumer"
+>consumer</a></dt>
+
+<dd>
+<p>This refers to code that reads a metadata file, deserializes it into a data structure in memory, or interprets a data structure of metadata elements.</p>
+
+<dt><a name="producer"
+>producer</a></dt>
+
+<dd>
+<p>This refers to code that constructs a metadata data structure, serializes into a bytestream and/or writes it to disk.</p>
+
+<dt><a name='must'></a><a name="must,_should,_may,_etc."
+>must, should, may, etc.</a></dt>
+
+<dd>
+<p>These terms are interpreted as described in IETF RFC 2119.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DATA_TYPES"
+>DATA TYPES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Fields in the <a href="#STRUCTURE" class="podlinkpod"
+>&#34;STRUCTURE&#34;</a> section describe data elements, each of which has an associated data type as described herein. There are four primitive types: Boolean, String, List and Map. Other types are subtypes of primitives and define compound data structures or define constraints on the values of a data element.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Boolean"
+>Boolean</a></h2>
+
+<p>A <i>Boolean</i> is used to provide a true or false value. It <b>must</b> be represented as a defined value.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="String"
+>String</a></h2>
+
+<p>A <i>String</i> is data element containing a non-zero length sequence of Unicode characters, such as an ordinary Perl scalar that is not a reference.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="List"
+>List</a></h2>
+
+<p>A <i>List</i> is an ordered collection of zero or more data elements. Elements of a List may be of mixed types.</p>
+
+<p>Producers <b>must</b> represent List elements using a data structure which unambiguously indicates that multiple values are possible, such as a reference to a Perl array (an &#34;arrayref&#34;).</p>
+
+<p>Consumers expecting a List <b>must</b> consider a String as equivalent to a List of length 1.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Map"
+>Map</a></h2>
+
+<p>A <i>Map</i> is an unordered collection of zero or more data elements (&#34;values&#34;), indexed by associated String elements (&#34;keys&#34;). The Map&#39;s value elements may be of mixed types.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="License_String"
+>License String</a></h2>
+
+<p>A <i>License String</i> is a subtype of String with a restricted set of values. Valid values are described in detail in the description of the <a href="#license" class="podlinkpod"
+>&#34;license&#34;</a> field.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="URL"
+>URL</a></h2>
+
+<p><i>URL</i> is a subtype of String containing a Uniform Resource Locator or Identifier. [ This type is called URL and not URI for historical reasons. ]</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Version"
+>Version</a></h2>
+
+<p>A <i>Version</i> is a subtype of String containing a value that describes the version number of packages or distributions. Restrictions on format are described in detail in the <a href="#Version_Formats" class="podlinkpod"
+>&#34;Version Formats&#34;</a> section.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Version_Range"
+>Version Range</a></h2>
+
+<p>The <i>Version Range</i> type is a subtype of String. It describes a range of Versions that may be present or installed to fulfill prerequisites. It is specified in detail in the <a href="#Version_Ranges" class="podlinkpod"
+>&#34;Version Ranges&#34;</a> section.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="STRUCTURE"
+>STRUCTURE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The metadata structure is a data element of type Map. This section describes valid keys within the Map.</p>
+
+<p>Any keys not described in this specification document (whether top-level or within compound data structures described herein) are considered <i>custom keys</i> and <b>must</b> begin with an &#34;x&#34; or &#34;X&#34; and be followed by an underscore; i.e. they must match the pattern: <code>qr{\Ax_}i</code>. If a custom key refers to a compound data structure, subkeys within it do not need an &#34;x_&#34; or &#34;X_&#34; prefix.</p>
+
+<p>Consumers of metadata may ignore any or all custom keys. All other keys not described herein are invalid and should be ignored by consumers. Producers must not generate or output invalid keys.</p>
+
+<p>For each key, an example is provided followed by a description. The description begins with the version of spec in which the key was added or in which the definition was modified, whether the key is <i>required</i> or <i>optional</i> and the data type of the corresponding data element. These items are in parentheses, brackets and braces, respectively.</p>
+
+<p>If a data type is a Map or Map subtype, valid subkeys will be described as well.</p>
+
+<p>Some fields are marked <i>Deprecated</i>. These are shown for historical context and must not be produced in or consumed from any metadata structure of version 2 or higher.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="REQUIRED_FIELDS"
+>REQUIRED FIELDS</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="abstract"
+>abstract</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  abstract =&#62; &#39;Build and install Perl modules&#39;</pre>
+
+<p>(Spec 1.2) [required] {String}</p>
+
+<p>This is a short description of the purpose of the distribution.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="author"
+>author</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  author =&#62; [ &#39;Ken Williams &#60;kwilliams@cpan.org&#62;&#39; ]</pre>
+
+<p>(Spec 1.2) [required] {List of one or more Strings}</p>
+
+<p>This List indicates the person(s) to contact concerning the distribution. The preferred form of the contact string is:</p>
+
+<pre class="sh_perl">  contact-name &#60;email-address&#62;</pre>
+
+<p>This field provides a general contact list independent of other structured fields provided within the <a href="#resources" class="podlinkpod"
+>&#34;resources&#34;</a> field, such as <code>bugtracker</code>. The addressee(s) can be contacted for any purpose including but not limited to (security) problems with the distribution, questions about the distribution or bugs in the distribution.</p>
+
+<p>A distribution&#39;s original author is usually the contact listed within this field. Co-maintainers, successor maintainers or mailing lists devoted to the distribution may also be listed in addition to or instead of the original author.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="dynamic_config"
+>dynamic_config</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  dynamic_config =&#62; 1</pre>
+
+<p>(Spec 2) [required] {Boolean}</p>
+
+<p>A boolean flag indicating whether a <em>Build.PL</em> or <em>Makefile.PL</em> (or similar) must be executed to determine prerequisites.</p>
+
+<p>This field should be set to a true value if the distribution performs some dynamic configuration (asking questions, sensing the environment, etc.) as part of its configuration. This field should be set to a false value to indicate that prerequisites included in metadata may be considered final and valid for static analysis.</p>
+
+<p>This field explicitly <b>does not</b> indicate whether installation may be safely performed without using a Makefile or Build file, as there may be special files to install or custom installation targets (e.g. for dual-life modules that exist on CPAN as well as in the Perl core). This field only defines whether prerequisites are complete as given in the metadata.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="generated_by"
+>generated_by</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  generated_by =&#62; &#39;Module::Build version 0.36&#39;</pre>
+
+<p>(Spec 1.0) [required] {String}</p>
+
+<p>This field indicates the tool that was used to create this metadata. There are no defined semantics for this field, but it is traditional to use a string in the form &#34;Generating::Package version 1.23&#34; or the author&#39;s name, if the file was generated by hand.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="license"
+>license</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  license =&#62; [ &#39;perl_5&#39; ]
+
+  license =&#62; [ &#39;apache_2&#39;, &#39;mozilla_1_0&#39; ]</pre>
+
+<p>(Spec 2) [required] {List of one or more License Strings}</p>
+
+<p>One or more licenses that apply to some or all of the files in the distribution. If multiple licenses are listed, the distribution documentation should be consulted to clarify the interpretation of multiple licenses.</p>
+
+<p>The following list of license strings are valid:</p>
+
+<pre class="sh_perl"> string          description
+ -------------   -----------------------------------------------
+ agpl_3          GNU Affero General Public License, Version 3
+ apache_1_1      Apache Software License, Version 1.1
+ apache_2_0      Apache License, Version 2.0
+ artistic_1      Artistic License, (Version 1)
+ artistic_2      Artistic License, Version 2.0
+ bsd             BSD License (three-clause)
+ freebsd         FreeBSD License (two-clause)
+ gfdl_1_2        GNU Free Documentation License, Version 1.2
+ gfdl_1_3        GNU Free Documentation License, Version 1.3
+ gpl_1           GNU General Public License, Version 1
+ gpl_2           GNU General Public License, Version 2
+ gpl_3           GNU General Public License, Version 3
+ lgpl_2_1        GNU Lesser General Public License, Version 2.1
+ lgpl_3_0        GNU Lesser General Public License, Version 3.0
+ mit             MIT (aka X11) License
+ mozilla_1_0     Mozilla Public License, Version 1.0
+ mozilla_1_1     Mozilla Public License, Version 1.1
+ openssl         OpenSSL License
+ perl_5          The Perl 5 License (Artistic 1 &#38; GPL 1 or later)
+ qpl_1_0         Q Public License, Version 1.0
+ ssleay          Original SSLeay License
+ sun             Sun Internet Standards Source License (SISSL)
+ zlib            zlib License</pre>
+
+<p>The following license strings are also valid and indicate other licensing not described above:</p>
+
+<pre class="sh_perl"> string          description
+ -------------   -----------------------------------------------
+ open_source     Other Open Source Initiative (OSI) approved license
+ restricted      Requires special permission from copyright holder
+ unrestricted    Not an OSI approved license, but not restricted
+ unknown         License not provided in metadata</pre>
+
+<p>All other strings are invalid in the license field.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="meta-spec"
+>meta-spec</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  &#39;meta-spec&#39; =&#62; {
+    version =&#62; &#39;2&#39;,
+    url     =&#62; &#39;<a href="http://search.cpan.org/perldoc?CPAN::Meta::Spec" class="podlinkurl"
+>http://search.cpan.org/perldoc?CPAN::Meta::Spec</a>&#39;,
+  }</pre>
+
+<p>(Spec 1.2) [required] {Map}</p>
+
+<p>This field indicates the version of the CPAN Meta Spec that should be used to interpret the metadata. Consumers must check this key as soon as possible and abort further metadata processing if the meta-spec version is not supported by the consumer.</p>
+
+<p>The following keys are valid, but only <code>version</code> is required.</p>
+
+<dl>
+<dt><a name="version"
+>version</a></dt>
+
+<dd>
+<p>This subkey gives the integer <i>Version</i> of the CPAN Meta Spec against which the document was generated.</p>
+
+<dt><a name="url"
+>url</a></dt>
+
+<dd>
+<p>This is a <i>URL</i> of the metadata specification document corresponding to the given version. This is strictly for human-consumption and should not impact the interpretation of the document.</p>
+</dd>
+</dl>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="name"
+>name</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  name =&#62; &#39;Module-Build&#39;</pre>
+
+<p>(Spec 1.0) [required] {String}</p>
+
+<p>This field is the name of the distribution. This is often created by taking the &#34;main package&#34; in the distribution and changing <code>::</code> to <code>-</code>, but the name may be completely unrelated to the packages within the distribution. C.f. <a href="http://search.cpan.org/dist/libwww-perl/" class="podlinkurl"
+>http://search.cpan.org/dist/libwww-perl/</a>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="release_status"
+>release_status</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  release_status =&#62; &#39;stable&#39;</pre>
+
+<p>(Spec 2) [required] {String}</p>
+
+<p>This field provides the release status of this distribution. If the <code>version</code> field contains an underscore character, then <code>release_status</code> <b>must not</b> be &#34;stable.&#34;</p>
+
+<p>The <code>release_status</code> field <b>must</b> have one of the following values:</p>
+
+<dl>
+<dt><a name="stable"
+>stable</a></dt>
+
+<dd>
+<p>This indicates an ordinary, &#34;final&#34; release that should be indexed by PAUSE or other indexers.</p>
+
+<dt><a name="testing"
+>testing</a></dt>
+
+<dd>
+<p>This indicates a &#34;beta&#34; release that is substantially complete, but has an elevated risk of bugs and requires additional testing. The distribution should not be installed over a stable release without an explicit request or other confirmation from a user. This release status may also be used for &#34;release candidate&#34; versions of a distribution.</p>
+
+<dt><a name="unstable"
+>unstable</a></dt>
+
+<dd>
+<p>This indicates an &#34;alpha&#34; release that is under active development, but has been released for early feedback or testing and may be missing features or may have serious bugs. The distribution should not be installed over a stable release without an explicit request or other confirmation from a user.</p>
+</dd>
+</dl>
+
+<p>Consumers <b>may</b> use this field to determine how to index the distribution for CPAN or other repositories in addition to or in replacement of heuristics based on version number or file name.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="version"
+>version</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  version =&#62; &#39;0.36&#39;</pre>
+
+<p>(Spec 1.0) [required] {Version}</p>
+
+<p>This field gives the version of the distribution to which the metadata structure refers.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OPTIONAL_FIELDS"
+>OPTIONAL FIELDS</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="description"
+>description</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    description =&#62;  &#34;Module::Build is a system for &#34;
+      . &#34;building, testing, and installing Perl modules. &#34;
+      . &#34;It is meant to ... blah blah blah ...&#34;,</pre>
+
+<p>(Spec 2) [optional] {String}</p>
+
+<p>A longer, more complete description of the purpose or intended use of the distribution than the one provided by the <code>abstract</code> key.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="keywords"
+>keywords</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  keywords =&#62; [ qw/ toolchain cpan dual-life / ]</pre>
+
+<p>(Spec 1.1) [optional] {List of zero or more Strings}</p>
+
+<p>A List of keywords that describe this distribution. Keywords <b>must not</b> include whitespace.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="no_index"
+>no_index</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  no_index =&#62; {
+    file      =&#62; [ &#39;My/Module.pm&#39; ],
+    directory =&#62; [ &#39;My/Private&#39; ],
+    package   =&#62; [ &#39;My::Module::Secret&#39; ],
+    namespace =&#62; [ &#39;My::Module::Sample&#39; ],
+  }</pre>
+
+<p>(Spec 1.2) [optional] {Map}</p>
+
+<p>This Map describes any files, directories, packages, and namespaces that are private to the packaging or implementation of the distribution and should be ignored by indexing or search tools.</p>
+
+<p>Valid subkeys are as follows:</p>
+
+<dl>
+<dt><a name="file"
+>file</a></dt>
+
+<dd>
+<p>A <i>List</i> of relative paths to files. Paths <b>must be</b> specified with unix conventions.</p>
+
+<dt><a name="directory"
+>directory</a></dt>
+
+<dd>
+<p>A <i>List</i> of relative paths to directories. Paths <b>must be</b> specified with unix conventions.</p>
+
+<p>[ Note: previous editions of the spec had <code>dir</code> instead of <code>directory</code> ]</p>
+
+<dt><a name="package"
+>package</a></dt>
+
+<dd>
+<p>A <i>List</i> of package names.</p>
+
+<dt><a name="namespace"
+>namespace</a></dt>
+
+<dd>
+<p>A <i>List</i> of package namespaces, where anything below the namespace must be ignored, but <i>not</i> the namespace itself.</p>
+
+<p>In the example above for <code>no_index</code>, <code>My::Module::Sample::Foo</code> would be ignored, but <code>My::Module::Sample</code> would not.</p>
+</dd>
+</dl>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="optional_features"
+>optional_features</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  optional_features =&#62; {
+    sqlite =&#62; {
+      description =&#62; &#39;Provides SQLite support&#39;,
+      prereqs =&#62; {
+        runtime =&#62; {
+          requires =&#62; {
+            &#39;DBD::SQLite&#39; =&#62; &#39;1.25&#39;
+          }
+        }
+      }
+    }
+  }</pre>
+
+<p>(Spec 2) [optional] {Map}</p>
+
+<p>This Map describes optional features with incremental prerequisites. Each key of the <code>optional_features</code> Map is a String used to identify the feature and each value is a Map with additional information about the feature. Valid subkeys include:</p>
+
+<dl>
+<dt><a name="description"
+>description</a></dt>
+
+<dd>
+<p>This is a String describing the feature. Every optional feature should provide a description</p>
+
+<dt><a name="prereqs"
+>prereqs</a></dt>
+
+<dd>
+<p>This entry is required and has the same structure as that of the <code><a href="#prereqs" class="podlinkpod"
+>&#34;prereqs&#34;</a></code> key. It provides a list of package requirements that must be satisfied for the feature to be supported or enabled.</p>
+
+<p>There is one crucial restriction: the prereqs of an optional feature <b>must not</b> include <code>configure</code> phase prereqs.</p>
+</dd>
+</dl>
+
+<p>Consumers <b>must not</b> include optional features as prerequisites without explicit instruction from users (whether via interactive prompting, a function parameter or a configuration value, etc. ).</p>
+
+<p>If an optional feature is used by a consumer to add additional prerequisites, the consumer should merge the optional feature prerequisites into those given by the <code>prereqs</code> key using the same semantics. See <a href="#Merging_and_Resolving_Prerequisites" class="podlinkpod"
+>&#34;Merging and Resolving Prerequisites&#34;</a> for details on merging prerequisites.</p>
+
+<p><i>Suggestion for disuse:</i> Because there is currently no way for a distribution to specify a dependency on an optional feature of another dependency, the use of <code>optional_feature</code> is discouraged. Instead, create a separate, installable distribution that ensures the desired feature is available. For example, if <code>Foo::Bar</code> has a &#34;Baz&#34; feature, release a separate <code>Foo-Bar-Baz</code> distribution that satisfies requirements for the feature.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="prereqs"
+>prereqs</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  prereqs =&#62; {
+    runtime =&#62; {
+      requires =&#62; {
+        &#39;perl&#39;          =&#62; &#39;5.006&#39;,
+        &#39;File::Spec&#39;    =&#62; &#39;0.86&#39;,
+        &#39;JSON&#39;          =&#62; &#39;2.16&#39;,
+      },
+      recommends =&#62; {
+        &#39;JSON::XS&#39;      =&#62; &#39;2.26&#39;,
+      },
+      suggests =&#62; {
+        &#39;Archive::Tar&#39;  =&#62; &#39;0&#39;,
+      },
+    },
+    build =&#62; {
+      requires =&#62; {
+        &#39;Alien::SDL&#39;    =&#62; &#39;1.00&#39;,
+      },
+    },
+    test =&#62; {
+      recommends =&#62; {
+        &#39;Test::Deep&#39;    =&#62; &#39;0.10&#39;,
+      },
+    }
+  }</pre>
+
+<p>(Spec 2) [optional] {Map}</p>
+
+<p>This is a Map that describes all the prerequisites of the distribution. The keys are phases of activity, such as <code>configure</code>, <code>build</code>, <code>test</code> or <code>runtime</code>. Values are Maps in which the keys name the type of prerequisite relationship such as <code>requires</code>, <code>recommends</code>, or <code>suggests</code> and the value provides a set of prerequisite relations. The set of relations <b>must</b> be specified as a Map of package names to version ranges.</p>
+
+<p>The full definition for this field is given in the <a href="#Prereq_Spec" class="podlinkpod"
+>&#34;Prereq Spec&#34;</a> section.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="provides"
+>provides</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  provides =&#62; {
+    &#39;Foo::Bar&#39; =&#62; {
+      file    =&#62; &#39;lib/Foo/Bar.pm&#39;,
+      version =&#62; 0.27_02
+    },
+    &#39;Foo::Bar::Blah&#39; =&#62; {
+      file    =&#62; &#39;lib/Foo/Bar/Blah.pm&#39;,
+    },
+    &#39;Foo::Bar::Baz&#39; =&#62; {
+      file    =&#62; &#39;lib/Foo/Bar/Baz.pm&#39;,
+      version =&#62; 0.3,
+    },
+  }</pre>
+
+<p>(Spec 1.2) [optional] {Map}</p>
+
+<p>This describes all packages provided by this distribution. This information is used by distribution and automation mechanisms like PAUSE, CPAN, and search.cpan.org to build indexes saying in which distribution various packages can be found.</p>
+
+<p>The keys of <code>provides</code> are package names that can be found within the distribution. The values are Maps with the following valid subkeys:</p>
+
+<dl>
+<dt><a name="file"
+>file</a></dt>
+
+<dd>
+<p>This field is required. The value must contain a Unix-style relative file path from the root of the distribution to the module containing the package.</p>
+
+<dt><a name="version"
+>version</a></dt>
+
+<dd>
+<p>This field contains a <i>Version</i> String for the package, if one exists.</p>
+</dd>
+</dl>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="resources"
+>resources</a></h3>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  resources =&#62; {
+    license     =&#62; [ &#39;<a href="http://dev.perl.org/licenses/" class="podlinkurl"
+>http://dev.perl.org/licenses/</a>&#39; ],
+    homepage    =&#62; &#39;<a href="http://sourceforge.net/projects/module-build" class="podlinkurl"
+>http://sourceforge.net/projects/module-build</a>&#39;,
+    bugtracker  =&#62; {
+      web    =&#62; &#39;<a href="http://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Meta" class="podlinkurl"
+>http://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Meta</a>&#39;,
+      mailto =&#62; &#39;meta-bugs@example.com&#39;,
+    },
+    repository  =&#62; {
+      url  =&#62; &#39;<a href="git://github.com/dagolden/cpan-meta.git" class="podlinkurl"
+>git://github.com/dagolden/cpan-meta.git</a>&#39;,
+      web  =&#62; &#39;<a href="http://github.com/dagolden/cpan-meta" class="podlinkurl"
+>http://github.com/dagolden/cpan-meta</a>&#39;,
+      type =&#62; &#39;git&#39;,
+    },
+    x_twitter   =&#62; &#39;<a href="http://twitter.com/cpan_linked/" class="podlinkurl"
+>http://twitter.com/cpan_linked/</a>&#39;,
+  }</pre>
+
+<p>(Spec 2) [optional] {Map}</p>
+
+<p>This field describes resources related to this distribution.</p>
+
+<p>Valid subkeys include:</p>
+
+<dl>
+<dt><a name="homepage"
+>homepage</a></dt>
+
+<dd>
+<p>The official home of this project on the web.</p>
+
+<dt><a name="license"
+>license</a></dt>
+
+<dd>
+<p>A List of <i>URL</i>&#39;s that relate to this distribution&#39;s license. As with the top-level <code>license</code> field, distribution documentation should be consulted to clarify the interpretation of multiple licenses provided here.</p>
+
+<dt><a name="bugtracker"
+>bugtracker</a></dt>
+
+<dd>
+<p>This entry describes the bug tracking system for this distribution. It is a Map with the following valid keys:</p>
+
+<pre class="sh_perl">  web    - a URL pointing to a web front-end for the bug tracker
+  mailto - an email address to which bugs can be sent</pre>
+
+<dt><a name="repository"
+>repository</a></dt>
+
+<dd>
+<p>This entry describes the source control repository for this distribution. It is a Map with the following valid keys:</p>
+
+<pre class="sh_perl">  url  - a URL pointing to the repository itself
+  web  - a URL pointing to a web front-end for the repository
+  type - a lowercase string indicating the VCS used</pre>
+
+<p>Because a url like <code><a href="http://myrepo.example.com/" class="podlinkurl"
+>http://myrepo.example.com/</a></code> is ambiguous as to type, producers should provide a <code>type</code> whenever a <code>url</code> key is given. The <code>type</code> field should be the name of the most common program used to work with the repository, e.g. git, svn, cvs, darcs, bzr or hg.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="DEPRECATED_FIELDS"
+>DEPRECATED FIELDS</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="build_requires"
+>build_requires</a></h3>
+
+<p><i>(Deprecated in Spec 2)</i> [optional] {String}</p>
+
+<p>Replaced by <code>prereqs</code></p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="configure_requires"
+>configure_requires</a></h3>
+
+<p><i>(Deprecated in Spec 2)</i> [optional] {String}</p>
+
+<p>Replaced by <code>prereqs</code></p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="conflicts"
+>conflicts</a></h3>
+
+<p><i>(Deprecated in Spec 2)</i> [optional] {String}</p>
+
+<p>Replaced by <code>prereqs</code></p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="distribution_type"
+>distribution_type</a></h3>
+
+<p><i>(Deprecated in Spec 2)</i> [optional] {String}</p>
+
+<p>This field indicated &#39;module&#39; or &#39;script&#39; but was considered meaningless, since many distributions are hybrids of several kinds of things.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="license_uri"
+>license_uri</a></h3>
+
+<p><i>(Deprecated in Spec 1.2)</i> [optional] {URL}</p>
+
+<p>Replaced by <code>license</code> in <code>resources</code></p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="private"
+>private</a></h3>
+
+<p><i>(Deprecated in Spec 1.2)</i> [optional] {Map}</p>
+
+<p>This field has been renamed to <a href="#no_index" class="podlinkpod"
+>&#34;no_index&#34;</a>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="recommends"
+>recommends</a></h3>
+
+<p><i>(Deprecated in Spec 2)</i> [optional] {String}</p>
+
+<p>Replaced by <code>prereqs</code></p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="requires"
+>requires</a></h3>
+
+<p><i>(Deprecated in Spec 2)</i> [optional] {String}</p>
+
+<p>Replaced by <code>prereqs</code></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION_NUMBERS"
+>VERSION NUMBERS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Version_Formats"
+>Version Formats</a></h2>
+
+<p>This section defines the Version type, used by several fields in the CPAN Meta Spec.</p>
+
+<p>Version numbers must be treated as strings, not numbers. For example, <code>1.200</code> <b>must not</b> be serialized as <code>1.2</code>. Version comparison should be delegated to the Perl <a href="/perldoc?version" class="podlinkpod"
+>version</a> module, version 0.80 or newer.</p>
+
+<p>Unless otherwise specified, version numbers <b>must</b> appear in one of two formats:</p>
+
+<dl>
+<dt><a name='Decimal'></a><a name="Decimal_versions"
+>Decimal versions</a></dt>
+
+<dd>
+<p>Decimal versions are regular &#34;decimal numbers&#34;, with some limitations. They <b>must</b> be non-negative and <b>must</b> begin and end with a digit. A single underscore <b>may</b> be included, but <b>must</b> be between two digits. They <b>must not</b> use exponential notation (&#34;1.23e-2&#34;).</p>
+
+<pre class="sh_perl">   version =&#62; &#39;1.234&#39;       # OK
+   version =&#62; &#39;1.23_04&#39;     # OK
+
+   version =&#62; &#39;1.23_04_05&#39;  # Illegal
+   version =&#62; &#39;1.&#39;          # Illegal
+   version =&#62; &#39;.1&#39;          # Illegal</pre>
+
+<dt><a name='Dotted'></a><a name="Dotted-integer_versions"
+>Dotted-integer versions</a></dt>
+
+<dd>
+<p>Dotted-integer (also known as dotted-decimal) versions consist of positive integers separated by full stop characters (i.e. &#34;dots&#34;, &#34;periods&#34; or &#34;decimal points&#34;). This are equivalent in format to Perl &#34;v-strings&#34;, with some additional restrictions on form. They must be given in &#34;normal&#34; form, which has a leading &#34;v&#34; character and at least three integer components. To retain a one-to-one mapping with decimal versions, all components after the first <b>should</b> be restricted to the range 0 to 999. The final component <b>may</b> be separated by an underscore character instead of a period.</p>
+
+<pre class="sh_perl">   version =&#62; &#39;v1.2.3&#39;      # OK
+   version =&#62; &#39;v1.2_3&#39;      # OK
+   version =&#62; &#39;v1.2.3.4&#39;    # OK
+   version =&#62; &#39;v1.2.3_4&#39;    # OK
+   version =&#62; &#39;v2009.10.31&#39; # OK
+
+   version =&#62; &#39;v1.2&#39;          # Illegal
+   version =&#62; &#39;1.2.3&#39;         # Illegal
+   version =&#62; &#39;v1.2_3_4&#39;      # Illegal
+   version =&#62; &#39;v1.2009.10.31&#39; # Not recommended</pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Version_Ranges"
+>Version Ranges</a></h2>
+
+<p>Some fields (prereq, optional_features) indicate the particular version(s) of some other module that may be required as a prerequisite. This section details the Version Range type used to provide this information.</p>
+
+<p>The simplest format for a Version Range is just the version number itself, e.g. <code>2.4</code>. This means that <b>at least</b> version 2.4 must be present. To indicate that <b>any</b> version of a prerequisite is okay, even if the prerequisite doesn&#39;t define a version at all, use the version <code>0</code>.</p>
+
+<p>Alternatively, a version range <b>may</b> use the operators &#60; (less than), &#60;= (less than or equal), &#62; (greater than), &#62;= (greater than or equal), == (equal), and != (not equal). For example, the specification <code>&#60; 2.0</code> means that any version of the prerequisite less than 2.0 is suitable.</p>
+
+<p>For more complicated situations, version specifications <b>may</b> be AND-ed together using commas. The specification <code>&#62;= 1.2, != 1.5, &#60; 2.0</code> indicates a version that must be <b>at least</b> 1.2, <b>less than</b> 2.0, and <b>not equal to</b> 1.5.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PREREQUISITES"
+>PREREQUISITES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Prereq_Spec"
+>Prereq Spec</a></h2>
+
+<p>The <code>prereqs</code> key in the top-level metadata and within <code>optional_features</code> define the relationship between a distribution and other packages. The prereq spec structure is a hierarchical data structure which divides prerequisites into <i>Phases</i> of activity in the installation process and <i>Relationships</i> that indicate how prerequisites should be resolved.</p>
+
+<p>For example, to specify that <code>Data::Dumper</code> is <code>required</code> during the <code>test</code> phase, this entry would appear in the distribution metadata:</p>
+
+<pre class="sh_perl">  prereqs =&#62; {
+    test =&#62; {
+      requires =&#62; {
+        &#39;Data::Dumper&#39; =&#62; &#39;2.00&#39;
+      }
+    }
+  }</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Phases"
+>Phases</a></h3>
+
+<p>Requirements for regular use must be listed in the <code>runtime</code> phase. Other requirements should be listed in the earliest stage in which they are required and consumers must accumulate and satisfy requirements across phases before executing the activity. For example, <code>build</code> requirements must also be available during the <code>test</code> phase.</p>
+
+<pre class="sh_perl">  before action       requirements that must be met
+  ----------------    --------------------------------
+  perl Build.PL       configure
+  perl Makefile.PL
+
+  make                configure, runtime, build
+  Build
+
+  make test           configure, runtime, build, test
+  Build test</pre>
+
+<p>Consumers that install the distribution must ensure that <i>runtime</i> requirements are also installed and may install dependencies from other phases.</p>
+
+<pre class="sh_perl">  after action        requirements that must be met
+  ----------------    --------------------------------
+  make install        runtime
+  Build install</pre>
+
+<dl>
+<dt><a name="configure"
+>configure</a></dt>
+
+<dd>
+<p>The configure phase occurs before any dynamic configuration has been attempted. Libraries required by the configure phase <b>must</b> be available for use before the distribution building tool has been executed.</p>
+
+<dt><a name="build"
+>build</a></dt>
+
+<dd>
+<p>The build phase is when the distribution&#39;s source code is compiled (if necessary) and otherwise made ready for installation.</p>
+
+<dt><a name="test"
+>test</a></dt>
+
+<dd>
+<p>The test phase is when the distribution&#39;s automated test suite is run. Any library that is needed only for testing and not for subsequent use should be listed here.</p>
+
+<dt><a name="runtime"
+>runtime</a></dt>
+
+<dd>
+<p>The runtime phase refers not only to when the distribution&#39;s contents are installed, but also to its continued use. Any library that is a prerequisite for regular use of this distribution should be indicated here.</p>
+
+<dt><a name="develop"
+>develop</a></dt>
+
+<dd>
+<p>The develop phase&#39;s prereqs are libraries needed to work on the distribution&#39;s source code as its author does. These tools might be needed to build a release tarball, to run author-only tests, or to perform other tasks related to developing new versions of the distribution.</p>
+</dd>
+</dl>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Relationships"
+>Relationships</a></h3>
+
+<dl>
+<dt><a name="requires"
+>requires</a></dt>
+
+<dd>
+<p>These dependencies <b>must</b> be installed for proper completion of the phase.</p>
+
+<dt><a name="recommends"
+>recommends</a></dt>
+
+<dd>
+<p>Recommended dependencies are <i>strongly</i> encouraged and should be satisfied except in resource constrained environments.</p>
+
+<dt><a name="suggests"
+>suggests</a></dt>
+
+<dd>
+<p>These dependencies are optional, but are suggested for enhanced operation of the described distribution.</p>
+
+<dt><a name="conflicts"
+>conflicts</a></dt>
+
+<dd>
+<p>These libraries cannot be installed when the phase is in operation. This is a very rare situation, and the <code>conflicts</code> relationship should be used with great caution, or not at all.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Merging_and_Resolving_Prerequisites"
+>Merging and Resolving Prerequisites</a></h2>
+
+<p>Whenever metadata consumers merge prerequisites, either from different phases or from <code>optional_features</code>, they should merged in a way which preserves the intended semantics of the prerequisite structure. Generally, this means concatenating the version specifications using commas, as described in the <a href="#Version_Ranges" class="podlinkpod"
+>&#34;Version Ranges&#34;</a> section.</p>
+
+<p>Another subtle error that can occur in resolving prerequisites comes from the way that modules in prerequisites are indexed to distribution files on CPAN. When a module is deleted from a distribution, prerequisites calling for that module could indicate an older distribution should installed, potentially overwriting files from a newer distribution.</p>
+
+<p>For example, as of Oct 31, 2009, the CPAN index file contained these module-distribution mappings:</p>
+
+<pre class="sh_perl">  Class::MOP                   0.94  D/DR/DROLSKY/Class-MOP-0.94.tar.gz
+  Class::MOP::Class            0.94  D/DR/DROLSKY/Class-MOP-0.94.tar.gz
+  Class::MOP::Class::Immutable 0.04  S/ST/STEVAN/Class-MOP-0.36.tar.gz</pre>
+
+<p>Consider the case where &#34;Class::MOP&#34; 0.94 is installed. If a distribution specified &#34;Class::MOP::Class::Immutable&#34; as a prerequisite, it could result in Class-MOP-0.36.tar.gz being installed, overwriting any files from Class-MOP-0.94.tar.gz.</p>
+
+<p>Consumers of metadata <b>should</b> test whether prerequisites would result in installed module files being &#34;downgraded&#34; to an older version and <b>may</b> warn users or ignore the prerequisite that would cause such a result.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SERIALIZATION"
+>SERIALIZATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Distribution metadata should be serialized (as a hashref) as JSON-encoded data and packaged with distributions as the file <em>META.json</em>.</p>
+
+<p>In the past, the distribution metadata structure had been packed with distributions as <em>META.yml</em>, a file in the YAML Tiny format (for which, see <a href="/perldoc?YAML%3A%3ATiny" class="podlinkpod"
+>YAML::Tiny</a>). Tools that consume distribution metadata from disk should be capable of loading <em>META.yml</em>, but should prefer <em>META.json</em> if both are found.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTES_FOR_IMPLEMENTORS"
+>NOTES FOR IMPLEMENTORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Extracting_Version_Numbers_from_Perl_Modules"
+>Extracting Version Numbers from Perl Modules</a></h2>
+
+<p>To get the version number from a Perl module, consumers should use the <code>MM-&#62;parse_version($file)</code> method provided by <a href="/perldoc?ExtUtils%3A%3AMakeMaker" class="podlinkpod"
+>ExtUtils::MakeMaker</a> or <a href="/perldoc?Module%3A%3AMetadata" class="podlinkpod"
+>Module::Metadata</a>. For example, for the module given by <code>$mod</code>, the version may be retrieved in one of the following ways:</p>
+
+<pre class="sh_perl">  # via ExtUtils::MakeMaker
+  my $file = MM-&#62;_installed_file_for_module($mod);
+  my $version = MM-&#62;parse_version($file)</pre>
+
+<p>The private <code>_installed_file_for_module</code> method may be replaced with other methods for locating a module in <code>@INC</code>.</p>
+
+<pre class="sh_perl">  # via Module::Metadata
+  my $info = Module::Metadata-&#62;new_from_module($mod);
+  my $version = $info-&#62;version;</pre>
+
+<p>If only a filename is available, the following approach may be used:</p>
+
+<pre class="sh_perl">  # via Module::Build
+  my $info = Module::Metadata-&#62;new_from_file($file);
+  my $version = $info-&#62;version;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Comparing_Version_Numbers"
+>Comparing Version Numbers</a></h2>
+
+<p>The <a href="/perldoc?version" class="podlinkpod"
+>version</a> module provides the most reliable way to compare version numbers in all the various ways they might be provided or might exist within modules. Given two strings containing version numbers, <code>$v1</code> and <code>$v2</code>, they should be converted to <code>version</code> objects before using ordinary comparison operators. For example:</p>
+
+<pre class="sh_perl">  use version;
+  if ( version-&#62;new($v1) &#60;=&#62; version-&#62;new($v2) ) {
+    print &#34;Versions are not equal\n&#34;;
+  }</pre>
+
+<p>If the only comparison needed is whether an installed module is of a sufficiently high version, a direct test may be done using the string form of <code>eval</code> and the <code>use</code> function. For example, for module <code>$mod</code> and version prerequisite <code>$prereq</code>:</p>
+
+<pre class="sh_perl">  if ( eval &#34;use $mod $prereq (); 1&#34; ) {
+    print &#34;Module $mod version is OK.\n&#34;;
+  }</pre>
+
+<p>If the values of <code>$mod</code> and <code>$prereq</code> have not been scrubbed, however, this presents security implications.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>CPAN, <a href="http://www.cpan.org/" class="podlinkurl"
+>http://www.cpan.org/</a></p>
+
+<p>CPAN.pm, <a href="http://search.cpan.org/dist/CPAN/" class="podlinkurl"
+>http://search.cpan.org/dist/CPAN/</a></p>
+
+<p>CPANPLUS, <a href="http://search.cpan.org/dist/CPANPLUS/" class="podlinkurl"
+>http://search.cpan.org/dist/CPANPLUS/</a></p>
+
+<p><a href="/perldoc?ExtUtils%3A%3AMakeMaker" class="podlinkpod"
+>ExtUtils::MakeMaker</a>, <a href="http://search.cpan.org/dist/ExtUtils-MakeMaker/" class="podlinkurl"
+>http://search.cpan.org/dist/ExtUtils-MakeMaker/</a></p>
+
+<p><a href="/perldoc?Module%3A%3ABuild" class="podlinkpod"
+>Module::Build</a>, <a href="http://search.cpan.org/dist/Module-Build/" class="podlinkurl"
+>http://search.cpan.org/dist/Module-Build/</a></p>
+
+<p><a href="/perldoc?Module%3A%3AInstall" class="podlinkpod"
+>Module::Install</a>, <a href="http://search.cpan.org/dist/Module-Install/" class="podlinkurl"
+>http://search.cpan.org/dist/Module-Install/</a></p>
+
+<p>JSON, <a href="http://json.org/" class="podlinkurl"
+>http://json.org/</a></p>
+
+<p>YAML, <a href="http://www.yaml.org/" class="podlinkurl"
+>http://www.yaml.org/</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONTRIBUTORS"
+>CONTRIBUTORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Ken Williams wrote the original CPAN Meta Spec (also known as the &#34;META.yml spec&#34;) in 2003 and maintained it through several revisions with input from various members of the community. In 2005, Randy Sims redrafted it from HTML to POD for the version 1.2 release. Ken continued to maintain the spec through version 1.4.</p>
+
+<p>In late 2009, David Golden organized the version 2 proposal review process. David and Ricardo Signes drafted the final version 2 spec in April 2010 based on the version 1.4 spec and patches contributed during the proposal process.</p>
+
+<p>Several others have contributed patches over the years. The full list of contributors in the repository history currently includes:</p>
+
+<pre class="sh_perl">  2shortplanks
+  Avar Arnfjord Bjarmason
+  Christopher J. Madsen
+  Damyan Ivanov
+  David Golden
+  Eric Wilhelm
+  Ken Williams
+  Lars DIECKOW
+  Michael G. Schwern
+  Randy Sims
+  Ricardo Signes</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li>David Golden &#60;dagolden@cpan.org&#62;</li>
+
+<li>Ricardo Signes &#60;rjbs@cpan.org&#62;</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This software is copyright (c) 2010 by David Golden and Ricardo Signes.</p>
+
+<p>This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78283 Uploads, 24725 Distributions
+106015 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 28 08:14:34 2012 GMT (0.22115683555603) @cpansearch1 -->
+ </body>
+</html>

@@ -1,0 +1,1941 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Class::DBI - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Class-DBI",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Class-DBI-v3.0.17",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Class::DBI",3]);
+    _gaq.push(["_setCustomVar",1,"Author","TMTM",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Class::DBI">permalink</a></div>
+  <a href="/~tmtm/">Tony Bowden</a> &gt;
+  <a href="/~tmtm/Class-DBI-v3.0.17/">Class-DBI-v3.0.17</a> &gt;
+  Class::DBI
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/5c216eb842c290ca95da661938dcf1d8?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/T/TM/TMTM/Class-DBI-v3.0.17.tar.gz">Class-DBI-v3.0.17.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Class%3A%3ADBI;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~TMTM/Class-DBI-v3.0.17/lib/Class/DBI.pm">Annotate this POD
+(21)
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?CGI%3A%3AApplication">CGI::Application</a><br>
+<a href="/perldoc?HTML%3A%3ATemplate">HTML::Template</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Rose%3A%3ADB%3A%3AObject">Rose::DB::Object</a><br>
+<a href="/perldoc?DBIx%3A%3ASimple">DBIx::Simple</a><br>
+<a href="/perldoc?SQL%3A%3AAbstract">SQL::Abstract</a><br>
+<a href="/perldoc?HTML%3A%3AMason">HTML::Mason</a><br>
+<a href="/perldoc?DBD%3A%3Amysql">DBD::mysql</a><br>
+<a href="/perldoc?Class%3A%3AAccessor">Class::Accessor</a><br>
+<a href="/perldoc?Class%3A%3ADBI%3A%3Amysql">Class::DBI::mysql</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Class%3A%3ADBI">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 20</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 14</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 3</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Class-DBI">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  3.0.17 &nbsp;
+<span class="noprint">
+  <a href="/src/TMTM/Class-DBI-v3.0.17/lib/Class/DBI.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#INTRODUCTION'>INTRODUCTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#How_to_set_it_up'>How to set it up</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CLASS_METHODS'>CLASS METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#connection'>connection</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Dynamic_Database_Connections_/_db_Main'>Dynamic Database Connections / db_Main</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#table'>table</a>
+    <li class='indexItem indexItem2'><a href='#table_alias'>table_alias</a>
+    <li class='indexItem indexItem2'><a href='#sequence_/_auto_increment'>sequence / auto_increment</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CONSTRUCTORS_and_DESTRUCTORS'>CONSTRUCTORS and DESTRUCTORS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#insert'>insert</a>
+    <li class='indexItem indexItem2'><a href='#find_or_create'>find_or_create</a>
+    <li class='indexItem indexItem2'><a href='#delete'>delete</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#RETRIEVING_OBJECTS'>RETRIEVING OBJECTS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#retrieve'>retrieve</a>
+    <li class='indexItem indexItem2'><a href='#retrieve_all'>retrieve_all</a>
+    <li class='indexItem indexItem2'><a href='#search'>search</a>
+    <li class='indexItem indexItem2'><a href='#search_like'>search_like</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#ITERATORS'>ITERATORS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Subclassing_the_Iterator'>Subclassing the Iterator</a>
+    <li class='indexItem indexItem2'><a href='#QUICK_RETRIEVAL'>QUICK RETRIEVAL</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#COPY_AND_MOVE'>COPY AND MOVE</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#copy'>copy</a>
+    <li class='indexItem indexItem2'><a href='#move'>move</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#TRIGGERS'>TRIGGERS</a>
+  <li class='indexItem indexItem1'><a href='#CONSTRAINTS'>CONSTRAINTS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#constrain_column'>constrain_column</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DATA_NORMALIZATION'>DATA NORMALIZATION</a>
+  <li class='indexItem indexItem1'><a href='#DATA_VALIDATION'>DATA VALIDATION</a>
+  <li class='indexItem indexItem1'><a href='#EXCEPTIONS'>EXCEPTIONS</a>
+  <li class='indexItem indexItem1'><a href='#WARNINGS'>WARNINGS</a>
+  <li class='indexItem indexItem1'><a href='#INSTANCE_METHODS'>INSTANCE METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#accessors'>accessors</a>
+    <li class='indexItem indexItem2'><a href='#the_fundamental_set()_and_get()_methods'>the fundamental set() and get() methods</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Changing_Your_Column_Accessor_Method_Names'>Changing Your Column Accessor Method Names</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#accessor_name_for_/_mutator_name_for'>accessor_name_for / mutator_name_for</a>
+    <li class='indexItem indexItem2'><a href='#update_vs_auto_update'>update vs auto update</a>
+    <li class='indexItem indexItem2'><a href='#autoupdate'>autoupdate</a>
+    <li class='indexItem indexItem2'><a href='#update'>update</a>
+    <li class='indexItem indexItem2'><a href='#discard_changes'>discard_changes</a>
+    <li class='indexItem indexItem2'><a href='#is_changed'>is_changed</a>
+    <li class='indexItem indexItem2'><a href='#id'>id</a>
+    <li class='indexItem indexItem2'><a href='#LOW-LEVEL_DATA_ACCESS'>LOW-LEVEL DATA ACCESS</a>
+    <li class='indexItem indexItem2'><a href='#OVERLOADED_OPERATORS'>OVERLOADED OPERATORS</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#TABLE_RELATIONSHIPS'>TABLE RELATIONSHIPS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#has_a'>has_a</a>
+    <li class='indexItem indexItem2'><a href='#has_many'>has_many</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Limiting'>Limiting</a>
+      <li class='indexItem indexItem3'><a href='#Ordering'>Ordering</a>
+      <li class='indexItem indexItem3'><a href='#Mapping'>Mapping</a>
+      <li class='indexItem indexItem3'><a href='#Cascading_Delete'>Cascading Delete</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#might_have'>might_have</a>
+    <li class='indexItem indexItem2'><a href='#Notes'>Notes</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#MANY_TO_MANY_RELATIONSHIPS'>MANY TO MANY RELATIONSHIPS</a>
+  <li class='indexItem indexItem1'><a href='#ADDING_NEW_RELATIONSHIP_TYPES'>ADDING NEW RELATIONSHIP TYPES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#add_relationship_type'>add_relationship_type</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DEFINING_SQL_STATEMENTS'>DEFINING SQL STATEMENTS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#add_constructor'>add_constructor</a>
+    <li class='indexItem indexItem2'><a href='#retrieve_from_sql'>retrieve_from_sql</a>
+    <li class='indexItem indexItem2'><a href='#Ima::DBI_queries'>Ima::DBI queries</a>
+    <li class='indexItem indexItem2'><a href='#Class::DBI::AbstractSearch'>Class::DBI::AbstractSearch</a>
+    <li class='indexItem indexItem2'><a href='#Single_Value_SELECTs'>Single Value SELECTs</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#select_val'>select_val</a>
+      <li class='indexItem indexItem3'><a href='#sql_single'>sql_single</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#LAZY_POPULATION'>LAZY POPULATION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#columns'>columns</a>
+    <li class='indexItem indexItem2'><a href='#Non-Persistent_Fields'>Non-Persistent Fields</a>
+    <li class='indexItem indexItem2'><a href='#find_column'>find_column</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#TRANSACTIONS'>TRANSACTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#dbi_commit_/_dbi_rollback'>dbi_commit / dbi_rollback</a>
+    <li class='indexItem indexItem2'><a href='#Localised_Transactions'>Localised Transactions</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#UNIQUENESS_OF_OBJECTS_IN_MEMORY'>UNIQUENESS OF OBJECTS IN MEMORY</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#remove_from_object_index'>remove_from_object_index</a>
+    <li class='indexItem indexItem2'><a href='#clear_object_index'>clear_object_index</a>
+    <li class='indexItem indexItem2'><a href='#purge_object_index_every'>purge_object_index_every</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SUBCLASSING'>SUBCLASSING</a>
+  <li class='indexItem indexItem1'><a href='#CAVEATS'>CAVEATS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Multi-Column_Foreign_Keys_are_not_supported'>Multi-Column Foreign Keys are not supported</a>
+    <li class='indexItem indexItem2'><a href='#Don&#39;t_change_or_inflate_the_value_of_your_primary_columns'>Don&#39;t change or inflate the value of your primary columns</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SUPPORTED_DATABASES'>SUPPORTED DATABASES</a>
+  <li class='indexItem indexItem1'><a href='#CURRENT_AUTHOR'>CURRENT AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR_EMERITUS'>AUTHOR EMERITUS</a>
+  <li class='indexItem indexItem1'><a href='#THANKS_TO'>THANKS TO</a>
+  <li class='indexItem indexItem1'><a href='#RELEASE_PHILOSOPHY'>RELEASE PHILOSOPHY</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Getting_changes_accepted'>Getting changes accepted</a>
+    <li class='indexItem indexItem2'><a href='#Bug_Reports'>Bug Reports</a>
+    <li class='indexItem indexItem2'><a href='#Patches'>Patches</a>
+    <li class='indexItem indexItem2'><a href='#Feature_Requests'>Feature Requests</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SUPPORT'>SUPPORT</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Class::DBI - Simple Database Abstraction</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  package Music::DBI;
+  use base &#39;Class::DBI&#39;;
+  Music::DBI-&#62;connection(&#39;dbi:mysql:dbname&#39;, &#39;username&#39;, &#39;password&#39;);
+
+  package Music::Artist;
+  use base &#39;Music::DBI&#39;;
+  Music::Artist-&#62;table(&#39;artist&#39;);
+  Music::Artist-&#62;columns(All =&#62; qw/artistid name/);
+  Music::Artist-&#62;has_many(cds =&#62; &#39;Music::CD&#39;);
+
+  package Music::CD;
+  use base &#39;Music::DBI&#39;;
+  Music::CD-&#62;table(&#39;cd&#39;);
+  Music::CD-&#62;columns(All =&#62; qw/cdid artist title year reldate/);
+  Music::CD-&#62;has_many(tracks =&#62; &#39;Music::Track&#39;);
+  Music::CD-&#62;has_a(artist =&#62; &#39;Music::Artist&#39;);
+  Music::CD-&#62;has_a(reldate =&#62; &#39;Time::Piece&#39;,
+    inflate =&#62; sub { Time::Piece-&#62;strptime(shift, &#34;%Y-%m-%d&#34;) },
+    deflate =&#62; &#39;ymd&#39;,
+  );
+
+  Music::CD-&#62;might_have(liner_notes =&#62; LinerNotes =&#62; qw/notes/);
+
+  package Music::Track;
+  use base &#39;Music::DBI&#39;;
+  Music::Track-&#62;table(&#39;track&#39;);
+  Music::Track-&#62;columns(All =&#62; qw/trackid cd position title/); 
+
+  #-- Meanwhile, in a nearby piece of code! --#
+
+  my $artist = Music::Artist-&#62;insert({ artistid =&#62; 1, name =&#62; &#39;U2&#39; });
+
+  my $cd = $artist-&#62;add_to_cds({ 
+    cdid   =&#62; 1,
+    title  =&#62; &#39;October&#39;,
+    year   =&#62; 1980,
+  });
+
+  # Oops, got it wrong.
+  $cd-&#62;year(1981);
+  $cd-&#62;update;
+
+  # etc.
+
+  foreach my $track ($cd-&#62;tracks) {
+    print $track-&#62;position, $track-&#62;title
+  }
+
+  $cd-&#62;delete; # also deletes the tracks
+
+  my $cd  = Music::CD-&#62;retrieve(1);
+  my @cds = Music::CD-&#62;retrieve_all;
+  my @cds = Music::CD-&#62;search(year =&#62; 1980);
+  my @cds = Music::CD-&#62;search_like(title =&#62; &#39;October%&#39;);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INTRODUCTION"
+>INTRODUCTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Class::DBI provides a convenient abstraction layer to a database.</p>
+
+<p>It not only provides a simple database to object mapping layer, but can be used to implement several higher order database functions (triggers, referential integrity, cascading delete etc.), at the application level, rather than at the database.</p>
+
+<p>This is particularly useful when using a database which doesn&#39;t support these (such as MySQL), or when you would like your code to be portable across multiple databases which might implement these things in different ways.</p>
+
+<p>In short, Class::DBI aims to make it simple to introduce &#39;best practice&#39; when dealing with data stored in a relational database.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="How_to_set_it_up"
+>How to set it up</a></h2>
+
+<dl>
+<dt><a name='Set'></a><a name="Set_up_a_database."
+><i>Set up a database.</i></a></dt>
+
+<dd>
+<p>You must have an existing database set up, have DBI.pm installed and the necessary DBD:: driver module for that database. See <a href="/perldoc?DBI" class="podlinkpod"
+>DBI</a> and the documentation of your particular database and driver for details.</p>
+
+<dt><a name='Set'></a><a name="Set_up_a_table_for_your_objects_to_be_stored_in."
+><i>Set up a table for your objects to be stored in.</i></a></dt>
+
+<dd>
+<p>Class::DBI works on a simple one class/one table model. It is your responsibility to have your database tables already set up. Automating that process is outside the scope of Class::DBI.</p>
+
+<p>Using our CD example, you might declare a table something like this:</p>
+
+<pre class="sh_perl">  CREATE TABLE cd (
+    cdid   INTEGER   PRIMARY KEY,
+    artist INTEGER, # references &#39;artist&#39;
+    title  VARCHAR(255),
+    year   CHAR(4),
+  );</pre>
+
+<dt><a name='Set'></a><a name="Set_up_an_application_base_class"
+><i>Set up an application base class</i></a></dt>
+
+<dd>
+<p>It&#39;s usually wise to set up a &#34;top level&#34; class for your entire application to inherit from, rather than have each class inherit directly from Class::DBI. This gives you a convenient point to place system-wide overrides and enhancements to Class::DBI&#39;s behavior.</p>
+
+<pre class="sh_perl">  package Music::DBI;
+  use base &#39;Class::DBI&#39;;</pre>
+
+<dt><a name='Give'></a><a name="Give_it_a_database_connection"
+><i>Give it a database connection</i></a></dt>
+
+<dd>
+<p>Class::DBI needs to know how to access the database. It does this through a DBI connection which you set up by calling the connection() method.</p>
+
+<pre class="sh_perl">  Music::DBI-&#62;connection(&#39;dbi:mysql:dbname&#39;, &#39;user&#39;, &#39;password&#39;);</pre>
+
+<p>By setting the connection up in your application base class all the table classes that inherit from it will share the same connection.</p>
+
+<dt><a name='Set'></a><a name="Set_up_each_Class"
+><i>Set up each Class</i></a></dt>
+
+<dd>
+<pre class="sh_perl">  package Music::CD;
+  use base &#39;Music::DBI&#39;;</pre>
+
+<p>Each class will inherit from your application base class, so you don&#39;t need to repeat the information on how to connect to the database.</p>
+
+<dt><a name='Declare'></a><a name="Declare_the_name_of_your_table"
+><i>Declare the name of your table</i></a></dt>
+
+<dd>
+<p>Inform Class::DBI what table you are using for this class:</p>
+
+<pre class="sh_perl">  Music::CD-&#62;table(&#39;cd&#39;);</pre>
+
+<dt><a name='Declare'></a><a name="Declare_your_columns."
+><i>Declare your columns.</i></a></dt>
+
+<dd>
+<p>This is done using the columns() method. In the simplest form, you tell it the name of all your columns (with the single primary key first):</p>
+
+<pre class="sh_perl">  Music::CD-&#62;columns(All =&#62; qw/cdid artist title year/);</pre>
+
+<p>If the primary key of your table spans multiple columns then declare them using a separate call to columns() like this:</p>
+
+<pre class="sh_perl">  Music::CD-&#62;columns(Primary =&#62; qw/pk1 pk2/);
+  Music::CD-&#62;columns(Others =&#62; qw/foo bar baz/);</pre>
+
+<p>For more information about how you can more efficiently use subsets of your columns, see <a href="#LAZY_POPULATION" class="podlinkpod"
+>&#34;LAZY POPULATION&#34;</a></p>
+
+<dt><a name='Done'></a><a name="Done."
+><i>Done.</i></a></dt>
+
+<dd>
+<p>That&#39;s it! You now have a class with methods to <a href="#insert" class="podlinkpod"
+>&#34;insert&#34;</a>, <a href="#retrieve" class="podlinkpod"
+>&#34;retrieve&#34;</a>, <a href="#search" class="podlinkpod"
+>&#34;search&#34;</a> for, <a href="#update" class="podlinkpod"
+>&#34;update&#34;</a> and <a href="#delete" class="podlinkpod"
+>&#34;delete&#34;</a> objects from your table, as well as accessors and mutators for each of the columns in that object (row).</p>
+</dd>
+</dl>
+
+<p>Let&#39;s look at all that in more detail:</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CLASS_METHODS"
+>CLASS METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="connection"
+>connection</a></h2>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;connection($data_source, $user, $password, \%attr);</pre>
+
+<p>This sets up a database connection with the given information.</p>
+
+<p>This uses <a href="/perldoc?Ima%3A%3ADBI" class="podlinkpod"
+>Ima::DBI</a> to set up an inheritable connection (named Main). It is therefore usual to only set up a connection() in your application base class and let the &#39;table&#39; classes inherit from it.</p>
+
+<pre class="sh_perl">  package Music::DBI;
+  use base &#39;Class::DBI&#39;;
+
+  Music::DBI-&#62;connection(&#39;dbi:foo:dbname&#39;, &#39;user&#39;, &#39;password&#39;);
+
+  package My::Other::Table;
+  use base &#39;Music::DBI&#39;;</pre>
+
+<p>Class::DBI helps you along a bit to set up the database connection. connection() provides its own default attributes depending on the driver name in the data_source parameter. The connection() method provides defaults for these attributes:</p>
+
+<pre class="sh_perl">  FetchHashKeyName   =&#62; &#39;NAME_lc&#39;,
+  ShowErrorStatement =&#62; 1,
+  ChopBlanks         =&#62; 1,
+  AutoCommit         =&#62; 1,</pre>
+
+<p>(Except for Oracle and Pg, where AutoCommit defaults 0, placing the database in transactional mode).</p>
+
+<p>The defaults can always be extended (or overridden if you know what you&#39;re doing) by supplying your own \%attr parameter. For example:</p>
+
+<pre class="sh_perl">  Music::DBI-&#62;connection(dbi:foo:dbname&#39;,&#39;user&#39;,&#39;pass&#39;,{ChopBlanks=&#62;0});</pre>
+
+<p>The RootClass of <a href="/perldoc?DBIx%3A%3AContextualFetch" class="podlinkpod"
+>DBIx::ContextualFetch</a> in also inherited from <a href="/perldoc?Ima%3A%3ADBI" class="podlinkpod"
+>Ima::DBI</a>, and you should be very careful not to change this unless you know what you&#39;re doing!</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Dynamic_Database_Connections_/_db_Main"
+>Dynamic Database Connections / db_Main</a></h3>
+
+<p>It is sometimes desirable to generate your database connection information dynamically, for example, to allow multiple databases with the same schema to not have to duplicate an entire class hierarchy.</p>
+
+<p>The preferred method for doing this is to supply your own db_Main() method rather than calling <a href="#connection" class="podlinkpod"
+>&#34;connection&#34;</a>. This method should return a valid database handle, and should ensure it sets the standard attributes described above, preferably by combining $class-&#62;_default_attributes() with your own. Note, this handle *must* have its RootClass set to <a href="/perldoc?DBIx%3A%3AContextualFetch" class="podlinkpod"
+>DBIx::ContextualFetch</a>, so it is usually not possible to just supply a $dbh obtained elsewhere.</p>
+
+<p>Note that connection information is class data, and that changing it at run time may have unexpected behaviour for instances of the class already in existence.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="table"
+>table</a></h2>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;table($table);
+
+  $table = Class-&#62;table;
+  $table = $obj-&#62;table;</pre>
+
+<p>An accessor to get/set the name of the database table in which this class is stored. It -must- be set.</p>
+
+<p>Table information is inherited by subclasses, but can be overridden.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="table_alias"
+>table_alias</a></h2>
+
+<pre class="sh_perl">  package Shop::Order;
+  __PACKAGE__-&#62;table(&#39;orders&#39;);
+  __PACKAGE__-&#62;table_alias(&#39;orders&#39;);</pre>
+
+<p>When Class::DBI constructs SQL, it aliases your table name to a name representing your class. However, if your class&#39;s name is an SQL reserved word (such as &#39;Order&#39;) this will cause SQL errors. In such cases you should supply your own alias for your table name (which can, of course, be the same as the actual table name).</p>
+
+<p>This can also be passed as a second argument to &#39;table&#39;:</p>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;table(&#39;orders&#39;, &#39;orders&#39;);</pre>
+
+<p>As with table, this is inherited but can be overridden.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="sequence_/_auto_increment"
+>sequence / auto_increment</a></h2>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;sequence($sequence_name);
+
+  $sequence_name = Class-&#62;sequence;
+  $sequence_name = $obj-&#62;sequence;</pre>
+
+<p>If you are using a database which supports sequences and you want to use a sequence to automatically supply values for the primary key of a table, then you should declare this using the sequence() method:</p>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;columns(Primary =&#62; &#39;id&#39;);
+  __PACKAGE__-&#62;sequence(&#39;class_id_seq&#39;);</pre>
+
+<p>Class::DBI will use the sequence to generate a primary key value when objects are inserted without one.</p>
+
+<p>*NOTE* This method does not work for Oracle. However, <a href="/perldoc?Class%3A%3ADBI%3A%3AOracle" class="podlinkpod"
+>Class::DBI::Oracle</a> (which can be downloaded separately from CPAN) provides a suitable replacement sequence() method.</p>
+
+<p>If you are using a database with AUTO_INCREMENT (e.g. MySQL) then you do not need this, and any call to insert() without a primary key specified will fill this in automagically.</p>
+
+<p>Sequence and auto-increment mechanisms only apply to tables that have a single column primary key. For tables with multi-column primary keys you need to supply the key values manually.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONSTRUCTORS_and_DESTRUCTORS"
+>CONSTRUCTORS and DESTRUCTORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following are methods provided for convenience to insert, retrieve and delete stored objects. It&#39;s not entirely one-size fits all and you might find it necessary to override them.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="insert"
+>insert</a></h2>
+
+<pre class="sh_perl">  my $obj = Class-&#62;insert(\%data);</pre>
+
+<p>This is a constructor to insert new data into the database and create an object representing the newly inserted row.</p>
+
+<p>%data consists of the initial information to place in your object and the database. The keys of %data match up with the columns of your objects and the values are the initial settings of those fields.</p>
+
+<pre class="sh_perl">  my $cd = Music::CD-&#62;insert({ 
+    cdid   =&#62; 1,
+    artist =&#62; $artist,
+    title  =&#62; &#39;October&#39;,
+    year   =&#62; 1980,
+  });</pre>
+
+<p>If the table has a single primary key column and that column value is not defined in %data, insert() will assume it is to be generated. If a sequence() has been specified for this Class, it will use that. Otherwise, it will assume the primary key can be generated by AUTO_INCREMENT and attempt to use that.</p>
+
+<p>The <code>before_create</code> trigger is invoked directly after storing the supplied values into the new object and before inserting the record into the database. The object stored in $self may not have all the functionality of the final object after_creation, particularly if the database is going to be providing the primary key value.</p>
+
+<p>For tables with multi-column primary keys you need to supply all the key values, either in the arguments to the insert() method, or by setting the values in a <code>before_create</code> trigger.</p>
+
+<p>If the class has declared relationships with foreign classes via has_a(), you can pass an object to insert() for the value of that key. Class::DBI will Do The Right Thing.</p>
+
+<p>After the new record has been inserted into the database the data for non-primary key columns is discarded from the object. If those columns are accessed again they&#39;ll simply be fetched as needed. This ensures that the data in the application is consistent with what the database <i>actually</i> stored.</p>
+
+<p>The <code>after_create</code> trigger is invoked after the database insert has executed.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="find_or_create"
+>find_or_create</a></h2>
+
+<pre class="sh_perl">  my $cd = Music::CD-&#62;find_or_create({ artist =&#62; &#39;U2&#39;, title =&#62; &#39;Boy&#39; });</pre>
+
+<p>This checks if a CD can be found to match the information passed, and if not inserts it.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="delete"
+>delete</a></h2>
+
+<pre class="sh_perl">  $obj-&#62;delete;
+  Music::CD-&#62;search(year =&#62; 1980, title =&#62; &#39;Greatest %&#39;)-&#62;delete_all;</pre>
+
+<p>Deletes this object from the database and from memory. If you have set up any relationships using <code>has_many</code> or <code>might_have</code>, this will delete the foreign elements also, recursively (cascading delete). $obj is no longer usable after this call.</p>
+
+<p>Multiple objects can be deleted by calling delete_all on the Iterator returned from a search. Each object found will be deleted in turn, so cascading delete and other triggers will be honoured.</p>
+
+<p>The <code>before_delete</code> trigger is when an object instance is about to be deleted. It is invoked before any cascaded deletes. The <code>after_delete</code> trigger is invoked after the record has been deleted from the database and just before the contents in memory are discarded.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="RETRIEVING_OBJECTS"
+>RETRIEVING OBJECTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Class::DBI provides a few very simple search methods.</p>
+
+<p>It is not the goal of Class::DBI to replace the need for using SQL. Users are expected to write their own searches for more complex cases.</p>
+
+<p><a href="/perldoc?Class%3A%3ADBI%3A%3AAbstractSearch" class="podlinkpod"
+>Class::DBI::AbstractSearch</a>, available on CPAN, provides a much more complex search interface than Class::DBI provides itself.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="retrieve"
+>retrieve</a></h2>
+
+<pre class="sh_perl">  $obj = Class-&#62;retrieve( $id );
+  $obj = Class-&#62;retrieve( %key_values );</pre>
+
+<p>Given key values it will retrieve the object with that key from the database. For tables with a single column primary key a single parameter can be used, otherwise a hash of key-name key-value pairs must be given.</p>
+
+<pre class="sh_perl">  my $cd = Music::CD-&#62;retrieve(1) or die &#34;No such cd&#34;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="retrieve_all"
+>retrieve_all</a></h2>
+
+<pre class="sh_perl">  my @objs = Class-&#62;retrieve_all;
+  my $iterator = Class-&#62;retrieve_all;</pre>
+
+<p>Retrieves objects for all rows in the database. This is probably a bad idea if your table is big, unless you use the iterator version.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="search"
+>search</a></h2>
+
+<pre class="sh_perl">  @objs = Class-&#62;search(column1 =&#62; $value, column2 =&#62; $value ...);</pre>
+
+<p>This is a simple search for all objects where the columns specified are equal to the values specified e.g.:</p>
+
+<pre class="sh_perl">  @cds = Music::CD-&#62;search(year =&#62; 1990);
+  @cds = Music::CD-&#62;search(title =&#62; &#34;Greatest Hits&#34;, year =&#62; 1990);</pre>
+
+<p>You may also specify the sort order of the results by adding a final hash of arguments with the key &#39;order_by&#39;:</p>
+
+<pre class="sh_perl">  @cds = Music::CD-&#62;search(year =&#62; 1990, { order_by=&#62;&#39;artist&#39; });</pre>
+
+<p>This is passed through &#39;as is&#39;, enabling order_by clauses such as &#39;year DESC, title&#39;.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="search_like"
+>search_like</a></h2>
+
+<pre class="sh_perl">  @objs = Class-&#62;search_like(column1 =&#62; $like_pattern, ....);</pre>
+
+<p>This is a simple search for all objects where the columns specified are like the values specified. $like_pattern is a pattern given in SQL LIKE predicate syntax. &#39;%&#39; means &#34;any zero or more characters&#34;, &#39;_&#39; means &#34;any single character&#34;.</p>
+
+<pre class="sh_perl">  @cds = Music::CD-&#62;search_like(title =&#62; &#39;October%&#39;);
+  @cds = Music::CD-&#62;search_like(title =&#62; &#39;Hits%&#39;, artist =&#62; &#39;Various%&#39;);</pre>
+
+<p>You can also use &#39;order_by&#39; with these, as with search().</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ITERATORS"
+>ITERATORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  my $it = Music::CD-&#62;search_like(title =&#62; &#39;October%&#39;);
+  while (my $cd = $it-&#62;next) {
+    print $cd-&#62;title;
+  }</pre>
+
+<p>Any of the above searches (as well as those defined by has_many) can also be used as an iterator. Rather than creating a list of objects matching your criteria, this will return a Class::DBI::Iterator instance, which can return the objects required one at a time.</p>
+
+<p>Currently the iterator initially fetches all the matching row data into memory, and defers only the creation of the objects from that data until the iterator is asked for the next object. So using an iterator will only save significant memory if your objects will inflate substantially when used.</p>
+
+<p>In the case of has_many relationships with a mapping method, the mapping method is not called until each time you call &#39;next&#39;. This means that if your mapping is not a one-to-one, the results will probably not be what you expect.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Subclassing_the_Iterator"
+>Subclassing the Iterator</a></h2>
+
+<pre class="sh_perl">  Music::CD-&#62;iterator_class(&#39;Music::CD::Iterator&#39;);</pre>
+
+<p>You can also subclass the default iterator class to override its functionality. This is done via class data, and so is inherited into your subclasses.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="QUICK_RETRIEVAL"
+>QUICK RETRIEVAL</a></h2>
+
+<pre class="sh_perl">  my $obj = Class-&#62;construct(\%data);</pre>
+
+<p>This is used to turn data from the database into objects, and should thus only be used when writing constructors. It is very handy for cheaply setting up lots of objects from data for without going back to the database.</p>
+
+<p>For example, instead of doing one SELECT to get a bunch of IDs and then feeding those individually to retrieve() (and thus doing more SELECT calls), you can do one SELECT to get the essential data of many objects and feed that data to construct():</p>
+
+<pre class="sh_perl">   return map $class-&#62;construct($_), $sth-&#62;fetchall_hash;</pre>
+
+<p>The construct() method creates a new empty object, loads in the column values, and then invokes the <code>select</code> trigger.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPY_AND_MOVE"
+>COPY AND MOVE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="copy"
+>copy</a></h2>
+
+<pre class="sh_perl">  $new_obj = $obj-&#62;copy;
+  $new_obj = $obj-&#62;copy($new_id);
+  $new_obj = $obj-&#62;copy({ title =&#62; &#39;new_title&#39;, rating =&#62; 18 });</pre>
+
+<p>This creates a copy of the given $obj, removes the primary key, sets any supplied column values and calls insert() to make a new record in the database.</p>
+
+<p>For tables with a single column primary key, copy() can be called with no parameters and the new object will be assigned a key automatically. Or a single parameter can be supplied and will be used as the new key.</p>
+
+<p>For tables with a multi-column primary key, copy() must be called with parameters which supply new values for all primary key columns, unless a <code>before_create</code> trigger will supply them. The insert() method will fail if any primary key columns are not defined.</p>
+
+<pre class="sh_perl">  my $blrunner_dc = $blrunner-&#62;copy(&#34;Bladerunner: Director&#39;s Cut&#34;);
+  my $blrunner_unrated = $blrunner-&#62;copy({
+    Title =&#62; &#34;Bladerunner: Director&#39;s Cut&#34;,
+    Rating =&#62; &#39;Unrated&#39;,
+  });</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="move"
+>move</a></h2>
+
+<pre class="sh_perl">  my $new_obj = Sub::Class-&#62;move($old_obj);
+  my $new_obj = Sub::Class-&#62;move($old_obj, $new_id);
+  my $new_obj = Sub::Class-&#62;move($old_obj, \%changes);</pre>
+
+<p>For transferring objects from one class to another. Similar to copy(), an instance of Sub::Class is inserted using the data in $old_obj (Sub::Class is a subclass of $old_obj&#39;s subclass). Like copy(), you can supply $new_id as the primary key of $new_obj (otherwise the usual sequence or autoincrement is used), or a hashref of multiple new values.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TRIGGERS"
+>TRIGGERS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;add_trigger(trigger_point_name =&#62; \&#38;code_to_execute);
+
+  # e.g.
+
+  __PACKAGE__-&#62;add_trigger(after_create  =&#62; \&#38;call_after_create);</pre>
+
+<p>It is possible to set up triggers that will be called at various points in the life of an object. Valid trigger points are:</p>
+
+<pre class="sh_perl">  before_create       (also used for deflation)
+  after_create
+  before_set_$column  (also used by add_constraint)
+  after_set_$column   (also used for inflation and by has_a)
+  before_update       (also used for deflation and by might_have)
+  after_update
+  before_delete
+  after_delete
+  select              (also used for inflation and by construct and _flesh)</pre>
+
+<p>You can create any number of triggers for each point, but you cannot specify the order in which they will be run.</p>
+
+<p>All triggers are passed the object they are being fired for, except when <code>before_set_$column</code> is fired during <a href="#insert" class="podlinkpod"
+>&#34;insert&#34;</a>, in which case the class is passed in place of the object, which does not yet exist. You may change object values if required.</p>
+
+<p>Some triggers are also passed extra parameters as name-value pairs. The individual triggers are further documented with the methods that trigger them.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONSTRAINTS"
+>CONSTRAINTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;add_constraint(&#39;name&#39;, column =&#62; \&#38;check_sub);
+
+  # e.g.
+
+  __PACKAGE__-&#62;add_constraint(&#39;over18&#39;, age =&#62; \&#38;check_age);
+
+  # Simple version
+  sub check_age { 
+    my ($value) = @_;
+    return $value &#62;= 18;
+  }
+
+  # Cross-field checking - must have SSN if age &#60; 18
+  sub check_age { 
+    my ($value, $self, $column_name, $changing) = @_;
+    return 1 if $value &#62;= 18;     # We&#39;re old enough. 
+    return 1 if $changing-&#62;{SSN}; # We&#39;re also being given an SSN
+    return 0 if !ref($self);      # This is an insert, so we can&#39;t have an SSN
+    return 1 if $self-&#62;ssn;       # We already have one in the database
+    return 0;                     # We can&#39;t find an SSN anywhere
+  }</pre>
+
+<p>It is also possible to set up constraints on the values that can be set on a column. The constraint on a column is triggered whenever an object is created and whenever the value in that column is being changed.</p>
+
+<p>The constraint code is called with four parameters:</p>
+
+<pre class="sh_perl">  - The new value to be assigned
+  - The object it will be assigned to
+  (or class name when initially creating an object)
+  - The name of the column
+  (useful if many constraints share the same code)
+  - A hash ref of all new column values being assigned
+  (useful for cross-field validation)</pre>
+
+<p>The constraints are applied to all the columns being set before the object data is changed. Attempting to create or modify an object where one or more constraint fail results in an exception and the object remains unchanged.</p>
+
+<p>The exception thrown has its data set to a hashref of the column being changed and the value being changed to.</p>
+
+<p>Note 1: Constraints are implemented using before_set_$column triggers. This will only prevent you from setting these values through a the provided insert() or set() methods. It will always be possible to bypass this if you try hard enough.</p>
+
+<p>Note 2: When an object is created constraints are currently only checked for column names included in the parameters to insert(). This is probably a bug and is likely to change in future.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="constrain_column"
+>constrain_column</a></h2>
+
+<pre class="sh_perl">  Film-&#62;constrain_column(year =&#62; qr/^\d{4}$/);
+  Film-&#62;constrain_column(rating =&#62; [qw/U Uc PG 12 15 18/]);
+  Film-&#62;constrain_column(title =&#62; sub { length() &#60;= 20 });</pre>
+
+<p>Simple anonymous constraints can also be added to a column using the constrain_column() method. By default this takes either a regex which must match, a reference to a list of possible values, or a subref which will have $_ aliased to the value being set, and should return a true or false value.</p>
+
+<p>However, this behaviour can be extended (or replaced) by providing a constraint handler for the type of argument passed to constrain_column. This behavior should be provided in a method named &#34;_constrain_by_$type&#34;, where $type is the moniker of the argument. For example, the year example above could be provided by _constrain_by_array().</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DATA_NORMALIZATION"
+>DATA NORMALIZATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Before an object is assigned data from the application (via insert or a set accessor) the normalize_column_values() method is called with a reference to a hash containing the column names and the new values which are to be assigned (after any validation and constraint checking, as described below).</p>
+
+<p>Currently Class::DBI does not offer any per-column mechanism here. The default method is empty. You can override it in your own classes to normalize (edit) the data in any way you need. For example the values in the hash for certain columns could be made lowercase.</p>
+
+<p>The method is called as an instance method when the values of an existing object are being changed, and as a class method when a new object is being created.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DATA_VALIDATION"
+>DATA VALIDATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Before an object is assigned data from the application (via insert or a set accessor) the validate_column_values() method is called with a reference to a hash containing the column names and the new values which are to be assigned.</p>
+
+<p>The method is called as an instance method when the values of an existing object are being changed, and as a class method when a new object is being inserted.</p>
+
+<p>The default method calls the before_set_$column trigger for each column name in the hash. Each trigger is called inside an eval. Any failures result in an exception after all have been checked. The exception data is a reference to a hash which holds the column name and error text for each trigger error.</p>
+
+<p>When using this mechanism for form data validation, for example, this exception data can be stored in an exception object, via a custom _croak() method, and then caught and used to redisplay the form with error messages next to each field which failed validation.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXCEPTIONS"
+>EXCEPTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>All errors that are generated, or caught and propagated, by Class::DBI are handled by calling the _croak() method (as an instance method if possible, or else as a class method).</p>
+
+<p>The _croak() method is passed an error message and in some cases some extra information as described below. The default behaviour is simply to call Carp::croak($message).</p>
+
+<p>Applications that require custom behaviour should override the _croak() method in their application base class (or table classes for table-specific behaviour). For example:</p>
+
+<pre class="sh_perl">  use Error;
+
+  sub _croak {
+    my ($self, $message, %info) = @_;
+    # convert errors into exception objects
+    # except for duplicate insert errors which we&#39;ll ignore
+    Error-&#62;throw(-text =&#62; $message, %info)
+      unless $message =~ /^Can&#39;t insert .* duplicate/;
+    return;
+  }</pre>
+
+<p>The _croak() method is expected to trigger an exception and not return. If it does return then it should use <code>return;</code> so that an undef or empty list is returned as required depending on the calling context. You should only return other values if you are prepared to deal with the (unsupported) consequences.</p>
+
+<p>For exceptions that are caught and propagated by Class::DBI, $message includes the text of $@ and the original $@ value is available in $info{err}. That allows you to correctly propagate exception objects that may have been thrown &#39;below&#39; Class::DBI (using <a href="/perldoc?Exception%3A%3AClass%3A%3ADBI" class="podlinkpod"
+>Exception::Class::DBI</a> for example).</p>
+
+<p>Exceptions generated by some methods may provide additional data in $info{data} and, if so, also store the method name in $info{method}. For example, the validate_column_values() method stores details of failed validations in $info{data}. See individual method documentation for what additional data they may store, if any.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="WARNINGS"
+>WARNINGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>All warnings are handled by calling the _carp() method (as an instance method if possible, or else as a class method). The default behaviour is simply to call Carp::carp().</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INSTANCE_METHODS"
+>INSTANCE METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="accessors"
+>accessors</a></h2>
+
+<p>Class::DBI inherits from <a href="/perldoc?Class%3A%3AAccessor" class="podlinkpod"
+>Class::Accessor</a> and thus provides individual accessor methods for every column in your subclass. It also overrides the get() and set() methods provided by Accessor to automagically handle database reading and writing. (Note that as it doesn&#39;t make sense to store a list of values in a column, set() takes a hash of column =&#62; value pairs, rather than the single key =&#62; values of Class::Accessor).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="the_fundamental_set()_and_get()_methods"
+>the fundamental set() and get() methods</a></h2>
+
+<pre class="sh_perl">  $value = $obj-&#62;get($column_name);
+  @values = $obj-&#62;get(@column_names);
+
+  $obj-&#62;set($column_name =&#62; $value);
+  $obj-&#62;set($col1 =&#62; $value1, $col2 =&#62; $value2 ... );</pre>
+
+<p>These methods are the fundamental entry points for getting and setting column values. The extra accessor methods automatically generated for each column of your table are simple wrappers that call these get() and set() methods.</p>
+
+<p>The set() method calls normalize_column_values() then validate_column_values() before storing the values. The <code>before_set_$column</code> trigger is invoked by validate_column_values(), checking any constraints that may have been set up.</p>
+
+<p>The <code>after_set_$column</code> trigger is invoked after the new value has been stored.</p>
+
+<p>It is possible for an object to not have all its column data in memory (due to lazy inflation). If the get() method is called for such a column then it will select the corresponding group of columns and then invoke the <code>select</code> trigger.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Changing_Your_Column_Accessor_Method_Names"
+>Changing Your Column Accessor Method Names <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="accessor_name_for_/_mutator_name_for"
+>accessor_name_for / mutator_name_for</a></h2>
+
+<p>It is possible to change the name of the accessor method created for a column either declaratively or programmatically.</p>
+
+<p>If, for example, you have a column with a name that clashes with a method otherwise created by Class::DBI, such as &#39;meta_info&#39;, you could create that Column explicitly with a different accessor (and/or mutator) when setting up your columns:</p>
+
+<pre class="sh_perl">        my $meta_col = Class::DBI::Column-&#62;new(meta_info =&#62; {
+                accessor =&#62; &#39;metadata&#39;,
+        });
+
+  __PACKAGE__-&#62;columns(All =&#62; qw/id name/, $meta_col);</pre>
+
+<p>If you want to change the name of all your accessors, or all that match a certain pattern, you need to provide an accessor_name_for($col) method, which will convert a column name to a method name.</p>
+
+<p>e.g: if your local database naming convention was to prepend the word &#39;customer&#39; to each column in the &#39;customer&#39; table, so that you had the columns &#39;customerid&#39;, &#39;customername&#39; and &#39;customerage&#39;, but you wanted your methods to just be $customer-&#62;name and $customer-&#62;age rather than $customer-&#62;customername etc., you could create a</p>
+
+<pre class="sh_perl">  sub accessor_name_for {
+    my ($class, $column) = @_;
+    $column =~ s/^customer//;
+    return $column;
+  }</pre>
+
+<p>Similarly, if you wanted to have distinct accessor and mutator methods, you could provide a mutator_name_for($col) method which would return the name of the method to change the value:</p>
+
+<pre class="sh_perl">  sub mutator_name_for {
+    my ($class, $column) = @_;
+    return &#34;set_&#34; . $column-&#62;accessor;
+  }</pre>
+
+<p>If you override the mutator name, then the accessor method will be enforced as read-only, and the mutator as write-only.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="update_vs_auto_update"
+>update vs auto update</a></h2>
+
+<p>There are two modes for the accessors to work in: manual update and autoupdate. When in autoupdate mode, every time one calls an accessor to make a change an UPDATE will immediately be sent to the database. Otherwise, if autoupdate is off, no changes will be written until update() is explicitly called.</p>
+
+<p>This is an example of manual updating:</p>
+
+<pre class="sh_perl">  # The calls to NumExplodingSheep() and Rating() will only make the
+  # changes in memory, not in the database.  Once update() is called
+  # it writes to the database in one swell foop.
+  $gone-&#62;NumExplodingSheep(5);
+  $gone-&#62;Rating(&#39;NC-17&#39;);
+  $gone-&#62;update;</pre>
+
+<p>And of autoupdating:</p>
+
+<pre class="sh_perl">  # Turn autoupdating on for this object.
+  $gone-&#62;autoupdate(1);
+
+  # Each accessor call causes the new value to immediately be written.
+  $gone-&#62;NumExplodingSheep(5);
+  $gone-&#62;Rating(&#39;NC-17&#39;);</pre>
+
+<p>Manual updating is probably more efficient than autoupdating and it provides the extra safety of a discard_changes() option to clear out all unsaved changes. Autoupdating can be more convenient for the programmer. Autoupdating is <i>off</i> by default.</p>
+
+<p>If changes are neither updated nor rolled back when the object is destroyed (falls out of scope or the program ends) then Class::DBI&#39;s DESTROY method will print a warning about unsaved changes.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="autoupdate"
+>autoupdate</a></h2>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;autoupdate($on_or_off);
+  $update_style = Class-&#62;autoupdate;
+
+  $obj-&#62;autoupdate($on_or_off);
+  $update_style = $obj-&#62;autoupdate;</pre>
+
+<p>This is an accessor to the current style of auto-updating. When called with no arguments it returns the current auto-updating state, true for on, false for off. When given an argument it turns auto-updating on and off: a true value turns it on, a false one off.</p>
+
+<p>When called as a class method it will control the updating style for every instance of the class. When called on an individual object it will control updating for just that object, overriding the choice for the class.</p>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;autoupdate(1);     # Autoupdate is now on for the class.
+
+  $obj = Class-&#62;retrieve(&#39;Aliens Cut My Hair&#39;);
+  $obj-&#62;autoupdate(0);      # Shut off autoupdating for this object.</pre>
+
+<p>The update setting for an object is not stored in the database.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="update"
+>update</a></h2>
+
+<pre class="sh_perl">  $obj-&#62;update;</pre>
+
+<p>If <a href="#autoupdate" class="podlinkpod"
+>&#34;autoupdate&#34;</a> is not enabled then changes you make to your object are not reflected in the database until you call update(). It is harmless to call update() if there are no changes to be saved. (If autoupdate is on there&#39;ll never be anything to save.)</p>
+
+<p>Note: If you have transactions turned on for your database (but see <a href="#TRANSACTIONS" class="podlinkpod"
+>&#34;TRANSACTIONS&#34;</a> below) you will also need to call dbi_commit(), as update() merely issues the UPDATE to the database).</p>
+
+<p>After the database update has been executed, the data for columns that have been updated are deleted from the object. If those columns are accessed again they&#39;ll simply be fetched as needed. This ensures that the data in the application is consistent with what the database <i>actually</i> stored.</p>
+
+<p>When update() is called the <code>before_update</code>($self) trigger is always invoked immediately.</p>
+
+<p>If any columns have been updated then the <code>after_update</code> trigger is invoked after the database update has executed and is passed: ($self, discard_columns =&#62; \@discard_columns)</p>
+
+<p>The trigger code can modify the discard_columns array to affect which columns are discarded.</p>
+
+<p>For example:</p>
+
+<pre class="sh_perl">  Class-&#62;add_trigger(after_update =&#62; sub {
+    my ($self, %args) = @_;
+    my $discard_columns = $args{discard_columns};
+    # discard the md5_hash column if any field starting with &#39;foo&#39;
+    # has been updated - because the md5_hash will have been changed
+    # by a trigger.
+    push @$discard_columns, &#39;md5_hash&#39; if grep { /^foo/ } @$discard_columns;
+  });</pre>
+
+<p>Take care to not delete a primary key column unless you know what you&#39;re doing.</p>
+
+<p>The update() method returns the number of rows updated. If the object had not changed and thus did not need to issue an UPDATE statement, the update() call will have a return value of -1.</p>
+
+<p>If the record in the database has been deleted, or its primary key value changed, then the update will not affect any records and so the update() method will return 0.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="discard_changes"
+>discard_changes</a></h2>
+
+<pre class="sh_perl">  $obj-&#62;discard_changes;</pre>
+
+<p>Removes any changes you&#39;ve made to this object since the last update. Currently this simply discards the column values from the object.</p>
+
+<p>If you&#39;re using autoupdate this method will throw an exception.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_changed"
+>is_changed</a></h2>
+
+<pre class="sh_perl">  my $changed = $obj-&#62;is_changed;
+  my @changed_keys = $obj-&#62;is_changed;</pre>
+
+<p>Indicates if the given $obj has changes since the last update. Returns a list of keys which have changed. (If autoupdate is on, this method will return an empty list, unless called inside a before_update or after_set_$column trigger)</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="id"
+>id</a></h2>
+
+<pre class="sh_perl">  $id = $obj-&#62;id;
+  @id = $obj-&#62;id;</pre>
+
+<p>Returns a unique identifier for this object based on the values in the database. It&#39;s the equivalent of $obj-&#62;get($self-&#62;columns(&#39;Primary&#39;)), with inflated values reduced to their ids.</p>
+
+<p>A warning will be generated if this method is used in scalar context on a table with a multi-column primary key.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="LOW-LEVEL_DATA_ACCESS"
+>LOW-LEVEL DATA ACCESS</a></h2>
+
+<p>On some occasions, such as when you&#39;re writing triggers or constraint routines, you&#39;ll want to manipulate data in a Class::DBI object without using the usual get() and set() accessors, which may themselves call triggers, fetch information from the database, etc.</p>
+
+<p>Rather than interacting directly with the data hash stored in a Class::DBI object (the exact implementation of which may change in future releases) you could use Class::DBI&#39;s low-level accessors. These appear &#39;private&#39; to make you think carefully about using them - they should not be a common means of dealing with the object.</p>
+
+<p>The data within the object is modelled as a set of key-value pairs, where the keys are normalized column names (returned by find_column()), and the values are the data from the database row represented by the object. Access is via these functions:</p>
+
+<dl>
+<dt><a name="_attrs"
+>_attrs</a></dt>
+
+<dd>
+<pre class="sh_perl">  @values = $object-&#62;_attrs(@cols);</pre>
+
+<p>Returns the values for one or more keys.</p>
+
+<dt><a name="_attribute_store"
+>_attribute_store</a></dt>
+
+<dd>
+<pre class="sh_perl">  $object-&#62;_attribute_store( { $col0 =&#62; $val0, $col1 =&#62; $val1 } );
+  $object-&#62;_attribute_store($col0, $val0, $col1, $val1);</pre>
+
+<p>Stores values in the object. They key-value pairs may be passed in either as a simple list or as a hash reference. This only updates values in the object itself; changes will not be propagated to the database.</p>
+
+<dt><a name="_attribute_set"
+>_attribute_set</a></dt>
+
+<dd>
+<pre class="sh_perl">  $object-&#62;_attribute_set( { $col0 =&#62; $val0, $col1 =&#62; $val1 } );
+  $object-&#62;_attribute_set($col0, $val0, $col1, $val1);</pre>
+
+<p>Updates values in the object via _attribute_store(), but also logs the changes so that they are propagated to the database with the next update. (Unlike set(), however, _attribute_set() will not trigger an update if autoupdate is turned on.)</p>
+
+<dt><a name="_attribute_delete"
+>_attribute_delete</a></dt>
+
+<dd>
+<pre class="sh_perl">  @values = $object-&#62;_attribute_delete(@cols);</pre>
+
+<p>Deletes values from the object, and returns the deleted values.</p>
+
+<dt><a name="_attribute_exists"
+>_attribute_exists</a></dt>
+
+<dd>
+<pre class="sh_perl">  $bool = $object-&#62;_attribute_exists($col);</pre>
+
+<p>Returns a true value if the object contains a value for the specified column, and a false value otherwise.</p>
+</dd>
+</dl>
+
+<p>By default, Class::DBI uses simple hash references to store object data, but all access is via these routines, so if you want to implement a different data model, just override these functions.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OVERLOADED_OPERATORS"
+>OVERLOADED OPERATORS</a></h2>
+
+<p>Class::DBI and its subclasses overload the perl builtin <i>stringify</i> and <i>bool</i> operators. This is a significant convenience.</p>
+
+<p>The perl builtin <i>bool</i> operator is overloaded so that a Class::DBI object reference is true so long as all its key columns have defined values. (This means an object with an id() of zero is not considered false.)</p>
+
+<p>When a Class::DBI object reference is used in a string context it will, by default, return the value of the primary key. (Composite primary key values will be separated by a slash).</p>
+
+<p>You can also specify the column(s) to be used for stringification via the special &#39;Stringify&#39; column group. So, for example, if you&#39;re using an auto-incremented primary key, you could use this to provide a more meaningful display string:</p>
+
+<pre class="sh_perl">  Widget-&#62;columns(Stringify =&#62; qw/name/);</pre>
+
+<p>If you need to do anything more complex, you can provide an stringify_self() method which stringification will call:</p>
+
+<pre class="sh_perl">  sub stringify_self { 
+    my $self = shift;
+    return join &#34;:&#34;, $self-&#62;id, $self-&#62;name;
+  }</pre>
+
+<p>This overloading behaviour can be useful for columns that have has_a() relationships. For example, consider a table that has price and currency fields:</p>
+
+<pre class="sh_perl">  package Widget;
+  use base &#39;My::Class::DBI&#39;;
+  Widget-&#62;table(&#39;widget&#39;);
+  Widget-&#62;columns(All =&#62; qw/widgetid name price currency_code/);
+
+  $obj = Widget-&#62;retrieve($id);
+  print $obj-&#62;price . &#34; &#34; . $obj-&#62;currency_code;</pre>
+
+<p>The would print something like &#34;<code>42.07 USD</code>&#34;. If the currency_code field is later changed to be a foreign key to a new currency table then $obj-&#62;currency_code will return an object reference instead of a plain string. Without overloading the stringify operator the example would now print something like &#34;<code>42.07 Widget=HASH(0x1275}</code>&#34; and the fix would be to change the code to add a call to id():</p>
+
+<pre class="sh_perl">  print $obj-&#62;price . &#34; &#34; . $obj-&#62;currency_code-&#62;id;</pre>
+
+<p>However, with overloaded stringification, the original code continues to work as before, with no code changes needed.</p>
+
+<p>This makes it much simpler and safer to add relationships to existing applications, or remove them later.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TABLE_RELATIONSHIPS"
+>TABLE RELATIONSHIPS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Databases are all about relationships. Thus Class::DBI provides a way for you to set up descriptions of your relationhips.</p>
+
+<p>Class::DBI provides three such relationships: &#39;has_a&#39;, &#39;has_many&#39;, and &#39;might_have&#39;. Others are available from CPAN.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="has_a"
+>has_a</a></h2>
+
+<pre class="sh_perl">  Music::CD-&#62;has_a(column =&#62; &#39;Foreign::Class&#39;);
+
+  Music::CD-&#62;has_a(artist =&#62; &#39;Music::Artist&#39;);
+  print $cd-&#62;artist-&#62;name;</pre>
+
+<p>&#39;has_a&#39; is most commonly used to supply lookup information for a foreign key. If a column is declared as storing the primary key of another table, then calling the method for that column does not return the id, but instead the relevant object from that foreign class.</p>
+
+<p>It is also possible to use has_a to inflate the column value to a non Class::DBI based. A common usage would be to inflate a date field to a date/time object:</p>
+
+<pre class="sh_perl">  Music::CD-&#62;has_a(reldate =&#62; &#39;Date::Simple&#39;);
+  print $cd-&#62;reldate-&#62;format(&#34;%d %b, %Y&#34;);
+
+  Music::CD-&#62;has_a(reldate =&#62; &#39;Time::Piece&#39;,
+    inflate =&#62; sub { Time::Piece-&#62;strptime(shift, &#34;%Y-%m-%d&#34;) },
+    deflate =&#62; &#39;ymd&#39;,
+  );
+  print $cd-&#62;reldate-&#62;strftime(&#34;%d %b, %Y&#34;);</pre>
+
+<p>If the foreign class is another Class::DBI representation retrieve is called on that class with the column value. Any other object will be instantiated either by calling new($value) or using the given &#39;inflate&#39; method. If the inflate method name is a subref, it will be executed, and will be passed the value and the Class::DBI object as arguments.</p>
+
+<p>When the object is being written to the database the object will be deflated either by calling the &#39;deflate&#39; method (if given), or by attempting to stringify the object. If the deflate method is a subref, it will be passed the Class::DBI object as an argument.</p>
+
+<p>*NOTE* You should not attempt to make your primary key column inflate using has_a() as bad things will happen. If you have two tables which share a primary key, consider using might_have() instead.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="has_many"
+>has_many</a></h2>
+
+<pre class="sh_perl">  Class-&#62;has_many(method_to_create =&#62; &#34;Foreign::Class&#34;);
+
+  Music::CD-&#62;has_many(tracks =&#62; &#39;Music::Track&#39;);
+
+  my @tracks = $cd-&#62;tracks;
+
+  my $track6 = $cd-&#62;add_to_tracks({ 
+    position =&#62; 6,
+    title    =&#62; &#39;Tomorrow&#39;,
+  });</pre>
+
+<p>This method declares that another table is referencing us (i.e. storing our primary key in its table).</p>
+
+<p>It creates a named accessor method in our class which returns a list of all the matching Foreign::Class objects.</p>
+
+<p>In addition it creates another method which allows a new associated object to be constructed, taking care of the linking automatically. This method is the same as the accessor method with &#34;add_to_&#34; prepended.</p>
+
+<p>The add_to_tracks example above is exactly equivalent to:</p>
+
+<pre class="sh_perl">  my $track6 = Music::Track-&#62;insert({
+    cd       =&#62; $cd,
+    position =&#62; 6,
+    title    =&#62; &#39;Tomorrow&#39;,
+  });</pre>
+
+<p>When setting up the relationship the foreign class&#39;s has_a() declarations are examined to discover which of its columns reference our class. (Note that because this happens at compile time, if the foreign class is defined in the same file, the class with the has_a() must be defined earlier than the class with the has_many(). If the classes are in different files, Class::DBI should usually be able to do the right things, as long as all classes inherit Class::DBI before &#39;use&#39;ing any other classes.)</p>
+
+<p>If the foreign class has no has_a() declarations linking to this class, it is assumed that the foreign key in that class is named after the moniker() of this class.</p>
+
+<p>If this is not true you can pass an additional third argument to the has_many() declaration stating which column of the foreign class is the foreign key to this class.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Limiting"
+>Limiting</a></h3>
+
+<pre class="sh_perl">  Music::Artist-&#62;has_many(cds =&#62; &#39;Music::CD&#39;);
+  my @cds = $artist-&#62;cds(year =&#62; 1980);</pre>
+
+<p>When calling the method created by has_many, you can also supply any additional key/value pairs for restricting the search. The above example will only return the CDs with a year of 1980.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Ordering"
+>Ordering</a></h3>
+
+<pre class="sh_perl">  Music::CD-&#62;has_many(tracks =&#62; &#39;Music::Track&#39;, { order_by =&#62; &#39;playorder&#39; });</pre>
+
+<p>has_many takes an optional final hashref of options. If an &#39;order_by&#39; option is set, its value will be set in an ORDER BY clause in the SQL issued. This is passed through &#39;as is&#39;, enabling order_by clauses such as &#39;length DESC, position&#39;.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Mapping"
+>Mapping</a></h3>
+
+<pre class="sh_perl">  Music::CD-&#62;has_many(styles =&#62; [ &#39;Music::StyleRef&#39; =&#62; &#39;style&#39; ]);</pre>
+
+<p>If the second argument to has_many is turned into a listref of the Classname and an additional method, then that method will be called in turn on each of the objects being returned.</p>
+
+<p>The above is exactly equivalent to:</p>
+
+<pre class="sh_perl">  Music::CD-&#62;has_many(_style_refs =&#62; &#39;Music::StyleRef&#39;);
+
+  sub styles { 
+    my $self = shift;
+    return map $_-&#62;style, $self-&#62;_style_refs;
+  }</pre>
+
+<p>For an example of where this is useful see <a href="#MANY_TO_MANY_RELATIONSHIPS" class="podlinkpod"
+>&#34;MANY TO MANY RELATIONSHIPS&#34;</a> below.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Cascading_Delete"
+>Cascading Delete</a></h3>
+
+<pre class="sh_perl">  Music::Artist-&#62;has_many(cds =&#62; &#39;Music::CD&#39;, { cascade =&#62; &#39;Fail&#39; });</pre>
+
+<p>It is also possible to control what happens to the &#39;child&#39; objects when the &#39;parent&#39; object is deleted. By default this is set to &#39;Delete&#39; - so, for example, when you delete an artist, you also delete all their CDs, leaving no orphaned records. However you could also set this to &#39;None&#39;, which would leave all those orphaned records (although this generally isn&#39;t a good idea), or &#39;Fail&#39;, which will throw an exception when you try to delete an artist that still has any CDs.</p>
+
+<p>You can also write your own Cascade strategies by supplying a Class Name here.</p>
+
+<p>For example you could write a Class::DBI::Cascade::Plugin::Nullify which would set all related foreign keys to be NULL, and plug it into your relationship:</p>
+
+<pre class="sh_perl">  Music::Artist-&#62;has_many(cds =&#62; &#39;Music::CD&#39;, { 
+    cascade =&#62; &#39;Class::DBI::Cascade::Plugin::Nullify&#39; 
+  });</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="might_have"
+>might_have</a></h2>
+
+<pre class="sh_perl">  Music::CD-&#62;might_have(method_name =&#62; Class =&#62; (@fields_to_import));
+
+  Music::CD-&#62;might_have(liner_notes =&#62; LinerNotes =&#62; qw/notes/);
+
+  my $liner_notes_object = $cd-&#62;liner_notes;
+  my $notes = $cd-&#62;notes; # equivalent to $cd-&#62;liner_notes-&#62;notes;</pre>
+
+<p>might_have() is similar to has_many() for relationships that can have at most one associated objects. For example, if you have a CD database to which you want to add liner notes information, you might not want to add a &#39;liner_notes&#39; column to your main CD table even though there is no multiplicity of relationship involved (each CD has at most one &#39;liner notes&#39; field). So, you create another table with the same primary key as this one, with which you can cross-reference.</p>
+
+<p>But you don&#39;t want to have to keep writing methods to turn the the &#39;list&#39; of liner_notes objects you&#39;d get back from has_many into the single object you&#39;d need. So, might_have() does this work for you. It creates an accessor to fetch the single object back if it exists, and it also allows you import any of its methods into your namespace. So, in the example above, the LinerNotes class can be mostly invisible - you can just call $cd-&#62;notes and it will call the notes method on the correct LinerNotes object transparently for you.</p>
+
+<p>Making sure you don&#39;t have namespace clashes is up to you, as is correctly creating the objects, but this may be made simpler in later versions. (Particularly if someone asks for this!)</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Notes"
+>Notes</a></h2>
+
+<p>has_a(), might_have() and has_many() check that the relevant class has already been loaded. If it hasn&#39;t then they try to load the module of the same name using require. If the require fails because it can&#39;t find the module then it will assume it&#39;s not a simple require (i.e., Foreign::Class isn&#39;t in Foreign/Class.pm) and that you will take care of it and ignore the warning. Any other error, such as a syntax error, triggers an exception.</p>
+
+<p>NOTE: The two classes in a relationship do not have to be in the same database, on the same machine, or even in the same type of database! It is quite acceptable for a table in a MySQL database to be connected to a different table in an Oracle database, and for cascading delete etc to work across these. This should assist greatly if you need to migrate a database gradually.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MANY_TO_MANY_RELATIONSHIPS"
+>MANY TO MANY RELATIONSHIPS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Class::DBI does not currently support Many to Many relationships, per se. However, by combining the relationships that already exist it is possible to set these up.</p>
+
+<p>Consider the case of Films and Actors, with a linking Role table with a multi-column Primary Key. First of all set up the Role class:</p>
+
+<pre class="sh_perl">  Role-&#62;table(&#39;role&#39;);
+  Role-&#62;columns(Primary =&#62; qw/film actor/);
+  Role-&#62;has_a(film =&#62; &#39;Film&#39;);
+  Role-&#62;has_a(actor =&#62; &#39;Actor&#39;);</pre>
+
+<p>Then, set up the Film and Actor classes to use this linking table:</p>
+
+<pre class="sh_perl">  Film-&#62;table(&#39;film&#39;);
+  Film-&#62;columns(All =&#62; qw/id title rating/);
+  Film-&#62;has_many(stars =&#62; [ Role =&#62; &#39;actor&#39; ]);
+
+  Actor-&#62;table(&#39;actor&#39;);
+  Actor-&#62;columns(All =&#62; qw/id name/);
+  Actor-&#62;has_many(films =&#62; [ Role =&#62; &#39;film&#39; ]);</pre>
+
+<p>In each case the &#39;mapping method&#39; variation of has_many() is used to call the lookup method on the Role object returned. As these methods are the &#39;has_a&#39; relationships on the Role, these will return the actual Actor and Film objects, providing a cheap many-to-many relationship.</p>
+
+<p>In the case of Film, this is equivalent to the more long-winded:</p>
+
+<pre class="sh_perl">  Film-&#62;has_many(roles =&#62; &#34;Role&#34;);
+
+  sub actors { 
+    my $self = shift;
+    return map $_-&#62;actor, $self-&#62;roles 
+  }</pre>
+
+<p>As this is almost exactly what is created internally, add_to_stars and add_to_films will generally do the right thing as they are actually doing the equivalent of add_to_roles:</p>
+
+<pre class="sh_perl">  $film-&#62;add_to_actors({ actor =&#62; $actor });</pre>
+
+<p>Similarly a cascading delete will also do the right thing as it will only delete the relationship from the linking table.</p>
+
+<p>If the Role table were to contain extra information, such as the name of the character played, then you would usually need to skip these short-cuts and set up each of the relationships, and associated helper methods, manually.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ADDING_NEW_RELATIONSHIP_TYPES"
+>ADDING NEW RELATIONSHIP TYPES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="add_relationship_type"
+>add_relationship_type</a></h2>
+
+<p>The relationships described above are implemented through Class::DBI::Relationship subclasses. These are then plugged into Class::DBI through an add_relationship_type() call:</p>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;add_relationship_type(
+    has_a      =&#62; &#34;Class::DBI::Relationship::HasA&#34;,
+    has_many   =&#62; &#34;Class::DBI::Relationship::HasMany&#34;,
+    might_have =&#62; &#34;Class::DBI::Relationship::MightHave&#34;,
+  );</pre>
+
+<p>If is thus possible to add new relationship types, or modify the behaviour of the existing types. See <a href="/~tmtm/Class-DBI-v3.0.17/lib/Class/DBI/Relationship.pm" class="podlinkpod"
+>Class::DBI::Relationship</a> for more information on what is required.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DEFINING_SQL_STATEMENTS"
+>DEFINING SQL STATEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>There are several main approaches to setting up your own SQL queries:</p>
+
+<p>For queries which could be used to create a list of matching objects you can create a constructor method associated with this SQL and let Class::DBI do the work for you, or just inline the entire query.</p>
+
+<p>For more complex queries you need to fall back on the underlying Ima::DBI query mechanism. (Caveat: since Ima::DBI uses sprintf-style interpolation, you need to be careful to double any &#34;wildcard&#34; % signs in your queries).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="add_constructor"
+>add_constructor</a></h2>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;add_constructor(method_name =&#62; &#39;SQL_where_clause&#39;);</pre>
+
+<p>The SQL can be of arbitrary complexity and will be turned into:</p>
+
+<pre class="sh_perl">  SELECT (essential columns)
+    FROM (table name)
+   WHERE &#60;your SQL&#62;</pre>
+
+<p>This will then create a method of the name you specify, which returns a list of objects as with any built in query.</p>
+
+<p>For example:</p>
+
+<pre class="sh_perl">  Music::CD-&#62;add_constructor(new_music =&#62; &#39;year &#62; 2000&#39;);
+  my @recent = Music::CD-&#62;new_music;</pre>
+
+<p>You can also supply placeholders in your SQL, which must then be specified at query time:</p>
+
+<pre class="sh_perl">  Music::CD-&#62;add_constructor(new_music =&#62; &#39;year &#62; ?&#39;);
+  my @recent = Music::CD-&#62;new_music(2000);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="retrieve_from_sql"
+>retrieve_from_sql</a></h2>
+
+<p>On occasions where you want to execute arbitrary SQL, but don&#39;t want to go to the trouble of setting up a constructor method, you can inline the entire WHERE clause, and just get the objects back directly:</p>
+
+<pre class="sh_perl">  my @cds = Music::CD-&#62;retrieve_from_sql(qq{
+    artist = &#39;Ozzy Osbourne&#39; AND
+    title like &#34;%Crazy&#34;      AND
+    year &#60;= 1986
+    ORDER BY year
+    LIMIT 2,3
+  });</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Ima::DBI_queries"
+>Ima::DBI queries</a></h2>
+
+<p>When you can&#39;t use &#39;add_constructor&#39;, e.g. when using aggregate functions, you can fall back on the fact that Class::DBI inherits from Ima::DBI and prefers to use its style of dealing with statements, via set_sql().</p>
+
+<p>The Class::DBI set_sql() method defaults to using prepare_cached() unless the $cache parameter is defined and false (see <a href="/perldoc?Ima%3A%3ADBI" class="podlinkpod"
+>Ima::DBI</a> docs for more information).</p>
+
+<p>To assist with writing SQL that is inheritable into subclasses, several additional substitutions are available here: __TABLE__, __ESSENTIAL__ and __IDENTIFIER__. These represent the table name associated with the class, its essential columns, and the primary key of the current object, in the case of an instance method on it.</p>
+
+<p>For example, the SQL for the internal &#39;update&#39; method is implemented as:</p>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;set_sql(&#39;update&#39;, &#60;&#60;&#34;&#34;);
+    UPDATE __TABLE__
+    SET    %s
+    WHERE  __IDENTIFIER__</pre>
+
+<p>The &#39;longhand&#39; version of the new_music constructor shown above would similarly be:</p>
+
+<pre class="sh_perl">  Music::CD-&#62;set_sql(new_music =&#62; qq{
+    SELECT __ESSENTIAL__
+      FROM __TABLE__
+     WHERE year &#62; ?
+  });</pre>
+
+<p>For such &#39;SELECT&#39; queries <a href="/perldoc?Ima%3A%3ADBI" class="podlinkpod"
+>Ima::DBI</a>&#39;s set_sql() method is extended to create a helper shortcut method, named by prefixing the name of the SQL fragment with &#39;search_&#39;. Thus, the above call to set_sql() will automatically set up the method Music::CD-&#62;search_new_music(), which will execute this search and return the relevant objects or Iterator. (If there are placeholders in the query, you must pass the relevant arguments when calling your search method.)</p>
+
+<p>This does the equivalent of:</p>
+
+<pre class="sh_perl">  sub search_new_music {
+    my ($class, @args) = @_;
+    my $sth = $class-&#62;sql_new_music;
+    $sth-&#62;execute(@args);
+    return $class-&#62;sth_to_objects($sth);
+  }</pre>
+
+<p>The $sth which is used to return the objects here is a normal DBI-style statement handle, so if the results can&#39;t be turned into objects easily, it is still possible to call $sth-&#62;fetchrow_array etc and return whatever data you choose.</p>
+
+<p>Of course, any query can be added via set_sql, including joins. So, to add a query that returns the 10 Artists with the most CDs, you could write (with MySQL):</p>
+
+<pre class="sh_perl">  Music::Artist-&#62;set_sql(most_cds =&#62; qq{
+    SELECT artist.id, COUNT(cd.id) AS cds
+      FROM artist, cd
+     WHERE artist.id = cd.artist
+     GROUP BY artist.id
+     ORDER BY cds DESC
+     LIMIT 10
+  });
+
+  my @artists = Music::Artist-&#62;search_most_cds();</pre>
+
+<p>If you also need to access the &#39;cds&#39; value returned from this query, the best approach is to declare &#39;cds&#39; to be a TEMP column. (See <a href="#Non-Persistent_Fields" class="podlinkpod"
+>&#34;Non-Persistent Fields&#34;</a> below).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Class::DBI::AbstractSearch"
+>Class::DBI::AbstractSearch</a></h2>
+
+<pre class="sh_perl">  my @music = Music::CD-&#62;search_where(
+    artist =&#62; [ &#39;Ozzy&#39;, &#39;Kelly&#39; ],
+    status =&#62; { &#39;!=&#39;, &#39;outdated&#39; },
+  );</pre>
+
+<p>The <a href="/perldoc?Class%3A%3ADBI%3A%3AAbstractSearch" class="podlinkpod"
+>Class::DBI::AbstractSearch</a> module, available from CPAN, is a plugin for Class::DBI that allows you to write arbitrarily complex searches using perl data structures, rather than SQL.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Single_Value_SELECTs"
+>Single Value SELECTs</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="select_val"
+>select_val</a></h3>
+
+<p>Selects which only return a single value can couple Class::DBI&#39;s sql_single() SQL, with the $sth-&#62;select_val() call which we get from DBIx::ContextualFetch.</p>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;set_sql(count_all =&#62; &#34;SELECT COUNT(*) FROM __TABLE__&#34;);
+  # .. then ..
+  my $count = $class-&#62;sql_count_all-&#62;select_val;</pre>
+
+<p>This can also take placeholders and/or do column interpolation if required:</p>
+
+<pre class="sh_perl">  __PACKAGE__-&#62;set_sql(count_above =&#62; q{
+    SELECT COUNT(*) FROM __TABLE__ WHERE %s &#62; ?
+  });
+  # .. then ..
+  my $count = $class-&#62;sql_count_above(&#39;year&#39;)-&#62;select_val(2001);</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="sql_single"
+>sql_single</a></h3>
+
+<p>Internally Class::DBI defines a very simple SQL fragment called &#39;single&#39;:</p>
+
+<pre class="sh_perl">  &#34;SELECT %s FROM __TABLE__&#34;.  </pre>
+
+<p>This is used to implement the above Class-&#62;count_all():</p>
+
+<pre class="sh_perl">  $class-&#62;sql_single(&#34;COUNT(*)&#34;)-&#62;select_val;</pre>
+
+<p>This interpolates the COUNT(*) into the %s of the SQL, and then executes the query, returning a single value.</p>
+
+<p>Any SQL set up via set_sql() can of course be supplied here, and select_val can take arguments for any placeholders there.</p>
+
+<p>Internally several helper methods are defined using this approach:</p>
+
+<dl>
+<dt><a name='count_all'></a><a name="-_count_all"
+>- count_all</a></dt>
+
+<dd>
+<dt><a name='maximum_value_of'></a><a name="-_maximum_value_of($column)"
+>- maximum_value_of($column)</a></dt>
+
+<dd>
+<dt><a name='minimum_value_of'></a><a name="-_minimum_value_of($column)"
+>- minimum_value_of($column)</a></dt>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LAZY_POPULATION"
+>LAZY POPULATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>In the tradition of Perl, Class::DBI is lazy about how it loads your objects. Often, you find yourself using only a small number of the available columns and it would be a waste of memory to load all of them just to get at two, especially if you&#39;re dealing with large numbers of objects simultaneously.</p>
+
+<p>You should therefore group together your columns by typical usage, as fetching one value from a group can also pre-fetch all the others in that group for you, for more efficient access.</p>
+
+<p>So for example, if we usually fetch the artist and title, but don&#39;t use the &#39;year&#39; so much, then we could say the following:</p>
+
+<pre class="sh_perl">  Music::CD-&#62;columns(Primary   =&#62; qw/cdid/);
+  Music::CD-&#62;columns(Essential =&#62; qw/artist title/);
+  Music::CD-&#62;columns(Others    =&#62; qw/year runlength/);</pre>
+
+<p>Now when you fetch back a CD it will come pre-loaded with the &#39;cdid&#39;, &#39;artist&#39; and &#39;title&#39; fields. Fetching the &#39;year&#39; will mean another visit to the database, but will bring back the &#39;runlength&#39; whilst it&#39;s there.</p>
+
+<p>This can potentially increase performance.</p>
+
+<p>If you don&#39;t like this behavior, then just add all your columns to the Essential group, and Class::DBI will load everything at once. If you have a single column primary key you can do this all in one shot with one single column declaration:</p>
+
+<pre class="sh_perl">  Music::CD-&#62;columns(Essential =&#62; qw/cdid artist title year runlength/);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="columns"
+>columns</a></h2>
+
+<pre class="sh_perl">  my @all_columns  = $class-&#62;columns;
+  my @columns      = $class-&#62;columns($group);
+
+  my @primary      = $class-&#62;primary_columns;
+  my $primary      = $class-&#62;primary_column;
+  my @essential    = $class-&#62;_essential;</pre>
+
+<p>There are four &#39;reserved&#39; groups: &#39;All&#39;, &#39;Essential&#39;, &#39;Primary&#39; and &#39;TEMP&#39;.</p>
+
+<p><b>&#39;All&#39;</b> are all columns used by the class. If not set it will be created from all the other groups.</p>
+
+<p><b>&#39;Primary&#39;</b> is the primary key columns for this class. It <i>must</i> be set before objects can be used.</p>
+
+<p>If &#39;All&#39; is given but not &#39;Primary&#39; it will assume the first column in &#39;All&#39; is the primary key.</p>
+
+<p><b>&#39;Essential&#39;</b> are the minimal set of columns needed to load and use the object. Only the columns in this group will be loaded when an object is retrieve()&#39;d. It is typically used to save memory on a class that has a lot of columns but where only use a few of them are commonly used. It will automatically be set to <b>&#39;Primary&#39;</b> if not explicitly set. The &#39;Primary&#39; column is always part of the &#39;Essential&#39; group.</p>
+
+<p>For simplicity primary_columns(), primary_column(), and _essential() methods are provided to return these. The primary_column() method should only be used for tables that have a single primary key column.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Non-Persistent_Fields"
+>Non-Persistent Fields</a></h2>
+
+<pre class="sh_perl">  Music::CD-&#62;columns(TEMP =&#62; qw/nonpersistent/);</pre>
+
+<p>If you wish to have fields that act like columns in every other way, but that don&#39;t actually exist in the database (and thus will not persist), you can declare them as part of a column group of &#39;TEMP&#39;.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="find_column"
+>find_column</a></h2>
+
+<pre class="sh_perl">  Class-&#62;find_column($column);
+  $obj-&#62;find_column($column);</pre>
+
+<p>The columns of a class are stored as Class::DBI::Column objects. This method will return you the object for the given column, if it exists. This is most useful either in a boolean context to discover if the column exists, or to &#39;normalize&#39; a user-entered column name to an actual Column.</p>
+
+<p>The interface of the Column object itself is still under development, so you shouldn&#39;t really rely on anything internal to it.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TRANSACTIONS"
+>TRANSACTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Class::DBI suffers from the usual problems when dealing with transactions. In particular, you should be very wary when committing your changes that you may actually be in a wider scope than expected and that your caller may not be expecting you to commit.</p>
+
+<p>However, as long as you are aware of this, and try to keep the scope of your transactions small, ideally always within the scope of a single method, you should be able to work with transactions with few problems.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="dbi_commit_/_dbi_rollback"
+>dbi_commit / dbi_rollback</a></h2>
+
+<pre class="sh_perl">  $obj-&#62;dbi_commit();
+  $obj-&#62;dbi_rollback();</pre>
+
+<p>These are thin aliases through to the DBI&#39;s commit() and rollback() commands to commit or rollback all changes to this object.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Localised_Transactions"
+>Localised Transactions</a></h2>
+
+<p>A nice idiom for turning on a transaction locally (with AutoCommit turned on globally) (courtesy of Dominic Mitchell) is:</p>
+
+<pre class="sh_perl">  sub do_transaction {
+    my $class = shift;
+    my ( $code ) = @_;
+    # Turn off AutoCommit for this scope.
+    # A commit will occur at the exit of this block automatically,
+    # when the local AutoCommit goes out of scope.
+    local $class-&#62;db_Main-&#62;{ AutoCommit };
+
+    # Execute the required code inside the transaction.
+    eval { $code-&#62;() };
+    if ( $@ ) {
+      my $commit_error = $@;
+      eval { $class-&#62;dbi_rollback }; # might also die!
+      die $commit_error;
+    }
+  }
+
+  And then you just call:
+
+  Music::DBI-&#62;do_transaction( sub {
+    my $artist = Music::Artist-&#62;insert({ name =&#62; &#39;Pink Floyd&#39; });
+    my $cd = $artist-&#62;add_to_cds({ 
+      title =&#62; &#39;Dark Side Of The Moon&#39;, 
+      year =&#62; 1974,
+    });
+  });</pre>
+
+<p>Now either both will get added, or the entire transaction will be rolled back.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="UNIQUENESS_OF_OBJECTS_IN_MEMORY"
+>UNIQUENESS OF OBJECTS IN MEMORY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Class::DBI supports uniqueness of objects in memory. In a given perl interpreter there will only be one instance of any given object at one time. Many variables may reference that object, but there can be only one.</p>
+
+<p>Here&#39;s an example to illustrate:</p>
+
+<pre class="sh_perl">  my $artist1 = Music::Artist-&#62;insert({ artistid =&#62; 7, name =&#62; &#39;Polysics&#39; });
+  my $artist2 = Music::Artist-&#62;retrieve(7);
+  my $artist3 = Music::Artist-&#62;search( name =&#62; &#39;Polysics&#39; )-&#62;first;</pre>
+
+<p>Now $artist1, $artist2, and $artist3 all point to the same object. If you update a property on one of them, all of them will reflect the update.</p>
+
+<p>This is implemented using a simple object lookup index for all live objects in memory. It is not a traditional cache - when your objects go out of scope, they will be destroyed normally, and a future retrieve will instantiate an entirely new object.</p>
+
+<p>The ability to perform this magic for you replies on your perl having access to the Scalar::Util::weaken function. Although this is part of the core perl distribution, some vendors do not compile support for it. To find out if your perl has support for it, you can run this on the command line:</p>
+
+<pre class="sh_perl">  perl -e &#39;use Scalar::Util qw(weaken)&#39;</pre>
+
+<p>If you get an error message about weak references not being implemented, Class::DBI will not maintain this lookup index, but give you a separate instances for each retrieve.</p>
+
+<p>A few new tools are offered for adjusting the behavior of the object index. These are still somewhat experimental and may change in a future release.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="remove_from_object_index"
+>remove_from_object_index</a></h2>
+
+<pre class="sh_perl">  $artist-&#62;remove_from_object_index();</pre>
+
+<p>This is an object method for removing a single object from the live objects index. You can use this if you want to have multiple distinct copies of the same object in memory.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="clear_object_index"
+>clear_object_index</a></h2>
+
+<pre class="sh_perl">  Music::DBI-&#62;clear_object_index();</pre>
+
+<p>You can call this method on any class or instance of Class::DBI, but the effect is universal: it removes all objects from the index.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="purge_object_index_every"
+>purge_object_index_every</a></h2>
+
+<pre class="sh_perl">  Music::Artist-&#62;purge_object_index_every(2000);</pre>
+
+<p>Weak references are not removed from the index when an object goes out of scope. This means that over time the index will grow in memory. This is really only an issue for long-running environments like mod_perl, but every so often dead references are cleaned out to prevent this. By default, this happens every 1000 object loads, but you can change that default for your class by setting the &#39;purge_object_index_every&#39; value.</p>
+
+<p>(Eventually this may handled in the DESTROY method instead.)</p>
+
+<p>As a final note, keep in mind that you can still have multiple distinct copies of an object in memory if you have multiple perl interpreters running. CGI, mod_perl, and many other common usage situations run multiple interpreters, meaning that each one of them may have an instance of an object representing the same data. However, this is no worse than it was before, and is entirely normal for database applications in multi-process environments.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUBCLASSING"
+>SUBCLASSING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The preferred method of interacting with Class::DBI is for you to write a subclass for your database connection, with each table-class inheriting in turn from it.</p>
+
+<p>As well as encapsulating the connection information in one place, this also allows you to override default behaviour or add additional functionality across all of your classes.</p>
+
+<p>As the innards of Class::DBI are still in flux, you must exercise extreme caution in overriding private methods of Class::DBI (those starting with an underscore), unless they are explicitly mentioned in this documentation as being safe to override. If you find yourself needing to do this, then I would suggest that you ask on the mailing list about it, and we&#39;ll see if we can either come up with a better approach, or provide a new means to do whatever you need to do.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEATS"
+>CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Multi-Column_Foreign_Keys_are_not_supported"
+>Multi-Column Foreign Keys are not supported</a></h2>
+
+<p>You can&#39;t currently add a relationship keyed on multiple columns. You could, however, write a Relationship plugin to do this, and the world would be eternally grateful...</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Don&#39;t_change_or_inflate_the_value_of_your_primary_columns"
+>Don&#39;t change or inflate the value of your primary columns</a></h2>
+
+<p>Altering your primary key column currently causes Bad Things to happen. I should really protect against this.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUPPORTED_DATABASES"
+>SUPPORTED DATABASES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Theoretically Class::DBI should work with almost any standard RDBMS. Of course, in the real world, we know that that&#39;s not true. It is known to work with MySQL, PostgreSQL, Oracle and SQLite, each of which have their own additional subclass on CPAN that you should explore if you&#39;re using them:</p>
+
+<pre class="sh_perl">  L&#60;Class::DBI::mysql&#62;, L&#60;Class::DBI::Pg&#62;, L&#60;Class::DBI::Oracle&#62;,
+  L&#60;Class::DBI::SQLite&#62;</pre>
+
+<p>For the most part it&#39;s been reported to work with Sybase, although there are some issues with multi-case column/table names. Beyond that lies The Great Unknown(tm). If you have access to other databases, please give this a test run, and let me know the results.</p>
+
+<p><a href="/perldoc?Ima%3A%3ADBI" class="podlinkpod"
+>Ima::DBI</a> (and hence Class::DBI) requires a database that supports table aliasing and a DBI driver that supports placeholders. This means it won&#39;t work with older releases of <a href="/perldoc?DBD%3A%3AAnyData" class="podlinkpod"
+>DBD::AnyData</a> (and any releases of its predecessor <a href="/perldoc?DBD%3A%3ARAM" class="podlinkpod"
+>DBD::RAM</a>), and <a href="/perldoc?DBD%3A%3ASybase" class="podlinkpod"
+>DBD::Sybase</a> + FreeTDS may or may not work depending on your FreeTDS version.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CURRENT_AUTHOR"
+>CURRENT AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Tony Bowden</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR_EMERITUS"
+>AUTHOR EMERITUS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Michael G Schwern</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="THANKS_TO"
+>THANKS TO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Tim Bunce, Tatsuhiko Miyagawa, Perrin Harkins, Alexander Karelas, Barry Hoggard, Bart Lateur, Boris Mouzykantskii, Brad Bowman, Brian Parker, Casey West, Charles Bailey, Christopher L. Everett Damian Conway, Dan Thill, Dave Cash, David Jack Olrik, Dominic Mitchell, Drew Taylor, Drew Wilson, Jay Strauss, Jesse Sheidlower, Jonathan Swartz, Marty Pauley, Michael Styer, Mike Lambert, Paul Makepeace, Phil Crow, Richard Piacentini, Simon Cozens, Simon Wilcox, Thomas Klausner, Tom Renfro, Uri Gutman, William McKee, the Class::DBI mailing list, the POOP group, and all the others who&#39;ve helped, but that I&#39;ve forgetten to mention.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="RELEASE_PHILOSOPHY"
+>RELEASE PHILOSOPHY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Class::DBI now uses a three-level versioning system. This release, for example, is version 3.0.17</p>
+
+<p>The general approach to releases will be that users who like a degree of stability can hold off on upgrades until the major sub-version increases (e.g. 3.1.0). Those who like living more on the cutting edge can keep up to date with minor sub-version releases.</p>
+
+<p>Functionality which was introduced during a minor sub-version release may disappear without warning in a later minor sub-version release. I&#39;ll try to avoid doing this, and will aim to have a deprecation cycle of at least a few minor sub-versions, but you should keep a close eye on the CHANGES file, and have good tests in place. (This is good advice generally, of course.) Anything that is in a major sub-version release will go through a deprecation cycle of at least one further major sub-version before it is removed (and usually longer).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Getting_changes_accepted"
+>Getting changes accepted</a></h2>
+
+<p>There is an active Class::DBI community, however I am not part of it. I am not on the mailing list, and I don&#39;t follow the wiki. I also do not follow Perl Monks or CPAN reviews or annoCPAN or whatever the tool du jour happens to be.</p>
+
+<p>If you find a problem with Class::DBI, by all means discuss it in any of these places, but don&#39;t expect anything to happen unless you actually tell me about it.</p>
+
+<p>The preferred method for doing this is via the CPAN RT interface, which you can access at <a href="http://rt.cpan.org/" class="podlinkurl"
+>http://rt.cpan.org/</a> or by emailing bugs-Class-DBI@rt.cpan.org</p>
+
+<p>If you email me personally about Class::DBI issues, then I will probably bounce them on to there, unless you specifically ask me not to. Otherwise I can&#39;t keep track of what all needs fixed. (This of course means that if you ask me not to send your mail to RT, there&#39;s a much higher chance that nothing will every happen about your problem).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Bug_Reports"
+>Bug Reports</a></h2>
+
+<p>If you&#39;re reporting a bug then it has a much higher chance of getting fixed quicker if you can include a failing test case. This should be a completely stand-alone test that could be added to the Class::DBI distribution. That is, it should use <a href="/perldoc?Test%3A%3ASimple" class="podlinkpod"
+>Test::Simple</a> or <a href="/perldoc?Test%3A%3AMore" class="podlinkpod"
+>Test::More</a>, fail with the current code, but pass when I fix the problem. If it needs to have a working database to show the problem, then this should preferably use SQLite, and come with all the code to set this up. The nice people on the mailing list will probably help you out if you need assistance putting this together.</p>
+
+<p>You don&#39;t need to include code for actually fixing the problem, but of course it&#39;s often nice if you can. I may choose to fix it in a different way, however, so it&#39;s often better to ask first whether I&#39;d like a patch, particularly before spending a lot of time hacking.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Patches"
+>Patches</a></h2>
+
+<p>If you are sending patches, then please send either the entire code that is being changed or the output of &#39;diff -Bub&#39;. Please also note what version the patch is against. I tend to apply all patches manually, so I&#39;m more interested in being able to see what you&#39;re doing than in being able to apply the patch cleanly. Code formatting isn&#39;t an issue, as I automagically run perltidy against the source after any changes, so please format for clarity.</p>
+
+<p>Patches have a much better chance of being applied if they are small. People often think that it&#39;s better for me to get one patch with a bunch of fixes. It&#39;s not. I&#39;d much rather get 100 small patches that can be applied one by one. A change that I can make and release in five minutes is always better than one that needs a couple of hours to ponder and work through.</p>
+
+<p>I often reject patches that I don&#39;t like. Please don&#39;t take it personally. I also like time to think about the wider implications of changes. Often a <i>lot</i> of time. Feel free to remind me about things that I may have forgotten about, but as long as they&#39;re on rt.cpan.org I will get around to them eventually.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Feature_Requests"
+>Feature Requests</a></h2>
+
+<p>Wish-list requests are fine, although you should probably discuss them on the mailing list (or equivalent) with others first. There&#39;s quite often a plugin somewhere that already does what you want.</p>
+
+<p>In general I am much more open to discussion on how best to provide the flexibility for you to make your Cool New Feature(tm) a plugin rather than adding it to Class::DBI itself.</p>
+
+<p>For the most part the core of Class::DBI already has most of the functionality that I believe it will ever need (and some more besides, that will probably be split off at some point). Most other things are much better off as plugins, with a separate life on CPAN or elsewhere (and with me nowhere near the critical path). Most of the ongoing work on Class::DBI is about making life easier for people to write extensions - whether they&#39;re local to your own codebase or released for wider consumption.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUPPORT"
+>SUPPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Support for Class::DBI is mostly via the mailing list.</p>
+
+<p>To join the list, or read the archives, visit <a href="http://lists.digitalcraftsmen.net/mailman/listinfo/classdbi" class="podlinkurl"
+>http://lists.digitalcraftsmen.net/mailman/listinfo/classdbi</a></p>
+
+<p>There is also a Class::DBI wiki at <a href="http://www.class-dbi.com/" class="podlinkurl"
+>http://www.class-dbi.com/</a></p>
+
+<p>The wiki contains much information that should probably be in these docs but isn&#39;t yet. (See above if you want to help to rectify this.)</p>
+
+<p>As mentioned above, I don&#39;t follow the list or the wiki, so if you want to contact me individually, then you&#39;ll have to track me down personally.</p>
+
+<p>There are lots of 3rd party subclasses and plugins available. For a list of the ones on CPAN see: <a href="http://search.cpan.org/search?query=Class%3A%3ADBI&#38;mode=module" class="podlinkurl"
+>http://search.cpan.org/search?query=Class%3A%3ADBI&#38;mode=module</a></p>
+
+<p>An article on Class::DBI was published on Perl.com a while ago. It&#39;s slightly out of date , but it&#39;s a good introduction: <a href="http://www.perl.com/pub/a/2002/11/27/classdbi.html" class="podlinkurl"
+>http://www.perl.com/pub/a/2002/11/27/classdbi.html</a></p>
+
+<p>The wiki has numerous references to other articles, presentations etc.</p>
+
+<p><a href="http://poop.sourceforge.net/" class="podlinkurl"
+>http://poop.sourceforge.net/</a> provides a document comparing a variety of different approaches to database persistence, such as Class::DBI, Alazabo, Tangram, SPOPS etc.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~tmtm/Class-DBI-v3.0.17/lib/Class/DBI.pm" class="podlinkpod"
+>Class::DBI</a> is built on top of <a href="/perldoc?Ima%3A%3ADBI" class="podlinkpod"
+>Ima::DBI</a>, <a href="/perldoc?DBIx%3A%3AContextualFetch" class="podlinkpod"
+>DBIx::ContextualFetch</a>, <a href="/perldoc?Class%3A%3AAccessor" class="podlinkpod"
+>Class::Accessor</a> and <a href="/perldoc?Class%3A%3AData%3A%3AInheritable" class="podlinkpod"
+>Class::Data::Inheritable</a>. The innards and much of the interface are easier to understand if you have an idea of how they all work as well.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78272 Uploads, 24723 Distributions
+106001 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 22:02:28 2012 GMT (0.383760929107666) @cpansearch1 -->
+ </body>
+</html>

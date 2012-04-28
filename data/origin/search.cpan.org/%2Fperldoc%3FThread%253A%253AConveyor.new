@@ -1,0 +1,618 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Thread::Conveyor - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Thread-Conveyor",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Thread-Conveyor-0.19",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Thread::Conveyor",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ELIZABETH",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Thread::Conveyor">permalink</a></div>
+  <a href="/~elizabeth/">Elizabeth Mattijsen</a> &gt;
+  <a href="/~elizabeth/Thread-Conveyor-0.19/">Thread-Conveyor-0.19</a> &gt;
+  Thread::Conveyor
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/f6f8083d758244cb1b1df1997adc1791?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/E/EL/ELIZABETH/Thread-Conveyor-0.19.tar.gz">Thread-Conveyor-0.19.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Thread%3A%3AConveyor;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ELIZABETH/Thread-Conveyor-0.19/lib/Thread/Conveyor.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Thread-Conveyor">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.19 &nbsp;
+<span class="noprint">
+  <a href="/src/ELIZABETH/Thread-Conveyor-0.19/lib/Thread/Conveyor.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#CLASS_METHODS'>CLASS METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#optimize'>optimize</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#OBJECT_METHODS'>OBJECT METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#put'>put</a>
+    <li class='indexItem indexItem2'><a href='#take'>take</a>
+    <li class='indexItem indexItem2'><a href='#take_dontwait'>take_dontwait</a>
+    <li class='indexItem indexItem2'><a href='#clean'>clean</a>
+    <li class='indexItem indexItem2'><a href='#clean_dontwait'>clean_dontwait</a>
+    <li class='indexItem indexItem2'><a href='#peek'>peek</a>
+    <li class='indexItem indexItem2'><a href='#peek_dontwait'>peek_dontwait</a>
+    <li class='indexItem indexItem2'><a href='#onbelt'>onbelt</a>
+    <li class='indexItem indexItem2'><a href='#maxboxes'>maxboxes</a>
+    <li class='indexItem indexItem2'><a href='#minboxes'>minboxes</a>
+    <li class='indexItem indexItem2'><a href='#shutdown'>shutdown</a>
+    <li class='indexItem indexItem2'><a href='#thread'>thread</a>
+    <li class='indexItem indexItem2'><a href='#tid'>tid</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#REQUIRED_MODULES'>REQUIRED MODULES</a>
+  <li class='indexItem indexItem1'><a href='#OPTIMIZATIONS'>OPTIMIZATIONS</a>
+  <li class='indexItem indexItem1'><a href='#CAVEATS'>CAVEATS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#HISTORY'>HISTORY</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Thread::Conveyor - transport of any data-structure between threads</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This documentation describes version 0.19.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Thread::Conveyor;
+    my $belt = Thread::Conveyor-&#62;new(
+     {
+      maxboxes =&#62; 50,
+      minboxes =&#62; 25,
+      optimize =&#62; &#39;memory&#39;, # or &#39;cpu&#39;
+     }
+    );
+
+    $belt-&#62;put( &#34;foo&#34;, [&#34;bar&#34;], {&#34;zoo&#34;} );
+    my ($foo,$bar,$zoo) = $belt-&#62;take;
+    my ($foo,$bar,$zoo) = $belt-&#62;take_dontwait;
+    my ($foo,$bar,$zoo) = $belt-&#62;peek;
+    my ($foo,$bar,$zoo) = $belt-&#62;peek_dontwait;
+    my $onbelt = $belt-&#62;onbelt;
+
+    my @box = $belt-&#62;clean;
+    my @box = $belt-&#62;clean_dontwait;
+    my ($foo,$bar,$zoo) = @{$box[0]};
+
+    $belt-&#62;maxboxes( 100 );
+    $belt-&#62;minboxes( 50 );
+
+    $belt-&#62;shutdown;
+    $belt-&#62;thread;
+    $belt-&#62;tid;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">                  *** A note of CAUTION ***
+
+ This module only functions on Perl versions 5.8.0 and later.
+ And then only when threads are enabled with -Dusethreads.  It
+ is of no use with any version of Perl before 5.8.0 or without
+ threads enabled.
+
+                  *************************</pre>
+
+<p>The Thread::Conveyor object is a thread-safe data structure that mimics the behaviour of a conveyor belt. One or more worker threads can put boxes with frozen values and references on one end of the belt to be taken off by one or more worker threads on the other end of the belt to be thawed and returned.</p>
+
+<p>A box may consist of any combination of scalars and references to scalars, arrays (lists) and hashes. Freezing and thawing is currently done with the <a href="/perldoc?Thread%3A%3ASerialize" class="podlinkpod"
+>Thread::Serialize</a> module, but that may change in the future. Objects and code references are currently <b>not</b> allowed.</p>
+
+<p>By default, the maximum number of boxes on the belt is limited to <b>50</b>. Putting of boxes on the belt is halted if the maximum number of boxes is exceeded. This throttling feature was added because it was found that excessive memory usage could be caused by having the belt growing too large. Throttling can be disabled if so desired.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CLASS_METHODS"
+>CLASS METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+>new</a></h2>
+
+<pre class="sh_perl"> $belt = Thread::Conveyor-&#62;new(
+  {
+   maxboxes =&#62; 50,
+   minboxes =&#62; 25,
+   optimize =&#62; &#39;memory&#39;, # or &#39;cpu&#39;
+  }
+ );</pre>
+
+<p>The &#34;new&#34; function creates a new empty belt. It returns the instantiated Thread::Conveyor object.</p>
+
+<p>The input parameter is a reference to a hash. The following fields are <b>optional</b> in the hash reference:</p>
+
+<dl>
+<dt><a name="maxboxes"
+>maxboxes</a></dt>
+
+<dd>
+<pre class="sh_perl"> maxboxes =&#62; 50,
+
+ maxboxes =&#62; undef,  # disable throttling</pre>
+
+<p>The &#34;maxboxes&#34; field specifies the <b>maximum</b> number of boxes that can be sitting on the belt to be handled (throttling). If a new <a href="/perldoc?put" class="podlinkpod"
+>put</a> would exceed this amount, putting of boxes will be halted until the number of boxes waiting to be handled has become at least as low as the amount specified with the &#34;minboxes&#34; field.</p>
+
+<p>Fifty boxes will be assumed for the &#34;maxboxes&#34; field if it is not specified. If you do not want to have any throttling, you can specify the value &#34;undef&#34; for the field. But beware! If you do not have throttling active, you may wind up using excessive amounts of memory used for storing all of the boxes that have not been handled yet.</p>
+
+<p>The <a href="/perldoc?maxboxes" class="podlinkpod"
+>maxboxes</a> method can be called to change the throttling settings during the lifetime of the object.</p>
+
+<dt><a name="minboxes"
+>minboxes</a></dt>
+
+<dd>
+<pre class="sh_perl"> minboxes =&#62; 25, # default: maxboxes / 2</pre>
+
+<p>The &#34;minboxes&#34; field specifies the <b>minimum</b> number of boxes that can be waiting on the belt to be handled before the <a href="/perldoc?put" class="podlinkpod"
+>put</a>ting of boxes is allowed again (throttling).</p>
+
+<p>If throttling is active and the &#34;minboxes&#34; field is not specified, then half of the &#34;maxboxes&#34; value will be assumed.</p>
+
+<p>The <a href="/perldoc?minboxes" class="podlinkpod"
+>minboxes</a> method can be called to change the throttling settings during the lifetime of the object.</p>
+
+<dt><a name="optimize"
+>optimize</a></dt>
+
+<dd>
+<pre class="sh_perl"> optimize =&#62; &#39;cpu&#39;, # default: depends on Perl version</pre>
+
+<p>The &#34;optimize&#34; field specifies which implementation of the belt will be selected. Currently there are two choices: &#39;cpu&#39; and &#39;memory&#39;. For Perl 5.8.0 the default is &#34;memory&#34;. For higher versions of perl, the default optimization is &#34;cpu&#34;. The reason for this was that Perl 5.8.0 has a severe memory leak with shared arrays, which is what is being used with the &#34;cpu&#34; optimization.</p>
+
+<p>You can call the class method <a href="/perldoc?optimize" class="podlinkpod"
+>optimize</a> to change the default optimization.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="optimize"
+>optimize</a></h2>
+
+<pre class="sh_perl"> Thread::Conveyor-&#62;optimize( &#39;cpu&#39; );
+
+ $optimize = Thread::Conveyor-&#62;optimize;</pre>
+
+<p>The &#34;optimize&#34; class method allows you to specify the default optimization type that will be used if no &#34;optimize&#34; field has been explicitely specified with a call to <a href="/perldoc?new" class="podlinkpod"
+>new</a>. It returns the current default type of optimization.</p>
+
+<p>Currently two types of optimization can be selected:</p>
+
+<dl>
+<dt><a name="memory"
+>memory</a></dt>
+
+<dd>
+<p>Attempt to use as little memory as possible. Currently, this is achieved by starting a seperate thread which hosts an unshared array. This uses the &#34;Thread::Conveyor::Thread&#34; sub-class.</p>
+
+<dt><a name="cpu"
+>cpu</a></dt>
+
+<dd>
+<p>Attempt to use as little CPU as possible. Currently, this is achieved by using a shared array (using the &#34;Thread::Conveyor::Array&#34; sub-class), encapsulated in a hash reference if throttling is activated (then also using the &#34;Thread::Conveyor::Throttled&#34; sub-class).</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OBJECT_METHODS"
+>OBJECT METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following methods operate on the instantiated Thread::Conveyor object.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="put"
+>put</a></h2>
+
+<pre class="sh_perl"> $belt-&#62;put( &#39;string&#39;,$scalar,[],{} );</pre>
+
+<p>The &#34;put&#34; method freezes all the specified parameters together in a box and puts the box on the beginning of the belt.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="take"
+>take</a></h2>
+
+<pre class="sh_perl"> ($string,$scalar,$listref,$hashref) = $belt-&#62;take;</pre>
+
+<p>The &#34;take&#34; method waits for a box to become available at the end of the belt, removes that box from the belt, thaws the contents of the box and returns the resulting values and references.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="take_dontwait"
+>take_dontwait</a></h2>
+
+<pre class="sh_perl"> ($string,$scalar,$listref,$hashref) = $belt-&#62;take_dontwait;</pre>
+
+<p>The &#34;take_dontwait&#34; method, like the <a href="/perldoc?take" class="podlinkpod"
+>take</a> method, removes a box from the end of the belt if there is a box waiting at the end of the belt. If there is <b>no</b> box available, then the &#34;take_dontwait&#34; method will return immediately with an empty list. Otherwise the contents of the box will be thawed and the resulting values and references will be returned.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="clean"
+>clean</a></h2>
+
+<pre class="sh_perl"> @box = $belt-&#62;clean;
+ ($string,$scalar,$listref,$hashref) = @{$box[0]};</pre>
+
+<p>The &#34;clean&#34; method waits for one or more boxes to become available at the end of the belt, removes <b>all</b> boxes from the belt, thaws the contents of the boxes and returns the resulting values and references as an array where each element is a reference to the original contents of each box.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="clean_dontwait"
+>clean_dontwait</a></h2>
+
+<pre class="sh_perl"> @box = $belt-&#62;clean_dontwait;
+ ($string,$scalar,$listref,$hashref) = @{$box[0]};</pre>
+
+<p>The &#34;clean_dontwait&#34; method, like the <a href="/perldoc?clean" class="podlinkpod"
+>clean</a> method, removes all boxes from the end of the belt if there are any boxes waiting at the end of the belt. If there are <b>no</b> boxes available, then the &#34;clean_dontwait&#34; method will return immediately with an empty list. Otherwise the contents of the boxes will be thawed and the resulting values and references will be returned an an array where each element is a reference to the original contents of each box.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="peek"
+>peek</a></h2>
+
+<pre class="sh_perl"> ($string,$scalar,$listref,$hashref) = $belt-&#62;peek;
+
+ @lookahead = $belt-&#62;peek( $index );</pre>
+
+<p>The &#34;peek&#34; method waits for a box to become availabe at the end of the belt, but does <b>not</b> remove it from the belt like the <a href="/perldoc?take" class="podlinkpod"
+>take</a> method does. It does however thaw the contents and returns the resulting values and references.</p>
+
+<p>For advanced, and mostly internal, usages, it is possible to specify the ordinal number of the box in which to peek.</p>
+
+<p>Please note that there is <b>no</b> guarantee that &#34;take&#34; will give you the same data as which is returned with this method, as any other thread can have taken the boxes off of the belt in the meantime.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="peek_dontwait"
+>peek_dontwait</a></h2>
+
+<pre class="sh_perl"> ($string,$scalar,$listref,$hashref) = $belt-&#62;peek_dontwait;
+
+ @lookahead = $belt-&#62;peek_dontwait( $index );</pre>
+
+<p>The &#34;peek_dontwait&#34; method is like the <a href="/perldoc?take_dontwait" class="podlinkpod"
+>take_dontwait</a> method, but does <b>not</b> remove the box from the belt if there is one available. If there is a box available, then the contents of the box will be thawed and the resulting values and references are returned. An empty list will be returned if there was no box available at the end of the belt.</p>
+
+<p>For advanced, and mostly internal, usages, it is possible to specify the ordinal number of the box in which to peek.</p>
+
+<p>Please note that there is <b>no</b> guarantee that &#34;take&#34; will give you the same data as which is returned with this method, as any other thread can have taken the boxes off of the belt in the meantime.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="onbelt"
+>onbelt</a></h2>
+
+<pre class="sh_perl"> $onbelt = $belt-&#62;onbelt;</pre>
+
+<p>The &#34;onbelt&#34; method returns the number of boxes that are still in the belt.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="maxboxes"
+>maxboxes</a></h2>
+
+<pre class="sh_perl"> $belt-&#62;maxboxes( 100 );
+ $maxboxes = $belt-&#62;maxboxes;</pre>
+
+<p>The &#34;maxboxes&#34; method returns the maximum number of boxes that can be on the belt before throttling sets in. The input value, if specified, specifies the new maximum number of boxes that may be on the belt. Throttling will be switched off if the value <b>undef</b> is specified.</p>
+
+<p>Specifying the &#34;maxboxes&#34; field when creating the object with <a href="/perldoc?new" class="podlinkpod"
+>new</a> is equivalent to calling this method.</p>
+
+<p>The <a href="/perldoc?minboxes" class="podlinkpod"
+>minboxes</a> method can be called to specify the minimum number of boxes that must be on the belt before the putting of boxes is allowed again after reaching the maximum number of boxes. By default, half of the &#34;maxboxes&#34; value is assumed.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="minboxes"
+>minboxes</a></h2>
+
+<pre class="sh_perl"> $belt-&#62;minboxes( 50 );
+ $minboxes = $belt-&#62;minboxes;</pre>
+
+<p>The &#34;minboxes&#34; method returns the minimum number of boxes that must be on the belt before the putting of boxes is allowed again after reaching the maximum number of boxes. The input value, if specified, specifies the new minimum number of boxes that must be on the belt.</p>
+
+<p>Specifying the &#34;minboxes&#34; field when creating the object with <a href="/perldoc?new" class="podlinkpod"
+>new</a> is equivalent to calling this method.</p>
+
+<p>The <a href="/perldoc?maxboxes" class="podlinkpod"
+>maxboxes</a> method can be called to set the maximum number of boxes that may be on the belt before the putting of boxes will be halted.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="shutdown"
+>shutdown</a></h2>
+
+<pre class="sh_perl"> $belt-&#62;shutdown;</pre>
+
+<p>The &#34;shutdown&#34; method performs an orderly shutdown of the belt. It waits until all of the boxes on the belt have been removed before it returns.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="thread"
+>thread</a></h2>
+
+<pre class="sh_perl"> $thread = $belt-&#62;thread;</pre>
+
+<p>The &#34;thread&#34; method returns the thread object that is being used for the belt. It returns undef if no seperate thread is being used.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="tid"
+>tid</a></h2>
+
+<pre class="sh_perl"> $tid = $belt-&#62;tid;</pre>
+
+<p>The &#34;tid&#34; method returns the thread id of the thread object that is being used for the belt. It returns undef if no seperate thread is being used.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="REQUIRED_MODULES"
+>REQUIRED MODULES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> load (any)
+ Thread::Serialize (any)
+ Thread::Tie (0.09)</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OPTIMIZATIONS"
+>OPTIMIZATIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module uses <a href="/perldoc?load" class="podlinkpod"
+>load</a> to reduce memory and CPU usage. This causes subroutines only to be compiled in a thread when they are actually needed at the expense of more CPU when they need to be compiled. Simple benchmarks however revealed that the overhead of the compiling single routines is not much more (and sometimes a lot less) than the overhead of cloning a Perl interpreter with a lot of subroutines pre-loaded.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEATS"
+>CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Passing unshared values between threads is accomplished by serializing the specified values using <a href="/perldoc?Thread%3A%3ASerialize" class="podlinkpod"
+>Thread::Serialize</a>. Please see the CAVEATS section there for an up-to-date status of what can be passed around between threads.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Elizabeth Mattijsen, &#60;liz@dijkmat.nl&#62;.</p>
+
+<p>Please report bugs to &#60;perlbugs@dijkmat.nl&#62;.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="HISTORY"
+>HISTORY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module started life as <a href="/perldoc?Thread%3A%3AQueue%3A%3AAny" class="podlinkpod"
+>Thread::Queue::Any</a> and as a sub-class of <a href="/perldoc?Thread%3A%3AQueue" class="podlinkpod"
+>Thread::Queue</a>. Using the conveyor belt metaphore seemed more appropriate and therefore the name was changed. To cut the cord with Thread::Queue completely, the belt mechanism was implemented from scratch.</p>
+
+<p>Why would you use Thread::Conveyor over Thread::Queue::Any? Well, Thread::Conveyor has the following extra features:</p>
+
+<dl>
+<dt><a name='It'></a><a name="It_works_with_Perl_5.8.0"
+>It works with Perl 5.8.0</a></dt>
+
+<dd>
+<p>Shared arrays leak memory very badly in Perl 5.8.0. Therefore, you cannot really use Thread::Queue in Perl 5.8.0, and consequently cannot use Thread::Queue::Any in any type of production environment.</p>
+
+<dt><a name='It'></a><a name="It_provides_throttling"
+>It provides throttling</a></dt>
+
+<dd>
+<p>A thread that enqueues very many values quickly, can cause a large amount of memory to be used. With throttling, any thread that enqueues will have to wait until there is &#34;room&#34; on the belt again before continuing. See methods &#34;minboxes&#34; and &#34;maxboxes&#34;.</p>
+
+<dt><a name='You'></a><a name="You_can_check_for_a_new_value_without_removing_it_from_the_belt"
+>You can check for a new value without removing it from the belt</a></dt>
+
+<dd>
+<p>Sometimes it can be nice to check whether there is a new value on the belt without actually removing it from the belt. See the &#34;peek&#34; and &#34;peek_dontwait&#34; methods.</p>
+
+<dt><a name='You'></a><a name="You_can_reset_the_entire_belt"
+>You can reset the entire belt</a></dt>
+
+<dd>
+<p>Sometimes you want to be able to reset the contents of the belt. See the &#34;clean&#34; and &#34;clean_dontwait&#34; methods for that.</p>
+
+<dt><a name='You'></a><a name="You_can_get_everything_from_the_belt_in_one_go"
+>You can get everything from the belt in one go</a></dt>
+
+<dd>
+<p>Sometimes you want everything that&#39;s on the belt in one go. That can also ba accomplished with the &#34;clean&#34; and &#34;clean_dontwait&#34; methods.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2002, 2003, 2004, 2007, 2010 Elizabeth Mattijsen &#60;liz@dijkmat.nl&#62;. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?threads" class="podlinkpod"
+>threads</a>, <a href="/perldoc?threads%3A%3Ashared" class="podlinkpod"
+>threads::shared</a>, <a href="/perldoc?Thread%3A%3AQueue" class="podlinkpod"
+>Thread::Queue</a>, <a href="/perldoc?Thread%3A%3AQueue%3A%3AAny" class="podlinkpod"
+>Thread::Queue::Any</a>, <a href="/perldoc?Thread%3A%3ASerialize" class="podlinkpod"
+>Thread::Serialize</a>.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78163 Uploads, 24704 Distributions
+105968 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 21:45:57 2012 GMT (0.362159013748169) @cpansearch1 -->
+ </body>
+</html>

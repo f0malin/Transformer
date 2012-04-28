@@ -1,0 +1,511 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Module::Pluggable - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Module-Pluggable",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Module-Pluggable-4.0",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Module::Pluggable",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SIMONW",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Module::Pluggable">permalink</a></div>
+  <a href="/~simonw/">Simon Wistow</a> &gt;
+  <a href="/~simonw/Module-Pluggable-4.0/">Module-Pluggable-4.0</a> &gt;
+  Module::Pluggable
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/c734df4b5bc5c2598a2ba61df529dd6d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SI/SIMONW/Module-Pluggable-4.0.tar.gz">Module-Pluggable-4.0.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Module%3A%3APluggable;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SIMONW/Module-Pluggable-4.0/lib/Module/Pluggable.pm">Annotate this POD
+(4)
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 4</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 2</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Module-Pluggable">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  4.0 &nbsp;
+<span class="noprint">
+  <a href="/src/SIMONW/Module-Pluggable-4.0/lib/Module/Pluggable.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#EXAMPLE'>EXAMPLE</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#ADVANCED_USAGE'>ADVANCED USAGE</a>
+  <li class='indexItem indexItem1'><a href='#INNER_PACKAGES'>INNER PACKAGES</a>
+  <li class='indexItem indexItem1'><a href='#OPTIONS'>OPTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#sub_name'>sub_name</a>
+    <li class='indexItem indexItem2'><a href='#search_path'>search_path</a>
+    <li class='indexItem indexItem2'><a href='#search_dirs'>search_dirs</a>
+    <li class='indexItem indexItem2'><a href='#instantiate'>instantiate</a>
+    <li class='indexItem indexItem2'><a href='#require'>require</a>
+    <li class='indexItem indexItem2'><a href='#inner'>inner</a>
+    <li class='indexItem indexItem2'><a href='#only'>only</a>
+    <li class='indexItem indexItem2'><a href='#except'>except</a>
+    <li class='indexItem indexItem2'><a href='#package'>package</a>
+    <li class='indexItem indexItem2'><a href='#file_regex'>file_regex</a>
+    <li class='indexItem indexItem2'><a href='#include_editor_junk'>include_editor_junk</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#METHODs'>METHODs</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#search_path'>search_path</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#FUTURE_PLANS'>FUTURE PLANS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYING'>COPYING</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Module::Pluggable - automatically give your module the ability to have plugins</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Simple use Module::Pluggable -</p>
+
+<pre class="sh_perl">    package MyClass;
+    use Module::Pluggable;</pre>
+
+<p>and then later ...</p>
+
+<pre class="sh_perl">    use MyClass;
+    my $mc = MyClass-&#62;new();
+    # returns the names of all plugins installed under MyClass::Plugin::*
+    my @plugins = $mc-&#62;plugins(); </pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLE"
+>EXAMPLE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Why would you want to do this? Say you have something that wants to pass an object to a number of different plugins in turn. For example you may want to extract meta-data from every email you get sent and do something with it. Plugins make sense here because then you can keep adding new meta data parsers and all the logic and docs for each one will be self contained and new handlers are easy to add without changing the core code. For that, you might do something like ...</p>
+
+<pre class="sh_perl">    package Email::Examiner;
+
+    use strict;
+    use Email::Simple;
+    use Module::Pluggable require =&#62; 1;
+
+    sub handle_email {
+        my $self  = shift;
+        my $email = shift;
+
+        foreach my $plugin ($self-&#62;plugins) {
+            $plugin-&#62;examine($email);
+        }
+
+        return 1;
+    }</pre>
+
+<p>.. and all the plugins will get a chance in turn to look at it.</p>
+
+<p>This can be trivally extended so that plugins could save the email somewhere and then no other plugin should try and do that. Simply have it so that the <code>examine</code> method returns <code>1</code> if it has saved the email somewhere. You might also wnat to be paranoid and check to see if the plugin has an <code>examine</code> method.</p>
+
+<pre class="sh_perl">        foreach my $plugin ($self-&#62;plugins) {
+            next unless $plugin-&#62;can(&#39;examine&#39;);
+            last if     $plugin-&#62;examine($email);
+        }</pre>
+
+<p>And so on. The sky&#39;s the limit.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Provides a simple but, hopefully, extensible way of having &#39;plugins&#39; for your module. Obviously this isn&#39;t going to be the be all and end all of solutions but it works for me.</p>
+
+<p>Essentially all it does is export a method into your namespace that looks through a search path for .pm files and turn those into class names.</p>
+
+<p>Optionally it instantiates those classes for you.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ADVANCED_USAGE"
+>ADVANCED USAGE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Alternatively, if you don&#39;t want to use &#39;plugins&#39; as the method ...</p>
+
+<pre class="sh_perl">    package MyClass;
+    use Module::Pluggable sub_name =&#62; &#39;foo&#39;;</pre>
+
+<p>and then later ...</p>
+
+<pre class="sh_perl">    my @plugins = $mc-&#62;foo();</pre>
+
+<p>Or if you want to look in another namespace</p>
+
+<pre class="sh_perl">    package MyClass;
+    use Module::Pluggable search_path =&#62; [&#39;Acme::MyClass::Plugin&#39;, &#39;MyClass::Extend&#39;];</pre>
+
+<p>or directory</p>
+
+<pre class="sh_perl">    use Module::Pluggable search_dirs =&#62; [&#39;mylibs/Foo&#39;];</pre>
+
+<p>Or if you want to instantiate each plugin rather than just return the name</p>
+
+<pre class="sh_perl">    package MyClass;
+    use Module::Pluggable instantiate =&#62; &#39;new&#39;;</pre>
+
+<p>and then</p>
+
+<pre class="sh_perl">    # whatever is passed to &#39;plugins&#39; will be passed 
+    # to &#39;new&#39; for each plugin 
+    my @plugins = $mc-&#62;plugins(@options); </pre>
+
+<p>alternatively you can just require the module without instantiating it</p>
+
+<pre class="sh_perl">    package MyClass;
+    use Module::Pluggable require =&#62; 1;</pre>
+
+<p>since requiring automatically searches inner packages, which may not be desirable, you can turn this off</p>
+
+<pre class="sh_perl">    package MyClass;
+    use Module::Pluggable require =&#62; 1, inner =&#62; 0;</pre>
+
+<p>You can limit the plugins loaded using the except option, either as a string, array ref or regex</p>
+
+<pre class="sh_perl">    package MyClass;
+    use Module::Pluggable except =&#62; &#39;MyClass::Plugin::Foo&#39;;</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">    package MyClass;
+    use Module::Pluggable except =&#62; [&#39;MyClass::Plugin::Foo&#39;, &#39;MyClass::Plugin::Bar&#39;];</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">    package MyClass;
+    use Module::Pluggable except =&#62; qr/^MyClass::Plugin::(Foo|Bar)$/;</pre>
+
+<p>and similarly for only which will only load plugins which match.</p>
+
+<p>Remember you can use the module more than once</p>
+
+<pre class="sh_perl">    package MyClass;
+    use Module::Pluggable search_path =&#62; &#39;MyClass::Filters&#39; sub_name =&#62; &#39;filters&#39;;
+    use Module::Pluggable search_path =&#62; &#39;MyClass::Plugins&#39; sub_name =&#62; &#39;plugins&#39;;</pre>
+
+<p>and then later ...</p>
+
+<pre class="sh_perl">    my @filters = $self-&#62;filters;
+    my @plugins = $self-&#62;plugins;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INNER_PACKAGES"
+>INNER PACKAGES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you have, for example, a file <b>lib/Something/Plugin/Foo.pm</b> that contains package definitions for both <code>Something::Plugin::Foo</code> and <code>Something::Plugin::Bar</code> then as long as you either have either the <b>require</b> or <b>instantiate</b> option set then we&#39;ll also find <code>Something::Plugin::Bar</code>. Nifty!</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OPTIONS"
+>OPTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>You can pass a hash of options when importing this module.</p>
+
+<p>The options can be ...</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="sub_name"
+>sub_name</a></h2>
+
+<p>The name of the subroutine to create in your namespace.</p>
+
+<p>By default this is &#39;plugins&#39;</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="search_path"
+>search_path</a></h2>
+
+<p>An array ref of namespaces to look in.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="search_dirs"
+>search_dirs</a></h2>
+
+<p>An array ref of directorys to look in before @INC.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="instantiate"
+>instantiate</a></h2>
+
+<p>Call this method on the class. In general this will probably be &#39;new&#39; but it can be whatever you want. Whatever arguments are passed to &#39;plugins&#39; will be passed to the method.</p>
+
+<p>The default is &#39;undef&#39; i.e just return the class name.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="require"
+>require</a></h2>
+
+<p>Just require the class, don&#39;t instantiate (overrides &#39;instantiate&#39;);</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="inner"
+>inner</a></h2>
+
+<p>If set to 0 will <b>not</b> search inner packages. If set to 1 will override <code>require</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="only"
+>only</a></h2>
+
+<p>Takes a string, array ref or regex describing the names of the only plugins to return. Whilst this may seem perverse ... well, it is. But it also makes sense. Trust me.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="except"
+>except</a></h2>
+
+<p>Similar to <code>only</code> it takes a description of plugins to exclude from returning. This is slightly less perverse.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="package"
+>package</a></h2>
+
+<p>This is for use by extension modules which build on <code>Module::Pluggable</code>: passing a <code>package</code> option allows you to place the plugin method in a different package other than your own.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="file_regex"
+>file_regex</a></h2>
+
+<p>By default <code>Module::Pluggable</code> only looks for <i>.pm</i> files.</p>
+
+<p>By supplying a new <code>file_regex</code> then you can change this behaviour e.g</p>
+
+<pre class="sh_perl">    file_regex =&#62; qr/\.plugin$/</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="include_editor_junk"
+>include_editor_junk</a></h2>
+
+<p>By default <code>Module::Pluggable</code> ignores files that look like they were left behind by editors. Currently this means files ending in <em>~</em> (~), the extensions <em>.swp</em> or <em>.swo</em>, or files beginning with <em>.#</em>.</p>
+
+<p>Setting <code>include_editor_junk</code> changes <code>Module::Pluggable</code> so it does not ignore any files it finds.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODs"
+>METHODs <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="search_path"
+>search_path</a></h2>
+
+<p>The method <code>search_path</code> is exported into you namespace as well. You can call that at any time to change or replace the search_path.</p>
+
+<pre class="sh_perl">    $self-&#62;search_path( add =&#62; &#34;New::Path&#34; ); # add
+    $self-&#62;search_path( new =&#62; &#34;New::Path&#34; ); # replace</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUTURE_PLANS"
+>FUTURE PLANS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This does everything I need and I can&#39;t really think of any other features I want to add. Famous last words of course</p>
+
+<p>Recently tried fixed to find inner packages and to make it &#39;just work&#39; with PAR but there are still some issues.</p>
+
+<p>However suggestions (and patches) are welcome.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Simon Wistow &#60;simon@thegestalt.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYING"
+>COPYING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright, 2006 Simon Wistow</p>
+
+<p>Distributed under the same terms as Perl itself.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>None known.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?File%3A%3ASpec" class="podlinkpod"
+>File::Spec</a>, <a href="/perldoc?File%3A%3AFind" class="podlinkpod"
+>File::Find</a>, <a href="/perldoc?File%3A%3ABasename" class="podlinkpod"
+>File::Basename</a>, <a href="/perldoc?Class%3A%3AFactory%3A%3AUtil" class="podlinkpod"
+>Class::Factory::Util</a>, <a href="/perldoc?Module%3A%3APluggable%3A%3AOrdered" class="podlinkpod"
+>Module::Pluggable::Ordered</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78167 Uploads, 24706 Distributions
+105970 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 22:16:49 2012 GMT (0.106028079986572) @cpansearch1 -->
+ </body>
+</html>

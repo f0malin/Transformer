@@ -1,0 +1,713 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Inline::C - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Inline",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Inline-0.50",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Inline::C",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SISYPHUS",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Inline::C">permalink</a></div>
+  <a href="/~sisyphus/">Sisyphus</a> &gt;
+  <a href="/~sisyphus/Inline-0.50/">Inline-0.50</a> &gt;
+  Inline::C
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/388cc01610ffcd7caee1a2ed5c5fa601?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SI/SISYPHUS/Inline-0.50.tar.gz">Inline-0.50.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Inline%3A%3AC;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SISYPHUS/Inline-0.50/C/C.pod">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Win32%3A%3AAPI">Win32::API</a><br>
+<a href="/perldoc?List%3A%3AUtil">List::Util</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Inline%3A%3ACPP">Inline::CPP</a><br>
+<a href="/perldoc?Math%3A%3ABigInt">Math::BigInt</a><br>
+<a href="/perldoc?Math%3A%3APari">Math::Pari</a><br>
+<a href="/perldoc?HTML%3A%3ATemplate">HTML::Template</a><br>
+<a href="/perldoc?Test%3A%3AMore">Test::More</a><br>
+<a href="/perldoc?Devel%3A%3APeek">Devel::Peek</a><br>
+<a href="/perldoc?Time%3A%3AHiRes">Time::HiRes</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Inline%3A%3AC">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 5</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 10</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Inline">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.50 &nbsp;
+<span class="noprint">
+  <a href="/src/SISYPHUS/Inline-0.50/C/C.pm">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~sisyphus/Inline/C/C.pod">Inline-0.50_01</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#Usage'>Usage</a>
+  <li class='indexItem indexItem1'><a href='#Function_Definitions'>Function Definitions</a>
+  <li class='indexItem indexItem1'><a href='#C_Configuration_Options'>C Configuration Options</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#AUTO_INCLUDE'>AUTO_INCLUDE</a>
+    <li class='indexItem indexItem2'><a href='#AUTOWRAP'>AUTOWRAP</a>
+    <li class='indexItem indexItem2'><a href='#BOOT'>BOOT</a>
+    <li class='indexItem indexItem2'><a href='#CC'>CC</a>
+    <li class='indexItem indexItem2'><a href='#CCFLAGS'>CCFLAGS</a>
+    <li class='indexItem indexItem2'><a href='#FILTERS'>FILTERS</a>
+    <li class='indexItem indexItem2'><a href='#INC'>INC</a>
+    <li class='indexItem indexItem2'><a href='#LD'>LD</a>
+    <li class='indexItem indexItem2'><a href='#LDDLFLAGS'>LDDLFLAGS</a>
+    <li class='indexItem indexItem2'><a href='#LIBS'>LIBS</a>
+    <li class='indexItem indexItem2'><a href='#MAKE'>MAKE</a>
+    <li class='indexItem indexItem2'><a href='#MYEXTLIB'>MYEXTLIB</a>
+    <li class='indexItem indexItem2'><a href='#OPTIMIZE'>OPTIMIZE</a>
+    <li class='indexItem indexItem2'><a href='#PREFIX'>PREFIX</a>
+    <li class='indexItem indexItem2'><a href='#TYPEMAPS'>TYPEMAPS</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#C-Perl_Bindings'>C-Perl Bindings</a>
+  <li class='indexItem indexItem1'><a href='#The_Inline_Stack_Macros'>The Inline Stack Macros</a>
+  <li class='indexItem indexItem1'><a href='#Writing_C_Subroutines'>Writing C Subroutines</a>
+  <li class='indexItem indexItem1'><a href='#Examples'>Examples</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Example_#1_-_Greetings'>Example #1 - Greetings</a>
+    <li class='indexItem indexItem2'><a href='#Example_#2_-_and_Salutations'>Example #2 - and Salutations</a>
+    <li class='indexItem indexItem2'><a href='#Example_#3_-_Fixing_the_problem'>Example #3 - Fixing the problem</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#BUGS_AND_DEFICIENCIES'>BUGS AND DEFICIENCIES</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Inline::C - Write Perl Subroutines in C</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Inline::C</code> is a module that allows you to write Perl subroutines in C.
+Since version 0.30 the Inline module supports multiple programming languages and each language has its own support module.
+This document describes how to use Inline with the C programming language.
+It also goes a bit into Perl C internals.</p>
+
+<p>If you want to start working with programming examples right away,
+check out <a href="/~sisyphus/Inline-0.50/C/C-Cookbook.pod" class="podlinkpod"
+>Inline::C-Cookbook</a>.
+For more information on Inline in general,
+see <a href="/~sisyphus/Inline-0.50/Inline.pod" class="podlinkpod"
+>Inline</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Usage"
+>Usage <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>You never actually use <code>Inline::C</code> directly.
+It is just a support module for using <code>Inline.pm</code> with C.
+So the usage is always:</p>
+
+<pre class="sh_perl">    use Inline C =&#62; ...;</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">    bind Inline C =&#62; ...;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Function_Definitions"
+>Function Definitions <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The Inline grammar for C recognizes certain function definitions (or signatures) in your C code. If a signature is recognized by Inline, then it will be available in Perl-space. That is, Inline will generate the &#34;glue&#34; necessary to call that function as if it were a Perl subroutine. If the signature is not recognized, Inline will simply ignore it, with no complaints. It will not be available from Perl-space, although it <i>will</i> be available from C-space.</p>
+
+<p>Inline looks for ANSI/prototype style function definitions. They must be of the form:</p>
+
+<pre class="sh_perl">    return-type function-name ( type-name-pairs ) { ... }</pre>
+
+<p>The most common types are: <code>int</code>, <code>long</code>, <code>double</code>, <code>char*</code>, and <code>SV*</code>. But you can use any type for which Inline can find a typemap. Inline uses the <code>typemap</code> file distributed with Perl as the default. You can specify more typemaps with the TYPEMAPS configuration option.</p>
+
+<p>A return type of <code>void</code> may also be used. The following are examples of valid function definitions.</p>
+
+<pre class="sh_perl">    int Foo(double num, char* str) {
+    void Foo(double num, char* str) {
+    SV* Foo() {
+    void Foo(SV*, ...) {
+    long Foo(int i, int j, ...) {</pre>
+
+<p>The following definitions would not be recognized:</p>
+
+<pre class="sh_perl">    Foo(int i) {               # no return type
+    int Foo(float f) {         # no (default) typemap for float
+    int Foo(num, str) double num; char* str; {
+    void Foo(void) {           # void only valid for return type</pre>
+
+<p>Notice that Inline only looks for function <i>definitions</i>, not function <i>prototypes</i>. Definitions are the syntax directly preceding a function body. Also Inline does not scan external files, like headers. Only the code passed to Inline is used to create bindings; although other libraries can linked in, and called from C-space.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="C_Configuration_Options"
+>C Configuration Options <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>For information on how to specify Inline configuration options, see <a href="/~sisyphus/Inline-0.50/Inline.pod" class="podlinkpod"
+>Inline</a>. This section describes each of the configuration options available for C. Most of the options correspond either to MakeMaker or XS options of the same name. See <a href="/perldoc?ExtUtils%3A%3AMakeMaker" class="podlinkpod"
+>ExtUtils::MakeMaker</a> and <a href="/perldoc?perlxs" class="podlinkpod"
+>perlxs</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="AUTO_INCLUDE"
+>AUTO_INCLUDE</a></h2>
+
+<p>Specifies extra statements to automatically included. They will be added onto the defaults. A newline char will be automatically added.</p>
+
+<pre class="sh_perl">    use Inline C =&#62; Config =&#62; AUTO_INCLUDE =&#62; &#39;#include &#34;yourheader.h&#34;&#39;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="AUTOWRAP"
+>AUTOWRAP</a></h2>
+
+<p>If you &#39;ENABLE =&#62; AUTOWRAP&#39;, Inline::C will parse function declarations (prototype statements) in your C code. For each declaration it can bind to, it will create a dummy wrapper that will call the real function which may be in an external library. This is a nice convenience for functions that would otherwise just require an empty wrapper function.</p>
+
+<p>This is similar to the base functionality you get from <code>h2xs</code>. It can be very useful for binding to external libraries.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="BOOT"
+>BOOT</a></h2>
+
+<p>Specifies C code to be executed in the XS BOOT section. Corresponds to the XS parameter.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="CC"
+>CC</a></h2>
+
+<p>Specify which compiler to use.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="CCFLAGS"
+>CCFLAGS</a></h2>
+
+<p>Specify extra compiler flags.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="FILTERS"
+>FILTERS</a></h2>
+
+<p>Allows you to specify a list of source code filters. If more than one is requested, be sure to group them with an array ref. The filters can either be subroutine references or names of filters provided by the supplementary Inline::Filters module.</p>
+
+<p>Your source code will be filtered just before it is parsed by Inline. The MD5 fingerprint is generated before filtering. Source code filters can be used to do things like stripping out POD documentation, pre-expanding #include statements or whatever else you please. For example:</p>
+
+<pre class="sh_perl">    use Inline C =&#62; DATA =&#62;
+               FILTERS =&#62; [Strip_POD =&#62; \&#38;MyFilter =&#62; Preprocess ];</pre>
+
+<p>Filters are invoked in the order specified. See <a href="/perldoc?Inline%3A%3AFilters" class="podlinkpod"
+>Inline::Filters</a> for more information.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="INC"
+>INC</a></h2>
+
+<p>Specifies an include path to use. Corresponds to the MakeMaker parameter. Expects a fully qualified path.</p>
+
+<pre class="sh_perl">    use Inline C =&#62; Config =&#62; INC =&#62; &#39;-I/inc/path&#39;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="LD"
+>LD</a></h2>
+
+<p>Specify which linker to use.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="LDDLFLAGS"
+>LDDLFLAGS</a></h2>
+
+<p>Specify which linker flags to use.</p>
+
+<p>NOTE: These flags will completely override the existing flags, instead of just adding to them. So if you need to use those too, you must respecify them here.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="LIBS"
+>LIBS</a></h2>
+
+<p>Specifies external libraries that should be linked into your code. Corresponds to the MakeMaker parameter. Provide a fully qualified path with the -L switch if the library is in a location where it won&#39;t be found automatically.</p>
+
+<pre class="sh_perl">    use Inline C =&#62; Config =&#62; LIBS =&#62; &#39;-lyourlib&#39;;</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">    use Inline C =&#62; Config =&#62; LIBS =&#62; &#39;-L/your/path -lyourlib&#39;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="MAKE"
+>MAKE</a></h2>
+
+<p>Specify the name of the &#39;make&#39; utility to use.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="MYEXTLIB"
+>MYEXTLIB</a></h2>
+
+<p>Specifies a user compiled object that should be linked in. Corresponds to the MakeMaker parameter. Expects a fully qualified path.</p>
+
+<pre class="sh_perl">    use Inline C =&#62; Config =&#62; MYEXTLIB =&#62; &#39;/your/path/yourmodule.so&#39;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OPTIMIZE"
+>OPTIMIZE</a></h2>
+
+<p>This controls the MakeMaker OPTIMIZE setting. By setting this value to <code>&#39;-g&#39;</code>, you can turn on debugging support for your Inline extensions. This will allow you to be able to set breakpoints in your C code using a debugger like gdb.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PREFIX"
+>PREFIX</a></h2>
+
+<p>Specifies a prefix that will be automatically stripped from C functions when they are bound to Perl. Useful for creating wrappers for shared library API-s, and binding to the original names in Perl. Also useful when names conflict with Perl internals. Corresponds to the XS parameter.</p>
+
+<pre class="sh_perl">    use Inline C =&#62; Config =&#62; PREFIX =&#62; &#39;ZLIB_&#39;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="TYPEMAPS"
+>TYPEMAPS</a></h2>
+
+<p>Specifies extra typemap files to use. These types will modify the behaviour of the C parsing. Corresponds to the MakeMaker parameter. Expects a fully qualified path.</p>
+
+<pre class="sh_perl">    use Inline C =&#62; Config =&#62; TYPEMAPS =&#62; &#39;/your/path/typemap&#39;;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="C-Perl_Bindings"
+>C-Perl Bindings <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This section describes how the <code>Perl</code> variables get mapped to <code>C</code> variables and back again.</p>
+
+<p>First, you need to know how <code>Perl</code> passes arguments back and forth to subroutines. Basically it uses a stack (also known as the <b>Stack</b>). When a sub is called, all of the parenthesized arguments get expanded into a list of scalars and pushed onto the <b>Stack</b>. The subroutine then pops all of its parameters off of the <b>Stack</b>. When the sub is done, it pushes all of its return values back onto the <b>Stack</b>.</p>
+
+<p>The <b>Stack</b> is an array of scalars known internally as <code>SV</code>&#39;s. The <b>Stack</b> is actually an array of <b>pointers to SV</b> or <code>SV*</code>; therefore every element of the <b>Stack</b> is natively a <code>SV*</code>. For <i>FMTYEWTK</i> about this, read <code>perldoc perlguts</code>.</p>
+
+<p>So back to variable mapping. XS uses a thing known as &#34;typemaps&#34; to turn each <code>SV*</code> into a <code>C</code> type and back again. This is done through various XS macro calls, casts and the Perl API. See <code>perldoc perlapi</code>. XS allows you to define your own typemaps as well for fancier non-standard types such as <code>typedef</code>-ed structs.</p>
+
+<p>Inline uses the default Perl typemap file for its default types. This file is called <code>/usr/local/lib/perl5/5.6.1/ExtUtils/typemap</code>, or something similar, depending on your Perl installation. It has definitions for over 40 types, which are automatically used by Inline. (You should probably browse this file at least once, just to get an idea of the possibilities.)</p>
+
+<p>Inline parses your code for these types and generates the XS code to map them. The most commonly used types are:</p>
+
+<pre class="sh_perl"> - int
+ - long
+ - double
+ - char*
+ - void
+ - SV*</pre>
+
+<p>If you need to deal with a type that is not in the defaults, just use the generic <code>SV*</code> type in the function definition. Then inside your code, do the mapping yourself. Alternatively, you can create your own typemap files and specify them using the <code>TYPEMAPS</code> configuration option.</p>
+
+<p>A return type of <code>void</code> has a special meaning to Inline. It means that you plan to push the values back onto the <b>Stack</b> yourself. This is what you need to do to return a list of values. If you really don&#39;t want to return anything (the traditional meaning of <code>void</code>) then simply don&#39;t push anything back.</p>
+
+<p>If ellipsis or <code>...</code> is used at the end of an argument list, it means that any number of <code>SV*</code>s may follow. Again you will need to pop the values off of the <code>Stack</code> yourself.</p>
+
+<p>See <a href="#Examples" class="podlinkpod"
+>&#34;Examples&#34;</a> below.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="The_Inline_Stack_Macros"
+>The Inline Stack Macros <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>When you write Inline C, the following lines are automatically prepended to your code (by default):</p>
+
+<pre class="sh_perl">    #include &#34;EXTERN.h&#34;
+    #include &#34;perl.h&#34;
+    #include &#34;XSUB.h&#34;
+    #include &#34;INLINE.h&#34;</pre>
+
+<p>The file <code>INLINE.h</code> defines a set of macros that are useful for handling the Perl Stack from your C functions.</p>
+
+<dl>
+<dt><a name="Inline_Stack_Vars"
+>Inline_Stack_Vars</a></dt>
+
+<dd>
+<p>You&#39;ll need to use this one, if you want to use the others. It sets up a few local variables: <code>sp</code>, <code>items</code>, <code>ax</code> and <code>mark</code>, for use by the other macros. It&#39;s not important to know what they do, but I mention them to avoid possible name conflicts.</p>
+
+<p>NOTE: Since this macro declares variables, you&#39;ll need to put it with your other variable declarations at the top of your function. It must come before any executable statements and before any other <code>Inline_Stack</code> macros.</p>
+
+<dt><a name="Inline_Stack_Items"
+>Inline_Stack_Items</a></dt>
+
+<dd>
+<p>Returns the number of arguments passed in on the Stack.</p>
+
+<dt><a name='Inline_Stack_Item'></a><a name="Inline_Stack_Item(i)"
+>Inline_Stack_Item(i)</a></dt>
+
+<dd>
+<p>Refers to a particular <code>SV*</code> in the Stack, where <code>i</code> is an index number starting from zero. Can be used to get or set the value.</p>
+
+<dt><a name="Inline_Stack_Reset"
+>Inline_Stack_Reset</a></dt>
+
+<dd>
+<p>Use this before pushing anything back onto the Stack. It resets the internal Stack pointer to the beginning of the Stack.</p>
+
+<dt><a name='Inline_Stack_Push'></a><a name="Inline_Stack_Push(sv)"
+>Inline_Stack_Push(sv)</a></dt>
+
+<dd>
+<p>Push a return value back onto the Stack. The value must be of type <code>SV*</code>.</p>
+
+<dt><a name="Inline_Stack_Done"
+>Inline_Stack_Done</a></dt>
+
+<dd>
+<p>After you have pushed all of your return values, you must call this macro.</p>
+
+<dt><a name='Inline_Stack_Return'></a><a name="Inline_Stack_Return(n)"
+>Inline_Stack_Return(n)</a></dt>
+
+<dd>
+<p>Return <code>n</code> items on the Stack.</p>
+
+<dt><a name="Inline_Stack_Void"
+>Inline_Stack_Void</a></dt>
+
+<dd>
+<p>A special macro to indicate that you really don&#39;t want to return anything. Same as:</p>
+
+<pre class="sh_perl">    Inline_Stack_Return(0);</pre>
+
+<p>Please note that this macro actually <b>returns</b> from your function.</p>
+</dd>
+</dl>
+
+<p>Each of these macros is available in 3 different styles to suit your coding tastes. The following macros are equivalent.</p>
+
+<pre class="sh_perl">    Inline_Stack_Vars
+    inline_stack_vars
+    INLINE_STACK_VARS</pre>
+
+<p>All of this functionality is available through XS macro calls as well. So why duplicate the functionality? There are a few reasons why I decided to offer this set of macros. First, as a convenient way to access the Stack. Second, for consistent, self documenting, non-cryptic coding. Third, for future compatibility. It occured to me that if a lot of people started using XS macros for their C code, the interface might break under Perl6. By using this set, hopefully I will be able to insure future compatibility of argument handling.</p>
+
+<p>Of course, if you use the rest of the Perl API, your code will most likely break under Perl6. So this is not a 100% guarantee. But since argument handling is the most common interface you&#39;re likely to use, it seemed like a wise thing to do.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Writing_C_Subroutines"
+>Writing C Subroutines <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The definitions of your C functions will fall into one of the following four categories. For each category there are special considerations.</p>
+
+<ol>
+<li>
+<pre class="sh_perl">    int Foo(int arg1, char* arg2, SV* arg3) {</pre>
+
+<p>This is the simplest case. You have a non <code>void</code> return type and a fixed length argument list. You don&#39;t need to worry about much. All the conversions will happen automatically.</p>
+</li>
+
+<li>
+<pre class="sh_perl">    void Foo(int arg1, char* arg2, SV* arg3) {</pre>
+
+<p>In this category you have a <code>void</code> return type. This means that either you want to return nothing, or that you want to return a list. In the latter case you&#39;ll need to push values onto the <b>Stack</b> yourself. There are a few Inline macros that make this easy. Code something like this:</p>
+
+<pre class="sh_perl">    int i, max; SV* my_sv[10];
+    Inline_Stack_Vars;
+    Inline_Stack_Reset;
+    for (i = 0; i &#60; max; i++)
+      Inline_Stack_Push(my_sv[i]);
+    Inline_Stack_Done;</pre>
+
+<p>After resetting the Stack pointer, this code pushes a series of return values. At the end it uses <code>Inline_Stack_Done</code> to mark the end of the return stack.</p>
+
+<p>If you really want to return nothing, then don&#39;t use the <code>Inline_Stack_</code> macros. If you must use them, then set use <code>Inline_Stack_Void</code> at the end of your function.</p>
+</li>
+
+<li>
+<pre class="sh_perl">    char* Foo(SV* arg1, ...) {</pre>
+
+<p>In this category you have an unfixed number of arguments. This means that you&#39;ll have to pop values off the <b>Stack</b> yourself. Do it like this:</p>
+
+<pre class="sh_perl">    int i;
+    Inline_Stack_Vars;
+    for (i = 0; i &#60; Inline_Stack_Items; i++)
+      handle_sv(Inline_Stack_Item(i));</pre>
+
+<p>The return type of <code>Inline_Stack_Item(i)</code> is <code>SV*</code>.</p>
+</li>
+
+<li>
+<pre class="sh_perl">    void* Foo(SV* arg1, ...) {</pre>
+
+<p>In this category you have both a <code>void</code> return type and an unfixed number of arguments. Just combine the techniques from Categories 3 and 4.</p>
+</li>
+</ol>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Examples"
+>Examples <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Here are a few examples. Each one is a complete program that you can try running yourself. For many more examples see <a href="/~sisyphus/Inline-0.50/C/C-Cookbook.pod" class="podlinkpod"
+>Inline::C-Cookbook</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Example_#1_-_Greetings"
+>Example #1 - Greetings</a></h2>
+
+<p>This example will take one string argument (a name) and print a greeting. The function is called with a string and with a number. In the second case the number is forced to a string.</p>
+
+<p>Notice that you do not need to <code>#include &#60;stdio.h</code>&#62;. The <code>perl.h</code> header file which gets included by default, automatically loads the standard C header files for you.</p>
+
+<pre class="sh_perl">    use Inline C;
+    greet(&#39;Ingy&#39;);
+    greet(42);
+    __END__
+    __C__
+    void greet(char* name) {
+      printf(&#34;Hello %s!\n&#34;, name);
+    }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Example_#2_-_and_Salutations"
+>Example #2 - and Salutations</a></h2>
+
+<p>This is similar to the last example except that the name is passed in as a <code>SV*</code> (pointer to Scalar Value) rather than a string (<code>char*</code>). That means we need to convert the <code>SV</code> to a string ourselves. This is accomplished using the <code>SvPVX</code> function which is part of the <code>Perl</code> internal API. See <code>perldoc perlapi</code> for more info.</p>
+
+<p>One problem is that <code>SvPVX</code> doesn&#39;t automatically convert strings to numbers, so we get a little surprise when we try to greet <code>42</code>. The program segfaults, a common occurence when delving into the guts of Perl.</p>
+
+<pre class="sh_perl">    use Inline C;
+    greet(&#39;Ingy&#39;);
+    greet(42);
+    __END__
+    __C__
+    void greet(SV* sv_name) {
+      printf(&#34;Hello %s!\n&#34;, SvPVX(sv_name));
+    }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Example_#3_-_Fixing_the_problem"
+>Example #3 - Fixing the problem</a></h2>
+
+<p>We can fix the problem in Example #2 by using the <code>SvPV</code> function instead. This function will stringify the <code>SV</code> if it does not contain a string. <code>SvPV</code> returns the length of the string as it&#39;s second parameter. Since we don&#39;t care about the length, we can just put <code>PL_na</code> there, which is a special variable designed for that purpose.</p>
+
+<pre class="sh_perl">    use Inline C;
+    greet(&#39;Ingy&#39;);
+    greet(42);
+    __END__
+    __C__
+    void greet(SV* sv_name) {
+      printf(&#34;Hello %s!\n&#34;, SvPV(sv_name, PL_na));
+    }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>For general information about Inline see <a href="/~sisyphus/Inline-0.50/Inline.pod" class="podlinkpod"
+>Inline</a>.</p>
+
+<p>For sample programs using Inline with C see <a href="/~sisyphus/Inline-0.50/C/C-Cookbook.pod" class="podlinkpod"
+>Inline::C-Cookbook</a>.</p>
+
+<p>For information on supported languages and platforms see <a href="/~sisyphus/Inline-0.50/Inline-Support.pod" class="podlinkpod"
+>Inline-Support</a>.</p>
+
+<p>For information on writing your own Inline Language Support Module, see <a href="/~sisyphus/Inline-0.50/Inline-API.pod" class="podlinkpod"
+>Inline-API</a>.</p>
+
+<p>Inline&#39;s mailing list is inline@perl.org</p>
+
+<p>To subscribe, send email to inline-subscribe@perl.org</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS_AND_DEFICIENCIES"
+>BUGS AND DEFICIENCIES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ol>
+<li>If you use C function names that happen to be used internally by Perl, you will get a load error at run time. There is currently no functionality to prevent this or to warn you. For now, a list of Perl&#39;s internal symbols is packaged in the Inline module distribution under the filename <code>&#39;symbols.perl&#39;</code>. Avoid using these in your code.</li>
+</ol>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Brian Ingerson &#60;INGY@cpan.org&#62;</p>
+
+<p>Sisyphus &#60;sisyphus@cpan.org&#62; fixed some bugs and is current co-maintainer.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2000-2002. Brian Ingerson.</p>
+
+<p>Copyright (c) 2008, 2010-2012. Sisyphus.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>See <a href="http://www.perl.com/perl/misc/Artistic.html" class="podlinkurl"
+>http://www.perl.com/perl/misc/Artistic.html</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78071 Uploads, 24685 Distributions
+105889 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 17:42:40 2012 GMT (0.0754659175872803) @cpansearch1 -->
+ </body>
+</html>

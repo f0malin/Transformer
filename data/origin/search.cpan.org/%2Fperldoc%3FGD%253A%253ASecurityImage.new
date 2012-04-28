@@ -1,0 +1,1242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>GD::SecurityImage - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","GD-SecurityImage",3]);
+    _gaq.push(["_setCustomVar",5,"Release","GD-SecurityImage-1.71",3]);
+    _gaq.push(["_setCustomVar",3,"Module","GD::SecurityImage",3]);
+    _gaq.push(["_setCustomVar",1,"Author","BURAK",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?GD::SecurityImage">permalink</a></div>
+  <a href="/~burak/">Burak G&uuml;rsoy</a> &gt;
+  <a href="/~burak/GD-SecurityImage-1.71/">GD-SecurityImage-1.71</a> &gt;
+  GD::SecurityImage
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/6d515c79bb594eca05bc0669a409ea15?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/B/BU/BURAK/GD-SecurityImage-1.71.tar.gz">GD-SecurityImage-1.71.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=GD%3A%3ASecurityImage;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~BURAK/GD-SecurityImage-1.71/lib/GD/SecurityImage.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Image%3A%3AMagick">Image::Magick</a><br>
+<a href="/perldoc?Crypt%3A%3ACBC">Crypt::CBC</a><br>
+<a href="/perldoc?Math%3A%3ATrig">Math::Trig</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=GD%3A%3ASecurityImage">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=GD-SecurityImage">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.71 &nbsp;
+<span class="noprint">
+  <a href="/src/BURAK/GD-SecurityImage-1.71/lib/GD/SecurityImage.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#COLOR_PARAMETERS'>COLOR PARAMETERS</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#random'>random</a>
+    <li class='indexItem indexItem2'><a href='#random_str'>random_str</a>
+    <li class='indexItem indexItem2'><a href='#create'>create</a>
+    <li class='indexItem indexItem2'><a href='#particle'>particle</a>
+    <li class='indexItem indexItem2'><a href='#info_text'>info_text</a>
+    <li class='indexItem indexItem2'><a href='#out'>out</a>
+    <li class='indexItem indexItem2'><a href='#raw'>raw</a>
+    <li class='indexItem indexItem2'><a href='#gdbox_empty'>gdbox_empty</a>
+    <li class='indexItem indexItem2'><a href='#add_strip'>add_strip</a>
+    <li class='indexItem indexItem2'><a href='#cconvert'>cconvert</a>
+    <li class='indexItem indexItem2'><a href='#gdf'>gdf</a>
+    <li class='indexItem indexItem2'><a href='#h2r'>h2r</a>
+    <li class='indexItem indexItem2'><a href='#is_hex'>is_hex</a>
+    <li class='indexItem indexItem2'><a href='#r2h'>r2h</a>
+    <li class='indexItem indexItem2'><a href='#random_angle'>random_angle</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#UTILITY_METHODS'>UTILITY METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#backends'>backends</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#EXAMPLES'>EXAMPLES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#OTHER_USES'>OTHER USES</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#ERROR_HANDLING'>ERROR HANDLING</a>
+  <li class='indexItem indexItem1'><a href='#TIPS'>TIPS</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Image::Magick_bug'>Image::Magick bug</a>
+    <li class='indexItem indexItem2'><a href='#GD_bug'>GD bug</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#path_bug'>path bug</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#COMMON_ERRORS'>COMMON ERRORS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Wrong_GD_installation'>Wrong GD installation</a>
+    <li class='indexItem indexItem2'><a href='#libgd_errors'>libgd errors</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#libgd_without_TTF_support'>libgd without TTF support</a>
+      <li class='indexItem indexItem3'><a href='#GIF_-_Old_libgd_or_libgd_without_GIF_support_enabled'>GIF - Old libgd or libgd without GIF support enabled</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CAVEAT_EMPTOR'>CAVEAT EMPTOR</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Other_CAPTCHA_Implementations_&#38;_Perl_Modules'>Other CAPTCHA Implementations &#38; Perl Modules</a>
+    <li class='indexItem indexItem2'><a href='#GD::SecurityImage_Implementations'>GD::SecurityImage Implementations</a>
+    <li class='indexItem indexItem2'><a href='#Software_Using_GD::SecurityImage'>Software Using GD::SecurityImage</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SUPPORT'>SUPPORT</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#BUG_REPORTS'>BUG REPORTS</a>
+    <li class='indexItem indexItem2'><a href='#DISCUSSION_FORUM'>DISCUSSION FORUM</a>
+    <li class='indexItem indexItem2'><a href='#RATINGS'>RATINGS</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>GD::SecurityImage - Security image (captcha) generator.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">   use GD::SecurityImage;
+
+   # Create a normal image
+   my $image = GD::SecurityImage-&#62;new(
+                  width   =&#62; 80,
+                  height  =&#62; 30,
+                  lines   =&#62; 10,
+                  gd_font =&#62; &#39;giant&#39;,
+               );
+      $image-&#62;random( $your_random_str );
+      $image-&#62;create( normal =&#62; &#39;rect&#39; );
+   my($image_data, $mime_type, $random_number) = $image-&#62;out;</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">   # use external ttf font
+   my $image = GD::SecurityImage-&#62;new(
+                  width    =&#62; 100,
+                  height   =&#62; 40,
+                  lines    =&#62; 10,
+                  font     =&#62; &#34;/absolute/path/to/your.ttf&#34;,
+                  scramble =&#62; 1,
+               );
+      $image-&#62;random( $your_random_str );
+      $image-&#62;create( ttf =&#62; &#39;default&#39; );
+      $image-&#62;particle;
+   my($image_data, $mime_type, $random_number) = $image-&#62;out;</pre>
+
+<p>or you can just say (most of the public methods can be chained)</p>
+
+<pre class="sh_perl">   my($image, $type, $rnd) = GD::SecurityImage-&#62;new-&#62;random-&#62;create-&#62;particle-&#62;out;</pre>
+
+<p>to create a security image with the default settings. But that may not be useful. If you <code>require</code> the module, you <b>must</b> import it:</p>
+
+<pre class="sh_perl">   require GD::SecurityImage;
+   GD::SecurityImage-&#62;import;</pre>
+
+<p>The module also supports <code>Image::Magick</code>, but the default interface uses the <code>GD</code> module. To enable <code>Image::Magick</code> support, you must call the module with the <code>use_magick</code> option:</p>
+
+<pre class="sh_perl">   use GD::SecurityImage use_magick =&#62; 1;</pre>
+
+<p>If you <code>require</code> the module, you <b>must</b> import it:</p>
+
+<pre class="sh_perl">   require GD::SecurityImage;
+   GD::SecurityImage-&#62;import(use_magick =&#62; 1);</pre>
+
+<p>The module does not <i>export</i> anything actually. But <code>import</code> loads the necessary sub modules. If you don&#39; t <code>import</code>, the required modules will not be loaded and probably, you&#39;ll <code>die()</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This document describes version <code>1.71</code> of <code>GD::SecurityImage</code> released on <code>4 September 2011</code>.</p>
+
+<p>The (so called) <i>&#34;Security Images&#34;</i> are so popular. Most internet software use these in their registration screens to block robot programs (which may register tons of fake member accounts). Security images are basicaly, graphical <b>CAPTCHA</b>s (<b>C</b>ompletely <b>A</b>utomated <b>P</b>ublic <b>T</b>uring Test to Tell <b>C</b>omputers and <b>H</b>umans <b>A</b>part). This module gives you a basic interface to create such an image. The final output is the actual graphic data, the mime type of the graphic and the created random string. The module also has some <i>&#34;styles&#34;</i> that are used to create the background (or foreground) of the image.</p>
+
+<p>If you are an <code>Authen::Captcha</code> user, see <a href="/perldoc?GD%3A%3ASecurityImage%3A%3AAC" class="podlinkpod"
+>GD::SecurityImage::AC</a> for migration from <code>Authen::Captcha</code> to <code>GD::SecurityImage</code>.</p>
+
+<p>This module is <b>just an image generator</b>. Not a <i>captcha handler</i>. The validation of the generated graphic is left to your programming taste. But there are some <i>captcha handlers</i> for several Perl FrameWorks. If you are an user of one of these frameworks, see <a href="#GD::SecurityImage_Implementations" class="podlinkpod"
+>&#34;GD::SecurityImage Implementations&#34;</a> in <a href="#SEE_ALSO" class="podlinkpod"
+>&#34;SEE ALSO&#34;</a> section for information.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COLOR_PARAMETERS"
+>COLOR PARAMETERS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module can use both RGB and HEX values as the color parameters. HEX values are recommended, since they are widely used and recognised.</p>
+
+<pre class="sh_perl">   $color  = &#39;#80C0F0&#39;;     # HEX
+   $color2 = [15, 100, 75]; # RGB
+   $i-&#62;create($meth, $style, $color, $color2)
+
+   $i-&#62;create(ttf =&#62; &#39;box&#39;, &#39;#80C0F0&#39;, &#39;#0F644B&#39;)</pre>
+
+<p>RGB values must be passed as an array reference including the three <i><b>R</b>ed</i>, <i><b>G</b>reen</i> and <i><b>B</b>lue</i> values.</p>
+
+<p>Color conversion is transparent to the user. You can use hex values under both <code>GD</code> and <code>Image::Magick</code>. They&#39; ll be automagically converted to RGB if you are under <code>GD</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+>new</a></h2>
+
+<p>The constructor. <code>new()</code> method takes several arguments. These arguments are listed below.</p>
+
+<dl>
+<dt><a name="width"
+>width</a></dt>
+
+<dd>
+<p>The width of the image (in pixels).</p>
+
+<dt><a name="height"
+>height</a></dt>
+
+<dd>
+<p>The height of the image (in pixels).</p>
+
+<dt><a name="ptsize"
+>ptsize</a></dt>
+
+<dd>
+<p>Numerical value. The point size of the ttf character. Only necessarry if you want to use a ttf font in the image.</p>
+
+<dt><a name="lines"
+>lines</a></dt>
+
+<dd>
+<p>The number of lines that you&#39; ll see in the background of the image. The alignment of lines can be vertical, horizontal or angled or all of them. If you increase this parameter&#39; s value, the image will be more cryptic.</p>
+
+<dt><a name="font"
+>font</a></dt>
+
+<dd>
+<p>The absolute path to your TrueType (.ttf) font file. Be aware that relative font paths are not recognized due to problems in the <code>libgd</code> library.</p>
+
+<p>If you are sure that you&#39;ve set this parameter to a correct value and you get warnings or you get an empty image, be sure that your path does not include spaces in it. It looks like libgd also have problems with this kind of paths (eg: &#39;/Documents and Settings/user&#39; under Windows).</p>
+
+<p>Set this parameter if you want to use ttf in your image.</p>
+
+<dt><a name="gd_font"
+>gd_font</a></dt>
+
+<dd>
+<p>If you want to use the default interface, set this parameter. The recognized values are <code>Small</code>, <code>Large</code>, <code>MediumBold</code>, <code>Tiny</code>, <code>Giant</code>. The names are case-insensitive; you can pass lower-cased parameters.</p>
+
+<dt><a name="bgcolor"
+>bgcolor</a></dt>
+
+<dd>
+<p>The background color of the image.</p>
+
+<dt><a name="send_ctobg"
+>send_ctobg</a></dt>
+
+<dd>
+<p>If has a true value, the random security code will be displayed in the background and the lines will pass over it. (send_ctobg = send code to background)</p>
+
+<dt><a name="frame"
+>frame</a></dt>
+
+<dd>
+<p>If has a true value, a frame will be added around the image. This option is enabled by default.</p>
+
+<dt><a name="scramble"
+>scramble</a></dt>
+
+<dd>
+<p>If set, the characters will be scrambled. If you enable this option, be sure to use a wider image, since the characters will be separated with three spaces.</p>
+
+<dt><a name="angle"
+>angle</a></dt>
+
+<dd>
+<p>Sets the angle for scrambled/normal characters. Beware that, if you pass an <code>angle</code> parameter, the characters in your random string will have a fixed angle. If you do not set an <code>angle</code> parameter, the angle(s) will be random.</p>
+
+<p>When the scramble option is not enabled, this parameter still controls the angle of the text. But, since the text will be centered inside the image, using this parameter without scramble option will require a taller image. Clipping will occur with smaller height values.</p>
+
+<p>Unlike the GD interface, <code>angle</code> is in <code>degree</code>s and can take values between <code>0</code> and <code>360</code>.</p>
+
+<dt><a name="thickness"
+>thickness</a></dt>
+
+<dd>
+<p>Sets the line drawing width. Can take numerical values. Default values are <code>1</code> for GD and <code>0.6</code> for Image:Magick.</p>
+
+<dt><a name="rndmax"
+>rndmax</a></dt>
+
+<dd>
+<p>The minimum length of the random string. Default value is <code>6</code>.</p>
+
+<dt><a name="rnd_data"
+>rnd_data</a></dt>
+
+<dd>
+<p>Default character set used to create the random string is <code>0..9</code>. But, if you want to use letters also, you can set this parameter. This parameter takes an array reference as the value.</p>
+
+<p><b>Not necessary and will not be used if you pass your own random</b> <b>string.</b></p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="random"
+>random</a></h2>
+
+<p>Creates the random security string or <b>sets the random string</b> to the value you have passed. If you pass your own random string, be aware that it must be at least six (defined in <code>rndmax</code>) characters long.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="random_str"
+>random_str</a></h2>
+
+<p>Returns the random string. Must be called after <code>random()</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="create"
+>create</a></h2>
+
+<p>This method creates the actual image. It takes four arguments, but none are mandatory.</p>
+
+<pre class="sh_perl">   $image-&#62;create($method, $style, $text_color, $line_color);</pre>
+
+<p><code>$method</code> can be <b><code>normal</code></b> or <b><code>ttf</code></b>.</p>
+
+<p><code>$style</code> can be one of the following (some of the styles may not work if you are using a really old version of GD):</p>
+
+<dl>
+<dt><a name="default"
+><b>default</b></a></dt>
+
+<dd>
+<p>The default style. Draws horizontal, vertical and angular lines.</p>
+
+<dt><a name="rect"
+><b>rect</b></a></dt>
+
+<dd>
+<p>Draws horizontal and vertical lines</p>
+
+<dt><a name="box"
+><b>box</b></a></dt>
+
+<dd>
+<p>Draws two filled rectangles.</p>
+
+<p>The <code>lines</code> option passed to <a href="#new" class="podlinkpod"
+>new</a>, controls the size of the inner rectangle for this style. If you increase the <code>lines</code>, you&#39;ll get a smaller internal rectangle. Using smaller values like <code>5</code> can be better.</p>
+
+<dt><a name="circle"
+><b>circle</b></a></dt>
+
+<dd>
+<p>Draws circles.</p>
+
+<dt><a name="ellipse"
+><b>ellipse</b></a></dt>
+
+<dd>
+<p>Draws ellipses.</p>
+
+<dt><a name="ec"
+><b>ec</b></a></dt>
+
+<dd>
+<p>This is the combination of ellipse and circle styles. Draws both ellipses and circles.</p>
+
+<dt><a name="blank"
+><b>blank</b></a></dt>
+
+<dd>
+<p>Draws nothing. See <a href="#OTHER_USES" class="podlinkpod"
+>&#34;OTHER USES&#34;</a>.</p>
+</dd>
+</dl>
+
+<p><i>Note</i>: if you have a (too) old version of GD, you may not be able to use some of the styles.</p>
+
+<p>You can use this code to get all available style names:</p>
+
+<pre class="sh_perl">   my @styles = grep {s/^style_//} keys %GD::SecurityImage::Styles::;</pre>
+
+<p>The last two arguments (<code>$text_color</code> and <code>$line_color</code>) are the colors used in the image (text and line color -- respectively):</p>
+
+<pre class="sh_perl">   $image-&#62;create($method, $style, [0,0,0], [200,200,200]);
+   $image-&#62;create($method, $style, &#39;#000000&#39;, &#39;#c8c8c8&#39;);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="particle"
+>particle</a></h2>
+
+<p>Must be called after <a href="#create" class="podlinkpod"
+>create</a>.</p>
+
+<p>Adds random dots to the image. They&#39;ll cover all over the surface. Accepts two parameters; the density (number) of the particles and the maximum number of dots around the main dot.</p>
+
+<pre class="sh_perl">   $image-&#62;particle($density, $maxdots);</pre>
+
+<p>Default value of <code>$density</code> is dependent on your image&#39; s width or height value. The greater value of width and height is taken and multiplied by twenty. So; if your width is <code>200</code> and height is <code>70</code>, <code>$density</code> is <code>200 * 20 = 4000</code> (unless you pass your own value). The default value of <code>$density</code> can be too much for smaller images.</p>
+
+<p><code>$maxdots</code> defines the maximum number of dots near the default dot. Default value is <code>1</code>. If you set it to <code>4</code>, The selected pixel and 3 other pixels near it will be used and colored.</p>
+
+<p>The color of the particles are the same as the color of your text (defined in <a href="#create" class="podlinkpod"
+>create</a>).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="info_text"
+>info_text</a></h2>
+
+<p>This method must be called after <a href="#create" class="podlinkpod"
+>create</a>. If you call it early, you&#39;ll die. <code>info_text</code> adds an extra text to the generated image. You can also put a strip under the text. The purpose of this method is to display additional information on the image. Copyright information can be an example for that.</p>
+
+<pre class="sh_perl">   $image-&#62;info_text(
+      x      =&#62; &#39;right&#39;,
+      y      =&#62; &#39;up&#39;,
+      gd     =&#62; 1,
+      strip  =&#62; 1,
+      color  =&#62; &#39;#000000&#39;,
+      scolor =&#62; &#39;#FFFFFF&#39;,
+      text   =&#62; &#39;Generated by GD::SecurityImage&#39;,
+   );</pre>
+
+<p>Options:</p>
+
+<dl>
+<dt><a name="x"
+>x</a></dt>
+
+<dd>
+<p>Controls the horizontal location of the information text. Can be either <code>left</code> or <code>right</code>.</p>
+
+<dt><a name="y"
+>y</a></dt>
+
+<dd>
+<p>Controls the vertical location of the information text. Can be either <code>up</code> or <code>down</code>.</p>
+
+<dt><a name="strip"
+>strip</a></dt>
+
+<dd>
+<p>If has a true value, a strip will be added to the background of the information text.</p>
+
+<dt><a name="gd"
+>gd</a></dt>
+
+<dd>
+<p>This option can only be used under <code>GD</code>. Has no effect under Image::Magick. If has a true value, the standard GD font <code>Tiny</code> will be used for the information text.</p>
+
+<p>If this option is not present or has a false value, the TTF font parameter passed to <code>new</code> will be used instead.</p>
+
+<dt><a name="ptsize"
+>ptsize</a></dt>
+
+<dd>
+<p>The ptsize value of the information text to be used with the TTF font. TTF font parameter can not be set with <code>info_text()</code>. The value passed to <code>new()</code> will be used instead.</p>
+
+<dt><a name="color"
+>color</a></dt>
+
+<dd>
+<p>The color of the information text.</p>
+
+<dt><a name="scolor"
+>scolor</a></dt>
+
+<dd>
+<p>The color of the strip.</p>
+
+<dt><a name="text"
+>text</a></dt>
+
+<dd>
+<p>This parameter controls the displayed text. If you want to display long texts, be sure to adjust the image, or clipping will occur.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="out"
+>out</a></h2>
+
+<p>This method finally returns the created image, the mime type of the image and the random number(s) generated. Older versions of GD only support <code>gif</code> type, while new versions support <code>jpeg</code> and <code>png</code> (<b>update</b>: beginning with v2.15, GD resumed gif support).</p>
+
+<p>The returned mime type is <code>png</code> or <code>gif</code> or <code>jpeg</code> for <code>GD</code> and <code>gif</code> for <code>Image::Magick</code> (if you do not <code>force</code> some other format).</p>
+
+<p><code>out</code> method accepts arguments:</p>
+
+<pre class="sh_perl">   @data = $image-&#62;out(%args);</pre>
+
+<dl>
+<dt><a name="force"
+>force</a></dt>
+
+<dd>
+<p>You can set the output format with the <code>force</code> parameter:</p>
+
+<pre class="sh_perl">   @data = $image-&#62;out(force =&#62; &#39;png&#39;);</pre>
+
+<p>If <code>png</code> is supported by the interface (via <code>GD</code> or <code>Image::Magick</code>); you&#39;ll get a png image, if the interface does not support this format, <code>out()</code> method will use it&#39;s default configuration.</p>
+
+<dt><a name="compress"
+>compress</a></dt>
+
+<dd>
+<p>And with the <code>compress</code> parameter, you can define the compression for <code>png</code> and quality for <code>jpeg</code>:</p>
+
+<pre class="sh_perl">   @data = $image-&#62;out(force =&#62; &#39;png&#39; , compress =&#62; 1);
+   @data = $image-&#62;out(force =&#62; &#39;jpeg&#39;, compress =&#62; 100);</pre>
+
+<p>When you use <code>compress</code> with <code>png</code> format, the value of <code>compress</code> is ignored and it is only checked if it has a true value. With <code>png</code> the compression will always be <code>9</code> (maximum compression). eg:</p>
+
+<pre class="sh_perl">   @data = $image-&#62;out(force =&#62; &#39;png&#39; , compress =&#62; 1);
+   @data = $image-&#62;out(force =&#62; &#39;png&#39; , compress =&#62; 3);
+   @data = $image-&#62;out(force =&#62; &#39;png&#39; , compress =&#62; 5);
+   @data = $image-&#62;out(force =&#62; &#39;png&#39; , compress =&#62; 1500);</pre>
+
+<p>All will default to <code>9</code>. But this will disable compression:</p>
+
+<pre class="sh_perl">   @data = $image-&#62;out(force =&#62; &#39;png&#39; , compress =&#62; 0);</pre>
+
+<p>But the behaviour changes if the format is <code>jpeg</code>; the value of <code>compress</code> will be used for <code>jpeg</code> quality; which is in the range <code>1..100</code>.</p>
+
+<p>Compression and quality operations are disabled by default.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="raw"
+>raw</a></h2>
+
+<p>Depending on your usage of the module; returns the raw <code>GD::Image</code> object:</p>
+
+<pre class="sh_perl">   my $gd = $image-&#62;raw;
+   print $gd-&#62;png;</pre>
+
+<p>or the raw <code>Image::Magick</code> object:</p>
+
+<pre class="sh_perl">   my $magick = $image-&#62;raw;
+   $magick-&#62;Write(&#34;gif:-&#34;);</pre>
+
+<p>Can be useful, if you want to modify the graphic yourself. If you want to get an <i>image type</i> see the <code>force</code> option in <code>out</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="gdbox_empty"
+>gdbox_empty</a></h2>
+
+<p>See <a href="#path_bug" class="podlinkpod"
+>&#34;path bug&#34;</a> in <a href="#GD_bug" class="podlinkpod"
+>&#34;GD bug&#34;</a> for usage and other information on this method.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="add_strip"
+>add_strip</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="cconvert"
+>cconvert</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="gdf"
+>gdf</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="h2r"
+>h2r</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_hex"
+>is_hex</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="r2h"
+>r2h</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="random_angle"
+>random_angle</a></h2>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="UTILITY_METHODS"
+>UTILITY METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="backends"
+>backends</a></h2>
+
+<p>Returns a list of available GD::SecurityImage back-ends.</p>
+
+<pre class="sh_perl">   my @be = GD::SecurityImage-&#62;backends;</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">   my @be = $image-&#62;backends;</pre>
+
+<p>If called in a void context, prints a verbose list of available GD::SecurityImage back-ends:</p>
+
+<pre class="sh_perl">   Available back-ends in GD::SecurityImage v1.55 are:
+           GD
+           Magick
+   
+   Search directories:
+              /some/@INC/dir/containing/GDSI</pre>
+
+<p>you can see the output with this command:</p>
+
+<pre class="sh_perl">   perl -MGD::SecurityImage -e &#39;GD::SecurityImage-&#62;backends&#39;</pre>
+
+<p>or under windows:</p>
+
+<pre class="sh_perl">   perl -MGD::SecurityImage -e &#34;GD::SecurityImage-&#62;backends&#34;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>See the tests in the distribution. Also see the demo program &#34;eg/demo.pl&#34; for an <code>Apache::Session</code> implementation of <code>GD::SecurityImage</code>.</p>
+
+<p>Download the distribution from a CPAN mirror near you, if you don&#39;t have the files.</p>
+
+<!-- this h1 part is for search.cpan.org -->
+<h1>
+<a class = 'u' 
+   href  = '#___top'
+   title ='click to go to top of document'
+   name  = "IMAGE SAMPLES"
+>IMAGE SAMPLES</a>
+</h1>
+
+
+<p>
+All TTF samples generated with the bundled font <i>StayPuft.ttf</i>,
+unless stated otherwise. Most of the samples here can be generated with 
+running the test suite that comes with the GD::SecurityImage distribution. 
+However, images that are generated with random angles will indeed be a 
+little different after you run the test suite on your system.
+</p>
+
+
+<p>
+All random codes have a length of six (6) characters, unless stated otherwise.
+So, (for example) there is no clipping in <code>ELLIPS</code>.
+</p>
+
+
+<table border      = "1"
+       cellpadding = "4"
+       cellspacing = "1"
+>
+   <tr>
+      <td colspan="2" style="text-align:center;font-weight:bold">
+         <br />
+         Images generated with GD
+         <br />
+         <br />
+      </td>
+   </tr>
+
+
+   <tr><td colspan="2">&#160;</td></tr>
+
+   <tr>
+      <td> Standard interface. Font: <b>gdGiantFont</b> </td>
+      <td> Style: <b>rect</b>                           </td>
+   </tr>
+   <tr>
+      <td><img border="0" src="http://img505.imageshack.us/img505/1365/gdnormal03boxvi9.png" /></td>
+      <td><img border="0" src="http://img524.imageshack.us/img524/9065/gdttf02rectiz2.png"   /></td>
+   </tr>
+
+   <tr><td colspan="2">&#160;</td></tr>
+
+   <tr>
+      <td>Style: <b>rect</b>. Scrambled with random angles.</td>
+      <td>Style: <b>circle</b>. Scrambled with a fixed angle.</td>
+   </tr>
+   <tr>
+      <td><img border="0" src="http://img505.imageshack.us/img505/8893/gdttfscramble02rectma0.png" /></td>
+      <td><img border="0" src="http://img512.imageshack.us/img512/8207/gdttfscramblefixed04cirwt1.png" /></td>
+   </tr>
+
+   <tr><td colspan="2">&#160;</td></tr>
+
+   <tr>
+      <td>Style: <b>default</b>. Scrambled with a fixed angle. <br />Info text at the top right.</td>
+      <td>Style: <b>circle</b>. Scrambled with random angles. <br />Font is: <i>Transformers.ttf</i></td>
+   </tr>
+   <tr>
+      <td><img border="0" src="http://img524.imageshack.us/img524/1452/gdttfscramblefixedinfotuz9.png"  /></td>
+      <td><img border="0" src="http://img505.imageshack.us/img505/739/differentdz6.png" /></td>
+   </tr>
+
+
+
+</table>
+
+
+<p>&nbsp;</p>
+
+
+<table border      = "1"
+       cellpadding = "4"
+       cellspacing = "2"
+>
+   <tr>
+      <td colspan="2" style="text-align:center;font-weight:bold">
+         <br />
+         Images generated with Image::Magick
+         <br />
+         <br />
+      </td>
+   </tr>
+
+
+   <tr><td colspan="2">&#160;</td></tr>
+
+   <tr>
+      <td>Style: <b>circle</b>.</td>
+      <td>Style: <b>box</b>. Scrambled with random angles.</td>
+   </tr>
+   <tr>
+      <td><img border="0" src="http://img524.imageshack.us/img524/1233/magick04circleru3.png"       /></td>
+      <td><img border="0" src="http://img521.imageshack.us/img521/7235/magickscramble03boxmb2.png" /></td>
+   </tr>
+
+   <tr><td colspan="2">&#160;</td></tr>
+   <tr>
+      <td>Style: <b>circle</b>. Scrambled with a fixed angle.</td>
+      <td>Style: <b>ellipse</b>. Scrambled with a fixed angle.<br /> Info text at the top right.</td>
+   </tr>
+
+   <tr>
+      <td><img border="0" src="http://img139.imageshack.us/img139/7227/magickscramblefixed04cihd4.png" /></td>
+      <td><img border="0" src="http://img440.imageshack.us/img440/2647/magickscramblefixed05elnz6.png" /></td>
+   </tr>
+
+   <tr><td colspan="2">&#160;</td></tr>
+
+   <tr>
+      <td>Style: <b>ec</b>. Scrambled with random angles.<br /> Info text at the top right.</td>
+      <td>Style: <b>ec</b>. Scrambled with random angles<b><sup>1</sup>.</b></td>
+   </tr>
+   <tr>
+      <td><img border="0" src="http://img139.imageshack.us/img139/9587/magickscrambleinfotext0bz8.png" /></td>
+      <td><img border="0" src="http://img505.imageshack.us/img505/347/burakrw7.gif" /></td>
+   </tr>
+
+
+
+</table>
+
+
+<p>
+<sup><b>1</b></sup>: This image is generated with this code:</p>
+<p>
+<pre>
+<span style="color: #8B008B; font-weight:bold;">use</span> <span style="color: #000000;">GD::SecurityImage</span> <span style="color: #000000;">backend</span> <span style="color: #000000;">=&gt;</span> <span style="color: #CD5555;">'Magick'</span><span style="color: #000000;">;</span>
+<span style="color: #8B008B; font-weight:bold;">my</span><span style="color: #000000;">(</span><span style="color: #00688B;">$data</span><span style="color: #000000;">,</span> <span style="color: #00688B;">$mime</span><span style="color: #000000;">,</span> <span style="color: #00688B;">$rnd</span><span style="color: #000000;">)</span> = <span style="color: #000000;">GD::SecurityImage</span>
+<span style="color: #000000;">-&gt;new</span><span style="color: #000000;">(</span>
+   <span style="color: #000000;">width</span>      <span style="color: #000000;">=&gt;</span> <span style="color: #B452CD;">420</span><span style="color: #000000;">,</span>
+   <span style="color: #000000;">height</span>     <span style="color: #000000;">=&gt;</span> <span style="color: #B452CD;">100</span><span style="color: #000000;">,</span>
+   <span style="color: #000000;">ptsize</span>     <span style="color: #000000;">=&gt;</span> <span style="color: #B452CD;">40</span><span style="color: #000000;">,</span>
+   <span style="color: #000000;">lines</span>      <span style="color: #000000;">=&gt;</span> <span style="color: #B452CD;">20</span><span style="color: #000000;">,</span>
+   <span style="color: #000000;">thickness</span>  <span style="color: #000000;">=&gt;</span> <span style="color: #B452CD;">4</span><span style="color: #000000;">,</span>
+   <span style="color: #000000;">rndmax</span>     <span style="color: #000000;">=&gt;</span> <span style="color: #B452CD;">5</span><span style="color: #000000;">,</span>
+   <span style="color: #000000;">scramble</span>   <span style="color: #000000;">=&gt;</span> <span style="color: #B452CD;">1</span><span style="color: #000000;">,</span>
+   <span style="color: #000000;">send_ctobg</span> <span style="color: #000000;">=&gt;</span> <span style="color: #B452CD;">1</span><span style="color: #000000;">,</span>
+   <span style="color: #000000;">bgcolor</span>    <span style="color: #000000;">=&gt;</span> <span style="color: #CD5555;">'#009999'</span><span style="color: #000000;">,</span>
+   <span style="color: #000000;">font</span>       <span style="color: #000000;">=&gt;</span> <span style="color: #CD5555;">'StayPuft.ttf'</span><span style="color: #000000;">,</span>
+<span style="color: #000000;">)</span>
+<span style="color: #00688B;">-&gt;random</span><span style="color: #000000;">(</span><span style="color: #CD5555;">'BURAK'</span><span style="color: #000000;">)</span>
+<span style="color: #00688B;">-&gt;create</span><span style="color: #000000;">(</span> <span style="color: #CD5555;">qw/ ttf ec #0066CC #0066CC /</span> <span style="color: #000000;">)</span>
+<span style="color: #00688B;">-&gt;particle</span><span style="color: #000000;">(</span><span style="color: #B452CD;">300</span><span style="color: #000000;">,</span> <span style="color: #B452CD;">500</span><span style="color: #000000;">)</span>
+<span style="color: #00688B;">-&gt;out</span><span style="color: #000000;">;</span>
+
+
+</pre>
+</p>
+
+
+<p>Images hosted by <a href="http://imageshack.us">ImageShack</a>.</p>
+
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OTHER_USES"
+>OTHER USES</a></h2>
+
+<p><code>GD::SecurityImage</code> drawing capabilities can also be used for <i>counter image</i> generation or displaying arbitrary messages:</p>
+
+<pre class="sh_perl">   use CGI qw(header);
+   use GD::SecurityImage 1.64; # we need the &#34;blank&#34; style
+   
+   my $font  = &#34;StayPuft.ttf&#34;;
+   my $rnd   = &#34;10.257&#34;; # counter data
+   
+   my $image = GD::SecurityImage-&#62;new(
+      width  =&#62;   140,
+      height =&#62;    75,
+      ptsize =&#62;    30,
+      rndmax =&#62;     1, # keeping this low helps to display short strings
+      frame  =&#62;     0, # disable borders
+      font   =&#62; $font,
+   );
+   
+   $image-&#62;random( $rnd );
+   # use the blank style, so that nothing will be drawn
+   # to distort the image.
+   $image-&#62;create( ttf =&#62; &#39;blank&#39;, &#39;#CC8A00&#39; );
+   $image-&#62;info_text(
+      text   =&#62; &#39;You are visitor number&#39;,
+      ptsize =&#62; 10,
+      strip  =&#62;  0,
+      color  =&#62; &#39;#0094CC&#39;,
+   );
+   $image-&#62;info_text(
+      text   =&#62; &#39;( c ) 2 0 0 7   m y s i t e&#39;,
+      ptsize =&#62; 10,
+      strip  =&#62;  0,
+      color  =&#62; &#39;#d7d7d7&#39;,
+      y      =&#62; &#39;down&#39;,
+   );
+   
+   my($data, $mime, $random) = $image-&#62;out;
+   
+   binmode STDOUT;
+   print header -type =&#62; &#34;image/$mime&#34;;
+   print $data;</pre>
+
+
+
+
+<p>Image hosted by <a href="http://imageshack.us">ImageShack</a>.</p>
+
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ERROR_HANDLING"
+>ERROR HANDLING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>die</code> is called in some methods if something fails. You may need to <code>eval</code> your code to catch exceptions.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TIPS"
+>TIPS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you look at the demo program (not just look at it, try to run it) you&#39;ll see that the random code changes after every request (successful or not). If you do not change the random code after a failed request and display the random code inside HTML (like <i>&#34;Wrong! It must be &#60;random&#62;&#34;</i>), then you are doing a logical mistake, since the user (or robot) can now copy &#38; paste the random code into your validator without looking at the security image and will pass the test. Just don&#39;t do that. Random code must change after every validation.</p>
+
+<p>If you want to be a little more strict, you can also add a timeout key to the session (this feature currently does not exits in the demo) and expire the related random code after the timeout. Since robots can call the image generator directly (without requiring the HTML form), they can examine the image for a while without changing it. A timeout implemetation may prevent this.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>See the <a href="#SUPPORT" class="podlinkpod"
+>&#34;SUPPORT&#34;</a> section if you have a bug or request to report.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Image::Magick_bug"
+>Image::Magick bug</a></h2>
+
+<p>There is a bug in PerlMagick&#39; s <code>QueryFontMetrics()</code> method. ImageMagick versions smaller than 6.0.4 is affected. Below text is from the ImageMagick 6.0.4 Changelog: <a href="http://www.imagemagick.org/www/Changelog.html" class="podlinkurl"
+>http://www.imagemagick.org/www/Changelog.html</a>.</p>
+
+<p>&#34;2004-05-06 PerlMagick&#39;s <code>QueryFontMetrics()</code> incorrectly reports `unrecognized attribute&#39;` for the `font&#39; attribute.&#34;</p>
+
+<p>Please upgrade to ImageMagick 6.0.4 or any newer version, if your ImageMagick version is smaller than 6.0.4 and you want to use Image::Magick as the backend for GD::SecurityImage.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="GD_bug"
+>GD bug</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="path_bug"
+>path bug</a></h3>
+
+<p>libgd and GD.pm don&#39;t like relative paths and paths that have spaces in them. If you pass a font path that is not an <b>exact path</b> or a path that have a space in it, you may get an empty image.</p>
+
+<p>To check if the module failed to find the ttf font (when using <code>GD</code>), a new method added: <code>gdbox_empty()</code>. It must be called after <code>create()</code>:</p>
+
+<pre class="sh_perl">   $image-&#62;create;
+   die &#34;Error loading ttf font for GD: $@&#34; if $image-&#62;gdbox_empty;</pre>
+
+<p><code>gdbox_empty()</code> always returns false, if you are using <code>Image::Magick</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COMMON_ERRORS"
+>COMMON ERRORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Wrong_GD_installation"
+>Wrong GD installation</a></h2>
+
+<p>I got some error reports saying that GD::SecurityImage dies with this error:</p>
+
+<pre class="sh_perl">   Can&#39;t locate object method &#34;new&#34; via package &#34;GD::Image&#34; 
+   (perhaps you forgot to load &#34;GD::Image&#34;?) at ...</pre>
+
+<p>This is due to a <i>wrong</i> installation of the <a href="/perldoc?GD" class="podlinkpod"
+>GD</a> module. GD includes <code>XS</code> code and it needs to be compiled. You can&#39;t just copy/paste the <i>GD.pm</i> and expect it to work. It will not. If you are under Windows and don&#39;t have a C compiler, you have to add new repositories to install <i>GD</i>, since ActiveState&#39; s own repositories don&#39;t include <i>GD</i>. Randy Kobes and J-L Morel have ppm repositories for both 5.6.x and 5.8.x and they both have <i>GD</i>:</p>
+
+<pre class="sh_perl">   <a href="http://www.bribes.org/perl/ppmdir.html" class="podlinkurl"
+>http://www.bribes.org/perl/ppmdir.html</a>
+   <a href="http://theoryx5.uwinnipeg.ca/" class="podlinkurl"
+>http://theoryx5.uwinnipeg.ca/</a></pre>
+
+<p><i>bribes.org</i> also has a <i>GD::SecurityImage</i> ppd, so you can just install <i>GD::SecurityImage</i> from that repository.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="libgd_errors"
+>libgd errors</a></h2>
+
+<p>There are some issues related to wrong/incomplete compiling of libgd and old/new version conflicts.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="libgd_without_TTF_support"
+>libgd without TTF support</a></h3>
+
+<p>If your libgd is compiled without TTF support, you&#39;ll get an <i>empty</i> image. The lines will be drawn, but there will be no text. You can check it with <a href="#gdbox_empty" class="podlinkpod"
+>&#34;gdbox_empty&#34;</a> method.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="GIF_-_Old_libgd_or_libgd_without_GIF_support_enabled"
+>GIF - Old libgd or libgd without GIF support enabled</a></h3>
+
+<p>If your GD has a <code>gif</code> method, but you get empty images with <code>gif()</code> method, you have to update your libgd or compile it with GIF enabled.</p>
+
+<p>You can test if <code>gif</code> is working from the command line:</p>
+
+<pre class="sh_perl">   perl -MGD -e &#39;$_=GD::Image-&#62;new;$_-&#62;colorAllocate(0,0,0);print$_-&#62;gif&#39;</pre>
+
+<p>or under windows:</p>
+
+<pre class="sh_perl">   perl -MGD -e &#34;$_=GD::Image-&#62;new;$_-&#62;colorAllocate(0,0,0);print$_-&#62;gif&#34;</pre>
+
+<p>Conclusions:</p>
+
+<ul>
+<li>If it dies, your GD is very old.</li>
+
+<li>If it prints nothing, your libgd was compiled without GIF enabled (upgrade or re-compile).</li>
+
+<li>If it prints out a junk that starts with &#39;GIF87a&#39;, everything is OK.</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEAT_EMPTOR"
+>CAVEAT EMPTOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li>Using the default library <code>GD</code> is a better choice. Since it is faster and does not use that much memory, while <code>Image::Magick</code> is slower and uses more memory.</li>
+
+<li>The internal random code generator is used <b>only</b> for demonstration purposes for this module. It may not be <i>effective</i>. You must supply your own random code and use this module to display it.</li>
+
+<li><b>[GD] png compression</b>
+<p>Support for compression level argument to png() added in v2.07. If your GD version is smaller than this, compress option to <code>out()</code> will be silently ignored.</p>
+</li>
+
+<li><b>[GD] setThickness</b>
+<p>setThickness implemented in GD v2.07. If your GD version is smaller than that and you set thickness option, nothing will happen.</p>
+</li>
+
+<li><b>[GD] ellipse</b>
+<p><code>ellipse()</code> method added in GD 2.07.</p>
+
+<p>If your GD version is smaller than 2.07 and you use <code>ellipse</code>, the <code>default</code> style will be returned.</p>
+
+<p>If your GD is smaller than 2.07 and you use <code>ec</code>, only the circles will be drawn.</p>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Other_CAPTCHA_Implementations_&#38;_Perl_Modules"
+>Other CAPTCHA Implementations &#38; Perl Modules</a></h2>
+
+<ul>
+<li><a href="/perldoc?GD" class="podlinkpod"
+>GD</a>, <a href="/perldoc?Image%3A%3AMagick" class="podlinkpod"
+>Image::Magick</a></li>
+
+<li><a href="/perldoc?ImagePwd" class="podlinkpod"
+>ImagePwd</a>, <a href="/perldoc?Authen%3A%3ACaptcha" class="podlinkpod"
+>Authen::Captcha</a>.</li>
+
+<li><code>ImageCode</code> Perl Module (commercial): <a href="http://www.progland.com/ImageCode.html" class="podlinkurl"
+>http://www.progland.com/ImageCode.html</a>.</li>
+
+<li>The CAPTCHA project: <a href="http://www.captcha.net/" class="podlinkurl"
+>http://www.captcha.net/</a>.</li>
+
+<li>A definition of CAPTCHA (From Wikipedia, the free encyclopedia): <a href="http://en.wikipedia.org/wiki/Captcha" class="podlinkurl"
+>http://en.wikipedia.org/wiki/Captcha</a>.</li>
+
+<li><a href="/perldoc?WebService%3A%3ACaptchasDotNet" class="podlinkpod"
+>WebService::CaptchasDotNet</a>: A Perl interface to <i><a href="http://captchas.net" class="podlinkurl"
+>http://captchas.net</a></i> free captcha service. <i>captchas.net</i> also offers <i>audio</i> captchas.</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="GD::SecurityImage_Implementations"
+><a href="/~burak/GD-SecurityImage-1.71/lib/GD/SecurityImage.pm" class="podlinkpod"
+>GD::SecurityImage</a> Implementations</a></h2>
+
+<ul>
+<li><a href="/perldoc?GD%3A%3ASecurityImage%3A%3AAC" class="podlinkpod"
+>GD::SecurityImage::AC</a>: <code><a href="/perldoc?Authen%3A%3ACaptcha" class="podlinkpod"
+>Authen::Captcha</a></code> drop-in replacement module.</li>
+
+<li><a href="/perldoc?Sledge%3A%3APlugin%3A%3ACaptcha" class="podlinkpod"
+>Sledge::Plugin::Captcha</a></li>
+
+<li><a href="/perldoc?Catalyst%3A%3APlugin%3A%3ACaptcha" class="podlinkpod"
+>Catalyst::Plugin::Captcha</a></li>
+
+<li><a href="#CGI::Application::Plugin::CAPTCHA" class="podlinkpod"
+>&#34;CGI::Application::Plugin::CAPTCHA &#34;</a></li>
+
+<li><a href="/perldoc?Angerwhale%3A%3AController%3A%3ACaptcha" class="podlinkpod"
+>Angerwhale::Controller::Captcha</a></li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Software_Using_GD::SecurityImage"
+>Software Using <a href="/~burak/GD-SecurityImage-1.71/lib/GD/SecurityImage.pm" class="podlinkpod"
+>GD::SecurityImage</a></a></h2>
+
+<p>If your software uses <code><a href="/~burak/GD-SecurityImage-1.71/lib/GD/SecurityImage.pm" class="podlinkpod"
+>GD::SecurityImage</a></code> for captcha generation and want to appear in this document, contact the author.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUPPORT"
+>SUPPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="BUG_REPORTS"
+>BUG REPORTS</a></h2>
+
+<p>All bug reports and wishlist items <b>must</b> be reported via the CPAN RT system. It is accessible at <a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=GD-SecurityImage" class="podlinkurl"
+>http://rt.cpan.org/NoAuth/Bugs.html?Dist=GD-SecurityImage</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="DISCUSSION_FORUM"
+>DISCUSSION FORUM</a></h2>
+
+<p><code>CPAN::Forum</code> is a place for discussing <code>CPAN</code> modules. It also has a <code>GD::SecurityImage</code> section at <a href="http://www.cpanforum.com/dist/GD-SecurityImage" class="podlinkurl"
+>http://www.cpanforum.com/dist/GD-SecurityImage</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="RATINGS"
+>RATINGS</a></h2>
+
+<p>If you like or hate or have some suggestions about <code>GD::SecurityImage</code>, you can comment/rate the distribution via the <code>CPAN Ratings</code> system: <a href="http://cpanratings.perl.org/dist/GD-SecurityImage" class="podlinkurl"
+>http://cpanratings.perl.org/dist/GD-SecurityImage</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Burak Gursoy &#60;burak@cpan.org&#62;.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2004 - 2011 Burak Gursoy. All rights reserved.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself, either Perl version 5.12.1 or, at your option, any later version of Perl 5 you may have available.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78167 Uploads, 24706 Distributions
+105970 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 22:06:58 2012 GMT (0.178283929824829) @cpansearch1 -->
+ </body>
+</html>

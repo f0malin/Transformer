@@ -1,0 +1,696 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Mail::Procmail - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Mail-Procmail",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Mail-Procmail-1.08",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Mail::Procmail",3]);
+    _gaq.push(["_setCustomVar",1,"Author","JV",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Mail::Procmail">permalink</a></div>
+  <a href="/~jv/">Johan Vromans</a> &gt;
+  <a href="/~jv/Mail-Procmail-1.08/">Mail-Procmail-1.08</a> &gt;
+  Mail::Procmail
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/9ba4d0f554a481450cba57252867a672?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/J/JV/JV/Mail-Procmail-1.08.tar.gz">Mail-Procmail-1.08.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Mail%3A%3AProcmail;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~JV/Mail-Procmail-1.08/lib/Mail/Procmail.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?MIME%3A%3AEntity">MIME::Entity</a><br>
+<a href="/perldoc?Mail%3A%3ABox">Mail::Box</a><br>
+<a href="/perldoc?HTTP%3A%3ADaemon">HTTP::Daemon</a><br>
+<a href="/perldoc?MIME%3A%3AParser">MIME::Parser</a><br>
+<a href="/perldoc?Win32%3A%3AOLE">Win32::OLE</a><br>
+<a href="/perldoc?MIME%3A%3AHead">MIME::Head</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Mail%3A%3AMboxParser">Mail::MboxParser</a><br>
+<a href="/perldoc?Mail%3A%3AInternet">Mail::Internet</a><br>
+<a href="/perldoc?Mail%3A%3AIMAPClient">Mail::IMAPClient</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Mail%3A%3AProcmail">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Mail-Procmail">View/Report Bugs</a><br/>
+
+</div>
+</div>
+  Module Version:  1.08 &nbsp;
+<span class="noprint">
+  <a href="/src/JV/Mail-Procmail-1.08/lib/Mail/Procmail.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#DIFFERENCES_WITH_MAIL::AUDIT'>DIFFERENCES WITH MAIL::AUDIT</a>
+  <li class='indexItem indexItem1'><a href='#EXPORTED_ROUTINES'>EXPORTED ROUTINES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#pm_init'>pm_init</a>
+    <li class='indexItem indexItem2'><a href='#pm_gethdr'>pm_gethdr</a>
+    <li class='indexItem indexItem2'><a href='#pm_gethdr_raw'>pm_gethdr_raw</a>
+    <li class='indexItem indexItem2'><a href='#pm_body'>pm_body</a>
+    <li class='indexItem indexItem2'><a href='#pm_deliver'>pm_deliver</a>
+    <li class='indexItem indexItem2'><a href='#pm_pipe_to'>pm_pipe_to</a>
+    <li class='indexItem indexItem2'><a href='#pm_command'>pm_command</a>
+    <li class='indexItem indexItem2'><a href='#pm_resend'>pm_resend</a>
+    <li class='indexItem indexItem2'><a href='#pm_reject'>pm_reject</a>
+    <li class='indexItem indexItem2'><a href='#pm_ignore'>pm_ignore</a>
+    <li class='indexItem indexItem2'><a href='#pm_dupcheck'>pm_dupcheck</a>
+    <li class='indexItem indexItem2'><a href='#pm_lockfile'>pm_lockfile</a>
+    <li class='indexItem indexItem2'><a href='#pm_unlockfile'>pm_unlockfile</a>
+    <li class='indexItem indexItem2'><a href='#pm_log'>pm_log</a>
+    <li class='indexItem indexItem2'><a href='#pm_report'>pm_report</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#USING_WITH_PROCMAIL'>USING WITH PROCMAIL</a>
+  <li class='indexItem indexItem1'><a href='#EXAMPLE'>EXAMPLE</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_and_DISCLAIMER'>COPYRIGHT and DISCLAIMER</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Mail::Procmail - Procmail-like facility for creating easy mail filters.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Mail::Procmail;
+
+    # Set up. Log everything up to log level 3.
+    my $m_obj = pm_init ( loglevel  =&#62; 3 );
+
+    # Pre-fetch some interesting headers.
+    my $m_from              = pm_gethdr(&#34;from&#34;);
+    my $m_to                = pm_gethdr(&#34;to&#34;);
+    my $m_subject           = pm_gethdr(&#34;subject&#34;);
+
+    # Default mailbox.
+    my $default = &#34;/var/spool/mail/&#34;.getpwuid($&#62;);
+
+    pm_log(1, &#34;Mail from $m_from&#34;);
+
+    pm_ignore(&#34;Non-ASCII in subject&#34;)
+      if $m_subject =~ /[\232-\355]{3}/;
+
+    pm_resend(&#34;jojan&#34;)
+      if $m_to =~ /jjk@/i;
+
+    # Make sure I see these.
+    pm_deliver($default, continue =&#62; 1)
+      if $m_subject =~ /getopt(ions|(-|::)?long)/i;
+
+    # And so on ...
+
+    # Final delivery.
+    pm_deliver($default);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><em>procmail</em> is a great mail filter program, but it has weird recipe format. It&#39;s pattern matching capabilities are basic and often insufficient. I wanted something flexible whereby I could filter my mail using the power of Perl.</p>
+
+<p>I&#39;ve been considering to write a procmail replacement in Perl for a while, but it was Simon Cozen&#39;s <code>Mail::Audit</code> module, and his article in The Perl Journal #18, that set it off.</p>
+
+<p>I first started using Simon&#39;s great module, and then decided to write my own since I liked certain things to be done differently. And I couldn&#39;t wait for his updates.</p>
+
+<p><code>Mail::Procmail</code> allows a piece of email to be logged, examined, delivered into a mailbox, filtered, resent elsewhere, rejected, and so on. It is designed to allow you to easily create filter programs to stick in a <em>.forward</em> or <em>.procmailrc</em> file, or similar.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIFFERENCES_WITH_MAIL::AUDIT"
+>DIFFERENCES WITH MAIL::AUDIT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Note that several changes are due to personal preferences and do not necessarily imply deficiencies in <code>Mail::Audit</code>.</p>
+
+<dl>
+<dt><a name="General"
+>General</a></dt>
+
+<dd>
+<p>Not object oriented. Procmail functionality typically involves one single message. All (relevant) functions are exported.</p>
+
+<dt><a name="Delivery"
+>Delivery</a></dt>
+
+<dd>
+<p>Each of the delivery methods is able to continue (except <i>pm_reject</i> and <i>pm_ignore</i>).</p>
+
+<p>Each of the delivery methods is able to pretend they did it (for testing a new filter).</p>
+
+<p>No default file argument for mailbox delivery, since this is system dependent.</p>
+
+<p>Each of the delivery methods logs the line number in the calling program so one can deduce which &#39;rule&#39; caused the delivery.</p>
+
+<p>Message IDs can be checked to suppress duplicate messages.</p>
+
+<p>System commands can be executed for their side-effects.</p>
+
+<p><i>pm_ignore</i> logs a reason as well.</p>
+
+<p><i>pm_reject</i> will fake a &#34;No such user&#34; status to the mail transfer agent.</p>
+
+<dt><a name="Logging"
+>Logging</a></dt>
+
+<dd>
+<p>The logger function is exported as well. Logging is possible to a named file, STDOUT or STDERR.</p>
+
+<p>Since several deliveries can take place in parallel, logging is protected against concurrent access, and a timestamp/pid is included in log messages.</p>
+
+<p>A log reporting tool is included.</p>
+
+<dt><a name="Robustness"
+>Robustness</a></dt>
+
+<dd>
+<p>Exit with TEMPFAIL instead of die in case of problems.</p>
+
+<p><i>pm_pipe_to</i> ignores SIGPIPE.</p>
+
+<p><i>pm_pipe_to</i> returns the command exit status if continuation is selected.</p>
+
+<p>Commands and pipes can be protected against concurrent access using lockfiles.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORTED_ROUTINES"
+>EXPORTED ROUTINES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Note that most delivery routines exit the program unless the attribute &#34;continue=&#62;1&#34; is passed.</p>
+
+<p>Also, the delivery routines log the line number in the calling program so it is easy to find out which &#39;rule&#39; caused a specific delivery to take place.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_init"
+>pm_init</a></h2>
+
+<p>This routine performs the basic initialisation. It must be called once.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    pm_init (logfile =&#62; &#34;my.log&#34;, loglevel =&#62; 3, test =&#62; 1);</pre>
+
+<p>Attributes:</p>
+
+<ul>
+<li>fh
+<p>An open file handle to read the message from. Defaults to STDIN.</p>
+</li>
+
+<li>logfile
+<p>The name of a file to log messages to. Each message will have a timestamp attached.</p>
+
+<p>The attribute may be &#39;STDOUT&#39; or &#39;STDERR&#39; to achieve logging to standard output or error respectively.</p>
+</li>
+
+<li>loglevel
+<p>The amount of information that will be logged.</p>
+</li>
+
+<li>test
+<p>If true, no actual delivery will be done. Suitable to test a new setup. Note that file locks are done, so lockfiles may be created and deleted.</p>
+</li>
+
+<li>debug
+<p>Provide some debugging info.</p>
+</li>
+
+<li>trace
+<p>Provide some tracing info, eventually.</p>
+</li>
+
+<li>verbose
+<p>Produce verbose information, eventually.</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_gethdr"
+>pm_gethdr</a></h2>
+
+<p>This routine fetches the contents of a header. The result will have excess whitepace tidied up.</p>
+
+<p>The header is reported using warn() if the debug attribute was passed (with a true value) to pm_init();</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    $m_rcvd = pm_gethdr(&#34;received&#34;);    # get first (or only) Received: header
+    $m_rcvd = pm_gethdr(&#34;received&#34;,2);  # get 3rd Received: header
+    @m_rcvd = pm_gethdr(&#34;received&#34;);    # get all Received: headers</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_gethdr_raw"
+>pm_gethdr_raw</a></h2>
+
+<p>Like pm_gethdr, but without whitespace cleanup.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_body"
+>pm_body</a></h2>
+
+<p>This routine fetches the body of a message, as a reference to an array of lines.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    $body = pm_body();                  # ref of lines
+    $body = join(&#34;&#34;, @{pm_body()});     # as one string</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_deliver"
+>pm_deliver</a></h2>
+
+<p>This routine performs delivery to a Unix style mbox file, or maildir.</p>
+
+<p>In case of an mbox file, the file is locked first by acquiring exclusive access. Note that older style locking, with a lockfile with <code>.lock</code> extension, is <i>not</i> supported.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    pm_deliver(&#34;/var/spool/mail/&#34;.getpwuid($&#62;));</pre>
+
+<p>Attributes:</p>
+
+<ul>
+<li>continue
+<p>If true, processing will continue after delivery. Otherwise the program will exit with a DELIVERED status.</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_pipe_to"
+>pm_pipe_to</a></h2>
+
+<p>This routine performs delivery to a command via a pipe.</p>
+
+<p>Return the command exit status if the continue attribute is supplied. If execution is skipped due to test mode, the return value will be 0. See also attribute <code>testalso</code> below.</p>
+
+<p>If the name of a lockfile is supplied, multiple deliveries are throttled.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    pm_pipe_to(&#34;my_filter&#34;, lockfile =&#62; &#34;/tmp/pm.lock&#34;);</pre>
+
+<p>Attributes:</p>
+
+<ul>
+<li>lockfile
+<p>The name of a file that is used to guard against multiple deliveries. The program will try to exclusively create this file before proceding. Upon completion, the lock file will be removed.</p>
+</li>
+
+<li>continue
+<p>If true, processing will continue after delivery. Otherwise the program will exit with a DELIVERED status, <i>even when the command failed</i>.</p>
+</li>
+
+<li>testalso
+<p>Do this, even in test mode.</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_command"
+>pm_command</a></h2>
+
+<p>Executes a system command for its side effects.</p>
+
+<p>If the name of a lockfile is supplied, multiple executes are throttled. This would be required if the command manipulates external data in an otherwise unprotected manner.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    pm_command(&#34;grep foo some.dat &#62; /tmp/pm.dat&#34;,
+               lockfile =&#62; &#34;/tmp/pm.dat.lock&#34;);</pre>
+
+<p>Attributes:</p>
+
+<ul>
+<li>lockfile
+<p>The name of a file that is used to guard against multiple executions. The program will try to exclusively create this file before proceding. Upon completion, the lock file will be removed.</p>
+
+<p>testalso</p>
+
+<p>Do this, even in test mode.</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_resend"
+>pm_resend</a></h2>
+
+<p>Send this message through to some other user.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    pm_resend(&#34;root&#34;);</pre>
+
+<p>Attributes:</p>
+
+<ul>
+<li>continue
+<p>If true, processing will continue after delivery. Otherwise the program will exit with a DELIVERED status.</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_reject"
+>pm_reject</a></h2>
+
+<p>Reject a message. The sender will get a mail back with the reason for the rejection (unless stderr has been redirected).</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    pm_reject(&#34;Non-existent address&#34;);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_ignore"
+>pm_ignore</a></h2>
+
+<p>Ignore a message. The program will do nothing and just exit with a DELIVERED status. A descriptive text may be passed to log the reason for ignoring.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    pm_ignore(&#34;Another make money fast message&#34;);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_dupcheck"
+>pm_dupcheck</a></h2>
+
+<p>Check for duplicate messages. Reject the message if its message ID has already been received.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    pm_dupcheck(scalar(pm_gethdr(&#34;message-id&#34;)));</pre>
+
+<p>Attributes:</p>
+
+<ul>
+<li>dbm
+<p>The name of a DBM file (created if necessary) to store the message IDs. The default name is <code>.msgids</code> in the HOME directory.</p>
+</li>
+
+<li>retain
+<p>The amount of time, in days, that subsequent identical message IDs are considered duplicates. Each new occurrence will refresh the time stamp. The default value is 14 days.</p>
+</li>
+
+<li>continue
+<p>If true, the routine will return true or false depending on the message ID being duplicate. Otherwise, if it was duplicate, the program will exit with a DELIVERED status.</p>
+</li>
+</ul>
+
+<p><i>Warning: In the current implementation, the DBM file will grow unlimited. A separate tool will be supplied to expire old message IDs.</i></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_lockfile"
+>pm_lockfile</a></h2>
+
+<p>The program will try to get an exclusive lock using this file.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    $lock_id = pm_lockfile(&#34;my.mailbox.lock&#34;);</pre>
+
+<p>The lock id is returned, or undef on failure.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_unlockfile"
+>pm_unlockfile</a></h2>
+
+<p>Unlocks a lock acquired earlier using pm_lockfile().</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    pm_unlockfile($lock_id);</pre>
+
+<p>If unlocking succeeds, the lock file is removed.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_log"
+>pm_log</a></h2>
+
+<p>Logging facility. If pm_init() was supplied the name of a log file, this file will be opened, created if necessary. Every log message written will get a timestamp attached. The log level (first argument) must be less than or equal to the loglevel attribute used with pm_init(). If not, this message will be skipped.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    pm_log(2,&#34;Retrying&#34;);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pm_report"
+>pm_report</a></h2>
+
+<p>pm_report() produces a summary report from log files from Mail::Procmail applications.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    pm_report(logfile =&#62; &#34;pmlog&#34;);</pre>
+
+<p>The report shows the deliveries, and the rules that caused the deliveries. For example:</p>
+
+<pre class="sh_perl">  393  393  deliver[203]  /home/jv/Mail/perl5-porters.spool
+  370  370  deliver[203]  /home/jv/Mail/perl6-language.spool
+  174  174  deliver[203]  /home/jv/Mail/perl6-internals.spool
+  160   81  deliver[311]  /var/spool/mail/jv
+        46  deliver[337]
+        23  deliver[363]
+        10  deliver[165]</pre>
+
+<p>The first column is the total number of deliveries for this target. The second column is the number of deliveries triggered by the indicated rule. If more rules apply to a target, this line is followed by additional lines with an empty first and last column.</p>
+
+<p>Attributes:</p>
+
+<ul>
+<li>logfile
+<p>The name of the logfile to process.</p>
+</li>
+</ul>
+
+<p>If no logfile attribute is passed, pm_report() reads all files supplied on the command line. This makes it straighforward to run from the command line:</p>
+
+<pre class="sh_perl">    $ perl -MMail::Procmail -e &#39;pm_report()&#39; syslog/pm_logs/*</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="USING_WITH_PROCMAIL"
+>USING WITH PROCMAIL <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following lines at the start of .procmailrc will cause a copy of each incoming message to be saved in $HOME/syslog/mail, after which the procmail-pl is run as a TRAP program (see the procmailrc documentation). As a result, procmail will transfer the exit status of procmail-pl to the mail transfer agent that invoked procmail (e.g., sendmail, or postfix).</p>
+
+<pre class="sh_perl">    LOGFILE=$HOME/syslog/procmail
+    VERBOSE=off
+    LOGABSTRACT=off
+    EXITCODE=
+    TRAP=$HOME/bin/procmail-pl
+
+    :0:
+    $HOME/syslog/mail</pre>
+
+<p><b>WARNING</b>: procmail seems to have problems when $HOME/syslog/mail gets too big (over 50Mb). If you want to maintain a huge archive, you can specify excess extents, like this:</p>
+
+<pre class="sh_perl">    :0:
+    $HOME/syslog/mail-ext1
+
+    :0:
+    $HOME/syslog/mail-ext2</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLE"
+>EXAMPLE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>An extensive example can be found in the examples directory of the <code>Mail::Procmail</code> kit.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Mail%3A%3AInternet" class="podlinkpod"
+>Mail::Internet</a></p>
+
+<p><a href="/perldoc?LockFile%3A%3ASimple" class="podlinkpod"
+>LockFile::Simple</a></p>
+
+<p>procmail documentation.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Johan Vromans, Squirrel Consultancy &#60;jvromans@squirrel.nl&#62;</p>
+
+<p>Some parts are shamelessly stolen from Mail::Audit by Simon Cozens &#60;simon@cpan.org&#62;, who admitted that he stole most of it from programs by Tom Christiansen.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_and_DISCLAIMER"
+>COPYRIGHT and DISCLAIMER <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This program is Copyright 2000,2004 by Squirrel Consultancy. All rights reserved.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the terms of either: a) the GNU General Public License as published by the Free Software Foundation; either version 1, or (at your option) any later version, or b) the &#34;Artistic License&#34; which comes with Perl.</p>
+
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See either the GNU General Public License or the Artistic License for more details.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78163 Uploads, 24704 Distributions
+105968 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 20:40:33 2012 GMT (0.131301164627075) @cpansearch1 -->
+ </body>
+</html>

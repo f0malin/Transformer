@@ -1,0 +1,1101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Test::Deep - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Test-Deep",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Test-Deep-0.109",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Test::Deep",3]);
+    _gaq.push(["_setCustomVar",1,"Author","RJBS",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Test::Deep">permalink</a></div>
+  <a href="/~rjbs/">Ricardo SIGNES</a> &gt;
+  <a href="/~rjbs/Test-Deep-0.109/">Test-Deep-0.109</a> &gt;
+  Test::Deep
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/cec6b9b88295ead26c65f8747a76561b?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/R/RJ/RJBS/Test-Deep-0.109.tar.gz">Test-Deep-0.109.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Test%3A%3ADeep;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~RJBS/Test-Deep-0.109/lib/Test/Deep.pm">Annotate this POD
+(5)
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 5</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 8</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Test-Deep">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.109 &nbsp;
+<span class="noprint">
+  <a href="/src/RJBS/Test-Deep-0.109/lib/Test/Deep.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#EXAMPLES'>EXAMPLES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Without_Test::Deep'>Without Test::Deep</a>
+    <li class='indexItem indexItem2'><a href='#With_Test::Deep'>With Test::Deep</a>
+    <li class='indexItem indexItem2'><a href='#Reusing_structures'>Reusing structures</a>
+    <li class='indexItem indexItem2'><a href='#Circular_data_structures'>Circular data structures</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#TERMINOLOGY'>TERMINOLOGY</a>
+  <li class='indexItem indexItem1'><a href='#COMPARISON_FUNCTIONS'>COMPARISON FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#$ok_=_cmp_deeply($got,_$expected,_$name)'>$ok = cmp_deeply($got, $expected, $name)</a>
+      <li class='indexItem indexItem3'><a href='#$ok_=_cmp_bag(\@got,_\@bag,_$name)'>$ok = cmp_bag(\@got, \@bag, $name)</a>
+      <li class='indexItem indexItem3'><a href='#$ok_=_cmp_set(\@got,_\@set,_$name)'>$ok = cmp_set(\@got, \@set, $name)</a>
+      <li class='indexItem indexItem3'><a href='#$ok_=_cmp_methods(\@got,_\@methods,_$name)'>$ok = cmp_methods(\@got, \@methods, $name)</a>
+      <li class='indexItem indexItem3'><a href='#$ok_=_eq_deeply($got,_$expected)'>$ok = eq_deeply($got, $expected)</a>
+      <li class='indexItem indexItem3'><a href='#($ok,_$stack)_=_cmp_details($got,_$expected)'>($ok, $stack) = cmp_details($got, $expected)</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SPECIAL_COMPARISONS_PROVIDED'>SPECIAL COMPARISONS PROVIDED</a>
+  <ul   class='indexList indexList2'>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#ignore()'>ignore()</a>
+      <li class='indexItem indexItem3'><a href='#methods(%hash)'>methods(%hash)</a>
+      <li class='indexItem indexItem3'><a href='#listmethods(%hash)'>listmethods(%hash)</a>
+      <li class='indexItem indexItem3'><a href='#shallow($thing)'>shallow($thing)</a>
+      <li class='indexItem indexItem3'><a href='#noclass($thing)'>noclass($thing)</a>
+      <li class='indexItem indexItem3'><a href='#useclass($thing)'>useclass($thing)</a>
+      <li class='indexItem indexItem3'><a href='#re($regexp,_$capture_data,_$flags)'>re($regexp, $capture_data, $flags)</a>
+      <li class='indexItem indexItem3'><a href='#superhashof(\%hash)'>superhashof(\%hash)</a>
+      <li class='indexItem indexItem3'><a href='#subhashof(\%hash)'>subhashof(\%hash)</a>
+      <li class='indexItem indexItem3'><a href='#bag(@elements)'>bag(@elements)</a>
+      <li class='indexItem indexItem3'><a href='#set(@elements)'>set(@elements)</a>
+      <li class='indexItem indexItem3'><a href='#superbagof(@elements),_subbagof(@elements),_supersetof(@elements)_and_subsetof(@elements)'>superbagof(@elements), subbagof(@elements), supersetof(@elements) and subsetof(@elements)</a>
+      <li class='indexItem indexItem3'><a href='#all(@expecteds)'>all(@expecteds)</a>
+      <li class='indexItem indexItem3'><a href='#any(@expecteds)'>any(@expecteds)</a>
+      <li class='indexItem indexItem3'><a href='#isa($class),_Isa($class)'>isa($class), Isa($class)</a>
+      <li class='indexItem indexItem3'><a href='#array_each($thing)'>array_each($thing)</a>
+      <li class='indexItem indexItem3'><a href='#str($string)'>str($string)</a>
+      <li class='indexItem indexItem3'><a href='#num($number,_$tolerance)'>num($number, $tolerance)</a>
+      <li class='indexItem indexItem3'><a href='#bool($value)'>bool($value)</a>
+      <li class='indexItem indexItem3'><a href='#code(\&#38;subref)'>code(\&#38;subref)</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DIAGNOSTIC_FUNCTIONS'>DIAGNOSTIC FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#my_$reason_=_deep_diag($stack)'>my $reason = deep_diag($stack)</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#ANOTHER_EXAMPLE'>ANOTHER EXAMPLE</a>
+  <li class='indexItem indexItem1'><a href='#USING_TEST::DEEP_WITH_TEST::BUILDER'>USING TEST::DEEP WITH TEST::BUILDER</a>
+  <li class='indexItem indexItem1'><a href='#LIMITATIONS'>LIMITATIONS</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#WHAT_ARE_SPECIAL_COMPARISONS?'>WHAT ARE SPECIAL COMPARISONS?</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#MAINTAINER'>MAINTAINER</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Test::Deep - Extremely flexible deep comparison</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use Test::More tests =&#62; $Num_Tests;
+  use Test::Deep;
+
+  cmp_deeply(
+    $actual_horrible_nested_data_structure,
+    $expected_horrible_nested_data_structure,
+    &#34;got the right horrible nested data structure&#34;
+  );
+
+  cmp_deeply(
+    $object,
+    methods(name =&#62; &#34;John&#34;, phone =&#62; &#34;55378008&#34;),
+    &#34;object methods ok&#34;
+  );
+
+  cmp_deeply(
+    \@array,
+    [$hash1, $hash2, ignore()],
+    &#34;first 2 elements are as expected, ignoring 3&#34;
+  );
+
+  cmp_deeply(
+    $object,
+    noclass({value =&#62; 5}),
+    &#34;object looks ok, not checking it&#39;s class&#34;
+  );
+
+  cmp_deeply(
+    \@result,
+    bag(&#39;a&#39;, &#39;b&#39;, {key =&#62; [1, 2]}),
+    &#34;array has the 3 things we wanted in some order&#34;
+  );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you don&#39;t know anything about automated testing in Perl then you should probably read about Test::Simple and Test::More before preceding. Test::Deep uses the Test::Builder framework.</p>
+
+<p>Test::Deep gives you very flexible ways to check that the result you got is the result you were expecting. At it&#39;s simplest it compares two structures by going through each level, ensuring that the values match, that arrays and hashes have the same elements and that references are blessed into the correct class. It also handles circular data structures without getting caught in an infinite loop.</p>
+
+<p>Where it becomes more interesting is in allowing you to do something besides simple exact comparisons. With strings, the <code>eq</code> operator checks that 2 strings are exactly equal but sometimes that&#39;s not what you want. When you don&#39;t know exactly what the string should be but you do know some things about how it should look, <code>eq</code> is no good and you must use pattern matching instead. Test::Deep provides pattern matching for complex data structures</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>How Test::Deep works is much easier to understand by seeing some examples.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Without_Test::Deep"
+>Without Test::Deep</a></h2>
+
+<p>Say you want to test a function which returns a string. You know that your string should be a 7 digit number beginning with 0, <code>eq</code> is no good in this situation, you need a regular expression. So you could use Test::More&#39;s <code>like()</code> function:</p>
+
+<pre class="sh_perl">  like($string, &#39;/^0d{6}$/&#39;, &#34;number looks good&#34;);</pre>
+
+<p>Similarly, to check that a string looks like a name, you could do:</p>
+
+<pre class="sh_perl">  like($string, &#39;/^(Mr|Mrs|Miss) \w+ \w+$/&#39;,
+    &#34;got title, first and last name&#34;);</pre>
+
+<p>Now imagine your function produces a hash with some personal details in it. You want to make sure that there are 2 keys, Name and Phone and that the name looks like a name and the phone number looks like a phone number. You could do:</p>
+
+<pre class="sh_perl">  $hash = make_person();
+  like($hash-&#62;{Name}, &#39;/^(Mr|Mrs|Miss) \w+ \w+$/&#39;, &#34;name ok&#34;);
+  like($hash-&#62;{Phone}, &#39;/^0d{6}$/&#39;, &#34;phone ok&#34;);
+  is(scalar keys %$hash, 2, &#34;correct number of keys&#34;);</pre>
+
+<p>But that&#39;s not quite right, what if make_person has a serious problem and didn&#39;t even return a hash? We really need to write</p>
+
+<pre class="sh_perl">  if (ref($hash) eq &#34;HASH&#34;)
+  {
+    like($hash-&#62;{Name}, &#39;/^(Mr|Mrs|Miss) \w+ \w+$/&#39;, &#34;name ok&#34;);
+    like($hash-&#62;{Phone}, &#39;/^0d{6}$/&#39;, &#34;phone ok&#34;);
+    is(scalar keys %$hash, 2, &#34;correct number of keys&#34;);
+  }
+  else
+  {
+    fail(&#34;person not a hash&#34;);
+    fail(&#34;person not a hash&#34;);
+    fail(&#34;person not a hash&#34;); # need 3 to keep the plan correct
+  }</pre>
+
+<p>Already this is getting messy, now imagine another entry in the hash, an array of children&#39;s names. This would require</p>
+
+<pre class="sh_perl">  if (ref($hash) eq &#34;HASH&#34;)
+  {
+    like($hash-&#62;{Name}, $name_pat, &#34;name ok&#34;);
+    like($hash-&#62;{Phone}, &#39;/^0d{6}$/&#39;, &#34;phone ok&#34;);
+    my $cn = $hash-&#62;{ChildNames};
+    if (ref($cn) eq &#34;ARRAY&#34;)
+    {
+      foreach my $child (@$cn)
+      {
+        like($child, $name_pat);
+      }
+    }
+    else
+    {
+        fail(&#34;child names not an array&#34;)
+    }
+  }
+  else
+  {
+    fail(&#34;person not a hash&#34;);
+  }</pre>
+
+<p>This is a horrible mess and because we don&#39;t know in advance how many children&#39;s names there will be, we can&#39;t make a plan for our test anymore (actually, we could but it would make things even more complicated).</p>
+
+<p>Test::Deep to the rescue.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="With_Test::Deep"
+>With Test::Deep</a></h2>
+
+<pre class="sh_perl">  my $name_re = re(&#39;^(Mr|Mrs|Miss) \w+ \w+$&#39;);
+  cmp_deeply(
+    $person,
+    {
+      Name =&#62; $name_re,
+      Phone =&#62; re(&#39;^0d{6}$&#39;),
+      ChildNames =&#62; array_each($name_re)
+    },
+    &#34;person ok&#34;
+  );</pre>
+
+<p>This will do everything that the messy code above does and it will give a sensible message telling you exactly what went wrong if it finds a part of $person that doesn&#39;t match the pattern. <code>re()</code> and <code>array_each()</code> are special function imported from Test::Deep. They create a marker that tells Test::Deep that something different is happening here. Instead of just doing a simple comparison and checking are two things exactly equal, it should do something else.</p>
+
+<p>If a person was asked to check that 2 structures are equal, they could print them both out and compare them line by line. The markers above are similar to writing a note in red pen on one of the printouts telling the person that for this piece of the structure, they should stop doing simple line by line comparison and do something else.</p>
+
+<p><code>re($regex)</code> means that Test::Deep should check that the current piece of data matches the regex in <code>$regex</code>. <code>array_each($struct)</code> means that Test::Deep should expect the current piece of data to be an array and it should check that every element of that array matches <code>$struct</code>. In this case, every element of <code>$person-&#62;{ChildNames}</code> should look like a name. If say the 3rd one didn&#39;t you would get an error message something like</p>
+
+<pre class="sh_perl">  Using Regexp on $data-&#62;{ChildNames}[3]
+     got    : &#39;Queen John Paul Sartre&#39;
+     expect : /^(Mr|Mrs|Miss) \w+ \w+$/</pre>
+
+<p>There are lots of other special comparisons available, see <a href="#SPECIAL_COMPARISONS_PROVIDED" class="podlinkpod"
+>&#34;SPECIAL COMPARISONS PROVIDED&#34;</a> below for the full list.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Reusing_structures"
+>Reusing structures</a></h2>
+
+<p>Test::Deep is good for reusing test structures so you can do this</p>
+
+<pre class="sh_perl">  my $name_re = re(&#39;^(Mr|Mrs|Miss) \w+ \w+$&#39;);
+  my $person_cmp = {
+    Name =&#62; $name_re,
+    Phone =&#62; re(&#39;^0d{6}$&#39;),
+    ChildNames =&#62; array_each($name_re)
+  };
+
+  cmp_deeply($person1, $person_cmp, &#34;person ok&#34;);
+  cmp_deeply($person2, $person_cmp, &#34;person ok&#34;);
+  cmp_deeply($person3, $person_cmp, &#34;person ok&#34;);</pre>
+
+<p>You can even put $person_cmp in a module and let other people use it when they are writing test scripts for modules that use your modules.</p>
+
+<p>To make things a little more difficult, lets change the person data structure so that instead of a list of ChildNames, it contains a list of hashes, one for each child. So in fact our person structure will contain other person structures which may contain other person structures and so on. This is easy to handle with Test::Deep because Test::Deep structures can include themselves. Simply do</p>
+
+<pre class="sh_perl">  my $name_re = re(&#39;^(Mr|Mrs|Miss) \w+ \w+$&#39;);
+  my $person_cmp = {
+    Name =&#62; $name_re,
+    Phone =&#62; re(&#39;^0d{6}$&#39;),
+    # note no mention of Children here
+  };
+
+  $person_cmp-&#62;{Children} = each_array($person_cmp);
+
+  cmp_deeply($person, $person_cmp, &#34;person ok&#34;);</pre>
+
+<p>This will now check that $person-&#62;{Children} is an array and that every element of that array also matches <code>$person_cmp</code>, this includes checking that it&#39;s children also match the same pattern and so on.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Circular_data_structures"
+>Circular data structures</a></h2>
+
+<p>A circular data structure is one which loops back on itself, you can make one easily by doing</p>
+
+<pre class="sh_perl">  my @b;
+  my @a = (1, 2, 3, \@b);
+  push(@b, \@a);</pre>
+
+<p>now @a contains a reference to be @b and @b contains a reference to @a. This causes problems if you have a program that wants to look inside @a and keep looking deeper and deeper at every level, it could get caught in an infinite loop looking into @a then @b then @a then @b and so on.</p>
+
+<p>Test::Deep avoids this problem so we can extend our example further by saying that a person should also list their parents.</p>
+
+<pre class="sh_perl">  my $name_re = re(&#39;^(Mr|Mrs|Miss) \w+ \w+$&#39;);
+  my $person_cmp = {
+    Name =&#62; $name_re,
+    Phone =&#62; re(&#39;^0d{6}$&#39;),
+    # note no mention of Children here
+  };
+
+  $person_cmp-&#62;{Children} = each_array($person_cmp);
+  $person_cmp-&#62;{Parents} = each_array($person_cmp);
+
+  cmp_deeply($person, $person_cmp, &#34;person ok&#34;);</pre>
+
+<p>So this will check that for each child <code>$child</code> in <code>$person-&#62;{Children}</code> that the <code>$child-&#62;{Parents}</code> matches <code>$person_cmp</code> however it is smart enough not to get caught in an infinite loop where it keeps bouncing between the same Parent and Child.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TERMINOLOGY"
+>TERMINOLOGY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>cmp_deeply($got, $expected, $name)</code> takes 3 arguments. <code>$got</code> is the structure that you are checking, you must not include any special comparisons in this structure or you will get a fatal error. <code>$expected</code> describes what Test::Deep will be looking for in $got. You can put special comparisons in $expected if you want to.</p>
+
+<p>As Test::Deep descends through the 2 structures, it compares them one piece at a time, so at any point in the process, Test::Deep is thinking about 2 things - the current value from <code>$got</code> and the current value from <code>$expected</code>. In the documentation, I call them <code>$got_v</code> and <code>exp_v</code> respectively.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COMPARISON_FUNCTIONS"
+>COMPARISON FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="$ok_=_cmp_deeply($got,_$expected,_$name)"
+>$ok = cmp_deeply($got, $expected, $name)</a></h3>
+
+<p>$got is the result to be checked. $expected is the structure against which $got will be check. $name is the test name.</p>
+
+<p>This is the main comparison function, the others are just wrappers around this. Without any special comparisons, it will descend into $expected, following every reference and comparing <code>$expected_v</code> to <code>$got_v</code> (using <code>eq</code>) at the same position. If at any stage <code>$expected_v</code> is a special comparison then Test::Deep may do something else besides a simple string comparison, exactly what it does depends on which special comparison it is.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="$ok_=_cmp_bag(\@got,_\@bag,_$name)"
+>$ok = cmp_bag(\@got, \@bag, $name)</a></h3>
+
+<p>Is shorthand for cmp_deeply(\@got, bag(@bag), $name)</p>
+
+<p>N.B. Both arguments must be array refs. If they aren&#39;t an error will be raised via die.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="$ok_=_cmp_set(\@got,_\@set,_$name)"
+>$ok = cmp_set(\@got, \@set, $name)</a></h3>
+
+<p>Is shorthand for cmp_deeply(\@got, set(@set), $name)</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="$ok_=_cmp_methods(\@got,_\@methods,_$name)"
+>$ok = cmp_methods(\@got, \@methods, $name)</a></h3>
+
+<p>Is shorthand for cmp_deeply(\@got, methods(@methods), $name)</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="$ok_=_eq_deeply($got,_$expected)"
+>$ok = eq_deeply($got, $expected)</a></h3>
+
+<p>This is the same as cmp_deeply() except it just returns true or false. It does not create diagnostics or talk to <a href="/perldoc?Test%3A%3ABuilder" class="podlinkpod"
+>Test::Builder</a>, but if you want to use it in a non-testing environment then you should import it through <a href="/~rjbs/Test-Deep-0.109/lib/Test/Deep/NoTest.pm" class="podlinkpod"
+>Test::Deep::NoTest</a>. For example</p>
+
+<pre class="sh_perl">  use Test::Deep::NoTest;
+  print &#34;a equals b&#34; unless eq_deeply($a, $b);</pre>
+
+<p>otherwise the <a href="/perldoc?Test%3A%3ABuilder" class="podlinkpod"
+>Test::Builder</a> framework will be loaded and testing messages will be output when your program ends.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="($ok,_$stack)_=_cmp_details($got,_$expected)"
+>($ok, $stack) = cmp_details($got, $expected)</a></h3>
+
+<p>This behaves much like eq_deeply, but it additionally allows you to produce diagnostics in case of failure by passing the value in <code>$stack</code> to <code>deep_diag</code>.</p>
+
+<p>Do not make assumptions about the structure or content of <code>$stack</code> and do not use it if <code>$ok</code> contains a true value.</p>
+
+<p>See <a href="#USING_TEST::DEEP_WITH_TEST::BUILDER" class="podlinkpod"
+>&#34;USING TEST::DEEP WITH TEST::BUILDER&#34;</a> for example uses.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SPECIAL_COMPARISONS_PROVIDED"
+>SPECIAL COMPARISONS PROVIDED <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="ignore()"
+>ignore()</a></h3>
+
+<p>This makes Test::Deep skip tests on $got_v. No matter what value <code>$got_v</code> has, Test::Deep will think it&#39;s correct. This is useful if some part of the structure you are testing is very complicated and already tested elsewhere, or is unpredictable.</p>
+
+<pre class="sh_perl">  cmp_deeply($got, { name =&#62; &#39;John&#39;, random =&#62; ignore(), address =&#62; [&#39;5 A
+    street&#39;, &#39;a town&#39;, &#39;a country&#39;],
+  })</pre>
+
+<p>is the equivalent of checking</p>
+
+<pre class="sh_perl">  $got-&#62;{name} eq &#39;John&#39;;
+  exists $got-&#62;{random};
+  cmp_deeply($got-&#62;{address};
+  [&#39;5 A street&#39;, &#39;a town&#39;, &#39;a country&#39;]);</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="methods(%hash)"
+>methods(%hash)</a></h3>
+
+<p>%hash is a hash of method call =&#62; expected value pairs.</p>
+
+<p>This lets you call methods on an object and check the result of each call. The methods will be called in the order supplied. If you want to pass arguments to the method you should wrap the method name and arguments in an array reference.</p>
+
+<pre class="sh_perl">  cmp_deeply(
+    $obj,
+    methods(name =&#62; &#34;John&#34;, [&#34;favourite&#34;, &#34;food&#34;] =&#62; &#34;taco&#34;)
+  );</pre>
+
+<p>is roughly the equivalent of checking that</p>
+
+<pre class="sh_perl">  $obj-&#62;name eq &#34;John&#34;
+  $obj-&#62;favourite(&#34;food&#34;) eq &#34;taco&#34;</pre>
+
+<p>The methods will be called in the order you supply them and will be called in scalar context. If you need to test methods called in list context then you should use listmethods().</p>
+
+<p><b>NOTE</b> Just as in a normal test script, you need to be careful if the methods you call have side effects like changing the object or other objects in the structure. Although the order of the methods is fixed, the order of some other tests is not so if $expected is</p>
+
+<pre class="sh_perl">  {
+    manager =&#62; methods(@manager_methods),
+    coder =&#62; methods(@coder_methods)
+  }</pre>
+
+<p>there is no way to know which if manager and coder will be tested first. If the methods you are testing depend on and alter global variables or if manager and coder are the same object then you may run into problems.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="listmethods(%hash)"
+>listmethods(%hash)</a></h3>
+
+<p>%hash is a hash of method call =&#62; expected value pairs.</p>
+
+<p>This is almost identical to methods() except the methods are called in list context instead of scalar context. This means that the expected values supplied must be an array reference.</p>
+
+<pre class="sh_perl">  cmp_deeply(
+    $obj,
+    listmethods(
+      name =&#62; &#34;John&#34;,
+      [&#34;favourites&#34;, &#34;food&#34;] =&#62; [&#34;Mapo tofu&#34;, &#34;Gongbao chicken&#34;]
+    )
+  );</pre>
+
+<p>is the equivalent of checking that</p>
+
+<pre class="sh_perl">  $obj-&#62;name eq &#34;John&#34;
+  cmp_deeply([$obj-&#62;favourites(&#34;food&#34;)], [&#34;Mapo tofu&#34;, &#34;Gongbao chicken&#34;]);</pre>
+
+<p>The methods will be called in the order you supply them.</p>
+
+<p><b>NOTE</b> The same caveats apply as for methods().</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="shallow($thing)"
+>shallow($thing)</a></h3>
+
+<p>$thing is a ref.</p>
+
+<p>This prevents Test::Deep from looking inside $thing. It allows you to check that $got_v and $thing are references to the same variable. So</p>
+
+<pre class="sh_perl">  my @a = @b = (1, 2, 3);
+  cmp_deeply(\@a, \@b);</pre>
+
+<p>will pass because @a and @b have the same elements however</p>
+
+<pre class="sh_perl">  cmp_deeply(\@a, shallow(\@b))</pre>
+
+<p>will fail because although \@a and \@b both contain <code>1, 2, 3</code> they are references to different arrays.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="noclass($thing)"
+>noclass($thing)</a></h3>
+
+<p>$thing is a structure to be compared against.</p>
+
+<p>This makes Test::Deep ignore the class of objects, so it just looks at the data they contain. Class checking will be turned off until Test::Deep is finished comparing <code>$got_v</code> against <code>$thing</code>. Once Test::Deep comes out of <code>$thing</code> it will go back to it&#39;s previous setting for checking class.</p>
+
+<p>This can be useful when you want to check that objects have been constructed correctly but you don&#39;t want to write lots of <code>bless</code>es. If \@people is an array of Person objects then</p>
+
+<pre class="sh_perl">  cmp_deeply(\@people, noclass([
+    bless {name =&#62; &#39;John&#39;, phone =&#62; &#39;555-5555&#39;}, &#34;Person&#34;,
+    bless {name =&#62; &#39;Anne&#39;, phone =&#62; &#39;444-4444&#39;}, &#34;Person&#34;,
+  ]));</pre>
+
+<p>can be replaced with</p>
+
+<pre class="sh_perl">  cmp_deeply(\@people, noclass([
+    {name =&#62; &#39;John&#39;, phone =&#62; &#39;555-5555&#39;},
+    {name =&#62; &#39;Anne&#39;, phone =&#62; &#39;444-4444&#39;}
+  ]));</pre>
+
+<p>However, this is testing so you should also check that the objects are blessed correctly. You could use a map to bless all those hashes or you could do a second test like</p>
+
+<pre class="sh_perl">  cmp_deeply($people, array_each(isa(&#34;Person&#34;));</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="useclass($thing)"
+>useclass($thing)</a></h3>
+
+<p>This turns back on the class comparison while inside a noclass().</p>
+
+<pre class="sh_perl">  cmp_deeply(
+    $got,
+    noclass(
+      [
+        useclass( $object )
+      ]
+    )
+  )</pre>
+
+<p>In this example the class of the array reference in <code>$got</code> is ignored but the class of <code>$object</code> is checked, as is the class of everything inside <code>$object</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="re($regexp,_$capture_data,_$flags)"
+>re($regexp, $capture_data, $flags)</a></h3>
+
+<p>$regexp is either a regular expression reference produced with <code>qr/.../</code> or a string which will be used to construct a regular expression.</p>
+
+<p>$capture_data is optional and is used to check the strings captured by an regex. This should can be an array ref or a Test::Deep comparator that works on array refs.</p>
+
+<p>$flags is an optional string which controls whether the regex runs as a global match. If $flags is &#34;g&#34; then the regex will run as m/$regexp/g.</p>
+
+<p>Without $capture_data, this simply compares $got_v with the regular expression provided. So</p>
+
+<pre class="sh_perl">  cmp_deeply($got, [ re(&#34;ferg&#34;) ])</pre>
+
+<p>is the equivalent of</p>
+
+<pre class="sh_perl">  $got-&#62;[0] =~ /ferg/</pre>
+
+<p>With $capture_data</p>
+
+<pre class="sh_perl">  cmp_deeply($got, [re($regex, $capture_data])</pre>
+
+<p>is the equivalent of</p>
+
+<pre class="sh_perl">  my @data = $got-&#62;[0] =~ /$regex/;
+  cmp_deeply(\@data, $capture_data);</pre>
+
+<p>So you can do something simple like</p>
+
+<pre class="sh_perl">  cmp_deeply($got, re(qr/(\d\d)(\w\w)/, [25, &#34;ab&#34; ])</pre>
+
+<p>to check that (\d\d) was 25 and (\w\w) was &#34;ab&#34; but you can also use Test::Deep objects to do more complex testing of the captured values</p>
+
+<pre class="sh_perl">  cmp_deeply(&#34;cat=2,dog=67,sheep=3,goat=2,dog=5&#34;,
+    re(qr/(\D+)=\d+,?/, set(qw( cat sheep dog )), &#34;g&#34;))</pre>
+
+<p>here, the regex will match the string and will capture the animal names and check that they match the specified set, in this case it will fail, complaining that &#34;goat&#34; is not in the set.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="superhashof(\%hash)"
+>superhashof(\%hash)</a></h3>
+
+<p>This will check that the hash <code>%$got</code> is a &#34;super-hash&#34; of <code>%hash</code>. That is that all the key and value pairs in <code>%hash</code> appear in <code>%$got</code> but <code>%$got</code> can have extra ones also.</p>
+
+<p>For example</p>
+
+<pre class="sh_perl">  cmp_deeply({a =&#62; 1, b =&#62; 2}, superhashof({a =&#62; 1}))</pre>
+
+<p>will pass but</p>
+
+<pre class="sh_perl">  cmp_deeply({a =&#62; 1, b =&#62; 2}, superhashof({a =&#62; 1, c =&#62; 3}))</pre>
+
+<p>will fail.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="subhashof(\%hash)"
+>subhashof(\%hash)</a></h3>
+
+<p>This will check that the hash <code>%$got</code> is a &#34;sub-hash&#34; of <code>%hash</code>. That is that all the key and value pairs in <code>%$got</code> also appear in <code>%hash</code>.</p>
+
+<p>For example</p>
+
+<pre class="sh_perl">  cmp_deeply({a =&#62; 1}, subhashof({a =&#62; 1, b =&#62; 2}))</pre>
+
+<p>will pass but</p>
+
+<pre class="sh_perl">  cmp_deeply({a =&#62; 1, c =&#62; 3}, subhashof({a =&#62; 1, b =&#62; 2}))</pre>
+
+<p>will fail.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="bag(@elements)"
+>bag(@elements)</a></h3>
+
+<p>@elements is an array of elements.</p>
+
+<p>This does a bag comparison, that is, it compares two arrays but ignores the order of the elements so</p>
+
+<pre class="sh_perl">  cmp_deeply([1, 2, 2], bag(2, 2, 1))</pre>
+
+<p>will be a pass.</p>
+
+<p>The object returned by bag() has an add() method.</p>
+
+<pre class="sh_perl">  my $bag = bag(1, 2, 3);
+  $bag-&#62;add(2, 3, 4);</pre>
+
+<p>will result in a bag containing 1, 2, 2, 3, 3, 4.</p>
+
+<p><code>NOTE</code> If you use certain special comparisons within a bag or set comparison there is a danger that a test will fail when it should have passed. It can only happen if two or more special comparisons in the bag are competing to match elements. Consider this comparison</p>
+
+<pre class="sh_perl">  cmp_deeply([&#39;furry&#39;, &#39;furball&#39;], bag(re(&#34;^fur&#34;), re(&#34;furb&#34;)))</pre>
+
+<p>There are two things that could happen, hopefully <code>re(&#34;^fur&#34;)</code> is paired with &#34;furry&#34; and <code>re(&#34;^furb&#34;)</code> is paired with &#34;furb&#34; and everything is fine but it could happen that <code>re(&#34;^fur&#34;)</code> is paired with &#34;furball&#34; and then <code>re(&#34;^furb&#34;)</code> cannot find a match and so the test fails. Examples of other competing comparisons are <code>bag(1, 2, 2)</code> vs <code>set(1, 2)</code> and <code>methods(m1 =&#62; &#34;v1&#34;, m2 =&#62; &#34;v2&#34;)</code> vs <code>methods(m1 =&#62; &#34;v1&#34;)</code></p>
+
+<p>This problem is could be solved by using a slower and more complicated algorithm for set and bag matching. Something for the future...</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="set(@elements)"
+>set(@elements)</a></h3>
+
+<p>@elements is an array of elements.</p>
+
+<p>This does a set comparison, that is, it compares two arrays but ignores the order of the elements and it ignores duplicate elements, so</p>
+
+<pre class="sh_perl">  cmp_deeply([1, 2, 2, 3], set(3, 2, 1, 1))</pre>
+
+<p>will be a pass.</p>
+
+<p>The object returned by set() has an add() method.</p>
+
+<pre class="sh_perl">  my $set = set(1, 2, 3);
+  $set-&#62;add(4, 5, 6);</pre>
+
+<p>will result in a set containing 1, 2, 3, 4, 5, 5.</p>
+
+<p><code>NOTE</code> See the NOTE on the bag() comparison for some dangers in using special comparisons inside set()</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="superbagof(@elements),_subbagof(@elements),_supersetof(@elements)_and_subsetof(@elements)"
+>superbagof(@elements), subbagof(@elements), supersetof(@elements) and subsetof(@elements)</a></h3>
+
+<p>@elements is an array of elements.</p>
+
+<p>These do exactly what you&#39;d expect them to do, so for example</p>
+
+<pre class="sh_perl">  cmp_deeply($data, subbagof(1, 1, 3, 4));</pre>
+
+<p>checks that @$data contains at most 2 &#34;1&#34;s, 1 &#34;3&#34; and 1 &#34;4&#34; and</p>
+
+<pre class="sh_perl">  cmp_deeply($data, supersetof(1, 4));</pre>
+
+<p>check that @$data contains at least 1 &#34;1&#34; and 1 &#34;4&#34;.</p>
+
+<p>These are just special cases of the Set and Bag comparisons so they also give you an add() method and they also have the same limitations when using special comparisons inside them (see the NOTE in the bag() section).</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="all(@expecteds)"
+>all(@expecteds)</a></h3>
+
+<p>@expecteds is an array of expected structures.</p>
+
+<p>This allows you to compare data against multiple expected results and make sure each of them matches.</p>
+
+<pre class="sh_perl">  cmp_deeply($got, all(isa(&#34;Person&#34;), methods(name =&#62; &#39;John&#39;)))</pre>
+
+<p>is equivalent to</p>
+
+<pre class="sh_perl">  $got-&#62;isa(&#34;Person&#34;)
+  $got-&#62;name eq &#39;John&#39;</pre>
+
+<p>If either test fails then the whole thing is considered a fail. This is a short-circuit test, the testing is stopped after the first failure, although in the future it may complete all tests so that diagnostics can be output for all failures. When reporting failure, the parts are counted from 1.</p>
+
+<p>Thanks to the magic of overloading, you can write</p>
+
+<pre class="sh_perl">  all(isa(&#34;Person&#34;), methods(name =&#62; &#39;John&#39;), re(&#34;^wi&#34;))</pre>
+
+<p>as</p>
+
+<pre class="sh_perl">  isa(&#34;Person&#34;) &#38; methods(name =&#62; &#39;John&#39;) | re(&#34;^wi&#34;)</pre>
+
+<p>Note <b>single</b> | not double as || cannot be overloaded. This will only work when there is a special comparison involved. If you write</p>
+
+<pre class="sh_perl">  &#34;john&#34; | &#34;anne&#34; | &#34;robert&#34;</pre>
+
+<p>Perl will turn this into</p>
+
+<pre class="sh_perl">  &#34;{onort&#34;</pre>
+
+<p>which is presumably not what you wanted. This is because Perl |s them together as strings before Test::Deep gets a chance to do any overload tricks.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="any(@expecteds)"
+>any(@expecteds)</a></h3>
+
+<p>@expecteds is an array of expected structures.</p>
+
+<p>This can be used to compare data against multiple expected results and make sure that at least one of them matches. This is a short-circuit test so if a test passes then none of the tests after that will be attempted.</p>
+
+<p>You can also use overloading with | similarly to all().</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="isa($class),_Isa($class)"
+>isa($class), Isa($class)</a></h3>
+
+<p>$class is a class name.</p>
+
+<p>This uses UNIVERSAL::isa() to check that $got_v is blessed into the class $class.</p>
+
+<p><b>NOTE:</b> Isa() does exactly as documented here, but isa() is slightly different. If isa() is called with 1 argument it falls through to Isa(). If isa() called with 2 arguments, it falls through to UNIVERSAL::isa. This is to prevent breakage when you import isa() into a package that is used as a class. Without this, anyone calling <code>Class-&#62;isa($other_class)</code> would get the wrong answer. This is a hack to patch over the fact that isa is exported by default.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="array_each($thing)"
+>array_each($thing)</a></h3>
+
+<p>$thing is a structure to be compared against.</p>
+
+<p>&#60;$got_v&#62; must be an array reference. Each element of it will be compared to $thing. This is useful when you have an array of similar things, for example objects of a known type and you don&#39;t want to have to repeat the same test for each one.</p>
+
+<pre class="sh_perl">  my $common_tests = all(
+     isa(&#34;MyFile&#34;),
+     methods(
+       handle =&#62; isa(&#34;IO::Handle&#34;)
+       filename =&#62; re(&#34;^/home/ted/tmp&#34;),
+    )
+  );
+
+  cmp_deeply($got, array_each($common_tests));</pre>
+
+<p>is similar to</p>
+
+<pre class="sh_perl">  foreach my $got_v (@$got) {
+    cmp_deeply($got_v, $common_tests)
+  }</pre>
+
+<p>Except it will not explode is $got is not an array reference. It will check that each of the objects in @$got is a MyFile and that each one gives the correct results for it&#39;s methods.</p>
+
+<p>You could go further, if for example there were 3 files and you knew the size of each one you could do this</p>
+
+<pre class="sh_perl">  cmp_deeply(
+    $got,
+    all(
+      array_each($common_tests),
+      [
+        methods(size =&#62; 1000),
+        methods(size =&#62; 200),
+        methods(size =&#62; 20)
+      ]
+    )
+  )
+  cmp_deeply($got, array_each($structure));</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="str($string)"
+>str($string)</a></h3>
+
+<p>$string is a string.</p>
+
+<p>This will stringify <code>$got_v</code> and compare it to <code>$string</code> using <code>eq</code>, even if $got_v is a ref. It is useful for checking the stringified value of an overloaded reference.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="num($number,_$tolerance)"
+>num($number, $tolerance)</a></h3>
+
+<p>$number is a number. $tolerance is an optional number.</p>
+
+<p>This will add 0 to <code>$got_v</code> and check if it&#39;s numerically equal to <code>$number</code>, even if $got_v is a ref. It is useful for checking the numerical value of an overloaded reference. If $tolerance is supplied then this will check that $got_v and $exp_v are less than $tolerance apart. This is useful when comparing floating point numbers as rounding errors can make it hard or impossible for $got_v to be exactly equal to $exp_v. When $tolerance is supplied, the test passes if <code>abs($got_v - $exp_v) &#60;= $tolerance</code>.</p>
+
+<p><b>Note</b> in Perl, <code>&#34;12blah&#34; == 12</code> because Perl will be smart and convert &#34;12blah&#34; into 12. You may not want this. There was a strict mode but that is now gone. A &#34;lookslike s number&#34; test will replace it soon. Until then you can usually just use the string() comparison to be more strict. This will work fine for almost all situations, however it will not work when &#60;$got_v&#62; is an overloaded value who&#39;s string and numerical values differ.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="bool($value)"
+>bool($value)</a></h3>
+
+<p>$value is anything you like but it&#39;s probably best to use 0 or 1</p>
+
+<p>This will check that <code>$got_v</code> and <code>$value</code> have the same truth value, that is they will give the same result when used in boolean context, like in an if() statement.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="code(\&#38;subref)"
+>code(\&#38;subref)</a></h3>
+
+<p>\&#38;subref is a reference to a subroutine which will be passed a single argument, it then should return a true or false and possibly a string</p>
+
+<p>This will pass <code>$got_v</code> to the subroutine which returns true or false to indicate a pass or fail. Fails can be accompanied by a diagnostic string which gives an explanation of why it&#39;s a fail.</p>
+
+<pre class="sh_perl">  sub check_name
+  {
+    my $name = shift;
+    if ($boss-&#62;likes($name))
+    {
+      return 1;
+    }
+    else
+    {
+      return (0, &#34;the boss doesn&#39;t like your name&#34;);
+    }
+  }
+
+  cmp_deeply(&#34;Brian&#34;, \&#38;check_name);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIAGNOSTIC_FUNCTIONS"
+>DIAGNOSTIC FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="my_$reason_=_deep_diag($stack)"
+>my $reason = deep_diag($stack)</a></h3>
+
+<p><code>$stack</code> is a value returned by cmp_details. Do not call this function if cmp_details returned a true value for <code>$ok</code>.</p>
+
+<p>deep_diag() returns a human readable string describing how the comparison failed.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ANOTHER_EXAMPLE"
+>ANOTHER EXAMPLE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>You&#39;ve written a module to handle people and their film interests. Say you have a function that returns an array of people from a query, each person is a hash with 2 keys: Name and Age and the array is sorted by Name. You can do</p>
+
+<pre class="sh_perl">  cmp_deeply(
+    $result,
+    [
+      {Name =&#62; &#39;Anne&#39;, Age =&#62; 26},
+      {Name =&#62; &#34;Bill&#34;, Age =&#62; 47}
+      {Name =&#62; &#39;John&#39;, Age =&#62; 25},
+    ]
+  );</pre>
+
+<p>Soon after, your query function changes and all the results now have an ID field. Now your test is failing again because you left out ID from each of the hashes. The problem is that the IDs are generated by the database and you have no way of knowing what each person&#39;s ID is. With Test::Deep you can change your query to</p>
+
+<pre class="sh_perl">  cmp_deeply(
+    $result,
+    [
+      {Name =&#62; &#39;John&#39;, Age =&#62; 25, ID =&#62; ignore()},
+      {Name =&#62; &#39;Anne&#39;, Age =&#62; 26, ID =&#62; ignore()},
+      {Name =&#62; &#34;Bill&#34;, Age =&#62; 47, ID =&#62; ignore()}
+    ]
+  );</pre>
+
+<p>But your test still fails. Now, because you&#39;re using a database, you no longer know what order the people will appear in. You could add a sort into the database query but that could slow down your application. Instead you can get Test::Deep to ignore the order of the array by doing a bag comparison instead.</p>
+
+<pre class="sh_perl">  cmp_deeply(
+    $result,
+    bag(
+      {Name =&#62; &#39;John&#39;, Age =&#62; 25, ID =&#62; ignore()},
+      {Name =&#62; &#39;Anne&#39;, Age =&#62; 26, ID =&#62; ignore()},
+      {Name =&#62; &#34;Bill&#34;, Age =&#62; 47, ID =&#62; ignore()}
+    )
+  );</pre>
+
+<p>Finally person gets even more complicated and includes a new field called Movies, this is a list of movies that the person has seen recently, again these movies could also come back in any order so we need a bag inside our other bag comparison, giving us something like</p>
+
+<pre class="sh_perl">  cmp_deeply(
+  $result,
+    bag(
+      {Name =&#62; &#39;John&#39;, Age =&#62; 25, ID =&#62; ignore(), Movies =&#62; bag(...)},
+      {Name =&#62; &#39;Anne&#39;, Age =&#62; 26, ID =&#62; ignore(), Movies =&#62; bag(...)},
+      {Name =&#62; &#34;Bill&#34;, Age =&#62; 47, ID =&#62; ignore(), Movies =&#62; bag(...)}
+    )
+  );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="USING_TEST::DEEP_WITH_TEST::BUILDER"
+>USING TEST::DEEP WITH TEST::BUILDER <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Combining <code>cmp_details</code> and <code>test_diag</code> makes it possible to use Test::Deep in your own test classes.</p>
+
+<p>In a <a href="/perldoc?Test%3A%3ABuilder" class="podlinkpod"
+>Test::Builder</a> subclass, create a test method in the following form:</p>
+
+<pre class="sh_perl">  sub behaves_ok {
+    my $self = shift;
+    my $expected = shift;
+    my $test_name = shift;
+
+    my $got = do_the_important_work_here();
+
+    my ($ok, $stack) = cmp_details($got, $expected);
+    unless ($Test-&#62;ok($ok, $test_name)) {
+      my $diag = deep_diag($stack);
+      $Test-&#62;diag($diag);
+    }
+  }</pre>
+
+<p>As the subclass defines a test class, not tests themselves, make sure it uses <a href="/~rjbs/Test-Deep-0.109/lib/Test/Deep/NoTest.pm" class="podlinkpod"
+>Test::Deep::NoTest</a>, not <code>Test::Deep</code> itself.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LIMITATIONS"
+>LIMITATIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Currently any CODE, GLOB or IO refs will be compared using shallow(), which means only their memory addresses are compared.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>There is a bug in set and bag compare to do with competing SCs. It only occurs when you put certain special comparisons inside bag or set comparisons you don&#39;t need to worry about it. The full details are in the bag() docs. It will be fixed in an upcoming version.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="WHAT_ARE_SPECIAL_COMPARISONS?"
+>WHAT ARE SPECIAL COMPARISONS? <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>A special comparison (SC) is simply an object that inherits from Test::Deep::Cmp. Whenever <code>$expected_v</code> is an SC then instead of checking <code>$got_v eq $expected_v</code>, we pass control over to the SC and let it do it&#39;s thing.</p>
+
+<p>Test::Deep exports lots of SC constructors, to make it easy for you to use them in your test scripts. For example is <code>re(&#34;hello&#34;)</code> is just a handy way of creating a Test::Deep::Regexp object that will match any string containing &#34;hello&#34;. So</p>
+
+<pre class="sh_perl">  cmp_deeply([ &#39;a&#39;, &#39;b&#39;, &#39;hello world&#39;], [&#39;a&#39;, &#39;b&#39;, re(&#34;^hello&#34;)]);</pre>
+
+<p>will check <code>&#39;a&#39; eq &#39;a&#39;</code>, <code>&#39;b&#39; eq &#39;b&#39;</code> but when it comes to comparing <code>&#39;hello world&#39;</code> and <code>re(&#34;^hello&#34;)</code> it will see that $expected_v is an SC and so will pass control to the Test::Deep::Regexp class by do something like <code>$expected_v-&#62;descend($got_v)</code>. The <code>descend()</code> method should just return true or false.</p>
+
+<p>This gives you enough to write your own SCs but I haven&#39;t documented how diagnostics works because it&#39;s about to get an overhaul.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Test%3A%3AMore" class="podlinkpod"
+>Test::More</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MAINTAINER"
+>MAINTAINER <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  Ricardo Signes &#60;rjbs@cpan.org&#62;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Fergal Daly &#60;fergal@esatclear.ie&#62;, with thanks to Michael G Schwern for Test::More&#39;s is_deeply function which inspired this.</p>
+
+<p><b>Please</b> do not bother Fergal Daly with bug reports. Send them to the maintainer (above) or submit them at <a href="https://rt.cpan.org/Dist/Display.html?Queue=Test-Deep" class="podlinkurl"
+>the request tracker</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2003, 2004 by Fergal Daly &#60;fergal@esatclear.ie&#62;.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>See <em><a href="http://www.perl.com/perl/misc/Artistic.html" class="podlinkurl"
+>http://www.perl.com/perl/misc/Artistic.html</a></em></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78269 Uploads, 24724 Distributions
+106002 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 23:24:27 2012 GMT (0.170078992843628) @cpansearch1 -->
+ </body>
+</html>

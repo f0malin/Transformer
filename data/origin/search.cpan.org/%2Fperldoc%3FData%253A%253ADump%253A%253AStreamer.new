@@ -1,0 +1,1241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Data::Dump::Streamer - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Data-Dump-Streamer",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Data-Dump-Streamer-2.33",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Data::Dump::Streamer",3]);
+    _gaq.push(["_setCustomVar",1,"Author","YVES",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Data::Dump::Streamer">permalink</a></div>
+  <a href="/~yves/">Yves</a> &gt;
+  <a href="/~yves/Data-Dump-Streamer-2.33/">Data-Dump-Streamer-2.33</a> &gt;
+  Data::Dump::Streamer
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/11f7eb756a4c326a9dc92461c2a268a1?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/Y/YV/YVES/Data-Dump-Streamer-2.33.tar.gz">Data-Dump-Streamer-2.33.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Data%3A%3ADump%3A%3AStreamer;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~YVES/Data-Dump-Streamer-2.33/lib/Data/Dump/Streamer.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 3</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Dump-Streamer">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.33 &nbsp;
+<span class="noprint">
+  <a href="/src/YVES/Data-Dump-Streamer-2.33/lib/Data/Dump/Streamer.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Caveats_Dumping_Closures_(CODE_Refs)'>Caveats Dumping Closures (CODE Refs)</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#USAGE'>USAGE</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Controlling_Object_Representation'>Controlling Object Representation</a>
+    <li class='indexItem indexItem2'><a href='#Controlling_Hash_Traversal_and_Display_Order'>Controlling Hash Traversal and Display Order</a>
+    <li class='indexItem indexItem2'><a href='#Controlling_Array_Presentation_and_Run_Length_Encoding'>Controlling Array Presentation and Run Length Encoding</a>
+    <li class='indexItem indexItem2'><a href='#Installing_DDS_as_a_package_alias'>Installing DDS as a package alias</a>
+    <li class='indexItem indexItem2'><a href='#use-time_package_aliasing'>use-time package aliasing</a>
+    <li class='indexItem indexItem2'><a href='#PadWalker_support'>PadWalker support</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#INTERFACE'>INTERFACE</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Data::Dumper_Compatibility'>Data::Dumper Compatibility</a>
+    <li class='indexItem indexItem2'><a href='#Constructors'>Constructors</a>
+    <li class='indexItem indexItem2'><a href='#Methods'>Methods</a>
+    <li class='indexItem indexItem2'><a href='#Reading_the_Output'>Reading the Output</a>
+    <li class='indexItem indexItem2'><a href='#A_Note_About_Speed'>A Note About Speed</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#EXPORT'>EXPORT</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR_AND_COPYRIGHT'>AUTHOR AND COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO_(its_a_crowded_space,_isn&#39;t_it!)'>SEE ALSO (its a crowded space, isn&#39;t it!)</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Data::Dump::Streamer - Accurately serialize a data structure as Perl code.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use Data::Dump::Streamer;
+  use DDS;                           # optionally installed alias
+
+  Dump($x,$y);                       # Prints to STDOUT
+  Dump($x,$y)-&#62;Out();                #   &#34;          &#34;
+
+  my $o=Data::Dump::Streamer-&#62;new(); # Returns a new ...
+  my $o=Dump();                      # ... uninitialized object.
+
+  my $o=Dump($x,$y);                 # Returns an initialized object
+  my $s=Dump($x,$y)-&#62;Out();          #  &#34;  a string of the dumped obj
+  my @l=Dump($x,$y);                 #  &#34;  a list of code fragments
+  my @l=Dump($x,$y)-&#62;Out();          #  &#34;  a list of code fragments
+
+  Dump($x,$y)-&#62;To(\*STDERR)-&#62;Out();  # Prints to STDERR
+
+  Dump($x,$y)-&#62;Names(&#39;foo&#39;,&#39;bar&#39;)    # Specify Names
+             -&#62;Out();
+
+  Dump($x,$y)-&#62;Indent(0)-&#62;Out();     # No indent
+
+  Dump($x,$y)-&#62;To(\*STDERR)          # Output to STDERR
+             -&#62;Indent(0)             # ... no indent
+             -&#62;Names(&#39;foo&#39;,&#39;bar&#39;)    # ... specify Names
+             -&#62;Out();                # Print...
+
+  $o-&#62;Data($x,$y);                   # OO form of what Dump($x,$y) does.
+  $o-&#62;Names(&#39;Foo&#39;,&#39;Names&#39;);          #  ...
+  $o-&#62;Out();                         #  ...</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Given a list of scalars or reference variables, writes out their contents in perl syntax. The references can also be objects. The contents of each variable is output using the least number of Perl statements as convenient, usually only one. Self-referential structures, closures, and objects are output correctly.</p>
+
+<p>The return value can be evaled to get back an identical copy of the original reference structure. In some cases this may require the use of utility subs that <a href="/~yves/Data-Dump-Streamer-2.33/lib/Data/Dump/Streamer.pm" class="podlinkpod"
+>Data::Dump::Streamer</a> will optionally export.</p>
+
+<p>This module is very similar in concept to the core module <a href="/perldoc?Data%3A%3ADumper" class="podlinkpod"
+>Data::Dumper</a>, with the major differences being that this module is designed to output to a stream instead of constructing its output in memory (trading speed for memory), and that the traversal over the data structure is effectively breadth first versus the depth first traversal done by the others.</p>
+
+<p>In fact the data structure is scanned twice, first in breadth first mode to perform structural analysis, and then in depth first mode to actually produce the output, but obeying the depth relationships of the first pass.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Caveats_Dumping_Closures_(CODE_Refs)"
+>Caveats Dumping Closures (CODE Refs)</a></h2>
+
+<p>As of version 1.11 DDS has had the ability to dump closures properly. This means that the lexicals that are bound to the closure are dumped along with the subroutine that uses them. This makes it much easier to debug code that uses closures and to a certain extent provides a persistancy framework for closure based code. The way this works is that DDS figures out what all the lexicals are that are bound to CODE refs it is dumping and then pretends that it had originally been called with all of them as its arguements, (along with the original arguments as well of course.)</p>
+
+<p>One consequence of the way the dumping process works is that all of the recreated subroutines will be in the same scope. This of course can lead to collisions as two subroutines can easily be bound to different variables that have the same name.</p>
+
+<p>The way that DDS resolves these collisions is that it renames one of the variables with a special name so that presumably there are no collisions. However this process is very simplistic with no checks to prevent collisions with other lexicals or other globals that may be used by other dumped code. In some situations it may be necessary to change the default value of the rename template which may be done by using the <code>EclipseName</code> method.</p>
+
+<p>Similarly to the problem of colliding lexicals is the problem of colliding lexicals and globals. DDS pays no attention to globals when dumping closures which can potentially result in lexicals being declared that will eclipse their global namesake. There is currently no way around this other than to avoid accessing a global and a lexical with the same name from the subs being dumped. An example is</p>
+
+<pre class="sh_perl">  my $a = sub { $a++ };
+  Dump( sub { $a-&#62;() } );</pre>
+
+<p>which will not be dumped correctly. Generally speaking this kind of thing is bad practice anyway, so this should probably be viewed as a &#34;feature&#34;. :-)</p>
+
+<p>Generally if the closures being dumped avoid accessing lexicals and globals with the same name from out of scope and that all of the CODE being dumped avoids vars with the <code>EclipseName</code> in their names the dumps should be valid and should eval back into existance properly.</p>
+
+<p>Note that the behaviour of dumping closures is subject to change in future versions as its possible that I will put some additional effort into more sophisiticated ways of avoiding name collisions in the dump.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="USAGE"
+>USAGE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>While Data::Dump::Streamer is at heart an object oriented module, it is expected (based on experience with using <a href="/perldoc?Data%3A%3ADumper" class="podlinkpod"
+>Data::Dumper</a>) that the common case will not exploit these features. Nevertheless the method based approach is convenient and accordingly a compromise hybrid approach has been provided via the <code>Dump()</code> subroutine. Such as</p>
+
+<pre class="sh_perl">   Dump($foo);
+   $as_string= Dump($foo)-&#62;Out();</pre>
+
+<p>All attribute methods are designed to be chained together. This means that when used as set attribute (called with arguments) they return the object they were called against. When used as get attributes (called without arguments) they return the value of the attribute.</p>
+
+<p>From an OO point of view the key methods are the <code>Data()</code> and <code>Out()</code> methods. These correspond to the breadth first and depth first traversal, and need to be called in this order. Some attributes <i>must</i> be set prior to the <code>Data()</code> phase and some need only be set before the <code>Out()</code> phase.</p>
+
+<p>Attributes once set last the lifetime of the object, unless explicitly reset.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Controlling_Object_Representation"
+>Controlling Object Representation</a></h2>
+
+<p>This module provides hooks to allow objects to override how they are represented. The basic idea is that a subroutine (or method) is provided which is responsible for the override. The return of the method governs how the object will be represented when dumped, and how it will be restored. The basic calling convention is</p>
+
+<pre class="sh_perl">    my ( $proxy, $thaw, $postop )= $callback-&#62;($obj);
+    #or                          = $obj-&#62;$method();</pre>
+
+<p>The <a href="#Freezer" class="podlinkpod"
+><code>Freezer()</code></a> method controls what methods to use as a default method and also allows per class overrides. When dumping an object of a given class the first time it tries to execute the class specific handler if it is specified, then the user specific generic handler if its been specified and then &#34;DDS_freeze&#34;. This means that class authors can implement a <code>DDS_freeze()</code> method and their objects will automatically be serialized as necessary. <b>Note</b> that if either the class specific or generic handler is defined but false <code>DDS_freeze()</code> will not be used even if it is present.</p>
+
+<p>The interface of the <a href="#Freezer" class="podlinkpod"
+><code>Freezer()</code></a> handler in detail is as follows:</p>
+
+<dl>
+<dt><a name='obj'></a><a name="$obj"
+><b><code>$obj</code></b></a></dt>
+
+<dd>
+<p>The object being dumped.</p>
+
+<dt><a name='proxy'></a><a name="$proxy"
+><b><code>$proxy</code></b></a></dt>
+
+<dd>
+<p>This is what will be dumped instead of <code>$obj</code>. It may be one of the following values:</p>
+
+<dl>
+<dt><a name='undef'></a><a name="undef_(first_time_only)"
+><i><code>undef</code></i> (first time only)</a></dt>
+
+<dd>
+<p>On the first time a serialization hook is called in a dump it may return undef or the empty list to indicate that it shouldn&#39;t be used again for this class during this pass. Any other time undef is treated the same as false.</p>
+
+<dt><a name='FALSE'></a><a name="FALSE_value"
+><i>FALSE value</i></a></dt>
+
+<dd>
+<p>A false value for <code>$proxy</code> is taken to mean that it should be ignored. Its like saying IgnoreClass(ref($obj)); <b>Note</b> that undef has a special meaning when the callback is called the first time.</p>
+
+<dt><a name='A'></a><a name="A_Reference"
+><i>A Reference</i></a></dt>
+
+<dd>
+<p>A reference that will be dumped instead of the object.</p>
+
+<dt><a name='Perl'></a><a name="Perl_Code"
+><i>Perl Code</i></a></dt>
+
+<dd>
+<p>A string that is to be treated as code and inserted directly into the dump stream as a proxy for the original. Note that the code must be able to execute inline or in other words must evaluate to a perl EXPR. Use <code>do{}</code> to wrap multistatement code.</p>
+</dd>
+</dl>
+
+<dt><a name='thaw'></a><a name="$thaw"
+><b><code>$thaw</code></b></a></dt>
+
+<dd>
+<p>This values is used to allow extra control over how the object will be recreated when dumped. It is used for converting the <code>$proxy</code> representation into the real thing. It is only relevent when <code>$proxy</code> is a reference.</p>
+
+<dl>
+<dt><a name='FALSE'></a><a name="FALSE_value"
+><i>FALSE value</i></a></dt>
+
+<dd>
+<p>Indicates no thaw action is to be included for this object.</p>
+
+<dt><a name='Sub'></a><a name="Sub_or_Method_Name"
+><i>Sub or Method Name</i></a></dt>
+
+<dd>
+<p>A string matching <code>/^(-&#62;)?((?:\w*::)\w+)(\(\))?$/</code> in which case it is taken as a sub name when the string ends in () and a method name when the string doesnt. If the <code>-&#62;</code> is present then the sub or method is called inline. If it is not then the sub or method is called after the main dump.</p>
+
+<dt><a name='Perl'></a><a name="Perl_Code"
+><i>Perl Code</i></a></dt>
+
+<dd>
+<p>Any other string, in which case the result will be taken as code which will be emitted after the main dump. It will be wrapped in a for loop that aliases <code>$_</code> to the variable in question.</p>
+</dd>
+</dl>
+
+<dt><a name='postdump'></a><a name="$postdump"
+><b><code>$postdump</code></b></a></dt>
+
+<dd>
+<p>This is the similar to <code>$thaw</code> but is called in process instead of being emitted as part of the dump. Any return is ignored. It is only relevent when <code>$proxy</code> is a reference.</p>
+
+<dl>
+<dt><a name='FALSE'></a><a name="FALSE_value"
+><i>FALSE value</i></a></dt>
+
+<dd>
+<p>No postdump action is to occur.</p>
+
+<dt><a name='Code'></a><a name="Code_Reference"
+><i>Code Reference</i></a></dt>
+
+<dd>
+<p>The code ref will be called after serialization is complete with the object as the argument.</p>
+
+<dt><a name='Method'></a><a name="Method_Name"
+><i>Method Name</i></a></dt>
+
+<dd>
+<p>The method will be called after serialization is complete</p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<p>An example DDS_freeze method is one I had to put together for an object which contained a key whose value was a ref to an array tied to the value of another key. Dumping this got crazy, so I wanted to surpress dumping the tied array. I did it this way:</p>
+
+<pre class="sh_perl">    sub DDS_freeze {
+        my $self=shift;
+        delete $self-&#62;{&#39;tie&#39;};
+        return ($self,&#39;-&#62;fix_tie&#39;,&#39;fix_tie&#39;);
+    }
+
+    sub fix_tie {
+        my $self=shift;
+        if ( ! $self-&#62;{&#39;tie&#39;} ) {
+            $self-&#62;{str}=&#34;&#34; unless defined $self-&#62;{str};
+            tie my @a, &#39;Tie::Array::PackedC&#39;, $self-&#62;{str};
+            $self-&#62;{&#39;tie&#39;} = \@a;
+        }
+        return $self;
+    }</pre>
+
+<p>The <code>$postop</code> means the object is relatively unaffected after the dump, the <code>$thaw</code> says that we should also include the method inline as we dump. An example dump of an object like this might be</p>
+
+<pre class="sh_perl">   $Foo1=bless({ str=&#62;&#39;&#39; },&#39;Foo&#39;)-&#62;fix_tie();</pre>
+
+<p>Wheras if we omit the <code>-&#62;</code> then we would get:</p>
+
+<pre class="sh_perl">    $Foo1=bless({ str=&#62;&#39;&#39; },&#39;Foo&#39;);
+    $Foo1-&#62;fix_tie();</pre>
+
+<p>In our example it wouldn&#39;t actually make a difference, but the former style can be nicer to read if the object is embedded in another. However the non arrow notation is slightly more dangerous, in that its possible that the internals of the object will not be fully linked when the method is evaluated. The second form guarantees that the object will be fully linked when the method is evaluated.</p>
+
+<p>See <a href="#Controlling_Hash_Traversal_and_Display_Order" class="podlinkpod"
+>&#34;Controlling Hash Traversal and Display Order&#34;</a> for a different way to control the representation of hash based objects.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Controlling_Hash_Traversal_and_Display_Order"
+>Controlling Hash Traversal and Display Order</a></h2>
+
+<p>When dumping a hash you may control the order the keys will be output and which keys will be included. The basic idea is to specify a subroutine which takes a hash as an argument and returns a reference to an array containing the keys to be dumped.</p>
+
+<p>You can use the <a href="#KeyOrder_TYPE_OR_OBJ" class="podlinkpod"
+>KeyOrder()</a> routine or the <a href="#SortKeys" class="podlinkpod"
+>SortKeys()</a> routine to specify the sorter to be used.</p>
+
+<p>The routine will be called in the following way:</p>
+
+<pre class="sh_perl">   ( $key_array, $thaw ) = $sorter-&#62;($hash,($pass=0),$addr,$class);
+   ( $key_array,)        = $sorter-&#62;($hash,($pass=1),$addr,$class);</pre>
+
+<p><code>$hash</code> is the hash to be dumped, <code>$addr</code> is the refaddr() of the <code>$hash</code>, and <code>$class</code> will be set if the hash has been blessed.</p>
+
+<p>When <code>$pass</code> is 0 the <code>$thaw</code> variable may be supplied as well as the keyorder. If it is defined then it specifies what thaw action to perform after dumping the hash. See <a href="#$thaw" class="podlinkpod"
+><code>$thaw</code></a> in <a href="#Controlling_Object_Representation" class="podlinkpod"
+>&#34;Controlling Object Representation&#34;</a> for details as to how it works. This allows an object to define those keys needed to recreate itself properly, and a followup hook to recreate the rest.</p>
+
+<p><b>Note</b> that if a <a href="#Freezer" class="podlinkpod"
+>Freezer()</a> method is defined and returns a <a href="#$thaw" class="podlinkpod"
+><code>$thaw</code></a> then the <a href="#$thaw" class="podlinkpod"
+><code>$thaw</code></a> returned by the sorter will override it.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Controlling_Array_Presentation_and_Run_Length_Encoding"
+>Controlling Array Presentation and Run Length Encoding</a></h2>
+
+<p>By default Data::Dump::Streamer will &#34;run length encode&#34; array values. This means that when an array value is simple (ie, its not referenced and does contain a reference) and is repeated mutliple times the output will be single a list multiplier statement, and not each item output seperately. Thus: <a href="#Dump" class="podlinkpod"
+><code>Dump([0,0,0,0])</code></a> will be output somthing like</p>
+
+<pre class="sh_perl">   $ARRAY1 = [ (0) x 4 ];</pre>
+
+<p>This is particularly useful when dealing with large arrays that are only partly filled, and when accidentally the array has been made very large, such as with the improper use of pseudo-hash notation.</p>
+
+<p>To disable this feature you may set the <a href="#Rle" class="podlinkpod"
+>Rle()</a> property to FALSE, by default it is enabled and set to TRUE.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Installing_DDS_as_a_package_alias"
+>Installing <i>DDS</i> as a package alias</a></h2>
+
+<p>Its possible to have an alias to Data::Dump::Streamer created and installed for easier useage in one liners and short scripts. Data::Dump::Streamer is a bit long to type sometimes. However because this technically means polluting the root level namespace, and having it listed on CPAN, I have elected to have the installer not install it by default. If you wish it to be installed you must explicitly state so when Build.Pl is run:</p>
+
+<pre class="sh_perl">  perl Build.Pl DDS [Other Module::Build options]</pre>
+
+<p>Then a normal &#39;./Build test, ./Build install&#39; invocation will install DDS.</p>
+
+<p>Using DDS is identical to Data::Dump::Streamer.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="use-time_package_aliasing"
+>use-time package aliasing</a></h2>
+
+<p>You can also specify an alias at use-time, then use that alias in the rest of your program, thus avoiding the permanent (but modest) namespace pollution of the previous method.</p>
+
+<pre class="sh_perl">  use Data::Dumper::Streamer as =&#62; &#39;DDS&#39;;
+
+  # or if you prefer
+  use Data::Dumper::Streamer;
+  import Data::Dumper::Streamer as =&#62; &#39;DDS&#39;;</pre>
+
+<p>You can use any alias you like, but that doesn&#39;t mean you should.. Folks doing as =&#62; &#39;DBI&#39; will be mercilessly ridiculed.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PadWalker_support"
+>PadWalker support</a></h2>
+
+<p>If PadWalker 1.0 is installed you can use DumpLex() to try to automatically determine the names of the vars being dumped. As long as the vars being dumped have my or our declarations in scope the vars will be correctly named. Padwalker will also be used instead of the B:: modules when dumping closures when it is available.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INTERFACE"
+>INTERFACE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Data::Dumper_Compatibility"
+>Data::Dumper Compatibility</a></h2>
+
+<p>For drop in compatibility with the Dumper() usage of Data::Dumper, you may request that the <a href="#Dumper" class="podlinkpod"
+>Dumper()</a> method is exported. It will not be exported by default. In addition the standard Data::Dumper::Dumper() may be exported on request as <code>DDumper</code>. If you provide the tag <code>:Dumper</code> then both will be exported.</p>
+
+<dl>
+<dt><a name="Dumper"
+>Dumper</a></dt>
+
+<dd>
+<dt><a name='Dumper'></a><a name="Dumper_LIST"
+>Dumper LIST</a></dt>
+
+<dd>
+<p>A synonym for scalar Dump(LIST)-&#62;Out for usage compatibility with <a href="/perldoc?Data%3A%3ADumper" class="podlinkpod"
+>Data::Dumper</a></p>
+
+<dt><a name="DDumper"
+>DDumper</a></dt>
+
+<dd>
+<dt><a name='DDumper'></a><a name="DDumper_LIST"
+>DDumper LIST</a></dt>
+
+<dd>
+<p>A secondary export of the actual <a href="/perldoc?Data%3A%3ADumper" class="podlinkpod"
+>Data::Dumper::Dumper</a> subroutine.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Constructors"
+>Constructors</a></h2>
+
+<dl>
+<dt><a name="new"
+>new</a></dt>
+
+<dd>
+<p>Creates a new Data::Dump::Streamer object. Currently takes no arguments and simply returns the new object with a default style configuration.</p>
+
+<p>See <code>Dump()</code> for a better way to do things.</p>
+
+<dt><a name="Dump"
+>Dump</a></dt>
+
+<dd>
+<dt><a name='Dump'></a><a name="Dump_VALUES"
+>Dump VALUES</a></dt>
+
+<dd>
+<p>Smart non method based constructor.</p>
+
+<p>This routine behaves very differently depending on the context it is called in and whether arguments are provided.</p>
+
+<p>If called with no arguments it is exactly equivelent to calling</p>
+
+<pre class="sh_perl">  Data::Dump::Streamer-&#62;new()</pre>
+
+<p>which means it returns an object reference.</p>
+
+<p>If called with arguments and in scalar context it is equivelent to calling</p>
+
+<pre class="sh_perl">  Data::Dump::Streamer-&#62;new()-&#62;Data(@vals)</pre>
+
+<p>except that the actual depth first traversal is <i>delayed</i> until <code>Out()</code> is called. This means that options that must be provided before the <code>Data()</code> phase can be provided after the call to <code>Dump()</code>. Again, it returns a object reference.</p>
+
+<p>If called with arguments and in void or list context it is equivelent to calling</p>
+
+<pre class="sh_perl">  Data::Dump::Streamer-&#62;new()-&#62;Data(@vals)-&#62;Out()</pre>
+
+<p>The reason this is true in list context is to make <code>print Dump(...),&#34;\n&#34;;</code> do the right thing. And also that combined with method chaining options can be added or removed as required quite easily and naturally.</p>
+
+<p>So to put it short:</p>
+
+<pre class="sh_perl">  my $obj=Dump($x,$y);         # Returns an object
+  my $str=Dump($x,$y)-&#62;Out();  # Returns a string of the dump.
+  my @code=Dump($x,$y);        # Returns a list of the dump.
+
+  Dump($x,$y);                 # prints the dump.
+  print Dump($x,$y);           # prints the dump.</pre>
+
+<p>It should be noted that the setting of <code>$\</code> will affect the behaviour of both of</p>
+
+<pre class="sh_perl">  Dump($x,$y);
+  print Dump($x,$y);</pre>
+
+<p>but it will not affect the behaviour of</p>
+
+<pre class="sh_perl">  print scalar Dump($x,$y);</pre>
+
+<p><b>Note</b> As of 1.11 Dump also works as a method, with identical properties as when called as a subroutine, with the exception that when called with no arguments it is a synonym for <code>Out()</code>. Thus</p>
+
+<pre class="sh_perl">  $obj-&#62;Dump($foo)-&#62;Names(&#39;foo&#39;)-&#62;Out();</pre>
+
+<p>will work fine, as will the odd looking:</p>
+
+<pre class="sh_perl">  $obj-&#62;Dump($foo)-&#62;Names(&#39;foo&#39;)-&#62;Dump();</pre>
+
+<p>which are both the same as</p>
+
+<pre class="sh_perl">  $obj-&#62;Names(&#39;foo&#39;)-&#62;Data($foo)-&#62;Out();</pre>
+
+<p>Hopefully this should make method use more or less DWIM.</p>
+
+<dt><a name='DumpLex'></a><a name="DumpLex_VALUES"
+>DumpLex VALUES</a></dt>
+
+<dd>
+<p>DumpLex is similar to Dump except it will try to automatically determine the names to use for the variables being dumped by using PadWalker to have a poke around the calling lexical scope to see what is declared. If a name for a var can&#39;t be found then it will be named according to the normal scheme. When PadWalker isn&#39;t installed this is just a wrapper for <a href="/perldoc?Dump" class="podlinkpod"
+>Dump()</a>.</p>
+
+<p>Thanks to Ovid for the idea of this. See <a href="/perldoc?Data%3A%3ADumper%3A%3ASimple" class="podlinkpod"
+>Data::Dumper::Simple</a> for a similar wrapper around <a href="/perldoc?Data%3A%3ADumper" class="podlinkpod"
+>Data::Dumper</a>.</p>
+
+<dt><a name='DumpVars'></a><a name="DumpVars_PAIRS"
+>DumpVars PAIRS</a></dt>
+
+<dd>
+<p>This is wrapper around <a href="/perldoc?Dump" class="podlinkpod"
+>Dump()</a> which expect to receive a list of name=&#62;value pairs instead of a list of values. Otherwise behaves like <a href="/perldoc?Dump" class="podlinkpod"
+>Dump()</a>. Note that names starting with a &#39;-&#39; are treated the same as those starting with &#39;*&#39; when passed to <a href="/perldoc?Names" class="podlinkpod"
+>Names()</a>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Methods"
+>Methods</a></h2>
+
+<dl>
+<dt><a name="Data"
+>Data</a></dt>
+
+<dd>
+<dt><a name='Data'></a><a name="Data_LIST"
+>Data LIST</a></dt>
+
+<dd>
+<p>Analyzes a list of variables in breadth first order.</p>
+
+<p>If called with arguments then the internal object state is reset before scanning the list of arguments provided.</p>
+
+<p>If called with no arguments then whatever arguments were provided to <code>Dump()</code> will be scanned.</p>
+
+<p>Returns $self.</p>
+
+<dt><a name="Out"
+>Out</a></dt>
+
+<dd>
+<dt><a name='Out'></a><a name="Out_VALUES"
+>Out VALUES</a></dt>
+
+<dd>
+<p>Prints out a set of values to the appropriate location. If provided a list of values then the values are first scanned with <code>Data()</code> and then printed, if called with no values then whatever was scanned last with <code>Data()</code> or <code>Dump()</code> is printed.</p>
+
+<p>If the <code>To()</code> attribute was provided then will dump to whatever object was specified there (any object, including filehandles that accept the print() method), and will always return $self.</p>
+
+<p>If the <code>To()</code> attribute was not provided then will use an internal printing object, returning either a list or scalar or printing to STDOUT in void context.</p>
+
+<p>This routine is virtually always called without arguments as the last method in the method chain.</p>
+
+<pre class="sh_perl"> Dump-&#62;Arguments(1)-&#62;Out(@vars);
+ $obj-&#62;Data(@vars)-&#62;Out();
+ Dump(@vars)-&#62;Out;
+ Data::Dump::Streamer-&#62;Out(@vars);</pre>
+
+<p>All should DWIM.</p>
+
+<dt><a name="Names"
+>Names</a></dt>
+
+<dd>
+<dt><a name='Names'></a><a name="Names_LIST"
+>Names LIST</a></dt>
+
+<dd>
+<dt><a name='Names'></a><a name="Names_ARRAYREF"
+>Names ARRAYREF</a></dt>
+
+<dd>
+<p>Takes a list of strings or a reference to an array of strings to use for var names for the objects dumped. The names may be prefixed by a * indicating the variable is to be dumped as its dereferenced type if it is an array, hash or code ref. Otherwise the star is ignored. Other sigils may be prefixed but they will be silently converted to *&#39;s.</p>
+
+<p>If no names are provided then names are generated automatically based on the type of object being dumped, with abreviations applied to compound class names.</p>
+
+<p>If called with arguments then returns the object itself, otherwise in list context returns the list of names in use, or in scalar context a reference or undef. In void context with no arguments the names are cleared.</p>
+
+<p><b>NOTE:</b> Must be called before <code>Data()</code> is called.</p>
+
+<dt><a name="Purity"
+>Purity</a></dt>
+
+<dd>
+<dt><a name='Purity'></a><a name="Purity_BOOL"
+>Purity BOOL</a></dt>
+
+<dd>
+<p>This option can be used to set the level of purity in the output. It defaults to TRUE, which results in the module doing its best to ensure that the resulting dump when eval()ed is precisely the same as the input. However, at times such as debugging this can be tedius, resulting in extremely long dumps with many &#34;fix&#34; statements involved. By setting Purity to FALSE the resulting output won&#39;t necessarily be legal Perl, but it will be more legible. In this mode the output is boardly similar to that of the default setting of Data::Dumper (Purity(0)). When set to TRUE the behaviour is likewise similar to Data::Dumper in Purity(1) but more accurate.</p>
+
+<p>When Purity() is set to FALSE aliases will be output with a function call wrapper of &#39;alias_to&#39; whose argument will be the value the item is an alias to. This wrapper does nothing, and is only there as a visual cue. Likewise, &#39;make_ro&#39; will be output when the value was readonly, and again the effect is cosmetic only.</p>
+
+<dt><a name="To"
+>To</a></dt>
+
+<dd>
+<dt><a name='To'></a><a name="To_STREAMER"
+>To STREAMER</a></dt>
+
+<dd>
+<p>Specifies the object to print to. Data::Dump::Streamer can stream its output to any object supporting the print method. This is primarily meant for streaming to a filehandle, however any object that supports the method will do.</p>
+
+<p>If a filehandle is specified then it is used until it is explicitly changed, or the object is destroyed.</p>
+
+<dt><a name="Declare"
+>Declare</a></dt>
+
+<dd>
+<dt><a name='Declare'></a><a name="Declare_BOOL"
+>Declare BOOL</a></dt>
+
+<dd>
+<p>If Declare is True then each object is dumped with &#39;my&#39; declarations included, and all rules that follow are obeyed. (Ie, not referencing an undeclared variable). If Declare is False then all objects are expected to be previously defined and references to top level objects can be made at any time.</p>
+
+<p>Defaults to False.</p>
+
+<dt><a name="Indent"
+>Indent</a></dt>
+
+<dd>
+<dt><a name='Indent'></a><a name="Indent_INT"
+>Indent INT</a></dt>
+
+<dd>
+<p>If Indent is True then data is output in an indented and fairly neat fashion. If the value is 2 then hash key/value pairs and array values each on their own line. If the value is 1 then a &#34;smart&#34; indenting mode is activated where multiple key/value or values may be printed to the same line. The heuristics for this mode are still experimental so it may occassional not indent very nicely.</p>
+
+<p>Default is Indent(2)</p>
+
+<p>If indent is False then no indentation is done, and all optional whitespace. is omitted. See &#60;OptSpace()|/OptSpace&#62; for more details.</p>
+
+<p>Defaults to True.</p>
+
+<p>Newlines are appended to each statement regardless of this value.</p>
+
+<dt><a name="Indentkeys"
+>Indentkeys</a></dt>
+
+<dd>
+<dt><a name='Indentkeys'></a><a name="Indentkeys_BOOL"
+>Indentkeys BOOL</a></dt>
+
+<dd>
+<p>If Indent() and Indentkeys are True then hashes with more than one key value pair are dumped such that the keys and values line up. Note however this means each key has to be quoted twice. Not advised for very large data structures. Additional logic may enhance this feature soon.</p>
+
+<p>Defaults to True.</p>
+
+<p><b>NOTE:</b> Must be set before <code>Data()</code> is called.</p>
+
+<dt><a name="OptSpace"
+>OptSpace</a></dt>
+
+<dd>
+<dt><a name='OptSpace'></a><a name="OptSpace_STR"
+>OptSpace STR</a></dt>
+
+<dd>
+<p>Normally DDS emits a lot of whitespace in between tokens that it emits. Using this method you can control how much whitespace it will emit, or even if some other string should be used.</p>
+
+<p>If Indent is set to 0 then this value is automatically set to the empty string. When Indent is set back to a non zero value the old value will be restored if it has not been changed from the empty string in the intervening time.</p>
+
+<dt><a name='KeyOrder'></a><a name="KeyOrder_TYPE_OR_OBJ"
+>KeyOrder TYPE_OR_OBJ</a></dt>
+
+<dd>
+<dt><a name='KeyOrder'></a><a name="KeyOrder_TYPE_OR_OBJ,_VALUE"
+>KeyOrder TYPE_OR_OBJ, VALUE</a></dt>
+
+<dd>
+<p>Sets or returns the key order to for use for a given type or object.</p>
+
+<p>TYPE_OR_OBJ may be a string representing a class, or &#34;&#34; for representing unblessed objects, or it maybe a reference to a hash.</p>
+
+<p>VALUE may be a string representing one of built in sort mechanisms, or it may be a reference to a subroutine, or a method name if TYPE_OR_OBJ is not an object.</p>
+
+<p>The built in sort mechanisms are &#39;aphabetical&#39;/&#39;lexical&#39;, &#39;numeric&#39;, &#39;smart&#39;/&#39;intelligent&#39; and &#39;each&#39;.</p>
+
+<p>If VALUE is omitted returns the current value for the given type.</p>
+
+<p>If TYPE_OR_OBJ is omitted or FALSE it defaults to &#34;&#34; which represents unblessed hashes.</p>
+
+<p>See <a href="#Controlling_Hash_Traversal_and_Display_Order" class="podlinkpod"
+>&#34;Controlling Hash Traversal and Display Order&#34;</a> for more details.</p>
+
+<dt><a name="SortKeys"
+>SortKeys</a></dt>
+
+<dd>
+<dt><a name='SortKeys'></a><a name="SortKeys_VALUE"
+>SortKeys VALUE</a></dt>
+
+<dd>
+<p>This is a wrapper for KeyOrder. It allows only the generic hash sort order to be specified a little more elegantly than via KeyOrder(). It is syntactically equivelent to</p>
+
+<pre class="sh_perl">  $self-&#62;KeyOrder( &#34;&#34;, @_ );</pre>
+
+<dt><a name="Verbose"
+>Verbose</a></dt>
+
+<dd>
+<dt><a name='Verbose'></a><a name="Verbose_BOOL"
+>Verbose BOOL</a></dt>
+
+<dd>
+<p>If Verbose is True then when references that cannot be resolved in a single statement are encountered the reference is substituted for a descriptive tag saying what type of forward reference it is, and to what is being referenced. The type is provided through a prefix, &#34;R:&#34; for reference, and &#34;A:&#34; for alias, &#34;V:&#34; for a value and then the name of the var in a string. Automatically generated var names are also reduced to the shortest possible unique abbreviation, with some tricks thrown in for Long::Class::Names::Like::This (which would abbreviate most likely to LCNLT1)</p>
+
+<p>If Verbose if False then a simple placeholder saying &#39;A&#39; or &#39;R&#39; is provided. (In most situations perl requires a placeholder, and as such one is always provided, even if technically it could be omitted.)</p>
+
+<p>This setting does not change the followup statements that fix up the structure, and does not result in a loss of accuracy, it just makes it a little harder to read. OTOH, it means dumps can be quite a bit smaller and less noisy.</p>
+
+<p>Defaults to True.</p>
+
+<p><b>NOTE:</b> Must be set before <code>Data()</code> is called.</p>
+
+<dt><a name="DumpGlob"
+>DumpGlob</a></dt>
+
+<dd>
+<dt><a name='DumpGlob'></a><a name="DumpGlob_BOOL"
+>DumpGlob BOOL</a></dt>
+
+<dd>
+<p>If True then globs will be followed and fully defined, otherwise the globs will still be referenced but their current value will not be set.</p>
+
+<p>Defaults to True</p>
+
+<p><b>NOTE:</b> Must be set before <code>Data()</code> is called.</p>
+
+<dt><a name="Deparse"
+>Deparse</a></dt>
+
+<dd>
+<dt><a name='Deparse'></a><a name="Deparse_BOOL"
+>Deparse BOOL</a></dt>
+
+<dd>
+<p>If True then CODE refs will be deparsed use <a href="/perldoc?B%3A%3ADeparse" class="podlinkpod"
+>B::Deparse</a> and included in the dump. If it is False the a stub subroutine reference will be output as per the setting of <code>CodeStub()</code>.</p>
+
+<p>Caveat Emptor, dumping subroutine references is hardly a secure act, and it is provided here only for convenience.</p>
+
+<p>Note using this routine is at your own risk as of DDS 1.11, how it interacts with the newer advanced closure dumping process is undefined.</p>
+
+<dt><a name="EclipseName"
+>EclipseName</a></dt>
+
+<dd>
+<dt><a name='EclipseName'></a><a name="EclipseName_SPRINTF_FORMAT"
+>EclipseName SPRINTF_FORMAT</a></dt>
+
+<dd>
+<p>When necessary DDS will rename vars output during deparsing with this value. It is a sprintf format string that should contain only and both of the &#34;%s&#34; and a &#34;%d&#34; formats in any order along with whatever other literal text you want in the name. No checks are performed on the validity of this value so be careful. It defaults to</p>
+
+<pre class="sh_perl">  &#34;%s_eclipse_%d&#34;</pre>
+
+<p>where the &#34;%s&#34; represents the name of the var being eclipsed, and the &#34;%d&#34; a counter to ensure all such mappings are unique.</p>
+
+<dt><a name="DeparseOpts"
+>DeparseOpts</a></dt>
+
+<dd>
+<dt><a name='DeparseOpts'></a><a name="DeparseOpts_LIST"
+>DeparseOpts LIST</a></dt>
+
+<dd>
+<dt><a name='DeparseOpts'></a><a name="DeparseOpts_ARRAY"
+>DeparseOpts ARRAY</a></dt>
+
+<dd>
+<p>If Deparse is True then these options will be passed to B::Deparse-&#62;new() when dumping a CODE ref. If passed a list of scalars the list is used as the arguments. If passed an array reference then this array is assumed to contain a list of arguments. If no arguments are provided returns a an array ref of arguments in scalar context, and a list of arguments in list context.</p>
+
+<p>Note using this routine is at your own risk as of DDS 1.11, how it interacts with the newer advanced closure dumping process is undefined.</p>
+
+<dt><a name="CodeStub"
+>CodeStub</a></dt>
+
+<dd>
+<dt><a name='CodeStub'></a><a name="CodeStub_STRING"
+>CodeStub STRING</a></dt>
+
+<dd>
+<p>If Deparse is False then this string will be used in place of CODE references. Its the users responsibility to make sure its compilable and blessable.</p>
+
+<p>Defaults to &#39;sub { Carp::confess &#34;Dumped code stub!&#34; }&#39;</p>
+
+<dt><a name="FormatStub"
+>FormatStub</a></dt>
+
+<dd>
+<dt><a name='FormatStub'></a><a name="FormatStub_STRING"
+>FormatStub STRING</a></dt>
+
+<dd>
+<p>If Deparse is False then this string will be used in place of FORMAT references. Its the users responsibility to make sure its compilable and blessable.</p>
+
+<p>Defaults to &#39;do{ local *F; eval &#34;format F =\nFormat Stub\n.\n&#34;; *F{FORMAT} }&#39;</p>
+
+<dt><a name="DeparseGlob"
+>DeparseGlob</a></dt>
+
+<dd>
+<dt><a name='DeparseGlob'></a><a name="DeparseGlob_BOOL"
+>DeparseGlob BOOL</a></dt>
+
+<dd>
+<p>If Deparse is TRUE then this style attribute will determine if subroutines and FORMAT&#39;s contained in globs that are dumped will be deparsed or not.</p>
+
+<p>Defaults to True.</p>
+
+<dt><a name="Dualvars"
+>Dualvars</a></dt>
+
+<dd>
+<dt><a name='Dualvars'></a><a name="Dualvars_BOOL"
+>Dualvars BOOL</a></dt>
+
+<dd>
+<dt><a name="Dualvars"
+>Dualvars</a></dt>
+
+<dd>
+<dt><a name='Dualvars'></a><a name="Dualvars_BOOL"
+>Dualvars BOOL</a></dt>
+
+<dd>
+<p>If TRUE then dualvar checking will occur and the required statements emitted to recreate dualvars when they are encountered, otherwise items will be dumped in their stringified form always. It defaults to TRUE.</p>
+
+<dt><a name="Rle"
+>Rle</a></dt>
+
+<dd>
+<dt><a name='Rle'></a><a name="Rle_BOOL"
+>Rle BOOL</a></dt>
+
+<dd>
+<dt><a name="RLE"
+>RLE</a></dt>
+
+<dd>
+<dt><a name='RLE'></a><a name="RLE_BOOL"
+>RLE BOOL</a></dt>
+
+<dd>
+<p>If True then arrays will be run length encoded using the <code>x</code> operator. What this means is that if an array contains repeated elements then instead of outputting each and every one a list multiplier will be output. This means that considerably less space is taken to dump redundant data.</p>
+
+<dt><a name="Freezer"
+>Freezer</a></dt>
+
+<dd>
+<dt><a name='Freezer'></a><a name="Freezer_ACTION"
+>Freezer ACTION</a></dt>
+
+<dd>
+<dt><a name='Freezer'></a><a name="Freezer_CLASS,_ACTION"
+>Freezer CLASS, ACTION</a></dt>
+
+<dd>
+<p>This method can be used to override the DDS_freeze hook for a specific class. If CLASS is omitted then the ACTION applies to all blessed object.</p>
+
+<p>If ACTION is false it indicates that the given CLASS should not have any serilization hooks called.</p>
+
+<p>If ACTION is a string then it is taken to be the method name that will be executed to freeze the object. CLASS-&#62;can(METHOD) must return true or the setting will be ignored.</p>
+
+<p>If ACTION is a code ref it is executed with the object as the argument.</p>
+
+<p>When called with no arguments returns in scalar context the generic serialization method (defaults to &#39;DDS_freeze&#39;), in list context returns the generic serialization method followed by a list of pairs of Classname=&#62;ACTION.</p>
+
+<p>If the action executes a sub or method it is expected to return a list of three values:</p>
+
+<pre class="sh_perl">   ( $proxy, $thaw, $postdump )=$obj-&#62;DDS_Freeze();</pre>
+
+<p>See <a href="#Controlling_Object_Representation" class="podlinkpod"
+>&#34;Controlling Object Representation&#34;</a> for more details.</p>
+
+<p><b>NOTE:</b> Must be set before <code>Data()</code> is called.</p>
+
+<dt><a name="Ignore"
+>Ignore</a></dt>
+
+<dd>
+<dt><a name='Ignore'></a><a name="Ignore_OBJ_OR_CLASS"
+>Ignore OBJ_OR_CLASS</a></dt>
+
+<dd>
+<dt><a name='Ignore'></a><a name="Ignore_OBJ_OR_CLASS,_BOOL"
+>Ignore OBJ_OR_CLASS, BOOL</a></dt>
+
+<dd>
+<p>Allows a given object or class to be ignored, and replaced with a string containing the name of the item ignored.</p>
+
+<p>If called with no args returns a list of items ignored (using the refaddr to represent objects). If called with a single argument returns whether that argument is ignored. If called with more than one arguments then expects a list of pairs of object =&#62; is_ignored.</p>
+
+<p>Returns $self when setting.</p>
+
+<p><b>NOTE:</b> Must be set before <code>Data()</code> is called.</p>
+
+<dt><a name="Compress"
+>Compress</a></dt>
+
+<dd>
+<dt><a name='Compress'></a><a name="Compress_SIZE"
+>Compress SIZE</a></dt>
+
+<dd>
+<p>Controls compression of string values (not keys). If this value is nonzero and a string to be dumped is longer than its value then the <a href="#Compressor" class="podlinkpod"
+>Compressor()</a> if defined is used to compress the string. Setting size to -1 will cause all strings to be processed, setting size to 0 will cause no strings to be processed.</p>
+
+<dt><a name="Compressor"
+>Compressor</a></dt>
+
+<dd>
+<dt><a name='Compressor'></a><a name="Compressor_CODE"
+>Compressor CODE</a></dt>
+
+<dd>
+<p>This attribute is used to control the compression of strings. It is expected to be a reference to a subroutine with the following interface:</p>
+
+<pre class="sh_perl">  my $prelude_code=$compressor-&#62;(); # no arguments.
+  my $code=$compressor-&#62;(&#39;string&#39;); # string argument</pre>
+
+<p>The sub will be called with no arguments at the beginning of the dump to allow any require statments or similar to be added. During the dump the sub will be called with a single argument when compression is required. The code returned in this case is expected to be an EXPR that will evaluate back to the original string.</p>
+
+<p>By default DDS will use <a href="/perldoc?Compress%3A%3AZlib" class="podlinkpod"
+>Compress::Zlib</a> in conjunction with <a href="/perldoc?MIME%3A%3ABase64" class="podlinkpod"
+>MIME::Base64</a> to do compression and encoding, and exposes the &#39;usqz&#39; subroutine for handling the decoding and decompression.</p>
+
+<p>The abbreviated name was chosen as when using the default compressor every string will be represented by a string like</p>
+
+<pre class="sh_perl">   usqz(&#39;....&#39;)</pre>
+
+<p>Meaning that eight characters are required without considering the data itself. Likewise Base64 was chosen because it is a representation that is high-bit safe, compact and easy to quote. Escaped strings are much less efficient for storing binary data.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Reading_the_Output"
+>Reading the Output</a></h2>
+
+<p>As mentioned in <a href="/perldoc?Verbose" class="podlinkpod"
+>Verbose</a> there is a notation used to make understanding the output easier. However at first glance it can probably be a bit confusing. Take the following example:</p>
+
+<pre class="sh_perl">    my $x=1;
+    my $y=[];
+    my $array=sub{\@_ }-&#62;( $x,$x,$y );
+    push @$array,$y,1;
+    unshift @$array,\$array-&#62;[-1];
+    Dump($array);</pre>
+
+<p>Which prints (without the comments of course):</p>
+
+<pre class="sh_perl">    $ARRAY1 = [
+                &#39;R: $ARRAY1-&#62;[5]&#39;,        # resolved by fix 1
+                1,
+                &#39;A: $ARRAY1-&#62;[1]&#39;,        # resolved by fix 2
+                [],
+                &#39;V: $ARRAY1-&#62;[3]&#39;,        # resolved by fix 3
+                1
+              ];
+    $ARRAY1-&#62;[0] = \$ARRAY1-&#62;[5];         # fix 1
+    alias_av(@$ARRAY1, 2, $ARRAY1-&#62;[1]);  # fix 2
+    $ARRAY1-&#62;[4] = $ARRAY1-&#62;[3];          # fix 3</pre>
+
+<p>The first entry, <code>&#39;R: $ARRAY1-&#62;[5]&#39;</code> indicates that this slot in the array holds a reference to the currently undefined <code>$ARRAY1-&#62;[5]</code>, and as such the value will have to be provided later in what the author calls &#39;fix&#39; statements. The third entry <code>&#39;A: $ARRAY1-&#62;[1]&#39;</code> indicates that is element of the array is in fact the exact same scalar as exists in <code>$ARRAY1-&#62;[1]</code>, or is in other words, an alias to that variable. Again, this cannot be expressed in a single statment and so generates another, different, fix statement. The fifth entry <code>&#39;V: $ARRAY1-&#62;[3]&#39;</code> indicates that this slots holds a value (actually a reference value) that is identical to one elsewhere, but is currently undefined. In this case it is because the value it needs is the reference returned by the anonymous array constructer in the fourth element (<code>$ARRAY1-&#62;[3]</code>). Again this results in yet another different fix statement. If Verbose() is off then only a &#39;R&#39; &#39;A&#39; or &#39;V&#39; tag is emitted as a marker of some form is necessary.</p>
+
+<p>All of this specialized behaviour can be bypassed by setting Purity() to FALSE, in which case the output will look very similar to what Data::Dumper outputs in low Purity setting.</p>
+
+<p>In a later version I&#39;ll try to expand this section with more examples.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="A_Note_About_Speed"
+>A Note About Speed</a></h2>
+
+<p>Data::Dumper is much faster than this module for many things. However IMO it is less readable, and definately less accurate. YMMV.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORT"
+>EXPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>By default exports the Dump() command. Or may export on request the same command as Stream(). A Data::Dumper::Dumper compatibility routine is provided via requesting Dumper and access to the real Data::Dumper::Dumper routine is provided via DDumper. The later two are exported together with the :Dumper tag.</p>
+
+<p>Additionally there are a set of internally used routines that are exposed. These are mostly direct copies of routines from Array::RefElem, Lexical::Alias and Scalar::Util, however some where marked have had their semantics slightly changed, returning defined but false instead of undef for negative checks, or throwing errors on failure.</p>
+
+<p>The following XS subs (and tagnames for various groupings) are exportable on request.</p>
+
+<pre class="sh_perl">  :Dumper
+        Dumper
+        DDumper
+
+  :undump          # Collection of routines needed to undump something
+        alias_av              # aliases a given array value to a scalar
+        alias_hv              # aliases a given hashes value to a scalar
+        alias_ref             # aliases a scalar to another scalar
+        make_ro               # makes a scalar read only
+        lock_keys             # pass through to Hash::Util::lock_keys
+        lock_keys_plus        # like lock_keys, but adds keys to those present
+        lock_ref_keys         # like lock_keys but operates on a hashref
+        lock_ref_keys_plus    # like lock_keys_plus but operates on a hashref
+        dualvar               # make a variable with different string/numeric
+                              # representation
+        alias_to              # pretend to return an alias, used in low
+                              # purity mode to indicate a value is actually
+                              # an alias to something else.
+
+  :alias           # all croak on failure
+     alias_av(@Array,$index,$var);
+     alias_hv(%hash,$key,$var);
+     alias_ref(\$var1,\$var2);
+     push_alias(@array,$var);
+
+  :util
+     blessed($var)           #undef or a class name.
+     isweak($var)            #returns true if $var contains a weakref
+     reftype($var)           #the underlying type or false but defined.
+     refaddr($var)           #a references address
+     refcount($var)          #the number of times a reference is referenced
+     sv_refcount($var)       #the number of times a scalar is referenced.
+     weak_refcount($var)     #the number of weakrefs to an object.
+                             #sv_refcount($var)-weak_refcount($var) is the true
+                             #SvREFCOUNT() of the var.
+     looks_like_number($var) #if perl will think this is a number.
+
+     regex($var)     # In list context returns the pattern and the modifiers,
+                     # in scalar context returns the pattern in (?msix:) form.
+                     # If not a regex returns false.
+     readonly($var)  # returns whether the $var is readonly
+     weaken($var)    # cause the reference contained in var to become weak.
+     make_ro($var)   # causes $var to become readonly, returns the value of $var.
+     reftype_or_glob # returns the reftype of a reference, or if its not
+                     # a reference but a glob then the globs name
+     refaddr_or_glob # similar to reftype_or_glob but returns an address
+                     # in the case of a reference.
+     globname        # returns an evalable string to represent a glob, or
+                     # the empty string if not a glob.
+  :all               # (Dump() and Stream() and Dumper() and DDumper()
+                     #  and all of the XS)
+  :bin               # (not Dump() but all of the rest of the XS)</pre>
+
+<p>By default exports only Dump(), DumpLex() and DumpVars(). Tags are provided for exporting &#39;all&#39; subroutines, as well as &#39;bin&#39; (not Dump()), &#39;util&#39; (only introspection utilities) and &#39;alias&#39; for the aliasing utilities. If you need to ensure that you can eval the results (undump) then use the &#39;undump&#39; tag.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Code with this many debug statements is certain to have errors. :-)</p>
+
+<p>Please report them with as much of the error output as possible.</p>
+
+<p>Be aware that to a certain extent this module is subject to whimsies of your local perl. The same code may not produce the same dump on two different installs and versions. Luckily these dont seem to pop up often.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR_AND_COPYRIGHT"
+>AUTHOR AND COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Yves Orton, yves at cpan org.</p>
+
+<p>Copyright (C) 2003-2005 Yves Orton</p>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>Contains code derived from works by Gisle Aas, Graham Barr, Jeff Pinyan, Richard Clamp, and Gurusamy Sarathy.</p>
+
+<p>Thanks to Dan Brook, Yitzchak Scott-Thoennes, eric256, Joshua ben Jore, Jim Cromie, Curtis &#34;Ovid&#34; Poe, Lars D&#618;&#7431;&#7428;&#7435;&#7439;&#7457;, and anybody that I&#39;ve forgotten for patches, feedback and ideas.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO_(its_a_crowded_space,_isn&#39;t_it!)"
+>SEE ALSO (its a crowded space, isn&#39;t it!) <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Data%3A%3ADumper" class="podlinkpod"
+>Data::Dumper</a> - the mother of them all</p>
+
+<p><a href="/perldoc?Data%3A%3ADumper%3A%3ASimple" class="podlinkpod"
+>Data::Dumper::Simple</a> - Auto named vars with source filter interface.</p>
+
+<p><a href="/perldoc?Data%3A%3ADumper%3A%3ANames" class="podlinkpod"
+>Data::Dumper::Names</a> - Auto named vars without source filtering.</p>
+
+<p><a href="/perldoc?Data%3A%3ADumper%3A%3AEasyOO" class="podlinkpod"
+>Data::Dumper::EasyOO</a> - easy to use wrapper for DD</p>
+
+<p><a href="/perldoc?Data%3A%3ADump" class="podlinkpod"
+>Data::Dump</a> - Has cool feature to squeeze data</p>
+
+<p><a href="/~yves/Data-Dump-Streamer-2.33/lib/Data/Dump/Streamer.pm" class="podlinkpod"
+>Data::Dump::Streamer</a> - The best perl dumper. But I would say that. :-)</p>
+
+<p><a href="/perldoc?Data%3A%3ATreeDumper" class="podlinkpod"
+>Data::TreeDumper</a> - Non perl output, lots of rendering options</p>
+
+<p>And of course <a href="/perldoc?www.perlmonks.org" class="podlinkpod"
+>www.perlmonks.org</a> and <a href="/perldoc?perl" class="podlinkpod"
+>perl</a> itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78172 Uploads, 24707 Distributions
+105971 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 01:39:49 2012 GMT (0.15892481803894) @cpansearch1 -->
+ </body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>WWW::SearchResult - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","WWW-Search",3]);
+    _gaq.push(["_setCustomVar",5,"Release","WWW-Search-2.508",3]);
+    _gaq.push(["_setCustomVar",3,"Module","WWW::SearchResult",3]);
+    _gaq.push(["_setCustomVar",1,"Author","MTHURN",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?WWW::SearchResult">permalink</a></div>
+  <a href="/~mthurn/">Martin 'Kingpin' Thurn</a> &gt;
+  <a href="/~mthurn/WWW-Search-2.508/">WWW-Search-2.508</a> &gt;
+  WWW::SearchResult
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/4a367e4af38ec41e2e2556c8eef047dd?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/M/MT/MTHURN/WWW-Search-2.508.tar.gz">WWW-Search-2.508.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=WWW%3A%3ASearchResult;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~MTHURN/WWW-Search-2.508/lib/WWW/SearchResult.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=WWW-Search">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.078 &nbsp;
+<span class="noprint">
+  <a href="/src/MTHURN/WWW-Search-2.508/lib/WWW/SearchResult.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#REQUIRED_RESULTS'>REQUIRED RESULTS</a>
+  <li class='indexItem indexItem1'><a href='#METHODS_AND_FUNCTIONS'>METHODS AND FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#url'>url</a>
+    <li class='indexItem indexItem2'><a href='#add_url'>add_url</a>
+    <li class='indexItem indexItem2'><a href='#urls'>urls</a>
+    <li class='indexItem indexItem2'><a href='#add_related_url'>add_related_url</a>
+    <li class='indexItem indexItem2'><a href='#related_urls'>related_urls</a>
+    <li class='indexItem indexItem2'><a href='#add_related_title'>add_related_title</a>
+    <li class='indexItem indexItem2'><a href='#related_titles'>related_titles</a>
+    <li class='indexItem indexItem2'><a href='#title,_description,_score,_change_date,_index_date,_size,_raw'>title, description, score, change_date, index_date, size, raw</a>
+    <li class='indexItem indexItem2'><a href='#Others'>Others</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>WWW::SearchResult - class for results returned from WWW::Search</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    require WWW::Search;
+    require WWW::SearchResult;
+    $search = new WWW::Search;
+    $search-&#62;native_query(WWW::Search::escape_query($query));
+    # Get first result:
+    $result = $search-&#62;next_result();</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>A framework for returning the results of <code>WWW::Search</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~mthurn/WWW-Search-2.508/lib/WWW/Search.pm" class="podlinkpod"
+>WWW::Search</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="REQUIRED_RESULTS"
+>REQUIRED RESULTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The particular fields returned in a result are backend- (search engine-) dependent. However, all search engines are required to return a url and title. (This list may grow in the future.)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS_AND_FUNCTIONS"
+>METHODS AND FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+>new</a></h2>
+
+<p>To create a new WWW::SearchResult, call</p>
+
+<pre class="sh_perl">    $result = new WWW::SearchResult();</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="url"
+>url</a></h2>
+
+<p>Returns the primary URL. Note that there may be a list of urls, see also methods <code>urls</code> and <code>add_url</code>. Nothing special is guaranteed about the primary URL other than that it is the first one returned by the back end.</p>
+
+<p>Every result is required to have at least one URL.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="add_url"
+>add_url</a></h2>
+
+<p>Add a URL to the list.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="urls"
+>urls</a></h2>
+
+<p>Return a reference to the list of urls. There is also a primary URL (<code>url</code>).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="add_related_url"
+>add_related_url</a></h2>
+
+<p>Add a URL to the related_url list.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="related_urls"
+>related_urls</a></h2>
+
+<p>Return a reference to the list of related urls.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="add_related_title"
+>add_related_title</a></h2>
+
+<p>Add a title to the list or related titles.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="related_titles"
+>related_titles</a></h2>
+
+<p>Return a reference to the list of related titles.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="title,_description,_score,_change_date,_index_date,_size,_raw"
+>title, description, score, change_date, index_date, size, raw</a></h2>
+
+<p>Set or get attributes of the result.</p>
+
+<p>None of these attributes is guaranteed to be provided by a given backend. If an attribute is not provided its method will return <code>undef</code>.</p>
+
+<p>Typical contents of these attributes:</p>
+
+<dl>
+<dt><a name="title"
+>title</a></dt>
+
+<dd>
+<p>The title of the hit result (typically that provided by the &#39;TITLE&#39; HTML tag).</p>
+
+<dt><a name="description"
+>description</a></dt>
+
+<dd>
+<p>A brief description of the result, as provided (or not) by the search engine. Often the first few sentences of the document.</p>
+
+<dt><a name="source"
+>source</a></dt>
+
+<dd>
+<p>Source is either the base url for this result (as listed on the search engine&#39;s results page) or another copy of the full url path of the result. It might also indicate the source site name or address whence the result came, for example, &#39;CNN&#39; or &#39;<a href="http://www.cnn.com" class="podlinkurl"
+>http://www.cnn.com</a>&#39; if the search result page said &#34;found at CNN.com&#34;.</p>
+
+<p>This value is backend-specific; in fact very few backends set this value.</p>
+
+<dt><a name="add_sources"
+>add_sources</a></dt>
+
+<dd>
+<p>Same meaning as source above, for adding sources in case there are potentially multiple sources.</p>
+
+<dt><a name="sources"
+>sources</a></dt>
+
+<dd>
+<p>Returns a reference to the list of sources.</p>
+
+<dt><a name="score"
+>score</a></dt>
+
+<dd>
+<p>A backend specific, numeric score of the search result. The exact range of scores is search-engine specific. Usually larger scores are better, but this is no longer required. See normalized_score for a backend independent score.</p>
+
+<dt><a name="normalized_score"
+>normalized_score</a></dt>
+
+<dd>
+<p>This is intended to be a backend-independent score of the search result. The range of this score is between 0 and 1000. Higher values indicate better quality results.</p>
+
+<p>This is not really implemented since no one has created an backend-independent ranking algorithm.</p>
+
+<dt><a name="change_date"
+>change_date</a></dt>
+
+<dd>
+<p>When the result was last changed. Typically this is the modification time of the destination web page.</p>
+
+<dt><a name="index_date"
+>index_date</a></dt>
+
+<dd>
+<p>When the search engine indexed the result.</p>
+
+<dt><a name="size"
+>size</a></dt>
+
+<dd>
+<p>The approximate size of the result, in bytes. This is only an approximation because search backends often report the size as &#34;18.4K&#34;; the best we can do with that number is return it as the value of 18.4 * 1024.</p>
+
+<dt><a name="raw"
+>raw</a></dt>
+
+<dd>
+<p>The raw HTML for the entire result. Raw should be exactly the raw HTML for one entry. It should not include list or table setup commands (like ul or table tags), but it may include list item or table data commands (like li, tr, or td). Whether raw contains a list entry, table row, br-separated lines, or plain text is search-engine dependent. In fact, many backends do not even return it at all.</p>
+
+<dt><a name="as_HTML"
+>as_HTML</a></dt>
+
+<dd>
+<p>Convert the search result to a human-readable form, decorated with HTML for pretty-printing.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Others"
+>Others</a></h2>
+
+<p>More attributes of the result. Backend-specific. Refer to the documentation of each backend for details.</p>
+
+<dl>
+<dt><a name="bid_amount"
+>bid_amount</a></dt>
+
+<dd>
+<dt><a name="bid_count"
+>bid_count</a></dt>
+
+<dd>
+<dt><a name="bidder"
+>bidder</a></dt>
+
+<dd>
+<dt><a name="category"
+>category</a></dt>
+
+<dd>
+<dt><a name="company"
+>company</a></dt>
+
+<dd>
+<dt><a name="end_date"
+>end_date</a></dt>
+
+<dd>
+<dt><a name="image_url"
+>image_url</a></dt>
+
+<dd>
+<dt><a name="item_number"
+>item_number</a></dt>
+
+<dd>
+<dt><a name="location"
+>location</a></dt>
+
+<dd>
+<dt><a name="question_count"
+>question_count</a></dt>
+
+<dd>
+<dt><a name="seller"
+>seller</a></dt>
+
+<dd>
+<dt><a name="shipping"
+>shipping</a></dt>
+
+<dd>
+<dt><a name="sold"
+>sold</a></dt>
+
+<dd>
+<dt><a name="start_date"
+>start_date</a></dt>
+
+<dd>
+<dt><a name="thumb_url"
+>thumb_url</a></dt>
+
+<dd>
+<dt><a name="watcher_count"
+>watcher_count</a></dt>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>WWW::SearchResult was written by John Heidemann. WWW::SearchResult is maintained by Martin Thurn.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78146 Uploads, 24702 Distributions
+105959 Modules, 9642 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 13:23:23 2012 GMT (0.0634899139404297) @cpansearch1 -->
+ </body>
+</html>

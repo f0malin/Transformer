@@ -1,0 +1,397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Crypt::Primes - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Crypt-Primes",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Crypt-Primes-0.50",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Crypt::Primes",3]);
+    _gaq.push(["_setCustomVar",1,"Author","VIPUL",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Crypt::Primes">permalink</a></div>
+  <a href="/~vipul/">Vipul Ved Prakash</a> &gt;
+  <a href="/~vipul/Crypt-Primes-0.50/">Crypt-Primes-0.50</a> &gt;
+  Crypt::Primes
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/f64a9e9d7042d5006d7fc972c94eae19?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/V/VI/VIPUL/Crypt-Primes-0.50.tar.gz">Crypt-Primes-0.50.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Crypt%3A%3APrimes;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~VIPUL/Crypt-Primes-0.50/lib/Crypt/Primes.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 2</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Crypt-Primes">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.50 &nbsp;
+<span class="noprint">
+  <a href="/src/VIPUL/Crypt-Primes-0.50/lib/Crypt/Primes.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#WARNING'>WARNING</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <li class='indexItem indexItem1'><a href='#IMPLEMENTATION_NOTE'>IMPLEMENTATION NOTE</a>
+  <li class='indexItem indexItem1'><a href='#RUNNING_TIME'>RUNNING TIME</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#BIBLIOGRAPHY'>BIBLIOGRAPHY</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+  <li class='indexItem indexItem1'><a href='#TODO'>TODO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Crypt::Primes - Provable Prime Number Generator suitable for Cryptographic Applications.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> $Revision: 0.49 $
+ $Date: 2001/06/11 01:04:23 $</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    # generate a random, provable 512-bit prime.
+
+    use Crypt::Primes qw(maurer);
+    my $prime = maurer (Size =&#62; 512); 
+
+    # generate a random, provable 2048-bit prime and report 
+    # progress on console.  
+
+    my $another_prime = maurer ( 
+                         Size =&#62; 2048, 
+                         Verbosity =&#62; 1 
+                        );           
+
+
+    # generate a random 1024-bit prime and a group 
+    # generator of Z*(n).
+
+    my $hash_ref = maurer ( 
+                    Size =&#62; 1024, 
+                    Generator =&#62; 1, 
+                    Verbosity =&#62; 1
+                   );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="WARNING"
+>WARNING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The codebase is stable, but the API will most definitely change in a future release.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module implements Ueli Maurer&#39;s algorithm for generating large <i>provable</i> primes and secure parameters for public-key cryptosystems. The generated primes are almost uniformly distributed over the set of primes of the specified bitsize and expected time for generation is less than the time required for generating a pseudo-prime of the same size with Miller-Rabin tests. Detailed description and running time analysis of the algorithm can be found in Maurer&#39;s paper[1].</p>
+
+<p>Crypt::Primes is a pure perl implementation. It uses Math::Pari for multiple precision integer arithmetic and number theoretic functions. Random numbers are gathered with Crypt::Random, a perl interface to /dev/u?random devices found on most modern Unix operating systems.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following functions are availble for import. They must be explicitely imported.</p>
+
+<dl>
+<dt><a name='maurer'></a><a name="maurer(%params)"
+><b>maurer(%params)</b></a></dt>
+
+<dd>
+<p>Generates a prime number of the specified bitsize. Takes a hash as parameter and returns a Math::Pari object (prime number) or a hash reference (prime number and generator) when group generator computation is requested. Following hash keys are understood:</p>
+</dd>
+</dl>
+
+<dl>
+<dt><a name="Size"
+><b>Size</b></a></dt>
+
+<dd>
+<p>Bitsize of the required prime number.</p>
+
+<dt><a name="Verbosity"
+><b>Verbosity</b></a></dt>
+
+<dd>
+<p>Level of verbosity of progress reporting. Report is printed on STDOUT. Level of 1 indicates normal, terse reporting. Level of 2 prints lots of intermediate computations, useful for debugging.</p>
+
+<dt><a name="Generator"
+><b>Generator</b></a></dt>
+
+<dd>
+<p>When Generator key is set to a non-zero value, a group generator of Z*(n) is computed. Group generators are required key material in public-key cryptosystems like Elgamal and Diffie-Hellman that are based on intractability of the discrete logarithm problem. When this option is present, maurer() returns a hash reference that contains two keys, Prime and Generator.</p>
+
+<dt><a name="Relprime"
+><b>Relprime</b></a></dt>
+
+<dd>
+<p>When set to 1, maurer() stores intermediate primes in a class array, and ensures they are not used during construction of primes in the future calls to maurer() with Reprime =&#62; 1. This is used by rsaparams().</p>
+
+<dt><a name="Intermediates"
+><b>Intermediates</b></a></dt>
+
+<dd>
+<p>When set to 1, maurer() returns a hash reference that contains (corresponding to the key &#39;Intermediates&#39;) a reference to an array of intermediate primes generated.</p>
+
+<dt><a name="Factors"
+><b>Factors</b></a></dt>
+
+<dd>
+<p>When set to 1, maurer() returns a hash reference that contains (corresponding to the key &#39;Factors&#39;) a reference to an array of factors of p-1 where p is the prime generated, and also (corresponding to the key &#39;R&#39;) a divisor of p.</p>
+</dd>
+</dl>
+
+<dl>
+<dt><a name='rsaparams'></a><a name="rsaparams(%params)"
+><b>rsaparams(%params)</b></a></dt>
+
+<dd>
+<p>Generates two primes (p,q) and public exponent (e) of a RSA key pair. The key pair generated with this method is resistant to iterative encryption attack. See Appendix 2 of [1] for more information.</p>
+
+<p>rsaparams() takes the same arguments as maurer() with the exception of `Generator&#39; and `Relprime&#39;. Size specifies the common bitsize of p an q. Returns a hash reference with keys p, q and e.</p>
+
+<dt><a name='trialdiv'></a><a name="trialdiv($n,$limit)"
+><b>trialdiv($n,$limit)</b></a></dt>
+
+<dd>
+<p>Performs trial division on $n to ensure it&#39;s not divisible by any prime smaller than or equal to $limit. The module maintains a lookup table of primes (from 2 to 65521) for this purpose. If $limit is not provided, a suitable value is computed automatically. trialdiv() is used by maurer() to weed out composite random numbers before performing computationally intensive modular exponentiation tests. It is, however, documented should you need to use it directly.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="IMPLEMENTATION_NOTE"
+>IMPLEMENTATION NOTE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module implements a modified FastPrime, as described in [1], to facilitate group generator computation. (Refer to [1] and [2] for description and pseudo-code of FastPrime). The modification involves introduction of an additional constraint on relative size r of q. While computing r, we ensure k * r is always greater than maxfact, where maxfact is the bitsize of the largest number we can factor easily. This value defaults to 140 bits. As a result, R is always smaller than maxfact, which allows us to get a complete factorization of 2Rq and use it to find a generator of the cyclic group Z*(2Rq).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="RUNNING_TIME"
+>RUNNING TIME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Crypt::Primes generates 512-bit primes in 7 seconds (on average), and 1024-bit primes in 37 seconds (on average), on my PII 300 Mhz notebook. There are no computational limits by design; primes upto 8192-bits were generated to stress test the code. For detailed runtime analysis see [1].</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>largeprimes(1), <a href="/perldoc?Crypt%3A%3ARandom" class="podlinkpod"
+>Crypt::Random</a>(3), <a href="/perldoc?Math%3A%3APari" class="podlinkpod"
+>Math::Pari</a>(3)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BIBLIOGRAPHY"
+>BIBLIOGRAPHY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='1'></a><a name="1_Fast_Generation_of_Prime_Numbers_and_Secure_Public-Key_Cryptographic_Parameters,_Ueli_Maurer_(1994)."
+>1 Fast Generation of Prime Numbers and Secure Public-Key Cryptographic Parameters, Ueli Maurer (1994).</a></dt>
+
+<dd>
+<dt><a name='2'></a><a name="2_Corrections_to_Fast_Generation_of_Prime_Numbers_and_Secure_Public-Key_Cryptographic_Parameters,_Ueli_Maurer_(1996)."
+>2 Corrections to Fast Generation of Prime Numbers and Secure Public-Key Cryptographic Parameters, Ueli Maurer (1996).</a></dt>
+
+<dd>
+<dt><a name='3'></a><a name="3_Handbook_of_Applied_Cryptography_by_Menezes,_Paul_C._van_Oorschot_and_Scott_Vanstone_(1997)."
+>3 Handbook of Applied Cryptography by Menezes, Paul C. van Oorschot and Scott Vanstone (1997).</a></dt>
+
+<dd>
+<dt><a name='Documents'></a><a name="Documents_1_&#38;_2_can_be_found_under_docs/_of_the_source_distribution."
+>Documents 1 &#38; 2 can be found under docs/ of the source distribution.</a></dt>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Vipul Ved Prakash, &#60;mail@vipul.net&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 1998-2001, Vipul Ved Prakash. All rights reserved. This code is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TODO"
+>TODO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Maurer&#39;s algorithm generates primes of progressively larger bitsize using a recursive construction method. The algorithm enters recursion with a prime number and bitsize of the next prime to be generated. (Bitsizes of the intermediate primes are computed using a probability distribution that ensures generated primes are sufficiently random.) This recursion can be distributed over multiple machines, participating in a competitive computation model, to achieve close to best running time of the algorithm. Support for this will be implemented some day, possibly when the next version of Penguin hits CPAN.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78152 Uploads, 24702 Distributions
+105959 Modules, 9642 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 14:26:34 2012 GMT (0.0858659744262695) @cpansearch1 -->
+ </body>
+</html>

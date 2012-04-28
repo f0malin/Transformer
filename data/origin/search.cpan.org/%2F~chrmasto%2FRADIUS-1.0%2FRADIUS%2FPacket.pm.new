@@ -1,0 +1,461 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>RADIUS::Packet - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","RADIUS",3]);
+    _gaq.push(["_setCustomVar",5,"Release","RADIUS-1.0",3]);
+    _gaq.push(["_setCustomVar",3,"Module","RADIUS::Packet",3]);
+    _gaq.push(["_setCustomVar",1,"Author","CHRMASTO",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?RADIUS::Packet">permalink</a></div>
+  <a href="/~chrmasto/">Christopher Masto</a> &gt;
+  <a href="/~chrmasto/RADIUS-1.0/">RADIUS-1.0</a> &gt;
+  RADIUS::Packet
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/644a279b7330eb16ba73d93d41f3bc66?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/C/CH/CHRMASTO/RADIUS-1.0.tar.gz">RADIUS-1.0.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=RADIUS%3A%3APacket;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~CHRMASTO/RADIUS-1.0/RADIUS/Packet.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 2</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=RADIUS">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.0 &nbsp;
+<span class="noprint">
+  <a href="/src/CHRMASTO/RADIUS-1.0/RADIUS/Packet.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#PACKAGE_METHODS'>PACKAGE METHODS</a>
+    <li class='indexItem indexItem2'><a href='#OBJECT_METHODS'>OBJECT METHODS</a>
+    <li class='indexItem indexItem2'><a href='#EXPORTED_SUBROUTINES'>EXPORTED SUBROUTINES</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#NOTES'>NOTES</a>
+  <li class='indexItem indexItem1'><a href='#EXAMPLE'>EXAMPLE</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>RADIUS::Packet - Object-oriented Perl interface to RADIUS packets</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use RADIUS::Packet;
+  use RADIUS::Dictionary;
+
+  my $d = new RADIUS::Dictionary &#34;/etc/radius/dictionary&#34;;
+
+  my $p = new RADIUS::Packet $d, $data;
+  $p-&#62;dump;
+
+  if ($p-&#62;attr(&#39;User-Name&#39; eq &#34;lwall&#34;) {
+    my $resp = new RADIUS::Packet $d;
+    $resp-&#62;set_code(&#39;Access-Accept&#39;);
+    $resp-&#62;set_identifier($p-&#62;identifier);
+    $resp-&#62;set_authenticator($p-&#62;authenticator);
+    $resp-&#62;set_attr(&#39;Reply-Message&#39;) = &#34;Welcome, Larry!\r\n&#34;;
+    my $respdat = auth_resp($resp-&#62;pack, &#34;mysecret&#34;);
+    ...</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>RADIUS (RFC2138) specifies a binary packet format which contains various values and attributes. RADIUS::Packet provides an interface to turn RADIUS packets into Perl data structures and vice-versa.</p>
+
+<p>RADIUS::Packet does not provide functions for obtaining RADIUS packets from the network. A simple network RADIUS server is provided as an example at the end of this document. Also, a RADIUS::Server module is under development which will simplify the interface.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PACKAGE_METHODS"
+>PACKAGE METHODS</a></h2>
+
+<dl>
+<dt><a name='new'></a><a name="new_RADIUS::Packet_$dictionary,_$data"
+><i>new</i> RADIUS::Packet $dictionary, $data</a></dt>
+
+<dd>
+<p>Returns a new RADIUS::Packet object. $dictionary is an optional reference to a RADIUS::Dictionary object. If not supplied, you must call <b>set_dict</b>. If $data is supplied, <b>unpack</b> will be called for you to initialize the object.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OBJECT_METHODS"
+>OBJECT METHODS</a></h2>
+
+<dl>
+<dt><a name='set_dict'></a><a name="-&#62;set_dict($dictionary)"
+>-&#62;<i>set_dict</i>($dictionary)</a></dt>
+
+<dd>
+<p>RADIUS::Packet needs access to a RADIUS::Dictionary object to do packing and unpacking. set_dict must be called with an appropriate dictionary reference (see <a href="/~chrmasto/RADIUS-1.0/RADIUS/Dictionary.pm" class="podlinkpod"
+>RADIUS::Dictionary</a>) before you can use -&#62;<b>pack</b> or -&#62;<b>unpack</b>.</p>
+
+<dt><a name='unpack'></a><a name="-&#62;unpack($data)"
+>-&#62;<i>unpack</i>($data)</a></dt>
+
+<dd>
+<p>Given a raw RADIUS packet $data, unpacks its contents so that they can be retrieved with the other methods (<b>code</b>, <b>attr</b>, etc.).</p>
+
+<dt><a name='pack'></a><a name="-&#62;pack"
+>-&#62;<i>pack</i></a></dt>
+
+<dd>
+<p>Returns a raw RADIUS packet suitable for sending to a RADIUS client or server.</p>
+
+<dt><a name='code'></a><a name="-&#62;code"
+>-&#62;<i>code</i></a></dt>
+
+<dd>
+<p>Returns the Code field as a string. As of this writing, the following codes are defined:</p>
+
+<pre class="sh_perl">        Access-Request          Access-Accept
+        Access-Reject           Accounting-Request
+        Accounting-Response     Access-Challenge
+        Status-Server           Status-Client</pre>
+
+<dt><a name='set_code'></a><a name="-&#62;&#60;set_code&#62;($code)"
+>-&#62;&#60;set_code&#62;($code)</a></dt>
+
+<dd>
+<p>Sets the Code field to the string supplied.</p>
+
+<dt><a name='identifier'></a><a name="-&#62;identifier"
+>-&#62;<i>identifier</i></a></dt>
+
+<dd>
+<p>Returns the one-byte Identifier used to match requests with responses, as a character value.</p>
+
+<dt><a name='set_identifier'></a><a name="-&#62;set_identifier"
+>-&#62;<i>set_identifier</i></a></dt>
+
+<dd>
+<p>Sets the Identifier byte to the character supplied.</p>
+
+<dt><a name='authenticator'></a><a name="-&#62;authenticator"
+>-&#62;<i>authenticator</i></a></dt>
+
+<dd>
+<p>Returns the 16-byte Authenticator field as a character string.</p>
+
+<dt><a name='set_authenticator'></a><a name="-&#62;set_authenticator"
+>-&#62;<i>set_authenticator</i></a></dt>
+
+<dd>
+<p>Sets the Authenticator field to the character string supplied.</p>
+
+<dt><a name='attr'></a><a name="-&#62;attr($name)"
+>-&#62;<i>attr</i>($name)</a></dt>
+
+<dd>
+<p>Retrieves the value of the named Attribute. Attributes will be converted automatically based on their dictionary type:</p>
+
+<pre class="sh_perl">        STRING     Returned as a string.
+        INTEGER    Returned as a Perl integer.
+        IPADDR     Returned as a string (a.b.c.d)
+        TIME       Returned as an integer</pre>
+
+<dt><a name='set_attr'></a><a name="-&#62;set_attr($name,_$val)"
+>-&#62;<i>set_attr</i>($name, $val)</a></dt>
+
+<dd>
+<p>Sets the named Attribute to the given value. Values should be supplied as they would be returned from the <b>attr</b> method.</p>
+
+<dt><a name='password'></a><a name="-&#62;password($secret)"
+>-&#62;<i>password</i>($secret)</a></dt>
+
+<dd>
+<p>The RADIUS Password attribute is encoded with a shared secret. Use this method to return the decoded version.</p>
+
+<dt><a name='dump'></a><a name="-&#62;dump"
+>-&#62;<i>dump</i></a></dt>
+
+<dd>
+<p>Prints the packet&#39;s contents to STDOUT.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORTED_SUBROUTINES"
+>EXPORTED SUBROUTINES</a></h2>
+
+<dl>
+<dt><a name='auth_resp'></a><a name="auth_resp($packed_packet,_$secret)"
+><i>auth_resp</i>($packed_packet, $secret)</a></dt>
+
+<dd>
+<p>Given a (packed) RADIUS packet and a shared secret, returns a new packet with the Authenticator field changed in accordace with RADIUS protocol requirements.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTES"
+>NOTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This document is (not yet) intended to be a complete description of how to implement a RADIUS server. Please see the RFCs (at <a href="ftp://ftp.livingston.com/pub/radius/" class="podlinkurl"
+>ftp://ftp.livingston.com/pub/radius/</a>) for that. The following is a brief description of the procedure:</p>
+
+<pre class="sh_perl">  1. Recieve a RADIUS request from the network.
+  2. Unpack it using this package.
+  3. Examine the attributes to determine the appropriate response.
+  4. Construct a response packet using this package.
+     Copy the Identifier and Authenticator fields from the request,
+     set the Code as appropriate, and fill in whatever Attributes
+     you wish to convey in to the server.
+  5. Call the pack method and use the auth_resp function to
+     authenticate it with your shared secret.
+  6. Send the response back over the network.
+  7. Lather, rinse, repeat.</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLE"
+>EXAMPLE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    #!/usr/local/bin/perl -w
+
+    use RADIUS::Dictionary;
+    use RADIUS::Packet;
+    use Net::Inet;
+    use Net::UDP;
+    use Fcntl;
+    use strict;
+
+    # This is a VERY simple RADIUS authentication server which responds
+    # to Access-Request packets with Access-Accept.  This allows anyone
+    # to log in.
+
+    my $secret = &#34;mysecret&#34;;  # Shared secret on the term server
+
+    # Parse the RADIUS dictionary file (must have dictionary in current dir)
+    my $dict = new RADIUS::Dictionary &#34;dictionary&#34;
+      or die &#34;Couldn&#39;t read dictionary: $!&#34;;
+
+    # Set up the network socket (must have radius in /etc/services)
+    my $s = new Net::UDP { thisservice =&#62; &#34;radius&#34; } or die $!;
+    $s-&#62;bind or die &#34;Couldn&#39;t bind: $!&#34;;
+    $s-&#62;fcntl(F_SETFL, $s-&#62;fcntl(F_GETFL,0) | O_NONBLOCK)
+      or die &#34;Couldn&#39;t make socket non-blocking: $!&#34;;
+
+    # Loop forever, recieving packets and replying to them
+    while (1) {
+      my ($rec, $whence);
+      # Wait for a packet
+      my $nfound = $s-&#62;select(1, 0, 1, undef);
+      if ($nfound &#62; 0) {
+        # Get the data
+        $rec = $s-&#62;recv(undef, undef, $whence);
+        # Unpack it
+        my $p = new RADIUS::Packet $dict, $rec;
+        if ($p-&#62;code eq &#39;Access-Request&#39;) {
+          # Print some details about the incoming request (try -&#62;dump here)
+          print $p-&#62;attr(&#39;User-Name&#39;), &#34; logging in with password &#34;,
+                $p-&#62;password($secret), &#34;\n&#34;;
+          # Create a response packet
+          my $rp = new RADIUS::Packet $dict;
+          $rp-&#62;set_code(&#39;Access-Accept&#39;);
+          $rp-&#62;set_identifier($p-&#62;identifier);
+          $rp-&#62;set_authenticator($p-&#62;authenticator);
+          # (No attributes are needed.. but you could set IP addr, etc. here)
+          # Authenticate with the secret and send to the server.
+          $s-&#62;sendto(auth_resp($rp-&#62;pack, $secret), $whence);
+        }
+        else {
+          # It&#39;s not an Access-Request
+          print &#34;Unexpected packet type recieved.&#34;;
+          $p-&#62;dump;
+        }
+      }
+    }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Christopher Masto, chris@netmonger.net</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~chrmasto/RADIUS-1.0/RADIUS/Dictionary.pm" class="podlinkpod"
+>RADIUS::Dictionary</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78124 Uploads, 24699 Distributions
+105950 Modules, 9642 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 08:01:57 2012 GMT (0.114001989364624) @cpansearch1 -->
+ </body>
+</html>

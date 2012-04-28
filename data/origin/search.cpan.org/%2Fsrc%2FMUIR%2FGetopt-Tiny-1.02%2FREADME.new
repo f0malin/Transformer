@@ -1,0 +1,115 @@
+NAME
+    Getopt::Tiny - yet another command line argument parsing module
+
+SYNOPSIS
+            use Getopt::Tiny;
+
+            my $arg = 'default value';
+            my @list;
+            my %hash;
+            my $flag;
+            my %set;
+
+            # begin usage info
+            my (%flags) = (
+                    'argx' => \$arg,        # set a parameter
+                    'listx' => \@list,      # fill in a list
+                    'hashx' => \%hash,      # set key/value pairs
+            );
+            my (%switches) = (
+                    'flagx' => \$flag,      # on or off
+            }
+            # end usage info
+
+            getopt(\@ARGV, \%flags, \%switches, $what_comes_after);
+            Getopt::Tiny::usage(__FILE__, \%flags, \%switches, 'files');
+
+    or
+
+            use Getopt::Tiny;
+            %flags = ...
+            %switches = ...
+            getopt()
+            Getopt::Tiny::usage();
+
+DESCRIPTION
+    Getopt::Tiny is yet another argument parsing module. The results of the
+    argument parsing are stored by using references that were provided to
+    getopt(). Usage information is automatically generated. Getopt::Tiny
+    expects all arguments to be switches -- no trailing list of files.
+
+    Getopt::Tiny can either call an existing usage() function or it can use
+    it's own builtin one. It trys to use the existing one by default. If
+    that fails, it will use its own. It figures out how to describe things
+    by reading the file where call to getopt() originated. In the file where
+    getopt is called, the following two lines must appear exactly as written
+    here:
+
+            # begin usage info
+            # end usage info
+
+    Between these two lines, lines that match the pattern of:
+
+            'someflag' => ...  # a description
+
+    will be noticed and used to document each flag individually.
+
+    The usage() function of Getopt::Tiny can be called on it's own. It can
+    either have it's arguments given to it explicitly or it can default them
+    like getopt().
+
+    If a usage function is provided, it will be called with one parameter:
+    the argument that didn't parse.
+
+    Getopt::Tiny can be used in situation where it is expected to parse the
+    entire command line and in situations where there will be command line
+    args left over. When Getopt::Tiny is expected to parse the whole command
+    line, do not include a forth argument to getopt(). When it is expected
+    that there will be stuff left over, pass a description of what should be
+    left over as the forth argument to getopt().
+
+ARGUMENT TYPES
+    There are four types of arguments that Getopt::Tiny supports.
+
+    switches                        Switches are either on or off. In the
+                                    example in the synopsis, the variable
+                                    $flag will be respectively set to `1' or
+                                    `0' if `-flagx' or `-noflagx' appears in
+                                    the argument list .
+
+    parameter                       Parameters have values. In the example
+                                    above, the $arg variable will be set to
+                                    whatever follows `-argx' in the argument
+                                    list.
+
+    list                            List flags can have multiple values. If
+                                    present, they will have at least one
+                                    value. In the example above, if the
+                                    argument list containted `qw(-listx a b
+                                    c -listx -d e -argx foo)', the array
+                                    @list would end up with a value of `qw(a
+                                    b c -d e)'.
+
+    hash                            Hashes have multiple key-value pairs. If
+                                    present they will have at least one
+                                    value. In the exmaple above, if the
+                                    argument list containted `qw(-hashx a=b
+                                    c=d -hashx -e=f -argx bar)', the hash
+                                    %hash would end up with a value of `(a
+                                    => b, c => d, -e => f)'.
+
+DEFAULT PARAMETERS
+    If no arguments are given to getopt() then it assumes that the argument
+    list to parse is `\@ARGV' and that the flags and switch references are
+    `\%::flags' and `\%::switches' respectively.
+
+    Likewise, if no arguments are given to usage() then it assumes that
+    filename to look for information in is `(caller(0))[1]' and that the
+    flags and switches are as above.
+
+COPYRIGHT
+    Copyright (C) 1998, 2002, David Muir Sharnoff. This modules licensed
+    under the terms of The Artistic License as found at
+    http://www.opensource.org/licenses/artistic-license.php. The optional
+    aggregation clause is in effect.
+

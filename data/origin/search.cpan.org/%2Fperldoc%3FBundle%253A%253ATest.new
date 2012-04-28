@@ -1,0 +1,777 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Bundle::Test - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Bundle-Test",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Bundle-Test-1.08",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Bundle::Test",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SZABGAB",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Bundle::Test">permalink</a></div>
+  <a href="/~szabgab/">&#x5D2;&#x5D0;&#x5D1;&#x5D5;&#x5E8; &#x5E1;&#x5D1;&#x5D5; - G&aacute;bor Szab&oacute;</a> &gt;
+  <a href="/~szabgab/Bundle-Test-1.08/">Bundle-Test-1.08</a> &gt;
+  Bundle::Test
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/4e0a6fe2acda5df6095514e7d6329e91?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SZ/SZABGAB/Bundle-Test-1.08.tar.gz">Bundle-Test-1.08.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Bundle%3A%3ATest;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SZABGAB/Bundle-Test-1.08/Test.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Net%3A%3AFTP">Net::FTP</a><br>
+<a href="/perldoc?DBD%3A%3APg">DBD::Pg</a><br>
+<a href="/perldoc?Image%3A%3AMagick">Image::Magick</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Bundle%3A%3ATest">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Bundle-Test">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.08 &nbsp;
+<span class="noprint">
+  <a href="/src/SZABGAB/Bundle-Test-1.08/Test.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#Description'>Description</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Fields_that_can_be_tested_using_Perl'>Fields that can be tested using Perl</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Module_descriptions'>Module descriptions</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#General'>General</a>
+    <li class='indexItem indexItem2'><a href='#Win32_Specific'>Win32 Specific</a>
+    <li class='indexItem indexItem2'><a href='#Unix/Linux_Specific'>Unix/Linux Specific</a>
+    <li class='indexItem indexItem2'><a href='#Apache_Specific'>Apache Specific</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Other_Resources'>Other Resources</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Perl_Community'>Perl Community</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#CPAN_Testers'>CPAN Testers</a>
+      <li class='indexItem indexItem3'><a href='#QA_and_kwalitee'>QA and kwalitee</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Articles'>Articles</a>
+    <li class='indexItem indexItem2'><a href='#Books'>Books</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Bugs'>Bugs</a>
+  <li class='indexItem indexItem1'><a href='#Thanks'>Thanks</a>
+  <li class='indexItem indexItem1'><a href='#Training'>Training</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Bundle::Test - A set of modules for software and hardware testing using Perl</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>A bundle does not have code in it.
+It is only a list of related modules.
+It exists only to make it easier to install these modules with one command:</p>
+
+<pre class="sh_perl"> perl -MCPAN -e &#39;install Bundle::Test&#39;</pre>
+
+<p>This bundle, however, in addition to the plain list of modules, also contains some explanation about the modules. There are explanataion even about modules not installed by this bundle but related to testing. Read on.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Description"
+>Description <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This bundle installs a set of modules you can use to build all kinds of tests both for your Perl modules and for applications written in any language.</p>
+
+<p>If you know what would you like to test and are looking for the tools, you came to the right place. After reading a short explanation here you&#39;ll be redirected to the documentation of the respective modules.</p>
+
+<p>If you&#39;d like to learn about the testing framework in Perl you should start by reading <a href="/perldoc?Test%3A%3ATutorial" class="podlinkpod"
+>Test::Tutorial</a> which is a good introduction. After that go on and read the documentation of <a href="/perldoc?Test%3A%3ASimple" class="podlinkpod"
+>Test::Simple</a> and <a href="/perldoc?Test%3A%3AMore" class="podlinkpod"
+>Test::More</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Fields_that_can_be_tested_using_Perl"
+>Fields that can be tested using Perl</a></h2>
+
+<dl>
+<dt><a name='Web'></a><a name="Web_Applications"
+>Web Applications</a></dt>
+
+<dd>
+<dt><a name='Web'></a><a name="Web_Services"
+>Web Services</a></dt>
+
+<dd>
+<dt><a name='Networking'></a><a name="Networking_devices_using_Command_Line_Interface_(CLI)"
+>Networking devices using Command Line Interface (CLI)</a></dt>
+
+<dd>
+<dt><a name="Databases"
+>Databases</a></dt>
+
+<dd>
+<dt><a name='GUI'></a><a name="GUI_based_applications_on_Windows"
+>GUI based applications on Windows</a></dt>
+
+<dd>
+<dt><a name='GUI'></a><a name="GUI_based_applications_on_X-Windows"
+>GUI based applications on X-Windows</a></dt>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Module_descriptions"
+>Module descriptions <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="General"
+>General</a></h2>
+
+<dl>
+<dt><a name="Test"
+><a href="/perldoc?Test" class="podlinkpod"
+>Test</a></a></dt>
+
+<dd>
+<p><a href="/perldoc?Test" class="podlinkpod"
+>Test</a> is a simple way to write tests. It is mostly obsolete. You should use <a href="/perldoc?Test%3A%3ASimple" class="podlinkpod"
+>Test::Simple</a> instead.</p>
+
+<dt><a name='Test'></a><a name="Test::Simple"
+><a href="/perldoc?Test%3A%3ASimple" class="podlinkpod"
+>Test::Simple</a></a></dt>
+
+<dd>
+<p><a href="/perldoc?Test%3A%3ASimple" class="podlinkpod"
+>Test::Simple</a> - can be used as a first attempt to write simple test for your perl module. Don&#39;t worry, the work you invest here can be transfered when you move using Test::More without loss and without hassel.</p>
+
+<dt><a name='Test'></a><a name="Test::More"
+><a href="/perldoc?Test%3A%3AMore" class="podlinkpod"
+>Test::More</a></a></dt>
+
+<dd>
+<p><a href="/perldoc?Test%3A%3AMore" class="podlinkpod"
+>Test::More</a> is an extension of Test::Simple. It provides a number of tools to compare various data structures of Perl.</p>
+
+<dt><a name='Test'></a><a name="Test::Harness"
+><a href="/perldoc?Test%3A%3AHarness" class="podlinkpod"
+>Test::Harness</a></a></dt>
+
+<dd>
+<p>With <a href="/perldoc?Test%3A%3AHarness" class="podlinkpod"
+>Test::Harness</a> you are lucky. In most of the cases you won&#39;t need to learn it as it contains a framework to execute the various test scripts created using the other modules. At some point later in your test development you might need this though in order to execute all your tests nicely.</p>
+
+<dt><a name='Test'></a><a name="Test::MockObject"
+><a href="/perldoc?Test%3A%3AMockObject" class="podlinkpod"
+>Test::MockObject</a></a></dt>
+
+<dd>
+<p><a href="/perldoc?Test%3A%3AMockObject" class="podlinkpod"
+>Test::MockObject</a> One of the biggest problems in testing is that you have to control your environment. This module lets you do just that.</p>
+
+<dt><a name='Test'></a><a name="Test::Pod"
+><a href="/perldoc?Test%3A%3APod" class="podlinkpod"
+>Test::Pod</a></a></dt>
+
+<dd>
+<p><a href="/perldoc?Test%3A%3APod" class="podlinkpod"
+>Test::Pod</a> provides a way to test the syntax of your PODs.</p>
+
+<dt><a name='Test'></a><a name="Test::Builder"
+><a href="/perldoc?Test%3A%3ABuilder" class="podlinkpod"
+>Test::Builder</a></a></dt>
+
+<dd>
+<p><a href="/perldoc?Test%3A%3ABuilder" class="podlinkpod"
+>Test::Builder</a> is used by most of the modern test modules to have a common back-end. When you need to implement your own domain specific test functions using <a href="/perldoc?Test%3A%3ABuilder" class="podlinkpod"
+>Test::Builder</a> will ensure your functions fit in the general framework and play well with the other Test modules.</p>
+
+<dt><a name='Test'></a><a name="Test::Warn"
+><a href="/perldoc?Test%3A%3AWarn" class="podlinkpod"
+>Test::Warn</a></a></dt>
+
+<dd>
+<p>Your application will have to print warnings on certain occassions that are considerd partially as failor. It is always a good idea to make sure when the conditions are met you indeed print out the correct warning. <a href="/perldoc?Test%3A%3AWarn" class="podlinkpod"
+>Test::Warn</a> provides tool for this.</p>
+
+<dt><a name='Test'></a><a name="Test::Inline"
+><a href="/perldoc?Test%3A%3AInline" class="podlinkpod"
+>Test::Inline</a></a></dt>
+
+<dd>
+<p>Some people like to add their tests right next to their code. This module let&#39;s you do just that. Add some POD documentation to your code and embed your tests in your documentation next to your code.</p>
+
+<dt><a name='Test'></a><a name="Test::Strict"
+><a href="/perldoc?Test%3A%3AStrict" class="podlinkpod"
+>Test::Strict</a></a></dt>
+
+<dd>
+<p>Checking if all the modules and script in the distribution have</p>
+
+<pre class="sh_perl">  use strict;
+  use warnings;</pre>
+
+<p>and if they can compile using -c</p>
+
+<dt><a name='Test'></a><a name="Test::Distribution"
+><a href="/perldoc?Test%3A%3ADistribution" class="podlinkpod"
+>Test::Distribution</a></a></dt>
+
+<dd>
+<p>Testing several aspects of a distibution. It has an odd interface with the rest of the TAP modules as it computes its own plan.</p>
+
+<dt><a name='Test'></a><a name="Test::Perl::Critic"
+><a href="/perldoc?Test%3A%3APerl%3A%3ACritic" class="podlinkpod"
+>Test::Perl::Critic</a></a></dt>
+
+<dd>
+<dt><a name='Test'></a><a name="Test::Kwalitee"
+><a href="/perldoc?Test%3A%3AKwalitee" class="podlinkpod"
+>Test::Kwalitee</a></a></dt>
+
+<dd>
+<p>Test the Kwalitee of a module as described in <a href="http://cpants.perl.org" class="podlinkurl"
+>http://cpants.perl.org</a></p>
+
+<dt><a name='Pod'></a><a name="Pod::Spell"
+><a href="/perldoc?Pod%3A%3ASpell" class="podlinkpod"
+>Pod::Spell</a></a></dt>
+
+<dd>
+<dt><a name='Test'></a><a name="Test::Spelling"
+><a href="/perldoc?Test%3A%3ASpelling" class="podlinkpod"
+>Test::Spelling</a></a></dt>
+
+<dd>
+<dt><a name='Devel'></a><a name="Devel::Cover"
+><a href="/perldoc?Devel%3A%3ACover" class="podlinkpod"
+>Devel::Cover</a></a></dt>
+
+<dd>
+<p>When you are testing your code, you can apply various measurements on how good your tests are. One of the best measurements is to check weather your test suit executes all parts of your code. Checking this is called coverage testing. In perl the ultimate tool for this is <a href="/perldoc?Devel%3A%3ACover" class="podlinkpod"
+>Devel::Cover</a>.</p>
+
+<p>One warning though: The fact that all your tests pass and they fully cover your code does not mean that it is bug free. Consider this example:</p>
+
+<p>Our super-duper calculator program is this:</p>
+
+<pre class="sh_perl"> print $ARGV[0]/$ARGV[1];</pre>
+
+<p>Our test suit indeed prints 3. Test passes OK.</p>
+
+<pre class="sh_perl"> myapp.pl 6 2</pre>
+
+<p>Checking coverage: the code has full coverage.</p>
+
+<p>Still it is obvious that there is a bug in there, that will cause a crash.</p>
+
+<dt><a name='HTML'></a><a name="HTML::Lint"
+><a href="/perldoc?HTML%3A%3ALint" class="podlinkpod"
+>HTML::Lint</a></a></dt>
+
+<dd>
+<dt><a name="LWP"
+><a href="/perldoc?LWP" class="podlinkpod"
+>LWP</a></a></dt>
+
+<dd>
+<dt><a name='LWP'></a><a name="LWP::Simple"
+><a href="/perldoc?LWP%3A%3ASimple" class="podlinkpod"
+>LWP::Simple</a></a></dt>
+
+<dd>
+<dt><a name='Test'></a><a name="Test::HTML::Lint"
+><a href="/perldoc?Test%3A%3AHTML%3A%3ALint" class="podlinkpod"
+>Test::HTML::Lint</a></a></dt>
+
+<dd>
+<dt><a name='WWW'></a><a name="WWW::Mechanize"
+><a href="/perldoc?WWW%3A%3AMechanize" class="podlinkpod"
+>WWW::Mechanize</a></a></dt>
+
+<dd>
+<dt><a name='Test'></a><a name="Test::WWW::Mechanize"
+><a href="/perldoc?Test%3A%3AWWW%3A%3AMechanize" class="podlinkpod"
+>Test::WWW::Mechanize</a></a></dt>
+
+<dd>
+<dt><a name='Test'></a><a name="Test::WWW::Simple"
+><a href="/perldoc?Test%3A%3AWWW%3A%3ASimple" class="podlinkpod"
+>Test::WWW::Simple</a></a></dt>
+
+<dd>
+<dt><a name='HTTP'></a><a name="HTTP::Proxy"
+><a href="/perldoc?HTTP%3A%3AProxy" class="podlinkpod"
+>HTTP::Proxy</a></a></dt>
+
+<dd>
+<dt><a name='HTTP'></a><a name="HTTP::Recorder"
+><a href="/perldoc?HTTP%3A%3ARecorder" class="podlinkpod"
+>HTTP::Recorder</a></a></dt>
+
+<dd>
+<dt><a name="Samie"
+>Samie</a></dt>
+
+<dd>
+<p><a href="http://samie.sourceforge.net/" class="podlinkurl"
+>http://samie.sourceforge.net/</a></p>
+
+<dt><a name='Class'></a><a name="Class::DBI"
+><a href="/perldoc?Class%3A%3ADBI" class="podlinkpod"
+>Class::DBI</a></a></dt>
+
+<dd>
+<p>Easy database access, mapping each table to a perl class.</p>
+
+<dt><a name="DBI"
+><a href="/perldoc?DBI" class="podlinkpod"
+>DBI</a></a></dt>
+
+<dd>
+<dt><a name='Test'></a><a name="Test::DatabaseRow"
+><a href="/perldoc?Test%3A%3ADatabaseRow" class="podlinkpod"
+>Test::DatabaseRow</a></a></dt>
+
+<dd>
+<dt><a name='File'></a><a name="File::Compare"
+><a href="/perldoc?File%3A%3ACompare" class="podlinkpod"
+>File::Compare</a></a></dt>
+
+<dd>
+<dt><a name='Text'></a><a name="Text::Diff"
+><a href="/perldoc?Text%3A%3ADiff" class="podlinkpod"
+>Text::Diff</a></a></dt>
+
+<dd>
+<dt><a name='Test'></a><a name="Test::Exception"
+><a href="/perldoc?Test%3A%3AException" class="podlinkpod"
+>Test::Exception</a></a></dt>
+
+<dd>
+<dt><a name='Test'></a><a name="Test::Differences"
+><a href="/perldoc?Test%3A%3ADifferences" class="podlinkpod"
+>Test::Differences</a></a></dt>
+
+<dd>
+<dt><a name='Test'></a><a name="Test::Deep"
+><a href="/perldoc?Test%3A%3ADeep" class="podlinkpod"
+>Test::Deep</a></a></dt>
+
+<dd>
+<p>A deep-structure testing module.</p>
+
+<dt><a name='DBD'></a><a name="DBD::Mock"
+><a href="/perldoc?DBD%3A%3AMock" class="podlinkpod"
+>DBD::Mock</a></a></dt>
+
+<dd>
+<dt><a name='Test'></a><a name="Test::Unit"
+><a href="/perldoc?Test%3A%3AUnit" class="podlinkpod"
+>Test::Unit</a></a></dt>
+
+<dd>
+<dt><a name='IPC'></a><a name="IPC::Run"
+><a href="/perldoc?IPC%3A%3ARun" class="podlinkpod"
+>IPC::Run</a></a></dt>
+
+<dd>
+<dt><a name='IPC'></a><a name="IPC::Run3"
+><a href="/perldoc?IPC%3A%3ARun3" class="podlinkpod"
+>IPC::Run3</a></a></dt>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Win32_Specific"
+>Win32 Specific</a></h2>
+
+<p>Modules specific to Microsoft Windows.</p>
+
+<dl>
+<dt><a name='Win32'></a><a name="Win32::GuiTest"
+><a href="/perldoc?Win32%3A%3AGuiTest" class="podlinkpod"
+>Win32::GuiTest</a></a></dt>
+
+<dd>
+<p>This is a Windows specific module for testing the GUI part of the application. It can be used at simple tasks such as automating the installation of an application up till full testing of the application.</p>
+
+<dt><a name='Win32'></a><a name="Win32::IE::Mechanize"
+><a href="/perldoc?Win32%3A%3AIE%3A%3AMechanize" class="podlinkpod"
+>Win32::IE::Mechanize</a></a></dt>
+
+<dd>
+<p>There are lots of web applications out there that are built specifically for Internet Explorer. It would be very hard to test them with anything else than the real thing. <a href="/perldoc?Win32%3A%3AIE%3A%3AMechanizes" class="podlinkpod"
+>Win32::IE::Mechanizes</a> provides an API very similar to the one of <a href="/perldoc?WWW%3A%3AMechanize" class="podlinkpod"
+>WWW::Mechanize</a> that will use a real Internet Explorer as the user agent. Of course for this you will have to run the testing suit on Windows.</p>
+
+<dt><a name='Win32'></a><a name="Win32::IEAutomation"
+><a href="/perldoc?Win32%3A%3AIEAutomation" class="podlinkpod"
+>Win32::IEAutomation</a></a></dt>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Unix/Linux_Specific"
+>Unix/Linux Specific</a></h2>
+
+<p>Modules specific to Unix/Linux or those that do not work on other platforms.</p>
+
+<dl>
+<dt><a name='X11'></a><a name="X11::GUITest"
+><a href="/perldoc?X11%3A%3AGUITest" class="podlinkpod"
+>X11::GUITest</a></a></dt>
+
+<dd>
+<p>Being able to click on windows and type in texts in the X-Windows environment on Unix/Linux/etc. Unfortunately as of June 2004, this module does not provide a way to read what is the text in a Widget.</p>
+
+<dt><a name="Expect"
+><a href="/perldoc?Expect" class="podlinkpod"
+>Expect</a></a></dt>
+
+<dd>
+<p>This module can only be used on Unix/Linux though I think it can be installed on Windows if using Cygwin. It is a port of the Tcl based Expect tool. It provides the user with an easy way to mimic the behaviour of a human being using a command line application. This means if you have a device that you need to configure via a telnet session, you can describe every step you would do manually and then let your Expect script execute it on your behalf.</p>
+
+<p>The basic idea behind this module is that working with a command line appltication involves two steps repeated a lot of times.</p>
+
+<dt><a name='Expect'></a><a name="Expect::Simple"
+><a href="/perldoc?Expect%3A%3ASimple" class="podlinkpod"
+>Expect::Simple</a></a></dt>
+
+<dd>
+<dl>
+<dt><a name='1'></a><a name="1_User_types_in_something_and_presses_ENTER"
+>1 User types in something and presses ENTER</a></dt>
+
+<dd>
+<dt><a name='2'></a><a name="2_User_waits_for_some_response_Expecting_a_string._Upon_receiving_that_string_s/he_goes_back_to_step_1"
+>2 User waits for some response <i>Expect</i>ing a string. Upon receiving that string s/he goes back to step 1</a></dt>
+</dl>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Apache_Specific"
+>Apache Specific</a></h2>
+
+<p>Modules specific to Apache</p>
+
+<dl>
+<dt><a name='Apache'></a><a name="Apache::Test"
+><a href="/perldoc?Apache%3A%3ATest" class="podlinkpod"
+>Apache::Test</a></a></dt>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Other_Resources"
+>Other Resources <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Perl_Community"
+>Perl Community</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="CPAN_Testers"
+>CPAN Testers</a></h3>
+
+<p>CPAN Test Results: <a href="http://testers.cpan.org/" class="podlinkurl"
+>http://testers.cpan.org/</a></p>
+
+<p>In addition to being a repository for Perl modules CPAN also provides a framework for testing these modules in various environments and platforms. As the sole developer of a module usually has access to only his/her own development environment it is extremly useful to have other people volunteer their own computers for testing purposes. These people are called the CPAN Tester.</p>
+
+<p>Every time a new version of a module is uploaded to PAUSE and thus to CPAN an e-mail is sent out to the mailing list of the CPAN testers. Based on this e-mail they can automate their system to download the new module and initiate an installation cycle. What they are interested is usually not the installed module but the test phase of the installation process. The results of these test runs are then sent back to a database. You can view the data at <a href="http://testers.cpan.org/" class="podlinkurl"
+>http://testers.cpan.org/</a></p>
+
+<p>The mailing list of the CPAN Testers: <a href="http://lists.cpan.org/showlist.cgi?name=cpan-testers" class="podlinkurl"
+>http://lists.cpan.org/showlist.cgi?name=cpan-testers</a></p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="QA_and_kwalitee"
+>QA and kwalitee</a></h3>
+
+<p>QA and kwalitee for Perl: <a href="http://qa.perl.org/" class="podlinkurl"
+>http://qa.perl.org/</a></p>
+
+<p>This web site and the accompaining mailing list <a href="http://lists.cpan.org/showlist.cgi?name=perl-qa" class="podlinkurl"
+>http://lists.cpan.org/showlist.cgi?name=perl-qa</a> are the central place for all the questions regarding QA within Perl. The site contains a number of links to various resources related to Quality Assurance. In the mailing list there are quite a number of people who can answer questions regarding the use of Perl in QA.</p>
+
+<p>Perl QA Wiki: <a href="http://perl-qa.yi.org/" class="podlinkurl"
+>http://perl-qa.yi.org/</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Articles"
+>Articles</a></h2>
+
+<dl>
+<dt><a name='CPANTS'></a><a name="CPANTS_http://www.pobox.com/~schwern/talks/CPANTS/"
+>CPANTS <a href="http://www.pobox.com/~schwern/talks/CPANTS/" class="podlinkurl"
+>http://www.pobox.com/~schwern/talks/CPANTS/</a></a></dt>
+
+<dd>
+<dt><a name='An'></a><a name="An_introduction_to_Testing_by_chromatic_http://www.perl.com/pub/a/2001/12/04/testing.html"
+>An introduction to Testing by chromatic <a href="http://www.perl.com/pub/a/2001/12/04/testing.html" class="podlinkurl"
+>http://www.perl.com/pub/a/2001/12/04/testing.html</a></a></dt>
+
+<dd>
+<dt><a name='Web'></a><a name="Web_Testing_with_HTTP::Recorder_by_Linda_Julien_http://www.perl.com/pub/a/2004/06/04/recorder.html"
+>Web Testing with HTTP::Recorder by Linda Julien <a href="http://www.perl.com/pub/a/2004/06/04/recorder.html" class="podlinkurl"
+>http://www.perl.com/pub/a/2004/06/04/recorder.html</a></a></dt>
+
+<dd>
+<dt><a name='A'></a><a name="A_Test::MockObject_Illustrated_Example_by_chromatic_http://www.perl.com/pub/a/2002/07/10/tmo.html"
+>A Test::MockObject Illustrated Example by chromatic <a href="http://www.perl.com/pub/a/2002/07/10/tmo.html" class="podlinkurl"
+>http://www.perl.com/pub/a/2002/07/10/tmo.html</a></a></dt>
+
+<dd>
+<dt><a name='Testing'></a><a name="Testing_mod_perl_2.0_by_Geoffrey_Young_http://www.perl.com/pub/a/2003/05/22/testing.html"
+>Testing mod_perl 2.0 by Geoffrey Young <a href="http://www.perl.com/pub/a/2003/05/22/testing.html" class="podlinkurl"
+>http://www.perl.com/pub/a/2003/05/22/testing.html</a></a></dt>
+
+<dd>
+<dt><a name='Building'></a><a name="Building_Testing_Libraries_by_Casey_West_http://www.perl.com/pub/a/2004/05/07/testing.html"
+>Building Testing Libraries by Casey West <a href="http://www.perl.com/pub/a/2004/05/07/testing.html" class="podlinkurl"
+>http://www.perl.com/pub/a/2004/05/07/testing.html</a></a></dt>
+
+<dd>
+<dt><a name='Chris'></a><a name="Chris_Dolan:_Private_Regression_Tests_http://www.chrisdolan.net/talk/2005/11/14/private-regression-tests/"
+>Chris Dolan: Private Regression Tests <a href="http://www.chrisdolan.net/talk/2005/11/14/private-regression-tests/" class="podlinkurl"
+>http://www.chrisdolan.net/talk/2005/11/14/private-regression-tests/</a></a></dt>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Books"
+>Books</a></h2>
+
+<pre class="sh_perl"> Perl books at <a href="http://books.perl.org/" class="podlinkurl"
+>http://books.perl.org/</a>
+ Testing related books: 
+   Perl Testing: A Developer&#39;s Notebook: <a href="http://books.perl.org/book/236" class="podlinkurl"
+>http://books.perl.org/book/236</a></pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Bugs"
+>Bugs <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>You write test in order make your software of higher quality. An important requirement for this is that your testing tools should be of high quality.</p>
+
+<p>If you find a bug in any of the modules mentioned in this document please report it by submitting a bug report to RT <a href="http://rt.cpan.org/" class="podlinkurl"
+>http://rt.cpan.org/</a> the bug tracking system of CPAN. Reports submitted there will be automatically sent out to the maintainer of the module. This way bugs and their resolution (or the lack of it) are all logged in a central place and others evaluating a modul can easily look up the history of the reported bugs and see how many bug reports are currently open. An easy way to send a bug report to RT is to send an email to an address similar to the following address: bug-MODULE-NAME@rt.cpan.org</p>
+
+<p>E.g. in case you&#39;d like to report a bug about Bundle::Test, send an e-mail to bug-bundle-test@rt.cpan.org</p>
+
+<p>Specifically in the case of this module it is less important to have a log of the reports as this module has no code in it. You can send your reports directly to <a href="mailto:gabor@pti.co.il" class="podlinkurl"
+>mailto:gabor@pti.co.il</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Thanks"
+>Thanks <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Stevan Little for his suggestions</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Training"
+>Training <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> The author provides training sessions for QA engineers that covers a number of fields
+ where Perl can be used in QA Automation. The syllabus of the course can be found here:
+ L&#60;<a href="http://szabgab.com/perl_in_test_automation.html" class="podlinkurl"
+>http://szabgab.com/perl_in_test_automation.html</a>&#62;
+
+ In addition he provides an irregular newsletter with Test Automatin Tips
+ L&#60;<a href="http://szabgab.com/test_automation_tips.html" class="podlinkurl"
+>http://szabgab.com/test_automation_tips.html</a>&#62;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> Gabor Szabo L&#60;mailto:gabor@pti.co.il&#62;
+ L&#60;<a href="http://www.pti.co.il/" class="podlinkurl"
+>http://www.pti.co.il/</a>&#62;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> Copyright 2002-2009 by Gabor Szabo L&#60;<a href="http://www.pti.co.il" class="podlinkurl"
+>http://www.pti.co.il</a>&#62;.
+
+ This program is free software; you can redistribute it and/or
+ modify it under the same terms as Perl itself.</pre>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78283 Uploads, 24725 Distributions
+106015 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 28 08:21:21 2012 GMT (0.232964038848877) @cpansearch1 -->
+ </body>
+</html>

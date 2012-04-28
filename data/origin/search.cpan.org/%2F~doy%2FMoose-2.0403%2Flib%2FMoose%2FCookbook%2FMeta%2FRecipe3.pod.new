@@ -1,0 +1,401 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Moose::Cookbook::Meta::Recipe3 - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Moose",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Moose-2.0403",3]);
+    _gaq.push(["_setCustomVar",4,"Document","Moose::Cookbook::Meta::Recipe3",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DOY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Moose::Cookbook::Meta::Recipe3">permalink</a></div>
+  <a href="/~doy/">Jesse Luehrs</a> &gt;
+  <a href="/~doy/Moose-2.0403/">Moose-2.0403</a> &gt;
+  Moose::Cookbook::Meta::Recipe3
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/88766de7a058697d3d0335b8d384fd2a?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DO/DOY/Moose-2.0403.tar.gz">Moose-2.0403.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DOY/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe3.pod">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 13</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 27</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 4</td></tr>
+</table>
+<a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Moose">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/DOY/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe3.pod">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#BUT_FIRST'>BUT FIRST</a>
+  <li class='indexItem indexItem1'><a href='#MOTIVATION'>MOTIVATION</a>
+  <li class='indexItem indexItem1'><a href='#TRAITS'>TRAITS</a>
+  <li class='indexItem indexItem1'><a href='#DISSECTION'>DISSECTION</a>
+  <li class='indexItem indexItem1'><a href='#TURNING_A_METACLASS_INTO_A_TRAIT'>TURNING A METACLASS INTO A TRAIT</a>
+  <li class='indexItem indexItem1'><a href='#CONCLUSION'>CONCLUSION</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose::Cookbook::Meta::Recipe3 - Labels implemented via attribute traits</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 2.0403</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  package MyApp::Meta::Attribute::Trait::Labeled;
+  use Moose::Role;
+
+  has label =&#62; (
+      is        =&#62; &#39;rw&#39;,
+      isa       =&#62; &#39;Str&#39;,
+      predicate =&#62; &#39;has_label&#39;,
+  );
+
+  package Moose::Meta::Attribute::Custom::Trait::Labeled;
+  sub register_implementation {&#39;MyApp::Meta::Attribute::Trait::Labeled&#39;}
+
+  package MyApp::Website;
+  use Moose;
+
+  has url =&#62; (
+      traits =&#62; [qw/Labeled/],
+      is     =&#62; &#39;rw&#39;,
+      isa    =&#62; &#39;Str&#39;,
+      label  =&#62; &#34;The site&#39;s URL&#34;,
+  );
+
+  has name =&#62; (
+      is  =&#62; &#39;rw&#39;,
+      isa =&#62; &#39;Str&#39;,
+  );
+
+  sub dump {
+      my $self = shift;
+
+      my $meta = $self-&#62;meta;
+
+      my $dump = &#39;&#39;;
+
+      for my $attribute ( map { $meta-&#62;get_attribute($_) }
+          sort $meta-&#62;get_attribute_list ) {
+
+          if (   $attribute-&#62;does(&#39;MyApp::Meta::Attribute::Trait::Labeled&#39;)
+              &#38;&#38; $attribute-&#62;has_label ) {
+              $dump .= $attribute-&#62;label;
+          }
+          else {
+              $dump .= $attribute-&#62;name;
+          }
+
+          my $reader = $attribute-&#62;get_read_method;
+          $dump .= &#34;: &#34; . $self-&#62;$reader . &#34;\n&#34;;
+      }
+
+      return $dump;
+  }
+
+  package main;
+
+  my $app = MyApp::Website-&#62;new( url =&#62; &#34;<a href="http://google.com" class="podlinkurl"
+>http://google.com</a>&#34;, name =&#62; &#34;Google&#34; );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUT_FIRST"
+>BUT FIRST <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This recipe is a variation on <a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe2.pod" class="podlinkpod"
+>Moose::Cookbook::Meta::Recipe2</a>. Please read that recipe first.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MOTIVATION"
+>MOTIVATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>In <a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe2.pod" class="podlinkpod"
+>Moose::Cookbook::Meta::Recipe2</a>, we created an attribute metaclass which lets you provide a label for attributes.</p>
+
+<p>Using a metaclass works fine until you realize you want to add a label <i>and</i> an expiration, or some other combination of new behaviors. You could create yet another metaclass which subclasses those two, but that makes a mess, especially if you want to mix and match behaviors across many attributes.</p>
+
+<p>Fortunately, Moose provides a much saner alternative, which is to encapsulate each extension as a role, not a class. We can make a role which adds a label to an attribute, and could make another to implement expiration.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TRAITS"
+>TRAITS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Roles that apply to metaclasses have a special name: traits. Don&#39;t let the change in nomenclature fool you, <b>traits are just roles</b>.</p>
+
+<p><a href="/~doy/Moose-2.0403/lib/Moose.pm#has" class="podlinkpod"
+>&#34;has&#34; in Moose</a> allows you to pass a <code>traits</code> parameter for an attribute. This parameter takes a list of trait names which are composed into an anonymous metaclass, and that anonymous metaclass is used for the attribute.</p>
+
+<p>Yes, we still have lots of metaclasses in the background, but they&#39;re managed by Moose for you.</p>
+
+<p>Traits can do anything roles can do. They can add or refine attributes, wrap methods, provide more methods, define an interface, etc. The only difference is that you&#39;re now changing the attribute metaclass instead of a user-level class.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DISSECTION"
+>DISSECTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>A side-by-side look of the code examples in this recipe and recipe 2 show that defining and using a trait is very similar to a full-blown metaclass.</p>
+
+<pre class="sh_perl">  package MyApp::Meta::Attribute::Trait::Labeled;
+  use Moose::Role;
+
+  has label =&#62; (
+      is        =&#62; &#39;rw&#39;,
+      isa       =&#62; &#39;Str&#39;,
+      predicate =&#62; &#39;has_label&#39;,
+  );</pre>
+
+<p>Instead of subclassing <a href="/~doy/Moose-2.0403/lib/Moose/Meta/Attribute.pm" class="podlinkpod"
+>Moose::Meta::Attribute</a>, we define a role. As with our metaclass in <a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe2.pod" class="podlinkpod"
+>recipe 2</a>, registering our role allows us to refer to it by a short name.</p>
+
+<pre class="sh_perl">  package Moose::Meta::Attribute::Custom::Trait::Labeled;
+  sub register_implementation { &#39;MyApp::Meta::Attribute::Trait::Labeled&#39; }</pre>
+
+<p>Moose looks for the <code>register_implementation</code> method in <code>Moose::Meta::Attribute::Custom::Trait::$TRAIT_NAME</code> to find the full name of the trait.</p>
+
+<p>For the rest of the code, we will only cover what is <i>different</i> from <a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Meta/Recipe2.pod" class="podlinkpod"
+>recipe 2</a>.</p>
+
+<pre class="sh_perl">  has url =&#62; (
+      traits =&#62; [qw/Labeled/],
+      is     =&#62; &#39;rw&#39;,
+      isa    =&#62; &#39;Str&#39;,
+      label  =&#62; &#34;The site&#39;s URL&#34;,
+  );</pre>
+
+<p>Instead of passing a <code>metaclass</code> parameter, this time we pass <code>traits</code>. This contains a list of trait names. Moose will build an anonymous attribute metaclass from these traits and use it for this attribute. Passing a <code>label</code> parameter works just as it did with the metaclass example.</p>
+
+<pre class="sh_perl">          if (   $attribute-&#62;does(&#39;MyApp::Meta::Attribute::Trait::Labeled&#39;)
+              &#38;&#38; $attribute-&#62;has_label ) {
+              $dump .= $attribute-&#62;label;
+          }</pre>
+
+<p>In the metaclass example, we used <code>$attribute-&#62;isa</code>. With a role, we instead ask if the meta-attribute object <code>does</code> the required role. If it does not do this role, the attribute meta object won&#39;t have the <code>has_label</code> method.</p>
+
+<p>That&#39;s all. Everything else is the same!</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TURNING_A_METACLASS_INTO_A_TRAIT"
+>TURNING A METACLASS INTO A TRAIT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>&#34;But wait!&#34; you protest. &#34;I&#39;ve already written all of my extensions as attribute metaclasses. I don&#39;t want to break all that code out there.&#34;</p>
+
+<p>Fortunately, you can easily turn a metaclass into a trait and still provide the original metaclass:</p>
+
+<pre class="sh_perl">  package MyApp::Meta::Attribute::Labeled;
+  use Moose;
+  extends &#39;Moose::Meta::Attribute&#39;;
+  with &#39;MyApp::Meta::Attribute::Trait::Labeled&#39;;
+
+  package Moose::Meta::Attribute::Custom::Labeled;
+  sub register_implementation { &#39;MyApp::Meta::Attribute::Labeled&#39; }</pre>
+
+<p>Unfortunately, going the other way (providing a trait created from a metaclass) is more tricky.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONCLUSION"
+>CONCLUSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you&#39;re extending your attributes, it&#39;s easier and more flexible to provide composable bits of behavior than to subclass <a href="/~doy/Moose-2.0403/lib/Moose/Meta/Attribute.pm" class="podlinkpod"
+>Moose::Meta::Attribute</a>. Using traits lets you cooperate with other extensions, either from CPAN or that you might write in the future. Moose makes it easy to create attribute metaclasses on the fly by providing a list of trait names to <a href="/~doy/Moose-2.0403/lib/Moose.pm#has" class="podlinkpod"
+>&#34;has&#34; in Moose</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose is maintained by the Moose Cabal, along with the help of many contributors. See <a href="/~doy/Moose-2.0403/lib/Moose.pm#CABAL" class="podlinkpod"
+>&#34;CABAL&#34; in Moose</a> and <a href="/~doy/Moose-2.0403/lib/Moose.pm#CONTRIBUTORS" class="podlinkpod"
+>&#34;CONTRIBUTORS&#34; in Moose</a> for details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This software is copyright (c) 2012 by Infinity Interactive, Inc..</p>
+
+<p>This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78179 Uploads, 24710 Distributions
+106004 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 07:07:10 2012 GMT (0.102496862411499) @cpansearch1 -->
+ </body>
+</html>

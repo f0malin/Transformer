@@ -1,0 +1,25 @@
+0.0502 -- Tue Oct 19 19:49:09 PDT 2010
+    * cope with missing SvPVX_const
+
+0.0501 -- Thu Oct 14 16:51:02 PDT 2010
+    * Chip branch
+    * Update %DB::sub so debugger can tab-complete
+
+0.05 -- Wed Sep  8 00:51 CEST 2010
+    * Stop using the padlist to refcount GVs. Instead use regular magic. This
+      allows various modules, including B::Deparse, to safely peek into pads of
+      (re)named subs (Closes RT#42725) (Goro Fuji).
+    * Support perl >= 5.13.3 by using the new CvGV_set interface there
+      (Closes RT#59558).
+    * Stop using the deprecated PL_no_symref (Closes RT#57843).
+
+0.04 -- Fri Jul 18 15:23 CEST 2008
+    * Fixed for perl 5.6 and 5.005 threads (tested)
+
+0.03 -- Wed Feb 20 20:19 CET 2008
+    * Fixed crash when trying to rename xsubs
+    * As a side-effect, should work with 5.005 threads (untested)
+
+0.02 -- Wed Aug 18 19:51 CEST 2004
+    * Fixed documentation, which erroneously mentioned the existance of
+      two exported functions.

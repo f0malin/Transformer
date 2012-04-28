@@ -1,0 +1,40 @@
+TODO list for Perl module DateTime-Event-ICal
+
+* include this in docs:
+  http://www.w3.org/2001/sw/Europe/200210/calendar/vocab_usecases.html
+  http://www.imc.org/ietf-calendar/mail-archive/msg00623.html
+
+* optimize yealy/monthly + interval + byday
+  - uses intersection with "all days"
+
+* "byday -2 friday"
+  - test overflow
+  - need some 'interval' and 'dtstart' tests
+
+* the implementation of 'select' in Set::Infinite is incomplete
+  and doesn't have the 'last' attribute. -- should be implemented!
+  Note: this is not a problem because it is only used in 'count', 
+        which generates finite sets. 
+
+* finish importing Date::Set RFC2445 recurrence tests
+
+* bysetpos
+  - use some kind of memoization
+
+* byweekno - test with 'daily'
+
+* no tests were made defining recurrences without dtstart.
+
+* the effect of 'count' on a recurrence without dtstart is not defined.
+  the effect of count == 0 is not defined.
+
+* no tests were made using datetimes with timezones.
+
+* mixing positive and negative arguments in the same list
+  might give wrong results is the numbers are big enough
+  to cause the datetimes to interleave.
+  - split in two recurrences and join with 'union'
+
+* some arguments are not checked for overflow,
+  such as byyearday.
+

@@ -1,0 +1,735 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>File::Path - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","File-Path",3]);
+    _gaq.push(["_setCustomVar",5,"Release","File-Path-2.08",3]);
+    _gaq.push(["_setCustomVar",3,"Module","File::Path",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DLAND",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?File::Path">permalink</a></div>
+  <a href="/~dland/">David Landgren</a> &gt;
+  <a href="/~dland/File-Path-2.08/">File-Path-2.08</a> &gt;
+  File::Path
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/7ab982cfa6010d4a2f333cea1bd26b4b?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DL/DLAND/File-Path-2.08.tar.gz">File-Path-2.08.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=File%3A%3APath;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DLAND/File-Path-2.08/Path.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?File%3A%3AFind">File::Find</a><br>
+<a href="/perldoc?File%3A%3ACopy">File::Copy</a><br>
+<a href="/perldoc?File%3A%3ASpec">File::Spec</a><br>
+<a href="/perldoc?File%3A%3ATemp">File::Temp</a><br>
+<a href="/perldoc?File%3A%3ABasename">File::Basename</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Getopt%3A%3ALong">Getopt::Long</a><br>
+<a href="/perldoc?Module%3A%3ABuild">Module::Build</a><br>
+<a href="/perldoc?Test%3A%3AMore">Test::More</a><br>
+<a href="/perldoc?Net%3A%3AFTP">Net::FTP</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=File%3A%3APath">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 11</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 7</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=File-Path">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.08 &nbsp;
+<span class="noprint">
+  <a href="/src/DLAND/File-Path-2.08/Path.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#ERROR_HANDLING'>ERROR HANDLING</a>
+    <li class='indexItem indexItem2'><a href='#NOTES'>NOTES</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#API_CHANGES'>API CHANGES</a>
+      <li class='indexItem indexItem3'><a href='#SECURITY_CONSIDERATIONS'>SECURITY CONSIDERATIONS</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DIAGNOSTICS'>DIAGNOSTICS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#ACKNOWLEDGEMENTS'>ACKNOWLEDGEMENTS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>File::Path - Create or remove directory trees</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This document describes version 2.08 of File::Path,
+released 2009-10-04.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use File::Path qw(make_path remove_tree);
+
+  make_path(&#39;foo/bar/baz&#39;, &#39;/zug/zwang&#39;);
+  make_path(&#39;foo/bar/baz&#39;, &#39;/zug/zwang&#39;, {
+      verbose =&#62; 1,
+      mode =&#62; 0711,
+  });
+
+  remove_tree(&#39;foo/bar/baz&#39;, &#39;/zug/zwang&#39;);
+  remove_tree(&#39;foo/bar/baz&#39;, &#39;/zug/zwang&#39;, {
+      verbose =&#62; 1,
+      error  =&#62; \my $err_list,
+  });
+
+  # legacy (interface promoted before v2.00)
+  mkpath(&#39;/foo/bar/baz&#39;);
+  mkpath(&#39;/foo/bar/baz&#39;, 1, 0711);
+  mkpath([&#39;/foo/bar/baz&#39;, &#39;blurfl/quux&#39;], 1, 0711);
+  rmtree(&#39;foo/bar/baz&#39;, 1, 1);
+  rmtree([&#39;foo/bar/baz&#39;, &#39;blurfl/quux&#39;], 1, 1);
+
+  # legacy (interface promoted before v2.06)
+  mkpath(&#39;foo/bar/baz&#39;, &#39;/zug/zwang&#39;, { verbose =&#62; 1, mode =&#62; 0711 });
+  rmtree(&#39;foo/bar/baz&#39;, &#39;/zug/zwang&#39;, { verbose =&#62; 1, mode =&#62; 0711 });</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module provide a convenient way to create directories of arbitrary depth and to delete an entire directory subtree from the filesystem.</p>
+
+<p>The following functions are provided:</p>
+
+<dl>
+<dt><a name='make_path'></a><a name="make_path(_$dir1,_$dir2,_...._)"
+>make_path( $dir1, $dir2, .... )</a></dt>
+
+<dd>
+<dt><a name='make_path'></a><a name="make_path(_$dir1,_$dir2,_....,_\%opts_)"
+>make_path( $dir1, $dir2, ...., \%opts )</a></dt>
+
+<dd>
+<p>The <code>make_path</code> function creates the given directories if they don&#39;t exists before, much like the Unix command <code>mkdir -p</code>.</p>
+
+<p>The function accepts a list of directories to be created. Its behaviour may be tuned by an optional hashref appearing as the last parameter on the call.</p>
+
+<p>The function returns the list of directories actually created during the call; in scalar context the number of directories created.</p>
+
+<p>The following keys are recognised in the option hash:</p>
+
+<dl>
+<dt><a name='mode'></a><a name="mode_=&#62;_$num"
+>mode =&#62; $num</a></dt>
+
+<dd>
+<p>The numeric permissions mode to apply to each created directory (defaults to 0777), to be modified by the current <code>umask</code>. If the directory already exists (and thus does not need to be created), the permissions will not be modified.</p>
+
+<p><code>mask</code> is recognised as an alias for this parameter.</p>
+
+<dt><a name='verbose'></a><a name="verbose_=&#62;_$bool"
+>verbose =&#62; $bool</a></dt>
+
+<dd>
+<p>If present, will cause <code>make_path</code> to print the name of each directory as it is created. By default nothing is printed.</p>
+
+<dt><a name='error'></a><a name="error_=&#62;_\$err"
+>error =&#62; \$err</a></dt>
+
+<dd>
+<p>If present, it should be a reference to a scalar. This scalar will be made to reference an array, which will be used to store any errors that are encountered. See the <a href="#ERROR_HANDLING" class="podlinkpod"
+>&#34;ERROR HANDLING&#34;</a> section for more information.</p>
+
+<p>If this parameter is not used, certain error conditions may raise a fatal error that will cause the program will halt, unless trapped in an <code>eval</code> block.</p>
+
+<dt><a name='owner'></a><a name="owner_=&#62;_$owner"
+>owner =&#62; $owner</a></dt>
+
+<dd>
+<dt><a name='user'></a><a name="user_=&#62;_$owner"
+>user =&#62; $owner</a></dt>
+
+<dd>
+<dt><a name='uid'></a><a name="uid_=&#62;_$owner"
+>uid =&#62; $owner</a></dt>
+
+<dd>
+<p>If present, will cause any created directory to be owned by <code>$owner</code>. If the value is numeric, it will be interpreted as a uid, otherwise as username is assumed. An error will be issued if the username cannot be mapped to a uid, or the uid does not exist, or the process lacks the privileges to change ownership.</p>
+
+<p>Ownwership of directories that already exist will not be changed.</p>
+
+<p><code>user</code> and <code>uid</code> are aliases of <code>owner</code>.</p>
+
+<dt><a name='group'></a><a name="group_=&#62;_$group"
+>group =&#62; $group</a></dt>
+
+<dd>
+<p>If present, will cause any created directory to be owned by the group <code>$group</code>. If the value is numeric, it will be interpreted as a gid, otherwise as group name is assumed. An error will be issued if the group name cannot be mapped to a gid, or the gid does not exist, or the process lacks the privileges to change group ownership.</p>
+
+<p>Group ownwership of directories that already exist will not be changed.</p>
+
+<pre class="sh_perl">    make_path &#39;/var/tmp/webcache&#39;, {owner=&#62;&#39;nobody&#39;, group=&#62;&#39;nogroup&#39;};</pre>
+</dd>
+</dl>
+
+<dt><a name='mkpath'></a><a name="mkpath(_$dir_)"
+>mkpath( $dir )</a></dt>
+
+<dd>
+<dt><a name='mkpath'></a><a name="mkpath(_$dir,_$verbose,_$mode_)"
+>mkpath( $dir, $verbose, $mode )</a></dt>
+
+<dd>
+<dt><a name='mkpath'></a><a name="mkpath(_[$dir1,_$dir2,...],_$verbose,_$mode_)"
+>mkpath( [$dir1, $dir2,...], $verbose, $mode )</a></dt>
+
+<dd>
+<dt><a name='mkpath'></a><a name="mkpath(_$dir1,_$dir2,...,_\%opt_)"
+>mkpath( $dir1, $dir2,..., \%opt )</a></dt>
+
+<dd>
+<p>The mkpath() function provide the legacy interface of make_path() with a different interpretation of the arguments passed. The behaviour and return value of the function is otherwise identical to make_path().</p>
+
+<dt><a name='remove_tree'></a><a name="remove_tree(_$dir1,_$dir2,_...._)"
+>remove_tree( $dir1, $dir2, .... )</a></dt>
+
+<dd>
+<dt><a name='remove_tree'></a><a name="remove_tree(_$dir1,_$dir2,_....,_\%opts_)"
+>remove_tree( $dir1, $dir2, ...., \%opts )</a></dt>
+
+<dd>
+<p>The <code>remove_tree</code> function deletes the given directories and any files and subdirectories they might contain, much like the Unix command <code>rm -r</code> or <code>del /s</code> on Windows.</p>
+
+<p>The function accepts a list of directories to be removed. Its behaviour may be tuned by an optional hashref appearing as the last parameter on the call.</p>
+
+<p>The functions returns the number of files successfully deleted.</p>
+
+<p>The following keys are recognised in the option hash:</p>
+
+<dl>
+<dt><a name='verbose'></a><a name="verbose_=&#62;_$bool"
+>verbose =&#62; $bool</a></dt>
+
+<dd>
+<p>If present, will cause <code>remove_tree</code> to print the name of each file as it is unlinked. By default nothing is printed.</p>
+
+<dt><a name='safe'></a><a name="safe_=&#62;_$bool"
+>safe =&#62; $bool</a></dt>
+
+<dd>
+<p>When set to a true value, will cause <code>remove_tree</code> to skip the files for which the process lacks the required privileges needed to delete files, such as delete privileges on VMS. In other words, the code will make no attempt to alter file permissions. Thus, if the process is interrupted, no filesystem object will be left in a more permissive mode.</p>
+
+<dt><a name='keep_root'></a><a name="keep_root_=&#62;_$bool"
+>keep_root =&#62; $bool</a></dt>
+
+<dd>
+<p>When set to a true value, will cause all files and subdirectories to be removed, except the initially specified directories. This comes in handy when cleaning out an application&#39;s scratch directory.</p>
+
+<pre class="sh_perl">  remove_tree( &#39;/tmp&#39;, {keep_root =&#62; 1} );</pre>
+
+<dt><a name='result'></a><a name="result_=&#62;_\$res"
+>result =&#62; \$res</a></dt>
+
+<dd>
+<p>If present, it should be a reference to a scalar. This scalar will be made to reference an array, which will be used to store all files and directories unlinked during the call. If nothing is unlinked, the array will be empty.</p>
+
+<pre class="sh_perl">  remove_tree( &#39;/tmp&#39;, {result =&#62; \my $list} );
+  print &#34;unlinked $_\n&#34; for @$list;</pre>
+
+<p>This is a useful alternative to the <code>verbose</code> key.</p>
+
+<dt><a name='error'></a><a name="error_=&#62;_\$err"
+>error =&#62; \$err</a></dt>
+
+<dd>
+<p>If present, it should be a reference to a scalar. This scalar will be made to reference an array, which will be used to store any errors that are encountered. See the <a href="#ERROR_HANDLING" class="podlinkpod"
+>&#34;ERROR HANDLING&#34;</a> section for more information.</p>
+
+<p>Removing things is a much more dangerous proposition than creating things. As such, there are certain conditions that <code>remove_tree</code> may encounter that are so dangerous that the only sane action left is to kill the program.</p>
+
+<p>Use <code>error</code> to trap all that is reasonable (problems with permissions and the like), and let it die if things get out of hand. This is the safest course of action.</p>
+</dd>
+</dl>
+
+<dt><a name='rmtree'></a><a name="rmtree(_$dir_)"
+>rmtree( $dir )</a></dt>
+
+<dd>
+<dt><a name='rmtree'></a><a name="rmtree(_$dir,_$verbose,_$safe_)"
+>rmtree( $dir, $verbose, $safe )</a></dt>
+
+<dd>
+<dt><a name='rmtree'></a><a name="rmtree(_[$dir1,_$dir2,...],_$verbose,_$safe_)"
+>rmtree( [$dir1, $dir2,...], $verbose, $safe )</a></dt>
+
+<dd>
+<dt><a name='rmtree'></a><a name="rmtree(_$dir1,_$dir2,...,_\%opt_)"
+>rmtree( $dir1, $dir2,..., \%opt )</a></dt>
+
+<dd>
+<p>The rmtree() function provide the legacy interface of remove_tree() with a different interpretation of the arguments passed. The behaviour and return value of the function is otherwise identical to remove_tree().</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="ERROR_HANDLING"
+>ERROR HANDLING</a></h2>
+
+<dl>
+<dt><a name='NOTE'></a><a name="NOTE:"
+><b>NOTE:</b></a></dt>
+
+<dd>
+<p>The following error handling mechanism is considered experimental and is subject to change pending feedback from users.</p>
+</dd>
+</dl>
+
+<p>If <code>make_path</code> or <code>remove_tree</code> encounter an error, a diagnostic message will be printed to <code>STDERR</code> via <code>carp</code> (for non-fatal errors), or via <code>croak</code> (for fatal errors).</p>
+
+<p>If this behaviour is not desirable, the <code>error</code> attribute may be used to hold a reference to a variable, which will be used to store the diagnostics. The variable is made a reference to an array of hash references. Each hash contain a single key/value pair where the key is the name of the file, and the value is the error message (including the contents of <code>$!</code> when appropriate). If a general error is encountered the diagnostic key will be empty.</p>
+
+<p>An example usage looks like:</p>
+
+<pre class="sh_perl">  remove_tree( &#39;foo/bar&#39;, &#39;bar/rat&#39;, {error =&#62; \my $err} );
+  if (@$err) {
+      for my $diag (@$err) {
+          my ($file, $message) = %$diag;
+          if ($file eq &#39;&#39;) {
+              print &#34;general error: $message\n&#34;;
+          }
+          else {
+              print &#34;problem unlinking $file: $message\n&#34;;
+          }
+      }
+  }
+  else {
+      print &#34;No error encountered\n&#34;;
+  }</pre>
+
+<p>Note that if no errors are encountered, <code>$err</code> will reference an empty array. This means that <code>$err</code> will always end up TRUE; so you need to test <code>@$err</code> to determine if errors occured.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="NOTES"
+>NOTES</a></h2>
+
+<p><code>File::Path</code> blindly exports <code>mkpath</code> and <code>rmtree</code> into the current namespace. These days, this is considered bad style, but to change it now would break too much code. Nonetheless, you are invited to specify what it is you are expecting to use:</p>
+
+<pre class="sh_perl">  use File::Path &#39;rmtree&#39;;</pre>
+
+<p>The routines <code>make_path</code> and <code>remove_tree</code> are <b>not</b> exported by default. You must specify which ones you want to use.</p>
+
+<pre class="sh_perl">  use File::Path &#39;remove_tree&#39;;</pre>
+
+<p>Note that a side-effect of the above is that <code>mkpath</code> and <code>rmtree</code> are no longer exported at all. This is due to the way the <code>Exporter</code> module works. If you are migrating a codebase to use the new interface, you will have to list everything explicitly. But that&#39;s just good practice anyway.</p>
+
+<pre class="sh_perl">  use File::Path qw(remove_tree rmtree);</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="API_CHANGES"
+>API CHANGES</a></h3>
+
+<p>The API was changed in the 2.0 branch. For a time, <code>mkpath</code> and <code>rmtree</code> tried, unsuccessfully, to deal with the two different calling mechanisms. This approach was considered a failure.</p>
+
+<p>The new semantics are now only available with <code>make_path</code> and <code>remove_tree</code>. The old semantics are only available through <code>mkpath</code> and <code>rmtree</code>. Users are strongly encouraged to upgrade to at least 2.08 in order to avoid surprises.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="SECURITY_CONSIDERATIONS"
+>SECURITY CONSIDERATIONS</a></h3>
+
+<p>There were race conditions 1.x implementations of File::Path&#39;s <code>rmtree</code> function (although sometimes patched depending on the OS distribution or platform). The 2.0 version contains code to avoid the problem mentioned in CVE-2002-0435.</p>
+
+<p>See the following pages for more information:</p>
+
+<pre class="sh_perl">  <a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=286905" class="podlinkurl"
+>http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=286905</a>
+  <a href="http://www.nntp.perl.org/group/perl.perl5.porters/2005/01/msg97623.html" class="podlinkurl"
+>http://www.nntp.perl.org/group/perl.perl5.porters/2005/01/msg97623.html</a>
+  <a href="http://www.debian.org/security/2005/dsa-696" class="podlinkurl"
+>http://www.debian.org/security/2005/dsa-696</a></pre>
+
+<p>Additionally, unless the <code>safe</code> parameter is set (or the third parameter in the traditional interface is TRUE), should a <code>remove_tree</code> be interrupted, files that were originally in read-only mode may now have their permissions set to a read-write (or &#34;delete OK&#34;) mode.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIAGNOSTICS"
+>DIAGNOSTICS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>FATAL errors will cause the program to halt (<code>croak</code>), since the problem is so severe that it would be dangerous to continue. (This can always be trapped with <code>eval</code>, but it&#39;s not a good idea. Under the circumstances, dying is the best thing to do).</p>
+
+<p>SEVERE errors may be trapped using the modern interface. If the they are not trapped, or the old interface is used, such an error will cause the program will halt.</p>
+
+<p>All other errors may be trapped using the modern interface, otherwise they will be <code>carp</code>ed about. Program execution will not be halted.</p>
+
+<dl>
+<dt><a name='mkdir'></a><a name="mkdir_[path]:_[errmsg]_(SEVERE)"
+>mkdir [path]: [errmsg] (SEVERE)</a></dt>
+
+<dd>
+<p><code>make_path</code> was unable to create the path. Probably some sort of permissions error at the point of departure, or insufficient resources (such as free inodes on Unix).</p>
+
+<dt><a name='No'></a><a name="No_root_path(s)_specified"
+>No root path(s) specified</a></dt>
+
+<dd>
+<p><code>make_path</code> was not given any paths to create. This message is only emitted if the routine is called with the traditional interface. The modern interface will remain silent if given nothing to do.</p>
+
+<dt><a name='No'></a><a name="No_such_file_or_directory"
+>No such file or directory</a></dt>
+
+<dd>
+<p>On Windows, if <code>make_path</code> gives you this warning, it may mean that you have exceeded your filesystem&#39;s maximum path length.</p>
+
+<dt><a name='cannot'></a><a name="cannot_fetch_initial_working_directory:_[errmsg]"
+>cannot fetch initial working directory: [errmsg]</a></dt>
+
+<dd>
+<p><code>remove_tree</code> attempted to determine the initial directory by calling <code>Cwd::getcwd</code>, but the call failed for some reason. No attempt will be made to delete anything.</p>
+
+<dt><a name='cannot'></a><a name="cannot_stat_initial_working_directory:_[errmsg]"
+>cannot stat initial working directory: [errmsg]</a></dt>
+
+<dd>
+<p><code>remove_tree</code> attempted to stat the initial directory (after having successfully obtained its name via <code>getcwd</code>), however, the call failed for some reason. No attempt will be made to delete anything.</p>
+
+<dt><a name='cannot'></a><a name="cannot_chdir_to_[dir]:_[errmsg]"
+>cannot chdir to [dir]: [errmsg]</a></dt>
+
+<dd>
+<p><code>remove_tree</code> attempted to set the working directory in order to begin deleting the objects therein, but was unsuccessful. This is usually a permissions issue. The routine will continue to delete other things, but this directory will be left intact.</p>
+
+<dt><a name='directory'></a><a name="directory_[dir]_changed_before_chdir,_expected_dev=[n]_ino=[n],_actual_dev=[n]_ino=[n],_aborting._(FATAL)"
+>directory [dir] changed before chdir, expected dev=[n] ino=[n], actual dev=[n] ino=[n], aborting. (FATAL)</a></dt>
+
+<dd>
+<p><code>remove_tree</code> recorded the device and inode of a directory, and then moved into it. It then performed a <code>stat</code> on the current directory and detected that the device and inode were no longer the same. As this is at the heart of the race condition problem, the program will die at this point.</p>
+
+<dt><a name='cannot'></a><a name="cannot_make_directory_[dir]_read+writeable:_[errmsg]"
+>cannot make directory [dir] read+writeable: [errmsg]</a></dt>
+
+<dd>
+<p><code>remove_tree</code> attempted to change the permissions on the current directory to ensure that subsequent unlinkings would not run into problems, but was unable to do so. The permissions remain as they were, and the program will carry on, doing the best it can.</p>
+
+<dt><a name='cannot'></a><a name="cannot_read_[dir]:_[errmsg]"
+>cannot read [dir]: [errmsg]</a></dt>
+
+<dd>
+<p><code>remove_tree</code> tried to read the contents of the directory in order to acquire the names of the directory entries to be unlinked, but was unsuccessful. This is usually a permissions issue. The program will continue, but the files in this directory will remain after the call.</p>
+
+<dt><a name='cannot'></a><a name="cannot_reset_chmod_[dir]:_[errmsg]"
+>cannot reset chmod [dir]: [errmsg]</a></dt>
+
+<dd>
+<p><code>remove_tree</code>, after having deleted everything in a directory, attempted to restore its permissions to the original state but failed. The directory may wind up being left behind.</p>
+
+<dt><a name='cannot'></a><a name="cannot_remove_[dir]_when_cwd_is_[dir]"
+>cannot remove [dir] when cwd is [dir]</a></dt>
+
+<dd>
+<p>The current working directory of the program is <em>/some/path/to/here</em> and you are attempting to remove an ancestor, such as <em>/some/path</em>. The directory tree is left untouched.</p>
+
+<p>The solution is to <code>chdir</code> out of the child directory to a place outside the directory tree to be removed.</p>
+
+<dt><a name='cannot'></a><a name="cannot_chdir_to_[parent-dir]_from_[child-dir]:_[errmsg],_aborting._(FATAL)"
+>cannot chdir to [parent-dir] from [child-dir]: [errmsg], aborting. (FATAL)</a></dt>
+
+<dd>
+<p><code>remove_tree</code>, after having deleted everything and restored the permissions of a directory, was unable to chdir back to the parent. The program halts to avoid a race condition from occurring.</p>
+
+<dt><a name='cannot'></a><a name="cannot_stat_prior_working_directory_[dir]:_[errmsg],_aborting._(FATAL)"
+>cannot stat prior working directory [dir]: [errmsg], aborting. (FATAL)</a></dt>
+
+<dd>
+<p><code>remove_tree</code> was unable to stat the parent directory after have returned from the child. Since there is no way of knowing if we returned to where we think we should be (by comparing device and inode) the only way out is to <code>croak</code>.</p>
+
+<dt><a 
+>previous directory [parent-dir] changed before entering [child-dir], expected dev=[n] ino=[n], actual dev=[n] ino=[n], aborting. (FATAL)</a></dt>
+
+<dd>
+<p>When <code>remove_tree</code> returned from deleting files in a child directory, a check revealed that the parent directory it returned to wasn&#39;t the one it started out from. This is considered a sign of malicious activity.</p>
+
+<dt><a name='cannot'></a><a name="cannot_make_directory_[dir]_writeable:_[errmsg]"
+>cannot make directory [dir] writeable: [errmsg]</a></dt>
+
+<dd>
+<p>Just before removing a directory (after having successfully removed everything it contained), <code>remove_tree</code> attempted to set the permissions on the directory to ensure it could be removed and failed. Program execution continues, but the directory may possibly not be deleted.</p>
+
+<dt><a name='cannot'></a><a name="cannot_remove_directory_[dir]:_[errmsg]"
+>cannot remove directory [dir]: [errmsg]</a></dt>
+
+<dd>
+<p><code>remove_tree</code> attempted to remove a directory, but failed. This may because some objects that were unable to be removed remain in the directory, or a permissions issue. The directory will be left behind.</p>
+
+<dt><a name='cannot'></a><a name="cannot_restore_permissions_of_[dir]_to_[0nnn]:_[errmsg]"
+>cannot restore permissions of [dir] to [0nnn]: [errmsg]</a></dt>
+
+<dd>
+<p>After having failed to remove a directory, <code>remove_tree</code> was unable to restore its permissions from a permissive state back to a possibly more restrictive setting. (Permissions given in octal).</p>
+
+<dt><a name='cannot'></a><a name="cannot_make_file_[file]_writeable:_[errmsg]"
+>cannot make file [file] writeable: [errmsg]</a></dt>
+
+<dd>
+<p><code>remove_tree</code> attempted to force the permissions of a file to ensure it could be deleted, but failed to do so. It will, however, still attempt to unlink the file.</p>
+
+<dt><a name='cannot'></a><a name="cannot_unlink_file_[file]:_[errmsg]"
+>cannot unlink file [file]: [errmsg]</a></dt>
+
+<dd>
+<p><code>remove_tree</code> failed to remove a file. Probably a permissions issue.</p>
+
+<dt><a name='cannot'></a><a name="cannot_restore_permissions_of_[file]_to_[0nnn]:_[errmsg]"
+>cannot restore permissions of [file] to [0nnn]: [errmsg]</a></dt>
+
+<dd>
+<p>After having failed to remove a file, <code>remove_tree</code> was also unable to restore the permissions on the file to a possibly less permissive setting. (Permissions given in octal).</p>
+
+<dt><a name='unable'></a><a name="unable_to_map_[owner]_to_a_uid,_ownership_not_changed&#34;);"
+>unable to map [owner] to a uid, ownership not changed&#34;);</a></dt>
+
+<dd>
+<p><code>make_path</code> was instructed to give the ownership of created directories to the symbolic name [owner], but <code>getpwnam</code> did not return the corresponding numeric uid. The directory will be created, but ownership will not be changed.</p>
+
+<dt><a name='unable'></a><a name="unable_to_map_[group]_to_a_gid,_group_ownership_not_changed"
+>unable to map [group] to a gid, group ownership not changed</a></dt>
+
+<dd>
+<p><code>make_path</code> was instructed to give the group ownership of created directories to the symbolic name [group], but <code>getgrnam</code> did not return the corresponding numeric gid. The directory will be created, but group ownership will not be changed.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li><a href="/perldoc?File%3A%3ARemove" class="podlinkpod"
+>File::Remove</a>
+<p>Allows files and directories to be moved to the Trashcan/Recycle Bin (where they may later be restored if necessary) if the operating system supports such functionality. This feature may one day be made available directly in <code><a href="/~dland/File-Path-2.08/Path.pm" class="podlinkpod"
+>File::Path</a></code>.</p>
+</li>
+
+<li><a href="/perldoc?File%3A%3AFind%3A%3ARule" class="podlinkpod"
+>File::Find::Rule</a>
+<p>When removing directory trees, if you want to examine each file to decide whether to delete it (and possibly leaving large swathes alone), <em><a href="/perldoc?File%3A%3AFind%3A%3ARule" class="podlinkpod"
+>File::Find::Rule</a></em> offers a convenient and flexible approach to examining directory trees.</p>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Please report all bugs on the RT queue:</p>
+
+<p><a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=File-Path" class="podlinkurl"
+>http://rt.cpan.org/NoAuth/Bugs.html?Dist=File-Path</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ACKNOWLEDGEMENTS"
+>ACKNOWLEDGEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Paul Szabo identified the race condition originally, and Brendan O&#39;Dea wrote an implementation for Debian that addressed the problem. That code was used as a basis for the current code. Their efforts are greatly appreciated.</p>
+
+<p>Gisle Aas made a number of improvements to the documentation for 2.07 and his advice and assistance is also greatly appreciated.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Tim Bunce and Charles Bailey. Currently maintained by David Landgren &#60;<em>david@landgren.net</em>&#62;.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module is copyright (C) Charles Bailey, Tim Bunce and David Landgren 1995-2009. All rights reserved.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78052 Uploads, 24684 Distributions
+105889 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 18:14:33 2012 GMT (0.0938639640808105) @cpansearch1 -->
+ </body>
+</html>

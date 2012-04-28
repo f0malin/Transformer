@@ -1,0 +1,528 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>App::Cmd - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","App-Cmd",3]);
+    _gaq.push(["_setCustomVar",5,"Release","App-Cmd-0.317",3]);
+    _gaq.push(["_setCustomVar",3,"Module","App::Cmd",3]);
+    _gaq.push(["_setCustomVar",1,"Author","RJBS",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?App::Cmd">permalink</a></div>
+  <a href="/~rjbs/">Ricardo SIGNES</a> &gt;
+  <a href="/~rjbs/App-Cmd-0.317/">App-Cmd-0.317</a> &gt;
+  App::Cmd
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/cec6b9b88295ead26c65f8747a76561b?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/R/RJ/RJBS/App-Cmd-0.317.tar.gz">App-Cmd-0.317.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=App%3A%3ACmd;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~RJBS/App-Cmd-0.317/lib/App/Cmd.pm">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="https://github.com/rjbs/app-cmd">Website</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 7</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 4</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=App-Cmd">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.317 &nbsp;
+<span class="noprint">
+  <a href="/src/RJBS/App-Cmd-0.317/lib/App/Cmd.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#run'>run</a>
+    <li class='indexItem indexItem2'><a href='#prepare_args'>prepare_args</a>
+    <li class='indexItem indexItem2'><a href='#default_args'>default_args</a>
+    <li class='indexItem indexItem2'><a href='#arg0'>arg0</a>
+    <li class='indexItem indexItem2'><a href='#full_arg0'>full_arg0</a>
+    <li class='indexItem indexItem2'><a href='#prepare_command'>prepare_command</a>
+    <li class='indexItem indexItem2'><a href='#default_command'>default_command</a>
+    <li class='indexItem indexItem2'><a href='#execute_command'>execute_command</a>
+    <li class='indexItem indexItem2'><a href='#plugin_search_path'>plugin_search_path</a>
+    <li class='indexItem indexItem2'><a href='#allow_any_unambiguous_abbrev'>allow_any_unambiguous_abbrev</a>
+    <li class='indexItem indexItem2'><a href='#global_options'>global_options</a>
+    <li class='indexItem indexItem2'><a href='#set_global_options'>set_global_options</a>
+    <li class='indexItem indexItem2'><a href='#command_names'>command_names</a>
+    <li class='indexItem indexItem2'><a href='#command_plugins'>command_plugins</a>
+    <li class='indexItem indexItem2'><a href='#plugin_for'>plugin_for</a>
+    <li class='indexItem indexItem2'><a href='#get_command'>get_command</a>
+    <li class='indexItem indexItem2'><a href='#usage'>usage</a>
+    <li class='indexItem indexItem2'><a href='#usage_desc'>usage_desc</a>
+    <li class='indexItem indexItem2'><a href='#global_opt_spec'>global_opt_spec</a>
+    <li class='indexItem indexItem2'><a href='#usage_error'>usage_error</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#TODO'>TODO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>App::Cmd - write command line apps with less suffering</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 0.317</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>in <em>yourcmd</em>:</p>
+
+<pre class="sh_perl">  use YourApp;
+  YourApp-&#62;run;</pre>
+
+<p>in <em>YourApp.pm</em>:</p>
+
+<pre class="sh_perl">  package YourApp;
+  use App::Cmd::Setup -app;
+  1;</pre>
+
+<p>in <em>YourApp/Command/blort.pm</em>:</p>
+
+<pre class="sh_perl">  package YourApp::Command::blort;
+  use YourApp -command;
+  use strict; use warnings;
+
+  sub opt_spec {
+    return (
+      [ &#34;blortex|X&#34;,  &#34;use the blortex algorithm&#34; ],
+      [ &#34;recheck|r&#34;,  &#34;recheck all results&#34;       ],
+    );
+  }
+
+  sub validate_args {
+    my ($self, $opt, $args) = @_;
+
+    # no args allowed but options!
+    $self-&#62;usage_error(&#34;No args allowed&#34;) if @$args;
+  }
+
+  sub execute {
+    my ($self, $opt, $args) = @_;
+
+    my $result = $opt-&#62;{blortex} ? blortex() : blort();
+
+    recheck($result) if $opt-&#62;{recheck};
+
+    print $result;
+  }</pre>
+
+<p>and, finally, at the command line:</p>
+
+<pre class="sh_perl">  knight!rjbs$ yourcmd blort --recheck
+
+  All blorts successful.</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>App::Cmd is intended to make it easy to write complex command-line applications without having to think about most of the annoying things usually involved.</p>
+
+<p>For information on how to start using App::Cmd, see <a href="/~rjbs/App-Cmd-0.317/lib/App/Cmd/Tutorial.pod" class="podlinkpod"
+>App::Cmd::Tutorial</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+>new</a></h2>
+
+<pre class="sh_perl">  my $cmd = App::Cmd-&#62;new(\%arg);</pre>
+
+<p>This method returns a new App::Cmd object. During initialization, command plugins will be loaded.</p>
+
+<p>Valid arguments are:</p>
+
+<pre class="sh_perl">  no_commands_plugin - if true, the command list plugin is not added
+
+  no_help_plugin     - if true, the help plugin is not added
+
+  plugin_search_path - The path to search for commands in. Defaults to
+                       results of plugin_search_path method</pre>
+
+<p>If <code>no_commands_plugin</code> is not given, App::Cmd::Command::commands will be required, and it will be registered to handle all of its command names not handled by other plugins.</p>
+
+<p>If <code>no_help_plugin</code> is not given, App::Cmd::Command::help will be required, and it will be registered to handle all of its command names not handled by other plugins. <b>Note:</b> &#34;help&#34; is the default command, so if you do not load the default help plugin, you should provide your own or override the <code>default_command</code> method.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="run"
+>run</a></h2>
+
+<pre class="sh_perl">  $cmd-&#62;run;</pre>
+
+<p>This method runs the application. If called the class, it will instantiate a new App::Cmd object to run.</p>
+
+<p>It determines the requested command (generally by consuming the first command-line argument), finds the plugin to handle that command, parses the remaining arguments according to that plugin&#39;s rules, and runs the plugin.</p>
+
+<p>It passes the contents of the global argument array (<code>@ARGV</code>) to <a href="#prepare_command" class="podlinkpod"
+>&#34;<code>prepare_command</code>&#34;</a>, but <code>@ARGV</code> is not altered by running an App::Cmd.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="prepare_args"
+>prepare_args</a></h2>
+
+<p>Normally App::Cmd uses <code>@ARGV</code> for its commandline arguments. You can override this method to change that behavior for testing or otherwise.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="default_args"
+>default_args</a></h2>
+
+<p>If <code><a href="#prepare_args" class="podlinkpod"
+>&#34;prepare_args&#34;</a></code> is not changed and there are no arguments in <code>@ARGV</code>, this method is called and should return an arrayref to be used as the arguments to the program. By default, it returns an empty arrayref.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="arg0"
+>arg0</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="full_arg0"
+>full_arg0</a></h2>
+
+<pre class="sh_perl">  my $program_name = $app-&#62;arg0;
+
+  my $full_program_name = $app-&#62;full_arg0;</pre>
+
+<p>These methods return the name of the program invoked to run this application. This is determined by inspecting <code>$0</code> when the App::Cmd object is instantiated, so it&#39;s probably correct, but doing weird things with App::Cmd could lead to weird values from these methods.</p>
+
+<p>If the program was run like this:</p>
+
+<pre class="sh_perl">  knight!rjbs$ ~/bin/rpg dice 3d6</pre>
+
+<p>Then the methods return:</p>
+
+<pre class="sh_perl">  arg0      - rpg
+  full_arg0 - /Users/rjbs/bin/rpg</pre>
+
+<p>These values are captured when the App::Cmd object is created, so it is safe to assign to <code>$0</code> later.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="prepare_command"
+>prepare_command</a></h2>
+
+<pre class="sh_perl">  my ($cmd, $opt, @args) = $app-&#62;prepare_command(@ARGV);</pre>
+
+<p>This method will load the plugin for the requested command, use its options to parse the command line arguments, and eventually return everything necessary to actually execute the command.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="default_command"
+>default_command</a></h2>
+
+<p>This method returns the name of the command to run if none is given on the command line. The default default is &#34;help&#34;</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="execute_command"
+>execute_command</a></h2>
+
+<pre class="sh_perl">  $app-&#62;execute_command($cmd, \%opt, @args);</pre>
+
+<p>This method will invoke <code>validate_args</code> and then <code>run</code> on <code>$cmd</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="plugin_search_path"
+>plugin_search_path</a></h2>
+
+<p>This method returns the plugin_search_path as set. The default implementation, if called on &#34;YourApp::Cmd&#34; will return &#34;YourApp::Cmd::Command&#34;</p>
+
+<p>This is a method because it&#39;s fun to override it with, for example:</p>
+
+<pre class="sh_perl">  use constant plugin_search_path =&#62; __PACKAGE__;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="allow_any_unambiguous_abbrev"
+>allow_any_unambiguous_abbrev</a></h2>
+
+<p>If this method returns true (which, by default, it does <i>not</i>), then any unambiguous abbreviation for a registered command name will be allowed as a means to use that command. For example, given the following commands:</p>
+
+<pre class="sh_perl">  reticulate
+  reload
+  rasterize</pre>
+
+<p>Then the user could use <code>ret</code> for <code>reticulate</code> or <code>ra</code> for <code>rasterize</code> and so on.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="global_options"
+>global_options</a></h2>
+
+<pre class="sh_perl">  if ($cmd-&#62;app-&#62;global_options-&#62;{verbose}) { ... }</pre>
+
+<p>This method returns the running application&#39;s global options as a hashref. If there are no options specified, an empty hashref is returned.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="set_global_options"
+>set_global_options</a></h2>
+
+<pre class="sh_perl">  $app-&#62;set_global_options(\%opt);</pre>
+
+<p>This method sets the global options.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="command_names"
+>command_names</a></h2>
+
+<pre class="sh_perl">  my @names = $cmd-&#62;command_names;</pre>
+
+<p>This returns the commands names which the App::Cmd object will handle.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="command_plugins"
+>command_plugins</a></h2>
+
+<pre class="sh_perl">  my @plugins = $cmd-&#62;command_plugins;</pre>
+
+<p>This method returns the package names of the plugins that implement the App::Cmd object&#39;s commands.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="plugin_for"
+>plugin_for</a></h2>
+
+<pre class="sh_perl">  my $plugin = $cmd-&#62;plugin_for($command);</pre>
+
+<p>This method returns the plugin (module) for the given command. If no plugin implements the command, it returns false.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="get_command"
+>get_command</a></h2>
+
+<pre class="sh_perl">  my ($command_name, $opt, @args) = $app-&#62;get_command(@args);</pre>
+
+<p>Process arguments and into a command name and (optional) global options.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="usage"
+>usage</a></h2>
+
+<pre class="sh_perl">  print $self-&#62;app-&#62;usage-&#62;text;</pre>
+
+<p>Returns the usage object for the global options.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="usage_desc"
+>usage_desc</a></h2>
+
+<p>The top level usage line. Looks something like</p>
+
+<pre class="sh_perl">  &#34;yourapp [options] &#60;command&#62;&#34;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="global_opt_spec"
+>global_opt_spec</a></h2>
+
+<p>Returns an empty list. Can be overridden for pre-dispatch option processing. This is useful for flags like --verbose.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="usage_error"
+>usage_error</a></h2>
+
+<pre class="sh_perl">  $self-&#62;usage_error(&#34;Something&#39;s wrong!&#34;);</pre>
+
+<p>Used to die with nice usage output, during <code>validate_args</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TODO"
+>TODO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li>publish and bring in Log::Speak (simple quiet/verbose output)</li>
+
+<li>publish and use our internal enhanced describe_options</li>
+
+<li>publish and use our improved simple input routines</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Ricardo Signes &#60;rjbs@cpan.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This software is copyright (c) 2012 by Ricardo Signes.</p>
+
+<p>This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78255 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 11:57:11 2012 GMT (0.352189064025879) @cpansearch1 -->
+ </body>
+</html>

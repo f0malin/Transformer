@@ -1,0 +1,646 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Data::Dumper - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Data-Dumper",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Data-Dumper-2.131",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Data::Dumper",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SMUELLER",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Data::Dumper">permalink</a></div>
+  <a href="/~smueller/">Steffen M&uuml;ller</a> &gt;
+  <a href="/~smueller/Data-Dumper-2.131/">Data-Dumper-2.131</a> &gt;
+  Data::Dumper
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/ac0c0eab36df58cd3676c1f03f4d5185?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SM/SMUELLER/Data-Dumper-2.131.tar.gz">Data-Dumper-2.131.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Data%3A%3ADumper;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SMUELLER/Data-Dumper-2.131/Dumper.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?XML%3A%3ASimple">XML::Simple</a><br>
+<a href="/perldoc?Parse%3A%3ARecDescent">Parse::RecDescent</a><br>
+<a href="/perldoc?HTML%3A%3ATemplate">HTML::Template</a><br>
+<a href="/perldoc?LWP%3A%3AUserAgent">LWP::UserAgent</a><br>
+<a href="/perldoc?WWW%3A%3AMechanize">WWW::Mechanize</a><br>
+<a href="/perldoc?File%3A%3AFind">File::Find</a><br>
+<a href="/perldoc?XML%3A%3AParser">XML::Parser</a><br>
+<a href="/perldoc?Class%3A%3ADBI">Class::DBI</a><br>
+<a href="/perldoc?List%3A%3AUtil">List::Util</a><br>
+<a href="/perldoc?CGI%3A%3ACarp">CGI::Carp</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Data%3A%3ADumper">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<a href="http://rt.perl.org/perlbug/">View/Report Bugs</a><br/>
+
+</div>
+</div>
+  Module Version:  2.131 &nbsp;
+<span class="noprint">
+  <a href="/src/SMUELLER/Data-Dumper-2.131/Dumper.pm">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~smueller/Data-Dumper/Dumper.pm">Data-Dumper-2.135_02</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Methods'>Methods</a>
+    <li class='indexItem indexItem2'><a href='#Functions'>Functions</a>
+    <li class='indexItem indexItem2'><a href='#Configuration_Variables_or_Methods'>Configuration Variables or Methods</a>
+    <li class='indexItem indexItem2'><a href='#Exports'>Exports</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#EXAMPLES'>EXAMPLES</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#NOTE'>NOTE</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Data::Dumper - stringified perl data structures,
+suitable for both printing and <code>eval</code></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Data::Dumper;
+
+    # simple procedural interface
+    print Dumper($foo, $bar);
+
+    # extended usage with names
+    print Data::Dumper-&#62;Dump([$foo, $bar], [qw(foo *ary)]);
+
+    # configuration variables
+    {
+      local $Data::Dumper::Purity = 1;
+      eval Data::Dumper-&#62;Dump([$foo, $bar], [qw(foo *ary)]);
+    }
+
+    # OO usage
+    $d = Data::Dumper-&#62;new([$foo, $bar], [qw(foo *ary)]);
+       ...
+    print $d-&#62;Dump;
+       ...
+    $d-&#62;Purity(1)-&#62;Terse(1)-&#62;Deepcopy(1);
+    eval $d-&#62;Dump;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Given a list of scalars or reference variables, writes out their contents in perl syntax. The references can also be objects. The content of each variable is output in a single Perl statement. Handles self-referential structures correctly.</p>
+
+<p>The return value can be <code>eval</code>ed to get back an identical copy of the original reference structure.</p>
+
+<p>Any references that are the same as one of those passed in will be named <code>$VAR</code><i>n</i> (where <i>n</i> is a numeric suffix), and other duplicate references to substructures within <code>$VAR</code><i>n</i> will be appropriately labeled using arrow notation. You can specify names for individual values to be dumped if you use the <code>Dump()</code> method, or you can change the default <code>$VAR</code> prefix to something else. See <code>$Data::Dumper::Varname</code> and <code>$Data::Dumper::Terse</code> below.</p>
+
+<p>The default output of self-referential structures can be <code>eval</code>ed, but the nested references to <code>$VAR</code><i>n</i> will be undefined, since a recursive structure cannot be constructed using one Perl statement. You should set the <code>Purity</code> flag to 1 to get additional statements that will correctly fill in these references. Moreover, if <code>eval</code>ed when strictures are in effect, you need to ensure that any variables it accesses are previously declared.</p>
+
+<p>In the extended usage form, the references to be dumped can be given user-specified names. If a name begins with a <code>*</code>, the output will describe the dereferenced type of the supplied reference for hashes and arrays, and coderefs. Output of names will be avoided where possible if the <code>Terse</code> flag is set.</p>
+
+<p>In many cases, methods that are used to set the internal state of the object will return the object itself, so method calls can be conveniently chained together.</p>
+
+<p>Several styles of output are possible, all controlled by setting the <code>Indent</code> flag. See <a href="#Configuration_Variables_or_Methods" class="podlinkpod"
+>&#34;Configuration Variables or Methods&#34;</a> below for details.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Methods"
+>Methods</a></h2>
+
+<dl>
+<dt><a name='PACKAGE'></a><a name="PACKAGE-&#62;new(ARRAYREF_[,_ARRAYREF])"
+><i>PACKAGE</i>-&#62;new(<i>ARRAYREF [</i>, <i>ARRAYREF]</i>)</a></dt>
+
+<dd>
+<p>Returns a newly created <code>Data::Dumper</code> object. The first argument is an anonymous array of values to be dumped. The optional second argument is an anonymous array of names for the values. The names need not have a leading <code>$</code> sign, and must be comprised of alphanumeric characters. You can begin a name with a <code>*</code> to specify that the dereferenced type must be dumped instead of the reference itself, for ARRAY and HASH references.</p>
+
+<p>The prefix specified by <code>$Data::Dumper::Varname</code> will be used with a numeric suffix if the name for a value is undefined.</p>
+
+<p>Data::Dumper will catalog all references encountered while dumping the values. Cross-references (in the form of names of substructures in perl syntax) will be inserted at all possible points, preserving any structural interdependencies in the original set of values. Structure traversal is depth-first, and proceeds in order from the first supplied value to the last.</p>
+
+<dt><a name='OBJ'></a><a name="$OBJ-&#62;Dump_or_PACKAGE-&#62;Dump(ARRAYREF_[,_ARRAYREF])"
+><i>$OBJ</i>-&#62;Dump <i>or</i> <i>PACKAGE</i>-&#62;Dump(<i>ARRAYREF [</i>, <i>ARRAYREF]</i>)</a></dt>
+
+<dd>
+<p>Returns the stringified form of the values stored in the object (preserving the order in which they were supplied to <code>new</code>), subject to the configuration options below. In a list context, it returns a list of strings corresponding to the supplied values.</p>
+
+<p>The second form, for convenience, simply calls the <code>new</code> method on its arguments before dumping the object immediately.</p>
+
+<dt><a name='OBJ'></a><a name="$OBJ-&#62;Seen([HASHREF])"
+><i>$OBJ</i>-&#62;Seen(<i>[HASHREF]</i>)</a></dt>
+
+<dd>
+<p>Queries or adds to the internal table of already encountered references. You must use <code>Reset</code> to explicitly clear the table if needed. Such references are not dumped; instead, their names are inserted wherever they are encountered subsequently. This is useful especially for properly dumping subroutine references.</p>
+
+<p>Expects an anonymous hash of name =&#62; value pairs. Same rules apply for names as in <code>new</code>. If no argument is supplied, will return the &#34;seen&#34; list of name =&#62; value pairs, in a list context. Otherwise, returns the object itself.</p>
+
+<dt><a name='OBJ'></a><a name="$OBJ-&#62;Values([ARRAYREF])"
+><i>$OBJ</i>-&#62;Values(<i>[ARRAYREF]</i>)</a></dt>
+
+<dd>
+<p>Queries or replaces the internal array of values that will be dumped. When called without arguments, returns the values. Otherwise, returns the object itself.</p>
+
+<dt><a name='OBJ'></a><a name="$OBJ-&#62;Names([ARRAYREF])"
+><i>$OBJ</i>-&#62;Names(<i>[ARRAYREF]</i>)</a></dt>
+
+<dd>
+<p>Queries or replaces the internal array of user supplied names for the values that will be dumped. When called without arguments, returns the names. Otherwise, returns the object itself.</p>
+
+<dt><a name='OBJ'></a><a name="$OBJ-&#62;Reset"
+><i>$OBJ</i>-&#62;Reset</a></dt>
+
+<dd>
+<p>Clears the internal table of &#34;seen&#34; references and returns the object itself.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Functions"
+>Functions</a></h2>
+
+<dl>
+<dt><a name='Dumper'></a><a name="Dumper(LIST)"
+>Dumper(<i>LIST</i>)</a></dt>
+
+<dd>
+<p>Returns the stringified form of the values in the list, subject to the configuration options below. The values will be named <code>$VAR</code><i>n</i> in the output, where <i>n</i> is a numeric suffix. Will return a list of strings in a list context.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Configuration_Variables_or_Methods"
+>Configuration Variables or Methods</a></h2>
+
+<p>Several configuration variables can be used to control the kind of output generated when using the procedural interface. These variables are usually <code>local</code>ized in a block so that other parts of the code are not affected by the change.</p>
+
+<p>These variables determine the default state of the object created by calling the <code>new</code> method, but cannot be used to alter the state of the object thereafter. The equivalent method names should be used instead to query or set the internal state of the object.</p>
+
+<p>The method forms return the object itself when called with arguments, so that they can be chained together nicely.</p>
+
+<ul>
+<li>$Data::Dumper::Indent <i>or</i> <i>$OBJ</i>-&#62;Indent(<i>[NEWVAL]</i>)
+<p>Controls the style of indentation. It can be set to 0, 1, 2 or 3. Style 0 spews output without any newlines, indentation, or spaces between list items. It is the most compact format possible that can still be called valid perl. Style 1 outputs a readable form with newlines but no fancy indentation (each level in the structure is simply indented by a fixed amount of whitespace). Style 2 (the default) outputs a very readable form which takes into account the length of hash keys (so the hash value lines up). Style 3 is like style 2, but also annotates the elements of arrays with their index (but the comment is on its own line, so array output consumes twice the number of lines). Style 2 is the default.</p>
+</li>
+
+<li>$Data::Dumper::Purity <i>or</i> <i>$OBJ</i>-&#62;Purity(<i>[NEWVAL]</i>)
+<p>Controls the degree to which the output can be <code>eval</code>ed to recreate the supplied reference structures. Setting it to 1 will output additional perl statements that will correctly recreate nested references. The default is 0.</p>
+</li>
+
+<li>$Data::Dumper::Pad <i>or</i> <i>$OBJ</i>-&#62;Pad(<i>[NEWVAL]</i>)
+<p>Specifies the string that will be prefixed to every line of the output. Empty string by default.</p>
+</li>
+
+<li>$Data::Dumper::Varname <i>or</i> <i>$OBJ</i>-&#62;Varname(<i>[NEWVAL]</i>)
+<p>Contains the prefix to use for tagging variable names in the output. The default is &#34;VAR&#34;.</p>
+</li>
+
+<li>$Data::Dumper::Useqq <i>or</i> <i>$OBJ</i>-&#62;Useqq(<i>[NEWVAL]</i>)
+<p>When set, enables the use of double quotes for representing string values. Whitespace other than space will be represented as <code>[\n\t\r]</code>, &#34;unsafe&#34; characters will be backslashed, and unprintable characters will be output as quoted octal integers. Since setting this variable imposes a performance penalty, the default is 0. <code>Dump()</code> will run slower if this flag is set, since the fast XSUB implementation doesn&#39;t support it yet.</p>
+</li>
+
+<li>$Data::Dumper::Terse <i>or</i> <i>$OBJ</i>-&#62;Terse(<i>[NEWVAL]</i>)
+<p>When set, Data::Dumper will emit single, non-self-referential values as atoms/terms rather than statements. This means that the <code>$VAR</code><i>n</i> names will be avoided where possible, but be advised that such output may not always be parseable by <code>eval</code>.</p>
+</li>
+
+<li>$Data::Dumper::Freezer <i>or</i> $<i>OBJ</i>-&#62;Freezer(<i>[NEWVAL]</i>)
+<p>Can be set to a method name, or to an empty string to disable the feature. Data::Dumper will invoke that method via the object before attempting to stringify it. This method can alter the contents of the object (if, for instance, it contains data allocated from C), and even rebless it in a different package. The client is responsible for making sure the specified method can be called via the object, and that the object ends up containing only perl data types after the method has been called. Defaults to an empty string.</p>
+
+<p>If an object does not support the method specified (determined using UNIVERSAL::can()) then the call will be skipped. If the method dies a warning will be generated.</p>
+</li>
+
+<li>$Data::Dumper::Toaster <i>or</i> $<i>OBJ</i>-&#62;Toaster(<i>[NEWVAL]</i>)
+<p>Can be set to a method name, or to an empty string to disable the feature. Data::Dumper will emit a method call for any objects that are to be dumped using the syntax <code>bless(DATA, CLASS)-&#62;METHOD()</code>. Note that this means that the method specified will have to perform any modifications required on the object (like creating new state within it, and/or reblessing it in a different package) and then return it. The client is responsible for making sure the method can be called via the object, and that it returns a valid object. Defaults to an empty string.</p>
+</li>
+
+<li>$Data::Dumper::Deepcopy <i>or</i> $<i>OBJ</i>-&#62;Deepcopy(<i>[NEWVAL]</i>)
+<p>Can be set to a boolean value to enable deep copies of structures. Cross-referencing will then only be done when absolutely essential (i.e., to break reference cycles). Default is 0.</p>
+</li>
+
+<li>$Data::Dumper::Quotekeys <i>or</i> $<i>OBJ</i>-&#62;Quotekeys(<i>[NEWVAL]</i>)
+<p>Can be set to a boolean value to control whether hash keys are quoted. A false value will avoid quoting hash keys when it looks like a simple string. Default is 1, which will always enclose hash keys in quotes.</p>
+</li>
+
+<li>$Data::Dumper::Bless <i>or</i> $<i>OBJ</i>-&#62;Bless(<i>[NEWVAL]</i>)
+<p>Can be set to a string that specifies an alternative to the <code>bless</code> builtin operator used to create objects. A function with the specified name should exist, and should accept the same arguments as the builtin. Default is <code>bless</code>.</p>
+</li>
+
+<li>$Data::Dumper::Pair <i>or</i> $<i>OBJ</i>-&#62;Pair(<i>[NEWVAL]</i>)
+<p>Can be set to a string that specifies the separator between hash keys and values. To dump nested hash, array and scalar values to JavaScript, use: <code>$Data::Dumper::Pair = &#39; : &#39;;</code>. Implementing <code>bless</code> in JavaScript is left as an exercise for the reader. A function with the specified name exists, and accepts the same arguments as the builtin.</p>
+
+<p>Default is: <code> =&#62; </code>.</p>
+</li>
+
+<li>$Data::Dumper::Maxdepth <i>or</i> $<i>OBJ</i>-&#62;Maxdepth(<i>[NEWVAL]</i>)
+<p>Can be set to a positive integer that specifies the depth beyond which we don&#39;t venture into a structure. Has no effect when <code>Data::Dumper::Purity</code> is set. (Useful in debugger when we often don&#39;t want to see more than enough). Default is 0, which means there is no maximum depth.</p>
+</li>
+
+<li>$Data::Dumper::Useperl <i>or</i> $<i>OBJ</i>-&#62;Useperl(<i>[NEWVAL]</i>)
+<p>Can be set to a boolean value which controls whether the pure Perl implementation of <code>Data::Dumper</code> is used. The <code>Data::Dumper</code> module is a dual implementation, with almost all functionality written in both pure Perl and also in XS (&#39;C&#39;). Since the XS version is much faster, it will always be used if possible. This option lets you override the default behavior, usually for testing purposes only. Default is 0, which means the XS implementation will be used if possible.</p>
+</li>
+
+<li>$Data::Dumper::Sortkeys <i>or</i> $<i>OBJ</i>-&#62;Sortkeys(<i>[NEWVAL]</i>)
+<p>Can be set to a boolean value to control whether hash keys are dumped in sorted order. A true value will cause the keys of all hashes to be dumped in Perl&#39;s default sort order. Can also be set to a subroutine reference which will be called for each hash that is dumped. In this case <code>Data::Dumper</code> will call the subroutine once for each hash, passing it the reference of the hash. The purpose of the subroutine is to return a reference to an array of the keys that will be dumped, in the order that they should be dumped. Using this feature, you can control both the order of the keys, and which keys are actually used. In other words, this subroutine acts as a filter by which you can exclude certain keys from being dumped. Default is 0, which means that hash keys are not sorted.</p>
+</li>
+
+<li>$Data::Dumper::Deparse <i>or</i> $<i>OBJ</i>-&#62;Deparse(<i>[NEWVAL]</i>)
+<p>Can be set to a boolean value to control whether code references are turned into perl source code. If set to a true value, <code>B::Deparse</code> will be used to get the source of the code reference. Using this option will force using the Perl implementation of the dumper, since the fast XSUB implementation doesn&#39;t support it.</p>
+
+<p>Caution : use this option only if you know that your coderefs will be properly reconstructed by <code>B::Deparse</code>.</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Exports"
+>Exports</a></h2>
+
+<dl>
+<dt><a name="Dumper"
+>Dumper</a></dt>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Run these code snippets to get a quick feel for the behavior of this module. When you are through with these examples, you may want to add or change the various configuration variables described above, to see their behavior. (See the testsuite in the Data::Dumper distribution for more examples.)</p>
+
+<pre class="sh_perl">    use Data::Dumper;
+
+    package Foo;
+    sub new {bless {&#39;a&#39; =&#62; 1, &#39;b&#39; =&#62; sub { return &#34;foo&#34; }}, $_[0]};
+
+    package Fuz;                       # a weird REF-REF-SCALAR object
+    sub new {bless \($_ = \ &#39;fu\&#39;z&#39;), $_[0]};
+
+    package main;
+    $foo = Foo-&#62;new;
+    $fuz = Fuz-&#62;new;
+    $boo = [ 1, [], &#34;abcd&#34;, \*foo,
+             {1 =&#62; &#39;a&#39;, 023 =&#62; &#39;b&#39;, 0x45 =&#62; &#39;c&#39;}, 
+             \\&#34;p\q\&#39;r&#34;, $foo, $fuz];
+
+    ########
+    # simple usage
+    ########
+
+    $bar = eval(Dumper($boo));
+    print($@) if $@;
+    print Dumper($boo), Dumper($bar);  # pretty print (no array indices)
+
+    $Data::Dumper::Terse = 1;          # don&#39;t output names where feasible
+    $Data::Dumper::Indent = 0;         # turn off all pretty print
+    print Dumper($boo), &#34;\n&#34;;
+
+    $Data::Dumper::Indent = 1;         # mild pretty print
+    print Dumper($boo);
+
+    $Data::Dumper::Indent = 3;         # pretty print with array indices
+    print Dumper($boo);
+
+    $Data::Dumper::Useqq = 1;          # print strings in double quotes
+    print Dumper($boo);
+
+    $Data::Dumper::Pair = &#34; : &#34;;       # specify hash key/value separator
+    print Dumper($boo);
+
+
+    ########
+    # recursive structures
+    ########
+
+    @c = (&#39;c&#39;);
+    $c = \@c;
+    $b = {};
+    $a = [1, $b, $c];
+    $b-&#62;{a} = $a;
+    $b-&#62;{b} = $a-&#62;[1];
+    $b-&#62;{c} = $a-&#62;[2];
+    print Data::Dumper-&#62;Dump([$a,$b,$c], [qw(a b c)]);
+
+
+    $Data::Dumper::Purity = 1;         # fill in the holes for eval
+    print Data::Dumper-&#62;Dump([$a, $b], [qw(*a b)]); # print as @a
+    print Data::Dumper-&#62;Dump([$b, $a], [qw(*b a)]); # print as %b
+
+
+    $Data::Dumper::Deepcopy = 1;       # avoid cross-refs
+    print Data::Dumper-&#62;Dump([$b, $a], [qw(*b a)]);
+
+
+    $Data::Dumper::Purity = 0;         # avoid cross-refs
+    print Data::Dumper-&#62;Dump([$b, $a], [qw(*b a)]);
+
+    ########
+    # deep structures
+    ########
+
+    $a = &#34;pearl&#34;;
+    $b = [ $a ];
+    $c = { &#39;b&#39; =&#62; $b };
+    $d = [ $c ];
+    $e = { &#39;d&#39; =&#62; $d };
+    $f = { &#39;e&#39; =&#62; $e };
+    print Data::Dumper-&#62;Dump([$f], [qw(f)]);
+
+    $Data::Dumper::Maxdepth = 3;       # no deeper than 3 refs down
+    print Data::Dumper-&#62;Dump([$f], [qw(f)]);
+
+
+    ########
+    # object-oriented usage
+    ########
+
+    $d = Data::Dumper-&#62;new([$a,$b], [qw(a b)]);
+    $d-&#62;Seen({&#39;*c&#39; =&#62; $c});            # stash a ref without printing it
+    $d-&#62;Indent(3);
+    print $d-&#62;Dump;
+    $d-&#62;Reset-&#62;Purity(0);              # empty the seen cache
+    print join &#34;----\n&#34;, $d-&#62;Dump;
+
+
+    ########
+    # persistence
+    ########
+
+    package Foo;
+    sub new { bless { state =&#62; &#39;awake&#39; }, shift }
+    sub Freeze {
+        my $s = shift;
+        print STDERR &#34;preparing to sleep\n&#34;;
+        $s-&#62;{state} = &#39;asleep&#39;;
+        return bless $s, &#39;Foo::ZZZ&#39;;
+    }
+
+    package Foo::ZZZ;
+    sub Thaw {
+        my $s = shift;
+        print STDERR &#34;waking up\n&#34;;
+        $s-&#62;{state} = &#39;awake&#39;;
+        return bless $s, &#39;Foo&#39;;
+    }
+
+    package Foo;
+    use Data::Dumper;
+    $a = Foo-&#62;new;
+    $b = Data::Dumper-&#62;new([$a], [&#39;c&#39;]);
+    $b-&#62;Freezer(&#39;Freeze&#39;);
+    $b-&#62;Toaster(&#39;Thaw&#39;);
+    $c = $b-&#62;Dump;
+    print $c;
+    $d = eval $c;
+    print Data::Dumper-&#62;Dump([$d], [&#39;d&#39;]);
+
+
+    ########
+    # symbol substitution (useful for recreating CODE refs)
+    ########
+
+    sub foo { print &#34;foo speaking\n&#34; }
+    *other = \&#38;foo;
+    $bar = [ \&#38;other ];
+    $d = Data::Dumper-&#62;new([\&#38;other,$bar],[&#39;*other&#39;,&#39;bar&#39;]);
+    $d-&#62;Seen({ &#39;*foo&#39; =&#62; \&#38;foo });
+    print $d-&#62;Dump;
+
+
+    ########
+    # sorting and filtering hash keys
+    ########
+
+    $Data::Dumper::Sortkeys = \&#38;my_filter;
+    my $foo = { map { (ord, &#34;$_$_$_&#34;) } &#39;I&#39;..&#39;Q&#39; };
+    my $bar = { %$foo };
+    my $baz = { reverse %$foo };
+    print Dumper [ $foo, $bar, $baz ];
+
+    sub my_filter {
+        my ($hash) = @_;
+        # return an array ref containing the hash keys to dump
+        # in the order that you want them to be dumped
+        return [
+          # Sort the keys of %$foo in reverse numeric order
+            $hash eq $foo ? (sort {$b &#60;=&#62; $a} keys %$hash) :
+          # Only dump the odd number keys of %$bar
+            $hash eq $bar ? (grep {$_ % 2} keys %$hash) :
+          # Sort keys in default order for all other hashes
+            (sort keys %$hash)
+        ];
+    }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Due to limitations of Perl subroutine call semantics, you cannot pass an array or hash. Prepend it with a <code>\</code> to pass its reference instead. This will be remedied in time, now that Perl has subroutine prototypes. For now, you need to use the extended usage form, and prepend the name with a <code>*</code> to output it as a hash or array.</p>
+
+<p><code>Data::Dumper</code> cheats with CODE references. If a code reference is encountered in the structure being processed (and if you haven&#39;t set the <code>Deparse</code> flag), an anonymous subroutine that contains the string &#39;&#34;DUMMY&#34;&#39; will be inserted in its place, and a warning will be printed if <code>Purity</code> is set. You can <code>eval</code> the result, but bear in mind that the anonymous sub that gets created is just a placeholder. Someday, perl will have a switch to cache-on-demand the string representation of a compiled piece of code, I hope. If you have prior knowledge of all the code refs that your data structures are likely to have, you can use the <code>Seen</code> method to pre-seed the internal reference table and make the dumped output point to them, instead. See <a href="#EXAMPLES" class="podlinkpod"
+>&#34;EXAMPLES&#34;</a> above.</p>
+
+<p>The <code>Useqq</code> and <code>Deparse</code> flags makes Dump() run slower, since the XSUB implementation does not support them.</p>
+
+<p>SCALAR objects have the weirdest looking <code>bless</code> workaround.</p>
+
+<p>Pure Perl version of <code>Data::Dumper</code> escapes UTF-8 strings correctly only in Perl 5.8.0 and later.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="NOTE"
+>NOTE</a></h2>
+
+<p>Starting from Perl 5.8.1 different runs of Perl will have different ordering of hash keys. The change was done for greater security, see <a href="/perldoc?perlsec#Algorithmic_Complexity_Attacks" class="podlinkpod"
+>&#34;Algorithmic Complexity Attacks&#34; in perlsec</a>. This means that different runs of Perl will have different Data::Dumper outputs if the data contains hashes. If you need to have identical Data::Dumper outputs from different runs of Perl, use the environment variable PERL_HASH_SEED, see <a href="/perldoc?perlrun#PERL_HASH_SEED" class="podlinkpod"
+>&#34;PERL_HASH_SEED&#34; in perlrun</a>. Using this restores the old (platform-specific) ordering: an even prettier solution might be to use the <code>Sortkeys</code> filter of Data::Dumper.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Gurusamy Sarathy gsar@activestate.com</p>
+
+<p>Copyright (c) 1996-98 Gurusamy Sarathy. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Version 2.131 (May 27 2011)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>perl(1)</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78290 Uploads, 24725 Distributions
+106015 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 28 08:58:37 2012 GMT (0.238866090774536) @cpansearch1 -->
+ </body>
+</html>

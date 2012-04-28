@@ -1,0 +1,401 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Text::CSV::Separator - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Text-CSV-Separator",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Text-CSV-Separator-0.20",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Text::CSV::Separator",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ENELL",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Text::CSV::Separator">permalink</a></div>
+  <a href="/~enell/">Enrique Nell</a> &gt;
+  <a href="/~enell/Text-CSV-Separator-0.20/">Text-CSV-Separator-0.20</a> &gt;
+  Text::CSV::Separator
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/5e84f377d1d7d52fc4be1e7509266b1d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/E/EN/ENELL/Text-CSV-Separator-0.20.tar.gz">Text-CSV-Separator-0.20.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Text%3A%3ACSV%3A%3ASeparator;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ENELL/Text-CSV-Separator-0.20/lib/Text/CSV/Separator.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Text-CSV-Separator">View/Report Bugs</a><br/>
+
+</div>
+</div>
+  Module Version:  0.20 &nbsp;
+<span class="noprint">
+  <a href="/src/ENELL/Text-CSV-Separator-0.20/lib/Text/CSV/Separator.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <li class='indexItem indexItem1'><a href='#EXPORT'>EXPORT</a>
+  <li class='indexItem indexItem1'><a href='#EXAMPLE'>EXAMPLE</a>
+  <li class='indexItem indexItem1'><a href='#MOTIVATION'>MOTIVATION</a>
+  <li class='indexItem indexItem1'><a href='#REFERENCES'>REFERENCES</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#ACKNOWLEDGEMENTS'>ACKNOWLEDGEMENTS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Text::CSV::Separator - Determine the field separator of a CSV file</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Version 0.20 - November 2,
+2008</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Text::CSV::Separator qw(get_separator);
+    
+    my @char_list = get_separator(
+                                    path    =&#62; $csv_path,
+                                    exclude =&#62; $array1_ref, # optional
+                                    include =&#62; $array2_ref, # optional
+                                    echo    =&#62; 1,           # optional
+                                 );
+    
+    my $separator;
+    if (@char_list) {
+        if (@char_list == 1) {           # successful detection
+            $separator = $char_list[0];
+        } else {                         # several candidates passed the tests
+            # Some code here
+    } else {                             # no candidate passed the tests
+        # Some code here
+    }
+    
+    
+    # &#34;I&#39;m Feeling Lucky&#34; alternative interface
+    # Don&#39;t forget to include the &#39;lucky&#39; parameter
+    
+    my $separator = get_separator(
+                                    path    =&#62; $csv_path,
+                                    lucky   =&#62; 1, 
+                                    exclude =&#62; $array1_ref, # optional
+                                    include =&#62; $array2_ref, # optional
+                                    echo    =&#62; 1,           # optional
+                                 );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module provides a fast detection of the field separator character (also called field delimiter) of a CSV file, or more generally, of a character separated text file (also called delimited text file), and returns it ready to use in a CSV parser (e.g., Text::CSV_XS, Tie::CSV_File, or Text::CSV::Simple). This may be useful to the vulnerable -and often ignored- population of programmers who need to process automatically CSV files from different sources.</p>
+
+<p>The default set of candidates contains the following characters: &#39;,&#39; &#39;;&#39; &#39;:&#39; &#39;|&#39; &#39;\t&#39;</p>
+
+<p>The only required parameter is the CSV file path. Optionally, the user can specify characters to be excluded or included in the list of candidates.</p>
+
+<p>The routine returns an array containing the list of candidates that passed the tests. If it succeeds, this array will contain only one value: the field separator we are looking for. On the other hand, if no candidate survives the tests, it will return an empty list.</p>
+
+<p>The technique used is based on the following principle:</p>
+
+<ul>
+<li>For every line in the file, the number of instances of the separator character acting as separators must be an integer constant &#62; 0 , although a line may also contain some instances of that character as literal characters.</li>
+
+<li>Most of the other candidates won&#39;t appear in a typical CSV line.</li>
+</ul>
+
+<p>As soon as a candidate misses a line, it will be removed from the candidates list.</p>
+
+<p>This is the first test done to the CSV file. In most cases, it will detect the separator after processing the first few lines. In particular, if the file contains a header line, one line will probably be enough to get the job done. Processing will stop and return control to the caller as soon as the program reaches a status of 1 single candidate (or 0 candidates left).</p>
+
+<p>If the routine cannot determine the separator in the first pass, it will do a second pass based on several heuristic techniques. It checks whether the file has columns consisting of time values, comma-separated decimal numbers, or numbers containing a comma as the group separator, which can lead to false positives in files that don&#39;t have a header row. It also measures the variability of the remaining candidates. Of course, you can always create a CSV file capable of resisting the siege, but this approach will work correctly in many cases. The possibility of excluding some of the default candidates may help to resolve cases with several possible winners. The resulting array contains the list of possible separators sorted by their likelihood, being the first array item the most probable separator.</p>
+
+<p>The module also provides an alternative interface with a simpler syntax, which can be handy if you think that the files your program will have to deal with aren&#39;t too exotic. To use it you only have to add the <b>lucky =&#62; 1</b> key-value pair to the parameters hash and the routine will return a single value, so you can assign it directly to a scalar variable. If no candidate survives the first pass, it will return <code>undef</code>. The code skips the 2nd pass, which is usually unnecessary, so the program won&#39;t store counts and won&#39;t check any existing regularities. Hence, it will run faster and will require less memory. This approach should be enough in most cases.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='get_separator'></a><a name="get_separator(%options)"
+><code>get_separator(%options)</code></a></dt>
+
+<dd>
+<p>Returns an array containing the field separator character (or characters, if more than one candidate passed the tests) of a CSV file. In case no candidate passes the tests, it returns an empty list.</p>
+
+<p>The available parameters are:</p>
+
+<ul>
+<li><code>path</code>
+<p>Required. The path to the CSV file.</p>
+</li>
+
+<li><code>exclude</code>
+<p>Optional. Array containing characters to be excluded from the candidates list.</p>
+</li>
+
+<li><code>include</code>
+<p>Optional. Array containing characters to be included in the candidates list.</p>
+</li>
+
+<li><code>lucky</code>
+<p>Optional. If selected, get_separator will return one single character, or <code>undef</code> in case no separator is detected. Off by default.</p>
+</li>
+
+<li><code>echo</code>
+<p>Optional. Writes to the standard output messages describing the actions performed. Off by default. This is useful to keep track of what&#39;s going on, especially for debugging purposes.</p>
+</li>
+</ul>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORT"
+>EXPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>None by default.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLE"
+>EXAMPLE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Consider the following scenario: Your program must process a batch of csv files, and you know that the separator could be a comma, a semicolon or a tab. You also know that one of the fields contains time values. This field will provide a fixed number of colons that could mislead the detection code. In this case, you should exclude the colon (and you can also exclude the other default candidate not considered, the pipe character):</p>
+
+<pre class="sh_perl">    my @char_list = get_separator(
+                                    path    =&#62; $csv_path,
+                                    exclude =&#62; [&#39;:&#39;, &#39;|&#39;],
+                                 );
+    
+    if (@char_list) {
+        my $separator;
+        if (@char_list == 1) {       
+            $separator = $char_list[0];
+        } else { 
+            # Some code here
+        }
+    }
+    
+    
+    # Using the &#34;I&#39;m Feeling Lucky&#34; interface:
+    
+    my $separator = get_separator(
+                                    path    =&#62; $csv_path,
+                                    lucky   =&#62; 1,
+                                    exclude =&#62; [&#39;:&#39;, &#39;|&#39;],
+                                  );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MOTIVATION"
+>MOTIVATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Despite the popularity of XML, the CSV file format is still widely used for data exchange between applications, because of its much lower overhead: It requires much less bandwidth and storage space than XML, and it also has a better performance under compression (see the References below).</p>
+
+<p>Unfortunately, there is no formal specification of the CSV format. The Microsoft Excel implementation is the most widely used and it has become a <i>de facto</i> standard, but the variations are almost endless.</p>
+
+<p>One of the biggest annoyances of this format is that in most cases you don&#39;t know a priori what is the field separator character used in a file. CSV stands for &#34;comma-separated values&#34;, but most of the spreadsheet applications let the user select the field delimiter from a list of several different characters when saving or exporting data to a CSV file. Furthermore, in a Windows system, when you save a spreadsheet in Excel as a CSV file, Excel will use as the field delimiter the default list separator of your system&#39;s locale, which happens to be a semicolon for several European languages. You can even customize this setting and use the list separator you like. For these and other reasons, automating the processing of CSV files is a risky task.</p>
+
+<p>This module can be used to determine the separator character of a delimited text file of any kind, but since the aforementioned ambiguity problems occur mainly in CSV files, I decided to use the Text::CSV:: namespace.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="REFERENCES"
+>REFERENCES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="http://www.creativyst.com/Doc/Articles/CSV/CSV01.htm" class="podlinkurl"
+>http://www.creativyst.com/Doc/Articles/CSV/CSV01.htm</a></p>
+
+<p><a href="http://www.xml.com/pub/a/2004/12/15/deviant.html" class="podlinkurl"
+>http://www.xml.com/pub/a/2004/12/15/deviant.html</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>There&#39;s another module in CPAN for this task, <a href="/perldoc?Text%3A%3ACSV%3A%3ADetectSeparator" class="podlinkpod"
+>Text::CSV::DetectSeparator</a>, which follows a different approach.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ACKNOWLEDGEMENTS"
+>ACKNOWLEDGEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Many thanks to Xavier Noria for wise suggestions. The author is also grateful to Thomas Zahreddin, Benjamin Erhart, Ferdinand Gassauer, and Mario Krauss for valuable comments and bug reports.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Enrique Nell, &#60;perl_nell@telefonica.net&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (C) 2006 by Enrique Nell.</p>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78172 Uploads, 24707 Distributions
+105971 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 01:30:46 2012 GMT (0.0892758369445801) @cpansearch1 -->
+ </body>
+</html>

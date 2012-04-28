@@ -1,0 +1,635 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Try::Tiny - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Try-Tiny",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Try-Tiny-0.11",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Try::Tiny",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DOY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Try::Tiny">permalink</a></div>
+  <a href="/~doy/">Jesse Luehrs</a> &gt;
+  <a href="/~doy/Try-Tiny-0.11/">Try-Tiny-0.11</a> &gt;
+  Try::Tiny
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/88766de7a058697d3d0335b8d384fd2a?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DO/DOY/Try-Tiny-0.11.tar.gz">Try-Tiny-0.11.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Try%3A%3ATiny;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DOY/Try-Tiny-0.11/lib/Try/Tiny.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 2</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 3</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Try-Tiny">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.11 &nbsp;
+<span class="noprint">
+  <a href="/src/DOY/Try-Tiny-0.11/lib/Try/Tiny.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#EXPORTS'>EXPORTS</a>
+  <li class='indexItem indexItem1'><a href='#BACKGROUND'>BACKGROUND</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Clobbering_$@'>Clobbering $@</a>
+    <li class='indexItem indexItem2'><a href='#Localizing_$@_silently_masks_errors'>Localizing $@ silently masks errors</a>
+    <li class='indexItem indexItem2'><a href='#$@_might_not_be_a_true_value'>$@ might not be a true value</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SHINY_SYNTAX'>SHINY SYNTAX</a>
+  <li class='indexItem indexItem1'><a href='#CAVEATS'>CAVEATS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#LIGHTNING_TALK'>LIGHTNING TALK</a>
+  <li class='indexItem indexItem1'><a href='#VERSION_CONTROL'>VERSION CONTROL</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Try::Tiny - minimal try/catch with proper localization of $@</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>You can use Try::Tiny&#39;s <code>try</code> and <code>catch</code> to expect and handle exceptional conditions,
+avoiding quirks in Perl and common mistakes:</p>
+
+<pre class="sh_perl">        # handle errors with a catch handler
+        try {
+                die &#34;foo&#34;;
+        } catch {
+                warn &#34;caught error: $_&#34;; # not $@
+        };</pre>
+
+<p>You can also use it like a stanalone <code>eval</code> to catch and ignore any error conditions. Obviously, this is an extreme measure not to be undertaken lightly:</p>
+
+<pre class="sh_perl">        # just silence errors
+        try {
+                die &#34;foo&#34;;
+        };</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module provides bare bones <code>try</code>/<code>catch</code>/<code>finally</code> statements that are designed to minimize common mistakes with eval blocks, and NOTHING else.</p>
+
+<p>This is unlike <a href="/perldoc?TryCatch" class="podlinkpod"
+>TryCatch</a> which provides a nice syntax and avoids adding another call stack layer, and supports calling <code>return</code> from the try block to return from the parent subroutine. These extra features come at a cost of a few dependencies, namely <a href="/perldoc?Devel%3A%3ADeclare" class="podlinkpod"
+>Devel::Declare</a> and <a href="/perldoc?Scope%3A%3AUpper" class="podlinkpod"
+>Scope::Upper</a> which are occasionally problematic, and the additional catch filtering uses <a href="/perldoc?Moose" class="podlinkpod"
+>Moose</a> type constraints which may not be desirable either.</p>
+
+<p>The main focus of this module is to provide simple and reliable error handling for those having a hard time installing <a href="/perldoc?TryCatch" class="podlinkpod"
+>TryCatch</a>, but who still want to write correct <code>eval</code> blocks without 5 lines of boilerplate each time.</p>
+
+<p>It&#39;s designed to work as correctly as possible in light of the various pathological edge cases (see <a href="/perldoc?BACKGROUND" class="podlinkpod"
+>BACKGROUND</a>) and to be compatible with any style of error values (simple strings, references, objects, overloaded objects, etc).</p>
+
+<p>If the try block dies, it returns the value of the last statement executed in the catch block, if there is one. Otherwise, it returns <code>undef</code> in scalar context or the empty list in list context. The following two examples both assign <code>&#34;bar&#34;</code> to <code>$x</code>.</p>
+
+<pre class="sh_perl">        my $x = try { die &#34;foo&#34; } catch { &#34;bar&#34; };
+
+        my $x = eval { die &#34;foo&#34; } || &#34;bar&#34;;</pre>
+
+<p>You can add finally blocks making the following true.</p>
+
+<pre class="sh_perl">        my $x;
+        try { die &#39;foo&#39; } finally { $x = &#39;bar&#39; };
+        try { die &#39;foo&#39; } catch { warn &#34;Got a die: $_&#34; } finally { $x = &#39;bar&#39; };</pre>
+
+<p>Finally blocks are always executed making them suitable for cleanup code which cannot be handled using local. You can add as many finally blocks to a given try block as you like.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORTS"
+>EXPORTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>All functions are exported by default using <a href="/perldoc?Exporter" class="podlinkpod"
+>Exporter</a>.</p>
+
+<p>If you need to rename the <code>try</code>, <code>catch</code> or <code>finally</code> keyword consider using <a href="/perldoc?Sub%3A%3AImport" class="podlinkpod"
+>Sub::Import</a> to get <a href="/perldoc?Sub%3A%3AExporter" class="podlinkpod"
+>Sub::Exporter</a>&#39;s flexibility.</p>
+
+<dl>
+<dt><a name='try'></a><a name="try_(&#38;;@)"
+>try (&#38;;@)</a></dt>
+
+<dd>
+<p>Takes one mandatory try subroutine, an optional catch subroutine &#38; finally subroutine.</p>
+
+<p>The mandatory subroutine is evaluated in the context of an <code>eval</code> block.</p>
+
+<p>If no error occurred the value from the first block is returned, preserving list/scalar context.</p>
+
+<p>If there was an error and the second subroutine was given it will be invoked with the error in <code>$_</code> (localized) and as that block&#39;s first and only argument.</p>
+
+<p><code>$@</code> does <b>not</b> contain the error. Inside the <code>catch</code> block it has the same value it had before the <code>try</code> block was executed.</p>
+
+<p>Note that the error may be false, but if that happens the <code>catch</code> block will still be invoked.</p>
+
+<p>Once all execution is finished then the finally block if given will execute.</p>
+
+<dt><a name='catch'></a><a name="catch_(&#38;;$)"
+>catch (&#38;;$)</a></dt>
+
+<dd>
+<p>Intended to be used in the second argument position of <code>try</code>.</p>
+
+<p>Returns a reference to the subroutine it was given but blessed as <code>Try::Tiny::Catch</code> which allows try to decode correctly what to do with this code reference.</p>
+
+<pre class="sh_perl">        catch { ... }</pre>
+
+<p>Inside the catch block the caught error is stored in <code>$_</code>, while previous value of <code>$@</code> is still available for use. This value may or may not be meaningful depending on what happened before the <code>try</code>, but it might be a good idea to preserve it in an error stack.</p>
+
+<p>For code that captures <code>$@</code> when throwing new errors (i.e. <a href="/perldoc?Class%3A%3AThrowable" class="podlinkpod"
+>Class::Throwable</a>), you&#39;ll need to do:</p>
+
+<pre class="sh_perl">        local $@ = $_;</pre>
+
+<dt><a name='finally'></a><a name="finally_(&#38;;$)"
+>finally (&#38;;$)</a></dt>
+
+<dd>
+<pre class="sh_perl">  try     { ... }
+  catch   { ... }
+  finally { ... };</pre>
+
+<p>Or</p>
+
+<pre class="sh_perl">  try     { ... }
+  finally { ... };</pre>
+
+<p>Or even</p>
+
+<pre class="sh_perl">  try     { ... }
+  finally { ... }
+  catch   { ... };</pre>
+
+<p>Intended to be the second or third element of <code>try</code>. Finally blocks are always executed in the event of a successful <code>try</code> or if <code>catch</code> is run. This allows you to locate cleanup code which cannot be done via <code>local()</code> e.g. closing a file handle.</p>
+
+<p>When invoked, the finally block is passed the error that was caught. If no error was caught, it is passed nothing. (Note that the finally block does not localize <code>$_</code> with the error, since unlike in a catch block, there is no way to know if <code>$_ == undef</code> implies that there were no errors.) In other words, the following code does just what you would expect:</p>
+
+<pre class="sh_perl">  try {
+    die_sometimes();
+  } catch {
+    # ...code run in case of error
+  } finally {
+    if (@_) {
+      print &#34;The try block died with: @_\n&#34;;
+    } else {
+      print &#34;The try block ran without error.\n&#34;;
+    }
+  };</pre>
+
+<p><b>You must always do your own error handling in the finally block</b>. <code>Try::Tiny</code> will not do anything about handling possible errors coming from code located in these blocks.</p>
+
+<p>In the same way <code>catch()</code> blesses the code reference this subroutine does the same except it bless them as <code>Try::Tiny::Finally</code>.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BACKGROUND"
+>BACKGROUND <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>There are a number of issues with <code>eval</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Clobbering_$@"
+>Clobbering $@</a></h2>
+
+<p>When you run an eval block and it succeeds, <code>$@</code> will be cleared, potentially clobbering an error that is currently being caught.</p>
+
+<p>This causes action at a distance, clearing previous errors your caller may have not yet handled.</p>
+
+<p><code>$@</code> must be properly localized before invoking <code>eval</code> in order to avoid this issue.</p>
+
+<p>More specifically, <code>$@</code> is clobbered at the beginning of the <code>eval</code>, which also makes it impossible to capture the previous error before you die (for instance when making exception objects with error stacks).</p>
+
+<p>For this reason <code>try</code> will actually set <code>$@</code> to its previous value (before the localization) in the beginning of the <code>eval</code> block.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Localizing_$@_silently_masks_errors"
+>Localizing $@ silently masks errors</a></h2>
+
+<p>Inside an eval block <code>die</code> behaves sort of like:</p>
+
+<pre class="sh_perl">        sub die {
+                $@ = $_[0];
+                return_undef_from_eval();
+        }</pre>
+
+<p>This means that if you were polite and localized <code>$@</code> you can&#39;t die in that scope, or your error will be discarded (printing &#34;Something&#39;s wrong&#34; instead).</p>
+
+<p>The workaround is very ugly:</p>
+
+<pre class="sh_perl">        my $error = do {
+                local $@;
+                eval { ... };
+                $@;
+        };
+
+        ...
+        die $error;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$@_might_not_be_a_true_value"
+>$@ might not be a true value</a></h2>
+
+<p>This code is wrong:</p>
+
+<pre class="sh_perl">        if ( $@ ) {
+                ...
+        }</pre>
+
+<p>because due to the previous caveats it may have been unset.</p>
+
+<p><code>$@</code> could also be an overloaded error object that evaluates to false, but that&#39;s asking for trouble anyway.</p>
+
+<p>The classic failure mode is:</p>
+
+<pre class="sh_perl">        sub Object::DESTROY {
+                eval { ... }
+        }
+
+        eval {
+                my $obj = Object-&#62;new;
+
+                die &#34;foo&#34;;
+        };
+
+        if ( $@ ) {
+
+        }</pre>
+
+<p>In this case since <code>Object::DESTROY</code> is not localizing <code>$@</code> but still uses <code>eval</code>, it will set <code>$@</code> to <code>&#34;&#34;</code>.</p>
+
+<p>The destructor is called when the stack is unwound, after <code>die</code> sets <code>$@</code> to <code>&#34;foo at Foo.pm line 42\n&#34;</code>, so by the time <code>if ( $@ )</code> is evaluated it has been cleared by <code>eval</code> in the destructor.</p>
+
+<p>The workaround for this is even uglier than the previous ones. Even though we can&#39;t save the value of <code>$@</code> from code that doesn&#39;t localize, we can at least be sure the eval was aborted due to an error:</p>
+
+<pre class="sh_perl">        my $failed = not eval {
+                ...
+
+                return 1;
+        };</pre>
+
+<p>This is because an <code>eval</code> that caught a <code>die</code> will always return a false value.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SHINY_SYNTAX"
+>SHINY SYNTAX <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Using Perl 5.10 you can use <a href="/perldoc?perlsyn#Switch_statements" class="podlinkpod"
+>&#34;Switch statements&#34; in perlsyn</a>.</p>
+
+<p>The <code>catch</code> block is invoked in a topicalizer context (like a <code>given</code> block), but note that you can&#39;t return a useful value from <code>catch</code> using the <code>when</code> blocks without an explicit <code>return</code>.</p>
+
+<p>This is somewhat similar to Perl 6&#39;s <code>CATCH</code> blocks. You can use it to concisely match errors:</p>
+
+<pre class="sh_perl">        try {
+                require Foo;
+        } catch {
+                when (/^Can&#39;t locate .*?\.pm in \@INC/) { } # ignore
+                default { die $_ }
+        };</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEATS"
+>CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li><code>@_</code> is not available within the <code>try</code> block, so you need to copy your arglist. In case you want to work with argument values directly via <code>@_</code> aliasing (i.e. allow <code>$_[1] = &#34;foo&#34;</code>), you need to pass <code>@_</code> by reference:
+<pre class="sh_perl">        sub foo {
+                my ( $self, @args ) = @_;
+                try { $self-&#62;bar(@args) }
+        }</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">        sub bar_in_place {
+                my $self = shift;
+                my $args = \@_;
+                try { $_ = $self-&#62;bar($_) for @$args }
+        }</pre>
+</li>
+
+<li><code>return</code> returns from the <code>try</code> block, not from the parent sub (note that this is also how <code>eval</code> works, but not how <a href="/perldoc?TryCatch" class="podlinkpod"
+>TryCatch</a> works):
+<pre class="sh_perl">  sub parent_sub {
+      try {
+          die;
+      }
+      catch {
+          return;
+      };
+
+      say &#34;this text WILL be displayed, even though an exception is thrown&#34;;
+  }</pre>
+
+<p>Instead, you should capture the return value:</p>
+
+<pre class="sh_perl">  sub parent_sub {
+      my $success = try {
+          die;
+          1;
+      }
+      return unless $success;
+
+      say &#34;This text WILL NEVER appear!&#34;;
+  }</pre>
+
+<p>Note that if you have a catch block, it must return undef for this to work, since if a catch block exists, its return value is returned in place of undef when an exception is thrown.</p>
+</li>
+
+<li><code>try</code> introduces another caller stack frame. <a href="/perldoc?Sub%3A%3AUplevel" class="podlinkpod"
+>Sub::Uplevel</a> is not used. <a href="/perldoc?Carp" class="podlinkpod"
+>Carp</a> will not report this when using full stack traces, though, because <code>%Carp::Internal</code> is used. This lack of magic is considered a feature.</li>
+
+<li>The value of <code>$_</code> in the <code>catch</code> block is not guaranteed to be the value of the exception thrown (<code>$@</code>) in the <code>try</code> block. There is no safe way to ensure this, since <code>eval</code> may be used unhygenically in destructors. The only guarantee is that the <code>catch</code> will be called if an exception is thrown.</li>
+
+<li>The return value of the <code>catch</code> block is not ignored, so if testing the result of the expression for truth on success, be sure to return a false value from the <code>catch</code> block:
+<pre class="sh_perl">        my $obj = try {
+                MightFail-&#62;new;
+        } catch {
+                ...
+
+                return; # avoid returning a true value;
+        };
+
+        return unless $obj;</pre>
+</li>
+
+<li><code>$SIG{__DIE__}</code> is still in effect.
+<p>Though it can be argued that <code>$SIG{__DIE__}</code> should be disabled inside of <code>eval</code> blocks, since it isn&#39;t people have grown to rely on it. Therefore in the interests of compatibility, <code>try</code> does not disable <code>$SIG{__DIE__}</code> for the scope of the error throwing code.</p>
+</li>
+
+<li>Lexical <code>$_</code> may override the one set by <code>catch</code>.
+<p>For example Perl 5.10&#39;s <code>given</code> form uses a lexical <code>$_</code>, creating some confusing behavior:</p>
+
+<pre class="sh_perl">        given ($foo) {
+                when (...) {
+                        try {
+                                ...
+                        } catch {
+                                warn $_; # will print $foo, not the error
+                                warn $_[0]; # instead, get the error like this
+                        }
+                }
+        }</pre>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name="TryCatch"
+><a href="/perldoc?TryCatch" class="podlinkpod"
+>TryCatch</a></a></dt>
+
+<dd>
+<p>Much more feature complete, more convenient semantics, but at the cost of implementation complexity.</p>
+
+<dt><a name="autodie"
+><a href="/perldoc?autodie" class="podlinkpod"
+>autodie</a></a></dt>
+
+<dd>
+<p>Automatic error throwing for builtin functions and more. Also designed to work well with <code>given</code>/<code>when</code>.</p>
+
+<dt><a name="Throwable"
+><a href="/perldoc?Throwable" class="podlinkpod"
+>Throwable</a></a></dt>
+
+<dd>
+<p>A lightweight role for rolling your own exception classes.</p>
+
+<dt><a name="Error"
+><a href="/perldoc?Error" class="podlinkpod"
+>Error</a></a></dt>
+
+<dd>
+<p>Exception object implementation with a <code>try</code> statement. Does not localize <code>$@</code>.</p>
+
+<dt><a name='Exception'></a><a name="Exception::Class::TryCatch"
+><a href="/perldoc?Exception%3A%3AClass%3A%3ATryCatch" class="podlinkpod"
+>Exception::Class::TryCatch</a></a></dt>
+
+<dd>
+<p>Provides a <code>catch</code> statement, but properly calling <code>eval</code> is your responsibility.</p>
+
+<p>The <code>try</code> keyword pushes <code>$@</code> onto an error stack, avoiding some of the issues with <code>$@</code>, but you still need to localize to prevent clobbering.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LIGHTNING_TALK"
+>LIGHTNING TALK <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>I gave a lightning talk about this module, you can see the slides (Firefox only):</p>
+
+<p><a href="http://nothingmuch.woobling.org/talks/takahashi.xul?data=yapc_asia_2009/try_tiny.txt" class="podlinkurl"
+>http://nothingmuch.woobling.org/talks/takahashi.xul?data=yapc_asia_2009/try_tiny.txt</a></p>
+
+<p>Or read the source:</p>
+
+<p><a href="http://nothingmuch.woobling.org/talks/yapc_asia_2009/try_tiny.yml" class="podlinkurl"
+>http://nothingmuch.woobling.org/talks/yapc_asia_2009/try_tiny.yml</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION_CONTROL"
+>VERSION CONTROL <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="http://github.com/nothingmuch/try-tiny/" class="podlinkurl"
+>http://github.com/nothingmuch/try-tiny/</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Yuval Kogman &#60;nothingmuch@woobling.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">        Copyright (c) 2009 Yuval Kogman. All rights reserved.
+        This program is free software; you can redistribute
+        it and/or modify it under the terms of the MIT license.</pre>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78183 Uploads, 24710 Distributions
+106004 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 09:07:51 2012 GMT (0.0947959423065186) @cpansearch1 -->
+ </body>
+</html>

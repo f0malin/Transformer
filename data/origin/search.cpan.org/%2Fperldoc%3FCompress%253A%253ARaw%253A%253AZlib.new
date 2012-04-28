@@ -1,0 +1,1177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Compress::Raw::Zlib - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Compress-Raw-Zlib",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Compress-Raw-Zlib-2.051",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Compress::Raw::Zlib",3]);
+    _gaq.push(["_setCustomVar",1,"Author","PMQS",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Compress::Raw::Zlib">permalink</a></div>
+  <a href="/~pmqs/">Paul Marquess</a> &gt;
+  <a href="/~pmqs/Compress-Raw-Zlib-2.051/">Compress-Raw-Zlib-2.051</a> &gt;
+  Compress::Raw::Zlib
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/1bf245ac173d6991ade027315ff58683?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/P/PM/PMQS/Compress-Raw-Zlib-2.051.tar.gz">Compress-Raw-Zlib-2.051.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Compress%3A%3ARaw%3A%3AZlib;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~PMQS/Compress-Raw-Zlib-2.051/lib/Compress/Raw/Zlib.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Compress-Raw-Zlib">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.051 &nbsp;
+<span class="noprint">
+  <a href="/src/PMQS/Compress-Raw-Zlib-2.051/lib/Compress/Raw/Zlib.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#Compress::Raw::Zlib::Deflate'>Compress::Raw::Zlib::Deflate</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#($d,_$status)_=_new_Compress::Raw::Zlib::Deflate(_[OPT]_)'>($d, $status) = new Compress::Raw::Zlib::Deflate( [OPT] ) </a>
+    <li class='indexItem indexItem2'><a href='#$status_=_$d-&#62;deflate($input,_$output)'>$status = $d-&#62;deflate($input, $output)</a>
+    <li class='indexItem indexItem2'><a href='#$status_=_$d-&#62;flush($output_[,_$flush_type])'>$status = $d-&#62;flush($output [, $flush_type]) </a>
+    <li class='indexItem indexItem2'><a href='#$status_=_$d-&#62;deflateReset()'>$status = $d-&#62;deflateReset() </a>
+    <li class='indexItem indexItem2'><a href='#$status_=_$d-&#62;deflateParams([OPT])'>$status = $d-&#62;deflateParams([OPT])</a>
+    <li class='indexItem indexItem2'><a href='#$status_=_$d-&#62;deflateTune($good_length,_$max_lazy,_$nice_length,_$max_chain)'>$status = $d-&#62;deflateTune($good_length, $max_lazy, $nice_length, $max_chain)</a>
+    <li class='indexItem indexItem2'><a href='#$d-&#62;dict_adler()'>$d-&#62;dict_adler()</a>
+    <li class='indexItem indexItem2'><a href='#$d-&#62;crc32()'>$d-&#62;crc32()</a>
+    <li class='indexItem indexItem2'><a href='#$d-&#62;adler32()'>$d-&#62;adler32()</a>
+    <li class='indexItem indexItem2'><a href='#$d-&#62;msg()'>$d-&#62;msg()</a>
+    <li class='indexItem indexItem2'><a href='#$d-&#62;total_in()'>$d-&#62;total_in()</a>
+    <li class='indexItem indexItem2'><a href='#$d-&#62;total_out()'>$d-&#62;total_out()</a>
+    <li class='indexItem indexItem2'><a href='#$d-&#62;get_Strategy()'>$d-&#62;get_Strategy()</a>
+    <li class='indexItem indexItem2'><a href='#$d-&#62;get_Level()'>$d-&#62;get_Level()</a>
+    <li class='indexItem indexItem2'><a href='#$d-&#62;get_BufSize()'>$d-&#62;get_BufSize()</a>
+    <li class='indexItem indexItem2'><a href='#Example'>Example</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Compress::Raw::Zlib::Inflate'>Compress::Raw::Zlib::Inflate</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#($i,_$status)_=_new_Compress::Raw::Zlib::Inflate(_[OPT]_)'> ($i, $status) = new Compress::Raw::Zlib::Inflate( [OPT] ) </a>
+    <li class='indexItem indexItem2'><a href='#$status_=_$i-&#62;inflate($input,_$output_[,$eof])'> $status = $i-&#62;inflate($input, $output [,$eof]) </a>
+    <li class='indexItem indexItem2'><a href='#$status_=_$i-&#62;inflateSync($input)'>$status = $i-&#62;inflateSync($input)</a>
+    <li class='indexItem indexItem2'><a href='#$status_=_$i-&#62;inflateReset()'>$status = $i-&#62;inflateReset() </a>
+    <li class='indexItem indexItem2'><a href='#$i-&#62;dict_adler()'>$i-&#62;dict_adler()</a>
+    <li class='indexItem indexItem2'><a href='#$i-&#62;crc32()'>$i-&#62;crc32()</a>
+    <li class='indexItem indexItem2'><a href='#$i-&#62;adler32()'>$i-&#62;adler32()</a>
+    <li class='indexItem indexItem2'><a href='#$i-&#62;msg()'>$i-&#62;msg()</a>
+    <li class='indexItem indexItem2'><a href='#$i-&#62;total_in()'>$i-&#62;total_in()</a>
+    <li class='indexItem indexItem2'><a href='#$i-&#62;total_out()'>$i-&#62;total_out()</a>
+    <li class='indexItem indexItem2'><a href='#$d-&#62;get_BufSize()'>$d-&#62;get_BufSize()</a>
+    <li class='indexItem indexItem2'><a href='#Examples'>Examples</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CHECKSUM_FUNCTIONS'>CHECKSUM FUNCTIONS</a>
+  <li class='indexItem indexItem1'><a href='#Misc'>Misc</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#my_$version_=_Compress::Raw::Zlib::zlib_version();'>my $version = Compress::Raw::Zlib::zlib_version();</a>
+    <li class='indexItem indexItem2'><a href='#my_$flags_=_Compress::Raw::Zlib::zlibCompileFlags();'>my $flags = Compress::Raw::Zlib::zlibCompileFlags();</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#The_LimitOutput_option.'>The LimitOutput option.</a>
+  <li class='indexItem indexItem1'><a href='#ACCESSING_ZIP_FILES'>ACCESSING ZIP FILES</a>
+  <li class='indexItem indexItem1'><a href='#FAQ'>FAQ</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Compatibility_with_Unix_compress/uncompress.'>Compatibility with Unix compress/uncompress.</a>
+    <li class='indexItem indexItem2'><a href='#Accessing_.tar.Z_files'>Accessing .tar.Z files</a>
+    <li class='indexItem indexItem2'><a href='#Zlib_Library_Version_Support'>Zlib Library Version Support</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CONSTANTS'>CONSTANTS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#MODIFICATION_HISTORY'>MODIFICATION HISTORY</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Compress::Raw::Zlib - Low-Level Interface to zlib compression library</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Compress::Raw::Zlib ;
+
+    ($d, $status) = new Compress::Raw::Zlib::Deflate( [OPT] ) ;
+    $status = $d-&#62;deflate($input, $output) ;
+    $status = $d-&#62;flush($output [, $flush_type]) ;
+    $d-&#62;deflateReset() ;
+    $d-&#62;deflateParams(OPTS) ;
+    $d-&#62;deflateTune(OPTS) ;
+    $d-&#62;dict_adler() ;
+    $d-&#62;crc32() ;
+    $d-&#62;adler32() ;
+    $d-&#62;total_in() ;
+    $d-&#62;total_out() ;
+    $d-&#62;msg() ;
+    $d-&#62;get_Strategy();
+    $d-&#62;get_Level();
+    $d-&#62;get_BufSize();
+
+    ($i, $status) = new Compress::Raw::Zlib::Inflate( [OPT] ) ;
+    $status = $i-&#62;inflate($input, $output [, $eof]) ;
+    $status = $i-&#62;inflateSync($input) ;
+    $i-&#62;inflateReset() ;
+    $i-&#62;dict_adler() ;
+    $d-&#62;crc32() ;
+    $d-&#62;adler32() ;
+    $i-&#62;total_in() ;
+    $i-&#62;total_out() ;
+    $i-&#62;msg() ;
+    $d-&#62;get_BufSize();
+
+    $crc = adler32($buffer [,$crc]) ;
+    $crc = crc32($buffer [,$crc]) ;
+
+    $crc = adler32_combine($crc1, $crc2, $len2)l
+    $crc = crc32_combine($adler1, $adler2, $len2)
+
+    my $version = Compress::Raw::Zlib::zlib_version();
+    my $flags = Compress::Raw::Zlib::zlibCompileFlags();</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The <i>Compress::Raw::Zlib</i> module provides a Perl interface to the <i>zlib</i> compression library (see <a href="#AUTHOR" class="podlinkpod"
+>&#34;AUTHOR&#34;</a> for details about where to get <i>zlib</i>).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Compress::Raw::Zlib::Deflate"
+>Compress::Raw::Zlib::Deflate <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This section defines an interface that allows in-memory compression using the <i>deflate</i> interface provided by zlib.</p>
+
+<p>Here is a definition of the interface available:</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="($d,_$status)_=_new_Compress::Raw::Zlib::Deflate(_[OPT]_)"
+><b>($d, $status) = new Compress::Raw::Zlib::Deflate( [OPT] ) </b></a></h2>
+
+<p>Initialises a deflation object.</p>
+
+<p>If you are familiar with the <i>zlib</i> library, it combines the features of the <i>zlib</i> functions <code>deflateInit</code>, <code>deflateInit2</code> and <code>deflateSetDictionary</code>.</p>
+
+<p>If successful, it will return the initialised deflation object, <code>$d</code> and a <code>$status</code> of <code>Z_OK</code> in a list context. In scalar context it returns the deflation object, <code>$d</code>, only.</p>
+
+<p>If not successful, the returned deflation object, <code>$d</code>, will be <i>undef</i> and <code>$status</code> will hold the a <i>zlib</i> error code.</p>
+
+<p>The function optionally takes a number of named options specified as <code>Name =&#62; value</code> pairs. This allows individual options to be tailored without having to specify them all in the parameter list.</p>
+
+<p>For backward compatibility, it is also possible to pass the parameters as a reference to a hash containing the name=&#62;value pairs.</p>
+
+<p>Below is a list of the valid options:</p>
+
+<dl>
+<dt><a name='Level'></a><a name="-Level"
+><b>-Level</b></a></dt>
+
+<dd>
+<p>Defines the compression level. Valid values are 0 through 9, <code>Z_NO_COMPRESSION</code>, <code>Z_BEST_SPEED</code>, <code>Z_BEST_COMPRESSION</code>, and <code>Z_DEFAULT_COMPRESSION</code>.</p>
+
+<p>The default is <code>Z_DEFAULT_COMPRESSION</code>.</p>
+
+<dt><a name='Method'></a><a name="-Method"
+><b>-Method</b></a></dt>
+
+<dd>
+<p>Defines the compression method. The only valid value at present (and the default) is <code>Z_DEFLATED</code>.</p>
+
+<dt><a name='WindowBits'></a><a name="-WindowBits"
+><b>-WindowBits</b></a></dt>
+
+<dd>
+<p>To compress an RFC 1950 data stream, set <code>WindowBits</code> to a positive number between 8 and 15.</p>
+
+<p>To compress an RFC 1951 data stream, set <code>WindowBits</code> to <code>-MAX_WBITS</code>.</p>
+
+<p>To compress an RFC 1952 data stream (i.e. gzip), set <code>WindowBits</code> to <code>WANT_GZIP</code>.</p>
+
+<p>For a definition of the meaning and valid values for <code>WindowBits</code> refer to the <i>zlib</i> documentation for <i>deflateInit2</i>.</p>
+
+<p>Defaults to <code>MAX_WBITS</code>.</p>
+
+<dt><a name='MemLevel'></a><a name="-MemLevel"
+><b>-MemLevel</b></a></dt>
+
+<dd>
+<p>For a definition of the meaning and valid values for <code>MemLevel</code> refer to the <i>zlib</i> documentation for <i>deflateInit2</i>.</p>
+
+<p>Defaults to MAX_MEM_LEVEL.</p>
+
+<dt><a name='Strategy'></a><a name="-Strategy"
+><b>-Strategy</b></a></dt>
+
+<dd>
+<p>Defines the strategy used to tune the compression. The valid values are <code>Z_DEFAULT_STRATEGY</code>, <code>Z_FILTERED</code>, <code>Z_RLE</code>, <code>Z_FIXED</code> and <code>Z_HUFFMAN_ONLY</code>.</p>
+
+<p>The default is <code>Z_DEFAULT_STRATEGY</code>.</p>
+
+<dt><a name='Dictionary'></a><a name="-Dictionary"
+><b>-Dictionary</b></a></dt>
+
+<dd>
+<p>When a dictionary is specified <i>Compress::Raw::Zlib</i> will automatically call <code>deflateSetDictionary</code> directly after calling <code>deflateInit</code>. The Adler32 value for the dictionary can be obtained by calling the method <code>$d-&#62;dict_adler()</code>.</p>
+
+<p>The default is no dictionary.</p>
+
+<dt><a name='Bufsize'></a><a name="-Bufsize"
+><b>-Bufsize</b></a></dt>
+
+<dd>
+<p>Sets the initial size for the output buffer used by the <code>$d-&#62;deflate</code> and <code>$d-&#62;flush</code> methods. If the buffer has to be reallocated to increase the size, it will grow in increments of <code>Bufsize</code>.</p>
+
+<p>The default buffer size is 4096.</p>
+
+<dt><a name='AppendOutput'></a><a name="-AppendOutput"
+><b>-AppendOutput</b></a></dt>
+
+<dd>
+<p>This option controls how data is written to the output buffer by the <code>$d-&#62;deflate</code> and <code>$d-&#62;flush</code> methods.</p>
+
+<p>If the <code>AppendOutput</code> option is set to false, the output buffers in the <code>$d-&#62;deflate</code> and <code>$d-&#62;flush</code> methods will be truncated before uncompressed data is written to them.</p>
+
+<p>If the option is set to true, uncompressed data will be appended to the output buffer in the <code>$d-&#62;deflate</code> and <code>$d-&#62;flush</code> methods.</p>
+
+<p>This option defaults to false.</p>
+
+<dt><a name='CRC32'></a><a name="-CRC32"
+><b>-CRC32</b></a></dt>
+
+<dd>
+<p>If set to true, a crc32 checksum of the uncompressed data will be calculated. Use the <code>$d-&#62;crc32</code> method to retrieve this value.</p>
+
+<p>This option defaults to false.</p>
+
+<dt><a name='ADLER32'></a><a name="-ADLER32"
+><b>-ADLER32</b></a></dt>
+
+<dd>
+<p>If set to true, an adler32 checksum of the uncompressed data will be calculated. Use the <code>$d-&#62;adler32</code> method to retrieve this value.</p>
+
+<p>This option defaults to false.</p>
+</dd>
+</dl>
+
+<p>Here is an example of using the <code>Compress::Raw::Zlib::Deflate</code> optional parameter list to override the default buffer size and compression level. All other options will take their default values.</p>
+
+<pre class="sh_perl">    my $d = new Compress::Raw::Zlib::Deflate ( -Bufsize =&#62; 300, 
+                                               -Level   =&#62; Z_BEST_SPEED ) ;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$status_=_$d-&#62;deflate($input,_$output)"
+><b>$status = $d-&#62;deflate($input, $output)</b></a></h2>
+
+<p>Deflates the contents of <code>$input</code> and writes the compressed data to <code>$output</code>.</p>
+
+<p>The <code>$input</code> and <code>$output</code> parameters can be either scalars or scalar references.</p>
+
+<p>When finished, <code>$input</code> will be completely processed (assuming there were no errors). If the deflation was successful it writes the deflated data to <code>$output</code> and returns a status value of <code>Z_OK</code>.</p>
+
+<p>On error, it returns a <i>zlib</i> error code.</p>
+
+<p>If the <code>AppendOutput</code> option is set to true in the constructor for the <code>$d</code> object, the compressed data will be appended to <code>$output</code>. If it is false, <code>$output</code> will be truncated before any compressed data is written to it.</p>
+
+<p><b>Note</b>: This method will not necessarily write compressed data to <code>$output</code> every time it is called. So do not assume that there has been an error if the contents of <code>$output</code> is empty on returning from this method. As long as the return code from the method is <code>Z_OK</code>, the deflate has succeeded.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$status_=_$d-&#62;flush($output_[,_$flush_type])"
+><b>$status = $d-&#62;flush($output [, $flush_type]) </b></a></h2>
+
+<p>Typically used to finish the deflation. Any pending output will be written to <code>$output</code>.</p>
+
+<p>Returns <code>Z_OK</code> if successful.</p>
+
+<p>Note that flushing can seriously degrade the compression ratio, so it should only be used to terminate a decompression (using <code>Z_FINISH</code>) or when you want to create a <i>full flush point</i> (using <code>Z_FULL_FLUSH</code>).</p>
+
+<p>By default the <code>flush_type</code> used is <code>Z_FINISH</code>. Other valid values for <code>flush_type</code> are <code>Z_NO_FLUSH</code>, <code>Z_PARTIAL_FLUSH</code>, <code>Z_SYNC_FLUSH</code> and <code>Z_FULL_FLUSH</code>. It is strongly recommended that you only set the <code>flush_type</code> parameter if you fully understand the implications of what it does. See the <code>zlib</code> documentation for details.</p>
+
+<p>If the <code>AppendOutput</code> option is set to true in the constructor for the <code>$d</code> object, the compressed data will be appended to <code>$output</code>. If it is false, <code>$output</code> will be truncated before any compressed data is written to it.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$status_=_$d-&#62;deflateReset()"
+><b>$status = $d-&#62;deflateReset() </b></a></h2>
+
+<p>This method will reset the deflation object <code>$d</code>. It can be used when you are compressing multiple data streams and want to use the same object to compress each of them. It should only be used once the previous data stream has been flushed successfully, i.e. a call to <code>$d-&#62;flush(Z_FINISH)</code> has returned <code>Z_OK</code>.</p>
+
+<p>Returns <code>Z_OK</code> if successful.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$status_=_$d-&#62;deflateParams([OPT])"
+><b>$status = $d-&#62;deflateParams([OPT])</b></a></h2>
+
+<p>Change settings for the deflate object <code>$d</code>.</p>
+
+<p>The list of the valid options is shown below. Options not specified will remain unchanged.</p>
+
+<dl>
+<dt><a name='Level'></a><a name="-Level"
+><b>-Level</b></a></dt>
+
+<dd>
+<p>Defines the compression level. Valid values are 0 through 9, <code>Z_NO_COMPRESSION</code>, <code>Z_BEST_SPEED</code>, <code>Z_BEST_COMPRESSION</code>, and <code>Z_DEFAULT_COMPRESSION</code>.</p>
+
+<dt><a name='Strategy'></a><a name="-Strategy"
+><b>-Strategy</b></a></dt>
+
+<dd>
+<p>Defines the strategy used to tune the compression. The valid values are <code>Z_DEFAULT_STRATEGY</code>, <code>Z_FILTERED</code> and <code>Z_HUFFMAN_ONLY</code>.</p>
+
+<dt><a name='BufSize'></a><a name="-BufSize"
+><b>-BufSize</b></a></dt>
+
+<dd>
+<p>Sets the initial size for the output buffer used by the <code>$d-&#62;deflate</code> and <code>$d-&#62;flush</code> methods. If the buffer has to be reallocated to increase the size, it will grow in increments of <code>Bufsize</code>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$status_=_$d-&#62;deflateTune($good_length,_$max_lazy,_$nice_length,_$max_chain)"
+><b>$status = $d-&#62;deflateTune($good_length, $max_lazy, $nice_length, $max_chain)</b></a></h2>
+
+<p>Tune the internal settings for the deflate object <code>$d</code>. This option is only available if you are running zlib 1.2.2.3 or better.</p>
+
+<p>Refer to the documentation in zlib.h for instructions on how to fly <code>deflateTune</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$d-&#62;dict_adler()"
+><b>$d-&#62;dict_adler()</b></a></h2>
+
+<p>Returns the adler32 value for the dictionary.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$d-&#62;crc32()"
+><b>$d-&#62;crc32()</b></a></h2>
+
+<p>Returns the crc32 value for the uncompressed data to date.</p>
+
+<p>If the <code>CRC32</code> option is not enabled in the constructor for this object, this method will always return 0;</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$d-&#62;adler32()"
+><b>$d-&#62;adler32()</b></a></h2>
+
+<p>Returns the adler32 value for the uncompressed data to date.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$d-&#62;msg()"
+><b>$d-&#62;msg()</b></a></h2>
+
+<p>Returns the last error message generated by zlib.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$d-&#62;total_in()"
+><b>$d-&#62;total_in()</b></a></h2>
+
+<p>Returns the total number of bytes uncompressed bytes input to deflate.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$d-&#62;total_out()"
+><b>$d-&#62;total_out()</b></a></h2>
+
+<p>Returns the total number of compressed bytes output from deflate.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$d-&#62;get_Strategy()"
+><b>$d-&#62;get_Strategy()</b></a></h2>
+
+<p>Returns the deflation strategy currently used. Valid values are <code>Z_DEFAULT_STRATEGY</code>, <code>Z_FILTERED</code> and <code>Z_HUFFMAN_ONLY</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$d-&#62;get_Level()"
+><b>$d-&#62;get_Level()</b></a></h2>
+
+<p>Returns the compression level being used.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$d-&#62;get_BufSize()"
+><b>$d-&#62;get_BufSize()</b></a></h2>
+
+<p>Returns the buffer size used to carry out the compression.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Example"
+>Example</a></h2>
+
+<p>Here is a trivial example of using <code>deflate</code>. It simply reads standard input, deflates it and writes it to standard output.</p>
+
+<pre class="sh_perl">    use strict ;
+    use warnings ;
+
+    use Compress::Raw::Zlib ;
+
+    binmode STDIN;
+    binmode STDOUT;
+    my $x = new Compress::Raw::Zlib::Deflate
+       or die &#34;Cannot create a deflation stream\n&#34; ;
+
+    my ($output, $status) ;
+    while (&#60;&#62;)
+    {
+        $status = $x-&#62;deflate($_, $output) ;
+    
+        $status == Z_OK
+            or die &#34;deflation failed\n&#34; ;
+    
+        print $output ;
+    }
+    
+    $status = $x-&#62;flush($output) ;
+    
+    $status == Z_OK
+        or die &#34;deflation failed\n&#34; ;
+    
+    print $output ;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Compress::Raw::Zlib::Inflate"
+>Compress::Raw::Zlib::Inflate <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This section defines an interface that allows in-memory uncompression using the <i>inflate</i> interface provided by zlib.</p>
+
+<p>Here is a definition of the interface:</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="($i,_$status)_=_new_Compress::Raw::Zlib::Inflate(_[OPT]_)"
+><b> ($i, $status) = new Compress::Raw::Zlib::Inflate( [OPT] ) </b></a></h2>
+
+<p>Initialises an inflation object.</p>
+
+<p>In a list context it returns the inflation object, <code>$i</code>, and the <i>zlib</i> status code (<code>$status</code>). In a scalar context it returns the inflation object only.</p>
+
+<p>If successful, <code>$i</code> will hold the inflation object and <code>$status</code> will be <code>Z_OK</code>.</p>
+
+<p>If not successful, <code>$i</code> will be <i>undef</i> and <code>$status</code> will hold the <i>zlib</i> error code.</p>
+
+<p>The function optionally takes a number of named options specified as <code>-Name =&#62; value</code> pairs. This allows individual options to be tailored without having to specify them all in the parameter list.</p>
+
+<p>For backward compatibility, it is also possible to pass the parameters as a reference to a hash containing the <code>name=&#62;value</code> pairs.</p>
+
+<p>Here is a list of the valid options:</p>
+
+<dl>
+<dt><a name='WindowBits'></a><a name="-WindowBits"
+><b>-WindowBits</b></a></dt>
+
+<dd>
+<p>To uncompress an RFC 1950 data stream, set <code>WindowBits</code> to a positive number between 8 and 15.</p>
+
+<p>To uncompress an RFC 1951 data stream, set <code>WindowBits</code> to <code>-MAX_WBITS</code>.</p>
+
+<p>To uncompress an RFC 1952 data stream (i.e. gzip), set <code>WindowBits</code> to <code>WANT_GZIP</code>.</p>
+
+<p>To auto-detect and uncompress an RFC 1950 or RFC 1952 data stream (i.e. gzip), set <code>WindowBits</code> to <code>WANT_GZIP_OR_ZLIB</code>.</p>
+
+<p>For a full definition of the meaning and valid values for <code>WindowBits</code> refer to the <i>zlib</i> documentation for <i>inflateInit2</i>.</p>
+
+<p>Defaults to <code>MAX_WBITS</code>.</p>
+
+<dt><a name='Bufsize'></a><a name="-Bufsize"
+><b>-Bufsize</b></a></dt>
+
+<dd>
+<p>Sets the initial size for the output buffer used by the <code>$i-&#62;inflate</code> method. If the output buffer in this method has to be reallocated to increase the size, it will grow in increments of <code>Bufsize</code>.</p>
+
+<p>Default is 4096.</p>
+
+<dt><a name='Dictionary'></a><a name="-Dictionary"
+><b>-Dictionary</b></a></dt>
+
+<dd>
+<p>The default is no dictionary.</p>
+
+<dt><a name='AppendOutput'></a><a name="-AppendOutput"
+><b>-AppendOutput</b></a></dt>
+
+<dd>
+<p>This option controls how data is written to the output buffer by the <code>$i-&#62;inflate</code> method.</p>
+
+<p>If the option is set to false, the output buffer in the <code>$i-&#62;inflate</code> method will be truncated before uncompressed data is written to it.</p>
+
+<p>If the option is set to true, uncompressed data will be appended to the output buffer by the <code>$i-&#62;inflate</code> method.</p>
+
+<p>This option defaults to false.</p>
+
+<dt><a name='CRC32'></a><a name="-CRC32"
+><b>-CRC32</b></a></dt>
+
+<dd>
+<p>If set to true, a crc32 checksum of the uncompressed data will be calculated. Use the <code>$i-&#62;crc32</code> method to retrieve this value.</p>
+
+<p>This option defaults to false.</p>
+
+<dt><a name='ADLER32'></a><a name="-ADLER32"
+><b>-ADLER32</b></a></dt>
+
+<dd>
+<p>If set to true, an adler32 checksum of the uncompressed data will be calculated. Use the <code>$i-&#62;adler32</code> method to retrieve this value.</p>
+
+<p>This option defaults to false.</p>
+
+<dt><a name='ConsumeInput'></a><a name="-ConsumeInput"
+><b>-ConsumeInput</b></a></dt>
+
+<dd>
+<p>If set to true, this option will remove compressed data from the input buffer of the <code>$i-&#62;inflate</code> method as the inflate progresses.</p>
+
+<p>This option can be useful when you are processing compressed data that is embedded in another file/buffer. In this case the data that immediately follows the compressed stream will be left in the input buffer.</p>
+
+<p>This option defaults to true.</p>
+
+<dt><a name='LimitOutput'></a><a name="-LimitOutput"
+><b>-LimitOutput</b></a></dt>
+
+<dd>
+<p>The <code>LimitOutput</code> option changes the behavior of the <code>$i-&#62;inflate</code> method so that the amount of memory used by the output buffer can be limited.</p>
+
+<p>When <code>LimitOutput</code> is used the size of the output buffer used will either be the value of the <code>Bufsize</code> option or the amount of memory already allocated to <code>$output</code>, whichever is larger. Predicting the output size available is tricky, so don&#39;t rely on getting an exact output buffer size.</p>
+
+<p>When <code>LimitOutout</code> is not specified <code>$i-&#62;inflate</code> will use as much memory as it takes to write all the uncompressed data it creates by uncompressing the input buffer.</p>
+
+<p>If <code>LimitOutput</code> is enabled, the <code>ConsumeInput</code> option will also be enabled.</p>
+
+<p>This option defaults to false.</p>
+
+<p>See <a href="#The_LimitOutput_option" class="podlinkpod"
+>&#34;The LimitOutput option&#34;</a> for a discussion on why <code>LimitOutput</code> is needed and how to use it.</p>
+</dd>
+</dl>
+
+<p>Here is an example of using an optional parameter to override the default buffer size.</p>
+
+<pre class="sh_perl">    my ($i, $status) = new Compress::Raw::Zlib::Inflate( -Bufsize =&#62; 300 ) ;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$status_=_$i-&#62;inflate($input,_$output_[,$eof])"
+><b> $status = $i-&#62;inflate($input, $output [,$eof]) </b></a></h2>
+
+<p>Inflates the complete contents of <code>$input</code> and writes the uncompressed data to <code>$output</code>. The <code>$input</code> and <code>$output</code> parameters can either be scalars or scalar references.</p>
+
+<p>Returns <code>Z_OK</code> if successful and <code>Z_STREAM_END</code> if the end of the compressed data has been successfully reached.</p>
+
+<p>If not successful <code>$status</code> will hold the <i>zlib</i> error code.</p>
+
+<p>If the <code>ConsumeInput</code> option has been set to true when the <code>Compress::Raw::Zlib::Inflate</code> object is created, the <code>$input</code> parameter is modified by <code>inflate</code>. On completion it will contain what remains of the input buffer after inflation. In practice, this means that when the return status is <code>Z_OK</code> the <code>$input</code> parameter will contain an empty string, and when the return status is <code>Z_STREAM_END</code> the <code>$input</code> parameter will contains what (if anything) was stored in the input buffer after the deflated data stream.</p>
+
+<p>This feature is useful when processing a file format that encapsulates a compressed data stream (e.g. gzip, zip) and there is useful data immediately after the deflation stream.</p>
+
+<p>If the <code>AppendOutput</code> option is set to true in the constructor for this object, the uncompressed data will be appended to <code>$output</code>. If it is false, <code>$output</code> will be truncated before any uncompressed data is written to it.</p>
+
+<p>The <code>$eof</code> parameter needs a bit of explanation.</p>
+
+<p>Prior to version 1.2.0, zlib assumed that there was at least one trailing byte immediately after the compressed data stream when it was carrying out decompression. This normally isn&#39;t a problem because the majority of zlib applications guarantee that there will be data directly after the compressed data stream. For example, both gzip (RFC 1950) and zip both define trailing data that follows the compressed data stream.</p>
+
+<p>The <code>$eof</code> parameter only needs to be used if <b>all</b> of the following conditions apply</p>
+
+<ol>
+<li>You are either using a copy of zlib that is older than version 1.2.0 or you want your application code to be able to run with as many different versions of zlib as possible.</li>
+
+<li>You have set the <code>WindowBits</code> parameter to <code>-MAX_WBITS</code> in the constructor for this object, i.e. you are uncompressing a raw deflated data stream (RFC 1951).</li>
+
+<li>There is no data immediately after the compressed data stream.</li>
+</ol>
+
+<p>If <b>all</b> of these are the case, then you need to set the <code>$eof</code> parameter to true on the final call (and only the final call) to <code>$i-&#62;inflate</code>.</p>
+
+<p>If you have built this module with zlib &#62;= 1.2.0, the <code>$eof</code> parameter is ignored. You can still set it if you want, but it won&#39;t be used behind the scenes.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$status_=_$i-&#62;inflateSync($input)"
+><b>$status = $i-&#62;inflateSync($input)</b></a></h2>
+
+<p>This method can be used to attempt to recover good data from a compressed data stream that is partially corrupt. It scans <code>$input</code> until it reaches either a <i>full flush point</i> or the end of the buffer.</p>
+
+<p>If a <i>full flush point</i> is found, <code>Z_OK</code> is returned and <code>$input</code> will be have all data up to the flush point removed. This data can then be passed to the <code>$i-&#62;inflate</code> method to be uncompressed.</p>
+
+<p>Any other return code means that a flush point was not found. If more data is available, <code>inflateSync</code> can be called repeatedly with more compressed data until the flush point is found.</p>
+
+<p>Note <i>full flush points</i> are not present by default in compressed data streams. They must have been added explicitly when the data stream was created by calling <code>Compress::Deflate::flush</code> with <code>Z_FULL_FLUSH</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$status_=_$i-&#62;inflateReset()"
+><b>$status = $i-&#62;inflateReset() </b></a></h2>
+
+<p>This method will reset the inflation object <code>$i</code>. It can be used when you are uncompressing multiple data streams and want to use the same object to uncompress each of them.</p>
+
+<p>Returns <code>Z_OK</code> if successful.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$i-&#62;dict_adler()"
+><b>$i-&#62;dict_adler()</b></a></h2>
+
+<p>Returns the adler32 value for the dictionary.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$i-&#62;crc32()"
+><b>$i-&#62;crc32()</b></a></h2>
+
+<p>Returns the crc32 value for the uncompressed data to date.</p>
+
+<p>If the <code>CRC32</code> option is not enabled in the constructor for this object, this method will always return 0;</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$i-&#62;adler32()"
+><b>$i-&#62;adler32()</b></a></h2>
+
+<p>Returns the adler32 value for the uncompressed data to date.</p>
+
+<p>If the <code>ADLER32</code> option is not enabled in the constructor for this object, this method will always return 0;</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$i-&#62;msg()"
+><b>$i-&#62;msg()</b></a></h2>
+
+<p>Returns the last error message generated by zlib.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$i-&#62;total_in()"
+><b>$i-&#62;total_in()</b></a></h2>
+
+<p>Returns the total number of bytes compressed bytes input to inflate.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$i-&#62;total_out()"
+><b>$i-&#62;total_out()</b></a></h2>
+
+<p>Returns the total number of uncompressed bytes output from inflate.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$d-&#62;get_BufSize()"
+><b>$d-&#62;get_BufSize()</b></a></h2>
+
+<p>Returns the buffer size used to carry out the decompression.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Examples"
+>Examples</a></h2>
+
+<p>Here is an example of using <code>inflate</code>.</p>
+
+<pre class="sh_perl">    use strict ;
+    use warnings ;
+    
+    use Compress::Raw::Zlib;
+    
+    my $x = new Compress::Raw::Zlib::Inflate()
+       or die &#34;Cannot create a inflation stream\n&#34; ;
+    
+    my $input = &#39;&#39; ;
+    binmode STDIN;
+    binmode STDOUT;
+    
+    my ($output, $status) ;
+    while (read(STDIN, $input, 4096))
+    {
+        $status = $x-&#62;inflate($input, $output) ;
+    
+        print $output ;
+    
+        last if $status != Z_OK ;
+    }
+    
+    die &#34;inflation failed\n&#34;
+        unless $status == Z_STREAM_END ;</pre>
+
+<p>The next example show how to use the <code>LimitOutput</code> option. Notice the use of two nested loops in this case. The outer loop reads the data from the input source - STDIN and the inner loop repeatedly calls <code>inflate</code> until <code>$input</code> is exhausted, we get an error, or the end of the stream is reached. One point worth remembering is by using the <code>LimitOutput</code> option you also get <code>ConsumeInput</code> set as well - this makes the code below much simpler.</p>
+
+<pre class="sh_perl">    use strict ;
+    use warnings ;
+    
+    use Compress::Raw::Zlib;
+    
+    my $x = new Compress::Raw::Zlib::Inflate(LimitOutput =&#62; 1)
+       or die &#34;Cannot create a inflation stream\n&#34; ;
+    
+    my $input = &#39;&#39; ;
+    binmode STDIN;
+    binmode STDOUT;
+    
+    my ($output, $status) ;
+
+  OUTER:
+    while (read(STDIN, $input, 4096))
+    {
+        do
+        {
+            $status = $x-&#62;inflate($input, $output) ;
+
+            print $output ;
+
+            last OUTER
+                unless $status == Z_OK || $status == Z_BUF_ERROR ;
+        }
+        while ($status == Z_OK &#38;&#38; length $input);
+    }
+    
+    die &#34;inflation failed\n&#34;
+        unless $status == Z_STREAM_END ;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CHECKSUM_FUNCTIONS"
+>CHECKSUM FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Two functions are provided by <i>zlib</i> to calculate checksums. For the Perl interface, the order of the two parameters in both functions has been reversed. This allows both running checksums and one off calculations to be done.</p>
+
+<pre class="sh_perl">    $crc = adler32($buffer [,$crc]) ;
+    $crc = crc32($buffer [,$crc]) ;</pre>
+
+<p>The buffer parameters can either be a scalar or a scalar reference.</p>
+
+<p>If the $crc parameters is <code>undef</code>, the crc value will be reset.</p>
+
+<p>If you have built this module with zlib 1.2.3 or better, two more CRC-related functions are available.</p>
+
+<pre class="sh_perl">    $crc = adler32_combine($crc1, $crc2, $len2)l
+    $crc = crc32_combine($adler1, $adler2, $len2)</pre>
+
+<p>These functions allow checksums to be merged.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Misc"
+>Misc <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="my_$version_=_Compress::Raw::Zlib::zlib_version();"
+>my $version = Compress::Raw::Zlib::zlib_version();</a></h2>
+
+<p>Returns the version of the zlib library.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="my_$flags_=_Compress::Raw::Zlib::zlibCompileFlags();"
+>my $flags = Compress::Raw::Zlib::zlibCompileFlags();</a></h2>
+
+<p>Returns the flags indicating compile-time options that were used to build the zlib library. See the zlib documentation for a description of the flags returned by <code>zlibCompileFlags</code>.</p>
+
+<p>Note that when the zlib sources are built along with this module the <code>sprintf</code> flags (bits 24, 25 and 26) should be ignored.</p>
+
+<p>If you are using zlib 1.2.0 or older, <code>zlibCompileFlags</code> will return 0.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="The_LimitOutput_option."
+>The LimitOutput option. <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>By default <code>$i-&#62;inflate($input, $output)</code> will uncompress <i>all</i> data in <code>$input</code> and write <i>all</i> of the uncompressed data it has generated to <code>$output</code>. This makes the interface to <code>inflate</code> much simpler - if the method has uncompressed <code>$input</code> successfully <i>all</i> compressed data in <code>$input</code> will have been dealt with. So if you are reading from an input source and uncompressing as you go the code will look something like this</p>
+
+<pre class="sh_perl">    use strict ;
+    use warnings ;
+    
+    use Compress::Raw::Zlib;
+    
+    my $x = new Compress::Raw::Zlib::Inflate()
+       or die &#34;Cannot create a inflation stream\n&#34; ;
+    
+    my $input = &#39;&#39; ;
+    
+    my ($output, $status) ;
+    while (read(STDIN, $input, 4096))
+    {
+        $status = $x-&#62;inflate($input, $output) ;
+    
+        print $output ;
+    
+        last if $status != Z_OK ;
+    }
+    
+    die &#34;inflation failed\n&#34;
+        unless $status == Z_STREAM_END ;</pre>
+
+<p>The points to note are</p>
+
+<ul>
+<li>The main processing loop in the code handles reading of compressed data from STDIN.</li>
+
+<li>The status code returned from <code>inflate</code> will only trigger termination of the main processing loop if it isn&#39;t <code>Z_OK</code>. When <code>LimitOutput</code> has not been used the <code>Z_OK</code> status means means that the end of the compressed data stream has been reached or there has been an error in uncompression.</li>
+
+<li>After the call to <code>inflate</code> <i>all</i> of the uncompressed data in <code>$input</code> will have been processed. This means the subsequent call to <code>read</code> can overwrite it&#39;s contents without any problem.</li>
+</ul>
+
+<p>For most use-cases the behavior described above is acceptable (this module and it&#39;s predecessor, <code>Compress::Zlib</code>, have used it for over 10 years without an issue), but in a few very specific use-cases the amount of memory required for <code>$output</code> can prohibitively large. For example, if the compressed data stream contains the same pattern repeated thousands of times, a relatively small compressed data stream can uncompress into hundreds of megabytes. Remember <code>inflate</code> will keep allocating memory until <i>all</i> the uncompressed data has been written to the output buffer - the size of <code>$output</code> is unbounded.</p>
+
+<p>The <code>LimitOutput</code> option is designed to help with this use-case.</p>
+
+<p>The main difference in your code when using <code>LimitOutput</code> is having to deal with cases where the <code>$input</code> parameter still contains some uncompressed data that <code>inflate</code> hasn&#39;t processed yet. The status code returned from <code>inflate</code> will be <code>Z_OK</code> if uncompression took place and <code>Z_BUF_ERROR</code> if the output buffer is full.</p>
+
+<p>Below is typical code that shows how to use <code>LimitOutput</code>.</p>
+
+<pre class="sh_perl">    use strict ;
+    use warnings ;
+    
+    use Compress::Raw::Zlib;
+    
+    my $x = new Compress::Raw::Zlib::Inflate(LimitOutput =&#62; 1)
+       or die &#34;Cannot create a inflation stream\n&#34; ;
+    
+    my $input = &#39;&#39; ;
+    binmode STDIN;
+    binmode STDOUT;
+    
+    my ($output, $status) ;
+
+  OUTER:
+    while (read(STDIN, $input, 4096))
+    {
+        do
+        {
+            $status = $x-&#62;inflate($input, $output) ;
+
+            print $output ;
+
+            last OUTER
+                unless $status == Z_OK || $status == Z_BUF_ERROR ;
+        }
+        while ($status == Z_OK &#38;&#38; length $input);
+    }
+    
+    die &#34;inflation failed\n&#34;
+        unless $status == Z_STREAM_END ;</pre>
+
+<p>Points to note this time:</p>
+
+<ul>
+<li>There are now two nested loops in the code: the outer loop for reading the compressed data from STDIN, as before; and the inner loop to carry out the uncompression.</li>
+
+<li>There are two exit points from the inner uncompression loop.
+<p>Firstly when <code>inflate</code> has returned a status other than <code>Z_OK</code> or <code>Z_BUF_ERROR</code>. This means that either the end of the compressed data stream has been reached (<code>Z_STREAM_END</code>) or there is an error in the compressed data. In either of these cases there is no point in continuing with reading the compressed data, so both loops are terminated.</p>
+
+<p>The second exit point tests if there is any data left in the input buffer, <code>$input</code> - remember that the <code>ConsumeInput</code> option is automatically enabled when <code>LimitOutput</code> is used. When the input buffer has been exhausted, the outer loop can run again and overwrite a now empty <code>$input</code>.</p>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ACCESSING_ZIP_FILES"
+>ACCESSING ZIP FILES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Although it is possible (with some effort on your part) to use this module to access .zip files, there are other perl modules available that will do all the hard work for you. Check out <code>Archive::Zip</code>, <code>IO::Compress::Zip</code> and <code>IO::Uncompress::Unzip</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FAQ"
+>FAQ <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Compatibility_with_Unix_compress/uncompress."
+>Compatibility with Unix compress/uncompress.</a></h2>
+
+<p>This module is not compatible with Unix <code>compress</code>.</p>
+
+<p>If you have the <code>uncompress</code> program available, you can use this to read compressed files</p>
+
+<pre class="sh_perl">    open F, &#34;uncompress -c $filename |&#34;;
+    while (&#60;F&#62;)
+    {
+        ...</pre>
+
+<p>Alternatively, if you have the <code>gunzip</code> program available, you can use this to read compressed files</p>
+
+<pre class="sh_perl">    open F, &#34;gunzip -c $filename |&#34;;
+    while (&#60;F&#62;)
+    {
+        ...</pre>
+
+<p>and this to write compress files, if you have the <code>compress</code> program available</p>
+
+<pre class="sh_perl">    open F, &#34;| compress -c $filename &#34;;
+    print F &#34;data&#34;;
+    ...
+    close F ;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Accessing_.tar.Z_files"
+>Accessing .tar.Z files</a></h2>
+
+<p>See previous FAQ item.</p>
+
+<p>If the <code>Archive::Tar</code> module is installed and either the <code>uncompress</code> or <code>gunzip</code> programs are available, you can use one of these workarounds to read <code>.tar.Z</code> files.</p>
+
+<p>Firstly with <code>uncompress</code></p>
+
+<pre class="sh_perl">    use strict;
+    use warnings;
+    use Archive::Tar;
+
+    open F, &#34;uncompress -c $filename |&#34;;
+    my $tar = Archive::Tar-&#62;new(*F);
+    ...</pre>
+
+<p>and this with <code>gunzip</code></p>
+
+<pre class="sh_perl">    use strict;
+    use warnings;
+    use Archive::Tar;
+
+    open F, &#34;gunzip -c $filename |&#34;;
+    my $tar = Archive::Tar-&#62;new(*F);
+    ...</pre>
+
+<p>Similarly, if the <code>compress</code> program is available, you can use this to write a <code>.tar.Z</code> file</p>
+
+<pre class="sh_perl">    use strict;
+    use warnings;
+    use Archive::Tar;
+    use IO::File;
+
+    my $fh = new IO::File &#34;| compress -c &#62;$filename&#34;;
+    my $tar = Archive::Tar-&#62;new();
+    ...
+    $tar-&#62;write($fh);
+    $fh-&#62;close ;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Zlib_Library_Version_Support"
+>Zlib Library Version Support</a></h2>
+
+<p>By default <code>Compress::Raw::Zlib</code> will build with a private copy of version 1.2.5 of the zlib library. (See the <em>README</em> file for details of how to override this behaviour)</p>
+
+<p>If you decide to use a different version of the zlib library, you need to be aware of the following issues</p>
+
+<ul>
+<li>First off, you must have zlib 1.0.5 or better.</li>
+
+<li>You need to have zlib 1.2.1 or better if you want to use the <code>-Merge</code> option with <code>IO::Compress::Gzip</code>, <code>IO::Compress::Deflate</code> and <code>IO::Compress::RawDeflate</code>.</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONSTANTS"
+>CONSTANTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>All the <i>zlib</i> constants are automatically imported when you make use of <i>Compress::Raw::Zlib</i>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Compress%3A%3AZlib" class="podlinkpod"
+>Compress::Zlib</a>, <a href="/perldoc?IO%3A%3ACompress%3A%3AGzip" class="podlinkpod"
+>IO::Compress::Gzip</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3AGunzip" class="podlinkpod"
+>IO::Uncompress::Gunzip</a>, <a href="/perldoc?IO%3A%3ACompress%3A%3ADeflate" class="podlinkpod"
+>IO::Compress::Deflate</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3AInflate" class="podlinkpod"
+>IO::Uncompress::Inflate</a>, <a href="/perldoc?IO%3A%3ACompress%3A%3ARawDeflate" class="podlinkpod"
+>IO::Compress::RawDeflate</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3ARawInflate" class="podlinkpod"
+>IO::Uncompress::RawInflate</a>, <a href="/perldoc?IO%3A%3ACompress%3A%3ABzip2" class="podlinkpod"
+>IO::Compress::Bzip2</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3ABunzip2" class="podlinkpod"
+>IO::Uncompress::Bunzip2</a>, <a href="/perldoc?IO%3A%3ACompress%3A%3ALzma" class="podlinkpod"
+>IO::Compress::Lzma</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3AUnLzma" class="podlinkpod"
+>IO::Uncompress::UnLzma</a>, <a href="/perldoc?IO%3A%3ACompress%3A%3AXz" class="podlinkpod"
+>IO::Compress::Xz</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3AUnXz" class="podlinkpod"
+>IO::Uncompress::UnXz</a>, <a href="/perldoc?IO%3A%3ACompress%3A%3ALzop" class="podlinkpod"
+>IO::Compress::Lzop</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3AUnLzop" class="podlinkpod"
+>IO::Uncompress::UnLzop</a>, <a href="/perldoc?IO%3A%3ACompress%3A%3ALzf" class="podlinkpod"
+>IO::Compress::Lzf</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3AUnLzf" class="podlinkpod"
+>IO::Uncompress::UnLzf</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3AAnyInflate" class="podlinkpod"
+>IO::Uncompress::AnyInflate</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3AAnyUncompress" class="podlinkpod"
+>IO::Uncompress::AnyUncompress</a></p>
+
+<p><a href="/perldoc?IO%3A%3ACompress%3A%3AFAQ" class="podlinkpod"
+>IO::Compress::FAQ</a></p>
+
+<p><a href="/perldoc?File%3A%3AGlobMapper" class="podlinkpod"
+>File::GlobMapper</a>, <a href="/perldoc?Archive%3A%3AZip" class="podlinkpod"
+>Archive::Zip</a>, <a href="/perldoc?Archive%3A%3ATar" class="podlinkpod"
+>Archive::Tar</a>, <a href="/perldoc?IO%3A%3AZlib" class="podlinkpod"
+>IO::Zlib</a></p>
+
+<p>For RFC 1950, 1951 and 1952 see <em><a href="http://www.faqs.org/rfcs/rfc1950.html" class="podlinkurl"
+>http://www.faqs.org/rfcs/rfc1950.html</a></em>, <em><a href="http://www.faqs.org/rfcs/rfc1951.html" class="podlinkurl"
+>http://www.faqs.org/rfcs/rfc1951.html</a></em> and <em><a href="http://www.faqs.org/rfcs/rfc1952.html" class="podlinkurl"
+>http://www.faqs.org/rfcs/rfc1952.html</a></em></p>
+
+<p>The <i>zlib</i> compression library was written by Jean-loup Gailly <em>gzip@prep.ai.mit.edu</em> and Mark Adler <em>madler@alumni.caltech.edu</em>.</p>
+
+<p>The primary site for the <i>zlib</i> compression library is <em><a href="http://www.zlib.org" class="podlinkurl"
+>http://www.zlib.org</a></em>.</p>
+
+<p>The primary site for gzip is <em><a href="http://www.gzip.org" class="podlinkurl"
+>http://www.gzip.org</a></em>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module was written by Paul Marquess, <em>pmqs@cpan.org</em>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MODIFICATION_HISTORY"
+>MODIFICATION HISTORY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>See the Changes file.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2005-2012 Paul Marquess. All rights reserved.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78172 Uploads, 24707 Distributions
+105971 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 01:16:12 2012 GMT (0.15539813041687) @cpansearch1 -->
+ </body>
+</html>

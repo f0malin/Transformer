@@ -1,0 +1,1735 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Getopt::Declare - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Getopt-Declare",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Getopt-Declare-1.14",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Getopt::Declare",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FANGLY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Getopt::Declare">permalink</a></div>
+  <a href="/~fangly/">Florent Angly</a> &gt;
+  <a href="/~fangly/Getopt-Declare-1.14/">Getopt-Declare-1.14</a> &gt;
+  Getopt::Declare
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/ce29b5dabeda684d86e10ed7f3809965?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FA/FANGLY/Getopt-Declare-1.14.tar.gz">Getopt-Declare-1.14.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Getopt%3A%3ADeclare;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FANGLY/Getopt-Declare-1.14/lib/Getopt/Declare.pm">Annotate this POD
+(2)
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Getopt%3A%3ALong">Getopt::Long</a><br>
+<a href="/perldoc?Pod%3A%3AUsage">Pod::Usage</a><br>
+<a href="/perldoc?Term%3A%3AProgressBar">Term::ProgressBar</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Getopt%3A%3AStd">Getopt::Std</a><br>
+<a href="/perldoc?Mail%3A%3ASendmail">Mail::Sendmail</a><br>
+<a href="/perldoc?Text%3A%3AParseWords">Text::ParseWords</a><br>
+<a href="/perldoc?Mail%3A%3APOP3Client">Mail::POP3Client</a><br>
+<a href="/perldoc?Net%3A%3ASFTP">Net::SFTP</a><br>
+<a href="/perldoc?Test%3A%3AMore">Test::More</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Getopt%3A%3ADeclare">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Getopt-Declare">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.14 &nbsp;
+<span class="noprint">
+  <a href="/src/FANGLY/Getopt-Declare-1.14/lib/Getopt/Declare.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Overview'>Overview</a>
+    <li class='indexItem indexItem2'><a href='#Terminology'>Terminology</a>
+    <li class='indexItem indexItem2'><a href='#Parameter_definitions'>Parameter definitions</a>
+    <li class='indexItem indexItem2'><a href='#Types_of_parameter_variables'>Types of parameter variables</a>
+    <li class='indexItem indexItem2'><a href='#Optional_parameter_components'>Optional parameter components</a>
+    <li class='indexItem indexItem2'><a href='#Parameter_descriptions'>Parameter descriptions</a>
+    <li class='indexItem indexItem2'><a href='#Actions'>Actions</a>
+    <li class='indexItem indexItem2'><a href='#Predefined_variables_available_in_actions'>Predefined variables available in actions</a>
+    <li class='indexItem indexItem2'><a href='#The_command-line_parsing_process'>The command-line parsing process</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#ADVANCED_FEATURES'>ADVANCED FEATURES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Case-insensitive_parameter_matching'>Case-insensitive parameter matching</a>
+    <li class='indexItem indexItem2'><a href='#Termination_and_rejection'>Termination and rejection</a>
+    <li class='indexItem indexItem2'><a href='#Specifying_other_parameter_variable_types'>Specifying other parameter variable types</a>
+    <li class='indexItem indexItem2'><a href='#Defining_new_parameter_variable_types'>Defining new parameter variable types</a>
+    <li class='indexItem indexItem2'><a href='#Undocumented_parameters'>Undocumented parameters</a>
+    <li class='indexItem indexItem2'><a href='#&#34;Dittoed&#34;_parameters'>&#34;Dittoed&#34; parameters</a>
+    <li class='indexItem indexItem2'><a href='#Deferred_actions'>Deferred actions</a>
+    <li class='indexItem indexItem2'><a href='#Flag_clustering'>Flag clustering</a>
+    <li class='indexItem indexItem2'><a href='#Strict_and_non-strict_command-line_parsing'>Strict and non-strict command-line parsing</a>
+    <li class='indexItem indexItem2'><a href='#Parameter_dependencies'>Parameter dependencies</a>
+    <li class='indexItem indexItem2'><a href='#Parsing_from_other_sources'>Parsing from other sources</a>
+    <li class='indexItem indexItem2'><a href='#Using_Getopt::Declare_objects_after_command-line_processing'>Using Getopt::Declare objects after command-line processing</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTOGENERATED_FEATURES'>AUTOGENERATED FEATURES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Usage_information'>Usage information</a>
+    <li class='indexItem indexItem2'><a href='#Usage_&#34;decoration&#34;'>Usage &#34;decoration&#34;</a>
+    <li class='indexItem indexItem2'><a href='#Help_parameters'>Help parameters</a>
+    <li class='indexItem indexItem2'><a href='#Version_parameters'>Version parameters</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DIAGNOSTICS'>DIAGNOSTICS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#BUGS_AND_ANNOYANCES'>BUGS AND ANNOYANCES</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Getopt::Declare - Declaratively Expressed Command-Line Arguments via Regular Expressions</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This document describes version 1.14 of Getopt::Declare</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> use Getopt::Declare;
+
+ $args = Getopt::Declare-&#62;new($specification_string, $optional_source);
+
+ # or:
+
+ use Getopt::Declare $specification_string =&#62; $args;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Overview"
+>Overview</a></h2>
+
+<p><em>Getopt::Declare</em> is <i>yet another</i> command-line argument parser, one which is specifically designed to be powerful but exceptionally easy to use.</p>
+
+<p>To parse the command-line in <code>@ARGV</code>, one simply creates a <em>Getopt::Declare</em> object, by passing <code>Getopt::Declare::new()</code> a specification of the various parameters that may be encountered:</p>
+
+<pre class="sh_perl">        use Getopt::Declare;
+        $args = Getopt::Declare-&#62;new($specification);</pre>
+
+<p>This may also be done in a one-liner:</p>
+
+<pre class="sh_perl">        use Getopt::Declare, $specification =&#62; $args;</pre>
+
+<p>The specification is a single string such as this:</p>
+
+<pre class="sh_perl">        $specification = q(
+
+                -a              Process all data
+
+                -b &#60;N:n&#62;        Set mean byte length threshold to &#60;N&#62;
+                                        { bytelen = $N; }
+
+                +c &#60;FILE&#62;       Create new file &#60;FILE&#62;
+
+                --del           Delete old file
+                                        { delold() }
+
+                delete          [ditto]
+
+                e &#60;H:i&#62;x&#60;W:i&#62;   Expand image to height &#60;H&#62; and width &#60;W&#62;
+                                        { expand($H,$W); }
+
+                -F &#60;file&#62;...    Process named file(s)
+                                        { defer {for (@file) {process()}} }
+
+                =getrand [&#60;N&#62;]  Get a random number
+                                (or, optionally, &#60;N&#62; of them)
+                                        { $N = 1 unless defined $N; }
+
+                --              Traditionally indicates end of arguments
+                                        { finish }
+        );</pre>
+
+<p><b>Note that in each of the cases above, there is a tab between each parameter definition and description (even if you can&#39;t see it)!</b> In the specification, the syntax of each parameter is declared, along with a description and (optionally) one or more actions to be performed when the parameter is encountered. The specification string may also include other usage formatting information (such as group headings or separators) as well as standard Perl comments (which are ignored).</p>
+
+<p>Calling <code>Getopt::Delare::new()</code> parses the contents of the array <code>@ARGV</code>, extracting any arguments which match the parameters defined in the specification string, and storing the parsed values as hash elements within the new <em>Getopt::Declare</em> object being created.</p>
+
+<p>Other features of the <em>Getopt::Declare</em> package include:</p>
+
+<ul>
+<li>The use of full Perl regular expressions to constrain matching of parameter components.</li>
+
+<li>Automatic generation of error, usage and version information.</li>
+
+<li>Optional conditional execution of embedded actions (i.e. only on successful parsing of the entire command-line)</li>
+
+<li>Strict or non-strict parsing (unrecognized command-line elements may either trigger an error or may simply be left in <code>@ARGV</code>)</li>
+
+<li>Declarative specification of various inter-parameter relationships (for example, two parameters may be declared mutually exclusive and this relationship will then be automatically enforced).</li>
+
+<li>Intelligent clustering of adjacent flags (for example: the command-line sequence &#34;-a&#160;-b&#160;-c&#34; may be abbreviated to &#34;-abc&#34;, unless there is also a <code>-abc</code> flag declared).</li>
+
+<li>Selective or global case-insensitivity of parameters.</li>
+
+<li>The ability to parse files (especially configuration files) instead of the command-line.</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Terminology"
+>Terminology</a></h2>
+
+<p>The terminology of command-line processing is often confusing, with various terms (such as &#34;argument&#34;, &#34;parameter&#34;, &#34;option&#34;, &#34;flag&#34;, etc.) frequently being used interchangeably and inconsistently in the various <em>Getopt::</em> packages available. In this documentation, the following terms are used consistently:</p>
+
+<dl>
+<dt><a name='command'></a><a name="&#34;command-line&#34;"
+>&#34;command-line&#34;</a></dt>
+
+<dd>
+<p>The space-separated concatenation of the elements of the array <code>@ARGV</code> at the time a <em>Getopt::Declare</em> object is created.</p>
+
+<dt><a name='parameter'></a><a name="&#34;parameter_specification&#34;_(or_just_&#34;parameter&#34;)"
+>&#34;parameter specification&#34; (or just &#34;parameter&#34;)</a></dt>
+
+<dd>
+<p>A specification of a single entity which may appear in the command-line. Always includes at least one syntax for the entity. Optionally may include other (<i>variant</i>) syntaxes, one or more <i>descriptions</i> of the entity, and/or <i>actions</i> to be performed when the entity is encountered. For example, the following is a single parameter specification (with two variants):</p>
+
+<pre class="sh_perl">    --window &#60;height&#62; x &#60;width&#62;     Set window to &#60;height&#62; by &#60;width&#62;
+                                        { setwin($width,$height); }
+
+    --window &#60;h&#62;x&#60;w&#62;@&#60;x&#62;,&#60;y&#62;        Set window size and centroid
+                                        { setwin($w,$h,$x,$y); }</pre>
+
+<dt><a name='argument'></a><a name="&#34;argument&#34;"
+>&#34;argument&#34;</a></dt>
+
+<dd>
+<p>A substring of the command-line which matches a single parameter variant. Unlike some other Getopt:: packages, in <em>Getopt::Declare</em> an argument may be a single element of <code>@ARGV</code>, or part of a single <code>@ARGV</code> element, or the concatenation of several adjacent <code>@ARGV</code> elements.</p>
+
+<dt><a name='parameter'></a><a name="&#34;parameter_definition&#34;"
+>&#34;parameter definition&#34;</a></dt>
+
+<dd>
+<p>A specification of one actual syntax variant matched by a parameter. Always consists of a leading <i>parameter flag</i> or <i>parameter variable</i>, optionally followed by one or more <i>parameter components</i> (that is, other parameter variables or <i>punctuators</i>). In the above example, <code>--window&#160;&#60;height&#62;&#160;x&#160;&#60;width&#62;</code> is a parameter definition.</p>
+
+<dt><a name='parameter'></a><a name="&#34;parameter_flag&#34;_(or_just_&#34;flag&#34;)"
+>&#34;parameter flag&#34; (or just &#34;flag&#34;)</a></dt>
+
+<dd>
+<p>A sequence of non-space characters which introduces a parameter. Traditionally a parameter flag begins with &#34;-&#34; or &#34;--&#34;, but <em>Getopt::Declare</em> allows almost any sequence of characters to be used as a flag. In the above example, <code>--window</code> is the parameter flag.</p>
+
+<dt><a name='parameter'></a><a name="&#34;parameter_variable&#34;"
+>&#34;parameter variable&#34;</a></dt>
+
+<dd>
+<p>A place-holder (within a parameter specification) for a value that will appear in any argument matching that parameter. In the above example, <code>&#60;height&#62;</code>, <code>&#60;width&#62;</code>, <code>&#60;h&#62;</code>, <code>&#60;y&#62;</code>, <code>&#60;x&#62;</code>, and <code>&#60;y&#62;</code> are all parameter variables.</p>
+
+<dt><a name='parameter'></a><a name="&#34;parameter_punctuator&#34;_(or_just_&#34;punctuator&#34;)"
+>&#34;parameter punctuator&#34; (or just &#34;punctuator&#34;)</a></dt>
+
+<dd>
+<p>A literal sequence of characters (within a parameter specification) which will appear in any argument matching that parameter. In the above example, the literals <code>x</code> and <code>@</code> are punctuators.</p>
+
+<dt><a name='parameter'></a><a name="&#34;parameter_description&#34;"
+>&#34;parameter description&#34;</a></dt>
+
+<dd>
+<p>A textual description of the purpose and/or use of a particular variant of parameter. In the above examples, the string:</p>
+
+<pre class="sh_perl">        Set window to &#60;height&#62; by &#60;width&#62;</pre>
+
+<p>is a parameter description.</p>
+
+<dt><a name='parameter'></a><a name="&#34;parameter_action&#34;_(or_just_&#34;action&#34;)"
+>&#34;parameter action&#34; (or just &#34;action&#34;)</a></dt>
+
+<dd>
+<p>A block of Perl code to be executed in response to encountering a specific parameter. In the above example:</p>
+
+<pre class="sh_perl">        { setwin($width,$height); }</pre>
+
+<p>is a parameter action.</p>
+
+<dt><a name='parameter'></a><a name="&#34;parameter_variants&#34;"
+>&#34;parameter variants&#34;</a></dt>
+
+<dd>
+<p>One or more different syntaxes for a single parameter, all sharing the same leading flag, but having different trailing parameter variables and/or punctuators. <em>Getopt::Declare</em> considers all parameter definitions with the same leading flag to be merely variant forms of a single &#34;underlying&#34; parameter. The above example shows two parameter variants for the <code>--window</code> parameter.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Parameter_definitions"
+>Parameter definitions</a></h2>
+
+<p>As indicated above, a parameter specification consists of three parts: the parameter definition, a textual description, and any actions to be performed when the parameter is matched.</p>
+
+<p>The parameter definition consists of a leading flag or parameter variable, followed by any number of parameter variables or punctuators, optionally separated by spaces. The parameter definition is terminated by the first tab that is encountered after the start of the parameter definition. At least one trailing tab <i>must</i> be present.</p>
+
+<p>For example, all of the following are valid <em>Getopt::Declare</em> parameter definitions:</p>
+
+<pre class="sh_perl">        -v                              
+        in=&#60;infile&#62;                     
+        +range &#60;from&#62;..&#60;to&#62;             
+        --lines &#60;start&#62; - &#60;stop&#62;        
+        ignore bad lines                
+        &#60;outfile&#62;                               </pre>
+
+<p><b>Note that each of the above examples has at least one trailing tab (even if you can&#39;t see them)!</b>. Note too that this hodge-podge of parameter styles is certainly not recommended within a single program, but is shown so as to illustrate some of the range of parameter syntax conventions <em>Getopt::Declare</em> supports.</p>
+
+<p>The spaces between components of the parameter definition are optional but significant, both in the definition itself and in the arguments that the definition may match. If there is no space between components in the specification, then no space is allowed between corresponding arguments on the command-line. If there <i>is</i> space between components of the specification, then space between those components is optional on the command-line.</p>
+
+<p>For example, the <code>--lines</code> parameter above matches:</p>
+
+<pre class="sh_perl">        --lines1-10
+        --lines 1-10
+        --lines 1 -10
+        --lines 1 - 10
+        --lines1- 10</pre>
+
+<p>If it were instead specified as:</p>
+
+<pre class="sh_perl">        --lines &#60;start&#62;-&#60;stop&#62;  </pre>
+
+<p>then it would match only:</p>
+
+<pre class="sh_perl">        --lines1-10
+        --lines 1-10</pre>
+
+<p>Note that the optional nature of spaces in parameter specification implies that flags and punctuators cannot contain the character &#39;&#60;&#39; (which is taken as the delimiter for a parameter variable) nor the character &#39;[&#39; (which introduces an optional parameter component - see <a href="#Optional_parameter_components" class="podlinkpod"
+>&#34;Optional parameter components&#34;</a>).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Types_of_parameter_variables"
+>Types of parameter variables</a></h2>
+
+<p>By default, a parameter variable will match a single blank-terminated or comma-delimited string. For example, the parameter:</p>
+
+<pre class="sh_perl">        -val &#60;value&#62;    </pre>
+
+<p>would match any of the following arguments:</p>
+
+<pre class="sh_perl">        -value                  # &#60;value&#62; &#60;- &#34;ue&#34;
+        -val abcd               # &#60;value&#62; &#60;- &#34;abcd&#34;
+        -val 1234               # &#60;value&#62; &#60;- &#34;1234&#34;
+        -val &#34;a value&#34;          # &#60;value&#62; &#60;- &#34;a value&#34;</pre>
+
+<p>It is also possible to restrict the types of values which may be matched by a given parameter variable. For example:</p>
+
+<pre class="sh_perl">        -limit &#60;threshold:n&#62;    Set threshold to some (real) value
+        -count &#60;N:i&#62;            Set count to &#60;N&#62; (must be an integer)</pre>
+
+<p>If a parameter variable is suffixed with &#34;:n&#34;, it will match any reasonable numeric value, whilst the &#34;:i&#34; suffix restricts a parameter variable to only matching integer values. These two &#34;type specifiers&#34; are the simplest examples of a much more powerful mechanism, which allows parameter variables to be restricted to matching any specific regular expression. See <a href="#Defining_new_parameter_variable_types" class="podlinkpod"
+>&#34;Defining new parameter variable types&#34;</a>.</p>
+
+<p>Parameter variables are treated as scalars by default, but this too can be altered. Any parameter variable immediately followed by an ellipsis (<code>...</code>) is treated as a list variable, and matches its specified type sequentially as many times as possible. For example, the parameter specification:</p>
+
+<pre class="sh_perl">        -pages &#60;page:i&#62;...      </pre>
+
+<p>would match either of the following arguments:</p>
+
+<pre class="sh_perl">        -pages 1
+        -pages 1 2 7 20</pre>
+
+<p>Note that both scalar and list parameter variables are &#34;respectful&#34; of the flags of other parameters as well as their own trailing punctuators. For example, given the specifications:</p>
+
+<pre class="sh_perl">        -a                      
+        -b &#60;b_list&#62;...          
+        -c &#60;c_list&#62;... ;        </pre>
+
+<p>The following arguments will be parsed as indicated:</p>
+
+<pre class="sh_perl">        -b -d -e -a             # &#60;b_list&#62;  &#60;-  (&#34;-d&#34;, &#34;-e&#34;)
+        -b -d ;                 # &#60;b_list&#62;  &#60;-  (&#34;-d&#34;, &#34;;&#34;)
+        -c -d ;                 # &#60;c_list&#62;  &#60;-  (&#34;-d&#34;)</pre>
+
+<p>List parameter variables are also &#34;repectful&#34; of the needs of subsequent parameter variables. That is, a parameter specification like:</p>
+
+<pre class="sh_perl">        -copy &#60;files&#62;... &#60;dir&#62;  </pre>
+
+<p>will behave as expected, putting all but the last string after the <code>-copy</code> flag into the parameter variable <code>&#60;files&#62;</code>, whilst the very last string is assigned to <code>&#60;dir&#62;</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Optional_parameter_components"
+>Optional parameter components</a></h2>
+
+<p>Except for the leading flag, any part of a parameter definition may be made optional by placing it in square brackets. For example:</p>
+
+<pre class="sh_perl">        +range &#60;from&#62; [..] [&#60;to&#62;]</pre>
+
+<p>which matches any of:</p>
+
+<pre class="sh_perl">        +range 1..10
+        +range 1..
+        +range 1 10
+        +range 1</pre>
+
+<p>List parameter variables may also be made optional (the ellipsis must follow the parameter variable name immediately, so it goes <i>inside</i> the square brackets):</p>
+
+<pre class="sh_perl">        -list [&#60;page&#62;...]</pre>
+
+<p>Two or more parameter components may be made jointly optional, by specifying them in the same pair of brackets. Optional components may also be nested. For example:</p>
+
+<pre class="sh_perl">        -range &#60;from&#62; [.. [&#60;to&#62;] ]</pre>
+
+<p>Scalar optional parameter variables (such as <code>[&#60;to&#62;]</code>) are given undefined values if they are skipped during a successful parameter match. List optional parameter variables (such as <code>[&#60;page&#62;...]</code>) are assigned an empty list if unmatched.</p>
+
+<p>One important use for optional punctuators is to provide abbreviated versions of specific flags. For example:</p>
+
+<pre class="sh_perl">        -num[eric]              # Match &#34;-num&#34; or &#34;-numeric&#34;
+        -lexic[ographic]al      # Match &#34;-lexical&#34; or &#34;-lexicographical&#34;
+        -b[ells+]w[histles]     # Match &#34;-bw&#34; or &#34;-bells+whistles&#34;</pre>
+
+<p>Note that the actual flags for these three parameters are <code>-num</code>, <code>-lexic</code> and <code>-b</code>, respectively.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Parameter_descriptions"
+>Parameter descriptions</a></h2>
+
+<p>Providing a textual description for each parameter (or parameter variant) is optional, but strongly recommended. Apart from providing internal documentation, parameter descriptions are used in the automatically-generated usage information provided by <em>Getopt::Declare</em>.</p>
+
+<p>Descriptions may be placed after the first tab(s) following the parameter definition and may be continued on subsequent lines, provided those lines do not contain any tabs after the first non-whitespace character (because any such line will instead be treated as a new parameter specification). The description is terminated by a blank line, an action specification (see below) or another parameter specification.</p>
+
+<p>For example:</p>
+
+<pre class="sh_perl">        -v                              Verbose mode
+        in=&#60;infile&#62;                     Specify input file
+                                        (will fail if file does not exist)
+
+        +range &#60;from&#62;..&#60;to&#62;             Specify range of columns to consider
+        --lines &#60;start&#62; - &#60;stop&#62;        Specify range of lines to process
+
+        ignore bad lines                Ignore bad lines :-)
+
+        &#60;outfile&#62;                       Specify an output file</pre>
+
+<p>The parameter description may also contain special directives which alter the way in which the parameter is parsed. See the various subsections of <a href="#ADVANCED_FEATURES" class="podlinkpod"
+>&#34;ADVANCED FEATURES&#34;</a> for more information.</p>
+
+<p>A common mistake is to use tabs to separate components of a parameter description:</p>
+
+<pre class="sh_perl">        -delete &#60;filename&#62;              Delete the named file
+        -d      &#60;filename&#62;              Delete the named file</pre>
+
+<p>The tabs after <code>&#34;-delete&#34;</code> and <code>&#34;-d&#34;</code> do a good job of lining up the two <code>&#34;&#60;filename&#62;&#34;</code> parameter variables, but they also mark the start of the description, which means that after descriptions are stripped, the two parameters are:</p>
+
+<pre class="sh_perl">        -delete
+        -d</pre>
+
+<p>The solution is to use spaces, not tabs, to align components within a parameter specification.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Actions"
+>Actions</a></h2>
+
+<p>Each parameter specification may also include one or more blocks of Perl code, specified in a pair of curly brackets (which <i>must</i> start on a new line).</p>
+
+<p>Each action is executed as soon as the corresponding parameter is successfully matched in the command-line (but see <a href="#Deferred_actions" class="podlinkpod"
+>&#34;Deferred actions&#34;</a> for a means of delaying this response).</p>
+
+<p>For example:</p>
+
+<pre class="sh_perl">        -v      Verbose mode
+                        { $::verbose = 1; }
+        -q      Quiet mode
+                        { $::verbose = 0; }</pre>
+
+<p>Actions are executed (as <code>do</code> blocks) in the package in which the <em>Getopt::Declare</em> object containing them was created. Hence they have access to all package variables and functions in that namespace.</p>
+
+<p>In addition, each parameter variable belonging to the corresponding parameter is made available as a (block-scoped) Perl variable with the same name. For example:</p>
+
+<pre class="sh_perl">        +range &#60;from&#62;..&#60;to&#62;     Set range
+                                        { setrange($from, $to); }
+
+        -list &#60;page:i&#62;...       Specify pages to list
+                                        { foreach (@page)
+                                          {
+                                                list($_) if $_ &#62; 0;
+                                          }
+                                        }</pre>
+
+<p>Note that scalar parameter variables become scalar Perl variables, and list parameter variables become Perl arrays.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Predefined_variables_available_in_actions"
+>Predefined variables available in actions</a></h2>
+
+<p>Within an action the following variables are also available:</p>
+
+<dl>
+<dt><a name='_PARAM_'></a><a name="$_PARAM_"
+><code>$_PARAM_</code></a></dt>
+
+<dd>
+<p>Stores the identifier of the current parameter: either the leading flag or, if there is no leading flag, the name of the first parameter variable.</p>
+
+<dt><a name='_PUNCT_'></a><a name="%_PUNCT_"
+><code>%_PUNCT_</code></a></dt>
+
+<dd>
+<p>Stores the substring matched by each punctuator in the current parameter. The hash is indexed by the punctuator itself. The main purpose of this variable is to allow actions to check whether optional punctuators were in fact matched. For example:</p>
+
+<pre class="sh_perl">        -v[erbose]      Set verbose mode
+                        (doubly verbose if full word used)
+                            { if ($_PUNCT_{&#34;erbose&#34;}) { $verbose = 2; }
+                              else                    { $verbose = 1; }
+                            }</pre>
+
+<dt><a name='_FOUND_'></a><a name="%_FOUND_"
+><code>%_FOUND_</code></a></dt>
+
+<dd>
+<p>This hash stores boolean values indicating whether or not a given parameter has already been found. The hash keys are the leading flags or parameter variables of each parameter. For instance, the following specification makes the <code>-q</code> and <code>-v</code> parameters mutually exclusive (but see <a href="#Parameter_dependencies" class="podlinkpod"
+>&#34;Parameter dependencies&#34;</a> for a <i>much</i> easier way to achieve this effect):</p>
+
+<pre class="sh_perl">        -v      Set verbose mode
+                        { die &#34;Can&#39;t be verbose *and* quiet!\n&#34;
+                                if $_FOUND_{&#34;-q&#34;};
+                        }
+
+        -q      Set quiet mode
+                        { die &#34;Can&#39;t be quiet *and* verbose!\n&#34;
+                                if $_FOUND_{&#34;-v&#34;};
+                        }</pre>
+
+<p>For reasons that will be explained in <a href="#Rejection_and_termination" class="podlinkpod"
+>&#34;Rejection and termination&#34;</a>, a given parameter is not marked as found until <i>after</i> its associated actions are executed. That is, <code>$_FOUND_{$_PARAM_}</code> will not (usually) be true during a parameter action.</p>
+</dd>
+</dl>
+
+<p>Note that, although numerous other internal variables on which the generated parser relies are also visible within parameter actions, accessing any of them may have Dire Consequences. Moreover, these other variables may no longer be accessible (or even present) in future versions of <em>Getopt::Declare</em>. All such internal variables have names beginning with an underscore. Avoiding such variables names will ensure there are no conflicts between actions and the parser itself.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_command-line_parsing_process"
+>The command-line parsing process</a></h2>
+
+<p>Whenever a <em>Getopt::Declare</em> object is created, the current command-line is parsed sequentially, by attempting to match each parameter in the object&#39;s specification string against the current elements in the <code>@ARGV</code> array (but see <a href="#Parsing_from_other_sources" class="podlinkpod"
+>&#34;Parsing from other sources&#34;</a>). The order in which parameters are compared against the arguments in <code>@ARGV</code> is determined by three rules:</p>
+
+<ol>
+<li>Parameters with longer flags are tried first. Hence the command-line argument &#34;-quiet&#34; would be parsed as matching the parameter <code>-quiet</code> rather than the parameter <code>-q&#160;&#60;string&#62;</code>, even if the <code>-q</code> parameter was defined first.</li>
+
+<li>Parameter <i>variants</i> with the most components are matched first. Hence the argument &#34;-rand 12345&#34; would be parsed as matching the parameter variant <code>-rand&#160;&#60;seed&#62;</code>, rather than the variant <code>-rand</code>, even if the &#34;shorter&#34; <code>-rand</code> variant was defined first.</li>
+
+<li>Otherwise, parameters are matched in the order they are defined.</li>
+</ol>
+
+<p>Note, however, that the <i>arguments</i> themselves are considered strictly in the order they appear on the command line. That is: Getopt::Declare takes the first (leftmost) argument and compares it against all the parameter specifications in the order described above. Then it gets the second argument and does the same. Et cetera. So, whilst parameters are considered &#34;flags-first-by-length&#34;, arguments are considered &#34;left-to-right&#34;. If that seems paradoxical, you probably need to review the difference between &#34;arguments&#34; and &#34;parameters&#34;, as explained in <a href="#Terminology" class="podlinkpod"
+>&#34;Terminology&#34;</a>.</p>
+
+<p>Elements of <code>@ARGV</code> which do not match any defined parameter are collected during the parse and are eventually put back into <code>@ARGV</code> (see <a href="#Strict_and_non-strict_command-line_parsing" class="podlinkpod"
+>&#34;Strict and non-strict command-line parsing&#34;</a>).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ADVANCED_FEATURES"
+>ADVANCED FEATURES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Case-insensitive_parameter_matching"
+>Case-insensitive parameter matching</a></h2>
+
+<p>By default, a <em>Getopt::Declare</em> object parses the command-line in a <i>case-sensitive</i> manner. The <code>[nocase]</code> directive enables a specific parameter (or, alternatively, <i>all</i> parameters) to be matched case-insensitively.</p>
+
+<p>If a <code>[nocase]</code> directive is included in the description of a specific parameter variant, then that variant (only) will be matched without regard for case. For example, the specification:</p>
+
+<pre class="sh_perl">        -q      Quiet mode [nocase]
+
+        -v      Verbose mode</pre>
+
+<p>means that the arguments &#34;-q&#34; and &#34;-Q&#34; will both match the <code>-q</code> parameter, but that only &#34;-v&#34; (and <i>not</i> &#34;-V&#34;) will match the <code>-v</code> parameter.</p>
+
+<p>If a <code>[nocase]</code> directive appears anywhere <i>outside</i> a parameter description, then the entire specification is declared case-insensitive and all parameters defined in that specification are matched without regard to case.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Termination_and_rejection"
+>Termination and rejection</a></h2>
+
+<p>It is sometimes useful to be able to terminate command-line processing before all arguments have been parsed. To this end, <em>Getopt::Declare</em> provides a special local operator (<code>finish</code>) which may be used within actions. The <code>finish</code> operator takes a single optional argument. If the argument is true (or omitted), command-line processing is terminated at once (although the current parameter is still marked as having been successfully matched). For example:</p>
+
+<pre class="sh_perl">        --      Traditional argument list terminator
+                        { finish }
+
+        -no--   Use non-traditional terminator instead
+                        { $nontrad = 1; }
+
+        ##      Non-traditional terminator (only valid if -no-- flag seen)
+                        { finish($nontrad); }</pre>
+
+<p>It is also possible to reject a single parameter match from within an action (and then continue trying other candidates). This allows actions to be used to perform more sophisticated tests on the type of a parameter variable, or to implement complicated parameter interdependencies.</p>
+
+<p>To reject a parameter match, the <code>reject</code> operator is used. The <code>reject</code> operator takes an optional argument. If the argument is true (or was omitted), the current parameter match is immediately rejected. For example:</p>
+
+<pre class="sh_perl">        -ar &#60;R:n&#62;       Set aspect ratio (must be in the range (0..1])
+                                {
+                                  $::sawaspect++;
+                                  reject $R &#60;= 0 || $R &#62; 1 ;
+                                  setaspect($R);
+                                }
+
+        -q              Quiet option (not available on Wednesdays)
+                                {
+                                  reject((localtime)[6] == 3);
+                                  $::verbose = 0;
+                                }</pre>
+
+<p>Note that any actions performed <i>before</i> the call to <code>reject</code> will still have effect (for example, the variable <code>$::sawaspect</code> remains incremented even if the aspect ratio parameter is subsequently rejected).</p>
+
+<p>The <code>reject</code> operator may also take a second argument, which is used as an error message if the rejected argument subsequently fails to match any other parameter. For example:</p>
+
+<pre class="sh_perl">        -q      Quiet option (not available on Wednesdays)
+                        {
+                          reject((localtime)[6] == 3 =&#62; &#34;Not today!&#34;);
+                          $::verbose = 0;
+                        }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Specifying_other_parameter_variable_types"
+>Specifying other parameter variable types</a></h2>
+
+<p>As was mentioned in <a href="#Type_of_parameter_variables" class="podlinkpod"
+>&#34;Type of parameter variables&#34;</a>, parameter variables can be restricted to matching only numbers or only integers by using the type specifiers &#34;:n&#34; and &#34;:i&#34;. <em>Getopt::Declare</em> provides seven other inbuilt type specifiers, as well as two mechanisms for defining new restrictions on parameter variables.</p>
+
+<p>The other inbuilt type specifiers are:</p>
+
+<dl>
+<dt><a name='i'></a><a name=":+i"
+>:+i</a></dt>
+
+<dd>
+<p>which restricts a parameter variable to matching positive, non-zero integers (that is: 1, 2, 3, etc.)</p>
+
+<dt><a name='n'></a><a name=":+n"
+>:+n</a></dt>
+
+<dd>
+<p>which restricts a parameter variable to matching positive, non-zero numbers (that is, floating point numbers strictly greater than zero).</p>
+
+<dt><a name='0'></a><a name=":0+i"
+>:0+i</a></dt>
+
+<dd>
+<p>which restricts a parameter variable to matching non-negative integers (that is: 0, 1, 2, 3, etc.)</p>
+
+<dt><a name='0'></a><a name=":0+n"
+>:0+n</a></dt>
+
+<dd>
+<p>which restricts a parameter variable to matching non-negative numbers (that is, floating point numbers greater than or equal to zero).</p>
+
+<dt><a name='qs'></a><a name=":qs"
+>:qs</a></dt>
+
+<dd>
+<p>which allows a parameter variable to match any quote-delimited or whitespace-terminated string. Note that this specifier simply makes explicit the default behaviour.</p>
+
+<dt><a name='id'></a><a name=":id"
+>:id</a></dt>
+
+<dd>
+<p>which allows a parameter variable to match any identifier sequence. That is: a alphabetic or underscore, followed by zero-or-more alphanumerics or underscores.</p>
+
+<dt><a name='if'></a><a name=":if"
+>:if</a></dt>
+
+<dd>
+<p>which is used to match input file names. Like type &#39;:s&#39;, type &#39;:if&#39; matches any quote-delimited or whitespace-terminated string. However this type does <i>not</i> respect other command-line flags and also requires that the matched string is either &#34;-&#34; (indicating standard input) or the name of a readable file.</p>
+
+<dt><a name='of'></a><a name=":of"
+>:of</a></dt>
+
+<dd>
+<p>which is used to match output file names. It is exactly like type &#39;:if&#39; except that it requires that the string is either &#34;-&#34; (indicating standard output) or the name of a file that is either writable or non-existent.</p>
+
+<dt><a name='s'></a><a name=":s"
+>:s</a></dt>
+
+<dd>
+<p>which allows a parameter variable to match any quote-delimited or whitespace-terminated string. Note that this specifier simply makes explicit the default behaviour.</p>
+</dd>
+</dl>
+
+<p>For example:</p>
+
+<pre class="sh_perl">        -repeat &#60;count:+i&#62;      Repeat &#60;count&#62; times (must be &#62; 0)
+
+        -scale &#60;factor:0+n&#62;     Set scaling factor (cannot be negative)</pre>
+
+<p>Alternatively, parameter variables can be restricted to matching a specific regular expression, by providing the required pattern explicitly (in matched &#34;/&#34; delimiters after the &#34;:&#34;). For example:</p>
+
+<pre class="sh_perl">        -parity &#60;p:/even|odd|both/&#62;     Set parity (&#60;p&#62; must be &#34;even&#34;,
+                                        &#34;odd&#34; or &#34;both&#34;)
+
+        -file &#60;name:/\w*\.[A-Z]{3}/&#62;    File name must have a three-
+                                        capital-letter extension</pre>
+
+<p>If an explicit regular expression is used, there are three &#34;convenience&#34; extensions available:</p>
+
+<dl>
+<dt><a name='T'></a><a name="%T"
+>%T</a></dt>
+
+<dd>
+<p>If the sequence <code>%T</code> appears in a pattern, it is translated to a negative lookahead containing the parameter variable&#39;s trailing context. Hence the parameter definition:</p>
+
+<pre class="sh_perl">        -find &#60;what:/(%T\.)+/&#62; ;</pre>
+
+<p>ensures that the command line argument &#34;-find abcd;&#34; causes <code>&#60;what&#62;</code> to match &#34;abcd&#34;, <i>not</i> &#34;abcd;&#34;.</p>
+
+<dt><a name='D'></a><a name="%D"
+>%D</a></dt>
+
+<dd>
+<p>If the sequence <code>%D</code> appears in a pattern, it is translated into a subpattern which matches any single digit (like a <code>\d</code>), but only if that digit would <i>not</i> match the parameter variable&#39;s trailing context. Hence <code>%D</code> is just a convenient short-hand for <code>(?:%T\d)</code> (and is actually implemented that way).</p>
+
+<dt><a name='F'></a><a name="%F"
+>%F</a></dt>
+
+<dd>
+<p>By default, any explicit pattern is modified by <em>Getopt::Declare</em> so that it fails if the argument being matched represents some defined parameter flag. If however the sequence <code>%F</code> appears anywhere in a pattern, it causes the pattern <i>not</i> to reject strings which would otherwise match another flag. By default, no inbuilt type allows arguments to match a flag.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Defining_new_parameter_variable_types"
+>Defining new parameter variable types</a></h2>
+
+<p>Explicit regular expressions are very powerful, but also cumbersome to use (or reuse) in some situations. <em>Getopt::Declare</em> provides a general &#34;parameter variable type definition&#34; mechanism to simplify such cases.</p>
+
+<p>To declare a new parameter variable type, the <code>[pvtype:...]</code> directive is used. A <code>[pvtype...]</code> directive specifies the name, matching pattern, and action for the new parameter variable type (though both the pattern and action are optional).</p>
+
+<p>The name string may be <i>any</i> whitespace-terminated sequence of characters which does not include a &#34;&#62;&#34;. The name may also be specified within a pair of quotation marks (single or double) or within any Perl quotelike operation. For example:</p>
+
+<pre class="sh_perl">        [pvtype: num     ]      # Makes this valid: -count &#60;N:num&#62;
+        [pvtype: &#39;a num&#39; ]      # Makes this valid: -count &#60;N:a num&#62;
+        [pvtype: q{nbr}  ]      # Makes this valid: -count &#60;N:nbr&#62;</pre>
+
+<p>The pattern is used in initial matching of the parameter variable. Patterns are normally specified as a &#34;/.../&#34;-delimited Perl regular expression:</p>
+
+<pre class="sh_perl">        [pvtype: num      /\d+/          ]        
+        [pvtype: &#39;a num&#39;  /\d+(?:\.\d*)/ ]
+        [pvtype: q{nbr}   /[+-]?\d+/     ]</pre>
+
+<p>Note that the regular expression should <i>not</i> contain any capturing parentheses, as this will interfere with the correct processing of subsequent parameter variables.</p>
+
+<p>Alternatively the pattern associated with a new type may be specified as a &#34;:&#34; followed by the name of another parameter variable type (in quotes if necessary). In this case the new type matches the same pattern (and action! - see below) as the named type. For example:</p>
+
+<pre class="sh_perl">        [pvtype: num      :+i      ]    # &#60;X:num&#62; is the same as &#60;X:+i&#62;
+        [pvtype: &#39;a num&#39;  :n       ]    # &#60;X:a num&#62; is the same as &#60;X:n&#62;
+        [pvtype: q{nbr}   :&#39;a num&#39; ]    # &#60;X:nbr&#62; is also the same as &#60;X:n&#62;</pre>
+
+<p>As a third alternative, the pattern may be omitted altogether, in which case the new type matches whatever the inbuilt pattern &#34;:s&#34; matches.</p>
+
+<p>The optional action which may be included in any <code>[pvtype:...]</code> directive is executed <i>after</i> the corresponding parameter variable matches the command line but <i>before</i> any actions belonging to the enclosing parameter are executed. Typically, such type actions will call the <code>reject</code> operator (see <a href="#Termination_and_rejection" class="podlinkpod"
+>&#34;Termination and rejection&#34;</a>) to test extra conditions, but any valid Perl code is acceptable. For example:</p>
+
+<pre class="sh_perl">        [pvtype: num    /\d+/    { reject if (localtime)[6]==3 }      ]
+        [pvtype: &#39;a num&#39;  :n       { print &#34;a num!&#34; }           ]
+        [pvtype: q{nbr}   :&#39;a num&#39; { reject $::no_nbr }         ]</pre>
+
+<p>If a new type is defined in terms of another (for example, &#34;:a num&#34; and &#34;:nbr&#34; above), any action specified by that new type is <i>prepended</i> to the action of that other type. Hence:</p>
+
+<ul>
+<li>the new type &#34;:num&#34; matches any string of digits, but then rejects the match if it&#39;s Wednesday.</li>
+
+<li>the new type &#34;:a num&#34; matches any string of digits (like its parent type &#34;:num&#34;), <i>then</i> prints out &#34;a num!&#34;, <i>and then</i> rejects the match if it&#39;s Wednesday (like its parent type &#34;:num&#34;).</li>
+
+<li>the new type &#34;:nbr&#34; matches any string of digits (like its parent type &#34;:a num&#34;), but then rejects the match if the global <code>$::no_nbr</code> variable is true. Otherwise it next prints out &#34;a num!&#34; (like its parent type &#34;:a num&#34;), and finally rejects the match if it&#39;s Wednesday (like its grandparent type &#34;:num&#34;).</li>
+</ul>
+
+<p>When a type action is executed (as part of a particular parameter match), three local variables are available:</p>
+
+<dl>
+<dt><a name='_VAL_'></a><a name="$_VAL_"
+><code>$_VAL_</code></a></dt>
+
+<dd>
+<p>which contains the value matched by the type&#39;s pattern. It is this value which is ultimately assigned to the local Perl variable which is available to parameter actions. Hence if the type action changes the value of <code>$_VAL_</code>, that changed value becomes the &#34;real&#34; value of the corresponding parameter variable (see the Roman numeral example below).</p>
+
+<dt><a name='_VAR_'></a><a name="$_VAR_"
+><code>$_VAR_</code></a></dt>
+
+<dd>
+<p>which contains the name of the parameter variable being matched.</p>
+
+<dt><a name='_PARAM_'></a><a name="$_PARAM_"
+><code>$_PARAM_</code></a></dt>
+
+<dd>
+<p>which contains the name of the parameter currently being matched.</p>
+</dd>
+</dl>
+
+<p>Here is a example of the use of these variables:</p>
+
+<pre class="sh_perl">        $specs = q{
+        [pvtype: type  /[OAB]|AB&#39;)/                                     ]
+        [pvtype: Rh?   /Rh[+-]/                                         ]
+        [pvtype: days  :+i  { reject $_VAL_&#60;14 &#34; $_PARAM_ (too soon!)&#34;} ]
+
+          -donated &#60;D:days&#62;               Days since last donation
+          -applied &#60;A:days&#62;               Days since applied to donate
+
+          -blood &#60;type:type&#62; [&#60;rh:Rh?&#62;]   Specify blood type
+                                          and (optionally) rhesus factor
+        };
+        $args = Getopt::Declare-&#62;new($specs);</pre>
+
+<p>In the above example, the &#34;:days&#34; parameter variable type is defined to match whatever the &#34;:+i&#34; type matches (that is positive, non-zero integers), with the proviso that the matching value (<code>$_VAL_</code>) must be at least 14. If a shorter value is specified for <code>&#60;D&#62;</code>, or <code>&#60;A&#62;</code> parameter variables, then <em>Getopt::Declare</em> would issue the following (respective) error messages:</p>
+
+<pre class="sh_perl">        Error: -donated (too soon!)
+        Error: -applied (too soon!)</pre>
+
+<p>Note that the &#34;inbuilt&#34; parameter variable types (&#34;i&#34;, &#34;n&#34;, etc.) are really just predefined type names, and hence can be altered if necessary:</p>
+
+<pre class="sh_perl">        $args = Getopt::Declare-&#62;new(&#60;&#60;&#39;EOPARAM&#39;);
+
+        [pvtype: &#39;n&#39; /[MDCLXVI]+/ { reject !($_VAL_=to_roman $_VAL_) } ]
+
+                -index &#60;number:n&#62;       Index number
+                        { print $data[$number]; }
+        EOPARAM</pre>
+
+<p>The above <code>[pvtype:...]</code> directive means that all parameter variables specified with a type &#34;:n&#34; henceforth only match valid Roman numerals, but that any such numerals are <i>automatically</i> converted to ordinary numbers (by passing <code>$_VAL_</code>) through the <code>to_roman</code> function).</p>
+
+<p>Hence the requirement that all &#34;:n&#34; numbers now must be Roman can be imposed <i>transparently</i>, at least as far as the actual parameter variables which use the &#34;:n&#34; type are concerned. Thus <code>$number</code> can be still used to index the array <code>@data</code> despite the new restrictions placed upon it by the redefinition of type &#34;:n&#34;.</p>
+
+<p>Note too that, because the &#34;:+n&#34; and &#34;:0+n&#34; types are implicitly defined in terms of the original &#34;:n&#34; type (as if the directives:</p>
+
+<pre class="sh_perl">        [pvtype: &#39;+n&#39;  :n { reject if $_VAL &#60;= 0  }  ]
+        [pvtype: &#39;0+n&#39; :n { reject if $_VAL &#60; 0   }  ]</pre>
+
+<p>were included in every specification), the above redefinition of &#34;:n&#34; affects those types as well. In such cases the format conversion is performed <i>before</i> the &#34;sign&#34; tests (in other words, the &#34;inherited&#34; actions are performed <i>after</i> any newly defined ones).</p>
+
+<p>Parameter variable type definitions may appear anywhere in a <em>Getopt::Declare</em> specification and are effective for the entire scope of the specification. In particular, new parameter variable types may be defined <i>after</i> they are used.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Undocumented_parameters"
+>Undocumented parameters</a></h2>
+
+<p>If a parameter description is omitted, or consists entirely of whitespace, or contains the special directive <code>[undocumented]</code>, then the parameter is still parsed as normal, but will not appear in the automatically generated usage information (see <a href="#Usage_information" class="podlinkpod"
+>&#34;Usage information&#34;</a>).</p>
+
+<p>Apart from allowing for &#34;secret&#34; parameters (a dubious benefit), this feature enables the programmer to specify some undocumented action which is to be taken on encountering an otherwise unknown argument. For example:</p>
+
+<pre class="sh_perl">        &#60;unknown&#62;       
+                        { handle_unknown($unknown); }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="&#34;Dittoed&#34;_parameters"
+>&#34;Dittoed&#34; parameters</a></h2>
+
+<p>Sometimes it is desirable to provide two or more alternate flags for the same behaviour (typically, a short form and a long form). To reduce the burden of specifying such pairs, the special directive <code>[ditto]</code> is provided. If the description of a parameter <i>begins</i> with a <code>[ditto]</code> directive, that directive is replaced with the description for the immediately preceding parameter (including any other directives). For example:</p>
+
+<pre class="sh_perl">        -v              Verbose mode
+        --verbose       [ditto] (long form)</pre>
+
+<p>In the automatically generated usage information this would be displayed as:</p>
+
+<pre class="sh_perl">        -v              Verbose mode
+        --verbose          &#34;     &#34;   (long form)</pre>
+
+<p>Furthermore, if the &#34;dittoed&#34; parameter has no action(s) specified, the action(s) of the preceding parameter are reused. For example, the specification:</p>
+
+<pre class="sh_perl">        -v              Verbose mode
+                                { $::verbose = 1; }
+        --verbose       [ditto]</pre>
+
+<p>would result in the <code>--verbose</code> option setting <code>$::verbose</code> just like the <code>-v</code> option. On the other hand, the specification:</p>
+
+<pre class="sh_perl">        -v              Verbose mode
+                                { $::verbose = 1; }
+        --verbose       [ditto]
+                                { $::verbose = 2; }</pre>
+
+<p>would give separate actions to each flag.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Deferred_actions"
+>Deferred actions</a></h2>
+
+<p>It is often desirable or necessary to defer actions taken in response to particular flags until the entire command-line has been parsed. The most obvious case is where modifier flags must be able to be specified <i>after</i> the command-line arguments they modify.</p>
+
+<p>To support this, <em>Getopt::Declare</em> provides a local operator (<code>defer</code>) which delays the execution of a particular action until the command-line processing is finished. The <code>defer</code> operator takes a single block, the execution of which is deferred until the command-line is fully and successfully parsed. If command-line processing <i>fails</i> for some reason (see <a href="#DIAGNOSTICS" class="podlinkpod"
+>&#34;DIAGNOSTICS&#34;</a>), the deferred blocks are never executed.</p>
+
+<p>For example:</p>
+
+<pre class="sh_perl">        &#60;files&#62;...      Files to be processed
+                            { defer { foreach (@files) { proc($_); } } }
+
+        -rev[erse]      Process in reverse order
+                            { $::ordered = -1; }
+
+        -rand[om]       Process in random order
+                            { $::ordered = 0; }</pre>
+
+<p>With the above specification, the <code>-rev</code> and/or <code>-rand</code> flags can be specified <i>after</i> the list of files, but still affect the processing of those files. Moreover, if the command-line parsing fails for some reason (perhaps due to an unrecognized argument), the deferred processing will not be performed.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Flag_clustering"
+>Flag clustering</a></h2>
+
+<p>Like some other <em>Getopt::</em> packages, <em>Getopt::Declare</em> allows parameter flags to be &#34;clustered&#34;. That is, if two or more flags have the same &#34;flag prefix&#34; (one or more leading non-whitespace, non-alphanumeric characters), those flags may be concatenated behind a single copy of that flag prefix. For example, given the parameter specifications:</p>
+
+<pre class="sh_perl">        -+              Swap signs
+        -a              Append mode
+        -b              Bitwise compare
+        -c &#60;FILE&#62;       Create new file
+        +del            Delete old file
+        +e &#60;NICE:i&#62;     Execute (at specified nice level) when complete</pre>
+
+<p>The following command-lines (amongst others) are all exactly equivalent:</p>
+
+<pre class="sh_perl">        -a -b -c newfile +e20 +del
+        -abc newfile +dele20
+        -abcnewfile+dele20
+        -abcnewfile +e 20del</pre>
+
+<p>The last two alternatives are correctly parsed because <em>Getopt::Declare</em> allows flag clustering at <i>any point</i> where the remainder of the command-line being processed starts with a non-whitespace character and where the remaining substring would not otherwise immediately match a parameter flag.</p>
+
+<p>Hence the trailing &#34;+dele20&#34; in the third command-line example is parsed as &#34;+del&#160;+e20&#34; and not &#34;-+&#160;del&#160;+e20&#34;. This is because the previous &#34;-&#34; prefix is <i>not</i> propagated (since the leading &#34;+del&#34; <i>is</i> a valid flag).</p>
+
+<p>In contrast, the trailing &#34;+e&#160;20del&#34; in the fourth example is parsed as &#34;+e&#160;20&#160;+del&#34; because, after the &#34;&#160;20&#34; is parsed (as the integer parameter variable <code>&#60;NICE&#62;</code>), the next characters are &#34;del&#34;, which <i>do not</i> form a flag themselves unless prefixed with the controlling &#34;+&#34;.</p>
+
+<p>In some circumstances a clustered sequence of flags on the command-line might also match a single (multicharacter) parameter flag. For example, given the specifications:</p>
+
+<pre class="sh_perl">        -a              Blood type is A
+        -b              Blood type is B
+        -ab             Blood type is AB
+        -ba             Donor has a Bachelor of Arts</pre>
+
+<p>A command-line argument &#34;-aba&#34; might be parsed as &#34;-a&#160;-b&#160;-a&#34; or &#34;-a&#160;-ba&#34; or &#34;-ab&#160;-a&#34;. In all such cases, <em>Getopt::Declare</em> prefers the longest unmatched flag first. Hence the previous example would be parsed as &#34;-ab&#160;-a&#34;, unless the <code>-ab</code> flag had already appeared in the command-line (in which case, it would be parsed as &#34;-a&#160;-ba&#34;).</p>
+
+<p>These rules are designed to produce consistency and &#34;least surprise&#34;, but (as the above example illustrates) may not always do so. If the idea of unconstrained flag clustering is too libertarian for a particular application, the feature may be restricted (or removed completely), by including a <code>[cluster:...]</code> directive anywhere in the specification string.</p>
+
+<p>The options are:</p>
+
+<dl>
+<dt><a name='cluster'></a><a name="[cluster:_any]"
+><code>[cluster: any]</code></a></dt>
+
+<dd>
+<p>This version of the directive allows any flag to be clustered (that is, it merely makes explicit the default behaviour).</p>
+
+<dt><a name='cluster'></a><a name="[cluster:_flags]"
+><code>[cluster: flags]</code></a></dt>
+
+<dd>
+<p>This version of the directive restricts clustering to parameters which are &#34;pure&#34; flags (that is, those which have no parameter variables or punctuators).</p>
+
+<dt><a name='cluster'></a><a name="[cluster:_singles]"
+><code>[cluster: singles]</code></a></dt>
+
+<dd>
+<p>This version of the directive restricts clustering to parameters which are &#34;pure&#34; flags, and which consist of a flag prefix followed by a single alphanumeric character.</p>
+
+<dt><a name='cluster'></a><a name="[cluster:_none]"
+><code>[cluster: none]</code></a></dt>
+
+<dd>
+<p>This version of the directive turns off clustering completely.</p>
+</dd>
+</dl>
+
+<p>For example:</p>
+
+<pre class="sh_perl">        $args = Getopt::Declare-&#62;new(&#60;&#60;&#39;EOSPEC&#39;);
+                -a              Append mode
+                -b              Back-up mode
+                -bu             [ditto]
+                -c &#60;file&#62;       Copy mode
+                -d [&#60;file&#62;]     Delete mode
+                -e[xec]         Execute mode
+
+                [cluster:singles]
+        EOSPEC</pre>
+
+<p>In the above example, only the <code>-a</code> and <code>-b</code> parameters may be clustered. The <code>-bu</code> parameter is excluded because it consists of more than one letter, whilst the <code>-c</code> and <code>-d</code> parameters are excluded because they take (or may take, in <code>-d</code>&#39;s case) a variable. The <code>-e[xec]</code> parameter is excluded because it may take a trailing punctuator (<code>[xec]</code>).</p>
+
+<p>By comparison, if the directive had been <code>[cluster: flags]</code>, then <code>-bu</code> <i>could</i> be clustered, though <code>-c</code>, <code>-d</code> and <code>-e[xec]</code> would still be excluded since they are not &#34;pure flags&#34;).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Strict_and_non-strict_command-line_parsing"
+>Strict and non-strict command-line parsing</a></h2>
+
+<p>&#34;Strictness&#34; in <em>Getopt::Declare</em> refers to the way in which unrecognized command-line arguments are handled. By default, <em>Getopt::Declare</em> is &#34;non-strict&#34;, in that it simply skips silently over any unrecognized command-line argument, leaving it in <code>@ARGV</code> at the conclusion of command-line processing (but only if they were originally parsed from <code>@ARGV</code>).</p>
+
+<p>No matter where they came from, the remaining arguments are also available by calling the <code>unused</code> method on the Getopt::Declare object, after it has parsed. In a list context, this method returns a list of the unprocessed arguments; in a scalar context a single string with the unused arguments concatenated is returned.</p>
+
+<p>Likewise, there is a <code>used</code> method that returns the arguments that were successfully processed by the parser.</p>
+
+<p>However, if a new <em>Getopt::Declare</em> object is created with a specification string containing the <code>[strict]</code> directive (at any point in the specification):</p>
+
+<pre class="sh_perl">        $args = Getopt::Declare-&#62;new(&#60;&#60;&#39;EOSPEC&#39;);
+
+                [strict]
+
+                -a      Append mode
+                -b      Back-up mode
+                -c      Copy mode
+        EOSPEC</pre>
+
+<p>then the command-line is parsed &#34;strictly&#34;. In this case, any unrecognized argument causes an error message (see <a href="#DIAGNOSTICS" class="podlinkpod"
+>&#34;DIAGNOSTICS&#34;</a>) to be written to STDERR, and command-line processing to (eventually) fail. On such a failure, the call to <code>Getopt::Declare::new()</code> returns <code>undef</code> instead of the usual hash reference.</p>
+
+<p>The only concession that &#34;strict&#34; mode makes to the unknown is that, if command-line processing is prematurely terminated via the <code>finish</code> operator, any command-line arguments which have not yet been examined are left in <code>@ARGV</code> and do not cause the parse to fail (of course, if any unknown arguments were encountered <i>before</i> the <code>finish</code> was executed, those earlier arguments <i>will</i> cause command-line processing to fail).</p>
+
+<p>The &#34;strict&#34; option is useful when <i>all</i> possible parameters can be specified in a single <em>Getopt::Declare</em> object, whereas the &#34;non-strict&#34; approach is needed when unrecognized arguments are either to be quietly tolerated, or processed at a later point (possibly in a second <em>Getopt::Declare</em> object).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Parameter_dependencies"
+>Parameter dependencies</a></h2>
+
+<p><em>Getopt::Declare</em> provides five other directives which modify the behaviour of the command-line parser in some way. One or more of these directives may be included in any parameter description. In addition, the <code>[mutex:...]</code> directive may also appear in any usage &#34;decoration&#34; (see <a href="#Usage_information" class="podlinkpod"
+>&#34;Usage information&#34;</a>).</p>
+
+<p>Each directive specifies a particular set of conditions that a command-line must fulfil (for example, that certain parameters may not appear on the same command-line). If any such condition is violated, an appropriate error message is printed (see <a href="#DIAGNOSTICS" class="podlinkpod"
+>&#34;DIAGNOSTICS&#34;</a>). Furthermore, once the command-line is completely parsed, if any condition was violated, the program terminates (whilst still inside <code>Getopt::Declare::new()</code>).</p>
+
+<p>The directives are:</p>
+
+<dl>
+<dt><a name='required'></a><a name="[required]"
+><code>[required]</code></a></dt>
+
+<dd>
+<p>Specifies that an argument matching at least one variant of the corresponding parameter <i>must</i> be specified somewhere in the command-line. That is, if two or more required parameters share the same flag, it suffices that <i>any one</i> of them matches an argument (recall that <em>Getopt::Declare</em> considers all parameter specifications with the same flag merely to be variant forms of a single &#34;underlying&#34; parameter).</p>
+
+<p>If an argument matching a &#34;required&#34; flag is <i>not</i> found in the command-line, an error message to that effect is issued, command-line processing fails, and <code>Getopt::Declare::new()</code> returns <code>undef</code>.</p>
+
+<dt><a name='repeatable'></a><a name="[repeatable]"
+><code>[repeatable]</code></a></dt>
+
+<dd>
+<p>By default, <em>Getopt::Declare</em> objects allow each of their parameters to be matched only once (that is, once any variant of a particular parameter matches an argument, <i>all</i> variants of that same parameter are subsequently excluded from further consideration when parsing the rest of the command-line).</p>
+
+<p>However, it is sometimes useful to allow a particular parameter to match more than once. Any parameter whose description includes the directive <code>[repeatable]</code> is <i>never</i> excluded as a potential argument match, no matter how many times it has matched previously:</p>
+
+<pre class="sh_perl">        -nice           Increase nice value (linearly if repeated)
+                        [repeatable]
+                                { set_nice( get_nice()+1 ); }
+
+        -w              Toggle warnings [repeatable] for the rest
+                        of the command-line 
+                                { $warn = !$warn; }</pre>
+
+<p>As a more general mechanism is a <code>[repeatable]</code> directive appears in a specification anywhere other than a flag&#39;s description, then <i>all</i> parameters are marked repeatable:</p>
+
+<pre class="sh_perl">        [repeatable]
+
+        -nice           Increase nice value (linearly if repeated)
+                                { set_nice( get_nice()+1 ); }
+
+        -w              Toggle warnings for the rest of the command-line 
+                                { $warn = !$warn; }</pre>
+
+<dt><a name='mutex'></a><a name="[mutex:_&#60;flag_list&#62;]"
+><code>[mutex: &#60;flag list&#62;]</code></a></dt>
+
+<dd>
+<p>The <code>[mutex:...]</code> directive specifies that the parameters whose flags it lists are mutually exclusive. That is, no two or more of them may appear in the same command-line. For example:</p>
+
+<pre class="sh_perl">        -case           set to all lower case
+        -CASE           SET TO ALL UPPER CASE
+        -Case           Set to sentence case
+        -CaSe           SeT tO &#34;RAnSom nOTe&#34; CasE
+
+                        [mutex: -case -CASE -Case -CaSe]</pre>
+
+<p>The interaction of the <code>[mutex:...]</code> and <code>[required]</code> directives is potentially awkward in the case where two &#34;required&#34; arguments are also mutually exclusive (since the <code>[required]</code> directives insist that both parameters must appear in the command-line, whilst the <code>[mutex:...]</code> directive expressly forbids this).</p>
+
+<p><em>Getopt::Declare</em> resolves such contradictory constraints by relaxing the meaning of &#34;required&#34; slightly. If a flag is marked &#34;required&#34;, it is considered &#34;found&#34; for the purposes of error checking if it or <i>any other flag with which it is mutually exclusive</i> appears on the command-line.</p>
+
+<p>Hence the specifications:</p>
+
+<pre class="sh_perl">        -case           set to all lower case      [required]
+        -CASE           SET TO ALL UPPER CASE      [required]
+        -Case           Set to sentence case       [required]
+        -CaSe           SeT tO &#34;RAnSom nOTe&#34; CasE  [required]
+
+                        [mutex: -case -CASE -Case -CaSe]</pre>
+
+<p>mean that <i>exactly one</i> of these four flags must appear on the command-line, but that the presence of any one of them will suffice to satisfy the &#34;requiredness&#34; of all four.</p>
+
+<p>It should also be noted that mutual exclusion is only tested for <i>after</i> a parameter has been completely matched (that is, after the execution of its actions, if any). This prevents &#34;rejected&#34; parameters (see <a href="#Termination_and_rejection" class="podlinkpod"
+>&#34;Termination and rejection&#34;</a>) from incorrectly generating mutual exclusion errors. However, it also sometimes makes it necessary to defer the actions of a pair of mutually exclusive parameters (for example, if those actions are expensive or irreversible).</p>
+
+<dt><a name='excludes'></a><a name="[excludes:_&#60;flag_list&#62;]"
+><code>[excludes: &#60;flag list&#62;]</code></a></dt>
+
+<dd>
+<p>The <code>[excludes:...]</code> directive provides a &#34;pairwise&#34; version of mutual exclusion, specifying that the current parameter is mutually exclusive with all the other parameters lists, but those other parameters are not mutually exclusive with each other. That is, whereas the specification:</p>
+
+<pre class="sh_perl">        -left           Justify to left margin
+        -right          Justify to right margin
+        -centre         Centre each line
+
+        [mutex: -left -right -centre]</pre>
+
+<p>means that only one of these three justification alternatives can ever be used at once, the specification:</p>
+
+<pre class="sh_perl">        -left           Justify to left margin   
+        -right          Justify to right margin 
+        -centre         Centre each line  [excludes: -left -right]</pre>
+
+<p>means that <code>-left</code> and <code>-right</code> can still be used together (probably to indicate &#34;left <i>and</i> right&#34; justification), but that neither can be used with <code>-centre</code>. Note that the <code>[excludes:...]</code> directive also differs from the <code>[mutex:...]</code> in that it is always connected with a paricular parameter, <i>implicitly</i> using the flag of that parameter as the target of exclusion.</p>
+
+<dt><a name='requires'></a><a name="[requires:_&#60;condition&#62;]"
+><code>[requires: &#60;condition&#62;]</code></a></dt>
+
+<dd>
+<p>The <code>[requires]</code> directive specifies a set of flags which must also appear in order for a particular flag to be permitted in the command-line. The condition is a boolean expression, in which the terms are the flags or various parameters, and the operations are <code>&#38;&#38;</code>, <code>||</code>, <code>!</code>, and bracketting. For example, the specifications:</p>
+
+<pre class="sh_perl">        -num            Use numeric sort order
+        -lex            Use &#34;dictionary&#34; sort order
+        -len            Sort on length of line (or field)
+
+        -field &#60;N:+i&#62;   Sort on value of field &#60;N&#62; 
+
+        -rev            Reverse sort order
+                        [requires: -num || -lex || !(-len &#38;&#38; -field)]</pre>
+
+<p>means that the <code>-rev</code> flag is allowed only if either the <code>-num</code> or the <code>-lex</code> parameter has been used, or if it is not true that <i>both</i> the <code>-len</code> <i>and</i> the <code>-field</code> parameters have been used.</p>
+
+<p>Note that the operators <code>&#38;&#38;</code>, <code>||</code>, and <code>!</code> retain their normal Perl precedences.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Parsing_from_other_sources"
+>Parsing from other sources</a></h2>
+
+<p><em>Getopt::Declare</em> normally parses the contents of <code>@ARGV</code>, but can be made to parse specified files instead. To accommodate this, <code>Getopt::Declare::new()</code> takes an optional second parameter, which specifies a file to be parsed. The parameter may be either:</p>
+
+<dl>
+<dt><a name='A'></a><a name="A_IO::Handle_reference_or_a_filehandle_GLOB_reference"
+>A <code>IO::Handle</code> reference or a filehandle GLOB reference</a></dt>
+
+<dd>
+<p>in which case <code>Getopt::Declare::new()</code> reads the corresponding handle until end-of-file, and parses the resulting text (even if it is an empty string).</p>
+
+<dt><a name='An'></a><a name="An_ARRAY_reference_containing_the_single_string_&#39;-CONFIG&#39;"
+>An ARRAY reference containing the single string <code>&#39;-CONFIG&#39;</code></a></dt>
+
+<dd>
+<p>in which case <code>Getopt::Declare::new()</code> looks for the files <em>$ENV{HOME}/.${progname}rc</em> and <em>$ENV{PWD}/.${progname}rc</em>, concatenates their contents, and parses that.</p>
+
+<p>If neither file is found (or if both are inaccessible) <code>Getopt::Declare::new()</code> immediately returns zero. If a file is found but the parse subsequently fails, <code>undef</code> is returned.</p>
+
+<dt><a name='An'></a><a name="An_ARRAY_reference_containing_the_single_string_&#39;-BUILD&#39;"
+>An ARRAY reference containing the single string <code>&#39;-BUILD&#39;</code></a></dt>
+
+<dd>
+<p>in which case <code>Getopt::Declare::new()</code> builds a parser from the supplied grammar and returns a reference to it, but does not parse anything. See <a href="#The_Getopt::Declare::code()_method" class="podlinkpod"
+>&#34;The Getopt::Declare::code() method&#34;</a> and <a href="#The_Getopt::Declare::parse()_method" class="podlinkpod"
+>&#34;The Getopt::Declare::parse() method&#34;</a>.</p>
+
+<dt><a name='An'></a><a name="An_ARRAY_reference_containing_the_single_string_&#39;-SKIP&#39;_or_the_single_value_undef_or_nothing"
+>An ARRAY reference containing the single string <code>&#39;-SKIP&#39;</code> or the single value <code>undef</code> or nothing</a></dt>
+
+<dd>
+<p>in which case <code>Getopt::Declare::new()</code> immediately returns zero. This alternative is useful when using a <code>FileHandle</code>:</p>
+
+<pre class="sh_perl">        my $args = Getopt::Declare-&#62;new($grammar, new FileHandle ($filename) || -SKIP);</pre>
+
+<p>because it makes explicit what happens if <code>FileHandle::new()</code> fails. Of course, if the <code>-SKIP</code> alternative were omitted, &#60;Getopt::Declare::new&#62; would still return immediately, having found <code>undef</code> as its second argument.</p>
+
+<dt><a name='Any'></a><a name="Any_other_ARRAY_reference"
+>Any other ARRAY reference</a></dt>
+
+<dd>
+<p>in which case <code>Getopt::Declare::new()</code> treats the array elements as a list of filenames, concatenates the contents of those files, and parses that.</p>
+
+<p>If the list does not denote any accessible file(s) <code>Getopt::Declare::new()</code> immediately returns zero. If matching files are found, but not successfully parsed, <code>undef</code> is returned.</p>
+
+<dt><a name='A'></a><a name="A_string"
+>A string</a></dt>
+
+<dd>
+<p>in which case <code>Getopt::Declare::new()</code> parses that string directly.</p>
+</dd>
+</dl>
+
+<p>Note that when <code>Getopt::Declare::new()</code> parses from a source other than <code>@ARGV</code>, unrecognized arguments are <i>not</i> placed back in <code>@ARGV</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Using_Getopt::Declare_objects_after_command-line_processing"
+>Using <em>Getopt::Declare</em> objects after command-line processing</a></h2>
+
+<p>After command-line processing is completed, the object returned by <code>Getopt::Declare::new()</code> will have the following features:</p>
+
+<dl>
+<dt><a name='Parameter'></a><a name="Parameter_data"
+>Parameter data</a></dt>
+
+<dd>
+<p>For each successfully matched parameter, the <em>Getopt::Declare</em> object will contain a hash element. The key of that element will be the leading flag or parameter variable name of the parameter.</p>
+
+<p>The value of the element will be a reference to another hash which contains the names and values of each distinct parameter variable and/or punctuator which was matched by the parameter. Punctuators generate string values containing the actual text matched. Scalar parameter variables generate scalar values. List parameter variables generate array references.</p>
+
+<p>As a special case, if a parameter consists of a single component (either a single flag or a single parameter variable), then the value for the corresponding hash key is not a hash reference, but the actual value matched.</p>
+
+<p>The following example illustrates the various possibilities:</p>
+
+<pre class="sh_perl">        $args = Getopt::Declare-&#62;new( q{
+
+                -v &#60;value&#62; [etc]        One or more values
+                &#60;infile&#62;                Input file [required]
+                -o &#60;outfiles&#62;...        Output files
+        } );
+
+        if ( $args-&#62;{&#39;-v&#39;} )
+        {
+                print  &#34;Using value: &#34;, $args-&#62;{&#39;-v&#39;}{&#39;&#60;value&#62;&#39;};
+                print  &#34; (et cetera)&#34; if $args-&#62;{&#39;-v&#39;}{&#39;etc&#39;};
+                print  &#34;\n&#34;;
+        }
+
+        open INFILE, $args-&#62;{&#39;&#60;infile&#62;&#39;} or die;
+        @data = &#60;INFILE&#62;;
+
+        foreach $outfile ( @{$args-&#62;{&#39;-o&#39;}{&#39;&#60;outfiles&#62;&#39;}} )
+        {
+                open  OUTFILE, &#34;&#62;$outfile&#34;  or die;
+                print OUTFILE process(@data);
+                close OUTFILE;
+        }</pre>
+
+<p>The values which are assigned to the various hash elements are copied from the corresponding blocked-scoped variables which are available within actions. In particular, if the value of any of those block-scoped variables is changed within an action, that changed value is saved in the hash. For example, given the specification:</p>
+
+<pre class="sh_perl">        $args = Getopt::Declare-&#62;new( q{
+
+        -ar &#60;R:n&#62;       Set aspect ratio (will be clipped to [0..1])
+                                {
+                                  $R = 0 if $R &#60; 0;
+                                  $R = 1 if $R &#62; 1;
+                                }
+        } );</pre>
+
+<p>then the value of <code>$args-&#62;{&#39;-ar&#39;}{&#39;&#60;R&#62;&#39;}</code> will always be between zero and one.</p>
+
+<dt><a name='The'></a><a name="The_@ARGV_array"
+>The <code>@ARGV</code> array</a></dt>
+
+<dd>
+<p>In its &#34;non-strict&#34; mode, once a <em>Getopt::Declare</em> object has completed its command-line processing, it pushes any unrecognized arguments back into the emptied command-line array <code>@ARGV</code> (whereas all <i>recognized</i> arguments will have been removed).</p>
+
+<p>Note that these remaining arguments will be in sequential elements (starting at <code>$ARGV[0]</code>), <i>not</i> in their original positions in <code>@ARGV</code>.</p>
+
+<dt><a name='The'></a><a name="The_Getopt::Declare::usage()_method"
+>The <code>Getopt::Declare::usage()</code> method</a></dt>
+
+<dd>
+<p>Once a <em>Getopt::Declare</em> object is created, its <code>usage()</code> method may be called to explicitly print out usage information corresponding to the specification with which it was built. See <a href="#Usage_information" class="podlinkpod"
+>&#34;Usage information&#34;</a> for more details. If the <code>usage()</code> method is called with an argument, that argument is passed to <code>exit</code> after the usage information is printed (the no-argument version of <code>usage()</code> simply returns at that point).</p>
+
+<dt><a name='The'></a><a name="The_Getopt::Declare::version()_method"
+>The <code>Getopt::Declare::version()</code> method</a></dt>
+
+<dd>
+<p>Another useful method of a <em>Getopt::Declare</em> object is <code>version()</code>, which prints out the name of the enclosing program, the last time it was modified, and the value of <code>$::VERSION</code>, if it is defined. Note that this implies that <i>all</i> <em>Getopt::Declare</em> objects in a single program will print out identical version information.</p>
+
+<p>Like the <code>usage()</code> method, if <code>version</code> is passed an argument, it will exit with that value after printing.</p>
+
+<dt><a name='The'></a><a name="The_Getopt::Declare::parse()_method"
+>The <code>Getopt::Declare::parse()</code> method</a></dt>
+
+<dd>
+<p>It is possible to separate the construction of a <em>Getopt::Declare</em> parser from the actual parsing it performs. If <code>Getopt::Declare::new()</code> is called with a second parameter <code>&#39;-BUILD&#39;</code> (see <a href="#Parsing_from_other_sources" class="podlinkpod"
+>&#34;Parsing from other sources&#34;</a>, it constructs and returns a parser, without parsing anything. The resulting parser object can then be used to parse multiple sources, by calling its <code>parse()</code> method.</p>
+
+<p><code>Getopt::Declare::parse()</code> takes an optional parameter which specifies the source of the text to be parsed (it parses <code>@ARGV</code> if the parameter is omitted). This parameter takes the same set of values as the optional second parameter of <code>Getopt::Declare::new()</code> (see <a href="#Parsing_from_other_sources" class="podlinkpod"
+>&#34;Parsing from other sources&#34;</a>).</p>
+
+<p><code>Getopt::Declare::parse()</code> returns true if the source is located and parsed successfully. It returns a defined false (zero) if the source is not located. An <code>undef</code> is returned if the source is located, but not successfully parsed.</p>
+
+<p>Thus, the following code first constructs a parser for a series of alternate configuration files and the command line, and then parses them:</p>
+
+<pre class="sh_perl">        # BUILD PARSERS
+        my $config  = Getopt::Declare-&#62;new($config_grammar, -BUILD);
+        my $cmdline = Getopt::Declare-&#62;new($cmdline_grammar, -BUILD);
+
+        # TRY STANDARD CONFIG FILES
+        $config-&#62;parse(-CONFIG)
+
+        # OTHERWISE, TRY GLOBAL CONFIG
+        or $config-&#62;parse(&#39;/usr/local/config/.demo_rc&#39;)
+
+        # OTHERWISE, TRY OPENING A FILEHANDLE (OR JUST GIVE UP)
+        or $config-&#62;parse(new FileHandle (&#34;.config&#34;) || -SKIP);
+
+        # NOW PARSE THE COMMAND LINE
+
+        $cmdline-&#62;parse() or die;</pre>
+
+<dt><a name='The'></a><a name="The_Getopt::Declare::code()_method"
+>The <code>Getopt::Declare::code()</code> method</a></dt>
+
+<dd>
+<p>It is also possible to retrieve the command-line parsing code generated internally by <code>Getopt::Declare::new()</code>. The <code>Getopt::Declare::code()</code> method returns a string containing the complete command-line processing code, as a single <code>do</code> block plus a leading <code>package</code> declaration.</p>
+
+<p><code>Getopt::Declare::code()</code> takes as its sole argument a string containing the complete name of the package (for the leading <code>package</code> declaration in the generated code). If this string is empty or undefined, the package name defaults to &#34;main&#34;.</p>
+
+<p>Since the default behaviour of <code>Getopt::Declare::new()</code> is to execute the command-line parsing code it generates, if the goal is only to generate the parser code, the optional second &#39;-BUILD&#39; parameter (see <a href="#Parsing_from_other_sources" class="podlinkpod"
+>&#34;Parsing from other sources&#34;</a>) should be specified when calling &#60;Getopt::Declare::new()&#62;.</p>
+
+<p>For example, the following program &#34;inlines&#34; a <code>Getopt::Declare</code> specification, by extracting it from between the first &#34;=for Getopt::Declare&#34; and the next &#34;=cut&#34; appearing on <code>STDIN</code>:</p>
+
+<pre class="sh_perl">        use Getopt::Declare;
+
+        sub encode { return Getopt::Declare-&#62;new(shift,-BUILD)-&#62;code() || die }
+
+        undef $/;
+        if (&#60;&#62;)
+        {
+                s {^=for\s+Getopt::Declare\s*\n(.*?)\n=cut}
+                  {&#39;my (\$self,$source) = ({});&#39;.encode($1).&#39; or die &#34;\n&#34;;&#39;}
+                  esm; 
+        }
+
+        print;</pre>
+
+<p>Note that the generated inlined version expects to find a lexical variable named <code>$source</code>, which tells it what to parse (this variable is normally set by the optional parameters of <code>Getopt::Declare::new()</code> or <code>Getopt::Declare::parse()</code>).</p>
+
+<p>The inlined code leaves all extracted parameters in the lexical variable <code>$self</code> and does not autogenerate help or version flags (since there is no actual <em>Getopt::Declare</em> object in the inlined code through which to generate them).</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTOGENERATED_FEATURES"
+>AUTOGENERATED FEATURES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Usage_information"
+>Usage information</a></h2>
+
+<p>The specification passed to <code>Getopt::Declare::new</code> is used (almost verbatim) as a &#34;usage&#34; display whenever usage information is requested.</p>
+
+<p>Such requests may be made either by specifying an argument matching the help parameter (see <a href="#Help_parameters" class="podlinkpod"
+>&#34;Help parameters&#34;</a>) or by explicitly calling the <code>Getopt::Declare::usage()</code> method (through an action or after command-line processing):</p>
+
+<pre class="sh_perl">        $args = Getopt::Declare-&#62;new( q{
+
+                -usage          Show usage information and exit
+                                        { $self-&#62;usage(0); }
+
+                +usage          Show usage information at end of program
+        } );
+
+        # PROGRAM HERE 
+
+        $args-&#62;usage()  if $args-&#62;{&#39;+usage&#39;};</pre>
+
+<p>The following changes are made to the original specification before it is displayed:</p>
+
+<ul>
+<li>All actions and comments are deleted,</li>
+
+<li>any <code>[ditto]</code> directive is converted to an appropriate set of &#34;ditto&#34; marks,</li>
+
+<li>any text in matching square brackets (including any directive) is deleted,</li>
+
+<li>any parameter variable type specifier (&#34;:i&#34;, &#34;:n&#34;, &#34;:/pat/&#34;, etc.) is deleted.</li>
+</ul>
+
+<p>Otherwise, the usage information displayed retains all the formatting present in the original specification.</p>
+
+<p>In addition to this information, if the input source is @ARGV, <em>Getopt::Declare</em> displays three sample command-lines: one indicating the normal usage (including any required parameter variables), one indicating how to invoke help (see <a href="#Help_parameters" class="podlinkpod"
+>&#34;Help parameters&#34;</a>), and one indicating how to determine the current version of the program (see <a href="#Version_parameters" class="podlinkpod"
+>&#34;Version parameters&#34;</a>).</p>
+
+<p>The usage information is printed to <code>STDOUT</code> and (since <em>Getopt::Declare</em> tends to encourage longer and better-documented parameter lists) if the <em>IO::Pager</em> package is available, an <em>IO::Pager</em> object is used to page out the entire usage documentation.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Usage_&#34;decoration&#34;"
+>Usage &#34;decoration&#34;</a></h2>
+
+<p>It is sometimes convenient to add other &#34;decorative&#34; features to a program&#39;s usage information, such as subheadings, general notes, separators, etc. <em>Getopt::Declare</em> accommodates this need by ignoring such items when interpreting a specification string, but printing them when asked for usage information.</p>
+
+<p>Any line which cannot be interpreted as either a parameter definition, a parameter description, or a parameter action, is treated as a &#34;decorator&#34; line, and is printed verbatim (after any square bracketted substrings have been removed from it). If your decoration needs square brackets, you need to escape the opening square bracket with a backslash, e.g. <code>\[decoration]</code>.</p>
+
+<p>The key to successfully decorating <em>Getopt::Declare</em> usage information is to ensure that decorator lines are separated from any preceding parameter specification, either by an action or by an empty line. In addition, like a parameter description, a decorator line cannot contain a tab character after the first non-whitespace character (because it would then be treated as a parameter specification).</p>
+
+<p>The following specification demonstrates various forms of usage decoration. In fact, there are only four actual parameters (<code>-in</code>, <code>-r</code>, <code>-p</code>, and <code>-out</code>) specified. Note in particular that <i>leading</i> tabs are perfectly acceptible in decorator lines.</p>
+
+<pre class="sh_perl">        $args = Getopt::Declare-&#62;new(&#60;&#60;&#39;EOPARAM&#39;);
+
+        ============================================================
+        Required parameter:
+
+                -in &#60;infile&#62;            Input file [required]
+
+        ------------------------------------------------------------
+
+        Optional parameters:
+
+                (The first two are mutually exclusive) [mutex: -r -p]
+
+                -r[and[om]]             Output in random order
+                -p[erm[ute]]            Output all permutations
+
+                ---------------------------------------------------
+
+                -out &#60;outfile&#62;          Optional output file
+
+        ------------------------------------------------------------
+        Note: this program is known to run very slowly of files with
+              long individual lines.
+        ============================================================
+        EOPARAM</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Help_parameters"
+>Help parameters</a></h2>
+
+<p>By default, <em>Getopt::Declare</em> automatically defines <i>all</i> of the following parameters:</p>
+
+<pre class="sh_perl">        -help   Show usage information [undocumented]
+                        { $self-&#62;usage(0); }
+        -Help   [ditto]
+        -HELP   [ditto]
+        --help  [ditto]
+        --Help  [ditto]
+        --HELP  [ditto]
+        -h      [ditto]
+        -H      [ditto]</pre>
+
+<p>Hence, most attempts by the user to get help will automatically work successfully.</p>
+
+<p>Note however that, if a parameter with any of these flags is explicitly specified in the string passed to <code>Getopt::Declare::new()</code>, that flag (only) is removed from the list of possible help flags. For example:</p>
+
+<pre class="sh_perl">        -w &#60;pixels:+i&#62;  Specify width in pixels
+        -h &#60;pixels:+i&#62;  Specify height in pixels</pre>
+
+<p>would cause the <code>-h</code> help parameter to be removed (although help would still be accessible through the other seven alternatives).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Version_parameters"
+>Version parameters</a></h2>
+
+<p><em>Getopt::Declare</em> also automatically creates a set of parameters which can be used to retrieve program version information:</p>
+
+<pre class="sh_perl">        -version        Show version information [undocumented]
+                                { $self-&#62;version(0); }
+        -Version        [ditto]
+        -VERSION        [ditto]
+        --version       [ditto]
+        --Version       [ditto]
+        --VERSION       [ditto]
+        -v              [ditto]
+        -V              [ditto]</pre>
+
+<p>As with the various help commands, explicitly specifying a parameter with any of the above flags removes that flag from the list of version flags.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIAGNOSTICS"
+>DIAGNOSTICS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><em>Getopt::Declare</em> may issue the following diagnostics whilst parsing a command-line. All of them are fatal (the first five, instantly so):</p>
+
+<dl>
+<dt><a name='Error'></a><a name="&#34;Error:_bad_Getopt::Declare_parameter_variable_specification_near_%s&#34;"
+>&#34;Error: bad Getopt::Declare parameter variable specification near %s&#34;</a></dt>
+
+<dd>
+<p>A matching pair of angle brackets were specified as part of a parameter definition, but did not form a valid parameter variable specification (that is, it wasn&#39;t in the form: &#60;<i>name</i>&#62; or &#60;<i>name</i>:<i>type</i>&#62;).</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_bad_type_in_Getopt::Declare_parameter_variable_specification_near_%s&#34;"
+>&#34;Error: bad type in Getopt::Declare parameter variable specification near %s&#34;</a></dt>
+
+<dd>
+<p>An unknown type specifier was used in a parameter variable type suffix.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_bad_action_in_Getopt::Declare_specification:\n_%s&#34;"
+>&#34;Error: bad action in Getopt::Declare specification:\n %s&#34;</a></dt>
+
+<dd>
+<p>A Perl syntax error was detected in the indicated action.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_unattached_action_in_Getopt::Declare_specification:\n_%s&#34;"
+>&#34;Error: unattached action in Getopt::Declare specification:\n %s&#34;</a></dt>
+
+<dd>
+<p>An action was found for which there was no preceding parameter specification. This usually occurs because the trailing tab was omitted from the preceding parameter specification.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_incomplete_action_in_Getopt::Declare_specification:\n_%s&#34;"
+>&#34;Error: incomplete action in Getopt::Declare specification:\n %s&#34;</a></dt>
+
+<dd>
+<p>An action was found, but it was missing one or more closing &#39;}&#39;s.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_bad_condition_in_directive_[requires:_%s]\n&#34;"
+>&#34;Error: bad condition in directive [requires: %s]\n&#34;</a></dt>
+
+<dd>
+<p>The condition specified as part of the indicated <code>[requires:...]</code> directive was not a well-formed boolean expression. Common problems include: omitting a <code>&#38;&#38;</code>/<code>||</code> operator between two flags, mismatched brackets, or using <code>and</code>/<code>or</code> instead of <code>&#38;&#38;</code>/<code>||</code>.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_in_generated_command-line_parser_code:\n_%s&#34;"
+>&#34;Error: in generated command-line parser code:\n %s&#34;</a></dt>
+
+<dd>
+<p>Either there was a Perl syntax error in one some action (which was not caught by the previous diagnostic), or (less likely) there is a bug in the code generator inside <em>Getopt::Declare</em>.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_incorrect_specification_of_%s_parameter&#34;"
+>&#34;Error: incorrect specification of %s parameter&#34;</a></dt>
+
+<dd>
+<p>The flag for the indicated parameter was found, but the argument did not then match any of that parameter&#39;s variant syntaxes.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_parameter_%s_not_allowed_with_%s&#34;"
+>&#34;Error: parameter %s not allowed with %s&#34;</a></dt>
+
+<dd>
+<p>Two mutually exclusive flags were specified together.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_required_parameter_%s_not_found&#34;"
+>&#34;Error: required parameter %s not found&#34;</a></dt>
+
+<dd>
+<p>No argument matching the specified &#34;required&#34; parameter was found during command-line processing.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_parameter_%s_can_only_be_specified_with_%s&#34;"
+>&#34;Error: parameter %s can only be specified with %s&#34;</a></dt>
+
+<dd>
+<p>The indicated parameter has a <code>[requires:...]</code> directive, which was not satisfied.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_unknown_command-line_argument_(%s)&#34;"
+>&#34;Error: unknown command-line argument (%s)&#34;</a></dt>
+
+<dd>
+<p>A command-line argument was encountered which did not match any specified parameter. This diagnostic can only only appear if the &#34;strict&#34; option is in effect.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_in_parameter_%s_(%s_must_be_an_integer_greater_than_zero)&#34;"
+>&#34;Error: in parameter %s (%s must be an integer greater than zero)&#34;</a></dt>
+
+<dd>
+<p>A parameter variable in the indicated parameter was declared with the type &#34;:+i&#34; (or a type derived from it), but the corresponding argument was not a positive, non-zero integer.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_in_parameter_%s_(%s_must_be_a_number_greater_than_zero)&#34;"
+>&#34;Error: in parameter %s (%s must be a number greater than zero)&#34;</a></dt>
+
+<dd>
+<p>A parameter variable in the indicated parameter was declared with the type &#34;:+n&#34; (or a type derived from it), but the corresponding argument was not a positive, non-zero number.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_in_parameter_%s_(%s_must_be_an_positive_integer)&#34;"
+>&#34;Error: in parameter %s (%s must be an positive integer)&#34;</a></dt>
+
+<dd>
+<p>A parameter variable in the indicated parameter was declared with the type &#34;:0+i&#34; (or a type derived from it), but the corresponding argument was not a positive integer.</p>
+
+<dt><a name='Error'></a><a name="&#34;Error:_in_parameter_%s_(%s_must_be_a_positive_number)&#34;"
+>&#34;Error: in parameter %s (%s must be a positive number)&#34;</a></dt>
+
+<dd>
+<p>A parameter variable in the indicated parameter was declared with the type &#34;:0+n&#34; (or a type derived from it), but the corresponding argument was not a positive number.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Damian Conway &#60;damian@conway.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS_AND_ANNOYANCES"
+>BUGS AND ANNOYANCES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>There are undoubtedly serious bugs lurking somewhere in this code.</p>
+
+<p>If nothing else, it shouldn&#39;t take 1500 lines to explain a package that was designed for intuitive ease of use!</p>
+
+<p>Bug reports and other feedback are most welcome at: <a href="https://rt.cpan.org/Public/Bug/Report.html?Queue=Getopt-Declare" class="podlinkurl"
+>https://rt.cpan.org/Public/Bug/Report.html?Queue=Getopt-Declare</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">       Copyright (c) 1997-2000, Damian Conway. All Rights Reserved.
+     This module is free software. It may be used, redistributed
+     and/or modified under the terms of the Perl Artistic License
+          (see <a href="http://www.perl.com/perl/misc/Artistic.html" class="podlinkurl"
+>http://www.perl.com/perl/misc/Artistic.html</a>)</pre>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78059 Uploads, 24684 Distributions
+105888 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 08:08:10 2012 GMT (0.304241180419922) @cpansearch1 -->
+ </body>
+</html>

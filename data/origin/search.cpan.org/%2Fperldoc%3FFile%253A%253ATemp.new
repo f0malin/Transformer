@@ -1,0 +1,895 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>File::Temp - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","File-Temp",3]);
+    _gaq.push(["_setCustomVar",5,"Release","File-Temp-0.22",3]);
+    _gaq.push(["_setCustomVar",3,"Module","File::Temp",3]);
+    _gaq.push(["_setCustomVar",1,"Author","TJENNESS",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?File::Temp">permalink</a></div>
+  <a href="/~tjenness/">Tim Jenness</a> &gt;
+  <a href="/~tjenness/File-Temp-0.22/">File-Temp-0.22</a> &gt;
+  File::Temp
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/5f7bf349c072075d246de8e66ce41828?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/T/TJ/TJENNESS/File-Temp-0.22.tar.gz">File-Temp-0.22.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=File%3A%3ATemp;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~TJENNESS/File-Temp-0.22/Temp.pm">Annotate this POD
+(1)
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Time%3A%3AHiRes">Time::HiRes</a><br>
+<a href="/perldoc?File%3A%3ASpec">File::Spec</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?File%3A%3ACopy">File::Copy</a><br>
+<a href="/perldoc?IO%3A%3AScalar">IO::Scalar</a><br>
+<a href="/perldoc?Tie%3A%3AFile">Tie::File</a><br>
+<a href="/perldoc?IPC%3A%3AOpen3">IPC::Open3</a><br>
+<a href="/perldoc?IO%3A%3AFile">IO::File</a><br>
+<a href="/perldoc?Test%3A%3AMore">Test::More</a><br>
+<a href="/perldoc?Net%3A%3ASMTP">Net::SMTP</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=File%3A%3ATemp">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 8</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 5</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=File-Temp">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.22 &nbsp;
+<span class="noprint">
+  <a href="/src/TJENNESS/File-Temp-0.22/Temp.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#OBJECT-ORIENTED_INTERFACE'>OBJECT-ORIENTED INTERFACE</a>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <li class='indexItem indexItem1'><a href='#MKTEMP_FUNCTIONS'>MKTEMP FUNCTIONS</a>
+  <li class='indexItem indexItem1'><a href='#POSIX_FUNCTIONS'>POSIX FUNCTIONS</a>
+  <li class='indexItem indexItem1'><a href='#ADDITIONAL_FUNCTIONS'>ADDITIONAL FUNCTIONS</a>
+  <li class='indexItem indexItem1'><a href='#UTILITY_FUNCTIONS'>UTILITY FUNCTIONS</a>
+  <li class='indexItem indexItem1'><a href='#PACKAGE_VARIABLES'>PACKAGE VARIABLES</a>
+  <li class='indexItem indexItem1'><a href='#WARNING'>WARNING</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Temporary_files_and_NFS'>Temporary files and NFS</a>
+    <li class='indexItem indexItem2'><a href='#Forking'>Forking</a>
+    <li class='indexItem indexItem2'><a href='#Directory_removal'>Directory removal</a>
+    <li class='indexItem indexItem2'><a href='#BINMODE'>BINMODE</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#HISTORY'>HISTORY</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>File::Temp - return name and handle of a temporary file safely</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use File::Temp qw/ tempfile tempdir /;
+
+  $fh = tempfile();
+  ($fh, $filename) = tempfile();
+
+  ($fh, $filename) = tempfile( $template, DIR =&#62; $dir);
+  ($fh, $filename) = tempfile( $template, SUFFIX =&#62; &#39;.dat&#39;);
+  ($fh, $filename) = tempfile( $template, TMPDIR =&#62; 1 );
+
+  binmode( $fh, &#34;:utf8&#34; );
+
+  $dir = tempdir( CLEANUP =&#62; 1 );
+  ($fh, $filename) = tempfile( DIR =&#62; $dir );</pre>
+
+<p>Object interface:</p>
+
+<pre class="sh_perl">  require File::Temp;
+  use File::Temp ();
+  use File::Temp qw/ :seekable /;
+
+  $fh = File::Temp-&#62;new();
+  $fname = $fh-&#62;filename;
+
+  $fh = File::Temp-&#62;new(TEMPLATE =&#62; $template);
+  $fname = $fh-&#62;filename;
+
+  $tmp = File::Temp-&#62;new( UNLINK =&#62; 0, SUFFIX =&#62; &#39;.dat&#39; );
+  print $tmp &#34;Some data\n&#34;;
+  print &#34;Filename is $tmp\n&#34;;
+  $tmp-&#62;seek( 0, SEEK_END );</pre>
+
+<p>The following interfaces are provided for compatibility with existing APIs. They should not be used in new code.</p>
+
+<p>MkTemp family:</p>
+
+<pre class="sh_perl">  use File::Temp qw/ :mktemp  /;
+
+  ($fh, $file) = mkstemp( &#34;tmpfileXXXXX&#34; );
+  ($fh, $file) = mkstemps( &#34;tmpfileXXXXXX&#34;, $suffix);
+
+  $tmpdir = mkdtemp( $template );
+
+  $unopened_file = mktemp( $template );</pre>
+
+<p>POSIX functions:</p>
+
+<pre class="sh_perl">  use File::Temp qw/ :POSIX /;
+
+  $file = tmpnam();
+  $fh = tmpfile();
+
+  ($fh, $file) = tmpnam();</pre>
+
+<p>Compatibility functions:</p>
+
+<pre class="sh_perl">  $unopened_file = File::Temp::tempnam( $dir, $pfx );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>File::Temp</code> can be used to create and open temporary files in a safe way. There is both a function interface and an object-oriented interface. The File::Temp constructor or the tempfile() function can be used to return the name and the open filehandle of a temporary file. The tempdir() function can be used to create a temporary directory.</p>
+
+<p>The security aspect of temporary file creation is emphasized such that a filehandle and filename are returned together. This helps guarantee that a race condition can not occur where the temporary file is created by another process between checking for the existence of the file and its opening. Additional security levels are provided to check, for example, that the sticky bit is set on world writable directories. See <a href="#safe_level" class="podlinkpod"
+>&#34;safe_level&#34;</a> for more information.</p>
+
+<p>For compatibility with popular C library functions, Perl implementations of the mkstemp() family of functions are provided. These are, mkstemp(), mkstemps(), mkdtemp() and mktemp().</p>
+
+<p>Additionally, implementations of the standard <a href="/perldoc?POSIX" class="podlinkpod"
+>POSIX</a> tmpnam() and tmpfile() functions are provided if required.</p>
+
+<p>Implementations of mktemp(), tmpnam(), and tempnam() are provided, but should be used with caution since they return only a filename that was valid when function was called, so cannot guarantee that the file will not exist by the time the caller opens the filename.</p>
+
+<p>Filehandles returned by these functions support the seekable methods.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OBJECT-ORIENTED_INTERFACE"
+>OBJECT-ORIENTED INTERFACE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This is the primary interface for interacting with <code>File::Temp</code>. Using the OO interface a temporary file can be created when the object is constructed and the file can be removed when the object is no longer required.</p>
+
+<p>Note that there is no method to obtain the filehandle from the <code>File::Temp</code> object. The object itself acts as a filehandle. Also, the object is configured such that it stringifies to the name of the temporary file, and can be compared to a filename directly. The object isa <code>IO::Handle</code> and isa <code>IO::Seekable</code> so all those methods are available.</p>
+
+<dl>
+<dt><a name="new"
+><b>new</b></a></dt>
+
+<dd>
+<p>Create a temporary file object.</p>
+
+<pre class="sh_perl">  my $tmp = File::Temp-&#62;new();</pre>
+
+<p>by default the object is constructed as if <code>tempfile</code> was called without options, but with the additional behaviour that the temporary file is removed by the object destructor if UNLINK is set to true (the default).</p>
+
+<p>Supported arguments are the same as for <code>tempfile</code>: UNLINK (defaulting to true), DIR, EXLOCK and SUFFIX. Additionally, the filename template is specified using the TEMPLATE option. The OPEN option is not supported (the file is always opened).</p>
+
+<pre class="sh_perl"> $tmp = File::Temp-&#62;new( TEMPLATE =&#62; &#39;tempXXXXX&#39;,
+                        DIR =&#62; &#39;mydir&#39;,
+                        SUFFIX =&#62; &#39;.dat&#39;);</pre>
+
+<p>Arguments are case insensitive.</p>
+
+<p>Can call croak() if an error occurs.</p>
+
+<dt><a name="newdir"
+><b>newdir</b></a></dt>
+
+<dd>
+<p>Create a temporary directory using an object oriented interface.</p>
+
+<pre class="sh_perl">  $dir = File::Temp-&#62;newdir();</pre>
+
+<p>By default the directory is deleted when the object goes out of scope.</p>
+
+<p>Supports the same options as the <code>tempdir</code> function. Note that directories created with this method default to CLEANUP =&#62; 1.</p>
+
+<pre class="sh_perl">  $dir = File::Temp-&#62;newdir( $template, %options );</pre>
+
+<dt><a name="filename"
+><b>filename</b></a></dt>
+
+<dd>
+<p>Return the name of the temporary file associated with this object (if the object was created using the &#34;new&#34; constructor).</p>
+
+<pre class="sh_perl">  $filename = $tmp-&#62;filename;</pre>
+
+<p>This method is called automatically when the object is used as a string.</p>
+
+<dt><a name="dirname"
+><b>dirname</b></a></dt>
+
+<dd>
+<p>Return the name of the temporary directory associated with this object (if the object was created using the &#34;newdir&#34; constructor).</p>
+
+<pre class="sh_perl">  $dirname = $tmpdir-&#62;dirname;</pre>
+
+<p>This method is called automatically when the object is used in string context.</p>
+
+<dt><a name="unlink_on_destroy"
+><b>unlink_on_destroy</b></a></dt>
+
+<dd>
+<p>Control whether the file is unlinked when the object goes out of scope. The file is removed if this value is true and $KEEP_ALL is not.</p>
+
+<pre class="sh_perl"> $fh-&#62;unlink_on_destroy( 1 );</pre>
+
+<p>Default is for the file to be removed.</p>
+
+<dt><a name="DESTROY"
+><b>DESTROY</b></a></dt>
+
+<dd>
+<p>When the object goes out of scope, the destructor is called. This destructor will attempt to unlink the file (using <code>unlink1</code>) if the constructor was called with UNLINK set to 1 (the default state if UNLINK is not specified).</p>
+
+<p>No error is given if the unlink fails.</p>
+
+<p>If the object has been passed to a child process during a fork, the file will be deleted when the object goes out of scope in the parent.</p>
+
+<p>For a temporary directory object the directory will be removed unless the CLEANUP argument was used in the constructor (and set to false) or <code>unlink_on_destroy</code> was modified after creation.</p>
+
+<p>If the global variable $KEEP_ALL is true, the file or directory will not be removed.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This section describes the recommended interface for generating temporary files and directories.</p>
+
+<dl>
+<dt><a name="tempfile"
+><b>tempfile</b></a></dt>
+
+<dd>
+<p>This is the basic function to generate temporary files. The behaviour of the file can be changed using various options:</p>
+
+<pre class="sh_perl">  $fh = tempfile();
+  ($fh, $filename) = tempfile();</pre>
+
+<p>Create a temporary file in the directory specified for temporary files, as specified by the tmpdir() function in <a href="/perldoc?File%3A%3ASpec" class="podlinkpod"
+>File::Spec</a>.</p>
+
+<pre class="sh_perl">  ($fh, $filename) = tempfile($template);</pre>
+
+<p>Create a temporary file in the current directory using the supplied template. Trailing `X&#39; characters are replaced with random letters to generate the filename. At least four `X&#39; characters must be present at the end of the template.</p>
+
+<pre class="sh_perl">  ($fh, $filename) = tempfile($template, SUFFIX =&#62; $suffix)</pre>
+
+<p>Same as previously, except that a suffix is added to the template after the `X&#39; translation. Useful for ensuring that a temporary filename has a particular extension when needed by other applications. But see the WARNING at the end.</p>
+
+<pre class="sh_perl">  ($fh, $filename) = tempfile($template, DIR =&#62; $dir);</pre>
+
+<p>Translates the template as before except that a directory name is specified.</p>
+
+<pre class="sh_perl">  ($fh, $filename) = tempfile($template, TMPDIR =&#62; 1);</pre>
+
+<p>Equivalent to specifying a DIR of &#34;File::Spec-&#62;tmpdir&#34;, writing the file into the same temporary directory as would be used if no template was specified at all.</p>
+
+<pre class="sh_perl">  ($fh, $filename) = tempfile($template, UNLINK =&#62; 1);</pre>
+
+<p>Return the filename and filehandle as before except that the file is automatically removed when the program exits (dependent on $KEEP_ALL). Default is for the file to be removed if a file handle is requested and to be kept if the filename is requested. In a scalar context (where no filename is returned) the file is always deleted either (depending on the operating system) on exit or when it is closed (unless $KEEP_ALL is true when the temp file is created).</p>
+
+<p>Use the object-oriented interface if fine-grained control of when a file is removed is required.</p>
+
+<p>If the template is not specified, a template is always automatically generated. This temporary file is placed in tmpdir() (<a href="/perldoc?File%3A%3ASpec" class="podlinkpod"
+>File::Spec</a>) unless a directory is specified explicitly with the DIR option.</p>
+
+<pre class="sh_perl">  $fh = tempfile( DIR =&#62; $dir );</pre>
+
+<p>If called in scalar context, only the filehandle is returned and the file will automatically be deleted when closed on operating systems that support this (see the description of tmpfile() elsewhere in this document). This is the preferred mode of operation, as if you only have a filehandle, you can never create a race condition by fumbling with the filename. On systems that can not unlink an open file or can not mark a file as temporary when it is opened (for example, Windows NT uses the <code>O_TEMPORARY</code> flag) the file is marked for deletion when the program ends (equivalent to setting UNLINK to 1). The <code>UNLINK</code> flag is ignored if present.</p>
+
+<pre class="sh_perl">  (undef, $filename) = tempfile($template, OPEN =&#62; 0);</pre>
+
+<p>This will return the filename based on the template but will not open this file. Cannot be used in conjunction with UNLINK set to true. Default is to always open the file to protect from possible race conditions. A warning is issued if warnings are turned on. Consider using the tmpnam() and mktemp() functions described elsewhere in this document if opening the file is not required.</p>
+
+<p>If the operating system supports it (for example BSD derived systems), the filehandle will be opened with O_EXLOCK (open with exclusive file lock). This can sometimes cause problems if the intention is to pass the filename to another system that expects to take an exclusive lock itself (such as DBD::SQLite) whilst ensuring that the tempfile is not reused. In this situation the &#34;EXLOCK&#34; option can be passed to tempfile. By default EXLOCK will be true (this retains compatibility with earlier releases).</p>
+
+<pre class="sh_perl">  ($fh, $filename) = tempfile($template, EXLOCK =&#62; 0);</pre>
+
+<p>Options can be combined as required.</p>
+
+<p>Will croak() if there is an error.</p>
+
+<dt><a name="tempdir"
+><b>tempdir</b></a></dt>
+
+<dd>
+<p>This is the recommended interface for creation of temporary directories. By default the directory will not be removed on exit (that is, it won&#39;t be temporary; this behaviour can not be changed because of issues with backwards compatibility). To enable removal either use the CLEANUP option which will trigger removal on program exit, or consider using the &#34;newdir&#34; method in the object interface which will allow the directory to be cleaned up when the object goes out of scope.</p>
+
+<p>The behaviour of the function depends on the arguments:</p>
+
+<pre class="sh_perl">  $tempdir = tempdir();</pre>
+
+<p>Create a directory in tmpdir() (see <a href="/perldoc?File%3A%3ASpec" class="podlinkpod"
+>File::Spec</a>).</p>
+
+<pre class="sh_perl">  $tempdir = tempdir( $template );</pre>
+
+<p>Create a directory from the supplied template. This template is similar to that described for tempfile(). `X&#39; characters at the end of the template are replaced with random letters to construct the directory name. At least four `X&#39; characters must be in the template.</p>
+
+<pre class="sh_perl">  $tempdir = tempdir ( DIR =&#62; $dir );</pre>
+
+<p>Specifies the directory to use for the temporary directory. The temporary directory name is derived from an internal template.</p>
+
+<pre class="sh_perl">  $tempdir = tempdir ( $template, DIR =&#62; $dir );</pre>
+
+<p>Prepend the supplied directory name to the template. The template should not include parent directory specifications itself. Any parent directory specifications are removed from the template before prepending the supplied directory.</p>
+
+<pre class="sh_perl">  $tempdir = tempdir ( $template, TMPDIR =&#62; 1 );</pre>
+
+<p>Using the supplied template, create the temporary directory in a standard location for temporary files. Equivalent to doing</p>
+
+<pre class="sh_perl">  $tempdir = tempdir ( $template, DIR =&#62; File::Spec-&#62;tmpdir);</pre>
+
+<p>but shorter. Parent directory specifications are stripped from the template itself. The <code>TMPDIR</code> option is ignored if <code>DIR</code> is set explicitly. Additionally, <code>TMPDIR</code> is implied if neither a template nor a directory are supplied.</p>
+
+<pre class="sh_perl">  $tempdir = tempdir( $template, CLEANUP =&#62; 1);</pre>
+
+<p>Create a temporary directory using the supplied template, but attempt to remove it (and all files inside it) when the program exits. Note that an attempt will be made to remove all files from the directory even if they were not created by this module (otherwise why ask to clean it up?). The directory removal is made with the rmtree() function from the <a href="/perldoc?File%3A%3APath" class="podlinkpod"
+>File::Path</a> module. Of course, if the template is not specified, the temporary directory will be created in tmpdir() and will also be removed at program exit.</p>
+
+<p>Will croak() if there is an error.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MKTEMP_FUNCTIONS"
+>MKTEMP FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following functions are Perl implementations of the mktemp() family of temp file generation system calls.</p>
+
+<dl>
+<dt><a name="mkstemp"
+><b>mkstemp</b></a></dt>
+
+<dd>
+<p>Given a template, returns a filehandle to the temporary file and the name of the file.</p>
+
+<pre class="sh_perl">  ($fh, $name) = mkstemp( $template );</pre>
+
+<p>In scalar context, just the filehandle is returned.</p>
+
+<p>The template may be any filename with some number of X&#39;s appended to it, for example <em>/tmp/temp.XXXX</em>. The trailing X&#39;s are replaced with unique alphanumeric combinations.</p>
+
+<p>Will croak() if there is an error.</p>
+
+<dt><a name="mkstemps"
+><b>mkstemps</b></a></dt>
+
+<dd>
+<p>Similar to mkstemp(), except that an extra argument can be supplied with a suffix to be appended to the template.</p>
+
+<pre class="sh_perl">  ($fh, $name) = mkstemps( $template, $suffix );</pre>
+
+<p>For example a template of <code>testXXXXXX</code> and suffix of <code>.dat</code> would generate a file similar to <em>testhGji_w.dat</em>.</p>
+
+<p>Returns just the filehandle alone when called in scalar context.</p>
+
+<p>Will croak() if there is an error.</p>
+
+<dt><a name="mkdtemp"
+><b>mkdtemp</b></a></dt>
+
+<dd>
+<p>Create a directory from a template. The template must end in X&#39;s that are replaced by the routine.</p>
+
+<pre class="sh_perl">  $tmpdir_name = mkdtemp($template);</pre>
+
+<p>Returns the name of the temporary directory created.</p>
+
+<p>Directory must be removed by the caller.</p>
+
+<p>Will croak() if there is an error.</p>
+
+<dt><a name="mktemp"
+><b>mktemp</b></a></dt>
+
+<dd>
+<p>Returns a valid temporary filename but does not guarantee that the file will not be opened by someone else.</p>
+
+<pre class="sh_perl">  $unopened_file = mktemp($template);</pre>
+
+<p>Template is the same as that required by mkstemp().</p>
+
+<p>Will croak() if there is an error.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="POSIX_FUNCTIONS"
+>POSIX FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This section describes the re-implementation of the tmpnam() and tmpfile() functions described in <a href="/perldoc?POSIX" class="podlinkpod"
+>POSIX</a> using the mkstemp() from this module.</p>
+
+<p>Unlike the <a href="/perldoc?POSIX" class="podlinkpod"
+>POSIX</a> implementations, the directory used for the temporary file is not specified in a system include file (<code>P_tmpdir</code>) but simply depends on the choice of tmpdir() returned by <a href="/perldoc?File%3A%3ASpec" class="podlinkpod"
+>File::Spec</a>. On some implementations this location can be set using the <code>TMPDIR</code> environment variable, which may not be secure. If this is a problem, simply use mkstemp() and specify a template.</p>
+
+<dl>
+<dt><a name="tmpnam"
+><b>tmpnam</b></a></dt>
+
+<dd>
+<p>When called in scalar context, returns the full name (including path) of a temporary file (uses mktemp()). The only check is that the file does not already exist, but there is no guarantee that that condition will continue to apply.</p>
+
+<pre class="sh_perl">  $file = tmpnam();</pre>
+
+<p>When called in list context, a filehandle to the open file and a filename are returned. This is achieved by calling mkstemp() after constructing a suitable template.</p>
+
+<pre class="sh_perl">  ($fh, $file) = tmpnam();</pre>
+
+<p>If possible, this form should be used to prevent possible race conditions.</p>
+
+<p>See <a href="/perldoc?File%3A%3ASpec#tmpdir" class="podlinkpod"
+>&#34;tmpdir&#34; in File::Spec</a> for information on the choice of temporary directory for a particular operating system.</p>
+
+<p>Will croak() if there is an error.</p>
+
+<dt><a name="tmpfile"
+><b>tmpfile</b></a></dt>
+
+<dd>
+<p>Returns the filehandle of a temporary file.</p>
+
+<pre class="sh_perl">  $fh = tmpfile();</pre>
+
+<p>The file is removed when the filehandle is closed or when the program exits. No access to the filename is provided.</p>
+
+<p>If the temporary file can not be created undef is returned. Currently this command will probably not work when the temporary directory is on an NFS file system.</p>
+
+<p>Will croak() if there is an error.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ADDITIONAL_FUNCTIONS"
+>ADDITIONAL FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>These functions are provided for backwards compatibility with common tempfile generation C library functions.</p>
+
+<p>They are not exported and must be addressed using the full package name.</p>
+
+<dl>
+<dt><a name="tempnam"
+><b>tempnam</b></a></dt>
+
+<dd>
+<p>Return the name of a temporary file in the specified directory using a prefix. The file is guaranteed not to exist at the time the function was called, but such guarantees are good for one clock tick only. Always use the proper form of <code>sysopen</code> with <code>O_CREAT | O_EXCL</code> if you must open such a filename.</p>
+
+<pre class="sh_perl">  $filename = File::Temp::tempnam( $dir, $prefix );</pre>
+
+<p>Equivalent to running mktemp() with $dir/$prefixXXXXXXXX (using unix file convention as an example)</p>
+
+<p>Because this function uses mktemp(), it can suffer from race conditions.</p>
+
+<p>Will croak() if there is an error.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="UTILITY_FUNCTIONS"
+>UTILITY FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Useful functions for dealing with the filehandle and filename.</p>
+
+<dl>
+<dt><a name="unlink0"
+><b>unlink0</b></a></dt>
+
+<dd>
+<p>Given an open filehandle and the associated filename, make a safe unlink. This is achieved by first checking that the filename and filehandle initially point to the same file and that the number of links to the file is 1 (all fields returned by stat() are compared). Then the filename is unlinked and the filehandle checked once again to verify that the number of links on that file is now 0. This is the closest you can come to making sure that the filename unlinked was the same as the file whose descriptor you hold.</p>
+
+<pre class="sh_perl">  unlink0($fh, $path)
+     or die &#34;Error unlinking file $path safely&#34;;</pre>
+
+<p>Returns false on error but croaks() if there is a security anomaly. The filehandle is not closed since on some occasions this is not required.</p>
+
+<p>On some platforms, for example Windows NT, it is not possible to unlink an open file (the file must be closed first). On those platforms, the actual unlinking is deferred until the program ends and good status is returned. A check is still performed to make sure that the filehandle and filename are pointing to the same thing (but not at the time the end block is executed since the deferred removal may not have access to the filehandle).</p>
+
+<p>Additionally, on Windows NT not all the fields returned by stat() can be compared. For example, the <code>dev</code> and <code>rdev</code> fields seem to be different. Also, it seems that the size of the file returned by stat() does not always agree, with <code>stat(FH)</code> being more accurate than <code>stat(filename)</code>, presumably because of caching issues even when using autoflush (this is usually overcome by waiting a while after writing to the tempfile before attempting to <code>unlink0</code> it).</p>
+
+<p>Finally, on NFS file systems the link count of the file handle does not always go to zero immediately after unlinking. Currently, this command is expected to fail on NFS disks.</p>
+
+<p>This function is disabled if the global variable $KEEP_ALL is true and an unlink on open file is supported. If the unlink is to be deferred to the END block, the file is still registered for removal.</p>
+
+<p>This function should not be called if you are using the object oriented interface since the it will interfere with the object destructor deleting the file.</p>
+
+<dt><a name="cmpstat"
+><b>cmpstat</b></a></dt>
+
+<dd>
+<p>Compare <code>stat</code> of filehandle with <code>stat</code> of provided filename. This can be used to check that the filename and filehandle initially point to the same file and that the number of links to the file is 1 (all fields returned by stat() are compared).</p>
+
+<pre class="sh_perl">  cmpstat($fh, $path)
+     or die &#34;Error comparing handle with file&#34;;</pre>
+
+<p>Returns false if the stat information differs or if the link count is greater than 1. Calls croak if there is a security anomaly.</p>
+
+<p>On certain platforms, for example Windows, not all the fields returned by stat() can be compared. For example, the <code>dev</code> and <code>rdev</code> fields seem to be different in Windows. Also, it seems that the size of the file returned by stat() does not always agree, with <code>stat(FH)</code> being more accurate than <code>stat(filename)</code>, presumably because of caching issues even when using autoflush (this is usually overcome by waiting a while after writing to the tempfile before attempting to <code>unlink0</code> it).</p>
+
+<p>Not exported by default.</p>
+
+<dt><a name="unlink1"
+><b>unlink1</b></a></dt>
+
+<dd>
+<p>Similar to <code>unlink0</code> except after file comparison using cmpstat, the filehandle is closed prior to attempting to unlink the file. This allows the file to be removed without using an END block, but does mean that the post-unlink comparison of the filehandle state provided by <code>unlink0</code> is not available.</p>
+
+<pre class="sh_perl">  unlink1($fh, $path)
+     or die &#34;Error closing and unlinking file&#34;;</pre>
+
+<p>Usually called from the object destructor when using the OO interface.</p>
+
+<p>Not exported by default.</p>
+
+<p>This function is disabled if the global variable $KEEP_ALL is true.</p>
+
+<p>Can call croak() if there is a security anomaly during the stat() comparison.</p>
+
+<dt><a name="cleanup"
+><b>cleanup</b></a></dt>
+
+<dd>
+<p>Calling this function will cause any temp files or temp directories that are registered for removal to be removed. This happens automatically when the process exits but can be triggered manually if the caller is sure that none of the temp files are required. This method can be registered as an Apache callback.</p>
+
+<p>On OSes where temp files are automatically removed when the temp file is closed, calling this function will have no effect other than to remove temporary directories (which may include temporary files).</p>
+
+<pre class="sh_perl">  File::Temp::cleanup();</pre>
+
+<p>Not exported by default.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PACKAGE_VARIABLES"
+>PACKAGE VARIABLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>These functions control the global state of the package.</p>
+
+<dl>
+<dt><a name="safe_level"
+><b>safe_level</b></a></dt>
+
+<dd>
+<p>Controls the lengths to which the module will go to check the safety of the temporary file or directory before proceeding. Options are:</p>
+
+<dl>
+<dt><a name="STANDARD"
+>STANDARD</a></dt>
+
+<dd>
+<p>Do the basic security measures to ensure the directory exists and is writable, that temporary files are opened only if they do not already exist, and that possible race conditions are avoided. Finally the <a href="#unlink0" class="podlinkpod"
+>unlink0</a> function is used to remove files safely.</p>
+
+<dt><a name="MEDIUM"
+>MEDIUM</a></dt>
+
+<dd>
+<p>In addition to the STANDARD security, the output directory is checked to make sure that it is owned either by root or the user running the program. If the directory is writable by group or by other, it is then checked to make sure that the sticky bit is set.</p>
+
+<p>Will not work on platforms that do not support the <code>-k</code> test for sticky bit.</p>
+
+<dt><a name="HIGH"
+>HIGH</a></dt>
+
+<dd>
+<p>In addition to the MEDIUM security checks, also check for the possibility of ``chown() giveaway&#39;&#39; using the <a href="/perldoc?POSIX" class="podlinkpod"
+>POSIX</a> sysconf() function. If this is a possibility, each directory in the path is checked in turn for safeness, recursively walking back to the root directory.</p>
+
+<p>For platforms that do not support the <a href="/perldoc?POSIX" class="podlinkpod"
+>POSIX</a> <code>_PC_CHOWN_RESTRICTED</code> symbol (for example, Windows NT) it is assumed that ``chown() giveaway&#39;&#39; is possible and the recursive test is performed.</p>
+</dd>
+</dl>
+
+<p>The level can be changed as follows:</p>
+
+<pre class="sh_perl">  File::Temp-&#62;safe_level( File::Temp::HIGH );</pre>
+
+<p>The level constants are not exported by the module.</p>
+
+<p>Currently, you must be running at least perl v5.6.0 in order to run with MEDIUM or HIGH security. This is simply because the safety tests use functions from <a href="/perldoc?Fcntl" class="podlinkpod"
+>Fcntl</a> that are not available in older versions of perl. The problem is that the version number for Fcntl is the same in perl 5.6.0 and in 5.005_03 even though they are different versions.</p>
+
+<p>On systems that do not support the HIGH or MEDIUM safety levels (for example Win NT or OS/2) any attempt to change the level will be ignored. The decision to ignore rather than raise an exception allows portable programs to be written with high security in mind for the systems that can support this without those programs failing on systems where the extra tests are irrelevant.</p>
+
+<p>If you really need to see whether the change has been accepted simply examine the return value of <code>safe_level</code>.</p>
+
+<pre class="sh_perl">  $newlevel = File::Temp-&#62;safe_level( File::Temp::HIGH );
+  die &#34;Could not change to high security&#34;
+      if $newlevel != File::Temp::HIGH;</pre>
+
+<dt><a name="TopSystemUID"
+>TopSystemUID</a></dt>
+
+<dd>
+<p>This is the highest UID on the current system that refers to a root UID. This is used to make sure that the temporary directory is owned by a system UID (<code>root</code>, <code>bin</code>, <code>sys</code> etc) rather than simply by root.</p>
+
+<p>This is required since on many unix systems <code>/tmp</code> is not owned by root.</p>
+
+<p>Default is to assume that any UID less than or equal to 10 is a root UID.</p>
+
+<pre class="sh_perl">  File::Temp-&#62;top_system_uid(10);
+  my $topid = File::Temp-&#62;top_system_uid;</pre>
+
+<p>This value can be adjusted to reduce security checking if required. The value is only relevant when <code>safe_level</code> is set to MEDIUM or higher.</p>
+
+<dt><a name='KEEP_ALL'></a><a name="$KEEP_ALL"
+><b>$KEEP_ALL</b></a></dt>
+
+<dd>
+<p>Controls whether temporary files and directories should be retained regardless of any instructions in the program to remove them automatically. This is useful for debugging but should not be used in production code.</p>
+
+<pre class="sh_perl">  $File::Temp::KEEP_ALL = 1;</pre>
+
+<p>Default is for files to be removed as requested by the caller.</p>
+
+<p>In some cases, files will only be retained if this variable is true when the file is created. This means that you can not create a temporary file, set this variable and expect the temp file to still be around when the program exits.</p>
+
+<dt><a name='DEBUG'></a><a name="$DEBUG"
+><b>$DEBUG</b></a></dt>
+
+<dd>
+<p>Controls whether debugging messages should be enabled.</p>
+
+<pre class="sh_perl">  $File::Temp::DEBUG = 1;</pre>
+
+<p>Default is for debugging mode to be disabled.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="WARNING"
+>WARNING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>For maximum security, endeavour always to avoid ever looking at, touching, or even imputing the existence of the filename. You do not know that that filename is connected to the same file as the handle you have, and attempts to check this can only trigger more race conditions. It&#39;s far more secure to use the filehandle alone and dispense with the filename altogether.</p>
+
+<p>If you need to pass the handle to something that expects a filename then, on a unix system, use <code>&#34;/dev/fd/&#34; . fileno($fh)</code> for arbitrary programs, or more generally <code>&#34;+&#60;=&#38;&#34; . fileno($fh)</code> for Perl programs. You will have to clear the close-on-exec bit on that file descriptor before passing it to another process.</p>
+
+<pre class="sh_perl">    use Fcntl qw/F_SETFD F_GETFD/;
+    fcntl($tmpfh, F_SETFD, 0)
+        or die &#34;Can&#39;t clear close-on-exec flag on temp fh: $!\n&#34;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Temporary_files_and_NFS"
+>Temporary files and NFS</a></h2>
+
+<p>Some problems are associated with using temporary files that reside on NFS file systems and it is recommended that a local filesystem is used whenever possible. Some of the security tests will most probably fail when the temp file is not local. Additionally, be aware that the performance of I/O operations over NFS will not be as good as for a local disk.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Forking"
+>Forking</a></h2>
+
+<p>In some cases files created by File::Temp are removed from within an END block. Since END blocks are triggered when a child process exits (unless <code>POSIX::_exit()</code> is used by the child) File::Temp takes care to only remove those temp files created by a particular process ID. This means that a child will not attempt to remove temp files created by the parent process.</p>
+
+<p>If you are forking many processes in parallel that are all creating temporary files, you may need to reset the random number seed using srand(EXPR) in each child else all the children will attempt to walk through the same set of random file names and may well cause themselves to give up if they exceed the number of retry attempts.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Directory_removal"
+>Directory removal</a></h2>
+
+<p>Note that if you have chdir&#39;ed into the temporary directory and it is subsequently cleaned up (either in the END block or as part of object destruction), then you will get a warning from File::Path::rmtree().</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="BINMODE"
+>BINMODE</a></h2>
+
+<p>The file returned by File::Temp will have been opened in binary mode if such a mode is available. If that is not correct, use the <code>binmode()</code> function to change the mode of the filehandle.</p>
+
+<p>Note that you can modify the encoding of a file opened by File::Temp also by using <code>binmode()</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="HISTORY"
+>HISTORY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Originally began life in May 1999 as an XS interface to the system mkstemp() function. In March 2000, the OpenBSD mkstemp() code was translated to Perl for total control of the code&#39;s security checking, to ensure the presence of the function regardless of operating system and to help with portability. The module was shipped as a standard part of perl from v5.6.1.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?POSIX#tmpnam" class="podlinkpod"
+>&#34;tmpnam&#34; in POSIX</a>, <a href="/perldoc?POSIX#tmpfile" class="podlinkpod"
+>&#34;tmpfile&#34; in POSIX</a>, <a href="/perldoc?File%3A%3ASpec" class="podlinkpod"
+>File::Spec</a>, <a href="/perldoc?File%3A%3APath" class="podlinkpod"
+>File::Path</a></p>
+
+<p>See <a href="/perldoc?IO%3A%3AFile" class="podlinkpod"
+>IO::File</a> and <a href="/perldoc?File%3A%3AMkTemp" class="podlinkpod"
+>File::MkTemp</a>, <a href="/perldoc?Apache%3A%3ATempFile" class="podlinkpod"
+>Apache::TempFile</a> for different implementations of temporary file handling.</p>
+
+<p>See <a href="/perldoc?File%3A%3ATempdir" class="podlinkpod"
+>File::Tempdir</a> for an alternative object-oriented wrapper for the <code>tempdir</code> function.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Tim Jenness &#60;tjenness@cpan.org&#62;</p>
+
+<p>Copyright (C) 2007-2009 Tim Jenness. Copyright (C) 1999-2007 Tim Jenness and the UK Particle Physics and Astronomy Research Council. All Rights Reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>Original Perl implementation loosely based on the OpenBSD C code for mkstemp(). Thanks to Tom Christiansen for suggesting that this module should be written and providing ideas for code improvements and security enhancements.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78272 Uploads, 24723 Distributions
+106001 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 20:08:39 2012 GMT (0.0919771194458008) @cpansearch1 -->
+ </body>
+</html>

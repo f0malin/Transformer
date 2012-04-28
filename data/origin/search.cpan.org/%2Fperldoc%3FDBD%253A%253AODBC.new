@@ -1,0 +1,1710 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>DBD::ODBC - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","DBD-ODBC",3]);
+    _gaq.push(["_setCustomVar",5,"Release","DBD-ODBC-1.37",3]);
+    _gaq.push(["_setCustomVar",3,"Module","DBD::ODBC",3]);
+    _gaq.push(["_setCustomVar",1,"Author","MJEVANS",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?DBD::ODBC">permalink</a></div>
+  <a href="/~mjevans/">Martin J Evans</a> &gt;
+  <a href="/~mjevans/DBD-ODBC-1.37/">DBD-ODBC-1.37</a> &gt;
+  DBD::ODBC
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/d437c83bad68e9a5ea83c8ec24f4cb73?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/M/MJ/MJEVANS/DBD-ODBC-1.37.tar.gz">DBD-ODBC-1.37.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=DBD%3A%3AODBC;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~MJEVANS/DBD-ODBC-1.37/ODBC.pm">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://search.cpan.org/dist/DBD-ODBC/">Website</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Win32%3A%3AODBC">Win32::ODBC</a><br>
+<a href="/perldoc?DBD%3A%3ASybase">DBD::Sybase</a><br>
+<a href="/perldoc?DBD%3A%3AOracle">DBD::Oracle</a><br>
+<a href="/perldoc?Win32%3A%3AOLE">Win32::OLE</a><br>
+<a href="/perldoc?DBD%3A%3Amysql">DBD::mysql</a><br>
+<a href="/perldoc?DBD%3A%3AADO">DBD::ADO</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?DBD%3A%3ACSV">DBD::CSV</a><br>
+<a href="/perldoc?Class%3A%3ADBI">Class::DBI</a><br>
+<a href="/perldoc?File%3A%3ACopy">File::Copy</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=DBD%3A%3AODBC">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="http://rt.cpan.org/Public/Dist/Display.html?Name=DBD-ODBC">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.37 &nbsp;
+<span class="noprint">
+  <a href="/src/MJEVANS/DBD-ODBC-1.37/ODBC.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Change_log_and_FAQs'>Change log and FAQs</a>
+    <li class='indexItem indexItem2'><a href='#Important_note_about_the_tests'>Important note about the tests</a>
+    <li class='indexItem indexItem2'><a href='#DBI_attribute_handling'>DBI attribute handling</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#ReadOnly_(boolean)'>ReadOnly (boolean)</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Private_attributes_common_to_connection_and_statement_handles'>Private attributes common to connection and statement handles</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#odbc_ignore_named_placeholders'>odbc_ignore_named_placeholders</a>
+      <li class='indexItem indexItem3'><a href='#odbc_default_bind_type'>odbc_default_bind_type</a>
+      <li class='indexItem indexItem3'><a href='#odbc_force_bind_type'>odbc_force_bind_type</a>
+      <li class='indexItem indexItem3'><a href='#odbc_force_rebind'>odbc_force_rebind</a>
+      <li class='indexItem indexItem3'><a href='#odbc_async_exec'>odbc_async_exec</a>
+      <li class='indexItem indexItem3'><a href='#odbc_query_timeout'>odbc_query_timeout</a>
+      <li class='indexItem indexItem3'><a href='#odbc_putdata_start'>odbc_putdata_start</a>
+      <li class='indexItem indexItem3'><a href='#odbc_column_display_size'>odbc_column_display_size</a>
+      <li class='indexItem indexItem3'><a href='#odbc_utf8_on'>odbc_utf8_on</a>
+      <li class='indexItem indexItem3'><a href='#odbc_old_unicode'>odbc_old_unicode</a>
+      <li class='indexItem indexItem3'><a href='#odbc_describe_parameters'>odbc_describe_parameters</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Private_methods_common_to_connection_and_statement_handles'>Private methods common to connection and statement handles</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#odbc_getdiagrec'>odbc_getdiagrec</a>
+      <li class='indexItem indexItem3'><a href='#odbc_getdiagfield'>odbc_getdiagfield</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Private_connection_attributes'>Private connection attributes</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#odbc_err_handler'>odbc_err_handler</a>
+      <li class='indexItem indexItem3'><a href='#odbc_SQL_ROWSET_SIZE'>odbc_SQL_ROWSET_SIZE</a>
+      <li class='indexItem indexItem3'><a href='#odbc_exec_direct'>odbc_exec_direct</a>
+      <li class='indexItem indexItem3'><a href='#odbc_SQL_DRIVER_ODBC_VER'>odbc_SQL_DRIVER_ODBC_VER</a>
+      <li class='indexItem indexItem3'><a href='#odbc_cursortype'>odbc_cursortype</a>
+      <li class='indexItem indexItem3'><a href='#odbc_has_unicode'>odbc_has_unicode</a>
+      <li class='indexItem indexItem3'><a href='#odbc_out_connect_string'>odbc_out_connect_string</a>
+      <li class='indexItem indexItem3'><a href='#odbc_version'>odbc_version</a>
+      <li class='indexItem indexItem3'><a href='#odbc_driver_complete'>odbc_driver_complete</a>
+      <li class='indexItem indexItem3'><a href='#odbc_batch_size'>odbc_batch_size</a>
+      <li class='indexItem indexItem3'><a href='#odbc_array_operations'>odbc_array_operations</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Private_statement_attributes'>Private statement attributes</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#odbc_more_results'>odbc_more_results</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Private_statement_methods'>Private statement methods</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#odbc_lob_read'>odbc_lob_read</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Private_DBD::ODBC_Functions'>Private DBD::ODBC Functions</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#GetInfo'>GetInfo</a>
+      <li class='indexItem indexItem3'><a href='#SQLGetTypeInfo'>SQLGetTypeInfo</a>
+      <li class='indexItem indexItem3'><a href='#GetFunctions'>GetFunctions</a>
+      <li class='indexItem indexItem3'><a href='#GetStatistics'>GetStatistics</a>
+      <li class='indexItem indexItem3'><a href='#GetForeignKeys'>GetForeignKeys</a>
+      <li class='indexItem indexItem3'><a href='#GetPrimaryKeys'>GetPrimaryKeys</a>
+      <li class='indexItem indexItem3'><a href='#data_sources'>data_sources</a>
+      <li class='indexItem indexItem3'><a href='#GetSpecialColumns'>GetSpecialColumns</a>
+      <li class='indexItem indexItem3'><a href='#ColAttributes'>ColAttributes</a>
+      <li class='indexItem indexItem3'><a href='#DescribeCol'>DescribeCol</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Additional_bind_col_attributes'>Additional bind_col attributes</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#DiscardString'>DiscardString</a>
+      <li class='indexItem indexItem3'><a href='#StrictlyTyped'>StrictlyTyped</a>
+      <li class='indexItem indexItem3'><a href='#TreatAsLOB'>TreatAsLOB</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Tracing'>Tracing</a>
+    <li class='indexItem indexItem2'><a href='#Deviations_from_the_DBI_specification'>Deviations from the DBI specification</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#last_insert_id'>last_insert_id</a>
+      <li class='indexItem indexItem3'><a href='#Comments_in_SQL'>Comments in SQL</a>
+      <li class='indexItem indexItem3'><a href='#do'>do</a>
+      <li class='indexItem indexItem3'><a href='#Mixed_placeholder_types'>Mixed placeholder types</a>
+      <li class='indexItem indexItem3'><a href='#Using_the_same_placeholder_more_than_once'>Using the same placeholder more than once</a>
+      <li class='indexItem indexItem3'><a href='#Binding_named_placeholders'>Binding named placeholders</a>
+      <li class='indexItem indexItem3'><a href='#Sticky_Parameter_Types'>Sticky Parameter Types</a>
+      <li class='indexItem indexItem3'><a href='#disconnect_and_transactions'>disconnect and transactions</a>
+      <li class='indexItem indexItem3'><a href='#execute_for_fetch_and_execute_array'>execute_for_fetch and execute_array</a>
+      <li class='indexItem indexItem3'><a href='#type_info_all'>type_info_all</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Unicode'>Unicode</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Enabling_and_Disabling_Unicode_support'>Enabling and Disabling Unicode support</a>
+      <li class='indexItem indexItem3'><a href='#Unicode_-_What_is_supported?'>Unicode - What is supported?</a>
+      <li class='indexItem indexItem3'><a href='#Unicode_-_What_is_not_supported?'>Unicode - What is not supported?</a>
+      <li class='indexItem indexItem3'><a href='#Unicode_-_Caveats'>Unicode - Caveats</a>
+      <li class='indexItem indexItem3'><a href='#Unicode_implementation_in_DBD::ODBC'>Unicode implementation in DBD::ODBC</a>
+      <li class='indexItem indexItem3'><a href='#Unicode_and_Oracle'>Unicode and Oracle</a>
+      <li class='indexItem indexItem3'><a href='#Unicode_and_PostgreSQL'>Unicode and PostgreSQL</a>
+      <li class='indexItem indexItem3'><a href='#Unicode_and_Easysoft_ODBC_Drivers'>Unicode and Easysoft ODBC Drivers</a>
+      <li class='indexItem indexItem3'><a href='#Unicode_and_other_ODBC_drivers'>Unicode and other ODBC drivers</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#ODBC_Support_in_ODBC_Drivers'>ODBC Support in ODBC Drivers</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Drivers_without_SQLDescribeParam'>Drivers without SQLDescribeParam</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Version_Control'>Version Control</a>
+    <li class='indexItem indexItem2'><a href='#Contributing'>Contributing</a>
+    <li class='indexItem indexItem2'><a href='#CPAN_Testers_Reporting'>CPAN Testers Reporting</a>
+    <li class='indexItem indexItem2'><a href='#Others/todo?'>Others/todo?</a>
+    <li class='indexItem indexItem2'><a href='#Random_Links'>Random Links</a>
+    <li class='indexItem indexItem2'><a href='#Some_useful_tutorials:'>Some useful tutorials:</a>
+    <li class='indexItem indexItem2'><a href='#Frequently_Asked_Questions'>Frequently Asked Questions</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CONFIGURATION_AND_ENVIRONMENT'>CONFIGURATION AND ENVIRONMENT</a>
+  <li class='indexItem indexItem1'><a href='#DEPENDENCIES'>DEPENDENCIES</a>
+  <li class='indexItem indexItem1'><a href='#INCOMPATIBILITIES'>INCOMPATIBILITIES</a>
+  <li class='indexItem indexItem1'><a href='#BUGS_AND_LIMITATIONS'>BUGS AND LIMITATIONS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE_AND_COPYRIGHT'>LICENSE AND COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DBD::ODBC - ODBC Driver for DBI</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This documentation refers to DBD::ODBC version 1.37.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use DBI;
+
+  $dbh = DBI-&#62;connect(&#39;dbi:ODBC:DSN&#39;, &#39;user&#39;, &#39;password&#39;);</pre>
+
+<p>See <a href="/perldoc?DBI" class="podlinkpod"
+>DBI</a> for more information.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Change_log_and_FAQs"
+>Change log and FAQs</a></h2>
+
+<p>Please note that the change log has been moved to DBD::ODBC::Changes. To access this documentation, use <code>perldoc DBD::ODBC::Changes</code>.</p>
+
+<p>The FAQs have also moved to DBD::ODBC::FAQ.pm. To access the FAQs use <code>perldoc DBD::ODBC::FAQ</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Important_note_about_the_tests"
+>Important note about the tests</a></h2>
+
+<p>Please note that some tests may fail or report they are unsupported on this platform. Notably Oracle&#39;s ODBC driver will fail the &#34;advanced&#34; binding tests in t/08bind2.t. These tests run perfectly under SQL Server 2000. This is normal and expected. Until Oracle fixes their drivers to do the right thing from an ODBC perspective, it&#39;s going to be tough to fix the issue. The workaround for Oracle is to bind date types with SQL_TIMESTAMP. Also note that some tests may be skipped, such as t/09multi.t, if your driver doesn&#39;t seem to support returning multiple result sets. This is normal.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="DBI_attribute_handling"
+>DBI attribute handling</a></h2>
+
+<p>If a DBI defined attribute is not mentioned here it behaves as per the DBI specification.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="ReadOnly_(boolean)"
+>ReadOnly (boolean)</a></h3>
+
+<p>DBI documents the <code>ReadOnly</code> attribute as being settleable and retrievable on connection and statement handles. In ODBC setting ReadOnly to true causes the connection attribute <code>SQL_ATTR_ACCESS_MODE</code> to be set to <code>SQL_MODE_READ_ONLY</code> and setting it to false will set the access mode to <code>SQL_MODE_READ_WRITE</code> (which is the default in ODBC).</p>
+
+<p><b>Note:</b> There is no equivalent of setting ReadOnly on a statement handle in ODBC.</p>
+
+<p><b>Note:</b> See ODBC documentation on <code>SQL_ATTR_ACCESS_MODE</code> as setting it to <code>SQL_MODE_READ_ONLY</code> does <b>not</b> prevent your script from running updates or deletes; it is simply a hint to the driver/database that you won&#39;t being doing updates.</p>
+
+<p>This attribute requires DBI version 1.55 or better.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Private_attributes_common_to_connection_and_statement_handles"
+>Private attributes common to connection and statement handles</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_ignore_named_placeholders"
+>odbc_ignore_named_placeholders</a></h3>
+
+<p>Use this if you have special needs (such as Oracle triggers, etc) where :new or :name mean something special and are not just place holder names. You <i>must</i> then use ? for binding parameters. Example:</p>
+
+<pre class="sh_perl"> $dbh-&#62;{odbc_ignore_named_placeholders} = 1;
+ $dbh-&#62;do(&#34;create trigger foo as if :new.x &#60;&#62; :old.x then ... etc&#34;);</pre>
+
+<p>Without this, DBD::ODBC will think :new and :old are placeholders for binding and get confused.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_default_bind_type"
+>odbc_default_bind_type</a></h3>
+
+<p>This value defaults to 0.</p>
+
+<p>Older versions of DBD::ODBC assumed that the parameter binding type was 12 (<code>SQL_VARCHAR</code>). Newer versions always attempt to call <code>SQLDescribeParam</code> to find the parameter types but if <code>SQLDescribeParam</code> is unavailable DBD::ODBC falls back to a default bind type. The internal default bind type is <code>SQL_VARCHAR</code> (for non-unicode build) and <code>SQL_WVARCHAR</code> (for a unicode build). If you set <code>odbc_default_bind_type</code> to a value other than 0 you override the internal default.</p>
+
+<p><b>N.B</b> If you call the <code>bind_param</code> method with a SQL type this overrides everything else above.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_force_bind_type"
+>odbc_force_bind_type</a></h3>
+
+<p>This value defaults to 0.</p>
+
+<p>If set to anything other than 0 this will force bound parameters to be bound as this type and <code>SQLDescribeParam</code> will not be used.</p>
+
+<p>Older versions of DBD::ODBC assumed the parameter binding type was 12 (<code>SQL_VARCHAR</code>) and newer versions always attempt to call <code>SQLDescribeParam</code> to find the parameter types. If your driver supports <code>SQLDescribeParam</code> and it succeeds it may still fail to describe the parameters accurately (MS SQL Server sometimes does this with some SQL like <i>select myfunc(?) where 1 = 1</i>). Setting <code>odbc_force_bind_type</code> to <code>SQL_VARCHAR</code> will force DBD::ODBC to bind all the parameters as <code>SQL_VARCHAR</code> and ignore SQLDescribeParam.</p>
+
+<p>Bare in mind that if you are inserting unicode data you probably want to use <code>SQL_WVARCHAR</code> and not <code>SQL_VARCHAR</code>.</p>
+
+<p>As this attribute was created to work around buggy ODBC Drivers which support SQLDescribeParam but describe the parameters incorrectly you are probably better specifying the bind type on the <code>bind_param</code> call on a per statement level rather than blindly setting <code>odbc_force_bind_type</code> across a whole connection.</p>
+
+<p><b>N.B</b> If you call the <code>bind_param</code> method with a SQL type this overrides everything else above.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_force_rebind"
+>odbc_force_rebind</a></h3>
+
+<p>This is to handle special cases, especially when using multiple result sets. Set this before execute to &#34;force&#34; DBD::ODBC to re-obtain the result set&#39;s number of columns and column types for each execute. Especially useful for calling stored procedures which may return different result sets each execute. The only performance penalty is during execute(), but I didn&#39;t want to incur that penalty for all circumstances. It is probably fairly rare that this occurs. This attribute will be automatically set when multiple result sets are triggered. Most people shouldn&#39;t have to worry about this.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_async_exec"
+>odbc_async_exec</a></h3>
+
+<p>Allow asynchronous execution of queries. This causes a spin-loop (with a small &#34;sleep&#34;) until the ODBC API being called is complete (i.e., while the ODBC API returns <code>SQL_STILL_EXECUTING</code>). This is useful, however, if you want the error handling and asynchronous messages (see the <a href="#odbc_err_handler" class="podlinkpod"
+>&#34;odbc_err_handler&#34;</a> and <em>t/20SQLServer.t</em> for an example of this).</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_query_timeout"
+>odbc_query_timeout</a></h3>
+
+<p>This allows you to change the ODBC query timeout (the ODBC statement attribute <code>SQL_ATTR_QUERY_TIMEOUT</code>). ODBC defines the query time out as the number of seconds to wait for a SQL statement to execute before returning to the application. A value of 0 (the default) means there is no time out. Do not confuse this with the ODBC attributes <code>SQL_ATTR_LOGIN_TIMEOUT</code> and <code>SQL_ATTR_CONNECTION_TIMEOUT</code>. Add</p>
+
+<pre class="sh_perl">  { odbc_query_timeout =&#62; 30 }</pre>
+
+<p>to your connect, set on the <code>dbh</code> before creating a statement or explicitly set it on your statement handle. The odbc_query_timeout on a statement is inherited from the parent connection.</p>
+
+<p>Note that internally DBD::ODBC only sets the query timeout if you set it explicitly and the default of 0 (no time out) is implemented by the ODBC driver and not DBD::ODBC.</p>
+
+<p>Note that some ODBC drivers implement a maximum query timeout value and will limit timeouts set above their maximum. You may see a warning if your time out is capped by the driver but there is currently no way to retrieve the capped value back from the driver.</p>
+
+<p>Note that some drivers may not support this attribute.</p>
+
+<p>See <em>t/20SqlServer.t</em> for an example.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_putdata_start"
+>odbc_putdata_start</a></h3>
+
+<p><code>odbc_putdata_start</code> defines the size at which DBD::ODBC uses <code>SQLPutData</code> and <code>SQLParamData</code> to send larger objects to the database instead of simply binding them as normal with <code>SQLBindParameter</code>. It is mostly a placeholder for future changes allowing chunks of data to be sent to the database and there is little reason for anyone to change it currently.</p>
+
+<p>The default for odbc_putdata_start is 32768 because this value was hard-coded in DBD::ODBC until 1.16_1.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_column_display_size"
+>odbc_column_display_size</a></h3>
+
+<p>If you ODBC driver does not support the SQL_COLUMN_DISPLAY_SIZE and SQL_COLUMN_LENGTH attributes to SQLColAtrributes then DBD::ODBC does not know how big the column might be. odbc_column_display_size sets the default value for the column size when retrieving column data where the size cannot be determined.</p>
+
+<p>The default for odbc_column_display_size is 2001 because this value was hard-coded in DBD::ODBC until 1.17_3.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_utf8_on"
+>odbc_utf8_on</a></h3>
+
+<p>Set this flag to treat all strings returned from the ODBC driver (except columns described as SQL_BINARY or SQL_TIMESTAMP and its variations) as UTF-8 encoded. Some ODBC drivers (like Aster and maybe PostgreSQL) return UTF-8 encoded data but do not support the SQLxxxW unicode API. Enabling this flag will cause DBD::ODBC to treat driver returned data as UTF-8 encoded and it will be marked as such in Perl.</p>
+
+<p>Do not confuse this with DBD::ODBC&#39;s unicode support. The <code>odbc_utf8_on</code> attribute only applies to non-unicode enabled builds of DBD::ODBC.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_old_unicode"
+>odbc_old_unicode</a></h3>
+
+<p>Defaults to off. If set to true returns DBD::ODBC to the old unicode behavior in 1.29 and earlier. You can also set this on the prepare method.</p>
+
+<p>By default DBD::ODBC now binds all char columns as SQL_WCHARs meaning the driver is asked to return the bound data as wide (Unicode) characters encoded in UCS2. So long as the driver supports the ODBC Unicode API properly this should mean you get your data back correctly in Perl even if it is in a character set (codepage) different from the one you are working in.</p>
+
+<p>However, if you wrote code using DBD::ODBC 1.29 or earlier and knew DBD::ODBC bound varchar/longvarchar columns as SQL_CHARs and decoded them yourself the new behaviour will adversely affect you (sorry). To revert to the old behaviour set odbc_old_unicode to true.</p>
+
+<p>You can also set this attribute in the attributes passed to the prepare method.</p>
+
+<p>See the stackoverflow question at <a href="http://stackoverflow.com/questions/5912082" class="podlinkurl"
+>http://stackoverflow.com/questions/5912082</a>, the RT at <a href="http://rt.cpan.org/Public/Bug/Display.html?id=67994" class="podlinkurl"
+>http://rt.cpan.org/Public/Bug/Display.html?id=67994</a> and lastly a small discussion on dbi-dev at <a href="http://www.nntp.perl.org/group/perl.dbi.dev/2011/05/msg6559.html" class="podlinkurl"
+>http://www.nntp.perl.org/group/perl.dbi.dev/2011/05/msg6559.html</a>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_describe_parameters"
+>odbc_describe_parameters</a></h3>
+
+<p>Defaults to on. When set this allows DBD::ODBC to call SQLDescribeParam (if the driver supports it) to retrieve information about any parameters.</p>
+
+<p>When off/false DBD::ODBC will not call SQLDescribeParam and defaults to binding parameters as SQL_CHAR/SQL_WCHAR depending on the build type.</p>
+
+<p>You do not have to disable odbc_describe_parameters just because your driver does not support SQLDescribeParam as DBD::ODBC will work this out at the start via SQLGetFunctions.</p>
+
+<p>Note: disabling odbc_describe_parameters when your driver does support SQLDescribeParam may prevent DBD::ODBC binding parameters for some column types properly.</p>
+
+<p>You can also set this attribute in the attributes passed to the prepare method.</p>
+
+<p>This attribute was added so someone moving from freeTDS (a driver which does not support SQLDescribeParam) to a driver which does support SQLDescribeParam could do so without changing any Perl. The situation was very specific since dates were being bound as dates when SQLDescribeParam was called and chars without and the data format was not a supported date format.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Private_methods_common_to_connection_and_statement_handles"
+>Private methods common to connection and statement handles</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_getdiagrec"
+>odbc_getdiagrec</a></h3>
+
+<pre class="sh_perl">  @diags = $handle-&#62;odbc_getdiagrec($record_number);</pre>
+
+<p>NOTE: This is an experimental method and may change.</p>
+
+<p>Introduced in 1.34_3.</p>
+
+<p>This is just a wrapper around the ODBC API SQLGetDiagRec. When a method on a connection or statement handle fails if there are any ODBC diagnostics you can use this method to retrieve them. Records start at 1 and there may be more than 1. It returns an array containing the state, native and error message text or an empty array if the requested diagnostic record does not exist. To get all diagnostics available keep incrementing $record_number until odbc_getdiagrec returns an empty array.</p>
+
+<p>All of the state, native and message text are already passed to DBI via its set_err method so this method does not really tell you anything you cannot already get from DBI except when there is more than one diagnostic.</p>
+
+<p>You may find this useful in an error handler as you can get the ODBC diagnostics as they are and not how DBD::ODBC was forced to fit them into the DBI&#39;s system.</p>
+
+<p>NOTE: calling this method does not clear DBI&#39;s error values as usually happens.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_getdiagfield"
+>odbc_getdiagfield</a></h3>
+
+<pre class="sh_perl">  $diag = $handle-&#62;odbc_getdiagfield($record, $identifier);</pre>
+
+<p>NOTE: This is an experimental method and may change.</p>
+
+<p>This is just a wrapper around the ODBC API SQLGetDiagField. When a method on a connection or statement handle fails if there are any ODBC diagnostics you can use this method to retrieve the individual diagnostic fields. As with <a href="#odbc_getdiagrec" class="podlinkpod"
+>&#34;odbc_getdiagrec&#34;</a> records start at 1. The identifier is one of:</p>
+
+<pre class="sh_perl">  SQL_DIAG_CURSOR_ROW_COUNT
+  SQL_DIAG_DYNAMIC_FUNCTION
+  SQL_DIAG_DYNAMIC_FUNCTION_CODE
+  SQL_DIAG_NUMBER
+  SQL_DIAG_RETURNCODE
+  SQL_DIAG_ROW_COUNT
+  SQL_DIAG_CLASS_ORIGIN
+  SQL_DIAG_COLUMN_NUMBER
+  SQL_DIAG_CONNECTION_NAME
+  SQL_DIAG_MESSAGE_TEXT
+  SQL_DIAG_NATIVE
+  SQL_DIAG_ROW_NUMBER
+  SQL_DIAG_SERVER_NAME
+  SQL_DIAG_SQLSTATE
+  SQL_DIAG_SUBCLASS_ORIGIN</pre>
+
+<p>DBD::ODBC exports these constants as &#39;diags&#39; e.g.,</p>
+
+<pre class="sh_perl">  use DBD::ODBC qw(:diags);</pre>
+
+<p>Of particular interest is SQL_DIAG_COLUMN_NUMBER as it will tell you which bound column or parameter is in error (assuming your driver supports it). See params_in_error in the examples dir.</p>
+
+<p>NOTE: calling this method does not clear DBI&#39;s error values as usually happens.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Private_connection_attributes"
+>Private connection attributes</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_err_handler"
+>odbc_err_handler</a></h3>
+
+<p><b>NOTE:</b> You might want to look at DBI&#39;s error handler before using the one in DBD::ODBC however, there are subtle differences. DBD::ODBC&#39;s odbc_err_handler is called for error <b>and</b> informational diagnostics i.e., it is called when an ODBC call fails the SQL_SUCCEEDED macro which means the ODBC call returned SQL_ERROR (-1) or SQL_SUCCESS_WITH_INFO (1).</p>
+
+<p>Allow error and informational diagnostics to be handled by the application. A call-back function supplied by the application to handle or ignore messages.</p>
+
+<p>The callback function receives four parameters: state (string), error (string), native error code (number) and the status returned from the last ODBC API. The fourth argument was added in 1.30_7.</p>
+
+<p>If the error handler returns 0, the error is ignored, otherwise the error is passed through the normal DBI error handling. Note, if the status is SQL_SUCCESS_WITH_INFO this will <b>not</b> reach the DBI error handler as it is not an error.</p>
+
+<p>This can also be used for procedures under MS SQL Server (Sybase too, probably) to obtain messages from system procedures such as DBCC. Check <em>t/20SQLServer.t</em> and <em>t/10handler.t</em>.</p>
+
+<pre class="sh_perl">  $dbh-&#62;{RaiseError} = 1;
+  sub err_handler {
+     ($state, $msg, $native, $rc, $status) = @_;
+     if ($state = &#39;12345&#39;)
+         return 0; # ignore this error
+     else
+         return 1; # propagate error
+  }
+  $dbh-&#62;{odbc_err_handler} = \&#38;err_handler;
+  # do something to cause an error
+  $dbh-&#62;{odbc_err_handler} = undef; # cancel the handler</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_SQL_ROWSET_SIZE"
+>odbc_SQL_ROWSET_SIZE</a></h3>
+
+<p>Setting odbc_SQL_ROWSET_SIZE results in a call to SQLSetConnectAttr to set the ODBC SQL_ROWSET_SIZE (9) attribute to whatever value you set odbc_SQL_ROWSET_SIZE to.</p>
+
+<p>The ODBC default for SQL_ROWSET_SIZE is 1.</p>
+
+<p>Usually MS SQL Server does not support multiple active statements (MAS) i.e., you cannot have 2 or more outstanding selects. You can set odbc_SQL_ROWSET_SIZE to 2 to persuade MS SQL Server to support multiple active statements.</p>
+
+<p>Setting SQL_ROWSET_SIZE usually only affects calls to SQLExtendedFetch but does allow MAS and as DBD::ODBC does not use SQLExtendedFetch there should be no ill effects to DBD::ODBC.</p>
+
+<p>Be careful with this attribute as once set to anything larger than 1 (the default) you must retrieve all result-sets before the statement handle goes out of scope or you can upset the TDS protocol and this can result in a hang. With DBI this is unlikely as DBI warns when a statement goes out of scope with outstanding results.</p>
+
+<p>NOTE: if you get an error saying &#34;[Microsoft][ODBC SQL Server Driver]Invalid attribute/option identifier (SQL-HY092)&#34; when you set odbc_SQL_ROWSET_SIZE in the connect method you need to either a) upgrade to DBI 1.616 or above b) set odbc_SQL_ROWSET_SIZE after connect.</p>
+
+<p>In versions of SQL Server 2005 and later see &#34;Multiple Active Statements (MAS)&#34; in the DBD::ODBC::FAQ instead of using this attribute.</p>
+
+<p>Thanks to Andrew Brown for the original patch.</p>
+
+<p>DBD developer note: Here lies a bag of worms. Firstly, SQL_ROWSET_SIZE is an ODBC 2 attribute and is usally a statement attribute not a connection attribute. However, in ODBC 2.0 you could set statement attributes on a connection handle and it acted as a default for all subsequent statement handles created under that connection handle. If you are using ODBC 3 the driver manager continues to map this call but the ODBC Driver needs to act on it (the MS SQL Server driver still appears to but some other ODBC drivers for MS SQL Server do not). Secondly, somewhere a long the line MS decided it was no longer valid to retrieve the SQL_ROWSET_SIZE attribute from a connection handle in an ODBC 3 application (which DBD::ODBC now is). In itself, this would not be a problem except for a minor bug in DBI which until release 1.616 mistakenly issued a FETCH on any attribute mentioned in the connect method call. As a result, it you use a DBI prior to 1.616 and attempt to set odbc_SQL_ROWSET_SIZE in the connect method call, DBI issues a FETCH on odbc_SQL_ROWSET_SIZE and the driver manager throws it out as an invalid attribute thus resulting in an error. The only way around this (other than upgrading DBI) is to set odbc_SQL_ROWSET_SIZE AFTER the call to connect. Thirdly, MS withdrew the SQLROWSETSIZE macro from the sql header files in MDAC 2.7 for 64 bit platforms i.e., SQLROWSETSIZE is not defined on 64 bit platforms from MDAC 2.7 as it is in a &#34;#ifdef win32&#34; (see <a href="http://msdn.microsoft.com/en-us/library/ms716287%28v=vs.85%29.aspx" class="podlinkurl"
+>http://msdn.microsoft.com/en-us/library/ms716287%28v=vs.85%29.aspx</a>). Setting SQL_ROWSET_SIZE still seems to take effect on 64 bit platforms but you can no longer retrieve its value from a connection handle (hence the issue above with DBI redundant FETCH).</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_exec_direct"
+>odbc_exec_direct</a></h3>
+
+<p>Force DBD::ODBC to use <code>SQLExecDirect</code> instead of <code>SQLPrepare</code>/<code>SQLExecute</code>.</p>
+
+<p>There are drivers that only support <code>SQLExecDirect</code> and the DBD::ODBC do() override does not allow returning result sets. Therefore, the way to do this now is to set the attribute odbc_exec_direct.</p>
+
+<p>NOTE: You may also want to use this option if you are creating temporary objects (e.g., tables) in MS SQL Server and for some reason cannot use the <code>do</code> method. see <a href="http://technet.microsoft.com/en-US/library/ms131667.aspx" class="podlinkurl"
+>http://technet.microsoft.com/en-US/library/ms131667.aspx</a> which says <i>Prepared statements cannot be used to create temporary objects on SQL Server 2000 or later...</i>. Without odbc_exec_direct, the temporary object will disappear before you can use it.</p>
+
+<p>There are currently two ways to get this:</p>
+
+<pre class="sh_perl">    $dbh-&#62;prepare($sql, { odbc_exec_direct =&#62; 1});</pre>
+
+<p>and</p>
+
+<pre class="sh_perl">    $dbh-&#62;{odbc_exec_direct} = 1;</pre>
+
+<p><b>NOTE:</b> Even if you build DBD::ODBC with unicode support you can still not pass unicode strings to the prepare method if you also set odbc_exec_direct. This is a restriction in this attribute which is unavoidable.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_SQL_DRIVER_ODBC_VER"
+>odbc_SQL_DRIVER_ODBC_VER</a></h3>
+
+<p>This, while available via get_info() is captured here. I may get rid of this as I only used it for debugging purposes.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_cursortype"
+>odbc_cursortype</a></h3>
+
+<p>This allows multiple concurrent statements on SQL*Server. In your connect, add</p>
+
+<pre class="sh_perl">  { odbc_cursortype =&#62; 2 }.</pre>
+
+<p>If you are using DBI &#62; 1.41, you should also be able to use</p>
+
+<pre class="sh_perl"> { odbc_cursortype =&#62; DBI::SQL_CURSOR_DYNAMIC }</pre>
+
+<p>instead. For example:</p>
+
+<pre class="sh_perl">    my $dbh = DBI-&#62;connect(&#34;dbi:ODBC:$DSN&#34;, $user, $pass,
+                  { RaiseError =&#62; 1, odbc_cursortype =&#62; 2});
+    my $sth = $dbh-&#62;prepare(&#34;one statement&#34;);
+    my $sth2 = $dbh-&#62;prepare(&#34;two statement&#34;);
+    $sth-&#62;execute;
+    my @row;
+    while (@row = $sth-&#62;fetchrow_array) {
+       $sth2-&#62;execute($row[0]);
+    }</pre>
+
+<p>See <em>t/20SqlServer.t</em> for an example.</p>
+
+<p>In versions of SQL Server 2005 and later see &#34;Multiple Active Statements (MAS)&#34; in the DBD::ODBC::FAQ instead of using this attribute.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_has_unicode"
+>odbc_has_unicode</a></h3>
+
+<p>A read-only attribute signifying whether DBD::ODBC was built with the C macro WITH_UNICODE or not. A value of 1 indicates DBD::ODBC was built with WITH_UNICODE else the value returned is 0.</p>
+
+<p>Building WITH_UNICODE affects columns and parameters which are SQL_C_WCHAR, SQL_WCHAR, SQL_WVARCHAR, and SQL_WLONGVARCHAR, SQL, the connect method and a lot more. See <a href="#Unicode" class="podlinkpod"
+>&#34;Unicode&#34;</a>.</p>
+
+<p>When odbc_has_unicode is 1, DBD::ODBC will:</p>
+
+<dl>
+<dt><a name='bind'></a><a name="bind_columns_the_database_declares_as_wide_characters_as_SQL_Wxxx"
+>bind columns the database declares as wide characters as SQL_Wxxx</a></dt>
+
+<dd>
+<p>This means that UNICODE data stored in these columns will be returned to Perl in UTF-8 and with the UTF-8 flag set.</p>
+
+<dt><a name='bind'></a><a name="bind_parameters_the_database_declares_as_wide_characters_as_SQL_Wxxx"
+>bind parameters the database declares as wide characters as SQL_Wxxx</a></dt>
+
+<dd>
+<p>Parameters bound where the database declares the parameter as being a wide character (or where the parameter type is explicitly set to a wide type - SQL_Wxxx) can be UTF-8 in Perl and will be mapped to UTF-16 before passing to the driver.</p>
+
+<dt><a name="SQL"
+>SQL</a></dt>
+
+<dd>
+<p>SQL passed to the <code>prepare</code> or <code>do</code> methods which has the UTF-8 flag set will be converted to UTF-16 before being passed to the ODBC APIs <code>SQLPrepare</code> or <code>SQLExecDirect</code>.</p>
+
+<dt><a name='connection'></a><a name="connection_strings"
+>connection strings</a></dt>
+
+<dd>
+<p>Connection strings passed to the <code>connect</code> method will be converted to UTF-16 before being passed to the ODBC API <code>SQLDriverConnectW</code>. This happens irrespective of whether the UTF-8 flag is set on the perl connect strings because unixODBC requires an application to call SQLDriverConnectW to indicate it will be calling the wide ODBC APIs.</p>
+</dd>
+</dl>
+
+<p>NOTE: You will need at least Perl 5.8.1 to use UNICODE with DBD::ODBC.</p>
+
+<p>NOTE: Binding of unicode output parameters is coded but untested.</p>
+
+<p>NOTE: When building DBD::ODBC on Windows ($^O eq &#39;MSWin32&#39;) the WITH_UNICODE macro is automatically added. To disable specify -nou as an argument to Makefile.PL (e.g. <code>perl Makefile.PL -nou</code>). On non-Windows platforms the WITH_UNICODE macro is <b>not</b> enabled by default and to enable you need to specify the -u argument to Makefile.PL. Please bare in mind that some ODBC drivers do not support SQL_Wxxx columns or parameters.</p>
+
+<p>UNICODE support in ODBC Drivers differs considerably. Please read the README.unicode file for further details.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_out_connect_string"
+>odbc_out_connect_string</a></h3>
+
+<p>After calling the connect method this will be the ODBC driver&#39;s out connection string - see documentation on SQLDriverConnect.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_version"
+>odbc_version</a></h3>
+
+<p>This was added prior to the move to ODBC 3.x to allow the caller to &#34;force&#34; ODBC 3.0 compatibility. It&#39;s probably not as useful now, but it allowed get_info and get_type_info to return correct/updated information that ODBC 2.x didn&#39;t permit/provide. Since DBD::ODBC is now 3.x, this can be used to force 2.x behavior via something like: my</p>
+
+<pre class="sh_perl">  $dbh = DBI-&#62;connect(&#34;dbi:ODBC:$DSN&#34;, $user, $pass,
+                      { odbc_version =&#62;2});</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_driver_complete"
+>odbc_driver_complete</a></h3>
+
+<p>This attribute was added to DBD::ODBC in 1.32_2.</p>
+
+<p>odbc_driver_complete is only relevant to the Windows operating system and will be ignored on other platforms. It is off by default.</p>
+
+<p>When set to a true value DBD::ODBC attempts to obtain a window handle and calls SQLDriverConnect with the SQL_DRIVER_COMPLETE attribute instead of the normal SQL_DRIVER_NOPROMPT option. What this means is that if the connection string does not describe sufficient attributes to enable the ODBC driver manager to connect to a data source it will throw a dialogue allowing you to input the remaining attributes. Once you ok that dialogue the ODBC Driver Manager will continue as if you specified those attributes in the connection string. Once the connection is complete you may want to look at the odbc_out_connect_string attribute to obtain a connection string you can use in the future to pass into the connect method without prompting.</p>
+
+<p>As a window handle is passed to SQLDriverConnect it also means the ODBC driver may throw a dialogue e.g., if your password has expired the MS SQL Server driver will often prompt for a new one.</p>
+
+<p>An example is:</p>
+
+<pre class="sh_perl">  my $h = DBI-&#62;connect(&#39;dbi:ODBC:DRIVER={SQL Server}&#39;, &#34;username&#34;, &#34;password&#34;,
+                       {odbc_driver_complete =&#62; 1});</pre>
+
+<p>As this only provides the driver and further attributes are required a dialogue will be thrown allowing you to specify the SQL Server to connect to and possibly other attributes.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_batch_size"
+>odbc_batch_size</a></h3>
+
+<p>Sets the batch size for execute_for_fetch which defaults to 10. Bare in mind the bigger you set this the more memory DBD::ODBC will need to allocate when running execute_for_fetch and the memory required is max_length_of_pn * odbc_batch_size * n_parameters.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_array_operations"
+>odbc_array_operations</a></h3>
+
+<p>NOTE: this was briefly odbc_disable_array_operations in 1.35 and 1.36_1. I did warn it was experimental and it turned out the default was too ambitious and it was a poor name anyway. Also the default was to use array operations and now the default is the opposite.</p>
+
+<p>If set to true DBD::ODBC uses its own internal execute_for_fetch instead of DBI&#39;s default execute_for_fetch. The default is false. Using the internal execute_for_fetch should be quite a bit faster when using arrays of parameters for insert/update/delete operations as batches of parameters are sent to the database in one go. However, the required support in some ODBC drivers is a little sketchy and there is no way for DBD::ODBC to ascertain this until it is too late.</p>
+
+<p>Please read the documentation on <a href="/perldoc?execute_array" class="podlinkpod"
+>execute_array</a> and <a href="/perldoc?execute_for_fetch" class="podlinkpod"
+>execute_for_fetch</a> which details subtle differences in DBD::ODBC&#39;s implementation compared with using DBI&#39;s default implementation. If these difference cause you a problem you can set odbc_array_operations to false and DBD::ODBC will revert to DBI&#39;s implementations of the array methods.</p>
+
+<p>You can use the environment variable ODBC_DISABLE_ARRAY_OPERATIONS to switch array operations on/off too. When set to 1 array operations are disabled. When not set the default is used (which currently is off). When set to 0 array operations are used no matter what. I know this is slightly counter intuitive but I&#39;ve found it difficult to change the name (it got picked up and used in a few places very quickly).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Private_statement_attributes"
+>Private statement attributes</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_more_results"
+>odbc_more_results</a></h3>
+
+<p>Use this attribute to determine if there are more result sets available. SQL Server supports this feature. Use this as follows:</p>
+
+<pre class="sh_perl">  do {
+     my @row;
+     while (@row = $sth-&#62;fetchrow_array()) {
+        # do stuff here
+     }
+  } while ($sth-&#62;{odbc_more_results});</pre>
+
+<p>Note that with multiple result sets and output parameters (i.e,. using bind_param_inout), don&#39;t expect output parameters to written to until ALL result sets have been retrieved.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Private_statement_methods"
+>Private statement methods</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="odbc_lob_read"
+>odbc_lob_read</a></h3>
+
+<pre class="sh_perl">  $chrs_or_bytes_read = $sth-&#62;lob_read($column_no, \$lob, $length, \%attr);</pre>
+
+<p>Reads <code>$length</code> bytes from the lob at column <code>$column_no</code> returning the lob into <code>$lob</code> and the number of bytes or characters read into <code>$chrs_or_bytes_read</code>. If an error occurs undef will be returned. When there is no more data to be read 0 is returned.</p>
+
+<p>NOTE: This is currently an experimental method and may change in the future e.g., it may support automatic concatenation of the lob parts onto the end of the <code>$lob</code> with the addition of an extra flag or destination offset as in DBI&#39;s undocumented blob_read.</p>
+
+<p>The type the lob is retrieved as may be overridden in <code>%attr</code> using <code>TYPE =&#62; sql_type</code>. <code>%attr</code> is optional and if omitted defaults to SQL_C_BINARY for binary columns and SQL_C_CHAR/SQL_C_WCHAR for other column types depending on whether DBD::ODBC is built with unicode support. <code>$chrs_or_bytes_read</code> will by the bytes read when the column types SQL_C_CHAR or SQL_C_BINARY are used and characters read if the column type is SQL_C_WCHAR.</p>
+
+<p>When built with unicode support <code>$length</code> specifes the amount of buffer space to be used when retrieving the lob data but as it is returned as SQLWCHAR characters this means you at most retrieve <code>$length/2</code> characters. When those retrieved characters are encoded in UTF-8 for Perl, the <code>$lob</code> scalar may need to be larger than <code>$length</code> so DBD::ODBC grows it appropriately.</p>
+
+<p>You can retrieve a lob in chunks like this:</p>
+
+<pre class="sh_perl">  $sth-&#62;bind_col($column, undef, {TreatAsLOB=&#62;1});
+  while(my $retrieved = $sth-&#62;odbc_lob_read($column, \my $data, $length)) {
+      print &#34;retrieved=$retrieved lob_data=$data\n&#34;;
+  }</pre>
+
+<p>NOTE: to retrieve a lob like this you <b>must</b> first bind the lob column specifying BindAsLOB or DBD::ODBC will 1) bind the column as normal and it will be subject to LongReadLen and b) fail odbc_lob_read.</p>
+
+<p>NOTE: Some database engines and ODBC drivers do not allow you to retrieve columns out of order (e.g., MS SQL Server unless you are using cursors). In those cases you must ensure the lob retrieved is the last (or only) column in your select list.</p>
+
+<p>NOTE: You can retrieve only part of a lob but you will probably have to call finish on the statement handle before you do anything else with that statement. When only retrieving part of a large lob you could see a small delay when you call finish as some protocols used by ODBC drivers send the lob down the socket synchonously and there is no way to stop it (this means the ODBC driver needs to read all the lob from the socket even though you never retrieved it all yourself).</p>
+
+<p>NOTE: If your select contains multiple lobs you cannot read part of the first lob, the second lob then return to the first lob. You must read all lobs in order and completely or read part of a lob and then do no further calls to odbc_lob_read.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Private_DBD::ODBC_Functions"
+>Private DBD::ODBC Functions</a></h2>
+
+<p>You use DBD::ODBC private functions like this:</p>
+
+<pre class="sh_perl">  $dbh-&#62;func(arg, private_function_name, @args);</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="GetInfo"
+>GetInfo</a></h3>
+
+<p><b>This private function is now superceded by DBI&#39;s get_info method.</b></p>
+
+<p>This function maps to the ODBC SQLGetInfo call and the argument should be a valid ODBC information type (see ODBC specification). e.g.</p>
+
+<pre class="sh_perl">  $value = $dbh-&#62;func(6, &#39;GetInfo&#39;);</pre>
+
+<p>which returns the <code>SQL_DRIVER_NAME</code>.</p>
+
+<p>This function returns a scalar value, which can be a numeric or string value depending on the information value requested.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="SQLGetTypeInfo"
+>SQLGetTypeInfo</a></h3>
+
+<p><b>This private function is now superceded by DBI&#39;s type_info and type_info_all methods.</b></p>
+
+<p>This function maps to the ODBC SQLGetTypeInfo API and the argument should be a SQL type number (e.g. SQL_VARCHAR) or SQL_ALL_TYPES. SQLGetTypeInfo returns information about a data type supported by the data source.</p>
+
+<p>e.g.</p>
+
+<pre class="sh_perl">  use DBI qw(:sql_types);
+
+  $sth = $dbh-&#62;func(SQL_ALL_TYPES, GetTypeInfo);
+  DBI::dump_results($sth);</pre>
+
+<p>This function returns a DBI statement handle for the SQLGetTypeInfo result-set containing many columns of type attributes (see ODBC specification).</p>
+
+<p>NOTE: It is VERY important that the <code>use DBI</code> includes the <code>qw(:sql_types)</code> so that values like SQL_VARCHAR are correctly interpreted. This &#34;imports&#34; the sql type names into the program&#39;s name space. A very common mistake is to forget the <code>qw(:sql_types)</code> and obtain strange results.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="GetFunctions"
+>GetFunctions</a></h3>
+
+<p>This function maps to the ODBC SQLGetFunctions API which returns information on whether a function is supported by the ODBC driver.</p>
+
+<p>The argument should be <code>SQL_API_ALL_FUNCTIONS</code> (0) for all functions or a valid ODBC function number (e.g. <code>SQL_API_SQLDESCRIBEPARAM</code> which is 58). See ODBC specification or examine your sqlext.h and sql.h header files for all the SQL_API_XXX macros.</p>
+
+<p>If called with <code>SQL_API_ALL_FUNCTIONS</code> (0), then a 100 element array is returned where each element will contain a &#39;1&#39; if the ODBC function with that SQL_API_XXX index is supported or &#39;&#39; if it is not.</p>
+
+<p>If called with a specific SQL_API_XXX value for a single function it will return true if the ODBC driver supports that function, otherwise false.</p>
+
+<p>e.g.</p>
+
+<pre class="sh_perl">    my @x = $dbh-&#62;func(0,&#34;GetFunctions&#34;);
+    print &#34;SQLDescribeParam is supported\n&#34; if ($x[58]);</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">    print &#34;SQLDescribeParam is supported\n&#34;
+        if $dbh-&#62;func(58, &#34;GetFunctions&#34;);</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="GetStatistics"
+>GetStatistics</a></h3>
+
+<p><b>This private function is now superceded by DBI&#39;s statistics_info method.</b></p>
+
+<p>See the ODBC specification for the SQLStatistics API. You call SQLStatistics like this:</p>
+
+<pre class="sh_perl">  $dbh-&#62;func($catalog, $schema, $table, $unique, &#39;GetStatistics&#39;);</pre>
+
+<p>Prior to DBD::ODBC 1.16 $unique was not defined as being true/false or SQL_INDEX_UNIQUE/SQL_INDEX_ALL. In fact, whatever value you provided for $unique was passed through to the ODBC API SQLStatistics call unchanged. This changed in 1.16, where $unique became a true/false value which is interpreted into SQL_INDEX_UNIQUE for true and SQL_INDEX_ALL for false.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="GetForeignKeys"
+>GetForeignKeys</a></h3>
+
+<p><b>This private function is now superceded by DBI&#39;s foreign_key_info method.</b></p>
+
+<p>See the ODBC specification for the SQLForeignKeys API. You call SQLForeignKeys like this:</p>
+
+<pre class="sh_perl">  $dbh-&#62;func($pcatalog, $pschema, $ptable,
+             $fcatalog, $fschema, $ftable,
+             &#34;GetForeignKeys&#34;);</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="GetPrimaryKeys"
+>GetPrimaryKeys</a></h3>
+
+<p><b>This private function is now superceded by DBI&#39;s primary_key_info method.</b></p>
+
+<p>See the ODBC specification for the SQLPrimaryKeys API. You call SQLPrimaryKeys like this:</p>
+
+<pre class="sh_perl">  $dbh-&#62;func($catalog, $schema, $table, &#34;GetPrimaryKeys&#34;);</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="data_sources"
+>data_sources</a></h3>
+
+<p><b>This private function is now superceded by DBI&#39;s data_sources method.</b></p>
+
+<p>You call data_sources like this:</p>
+
+<pre class="sh_perl">  @dsns = $dbh-&#62;func(&#34;data_sources);</pre>
+
+<p>Handled since 0.21.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="GetSpecialColumns"
+>GetSpecialColumns</a></h3>
+
+<p>See the ODBC specification for the SQLSpecialColumns API. You call SQLSpecialColumns like this:</p>
+
+<pre class="sh_perl">  $dbh-&#62;func($identifier, $catalog, $schema, $table, $scope,
+             $nullable, &#39;GetSpecialColumns&#39;);</pre>
+
+<p>Handled as of version 0.28</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="ColAttributes"
+>ColAttributes</a></h3>
+
+<p><b>This private function is now superceded by DBI&#39;s statement attributes NAME, TYPE, PRECISION, SCALE, NULLABLE etc).</b></p>
+
+<p>See the ODBC specification for the SQLColAttributes API. You call SQLColAttributes like this:</p>
+
+<pre class="sh_perl">  $sth-&#62;func($column, $ftype, &#34;ColAttributes&#34;);
+
+  SQL_COLUMN_COUNT = 0
+  SQL_COLUMN_NAME = 1
+  SQL_COLUMN_TYPE = 2
+  SQL_COLUMN_LENGTH = 3
+  SQL_COLUMN_PRECISION = 4
+  SQL_COLUMN_SCALE = 5
+  SQL_COLUMN_DISPLAY_SIZE = 6
+  SQL_COLUMN_NULLABLE = 7
+  SQL_COLUMN_UNSIGNED = 8
+  SQL_COLUMN_MONEY = 9
+  SQL_COLUMN_UPDATABLE = 10
+  SQL_COLUMN_AUTO_INCREMENT = 11
+  SQL_COLUMN_CASE_SENSITIVE = 12
+  SQL_COLUMN_SEARCHABLE = 13
+  SQL_COLUMN_TYPE_NAME = 14
+  SQL_COLUMN_TABLE_NAME = 15
+  SQL_COLUMN_OWNER_NAME = 16
+  SQL_COLUMN_QUALIFIER_NAME = 17
+  SQL_COLUMN_LABEL = 18</pre>
+
+<p><b>Note:</b>Oracle&#39;s ODBC driver for linux in instant client 11r1 often returns strange values for column name e.g., &#39;20291&#39;. It is wiser to use DBI&#39;s NAME and NAME_xx attributes for portability.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="DescribeCol"
+>DescribeCol</a></h3>
+
+<p><b>This private function is now superceded by DBI&#39;s statement attributes NAME, TYPE, PRECISION, SCALE, NULLABLE etc).</b></p>
+
+<p>See the ODBC specification for the SQLDescribeCol API. You call SQLDescribeCol like this:</p>
+
+<pre class="sh_perl">  @info = $sth-&#62;func($column, &#34;DescribeCol&#34;);</pre>
+
+<p>The returned array contains the column attributes in the order described in the ODBC specification for SQLDescribeCol.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Additional_bind_col_attributes"
+>Additional bind_col attributes</a></h2>
+
+<p>DBD::ODBC supports a few additional attributes which may be passed to the bind_col method in the attributes.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="DiscardString"
+>DiscardString</a></h3>
+
+<p>See DBI&#39;s sql_type_cast utility function.</p>
+
+<p>If you bind a column as a specific type (SQL_INTEGER, SQL_DOUBLE and SQL_NUMERIC are the only ones supported currently) and you add DiscardString to the prepare attributes then if the returned bound data is capable of being converted to that type the scalar&#39;s pv (the string portion of a scalar) is cleared.</p>
+
+<p>This is especially useful if you are using a module which uses a scalars flags and/or pv to decide if a scalar is a number. JSON::XS does this and without this flag you have to add 0 to all bound column data returning numbers to get JSON::XS to encode it is N instead of &#34;N&#34;.</p>
+
+<p>NOTE: For DiscardString you need at least DBI 1.611.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="StrictlyTyped"
+>StrictlyTyped</a></h3>
+
+<p>See DBI&#39;s sql_type_cast utility function.</p>
+
+<p>See <a href="#DiscardString" class="podlinkpod"
+>&#34;DiscardString&#34;</a> above.</p>
+
+<p>Specifies that when DBI&#39;s sql_type_cast function is called on returned data where a bind type is specified that if the conversion cannot be performed an error will be raised.</p>
+
+<p>This is probably not a lot of use with DBD::ODBC as if you ask for say an SQL_INTEGER and the data is not able to be converted to an integer the ODBC driver will problably return &#34;Invalid character value for cast specification (SQL-22018)&#34;.</p>
+
+<p>NOTE: For DiscardString you need at least DBI 1.611.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="TreatAsLOB"
+>TreatAsLOB</a></h3>
+
+<p>See <a href="#odbc_lob_read" class="podlinkpod"
+>&#34;odbc_lob_read&#34;</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Tracing"
+>Tracing</a></h2>
+
+<p>DBD::ODBC now supports the parse_trace_flag and parse_trace_flags methods introduced in DBI 1.42 (see DBI for a full description). As of DBI 1.604, the only trace flag defined which is relevant to DBD::ODBC is &#39;SQL&#39; which DBD::ODBC supports by outputting the SQL strings (after modification) passed to the prepare and do methods.</p>
+
+<p>From DBI 1.617 DBI also defines ENC (encoding), CON (connection) TXN (transaction) and DBD (DBD only) trace flags. DBI&#39;s ENC and CON trace flags are synonomous with DBD::ODBC&#39;s odbcunicode and odbcconnection trace flags though I may remove the DBD::ODBC ones in the future. DBI&#39;s DBD trace flag allows output of only DBD::ODBC trace messages without DBI&#39;s trace messages.</p>
+
+<p>Currently DBD::ODBC supports two private trace flags. The &#39;odbcunicode&#39; flag traces some unicode operations and the odbcconnection traces the connect process.</p>
+
+<p>To enable tracing of particular flags you use:</p>
+
+<pre class="sh_perl">  $h-&#62;trace($h-&#62;parse_trace_flags(&#39;SQL|odbcconnection&#39;));
+  $h-&#62;trace($h-&#62;parse_trace_flags(&#39;1|odbcunicode&#39;));</pre>
+
+<p>In the first case &#39;SQL&#39; and &#39;odbcconnection&#39; tracing is enabled on $h. In the second case trace level 1 is set and &#39;odbcunicode&#39; tracing is enabled.</p>
+
+<p>If you want to enable a DBD::ODBC private trace flag before connecting you need to do something like:</p>
+
+<pre class="sh_perl">  use DBD::ODBC;
+  DBI-&#62;trace(DBD::ODBC-&#62;parse_trace_flag(&#39;odbcconnection&#39;));</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">  use DBD::ODBC;
+  DBI-&#62;trace(DBD::ODBC-&#62;parse_trace_flags(&#39;odbcconnection|odbcunicode&#39;));</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">  DBI_TRACE=odbcconnection|odbcunicode perl myscript.pl</pre>
+
+<p>From DBI 1.617 you can output only DBD::ODBC trace messages using</p>
+
+<pre class="sh_perl">  DBI_TRACE=DBD perl myscript.pl</pre>
+
+<p>DBD::ODBC outputs tracing at levels 3 and above (as levels 1 and 2 are reserved for DBI).</p>
+
+<p>For comprehensive tracing of DBI method calls without all the DBI internals see <a href="/perldoc?DBIx%3A%3ALog4perl" class="podlinkpod"
+>DBIx::Log4perl</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Deviations_from_the_DBI_specification"
+>Deviations from the DBI specification</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="last_insert_id"
+>last_insert_id</a></h3>
+
+<p>DBD::ODBC does not support DBI&#39;s last_insert_id. There is no ODBC defined way of obtaining this information. Generally the mechanism (and it differs vastly between databases and ODBC drivers) it to issue a select of some form (e.g., select @@identity or select sequence.currval from dual, etc).</p>
+
+<p>There are literally dozens of databases and ODBC drivers supported by DBD::ODBC and I cannot have them all. If you know how to retrieve the information for last_insert_id and you mail me the ODBC Driver name/version and database name/version with a small working example I will collect examples and document them here.</p>
+
+<p><b>Microsoft Access</b>. Recent versions of MS Access support <i>select @@identity</i> to retrieve the last insert ID. See <a href="http://support.microsoft.com/kb/815629" class="podlinkurl"
+>http://support.microsoft.com/kb/815629</a>. Information provided by Robert Freimuth.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Comments_in_SQL"
+>Comments in SQL</a></h3>
+
+<p>DBI does not say anything in particular about comments in SQL. DBD::ODBC looks for placeholders in the SQL string and until 1.24_2 it did not recognise comments in SQL strings so could find what it believes to be a placeholder in a comment e.g.,</p>
+
+<pre class="sh_perl">  select &#39;1&#39; /* placeholder ? in comment */
+  select -- named placeholder :named in comment
+    &#39;1&#39;</pre>
+
+<p>I cannot be exact about support for ignoring placeholders in literals but it has existed for a long time in DBD::ODBC. Support for ignoring placeholders in comments was added in 1.24_2. If you find a case where a named placeholder is not ignored and should be, see <a href="#odbc_ignore_named_placeholders" class="podlinkpod"
+>&#34;odbc_ignore_named_placeholders&#34;</a> for a workaround and mail me an example along with your ODBC driver name.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="do"
+>do</a></h3>
+
+<p>This is not really a deviation from the DBI specification since DBI allows a driver to avoid the overhead of creating an DBI statement handle for do().</p>
+
+<p>DBD::ODBC implements <code>do</code> by calling SQLExecDirect in ODBC and not SQLPrepare followed by SQLExecute so <code>do</code> is not the same as:</p>
+
+<pre class="sh_perl">  $dbh-&#62;prepare($sql)-&#62;execute()</pre>
+
+<p>It does this to avoid a round-trip to the server so it is faster. Normally this is good but some people fall foul of this with MS SQL Server if they call a procedure which outputs print statements (e.g., backup) as the procedure may not complete. See the DBD::ODBC FAQ and in general you are better to use prepare/execute when calling procedures.</p>
+
+<p>In addition, you should realise that since DBD::ODBC does not create a DBI statement for do calls, if you set up an error handler the handle passed in when a do fails will be the database handle and not a statement handle.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Mixed_placeholder_types"
+>Mixed placeholder types</a></h3>
+
+<p>There are 3 conventions for place holders in DBI. These are &#39;?&#39;, &#39;:N&#39; and &#39;:name&#39; (where &#39;N&#39; is a number and &#39;name&#39; is an alpha numeric string not beginning with a number). DBD::ODBC supports all these methods for naming placeholders but you must only use one method throughout a particular SQL string. If you mix placeholder methods you will get an error like:</p>
+
+<pre class="sh_perl">  Can&#39;t mix placeholder styles (1/2)</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Using_the_same_placeholder_more_than_once"
+>Using the same placeholder more than once</a></h3>
+
+<p>DBD::ODBC does not support (currently) the use of one named placeholder more than once in the a single SQL string. i.e.,</p>
+
+<pre class="sh_perl">  insert into foo values (:bar, :p1, :p2, :bar);</pre>
+
+<p>is not supported because &#39;bar&#39; is used more than once but:</p>
+
+<pre class="sh_perl">  insert into foo values(:bar, :p1, :p2)</pre>
+
+<p>is ok. If you do the former you will get an error like:</p>
+
+<pre class="sh_perl">  DBD::ODBC does not yet support binding a named parameter more than once</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Binding_named_placeholders"
+>Binding named placeholders</a></h3>
+
+<p>Although the DBI documentation (as of 1.604) does not say how named parameters are bound Tim Bunce has said that in Oracle they are bound with the leading &#39;:&#39; as part of the name and that has always been the case. i.e.,</p>
+
+<pre class="sh_perl">  prepare(&#34;insert into mytable values (:fred)&#34;);
+  bind_param(&#34;:foo&#34;, 1);</pre>
+
+<p>DBD::ODBC does not support binding named parameters with the &#39;:&#39; introducer. In the above example you must use:</p>
+
+<pre class="sh_perl">  bind_param(&#34;foo&#34;, 1);</pre>
+
+<p>In discussion on the dbi-dev list is was suggested that the &#39;:&#39; could be made optional and there were no basic objections but it has not made it&#39;s way into the pod yet.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Sticky_Parameter_Types"
+>Sticky Parameter Types</a></h3>
+
+<p>The DBI specification post 1.608 says in bind_param:</p>
+
+<pre class="sh_perl">  The data type is &#39;sticky&#39; in that bind values passed to execute()
+  are bound with the data type specified by earlier bind_param()
+  calls, if any.  Portable applications should not rely on being able
+  to change the data type after the first C&#60;bind_param&#62; call.</pre>
+
+<p>DBD::ODBC does allow a parameter to be rebound with another data type as ODBC inherently allows this. Therefore you can do:</p>
+
+<pre class="sh_perl">  # parameter 1 set as a SQL_LONGVARCHAR
+  $sth-&#62;bind_param(1, $data, DBI::SQL_LONGVARCHAR);
+  # without the bind above the $data parameter would be either a DBD::ODBC
+  # internal default or whatever the ODBC driver said it was but because
+  # parameter types are sticky, the type is still SQL_LONGVARCHAR.
+  $sth-&#62;execute($data);
+  # change the bound type to SQL_VARCHAR
+  # some DBDs will ignore the type in the following, DBD::ODBC does not
+  $sth-&#62;bind_param(1, $data, DBI::SQL_VARCHAR);</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="disconnect_and_transactions"
+>disconnect and transactions</a></h3>
+
+<p>DBI does not define whether a driver commits or rolls back any outstanding transaction when disconnect is called. As such DBD::ODBC cannot deviate from the specification but you should know it rolls back an uncommitted transaction when disconnect is called if SQLDisconnect returns state 25000 (transaction in progress).</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="execute_for_fetch_and_execute_array"
+>execute_for_fetch and execute_array</a></h3>
+
+<p>From version 1.34_1 DBD::ODBC implements its own execute_for_fetch which binds arrays of parameters and can send multiple rows (<a href="#odbc_batch_size" class="podlinkpod"
+>&#34;odbc_batch_size&#34;</a>) of parameters through the ODBC driver in one go (this overrides DBI&#39;s default execute_for_fetch). This is much faster when inserting, updating or deleting many rows in one go. Note, execute_array uses execute_for_fetch when the parameters are passed for column-wise binding.</p>
+
+<p>However, there are a small number of differences between using DBD::ODBC&#39;s execute_for_fetch compared with using DBI&#39;s default implementation (which simply calls execute repeatedly once per row). The differences you may see are:</p>
+
+<p>o as DBI&#39;s execute_for_fetch does one row at a time the result from execute is for one row and just about all ODBC drivers can report the number of affected rows when SQLRowCount is called per execute. When batches of parameters are sent the driver can still return the number of affected rows but it is usually per batch rather than per row. As a result, the tuple_status array you may pass to execute_for_fetch (or execute_array) usually shows -1 (unknown) for each row although the total affected returned in array context is a correct total affected.</p>
+
+<p>o not all ODBC drivers have sufficient ODBC support (arguably a bug) for correct diagnostics support when using arrays. DBI dictates that if a row in the batch is in error the tuple_status will contain the state, native and error message text. However the batch may generate multiple errors per row (which DBI says nothing about) and more than one row may error. In ODBC we get a list of errors but to associate each one with a particular row we need to call SQLGetDiagField for SQL_DIAG_ROW_NUMBER and it should say which row in the batch the diagnostic is associated with. Some ODBC drivers do not support SQL_DIAG_ROW_NUMBER properly and then DBD::ODBC cannot know which row in the batch an error refers to. In this case DBD::ODBC will report an error saying &#34;failed to retrieve diags&#34;, state of HY000 and a native of 1 so you&#39;ll still see an error but not necessarily the exact one. Also, when more than one diagnostic is found for a row DBD::ODBC picks the first one (which is usually most relevant) as there is no way to report more than one diagnostic per row in the tuple_status. If the first problem of SQL_DIAG_ROW_NUMBER proves to be a problem for you the DBD::ODBC tracing will show all errors and you can also use <a href="#odbc_getdiagrec" class="podlinkpod"
+>&#34;odbc_getdiagrec&#34;</a> yourself.</p>
+
+<p>o Binding parameters with execute_array and execute_for_fetch does not allow the parameter types to be set. However, as parameter types are sticky you can call bind_param(param_num, undef, {TYPE =&#62; sql_type}) before calling execute_for_fetch/execute_array and the TYPE should be sticky when the batch of parameters is bound.</p>
+
+<p>o Although you can insert very large columns execute_for_fetch will need <a href="#odbc_batch_size" class="podlinkpod"
+>&#34;odbc_batch_size&#34;</a> * max length of parameter per parameter so you may hit memory limits. If you use DBI&#39;s execute_for_fetch DBD::ODBC uses the ODBC API SQLPutData (see <a href="#odbc_putdata_start" class="podlinkpod"
+>&#34;odbc_putdata_start&#34;</a>) which does not require large amounts of memory as large columns are sent in pieces.</p>
+
+<p>o A lot of drivers have bugs with arrays of parameters (see the ODBC FAQ). e.g., as of 18-MAR-2012 I&#39;ve seen the latest SQLite ODBC driver seg fault and freeTDS 8/0.91 returns the wrong row count for batches.</p>
+
+<p>o <b>DO NOT</b> attempt to do an insert/update/delete and a select in the same SQL with execute_array e.g.,</p>
+
+<pre class="sh_perl">  SET IDENTITY_INSERT mytable ON
+  insert into mytable (id, name) values (?,?)
+  SET IDENTITY_INSERT mytable OFF
+  SELECT SCOPE_IDENTITY()</pre>
+
+<p>It just won&#39;t/can&#39;t work although you may not have noticed when using DBI&#39;s inbuilt execute_* methods. See rt 75687.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="type_info_all"
+>type_info_all</a></h3>
+
+<p>Many ODBC drivers now return 20 columns in type_info_all rather than the 19 DBI documents DBI documents. The 20th column is usually called &#34;USERTYPE&#34;. Recent MS SQL Server ODBC drivers do this. Fortunately this should not adversely affect you so long as you are using the keys provided at the start of type_info_all.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Unicode"
+>Unicode</a></h2>
+
+<p>The ODBC specification supports wide character versions (a postfix of &#39;W&#39;) of some of the normal ODBC APIs e.g., SQLDriverConnectW is a wide character version of SQLDriverConnect.</p>
+
+<p>In ODBC on Windows the wide characters are defined as SQLWCHARs (2 bytes) and are UCS-2. On non-Windows, the main driver managers I know of have implemented the wide character APIs differently:</p>
+
+<dl>
+<dt><a name="unixODBC"
+>unixODBC</a></dt>
+
+<dd>
+<p>unixODBC mimics the Windows ODBC API precisely meaning the wide character versions expect and return 2-byte characters in UCS-2.</p>
+
+<p>unixODBC will happily recognise ODBC drivers which only have the ANSI versions of the ODBC API and those that have the wide versions too.</p>
+
+<p>unixODBC will allow an ANSI application to work with a unicode ODBC driver and vice versa (although in the latter case you obviously cannot actually use unicode).</p>
+
+<p>unixODBC does not prevent you sending UTF-8 in the ANSI versions of the ODBC APIs but whether that is understood by your ODBC driver is another matter.</p>
+
+<p>unixODBC differs in only one way from the Microsoft ODBC driver in terms of unicode support in that it avoids unnecessary translations between single byte and double byte characters when an ANSI application is using a unicode-aware ODBC driver by requiring unicode applications to signal their intent by calling SQLDriverConnectW first. On Windows, the ODBC driver manager always uses the wide versions of the ODBC API in ODBC drivers which provide the wide versions regardless of what the application really needs and this results in a lot of unnecessary character translations when you have an ANSI application and a unicode ODBC driver.</p>
+
+<dt><a name="iODBC"
+>iODBC</a></dt>
+
+<dd>
+<p>The wide character versions expect and return wchar_t types.</p>
+</dd>
+</dl>
+
+<p>DBD::ODBC has gone with unixODBC so you cannot use iODBC with a unicode build of DBD::ODBC. However, some ODBC drivers support UTF-8 (although how they do this with SQLGetData reliably I don&#39;t know) and so you should be able to use those with DBD::ODBC not built for unicode.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Enabling_and_Disabling_Unicode_support"
+>Enabling and Disabling Unicode support</a></h3>
+
+<p>On Windows Unicode support is enabled by default and to disable it you will need to specify <code>-nou</code> to <em>Makefile.PL</em> to get back to the original behavior of DBD::ODBC before any Unicode support was added.</p>
+
+<p>e.g.,</p>
+
+<pre class="sh_perl">  perl Makfile.PL -nou</pre>
+
+<p>On non-Windows platforms Unicode support is disabled by default. To enable it specify <code>-u</code> to <em>Makefile.PL</em> when you configure DBD::ODBC.</p>
+
+<p>e.g.,</p>
+
+<pre class="sh_perl">  perl Makefile.PL -u</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Unicode_-_What_is_supported?"
+>Unicode - What is supported?</a></h3>
+
+<p>As of version 1.17 DBD::ODBC has the following unicode support:</p>
+
+<dl>
+<dt><a name='SQL'></a><a name="SQL_(introduced_in_1.16_2)"
+>SQL (introduced in 1.16_2)</a></dt>
+
+<dd>
+<p>Unicode strings in calls to the <code>prepare</code> and <code>do</code> methods are supported so long as the <code>odbc_execdirect</code> attribute is not used.</p>
+
+<dt><a name='unicode'></a><a name="unicode_connection_strings_(introduced_in_1.16_2)"
+>unicode connection strings (introduced in 1.16_2)</a></dt>
+
+<dd>
+<p>Unicode connection strings are supported but you will need a DBI post 1.607 for that.</p>
+
+<dt><a name='column'></a><a name="column_names"
+>column names</a></dt>
+
+<dd>
+<p>Unicode column names are returned.</p>
+
+<dt><a name='bound'></a><a name="bound_columns_(introduced_in_1.15)"
+>bound columns (introduced in 1.15)</a></dt>
+
+<dd>
+<p>If the DBMS reports the column as being a wide character (SQL_Wxxx) it will be bound as a wide character and any returned data will be converted from UTF-16 to UTF-8 and the UTF-8 flag will then be set on the data.</p>
+
+<dt><a name='bound'></a><a name="bound_parameters"
+>bound parameters</a></dt>
+
+<dd>
+<p>If the perl scalars you bind to parameters are marked UTF-8 and the DBMS reports the type as being a wide type or you bind the parameter as a wide type they will be converted to wide characters and bound as such.</p>
+
+<dt><a name='metadata'></a><a name="metadata_calls_like_table_info,_column_info"
+>metadata calls like table_info, column_info</a></dt>
+
+<dd>
+<p>As of DBD::ODBC 1.32_3 meta data calls accept Unicode strings.</p>
+</dd>
+</dl>
+
+<p>Since version 1.16_4, the default parameter bind type is SQL_WVARCHAR for unicode builds of DBD::ODBC. This only affects ODBC drivers which do not support SQLDescribeParam and only then if you do not specifically set a sql type on the bind_param method call.</p>
+
+<p>The above Unicode support has been tested with the SQL Server, Oracle 9.2+ and Postgres drivers on Windows and various Easysoft ODBC drivers on UNIX.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Unicode_-_What_is_not_supported?"
+>Unicode - What is not supported?</a></h3>
+
+<p>You cannot use unicode parameter names e.g.,</p>
+
+<pre class="sh_perl">  select * from table where column = :unicode_param_name</pre>
+
+<p>You cannot use unicode strings in calls to prepare if you set the odbc_execdirect attribute.</p>
+
+<p>You cannot use the iODBC driver manager with DBD::ODBC built for unicode.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Unicode_-_Caveats"
+>Unicode - Caveats</a></h3>
+
+<p>For Unicode support on any platform in Perl you will need at least Perl 5.8.1 - sorry but this is the way it is with Perl.</p>
+
+<p>The Unicode support in DBD::ODBC expects a WCHAR to be 2 bytes (as it is on Windows and as the ODBC specification suggests it is). Until ODBC specifies any other Unicode support it is not envisioned this will change. On UNIX there are a few different ODBC driver managers. I have only tested the unixODBC driver manager (<a href="http://www.unixodbc.org" class="podlinkurl"
+>http://www.unixodbc.org</a>) with Unicode support and it was built with defaults which set WCHAR as 2 bytes.</p>
+
+<p>I believe that the iODBC driver manager expects wide characters to be wchar_t types (which are usually 4) and hence DBD::ODBC will not work iODBC when built for unicode.</p>
+
+<p>The ODBC Driver must expect Unicode data specified in SQLBindParameter and SQLBindCol to be UTF-16 in local endianness. Similarly, in calls to SQLPrepareW, SQLDescribeColW and SQLDriverConnectW.</p>
+
+<p>You should be aware that once Unicode support is enabled it affects a number of DBI methods (some of which you might not expect). For instance, when listing tables, columns etc some drivers (e.g. Microsoft SQL Server) will report the column types as wide types even if the strings actually fit in 7-bit ASCII. As a result, there is an overhead for retrieving this column data as 2 bytes per character will be transmitted (compared with 1 when Unicode support is not enabled) and these strings will be converted into UTF-8 but will end up fitting (in most cases) into 7bit ASCII so a lot of conversion work has been performed for nothing. If you don&#39;t have Unicode table and column names or Unicode column data in your tables you are best disabling Unicode support.</p>
+
+<p>I am at present unsure if ChopBlanks processing on Unicode strings is working correctly on UNIX. If nothing else the construct L&#39; &#39; in dbdimp.c might not work with all UNIX compilers. Reports of issues and patches welcome.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Unicode_implementation_in_DBD::ODBC"
+>Unicode implementation in DBD::ODBC</a></h3>
+
+<p>DBD::ODBC uses the wide character versions of the ODBC API and the SQL_WCHAR ODBC type to support unicode in Perl.</p>
+
+<p>Wide characters returned from the ODBC driver will be converted to UTF-8 and the perl scalars will have the utf8 flag set (by using sv_utf8_decode).</p>
+
+<p><b>IMPORTANT</b></p>
+
+<p>Perl scalars which are UTF-8 and are sent through the ODBC API will be converted to UTF-16 and passed to the ODBC wide APIs or signalled as SQL_WCHARs (e.g., in the case of bound columns). Retrieved data which are wide characters are converted from UTF-16 to UTF-8. However, you should realise most ODBC drivers do not support UTF-16, ODBC only talks about wide characters being 2 bytes and UCS-2 and UCS-2 and UTF-16 are not the same. UCS-2 only supports Unicode characters in the first plane (the Basic Multilangual Plane or BMP) (code points U+0000 to U+FFFF), the most frequently used characters. So why does DBD::ODBC currently encode in UTF-16? For around 97% of Unicode characters in the range 0-0xFFFF UCS-2 and UTF-16 are exactly the same (and where they differ there is no valid Unicode character as the range U+D800 to U+DFFF is reserved from use only as surrogate pairs). As the ODBC API currently uses UCS-2 it does not support Unicode characters with code points above 0xFFFF (if you know better I&#39;d like to hear from you). However, because DBD::ODBC uses UTF-16 encoding you can still insert Unicode characters above 0xFFFF into your database and retrieve them back correctly but they will not being treated as a single Unicode character in your database e.g., a &#34;select length(a_column) from table&#34; with a single Unicode character above 0xFFFF will most likely return 2 and not 1 so you cannot use database functions on that data like upper/lower/length etc but you can at least save the data in your database and get it back. This is a fudge and I cannot say I&#39;m overjoyed by it but it is what the majority of people who use DBD::ODBC have requested.</p>
+
+<p>When built for unicode, DBD::ODBC will always call SQLDriverConnectW (and not SQLDriverConnect) even if a) your connection string is not unicode b) you have not got a DBI later than 1.607, because unixODBC requires SQLDriverConnectW to be called if you want to call other unicode ODBC APIs later. As a result, if you build for unicode and pass ASCII strings to the connect method they will be converted to UTF-16 and passed to SQLDriverConnectW. This should make no real difference to perl not using unicode connection strings.</p>
+
+<p>You will need a DBI later than 1.607 to support unicode connection strings because until post 1.607 there was no way for DBI to pass unicode strings to the DBD.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Unicode_and_Oracle"
+>Unicode and Oracle</a></h3>
+
+<p>You have to set the environment variables <code>NLS_NCHAR=AL32UTF8</code> and <code>NLS_LANG=AMERICAN_AMERICA.AL32UTF8</code> (or any other language setting ending with <code>.AL32UTF8</code>) before loading DBD::ODBC to make Oracle return Unicode data. (See also &#34;Oracle and Unicode&#34; in the POD of DBD::Oracle.)</p>
+
+<p>On Windows, using the Oracle ODBC Driver you have to enable the <b>Force SQL_WCHAR support</b> Workaround in the data source configuration to make Oracle return Unicode to a non-Unicode application. Alternatively, you can include <code>FWC=T</code> in your connect string.</p>
+
+<p>Unless you need to use ODBC, if you want Unicode support with Oracle you are better off using <a href="/perldoc?DBD%3A%3AOracle" class="podlinkpod"
+>DBD::Oracle</a>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Unicode_and_PostgreSQL"
+>Unicode and PostgreSQL</a></h3>
+
+<p>See the odbc_utf8_on parameter to treat all strings as utf8.</p>
+
+<p>Some tests from the original DBD::ODBC 1.13 fail with PostgreSQL 8.0.3, so you may not want to use DBD::ODBC to connect to PostgreSQL 8.0.3.</p>
+
+<p>Unicode tests fail because PostgreSQL seems not to give any hints about Unicode, so all data is treated as non-Unicode.</p>
+
+<p>Unless you need to use ODBC, if you want Unicode support with Postgres you are better off with <a href="/perldoc?DBD%3A%3APg" class="podlinkpod"
+>DBD::Pg</a> as it has a specific attribute named <code>pg_enable_utf8</code> to enable Unicode support.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Unicode_and_Easysoft_ODBC_Drivers"
+>Unicode and Easysoft ODBC Drivers</a></h3>
+
+<p>We have tested the Easysoft SQL Server, Oracle and ODBC Bridge drivers with DBD::ODBC built for Unicode. All work as described without modification except for the Oracle driver you will need to set you NLS_LANG as mentioned above.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Unicode_and_other_ODBC_drivers"
+>Unicode and other ODBC drivers</a></h3>
+
+<p>If you have a unicode-enabled ODBC driver and it works with DBD::ODBC let me know and I will include it here.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="ODBC_Support_in_ODBC_Drivers"
+>ODBC Support in ODBC Drivers</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Drivers_without_SQLDescribeParam"
+>Drivers without SQLDescribeParam</a></h3>
+
+<p>Some drivers do not support the <code>SQLDescribeParam</code> ODBC API (e.g., Microsoft Access, FreeTDS).</p>
+
+<p>DBD::ODBC uses the <code>SQLDescribeParam</code> API when parameters are bound to your SQL to find the types of the parameters. If the ODBC driver does not support <code>SQLDescribeParam</code>, DBD::ODBC assumes the parameters are <code>SQL_VARCHAR</code> or <code>SQL_WVARCHAR</code> types (depending on whether DBD::ODBC is built for unicode or not). In any case, if you bind a parameter and specify a SQL type this overrides any type DBD::ODBC would choose.</p>
+
+<p>For ODBC drivers which do not support <code>SQLDescribeParam</code> the default behavior in DBD::ODBC may not be what you want. To change the default parameter bind type set <a href="#odbc_default_bind_type" class="podlinkpod"
+>&#34;odbc_default_bind_type&#34;</a>. If, after that you have some SQL where you need to vary the parameter types used add the SQL type to the end of the <code>bind_param</code> method.</p>
+
+<pre class="sh_perl">  use DBI qw(:sql_types);
+  $h = DBI-&#62;connect;
+  # set the default bound parameter type
+  $h-&#62;{odbc_default_bind_type} = SQL_VARCHAR;
+  # bind a parameter with a specific type
+  $s = $h-&#62;prepare(q/insert into mytable values(?)/);
+  $s-&#62;bind_param(1, &#34;\x{263a}&#34;, SQL_WVARCHAR);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Version_Control"
+>Version Control</a></h2>
+
+<p>DBD::ODBC source code is under version control at svn.perl.org. If you would like to use the &#34;bleeding&#34; edge version, you can get the latest from svn.perl.org via Subversion version control. Note there is no guarantee that this version is any different than what you get from the tarball from CPAN, but it might be :)</p>
+
+<p>You may read about Subversion at <a href="http://subversion.tigris.org" class="podlinkurl"
+>http://subversion.tigris.org</a></p>
+
+<p>You can get a subversion client from there and check dbd-odbc out via:</p>
+
+<pre class="sh_perl">   svn checkout <a href="http://svn.perl.org/modules/dbd-odbc/trunk" class="podlinkurl"
+>http://svn.perl.org/modules/dbd-odbc/trunk</a> &#60;your directory name here&#62;</pre>
+
+<p>Which will pull all the files from the subversion trunk to your specified directory. If you want to see what has changed since the last release of DBD::ODBC read the Changes file or use &#34;svn log&#34; to get a list of checked in changes.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Contributing"
+>Contributing</a></h2>
+
+<p>There are seven main ways you may help with the development and maintenance of this module:</p>
+
+<dl>
+<dt><a name='Submitting'></a><a name="Submitting_patches"
+>Submitting patches</a></dt>
+
+<dd>
+<p>Please use Subversion (see above) to get the latest version of DBD::ODBC from the trunk and submit any patches against that.</p>
+
+<p>Please, before submitting a patch:</p>
+
+<pre class="sh_perl">   svn update
+   &#60;try and included a test which demonstrates the fix/change working&#62;
+   &#60;test your patch&#62;
+   svn diff &#62; describe_my_diffs.patch</pre>
+
+<p>and send the resulting file to me and cc the dbi-users@perl.org mailing list (if you are not a member - why not!).</p>
+
+<dt><a name='Reporting'></a><a name="Reporting_installs"
+>Reporting installs</a></dt>
+
+<dd>
+<p>Install CPAN::Reporter and report you installations. This is easy to do - see <a href="#CPAN_Testers_Reporting" class="podlinkpod"
+>&#34;CPAN Testers Reporting&#34;</a>.</p>
+
+<dt><a name='Report'></a><a name="Report_bugs"
+>Report bugs</a></dt>
+
+<dd>
+<p>If you find what you believe is a bug then enter it into the <a href="http://rt.cpan.org/Dist/Display.html?Name=DBD-ODBC" class="podlinkurl"
+>http://rt.cpan.org/Dist/Display.html?Name=DBD-ODBC</a> system. Where possible include code which reproduces the problem including any schema required and the versions of software you are using.</p>
+
+<p>If you are unsure whether you have found a bug report it anyway or post it to the dbi-users mailing list.</p>
+
+<dt><a name='pod'></a><a name="pod_comments_and_corrections"
+>pod comments and corrections</a></dt>
+
+<dd>
+<p>If you find inaccuracies in the DBD::ODBC pod or have a comment which you think should be added then go to <a href="http://annocpan.org" class="podlinkurl"
+>http://annocpan.org</a> and submit them there. I get an email for every comment added and will review each one and apply any changes to the documentation.</p>
+
+<dt><a name='Review'></a><a name="Review_DBD::ODBC"
+>Review DBD::ODBC</a></dt>
+
+<dd>
+<p>Add your review of DBD::ODBC on <a href="http://cpanratings.perl.org" class="podlinkurl"
+>http://cpanratings.perl.org</a>.</p>
+
+<p>If you are a member on ohloh then add your review or register your use of DBD::ODBC at <a href="http://www.ohloh.net/projects/perl_dbd_odbc" class="podlinkurl"
+>http://www.ohloh.net/projects/perl_dbd_odbc</a>.</p>
+
+<dt><a name='submit'></a><a name="submit_test_cases"
+>submit test cases</a></dt>
+
+<dd>
+<p>Most DBDs are built against a single client library for the database.</p>
+
+<p>Unlike other DBDs, DBD::ODBC works with many different ODBC drivers. Although they all should be written with regard to the ODBC specification drivers have bugs and in some places the specification is open to interpretation. As a result, when changes are applied to DBD::ODBC it is very easy to break something in one ODBC driver.</p>
+
+<p>What helps enormously to identify problems in the many combinations of DBD::ODBC and ODBC drivers is a large test suite. I would greatly appreciate any test cases and in particular any new test cases for databases other than MS SQL Server.</p>
+
+<dt><a name='Test'></a><a name="Test_DBD::ODBC"
+>Test DBD::ODBC</a></dt>
+
+<dd>
+<p>I have a lot of problems deciding when to move a development release to an official release since I get few test reports for development releases. What often happens is I call for testers on various lists, get a few and then get inundated with requests to do an official release. Then I do an official release and loads of rts appear out of nowhere and the cycle starts again.</p>
+
+<p>DBD::ODBC by its very nature works with many ODBC Drivers and it is impossible for me to have and test them all (this differs from other DBDs). If you depend on DBD::ODBC you should be interested in new releases and if you send me your email address suggesting you are prepared to be part of the DBD::ODBC testing network I will credit you in the Changes file and perhaps the main DBD::ODBC file.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="CPAN_Testers_Reporting"
+>CPAN Testers Reporting</a></h2>
+
+<p>Please, please, please (is that enough), consider installing CPAN::Reporter so that when you install perl modules a report of the installation success or failure can be sent to cpan testers. In this way module authors 1) get feedback on the fact that a module is being installed 2) get to know if there are any installation problems. Also other people like you may look at the test reports to see how successful they are before choosing the version of a module to install.</p>
+
+<p>See this guide on how to get started with sending test reports: <a href="http://wiki.cpantesters.org/wiki/QuickStart" class="podlinkurl"
+>http://wiki.cpantesters.org/wiki/QuickStart</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Others/todo?"
+>Others/todo?</a></h2>
+
+<p>Level 2</p>
+
+<pre class="sh_perl">    SQLColumnPrivileges
+    SQLProcedureColumns
+    SQLProcedures
+    SQLTablePrivileges
+    SQLDrivers
+    SQLNativeSql</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Random_Links"
+>Random Links</a></h2>
+
+<p>These are in need of sorting and annotating. Some are relevant only to ODBC developers.</p>
+
+<p>You can find DBD::ODBC on ohloh now at:</p>
+
+<p><a href="http://www.ohloh.net/projects/perl_dbd_odbc" class="podlinkurl"
+>http://www.ohloh.net/projects/perl_dbd_odbc</a></p>
+
+<p>If you use ohloh and DBD::ODBC please say you use it and rate it.</p>
+
+<p>There is a good search engine for the various Perl DBI lists at the following URLS:</p>
+
+<p><a href="http://perl.markmail.org/search/list:org.perl.dbi-users" class="podlinkurl"
+>http://perl.markmail.org/search/list:org.perl.dbi-users</a></p>
+
+<p><a href="http://perl.markmail.org/search/list:org.perl.dbi-dev" class="podlinkurl"
+>http://perl.markmail.org/search/list:org.perl.dbi-dev</a></p>
+
+<p><a href="http://perl.markmail.org/search/list:org.perl.dbi-announce" class="podlinkurl"
+>http://perl.markmail.org/search/list:org.perl.dbi-announce</a></p>
+
+<p><a href="http://www.syware.com" class="podlinkurl"
+>http://www.syware.com</a></p>
+
+<p><a href="http://www.microsoft.com/odbc" class="podlinkurl"
+>http://www.microsoft.com/odbc</a></p>
+
+<p>For Linux/Unix folks, compatible ODBC driver managers can be found at:</p>
+
+<p><a href="http://www.unixodbc.org" class="podlinkurl"
+>http://www.unixodbc.org</a> (unixODBC source and rpms)</p>
+
+<p><a href="http://www.iodbc.org" class="podlinkurl"
+>http://www.iodbc.org</a> (iODBC driver manager source)</p>
+
+<p>For Linux/Unix folks, you can checkout the following for ODBC Drivers and Bridges:</p>
+
+<p><a href="http://www.easysoft.com" class="podlinkurl"
+>http://www.easysoft.com</a></p>
+
+<p><a href="http://www.openlinksw.com" class="podlinkurl"
+>http://www.openlinksw.com</a></p>
+
+<p><a href="http://www.datadirect.com" class="podlinkurl"
+>http://www.datadirect.com</a></p>
+
+<p><a href="http://www.atinet.com" class="podlinkurl"
+>http://www.atinet.com</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Some_useful_tutorials:"
+>Some useful tutorials:</a></h2>
+
+<p>Debugging Perl DBI:</p>
+
+<p><a href="http://www.easysoft.com/developer/languages/perl/dbi-debugging.html" class="podlinkurl"
+>http://www.easysoft.com/developer/languages/perl/dbi-debugging.html</a></p>
+
+<p>Enabling ODBC support in Perl with Perl DBI and DBD::ODBC:</p>
+
+<p><a href="http://www.easysoft.com/developer/languages/perl/dbi_dbd_odbc.html" class="podlinkurl"
+>http://www.easysoft.com/developer/languages/perl/dbi_dbd_odbc.html</a></p>
+
+<p>Perl DBI/DBD::ODBC Tutorial Part 1 - Drivers, Data Sources and Connection:</p>
+
+<p><a href="http://www.easysoft.com/developer/languages/perl/dbd_odbc_tutorial_part_1.html" class="podlinkurl"
+>http://www.easysoft.com/developer/languages/perl/dbd_odbc_tutorial_part_1.html</a></p>
+
+<p>Perl DBI/DBD::ODBC Tutorial Part 2 - Introduction to retrieving data from your database:</p>
+
+<p><a href="http://www.easysoft.com/developer/languages/perl/dbd_odbc_tutorial_part_2.html" class="podlinkurl"
+>http://www.easysoft.com/developer/languages/perl/dbd_odbc_tutorial_part_2.html</a></p>
+
+<p>Perl DBI/DBD::ODBC Tutorial Part 3 - Connecting Perl on UNIX or Linux to Microsoft SQL Server:</p>
+
+<p><a href="http://www.easysoft.com/developer/languages/perl/sql_server_unix_tutorial.html" class="podlinkurl"
+>http://www.easysoft.com/developer/languages/perl/sql_server_unix_tutorial.html</a></p>
+
+<p>Perl DBI - Put Your Data On The Web:</p>
+
+<p><a href="http://www.easysoft.com/developer/languages/perl/tutorial_data_web.html" class="podlinkurl"
+>http://www.easysoft.com/developer/languages/perl/tutorial_data_web.html</a></p>
+
+<p>Multiple Active Statements (MAS) and DBD::ODBC</p>
+
+<p><a href="http://www.easysoft.com/developer/languages/perl/multiple-active-statements.html" class="podlinkurl"
+>http://www.easysoft.com/developer/languages/perl/multiple-active-statements.html</a></p>
+
+<p>64-bit ODBC</p>
+
+<p><a href="http://www.easysoft.com/developer/interfaces/odbc/64-bit.html" class="podlinkurl"
+>http://www.easysoft.com/developer/interfaces/odbc/64-bit.html</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Frequently_Asked_Questions"
+>Frequently Asked Questions</a></h2>
+
+<p>Frequently asked questions are now in <a href="/~mjevans/DBD-ODBC-1.37/FAQ" class="podlinkpod"
+>DBD::ODBC::FAQ</a>. Run <code>perldoc DBD::ODBC::FAQ</code> to view them.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONFIGURATION_AND_ENVIRONMENT"
+>CONFIGURATION AND ENVIRONMENT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>You should consult the documentation for the ODBC Driver Manager you are using.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DEPENDENCIES"
+>DEPENDENCIES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?DBI" class="podlinkpod"
+>DBI</a></p>
+
+<p><a href="/perldoc?Test%3A%3ASimple" class="podlinkpod"
+>Test::Simple</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INCOMPATIBILITIES"
+>INCOMPATIBILITIES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>None known.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS_AND_LIMITATIONS"
+>BUGS AND LIMITATIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>None known other than the deviations from the DBI specification mentioned above in <a href="#Deviations_from_the_DBI_specification" class="podlinkpod"
+>&#34;Deviations from the DBI specification&#34;</a>.</p>
+
+<p>Please report any to me via the CPAN RT system. See <a href="http://rt.cpan.org/" class="podlinkurl"
+>http://rt.cpan.org/</a> for more details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Tim Bunce</p>
+
+<p>Jeff Urlwin</p>
+
+<p>Thomas K. Wenrich</p>
+
+<p>Martin J. Evans</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE_AND_COPYRIGHT"
+>LICENSE AND COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. See <a href="/perldoc?perlartistic" class="podlinkpod"
+>perlartistic</a>. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+
+<p>Portions of this software are Copyright Tim Bunce, Thomas K. Wenrich, Jeff Urlwin and Martin J. Evans - see the source.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?DBI" class="podlinkpod"
+>DBI</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78269 Uploads, 24722 Distributions
+105999 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 18:15:45 2012 GMT (0.191036939620972) @cpansearch1 -->
+ </body>
+</html>

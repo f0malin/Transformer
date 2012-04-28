@@ -1,0 +1,30 @@
+TODO list for Perl module DateTime::Event::Recurrence
+
+"ICAL FORMAT"
+
+* tests with ICal format, using
+  DateTime::Format::ICal->format_recurrence():
+    wkst
+    interval
+    start date
+    monthly, week + day (is it day-of-week or day-of-month?)
+
+* it should not generate an ICal string 
+  if it finds an invalid WKST or   # DONE
+  if it specify nanoseconds or
+  if there is a "start" value
+
+* move class DateTime::Set::ICal to a separate file
+
+OTHER
+
+* add tests for error-messages
+
+* move calculations to a DateTime::Util::* module
+
+* add more tests with 'interval' > 1
+
+* add more 'previous' tests
+
+* find out how it behaves with mixed timezones and DST changes
+

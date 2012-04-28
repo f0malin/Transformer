@@ -1,0 +1,378 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>WWW::Search::Yahoo - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","WWW-Search-Yahoo",3]);
+    _gaq.push(["_setCustomVar",5,"Release","WWW-Search-Yahoo-2.415",3]);
+    _gaq.push(["_setCustomVar",3,"Module","WWW::Search::Yahoo",3]);
+    _gaq.push(["_setCustomVar",1,"Author","MTHURN",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?WWW::Search::Yahoo">permalink</a></div>
+  <a href="/~mthurn/">Martin 'Kingpin' Thurn</a> &gt;
+  <a href="/~mthurn/WWW-Search-Yahoo-2.415/">WWW-Search-Yahoo-2.415</a> &gt;
+  WWW::Search::Yahoo
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/4a367e4af38ec41e2e2556c8eef047dd?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/M/MT/MTHURN/WWW-Search-Yahoo-2.415.tar.gz">WWW-Search-Yahoo-2.415.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=WWW%3A%3ASearch%3A%3AYahoo;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~MTHURN/WWW-Search-Yahoo-2.415/lib/WWW/Search/Yahoo.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?WWW%3A%3ASearch">WWW::Search</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=WWW%3A%3ASearch%3A%3AYahoo">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=WWW-Search-Yahoo">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.380 &nbsp;
+<span class="noprint">
+  <a href="/src/MTHURN/WWW-Search-Yahoo-2.415/lib/WWW/Search/Yahoo.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#NOTES'>NOTES</a>
+  <li class='indexItem indexItem1'><a href='#PRIVATE_METHODS'>PRIVATE METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#gui_query'>gui_query</a>
+    <li class='indexItem indexItem2'><a href='#need_to_delay'>need_to_delay</a>
+    <li class='indexItem indexItem2'><a href='#user_agent_delay'>user_agent_delay</a>
+    <li class='indexItem indexItem2'><a href='#preprocess_results_page'>preprocess_results_page</a>
+    <li class='indexItem indexItem2'><a href='#_result_list_tags'>_result_list_tags</a>
+    <li class='indexItem indexItem2'><a href='#_result_list_items'>_result_list_items</a>
+    <li class='indexItem indexItem2'><a href='#parse_details'>parse_details</a>
+    <li class='indexItem indexItem2'><a href='#_where_to_find_count'>_where_to_find_count</a>
+    <li class='indexItem indexItem2'><a href='#_string_has_count'>_string_has_count</a>
+    <li class='indexItem indexItem2'><a href='#_a_is_next_link'>_a_is_next_link</a>
+    <li class='indexItem indexItem2'><a href='#strip'>strip</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#LEGALESE'>LEGALESE</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>WWW::Search::Yahoo - backend for searching www.yahoo.com</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use WWW::Search;
+  my $oSearch = new WWW::Search(&#39;Yahoo&#39;);
+  my $sQuery = WWW::Search::escape_query(&#34;sushi restaurant Columbus Ohio&#34;);
+  $oSearch-&#62;native_query($sQuery);
+  while (my $oResult = $oSearch-&#62;next_result())
+    print $oResult-&#62;url, &#34;\n&#34;;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This class is a Yahoo specialization of <a href="/perldoc?WWW%3A%3ASearch" class="podlinkpod"
+>WWW::Search</a>. It handles making and interpreting Yahoo searches <em><a href="http://www.yahoo.com" class="podlinkurl"
+>http://www.yahoo.com</a></em>.</p>
+
+<p>This class exports no public interface; all interaction should be done through <a href="/perldoc?WWW%3A%3ASearch" class="podlinkpod"
+>WWW::Search</a> objects.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTES"
+>NOTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The default search is: Yahoo&#39;s web-based index (not Directory).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PRIVATE_METHODS"
+>PRIVATE METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you just want to write Perl code to search Yahoo, you do NOT need to read any further here. Instead, just read the <a href="/perldoc?WWW%3A%3ASearch" class="podlinkpod"
+>WWW::Search</a> documentation.</p>
+
+<p>If you want to write a subclass of this module (e.g. create a backend for another branch of Yahoo) then please read about the private methods here:</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="gui_query"
+>gui_query</a></h2>
+
+<p>Yes, Virginia, we do try to emulate stupid-human queries.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="need_to_delay"
+>need_to_delay</a></h2>
+
+<p>This method tells the <a href="/perldoc?WWW%3A%3ASearch" class="podlinkpod"
+>WWW::Search</a> controller code whether we need to pause and give the yahoo.com servers a breather.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="user_agent_delay"
+>user_agent_delay</a></h2>
+
+<p>This method tells the <a href="/perldoc?WWW%3A%3ASearch" class="podlinkpod"
+>WWW::Search</a> controller code how many seconds we should pause.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="preprocess_results_page"
+>preprocess_results_page</a></h2>
+
+<p>Clean up the Yahoo HTML before we attempt to parse it.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_result_list_tags"
+>_result_list_tags</a></h2>
+
+<p>Returns a list, which will be passed as arguments to HTML::Element::look_down() in order to return a list of HTML::Element which contain the query results.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_result_list_items"
+>_result_list_items</a></h2>
+
+<p>Given an HTML::TreeBuilder tree, returns a list of HTML::Element, which contain the query results.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="parse_details"
+>parse_details</a></h2>
+
+<p>Given a (portion of an) HTML::TreeBuilder tree and a <a href="/perldoc?WWW%3A%3ASearchResult" class="podlinkpod"
+>WWW::SearchResult</a> object, parses one result out of the tree and populates the SearchResult.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_where_to_find_count"
+>_where_to_find_count</a></h2>
+
+<p>Returns a list, which will be passed as arguments to HTML::Element::look_down() in order to return an HTML::Element which contains the approximate result count.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_string_has_count"
+>_string_has_count</a></h2>
+
+<p>Given a string, returns the approximate result count if that string contains the approximate result count.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_a_is_next_link"
+>_a_is_next_link</a></h2>
+
+<p>Given an HTML::Element, returns true if it seems to contain the clickable &#34;next page&#34; widget.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="strip"
+>strip</a></h2>
+
+<p>Given a string, strips leading and trailing whitespace off of it.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>To make new back-ends, see <a href="/perldoc?WWW%3A%3ASearch" class="podlinkpod"
+>WWW::Search</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Please tell the maintainer if you find any!</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>As of 1998-02-02, <code>WWW::Search::Yahoo</code> is maintained by Martin Thurn (mthurn@cpan.org).</p>
+
+<p><code>WWW::Search::Yahoo</code> was originally written by Wm. L. Scheding, based on <code>WWW::Search::AltaVista</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LEGALESE"
+>LEGALESE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>THIS SOFTWARE IS PROVIDED &#34;AS IS&#34; AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (C) 1998-2009 Martin &#39;Kingpin&#39; Thurn</p>
+
+<p>This software is released under the same license as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78070 Uploads, 24687 Distributions
+105903 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sun Apr 22 14:44:53 2012 GMT (0.39861798286438) @cpansearch1 -->
+ </body>
+</html>

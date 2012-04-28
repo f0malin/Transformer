@@ -1,0 +1,460 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Term::Twiddle - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Term-Twiddle",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Term-Twiddle-2.72",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Term::Twiddle",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SCOTTW",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Term::Twiddle">permalink</a></div>
+  <a href="/~scottw/">Scott Wiersdorf</a> &gt;
+  <a href="/~scottw/Term-Twiddle-2.72/">Term-Twiddle-2.72</a> &gt;
+  Term::Twiddle
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/c3642af1ff494dc913a3247d2059942a?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SC/SCOTTW/Term-Twiddle-2.72.tar.gz">Term-Twiddle-2.72.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Term%3A%3ATwiddle;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SCOTTW/Term-Twiddle-2.72/Twiddle.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Time%3A%3AHiRes">Time::HiRes</a><br>
+<a href="/perldoc?Term%3A%3AProgressBar">Term::ProgressBar</a><br>
+<a href="/perldoc?Object%3A%3AInsideOut">Object::InsideOut</a><br>
+<a href="/perldoc?Win32%3A%3AMutex">Win32::Mutex</a><br>
+<a href="/perldoc?Tie%3A%3ACycle">Tie::Cycle</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Term%3A%3ATwiddle">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 2</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Term-Twiddle">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.72 &nbsp;
+<span class="noprint">
+  <a href="/src/SCOTTW/Term-Twiddle-2.72/Twiddle.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#During_Twiddling'>During Twiddling</a>
+    <li class='indexItem indexItem2'><a href='#Spinner_Methods'>Spinner Methods</a>
+    <li class='indexItem indexItem2'><a href='#Alternative_Spinner_Methods'>Alternative Spinner Methods</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#EXAMPLES'>EXAMPLES</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#CAVEATS'>CAVEATS</a>
+  <li class='indexItem indexItem1'><a href='#ACKNOWLEDGEMENTS'>ACKNOWLEDGEMENTS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Term::Twiddle - Twiddles a thingy while-u-wait</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use Term::Twiddle;
+  my $spinner = new Term::Twiddle;
+
+  $spinner-&#62;start;
+  system(&#39;tar&#39;, &#39;-xvf&#39;, &#39;some_phat_tarfile.tar&#39;);
+  $spinner-&#62;stop;
+
+  $spinner-&#62;random;  ## makes it appear to really struggle at times!
+  $spinner-&#62;start;
+  &#38;some_long_function();
+  $spinner-&#62;stop;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Always fascinated by the spinner during FreeBSD&#39;s loader bootstrap, I wanted to capture it so I could view it any time I wanted to--and I wanted to make other people find that same joy I did. Now, anytime you or your users have to wait for something to finish, instead of twiddling their thumbs, they can watch the computer twiddle its thumbs.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="During_Twiddling"
+>During Twiddling</a></h2>
+
+<p>Once the twiddler/spinner is in motion you need to do something (e.g., unpack a tar file, call some long function, etc.). You can do almost anything in between <b>start</b> and <b>stop</b> as long as there are no <b>sleep</b> calls in there (unless the process has been forked, as in a Perl <b>system</b> call). From Time::HiRes:</p>
+
+<pre class="sh_perl">    Use of interval timers may interfere with alarm(), sleep(), and
+    usleep().  In standard-speak the &#34;interaction is unspecified&#34;,
+    which means that anything may happen: it may work, it may not.</pre>
+
+<p>Try not to do any terminal I/O while the twiddler is going (unless you don&#39;t mind dragging the twiddler around with your cursor).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Spinner_Methods"
+>Spinner Methods</a></h2>
+
+<dl>
+<dt><a name="new"
+><b>new</b></a></dt>
+
+<dd>
+<p>Creates a new Twiddle object:</p>
+
+<pre class="sh_perl">    my $spinner = new Term::Twiddle;</pre>
+
+<p>Optionally initializes the Twiddle object:</p>
+
+<pre class="sh_perl">    ## a moderately paced spinner
+    my $spinner = new Term::Twiddle( { rate =&#62; 0.075 } );</pre>
+
+<dt><a name="start"
+><b>start</b></a></dt>
+
+<dd>
+<p>Starts the twiddler twiddling:</p>
+
+<pre class="sh_perl">    $spinner-&#62;start;</pre>
+
+<dt><a name="stop"
+><b>stop</b></a></dt>
+
+<dd>
+<p>Stops the twiddler:</p>
+
+<pre class="sh_perl">    $spinner-&#62;stop;</pre>
+
+<dt><a name="thingy"
+><b>thingy</b></a></dt>
+
+<dd>
+<p>Creates a new thingy. The argument is a reference to a list of strings to print (usually single characters) so that animation looks good. The default spinner sequence looks like this:</p>
+
+<pre class="sh_perl">    $spinner-&#62;thingy( [ &#34;\\&#34;, &#34;|&#34;, &#34;/&#34;, &#34;-&#34; ] );</pre>
+
+<p>an arrow could be done like this: $spinner-&#62;thingy( [ &#34;----&#62;&#34;, &#34; -----&#62;&#34;, &#34; -----&#62;&#34;, &#34; -----&#62;&#34;, &#34; -----&#62;|&#34;, &#34; ----&#62;|&#34;, &#34; ---&#62;|&#34;, &#34; --&#62;|&#34;, &#34; -&#62;|&#34;, &#34; &#62;|&#34;, &#34; |&#34;, &#34; &#34;]);</p>
+
+<p>Look at the test.pl file for this package for more fun thingy ideas.</p>
+
+<dt><a name="rate"
+><b>rate</b></a></dt>
+
+<dd>
+<p>Changes the rate at which the thingy is changing (e.g., spinner is spinning). This is the time to wait between thingy characters (or &#34;frames&#34;) in seconds. Fractions of seconds are supported. The default rate is 0.175 seconds.</p>
+
+<pre class="sh_perl">    $spinner-&#62;rate(0.075);  ## faster!</pre>
+
+<dt><a name="probability"
+><b>probability</b></a></dt>
+
+<dd>
+<p>Determines how likely it is for each step in the thingy&#39;s motion to change rate of change. That is, each time the thingy advances in its sequence, a random number from 1 to 100 is generated. If <b>probability</b> is set, it is compared to the random number. If the probability is greater than or equal to the randomly generated number, then a new rate of change is randomly computed (between 0 and 0.2 seconds).</p>
+
+<p>In short, if you want the thingy to change rates often, set <b>probability</b> high. Otherwise set it low. If you don&#39;t want the rate to change ever, set it to 0 (zero). 0 is the default.</p>
+
+<pre class="sh_perl">    ## half of all sequence changes will result in a new rate of change
+    $spinner-&#62;probability(50);
+    $spinner-&#62;start;
+    do_something;
+    $spinner-&#62;stop;</pre>
+
+<p>The purpose of this is to create a random rate of change for the thingy, giving the impression that whatever the user is waiting for is certainly doing a lot of work (e.g., as the rate slows, the computer is working harder, as the rate increases, the computer is working very fast. Either way your computer looks good!).</p>
+
+<dt><a name="random"
+><b>random</b></a></dt>
+
+<dd>
+<p>Invokes the <b>probability</b> method with the argument specified. If no argument is specified, 25 is the default value. This is meant as a short-cut for the <b>probability</b> method.</p>
+
+<pre class="sh_perl">    $spinner-&#62;random;</pre>
+
+<dt><a name="stream"
+><b>stream</b></a></dt>
+
+<dd>
+<p>Select an alternate stream to print on. By default, STDOUT is printed to.</p>
+
+<pre class="sh_perl">    $spinner-&#62;stream(*STDERR);</pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Alternative_Spinner_Methods"
+>Alternative Spinner Methods</a></h2>
+
+<p>Since version 2.70, <b>Term::Twiddle</b> objects support a couple of new spinners that aren&#39;t so &#34;plain&#34;. 2.70 includes a <b>bounce</b>ing ball and a <b>swish</b>ing object (that&#39;s the best name I could think to call it).</p>
+
+<p>The following methods are used to activate and customize these new spinners.</p>
+
+<dl>
+<dt><a name="type"
+><b>type</b></a></dt>
+
+<dd>
+<p>Use this method to set the type of spinner. The default type (no type) is whatever <b>thingy</b> is set to. Two other currently supported types are <b>bounce</b>, and <b>swish</b>. These may be set in the constructor:</p>
+
+<pre class="sh_perl">    my $sp = new Term::Twiddle({ type =&#62; &#39;bounce&#39; });
+    $sp-&#62;start;</pre>
+
+<p>or you can set it with this <b>type</b> method:</p>
+
+<pre class="sh_perl">    my $sp = new Term::Twiddle;
+    $sp-&#62;type(&#39;bounce&#39;);</pre>
+
+<p>There is currently no way to add new <b>type</b>s without some hacking (it&#39;s on the &#34;to do&#34; list).</p>
+
+<dt><a name="width"
+><b>width</b></a></dt>
+
+<dd>
+<p>This method is only used when <b>type</b> is undefined (i.e., a normal spinner). <b>width</b> determines how wide the <b>bounce</b> or <b>swish</b> objects go. <b>width</b> may be set in the constructor:</p>
+
+<pre class="sh_perl">    my $sp = new Term::Twiddle({ type =&#62; &#39;bounce&#39;, width =&#62; 60 });
+    $sp-&#62;start;</pre>
+
+<p>or you can set it with this <b>width</b> method:</p>
+
+<pre class="sh_perl">    my $sp = new Term::Twiddle({ type =&#62; &#39;swish&#39; });
+    $sp-&#62;width(74);</pre>
+
+<dt><a name="delay"
+><b>delay</b></a></dt>
+
+<dd>
+<p>Determines the speed of motion of the object. Usually the default is fine (and each object has its own default delay option for optimal aesthetics).</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Show the user something while we unpack the archive:</p>
+
+<pre class="sh_perl">    my $sp = new Term::Twiddle;
+    $sp-&#62;random;
+    $sp-&#62;start;
+    system(&#39;tar&#39;, &#39;-zxf&#39;, &#39;/some/tarfile.tar.gz&#39;);
+    $sp-&#62;stop;</pre>
+
+<p>Show the user a bouncing ball while we modify their configuration file:</p>
+
+<pre class="sh_perl">    my $sp = new Term::Twiddle( { type =&#62; &#39;bounce&#39; } );
+    $sp-&#62;start;
+
+    ## there must not be any &#39;sleep&#39; calls in this!
+    do_config_stuff();
+
+    $sp-&#62;stop;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Scott Wiersdorf, &#60;scott@perlcode.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEATS"
+>CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li>Prolly won&#39;t run on platforms lacking <b>setitimer</b>. Will run on Cygwin/Win32 (reported by Zak Zebrowski--thanks!).</li>
+
+<li></li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ACKNOWLEDGEMENTS"
+>ACKNOWLEDGEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li>Thanks to Tom Christiansen for the timer code (found lurking in an old FAQ somewhere). He probably never had an idea that it would be part of one of the most useful modules on CPAN ;o)
+<p>The timer code has since been replaced by <b>Time::HiRes</b>&#39;s <b>setitimer</b> function, but it is good to thank Mr. Christiansen for his goodness to Perl anyway.</p>
+</li>
+
+<li>&#34;Drew&#34; (drew@drewtaylor.com) from rt.cpan.org for suggesting the removal of &#39;use warnings&#39; for the faithful 5.005 users.</li>
+
+<li>Orignal swishing motion filched from <b>Term::ReadKey</b>&#39;s test.pl by Kenneth Albanowski (kjahds@kjahds.com). Danke!</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?perl" class="podlinkpod"
+>perl</a>.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78068 Uploads, 24686 Distributions
+105902 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sun Apr 22 10:39:44 2012 GMT (0.0753769874572754) @cpansearch1 -->
+ </body>
+</html>

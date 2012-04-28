@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Proc::SyncExec - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Proc-SyncExec",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Proc-SyncExec-1.01",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Proc::SyncExec",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ROSCH",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Proc::SyncExec">permalink</a></div>
+  <a href="/~rosch/">Roderick Schertler</a> &gt;
+  <a href="/~rosch/Proc-SyncExec-1.01/">Proc-SyncExec-1.01</a> &gt;
+  Proc::SyncExec
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/4794876de98f0ee26fda42b910825879?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/R/RO/ROSCH/Proc-SyncExec-1.01.tar.gz">Proc-SyncExec-1.01.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Proc%3A%3ASyncExec;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ROSCH/Proc-SyncExec-1.01/SyncExec.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Proc-SyncExec">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.01 &nbsp;
+<span class="noprint">
+  <a href="/src/ROSCH/Proc-SyncExec-1.01/SyncExec.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Proc::SyncExec - Spawn processes but report exec() errors</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    # Normal-looking piped opens which properly report exec() errors in $!:
+    sync_open WRITER_FH, &#34;|command -with args&#34; or die $!;
+    sync_open READER_FH, &#34;command -with args|&#34; or die $!;
+
+    # Synchronized fork/exec which reports exec errors in $!:
+    $pid = sync_exec $command, @arg;
+    $pid = sync_exec $code_ref, $cmd, @arg;     # run code after fork in kid
+
+    # fork() which retries if it fails, then croaks() if it still fails.
+    $pid = fork_retry;
+    $pid = fork_retry 100;              # retry 100 times rather than 5
+    $pid = fork_retry 100, 2;           # sleep 2 rather than 5 seconds between
+
+    # A couple of interfaces similar to sync_open() but which let you
+    # avoid the shell:
+    $pid = sync_fhpopen_noshell READERFH, &#39;r&#39;, @command;
+    $pid = sync_fhpopen_noshell WRITERFH, &#39;w&#39;, @command;
+    $fh = sync_popen_noshell &#39;r&#39;, @command_which_outputs;
+    $fh = sync_popen_noshell &#39;w&#39;, @command_which_inputs;
+    ($fh, $pid) = sync_popen_noshell &#39;r&#39;, @command_which_outputs;
+    ($fh, $pid)= sync_popen_noshell &#39;w&#39;, @command_which_inputs;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module contains functions for synchronized process spawning with full error return. If the child&#39;s exec() call fails the reason for the failure is reported back to the parent.</p>
+
+<p>These functions will croak() if they encounter an unexpected system error, such as a pipe() failure or a repeated fork() failure.</p>
+
+<p>Nothing is exported by default.</p>
+
+<dl>
+<dt><a name='fork_retry'></a><a name="fork_retry_[max-retries_[sleep-between]]"
+><b>fork_retry</b> [<i>max-retries</i> [<i>sleep-between</i>]]</a></dt>
+
+<dd>
+<p>This function runs fork() until it succeeds or until <i>max-retries</i> (default 5) attempts have been made, sleeping <i>sleep-between</i> seconds (default 5) between attempts. If the last fork() fails <b>fork_retry</b> croak()s.</p>
+
+<dt><a name='sync_exec'></a><a name="sync_exec_[code]_command..."
+><b>sync_exec</b> [<i>code</i>] <i>command</i>...</a></dt>
+
+<dd>
+<p>This function is similar to a fork()/exec() sequence but with a few twists.</p>
+
+<p><b>sync_exec</b> does not return until after the fork()ed child has already performed its exec(). The synchronization this provides is useful in some unusual circumstances.</p>
+
+<p>Normally the pid of the child process is returned. However, if the child fails its exec() <b>sync_exec</b> returns undef and sets $! to the reason for the child&#39;s exec() failure.</p>
+
+<p>Since the @cmd array is passed directly to Perl&#39;s exec() Perl might choose to invoke the command via the shell if @cmd contains only one element and it looks like it needs a shell to interpret it. If this happens the return value of <b>sync_exec</b> only indicates whether the exec() of the shell worked.</p>
+
+<p>The optional initial <i>code</i> argument must be a code reference. If it is present it is run in the child just before exec() is called. You can use this to set up redirections or whatever. If <i>code</i> returns false no exec is performed, instead a failure is returned using the current $! value (or EINTR if $! is 0).</p>
+
+<p>If the fork() fails or if there is some other unexpected system error <b>sync_exec</b> croak()s rather than returning.</p>
+
+<dt><a name='sync_fhpopen_noshell'></a><a name="sync_fhpopen_noshell_fh_type_cmd_[arg]..."
+><b>sync_fhpopen_noshell</b> <i>fh</i> <i>type</i> <i>cmd</i> [<i>arg</i>]...</a></dt>
+
+<dd>
+<p>This is a popen() but it never invokes the shell and it uses sync_exec() under the covers. See <a href="#sync_exec" class="podlinkpod"
+>&#34;sync_exec&#34;</a>.</p>
+
+<p>The <i>type</i> is either <code>&#39;r&#39;</code> to read from the process or <code>&#39;w&#39;</code> to write to it.</p>
+
+<p>The return value is the pid of the forked process.</p>
+
+<dt><a name='sync_popen_noshell'></a><a name="sync_popen_noshell_type_cmd_arg..."
+><b>sync_popen_noshell</b> <i>type</i> <i>cmd</i> <i>arg</i>...</a></dt>
+
+<dd>
+<p>This is like <b>sync_fhpopen_noshell</b>, but you don&#39;t have to supply the filehandle.</p>
+
+<p>If called in an array context the return value is a list consisting of the filehandle and the PID of the child. In a scalar context only the filehandle is returned.</p>
+
+<dt><a name='sync_open'></a><a name="sync_open_fh_[open-spec]"
+><b>sync_open</b> <i>fh</i> [<i>open-spec</i>]</a></dt>
+
+<dd>
+<p>This is like a Perl open() except that if a pipe is involved and the implied exec() fails sync_open() fails with $! set appropriately. See <a href="#sync_exec" class="podlinkpod"
+>&#34;sync_exec&#34;</a>.</p>
+
+<p>Like <b>sync_exec</b>, <b>sync_open</b> croak()s if there is an unexpected system error (such as a failed pipe()).</p>
+
+<p>Also like <b>sync_exec</b>, if you use a command which Perl needs to use the shell to interpret you&#39;ll only know if the exec of the shell worked. Use <b>sync_fhpopen_noshell</b> or <b>sync_exec</b> to be sure that this doesn&#39;t happen.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Roderick Schertler &#60;<em>roderick@argon.org</em>&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>perl(1).</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78272 Uploads, 24723 Distributions
+106001 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 21:14:39 2012 GMT (0.104452848434448) @cpansearch1 -->
+ </body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>WWW::Search::Ebay - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","WWW-Search-Ebay",3]);
+    _gaq.push(["_setCustomVar",5,"Release","WWW-Search-Ebay-3.021",3]);
+    _gaq.push(["_setCustomVar",3,"Module","WWW::Search::Ebay",3]);
+    _gaq.push(["_setCustomVar",1,"Author","MTHURN",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?WWW::Search::Ebay">permalink</a></div>
+  <a href="/~mthurn/">Martin 'Kingpin' Thurn</a> &gt;
+  <a href="/~mthurn/WWW-Search-Ebay-3.021/">WWW-Search-Ebay-3.021</a> &gt;
+  WWW::Search::Ebay
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/4a367e4af38ec41e2e2556c8eef047dd?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/M/MT/MTHURN/WWW-Search-Ebay-3.021.tar.gz">WWW-Search-Ebay-3.021.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=WWW%3A%3ASearch%3A%3AEbay;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~MTHURN/WWW-Search-Ebay-3.021/lib/WWW/Search/Ebay.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?WWW%3A%3AMechanize">WWW::Mechanize</a><br>
+<a href="/perldoc?Getopt%3A%3ALong">Getopt::Long</a><br>
+<a href="/perldoc?Getopt%3A%3AArgvFile">Getopt::ArgvFile</a><br>
+<a href="/perldoc?Getopt%3A%3ADeclare">Getopt::Declare</a><br>
+<a href="/perldoc?WWW%3A%3ASearch">WWW::Search</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=WWW%3A%3ASearch%3A%3AEbay">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=WWW-Search-Ebay">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.255 &nbsp;
+<span class="noprint">
+  <a href="/src/MTHURN/WWW-Search-Ebay-3.021/lib/WWW/Search/Ebay.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#NOTES'>NOTES</a>
+  <li class='indexItem indexItem1'><a href='#OPTIONS'>OPTIONS</a>
+  <li class='indexItem indexItem1'><a href='#PUBLIC_METHODS_OF_NOTE'>PUBLIC METHODS OF NOTE</a>
+  <li class='indexItem indexItem1'><a href='#METHODS_TO_BE_OVERRIDDEN_IN_SUBCLASSING'>METHODS TO BE OVERRIDDEN IN SUBCLASSING</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#LEGALESE'>LEGALESE</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>WWW::Search::Ebay - backend for searching www.ebay.com</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use WWW::Search;
+  my $oSearch = new WWW::Search(&#39;Ebay&#39;);
+  my $sQuery = WWW::Search::escape_query(&#34;C-10 carded Yakface&#34;);
+  $oSearch-&#62;native_query($sQuery);
+  while (my $oResult = $oSearch-&#62;next_result())
+    { print $oResult-&#62;url, &#34;\n&#34;; }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This class is a Ebay specialization of <a href="/perldoc?WWW%3A%3ASearch" class="podlinkpod"
+>WWW::Search</a>. It handles making and interpreting Ebay searches <em><a href="http://www.ebay.com" class="podlinkurl"
+>http://www.ebay.com</a></em>.</p>
+
+<p>This class exports no public interface; all interaction should be done through <a href="/perldoc?WWW%3A%3ASearch" class="podlinkpod"
+>WWW::Search</a> objects.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTES"
+>NOTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The search is done against CURRENT running AUCTIONS only. (NOT completed auctions, NOT eBay Stores items, NOT Buy-It-Now only items.) (If you want to search completed auctions, use the <a href="/perldoc?WWW%3A%3ASearch%3A%3AEbay%3A%3ACompleted" class="podlinkpod"
+>WWW::Search::Ebay::Completed</a> module.) (If you want to search eBay Stores, use the <a href="/~mthurn/WWW-Search-Ebay-3.021/lib/WWW/Search/Ebay/Stores.pm" class="podlinkpod"
+>WWW::Search::Ebay::Stores</a> module.)</p>
+
+<p>The query is applied to TITLES only.</p>
+
+<p>This module can return only the first 200 results matching your query.</p>
+
+<p>In the resulting <a href="/perldoc?WWW%3A%3ASearch%3A%3AResult" class="podlinkpod"
+>WWW::Search::Result</a> objects, the description() field consists of a human-readable combination (joined with semicolon-space) of the Item Number; number of bids; and high bid amount (or starting bid amount).</p>
+
+<p>In the resulting <a href="/perldoc?WWW%3A%3ASearch%3A%3AResult" class="podlinkpod"
+>WWW::Search::Result</a> objects, the end_date() field contains a human-readable DTG of when the auction is scheduled to end (in the form &#34;YYYY-MM-DD HH:MM TZ&#34;). If environment variable TZ is set, the time will be converted to that timezone; otherwise the time will be left in ebay.com&#39;s default timezone (US/Pacific).</p>
+
+<p>In the resulting <a href="/perldoc?WWW%3A%3ASearch%3A%3AResult" class="podlinkpod"
+>WWW::Search::Result</a> objects, the bid_count() field contains the number of bids as an integer.</p>
+
+<p>In the resulting <a href="/perldoc?WWW%3A%3ASearch%3A%3AResult" class="podlinkpod"
+>WWW::Search::Result</a> objects, the bid_amount() field is a string containing the high bid or starting bid as a human-readable monetary value in seller-native units, e.g. &#34;$14.95&#34; or &#34;GBP 6.00&#34;.</p>
+
+<p>In the resulting <a href="/perldoc?WWW%3A%3ASearch%3A%3AResult" class="podlinkpod"
+>WWW::Search::Result</a> objects, the category() field contains the Ebay category number.</p>
+
+<p>In the resulting <a href="/perldoc?WWW%3A%3ASearch%3A%3AResult" class="podlinkpod"
+>WWW::Search::Result</a> objects, the sold() field will be non-zero if the item has already sold. (Only if you&#39;re using WWW::Search::Ebay::Completed)</p>
+
+<p>After a successful search, your search object will contain an element named &#39;categories&#39; which will be a reference to an array of hashes containing names and IDs of categories and nested subcategories, and the count of items matching your query in each category and subcategory. (Special thanks to Nick Lokkju for this code!) For example:</p>
+
+<pre class="sh_perl">  $oSearch-&#62;{category} = [
+          {
+            &#39;ID&#39; =&#62; &#39;1&#39;,
+            &#39;Count&#39; =&#62; 19,
+            &#39;Name&#39; =&#62; &#39;Collectibles&#39;,
+            &#39;Subcategory&#39; =&#62; [
+                               {
+                                 &#39;ID&#39; =&#62; &#39;13877&#39;,
+                                 &#39;Count&#39; =&#62; 11,
+                                 &#39;Name&#39; =&#62; &#39;Historical Memorabilia&#39;
+                               },
+                               {
+                                 &#39;ID&#39; =&#62; &#39;11450&#39;,
+                                 &#39;Count&#39; =&#62; 1,
+                                 &#39;Name&#39; =&#62; &#39;Clothing, Shoes &#38; Accessories&#39;
+                               },
+                             ]
+          },
+          {
+            &#39;ID&#39; =&#62; &#39;281&#39;,
+            &#39;Count&#39; =&#62; 1,
+            &#39;Name&#39; =&#62; &#39;Jewelry &#38; Watches&#39;,
+          }
+        ];</pre>
+
+<p>If your query string happens to be an eBay item number, (i.e. if ebay.com redirects the query to an auction page), you will get back one WWW::Search::Result without bid or price information.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OPTIONS"
+>OPTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='Search'></a><a name="Search_descriptions"
+>Search descriptions</a></dt>
+
+<dd>
+<p>To search titles and descriptions, add &#39;srchdesc&#39;=&#62;&#39;y&#39; to the query options:</p>
+
+<pre class="sh_perl">  $oSearch-&#62;native_query($sQuery, { srchdesc =&#62; &#39;y&#39; } );</pre>
+
+<dt><a name='Search'></a><a name="Search_one_category"
+>Search one category</a></dt>
+
+<dd>
+<p>To restrict your search to a particular eBay category, find out eBay&#39;s ID number for the category and add &#39;sacategory&#39;=&#62;123 to the query options:</p>
+
+<pre class="sh_perl">  $oSearch-&#62;native_query($sQuery, { sacategory =&#62; 48995 } );</pre>
+
+<p>If you send a single asterisk or a single space as the query string, the results will be ALL the auctions in that category.</p>
+
+<dt><a name='Limit'></a><a name="Limit_search_by_price_range"
+>Limit search by price range</a></dt>
+
+<dd>
+<p>Contributed by Brian Wilson:</p>
+
+<pre class="sh_perl">  $oSearch-&#62;native_query($sQuery, {
+    _mPrRngCbx=&#62;&#39;1&#39;, _udlo=&#62;$minPrice, _udhi=&#62;$maxPrice,
+    } );</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PUBLIC_METHODS_OF_NOTE"
+>PUBLIC METHODS OF NOTE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name="user_agent_delay"
+>user_agent_delay</a></dt>
+
+<dd>
+<p>Introduce a few-seconds delay to avoid overwhelming the server.</p>
+
+<dt><a name="need_to_delay"
+>need_to_delay</a></dt>
+
+<dd>
+<p>Controls whether we do the delay or not.</p>
+
+<dt><a name="preprocess_results_page"
+>preprocess_results_page</a></dt>
+
+<dd>
+<p>Grabs the eBay Official Time so that when we parse the DTG from the HTML, we can convert / return exactly what eBay means for each one.</p>
+
+<dt><a name="result_as_HTML"
+>result_as_HTML</a></dt>
+
+<dd>
+<p>Given a WWW::SearchResult object representing an auction, formats it human-readably with HTML.</p>
+
+<p>An optional second argument is the date format, a string as specified for Date::Manip::UnixDate. Default is &#39;%Y-%m-%d %H:%M:%S&#39;</p>
+
+<pre class="sh_perl">  my $sHTML = $oSearch-&#62;result_as_HTML($oSearchResult, &#39;%H:%M %b %E&#39;);</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS_TO_BE_OVERRIDDEN_IN_SUBCLASSING"
+>METHODS TO BE OVERRIDDEN IN SUBCLASSING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>You only need to read about these if you are subclassing this module (i.e. making a backend for another flavor of eBay search).</p>
+
+<dl>
+<dt><a name="_get_result_count_elements"
+>_get_result_count_elements</a></dt>
+
+<dd>
+<p>Given an HTML::TreeBuilder object, return a list of HTML::Element objects therein which could possibly contain the approximate result count verbiage.</p>
+
+<dt><a name="_get_itemtitle_tds"
+>_get_itemtitle_tds</a></dt>
+
+<dd>
+<p>Given an HTML::TreeBuilder object, return a list of HTML::Element objects therein representing &#60;TD&#62; elements which could possibly contain the HTML for result title and hotlink.</p>
+
+<dt><a name="_parse_category_list"
+>_parse_category_list</a></dt>
+
+<dd>
+<p>Parses the Category list from the left side of the results page. So far, this method can handle every type of eBay search currently implemented. If you find that it doesn&#39;t suit your needs, please contact the author because it&#39;s probably just a tiny tweak that&#39;s needed.</p>
+
+<dt><a name="_process_date_abbrevs"
+>_process_date_abbrevs</a></dt>
+
+<dd>
+<p>Given a date string, converts common abbreviations to their full words (so that the string can be unambiguously parsed by Date::Manip). For example, in the default English, &#39;d&#39; becomes &#39;days&#39;.</p>
+
+<dt><a name="_next_text"
+>_next_text</a></dt>
+
+<dd>
+<p>The text of the &#34;Next&#34; button, localized for a specific type of eBay backend.</p>
+
+<dt><a name="whitespace_pattern"
+>whitespace_pattern</a></dt>
+
+<dd>
+<p>Return a qr// pattern to match whitespace your webpage&#39;s language.</p>
+
+<dt><a name="_currency_pattern"
+>_currency_pattern</a></dt>
+
+<dd>
+<p>Return a qr// pattern to match mentions of money in your webpage&#39;s language. Include the digits in the pattern.</p>
+
+<dt><a name="_title_pattern"
+>_title_pattern</a></dt>
+
+<dd>
+<p>Return a qr// pattern to match the webpage title in your webpage&#39;s language. Add grouping parenthesis so that $1 becomes the auction title, $2 becomes the eBay item number, and $3 becomes the end date.</p>
+
+<dt><a name="_result_count_pattern"
+>_result_count_pattern</a></dt>
+
+<dd>
+<p>Return a qr// pattern to match the result count in your webpage&#39;s language. Include parentheses so that $1 becomes the number (with commas is OK).</p>
+
+<dt><a name="_columns"
+>_columns</a></dt>
+
+<dd>
+<p>Specify the order in which data columns appear in the search results table.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>To make new back-ends, see <a href="/perldoc?WWW%3A%3ASearch" class="podlinkpod"
+>WWW::Search</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Please tell the author if you find any!</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Martin &#39;Kingpin&#39; Thurn, <code>mthurn at cpan.org</code>, <a href="http://tinyurl.com/nn67z" class="podlinkurl"
+>http://tinyurl.com/nn67z</a>.</p>
+
+<p>Some fixes along the way contributed by Troy Davis.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LEGALESE"
+>LEGALESE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>THIS SOFTWARE IS PROVIDED &#34;AS IS&#34; AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (C) 1998-2009 Martin &#39;Kingpin&#39; Thurn</p>
+
+<p>This software is released under the same license as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78183 Uploads, 24710 Distributions
+106004 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 08:12:58 2012 GMT (0.109187841415405) @cpansearch1 -->
+ </body>
+</html>

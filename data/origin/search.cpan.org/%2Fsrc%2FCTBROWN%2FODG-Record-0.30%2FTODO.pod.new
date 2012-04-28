@@ -1,0 +1,41 @@
+=head1 TODO
+
+=item * 
+
+Can object methods be installed to work with the fields such as 
+CREDIT_CARD_NUMBER encrypt?  Should objects or attributes be created 
+for each of the fields?  How can this be done in a way as to not sacrifice 
+performance.  Can we recycle each of those objects, too.
+
+  $record->CREDIT_CARD_NUMBER->encrypt;
+
+This can be done with autobox ... I think.  
+
+What about:
+
+  $record->encrypt_CREDIT_CARD_NUMBER? 
+
+
+=item *
+
+Indexed based access.  Allow for $record->_1, i.e. access to
+record by _data slot postion.   
+
+=item * 
+
+RecordIterator class.  Subclass that itererates over a record set.  This
+will likely be ODG::ETL::Extractor ( ODG::ETL::E, for short )
+
+=item * 
+
+MooseX::AttirbuteHelpers::Collection::Array for the _data slot (?)
+providing list based methods
+
+=item * 
+
+Some checking when _data is set or changed.  Minimally that _data_ has
+the same number of elements as _layout_->_metadata_.
+
+=item * 
+
+Base the L-value accessors on more MooseX::Meta::Attribute::Lvalue

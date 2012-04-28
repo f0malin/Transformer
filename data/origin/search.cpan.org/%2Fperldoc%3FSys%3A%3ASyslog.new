@@ -1,0 +1,877 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Sys::Syslog - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Sys-Syslog",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Sys-Syslog-0.29",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Sys::Syslog",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SAPER",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Sys::Syslog">permalink</a></div>
+  <a href="/~saper/">S&eacute;bastien Aperghis-Tramoni</a> &gt;
+  <a href="/~saper/Sys-Syslog-0.29/">Sys-Syslog-0.29</a> &gt;
+  Sys::Syslog
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/cad36eb4c5da1a39158c9c58b45590bd?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SA/SAPER/Sys-Syslog-0.29.tar.gz">Sys-Syslog-0.29.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Sys%3A%3ASyslog;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SAPER/Sys-Syslog-0.29/Syslog.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Log%3A%3ALog4perl">Log::Log4perl</a><br>
+<a href="/perldoc?Win32%3A%3AEventLog">Win32::EventLog</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Proc%3A%3ABackground">Proc::Background</a><br>
+<a href="/perldoc?File%3A%3ACopy">File::Copy</a><br>
+<a href="/perldoc?Net%3A%3AServer">Net::Server</a><br>
+<a href="/perldoc?Unix%3A%3ASyslog">Unix::Syslog</a><br>
+<a href="/perldoc?Net%3A%3ASyslog">Net::Syslog</a><br>
+<a href="/perldoc?Net%3A%3AIMAP%3A%3ASimple">Net::IMAP::Simple</a><br>
+<a href="/perldoc?Sys%3A%3AHostname">Sys::Hostname</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Sys%3A%3ASyslog">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 8</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 7</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Sys-Syslog">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.29 &nbsp;
+<span class="noprint">
+  <a href="/src/SAPER/Sys-Syslog-0.29/Syslog.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#EXPORTS'>EXPORTS</a>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <li class='indexItem indexItem1'><a href='#THE_RULES_OF_SYS::SYSLOG'>THE RULES OF SYS::SYSLOG</a>
+  <li class='indexItem indexItem1'><a href='#EXAMPLES'>EXAMPLES</a>
+  <li class='indexItem indexItem1'><a href='#CONSTANTS'>CONSTANTS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Facilities'>Facilities</a>
+    <li class='indexItem indexItem2'><a href='#Levels'>Levels</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DIAGNOSTICS'>DIAGNOSTICS</a>
+  <li class='indexItem indexItem1'><a href='#HISTORY'>HISTORY</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Manual_Pages'>Manual Pages</a>
+    <li class='indexItem indexItem2'><a href='#RFCs'>RFCs</a>
+    <li class='indexItem indexItem2'><a href='#Articles'>Articles</a>
+    <li class='indexItem indexItem2'><a href='#Event_Log'>Event Log</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHORS_&#38;_ACKNOWLEDGEMENTS'>AUTHORS &#38; ACKNOWLEDGEMENTS</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#SUPPORT'>SUPPORT</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Sys::Syslog - Perl interface to the UNIX syslog(3) calls</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This is the documentation of version 0.29</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Sys::Syslog;                        # all except setlogsock()
+    use Sys::Syslog qw(:standard :macros);  # standard functions &#38; macros
+
+    openlog($ident, $logopt, $facility);    # don&#39;t forget this
+    syslog($priority, $format, @args);
+    $oldmask = setlogmask($mask_priority);
+    closelog();</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Sys::Syslog</code> is an interface to the UNIX <code>syslog(3)</code> program. Call <code>syslog()</code> with a string priority and a list of <code>printf()</code> args just like <code>syslog(3)</code>.</p>
+
+<p>You can find a kind of FAQ in <a href="#THE_RULES_OF_SYS::SYSLOG" class="podlinkpod"
+>&#34;THE RULES OF SYS::SYSLOG&#34;</a>. Please read it before coding, and again before asking questions.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORTS"
+>EXPORTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Sys::Syslog</code> exports the following <code>Exporter</code> tags:</p>
+
+<ul>
+<li><code>:standard</code> exports the standard <code>syslog(3)</code> functions:
+<pre class="sh_perl">    openlog closelog setlogmask syslog</pre>
+</li>
+
+<li><code>:extended</code> exports the Perl specific functions for <code>syslog(3)</code>:
+<pre class="sh_perl">    setlogsock</pre>
+</li>
+
+<li><code>:macros</code> exports the symbols corresponding to most of your <code>syslog(3)</code> macros and the <code>LOG_UPTO()</code> and <code>LOG_MASK()</code> functions. See <a href="#CONSTANTS" class="podlinkpod"
+>&#34;CONSTANTS&#34;</a> for the supported constants and their meaning.</li>
+</ul>
+
+<p>By default, <code>Sys::Syslog</code> exports the symbols from the <code>:standard</code> tag.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='openlog'></a><a name="openlog($ident,_$logopt,_$facility)"
+><b>openlog($ident, $logopt, $facility)</b></a></dt>
+
+<dd>
+<p>Opens the syslog. <code>$ident</code> is prepended to every message. <code>$logopt</code> contains zero or more of the options detailed below. <code>$facility</code> specifies the part of the system to report about, for example <code>LOG_USER</code> or <code>LOG_LOCAL0</code>: see <a href="#Facilities" class="podlinkpod"
+>&#34;Facilities&#34;</a> for a list of well-known facilities, and your <code>syslog(3)</code> documentation for the facilities available in your system. Check <a href="#SEE_ALSO" class="podlinkpod"
+>&#34;SEE ALSO&#34;</a> for useful links. Facility can be given as a string or a numeric macro.</p>
+
+<p>This function will croak if it can&#39;t connect to the syslog daemon.</p>
+
+<p>Note that <code>openlog()</code> now takes three arguments, just like <code>openlog(3)</code>.</p>
+
+<p><b>You should use <code>openlog()</code> before calling <code>syslog()</code>.</b></p>
+
+<p><b>Options</b></p>
+
+<ul>
+<li><code>cons</code> - This option is ignored, since the failover mechanism will drop down to the console automatically if all other media fail.</li>
+
+<li><code>ndelay</code> - Open the connection immediately (normally, the connection is opened when the first message is logged).</li>
+
+<li><code>noeol</code> - When set to true, no end of line character (<code>\n</code>) will be appended to the message. This can be useful for some buggy syslog daemons.</li>
+
+<li><code>nofatal</code> - When set to true, <code>openlog()</code> and <code>syslog()</code> will only emit warnings instead of dying if the connection to the syslog can&#39;t be established.</li>
+
+<li><code>nonul</code> - When set to true, no <code>NUL</code> character (<code>\0</code>) will be appended to the message. This can be useful for some buggy syslog daemons.</li>
+
+<li><code>nowait</code> - Don&#39;t wait for child processes that may have been created while logging the message. (The GNU C library does not create a child process, so this option has no effect on Linux.)</li>
+
+<li><code>perror</code> - Write the message to standard error output as well to the system log (added in <code>Sys::Syslo</code> 0.22).</li>
+
+<li><code>pid</code> - Include PID with each message.</li>
+</ul>
+
+<p><b>Examples</b></p>
+
+<p>Open the syslog with options <code>ndelay</code> and <code>pid</code>, and with facility <code>LOCAL0</code>:</p>
+
+<pre class="sh_perl">    openlog($name, &#34;ndelay,pid&#34;, &#34;local0&#34;);</pre>
+
+<p>Same thing, but this time using the macro corresponding to <code>LOCAL0</code>:</p>
+
+<pre class="sh_perl">    openlog($name, &#34;ndelay,pid&#34;, LOG_LOCAL0);</pre>
+
+<dt><a name='syslog'></a><a name="syslog($priority,_$message)"
+><b>syslog($priority, $message)</b></a></dt>
+
+<dd>
+<dt><a name='syslog'></a><a name="syslog($priority,_$format,_@args)"
+><b>syslog($priority, $format, @args)</b></a></dt>
+
+<dd>
+<p>If <code>$priority</code> permits, logs <code>$message</code> or <code>sprintf($format, @args)</code> with the addition that <code>%m</code> in $message or <code>$format</code> is replaced with <code>&#34;$!&#34;</code> (the latest error message).</p>
+
+<p><code>$priority</code> can specify a level, or a level and a facility. Levels and facilities can be given as strings or as macros. When using the <code>eventlog</code> mechanism, priorities <code>DEBUG</code> and <code>INFO</code> are mapped to event type <code>informational</code>, <code>NOTICE</code> and <code>WARNING</code> to <code>warning</code> and <code>ERR</code> to <code>EMERG</code> to <code>error</code>.</p>
+
+<p>If you didn&#39;t use <code>openlog()</code> before using <code>syslog()</code>, <code>syslog()</code> will try to guess the <code>$ident</code> by extracting the shortest prefix of <code>$format</code> that ends in a <code>&#34;:&#34;</code>.</p>
+
+<p><b>Examples</b></p>
+
+<pre class="sh_perl">    # informational level
+    syslog(&#34;info&#34;, $message);
+    syslog(LOG_INFO, $message);
+
+    # information level, Local0 facility
+    syslog(&#34;info|local0&#34;, $message);
+    syslog(LOG_INFO|LOG_LOCAL0, $message);</pre>
+
+<dl>
+<dt><a name="Note"
+><b>Note</b></a></dt>
+
+<dd>
+<p><code>Sys::Syslog</code> version v0.07 and older passed the <code>$message</code> as the formatting string to <code>sprintf()</code> even when no formatting arguments were provided. If the code calling <code>syslog()</code> might execute with older versions of this module, make sure to call the function as <code>syslog($priority, &#34;%s&#34;, $message)</code> instead of <code>syslog($priority, $message)</code>. This protects against hostile formatting sequences that might show up if $message contains tainted data.</p>
+</dd>
+</dl>
+
+<dt><a name='setlogmask'></a><a name="setlogmask($mask_priority)"
+><b>setlogmask($mask_priority)</b></a></dt>
+
+<dd>
+<p>Sets the log mask for the current process to <code>$mask_priority</code> and returns the old mask. If the mask argument is 0, the current log mask is not modified. See <a href="#Levels" class="podlinkpod"
+>&#34;Levels&#34;</a> for the list of available levels. You can use the <code>LOG_UPTO()</code> function to allow all levels up to a given priority (but it only accept the numeric macros as arguments).</p>
+
+<p><b>Examples</b></p>
+
+<p>Only log errors:</p>
+
+<pre class="sh_perl">    setlogmask( LOG_MASK(LOG_ERR) );</pre>
+
+<p>Log everything except informational messages:</p>
+
+<pre class="sh_perl">    setlogmask( ~(LOG_MASK(LOG_INFO)) );</pre>
+
+<p>Log critical messages, errors and warnings:</p>
+
+<pre class="sh_perl">    setlogmask( LOG_MASK(LOG_CRIT)
+              | LOG_MASK(LOG_ERR)
+              | LOG_MASK(LOG_WARNING) );</pre>
+
+<p>Log all messages up to debug:</p>
+
+<pre class="sh_perl">    setlogmask( LOG_UPTO(LOG_DEBUG) );</pre>
+
+<dt><a name='setlogsock'></a><a name="setlogsock()"
+><b>setlogsock()</b></a></dt>
+
+<dd>
+<p>Sets the socket type and options to be used for the next call to <code>openlog()</code> or <code>syslog()</code>. Returns true on success, <code>undef</code> on failure.</p>
+
+<p>Being Perl-specific, this function has evolved along time. It can currently be called as follow:</p>
+
+<ul>
+<li><code>setlogsock($sock_type)</code></li>
+
+<li><code>setlogsock($sock_type, $stream_location)</code> (added in Perl 5.004_02)</li>
+
+<li><code>setlogsock($sock_type, $stream_location, $sock_timeout)</code> (added in <code>Sys::Syslog</code> 0.25)</li>
+
+<li><code>setlogsock(\%options)</code> (added in <code>Sys::Syslog</code> 0.28)</li>
+</ul>
+
+<p>The available options are:</p>
+
+<ul>
+<li><code>type</code> - equivalent to <code>$sock_type</code>, selects the socket type (or &#34;mechanism&#34;). An array reference can be passed to specify several mechanisms to try, in the given order.</li>
+
+<li><code>path</code> - equivalent to <code>$stream_location</code>, sets the stream location. Defaults to standard Unix location, or <code>_PATH_LOG</code>.</li>
+
+<li><code>timeout</code> - equivalent to <code>$sock_timeout</code>, sets the socket timeout in seconds. Defaults to 0 on all systems except Mac&#160;OS&#160;X where it is set to 0.25 sec.</li>
+
+<li><code>host</code> - sets the hostname to send the messages to. Defaults to the local host.</li>
+
+<li><code>port</code> - sets the TCP or UDP port to connect to. Defaults to the first standard syslog port available on the system.</li>
+</ul>
+
+<p>The available mechanisms are:</p>
+
+<ul>
+<li><code>&#34;native&#34;</code> - use the native C functions from your <code>syslog(3)</code> library (added in <code>Sys::Syslog</code> 0.15).</li>
+
+<li><code>&#34;eventlog&#34;</code> - send messages to the Win32 events logger (Win32 only; added in <code>Sys::Syslog</code> 0.19).</li>
+
+<li><code>&#34;tcp&#34;</code> - connect to a TCP socket, on the <code>syslog/tcp</code> or <code>syslogng/tcp</code> service. See also the <code>host</code>, <code>port</code> and <code>timeout</code> options.</li>
+
+<li><code>&#34;udp&#34;</code> - connect to a UDP socket, on the <code>syslog/udp</code> service. See also the <code>host</code>, <code>port</code> and <code>timeout</code> options.</li>
+
+<li><code>&#34;inet&#34;</code> - connect to an INET socket, either TCP or UDP, tried in that order. See also the <code>host</code>, <code>port</code> and <code>timeout</code> options.</li>
+
+<li><code>&#34;unix&#34;</code> - connect to a UNIX domain socket (in some systems a character special device). The name of that socket is given by the <code>path</code> option or, if omitted, the value returned by the <code>_PATH_LOG</code> macro (if your system defines it), <em>/dev/log</em> or <em>/dev/conslog</em>, whichever is writable.</li>
+
+<li><code>&#34;stream&#34;</code> - connect to the stream indicated by the <code>path</code> option, or, if omitted, the value returned by the <code>_PATH_LOG</code> macro (if your system defines it), <em>/dev/log</em> or <em>/dev/conslog</em>, whichever is writable. For example Solaris and IRIX system may prefer <code>&#34;stream&#34;</code> instead of <code>&#34;unix&#34;</code>.</li>
+
+<li><code>&#34;pipe&#34;</code> - connect to the named pipe indicated by the <code>path</code> option, or, if omitted, to the value returned by the <code>_PATH_LOG</code> macro (if your system defines it), or <em>/dev/log</em> (added in <code>Sys::Syslog</code> 0.21). HP-UX is a system which uses such a named pipe.</li>
+
+<li><code>&#34;console&#34;</code> - send messages directly to the console, as for the <code>&#34;cons&#34;</code> option of <code>openlog()</code>.</li>
+</ul>
+
+<p>The default is to try <code>native</code>, <code>tcp</code>, <code>udp</code>, <code>unix</code>, <code>pipe</code>, <code>stream</code>, <code>console</code>. Under systems with the Win32 API, <code>eventlog</code> will be added as the first mechanism to try if <code>Win32::EventLog</code> is available.</p>
+
+<p>Giving an invalid value for <code>$sock_type</code> will <code>croak</code>.</p>
+
+<p><b>Examples</b></p>
+
+<p>Select the UDP socket mechanism:</p>
+
+<pre class="sh_perl">    setlogsock(&#34;udp&#34;);</pre>
+
+<p>Send messages using the TCP socket mechanism on a custom port:</p>
+
+<pre class="sh_perl">    setlogsock({ type =&#62; &#34;tcp&#34;, port =&#62; 2486 });</pre>
+
+<p>Send messages to a remote host using the TCP socket mechanism:</p>
+
+<pre class="sh_perl">    setlogsock({ type =&#62; &#34;tcp&#34;, host =&#62; $loghost });</pre>
+
+<p>Try the native, UDP socket then UNIX domain socket mechanisms:</p>
+
+<pre class="sh_perl">    setlogsock([&#34;native&#34;, &#34;udp&#34;, &#34;unix&#34;]);</pre>
+
+<dl>
+<dt><a name="Note"
+><b>Note</b></a></dt>
+
+<dd>
+<p>Now that the &#34;native&#34; mechanism is supported by <code>Sys::Syslog</code> and selected by default, the use of the <code>setlogsock()</code> function is discouraged because other mechanisms are less portable across operating systems. Authors of modules and programs that use this function, especially its cargo-cult form <code>setlogsock(&#34;unix&#34;)</code>, are advised to remove any occurence of it unless they specifically want to use a given mechanism (like TCP or UDP to connect to a remote host).</p>
+</dd>
+</dl>
+
+<dt><a name='closelog'></a><a name="closelog()"
+><b>closelog()</b></a></dt>
+
+<dd>
+<p>Closes the log file and returns true on success.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="THE_RULES_OF_SYS::SYSLOG"
+>THE RULES OF SYS::SYSLOG <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><i>The First Rule of Sys::Syslog is:</i> You do not call <code>setlogsock</code>.</p>
+
+<p><i>The Second Rule of Sys::Syslog is:</i> You <b>do not</b> call <code>setlogsock</code>.</p>
+
+<p><i>The Third Rule of Sys::Syslog is:</i> The program crashes, <code>die</code>s, calls <code>closelog</code>, the log is over.</p>
+
+<p><i>The Fourth Rule of Sys::Syslog is:</i> One facility, one priority.</p>
+
+<p><i>The Fifth Rule of Sys::Syslog is:</i> One log at a time.</p>
+
+<p><i>The Sixth Rule of Sys::Syslog is:</i> No <code>syslog</code> before <code>openlog</code>.</p>
+
+<p><i>The Seventh Rule of Sys::Syslog is:</i> Logs will go on as long as they have to.</p>
+
+<p><i>The Eighth, and Final Rule of Sys::Syslog is:</i> If this is your first use of Sys::Syslog, you must read the doc.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>An example:</p>
+
+<pre class="sh_perl">    openlog($program, &#39;cons,pid&#39;, &#39;user&#39;);
+    syslog(&#39;info&#39;, &#39;%s&#39;, &#39;this is another test&#39;);
+    syslog(&#39;mail|warning&#39;, &#39;this is a better test: %d&#39;, time);
+    closelog();
+
+    syslog(&#39;debug&#39;, &#39;this is the last test&#39;);</pre>
+
+<p>Another example:</p>
+
+<pre class="sh_perl">    openlog(&#34;$program $$&#34;, &#39;ndelay&#39;, &#39;user&#39;);
+    syslog(&#39;notice&#39;, &#39;fooprogram: this is really done&#39;);</pre>
+
+<p>Example of use of <code>%m</code>:</p>
+
+<pre class="sh_perl">    $! = 55;
+    syslog(&#39;info&#39;, &#39;problem was %m&#39;);   # %m == $! in syslog(3)</pre>
+
+<p>Log to UDP port on <code>$remotehost</code> instead of logging locally:</p>
+
+<pre class="sh_perl">    setlogsock(&#34;udp&#34;, $remotehost);
+    openlog($program, &#39;ndelay&#39;, &#39;user&#39;);
+    syslog(&#39;info&#39;, &#39;something happened over here&#39;);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONSTANTS"
+>CONSTANTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Facilities"
+>Facilities</a></h2>
+
+<ul>
+<li><code>LOG_AUDIT</code> - audit daemon (IRIX); falls back to <code>LOG_AUTH</code></li>
+
+<li><code>LOG_AUTH</code> - security/authorization messages</li>
+
+<li><code>LOG_AUTHPRIV</code> - security/authorization messages (private)</li>
+
+<li><code>LOG_CONSOLE</code> - <code>/dev/console</code> output (FreeBSD); falls back to <code>LOG_USER</code></li>
+
+<li><code>LOG_CRON</code> - clock daemons (<b>cron</b> and <b>at</b>)</li>
+
+<li><code>LOG_DAEMON</code> - system daemons without separate facility value</li>
+
+<li><code>LOG_FTP</code> - FTP daemon</li>
+
+<li><code>LOG_KERN</code> - kernel messages</li>
+
+<li><code>LOG_INSTALL</code> - installer subsystem (Mac OS X); falls back to <code>LOG_USER</code></li>
+
+<li><code>LOG_LAUNCHD</code> - launchd - general bootstrap daemon (Mac OS X); falls back to <code>LOG_DAEMON</code></li>
+
+<li><code>LOG_LFMT</code> - logalert facility; falls back to <code>LOG_USER</code></li>
+
+<li><code>LOG_LOCAL0</code> through <code>LOG_LOCAL7</code> - reserved for local use</li>
+
+<li><code>LOG_LPR</code> - line printer subsystem</li>
+
+<li><code>LOG_MAIL</code> - mail subsystem</li>
+
+<li><code>LOG_NETINFO</code> - NetInfo subsystem (Mac OS X); falls back to <code>LOG_DAEMON</code></li>
+
+<li><code>LOG_NEWS</code> - USENET news subsystem</li>
+
+<li><code>LOG_NTP</code> - NTP subsystem (FreeBSD, NetBSD); falls back to <code>LOG_DAEMON</code></li>
+
+<li><code>LOG_RAS</code> - Remote Access Service (VPN / PPP) (Mac OS X); falls back to <code>LOG_AUTH</code></li>
+
+<li><code>LOG_REMOTEAUTH</code> - remote authentication/authorization (Mac OS X); falls back to <code>LOG_AUTH</code></li>
+
+<li><code>LOG_SECURITY</code> - security subsystems (firewalling, etc.) (FreeBSD); falls back to <code>LOG_AUTH</code></li>
+
+<li><code>LOG_SYSLOG</code> - messages generated internally by <b>syslogd</b></li>
+
+<li><code>LOG_USER</code> (default) - generic user-level messages</li>
+
+<li><code>LOG_UUCP</code> - UUCP subsystem</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Levels"
+>Levels</a></h2>
+
+<ul>
+<li><code>LOG_EMERG</code> - system is unusable</li>
+
+<li><code>LOG_ALERT</code> - action must be taken immediately</li>
+
+<li><code>LOG_CRIT</code> - critical conditions</li>
+
+<li><code>LOG_ERR</code> - error conditions</li>
+
+<li><code>LOG_WARNING</code> - warning conditions</li>
+
+<li><code>LOG_NOTICE</code> - normal, but significant, condition</li>
+
+<li><code>LOG_INFO</code> - informational message</li>
+
+<li><code>LOG_DEBUG</code> - debug-level message</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIAGNOSTICS"
+>DIAGNOSTICS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='Invalid'></a><a name="Invalid_argument_passed_to_setlogsock"
+><code>Invalid argument passed to setlogsock</code></a></dt>
+
+<dd>
+<p><b>(F)</b> You gave <code>setlogsock()</code> an invalid value for <code>$sock_type</code>.</p>
+
+<dt><a name='eventlog'></a><a name="eventlog_passed_to_setlogsock,_but_no_Win32_API_available"
+><code>eventlog passed to setlogsock, but no Win32 API available</code></a></dt>
+
+<dd>
+<p><b>(W)</b> You asked <code>setlogsock()</code> to use the Win32 event logger but the operating system running the program isn&#39;t Win32 or does not provides Win32 compatible facilities.</p>
+
+<dt><a name='no'></a><a name="no_connection_to_syslog_available"
+><code>no connection to syslog available</code></a></dt>
+
+<dd>
+<p><b>(F)</b> <code>syslog()</code> failed to connect to the specified socket.</p>
+
+<dt><a name='stream'></a><a name="stream_passed_to_setlogsock,_but_%s_is_not_writable"
+><code>stream passed to setlogsock, but %s is not writable</code></a></dt>
+
+<dd>
+<p><b>(W)</b> You asked <code>setlogsock()</code> to use a stream socket, but the given path is not writable.</p>
+
+<dt><a name='stream'></a><a name="stream_passed_to_setlogsock,_but_could_not_find_any_device"
+><code>stream passed to setlogsock, but could not find any device</code></a></dt>
+
+<dd>
+<p><b>(W)</b> You asked <code>setlogsock()</code> to use a stream socket, but didn&#39;t provide a path, and <code>Sys::Syslog</code> was unable to find an appropriate one.</p>
+
+<dt><a name='tcp'></a><a name="tcp_passed_to_setlogsock,_but_tcp_service_unavailable"
+><code>tcp passed to setlogsock, but tcp service unavailable</code></a></dt>
+
+<dd>
+<p><b>(W)</b> You asked <code>setlogsock()</code> to use a TCP socket, but the service is not available on the system.</p>
+
+<dt><a name='syslog'></a><a name="syslog:_expecting_argument_%s"
+><code>syslog: expecting argument %s</code></a></dt>
+
+<dd>
+<p><b>(F)</b> You forgot to give <code>syslog()</code> the indicated argument.</p>
+
+<dt><a name='syslog'></a><a name="syslog:_invalid_level/facility:_%s"
+><code>syslog: invalid level/facility: %s</code></a></dt>
+
+<dd>
+<p><b>(F)</b> You specified an invalid level or facility.</p>
+
+<dt><a name='syslog'></a><a name="syslog:_too_many_levels_given:_%s"
+><code>syslog: too many levels given: %s</code></a></dt>
+
+<dd>
+<p><b>(F)</b> You specified too many levels.</p>
+
+<dt><a name='syslog'></a><a name="syslog:_too_many_facilities_given:_%s"
+><code>syslog: too many facilities given: %s</code></a></dt>
+
+<dd>
+<p><b>(F)</b> You specified too many facilities.</p>
+
+<dt><a name='syslog'></a><a name="syslog:_level_must_be_given"
+><code>syslog: level must be given</code></a></dt>
+
+<dd>
+<p><b>(F)</b> You forgot to specify a level.</p>
+
+<dt><a name='udp'></a><a name="udp_passed_to_setlogsock,_but_udp_service_unavailable"
+><code>udp passed to setlogsock, but udp service unavailable</code></a></dt>
+
+<dd>
+<p><b>(W)</b> You asked <code>setlogsock()</code> to use a UDP socket, but the service is not available on the system.</p>
+
+<dt><a name='unix'></a><a name="unix_passed_to_setlogsock,_but_path_not_available"
+><code>unix passed to setlogsock, but path not available</code></a></dt>
+
+<dd>
+<p><b>(W)</b> You asked <code>setlogsock()</code> to use a UNIX socket, but <code>Sys::Syslog</code> was unable to find an appropriate an appropriate device.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="HISTORY"
+>HISTORY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Sys::Syslog</code> is a core module, part of the standard Perl distribution since 1990. At this time, modules as we know them didn&#39;t exist, the Perl library was a collection of <em>.pl</em> files, and the one for sending syslog messages with was simply <em>lib/syslog.pl</em>, included with Perl 3.0. It was converted as a module with Perl 5.0, but had a version number only starting with Perl 5.6. Here is a small table with the matching Perl and <code>Sys::Syslog</code> versions.</p>
+
+<pre class="sh_perl">    Sys::Syslog     Perl
+    -----------     ----
+       undef        5.0.x -- 5.5.x
+       0.01         5.6.0, 5.6.1, 5.6.2
+       0.03         5.8.0
+       0.04         5.8.1, 5.8.2, 5.8.3
+       0.05         5.8.4, 5.8.5, 5.8.6
+       0.06         5.8.7
+       0.13         5.8.8
+       0.22         5.10.0
+       0.27         5.8.9</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Manual_Pages"
+>Manual Pages</a></h2>
+
+<p><a href="http://man.he.net/man3/syslog" class="podlinkman"
+>syslog(3)</a></p>
+
+<p>SUSv3 issue 6, IEEE Std 1003.1, 2004 edition, <a href="http://www.opengroup.org/onlinepubs/000095399/basedefs/syslog.h.html" class="podlinkurl"
+>http://www.opengroup.org/onlinepubs/000095399/basedefs/syslog.h.html</a></p>
+
+<p>GNU C Library documentation on syslog, <a href="http://www.gnu.org/software/libc/manual/html_node/Syslog.html" class="podlinkurl"
+>http://www.gnu.org/software/libc/manual/html_node/Syslog.html</a></p>
+
+<p>Solaris 10 documentation on syslog, <a href="http://docs.sun.com/app/docs/doc/816-5168/syslog-3c?a=view" class="podlinkurl"
+>http://docs.sun.com/app/docs/doc/816-5168/syslog-3c?a=view</a></p>
+
+<p>Mac OS X documentation on syslog, <a href="http://developer.apple.com/documentation/Darwin/Reference/ManPages/man3/syslog.3.html" class="podlinkurl"
+>http://developer.apple.com/documentation/Darwin/Reference/ManPages/man3/syslog.3.html</a></p>
+
+<p>IRIX 6.5 documentation on syslog, <a href="http://techpubs.sgi.com/library/tpl/cgi-bin/getdoc.cgi?coll=0650&#38;db=man&#38;fname=3c+syslog" class="podlinkurl"
+>http://techpubs.sgi.com/library/tpl/cgi-bin/getdoc.cgi?coll=0650&#38;db=man&#38;fname=3c+syslog</a></p>
+
+<p>AIX 5L 5.3 documentation on syslog, <a href="http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.basetechref/doc/basetrf2/syslog.htm" class="podlinkurl"
+>http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.basetechref/doc/basetrf2/syslog.htm</a></p>
+
+<p>HP-UX 11i documentation on syslog, <a href="http://docs.hp.com/en/B2355-60130/syslog.3C.html" class="podlinkurl"
+>http://docs.hp.com/en/B2355-60130/syslog.3C.html</a></p>
+
+<p>Tru64 5.1 documentation on syslog, <a href="http://h30097.www3.hp.com/docs/base_doc/DOCUMENTATION/V51_HTML/MAN/MAN3/0193____.HTM" class="podlinkurl"
+>http://h30097.www3.hp.com/docs/base_doc/DOCUMENTATION/V51_HTML/MAN/MAN3/0193____.HTM</a></p>
+
+<p>Stratus VOS 15.1, <a href="http://stratadoc.stratus.com/vos/15.1.1/r502-01/wwhelp/wwhimpl/js/html/wwhelp.htm?context=r502-01&#38;file=ch5r502-01bi.html" class="podlinkurl"
+>http://stratadoc.stratus.com/vos/15.1.1/r502-01/wwhelp/wwhimpl/js/html/wwhelp.htm?context=r502-01&#38;file=ch5r502-01bi.html</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="RFCs"
+>RFCs</a></h2>
+
+<p><i>RFC 3164 - The BSD syslog Protocol</i>, <a href="http://www.faqs.org/rfcs/rfc3164.html" class="podlinkurl"
+>http://www.faqs.org/rfcs/rfc3164.html</a> -- Please note that this is an informational RFC, and therefore does not specify a standard of any kind.</p>
+
+<p><i>RFC 3195 - Reliable Delivery for syslog</i>, <a href="http://www.faqs.org/rfcs/rfc3195.html" class="podlinkurl"
+>http://www.faqs.org/rfcs/rfc3195.html</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Articles"
+>Articles</a></h2>
+
+<p><i>Syslogging with Perl</i>, <a href="http://lexington.pm.org/meetings/022001.html" class="podlinkurl"
+>http://lexington.pm.org/meetings/022001.html</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Event_Log"
+>Event Log</a></h2>
+
+<p>Windows Event Log, <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/wes/wes/windows_event_log.asp" class="podlinkurl"
+>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/wes/wes/windows_event_log.asp</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS_&#38;_ACKNOWLEDGEMENTS"
+>AUTHORS &#38; ACKNOWLEDGEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Tom Christiansen &#60;<em>tchrist (at) perl.com</em>&#62; and Larry Wall &#60;<em>larry (at) wall.org</em>&#62;.</p>
+
+<p>UNIX domain sockets added by Sean Robinson &#60;<em>robinson_s (at) sc.maricopa.edu</em>&#62; with support from Tim Bunce &#60;<em>Tim.Bunce (at) ig.co.uk</em>&#62; and the <code>perl5-porters</code> mailing list.</p>
+
+<p>Dependency on <em>syslog.ph</em> replaced with XS code by Tom Hughes &#60;<em>tom (at) compton.nu</em>&#62;.</p>
+
+<p>Code for <code>constant()</code>s regenerated by Nicholas Clark &#60;<em>nick (at) ccl4.org</em>&#62;.</p>
+
+<p>Failover to different communication modes by Nick Williams &#60;<em>Nick.Williams (at) morganstanley.com</em>&#62;.</p>
+
+<p>Extracted from core distribution for publishing on the CPAN by S&#233;bastien Aperghis-Tramoni &#60;sebastien (at) aperghis.net&#62;.</p>
+
+<p>XS code for using native C functions borrowed from <code><a href="/perldoc?Unix%3A%3ASyslog" class="podlinkpod"
+>Unix::Syslog</a></code>, written by Marcus Harnisch &#60;<em>marcus.harnisch (at) gmx.net</em>&#62;.</p>
+
+<p>Yves Orton suggested and helped for making <code>Sys::Syslog</code> use the native event logger under Win32 systems.</p>
+
+<p>Jerry D. Hedden and Reini Urban provided greatly appreciated help to debug and polish <code>Sys::Syslog</code> under Cygwin.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Please report any bugs or feature requests to <code>bug-sys-syslog (at) rt.cpan.org</code>, or through the web interface at <a href="http://rt.cpan.org/Public/Dist/Display.html?Name=Sys-Syslog" class="podlinkurl"
+>http://rt.cpan.org/Public/Dist/Display.html?Name=Sys-Syslog</a>. I will be notified, and then you&#39;ll automatically be notified of progress on your bug as I make changes.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUPPORT"
+>SUPPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>You can find documentation for this module with the perldoc command.</p>
+
+<pre class="sh_perl">    perldoc Sys::Syslog</pre>
+
+<p>You can also look for information at:</p>
+
+<ul>
+<li>AnnoCPAN: Annotated CPAN documentation
+<p><a href="http://annocpan.org/dist/Sys-Syslog" class="podlinkurl"
+>http://annocpan.org/dist/Sys-Syslog</a></p>
+</li>
+
+<li>CPAN Ratings
+<p><a href="http://cpanratings.perl.org/d/Sys-Syslog" class="podlinkurl"
+>http://cpanratings.perl.org/d/Sys-Syslog</a></p>
+</li>
+
+<li>RT: CPAN&#39;s request tracker
+<p><a href="http://rt.cpan.org/Dist/Display.html?Queue=Sys-Syslog" class="podlinkurl"
+>http://rt.cpan.org/Dist/Display.html?Queue=Sys-Syslog</a></p>
+</li>
+
+<li>Search CPAN
+<p><a href="http://search.cpan.org/dist/Sys-Syslog/" class="podlinkurl"
+>http://search.cpan.org/dist/Sys-Syslog/</a></p>
+</li>
+
+<li>Kobes&#39; CPAN Search
+<p><a href="http://cpan.uwinnipeg.ca/dist/Sys-Syslog" class="podlinkurl"
+>http://cpan.uwinnipeg.ca/dist/Sys-Syslog</a></p>
+</li>
+
+<li>Perl Documentation
+<p><a href="http://perldoc.perl.org/Sys/Syslog.html" class="podlinkurl"
+>http://perldoc.perl.org/Sys/Syslog.html</a></p>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (C) 1990-2009 by Larry Wall and others.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78254 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 10:07:06 2012 GMT (0.141295909881592) @cpansearch1 -->
+ </body>
+</html>

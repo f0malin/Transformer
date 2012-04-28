@@ -1,0 +1,512 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Net::DNS::Packet - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Net-DNS",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Net-DNS-0.68",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Net::DNS::Packet",3]);
+    _gaq.push(["_setCustomVar",1,"Author","OLAF",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Net::DNS::Packet">permalink</a></div>
+  <a href="/~olaf/">OLAF</a> &gt;
+  <a href="/~olaf/Net-DNS-0.68/">Net-DNS-0.68</a> &gt;
+  Net::DNS::Packet
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/e5747bf50b65faa67ee4828a0466d66d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/O/OL/OLAF/Net-DNS-0.68.tar.gz">Net-DNS-0.68.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Net%3A%3ADNS%3A%3APacket;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~OLAF/Net-DNS-0.68/lib/Net/DNS/Packet.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 2</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 8</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 5</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Net-DNS">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  969 &nbsp;
+<span class="noprint">
+  <a href="/src/OLAF/Net-DNS-0.68/lib/Net/DNS/Packet.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#data'>data</a>
+    <li class='indexItem indexItem2'><a href='#header'>header</a>
+    <li class='indexItem indexItem2'><a href='#question,_zone'>question, zone</a>
+    <li class='indexItem indexItem2'><a href='#answer,_pre,_prerequisite'>answer, pre, prerequisite</a>
+    <li class='indexItem indexItem2'><a href='#authority,_update'>authority, update</a>
+    <li class='indexItem indexItem2'><a href='#additional'>additional</a>
+    <li class='indexItem indexItem2'><a href='#print'>print</a>
+    <li class='indexItem indexItem2'><a href='#string'>string</a>
+    <li class='indexItem indexItem2'><a href='#answerfrom'>answerfrom</a>
+    <li class='indexItem indexItem2'><a href='#answersize'>answersize</a>
+    <li class='indexItem indexItem2'><a href='#push'>push</a>
+    <li class='indexItem indexItem2'><a href='#unique_push'>unique_push</a>
+    <li class='indexItem indexItem2'><a href='#pop'>pop</a>
+    <li class='indexItem indexItem2'><a href='#dn_comp'>dn_comp</a>
+    <li class='indexItem indexItem2'><a href='#dn_expand'>dn_expand</a>
+    <li class='indexItem indexItem2'><a href='#sign_tsig'>sign_tsig</a>
+    <li class='indexItem indexItem2'><a href='#sign_sig0'>sign_sig0</a>
+    <li class='indexItem indexItem2'><a href='#truncate'>truncate</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Net::DNS::Packet - DNS protocol packet</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Net::DNS::Packet;
+
+    $packet = new Net::DNS::Packet(&#39;example.com&#39;, &#39;MX&#39;, &#39;IN&#39;);
+
+    $resolver-&#62;send($packet);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>A <code>Net::DNS::Packet</code> object represents a DNS protocol packet.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+>new</a></h2>
+
+<pre class="sh_perl">    $packet = new Net::DNS::Packet(&#39;example.com&#39;);
+    $packet = new Net::DNS::Packet(&#39;example.com&#39;, &#39;MX&#39;, &#39;IN&#39;);
+
+    $packet = new Net::DNS::Packet();</pre>
+
+<p>If passed a domain, type, and class, <code>new</code> creates a packet object appropriate for making a DNS query for the requested information. The type and class can be omitted; they default to A and IN.</p>
+
+<p>If called with an empty argument list, <code>new</code> creates an empty packet.</p>
+
+<pre class="sh_perl">    $packet = new Net::DNS::Packet(\$data);
+    $packet = new Net::DNS::Packet(\$data, 1);          # set debugging
+
+    ($packet, $err) = new Net::DNS::Packet(\$data);</pre>
+
+<p>If passed a reference to a scalar containing DNS packet data, <code>new</code> creates a packet object by decoding the data. The optional second argument can be passed to turn on debugging output.</p>
+
+<p>If called in array context, returns a packet object and an error string. The content of the error string is unspecified if the packet object was successfully created.</p>
+
+<p>Returns undef if unable to create a packet object (e.g., if the packet data is truncated).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="data"
+>data</a></h2>
+
+<pre class="sh_perl">    $data = $packet-&#62;data;</pre>
+
+<p>Returns the packet data in binary format, suitable for sending to a nameserver.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="header"
+>header</a></h2>
+
+<pre class="sh_perl">    $header = $packet-&#62;header;</pre>
+
+<p>Returns a <code>Net::DNS::Header</code> object representing the header section of the packet.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="question,_zone"
+>question, zone</a></h2>
+
+<pre class="sh_perl">    @question = $packet-&#62;question;</pre>
+
+<p>Returns a list of <code>Net::DNS::Question</code> objects representing the question section of the packet.</p>
+
+<p>In dynamic update packets, this section is known as <code>zone</code> and specifies the zone to be updated.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="answer,_pre,_prerequisite"
+>answer, pre, prerequisite</a></h2>
+
+<pre class="sh_perl">    @answer = $packet-&#62;answer;</pre>
+
+<p>Returns a list of <code>Net::DNS::RR</code> objects representing the answer section of the packet.</p>
+
+<p>In dynamic update packets, this section is known as <code>pre</code> or <code>prerequisite</code> and specifies the RRs or RRsets which must or must not preexist.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="authority,_update"
+>authority, update</a></h2>
+
+<pre class="sh_perl">    @authority = $packet-&#62;authority;</pre>
+
+<p>Returns a list of <code>Net::DNS::RR</code> objects representing the authority section of the packet.</p>
+
+<p>In dynamic update packets, this section is known as <code>update</code> and specifies the RRs or RRsets to be added or deleted.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="additional"
+>additional</a></h2>
+
+<pre class="sh_perl">    @additional = $packet-&#62;additional;</pre>
+
+<p>Returns a list of <code>Net::DNS::RR</code> objects representing the additional section of the packet.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="print"
+>print</a></h2>
+
+<pre class="sh_perl">    $packet-&#62;print;</pre>
+
+<p>Prints the packet data on the standard output in an ASCII format similar to that used in DNS zone files.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="string"
+>string</a></h2>
+
+<pre class="sh_perl">    print $packet-&#62;string;</pre>
+
+<p>Returns a string representation of the packet.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="answerfrom"
+>answerfrom</a></h2>
+
+<pre class="sh_perl">    print &#34;packet received from &#34;, $packet-&#62;answerfrom, &#34;\n&#34;;</pre>
+
+<p>Returns the IP address from which we received this packet. User-created packets will return undef for this method.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="answersize"
+>answersize</a></h2>
+
+<pre class="sh_perl">    print &#34;packet size: &#34;, $packet-&#62;answersize, &#34; bytes\n&#34;;</pre>
+
+<p>Returns the size of the packet in bytes as it was received from a nameserver. User-created packets will return undef for this method (use <code>length $packet-&#62;data</code> instead).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="push"
+>push</a></h2>
+
+<pre class="sh_perl">    $ancount = $packet-&#62;push(pre        =&#62; $rr);
+    $nscount = $packet-&#62;push(update     =&#62; $rr);
+    $arcount = $packet-&#62;push(additional =&#62; $rr);
+
+    $nscount = $packet-&#62;push(update =&#62; $rr1, $rr2, $rr3);
+    $nscount = $packet-&#62;push(update =&#62; @rr);</pre>
+
+<p>Adds RRs to the specified section of the packet.</p>
+
+<p>Returns the number of resource records in the specified section.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="unique_push"
+>unique_push</a></h2>
+
+<pre class="sh_perl">    $ancount = $packet-&#62;unique_push(pre        =&#62; $rr);
+    $nscount = $packet-&#62;unique_push(update     =&#62; $rr);
+    $arcount = $packet-&#62;unique_push(additional =&#62; $rr);
+
+    $nscount = $packet-&#62;unique_push(update =&#62; $rr1, $rr2, $rr3);
+    $nscount = $packet-&#62;unique_push(update =&#62; @rr);</pre>
+
+<p>Adds RRs to the specified section of the packet provided that the RRs do not already exist in the packet.</p>
+
+<p>Returns the number of resource records in the specified section.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="pop"
+>pop</a></h2>
+
+<pre class="sh_perl">    my $rr = $packet-&#62;pop(&#34;pre&#34;);
+    my $rr = $packet-&#62;pop(&#34;update&#34;);
+    my $rr = $packet-&#62;pop(&#34;additional&#34;);
+    my $rr = $packet-&#62;pop(&#34;question&#34;);</pre>
+
+<p>Removes RRs from the specified section of the packet.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="dn_comp"
+>dn_comp</a></h2>
+
+<pre class="sh_perl">    $compname = $packet-&#62;dn_comp(&#34;foo.example.com&#34;, $offset);</pre>
+
+<p>Returns a domain name compressed for a particular packet object, to be stored beginning at the given offset within the packet data. The name will be added to a running list of compressed domain names for future use.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="dn_expand"
+>dn_expand</a></h2>
+
+<pre class="sh_perl">    use Net::DNS::Packet qw(dn_expand);
+    ($name, $nextoffset) = dn_expand(\$data, $offset);
+
+    ($name, $nextoffset) = Net::DNS::Packet::dn_expand(\$data, $offset);</pre>
+
+<p>Expands the domain name stored at a particular location in a DNS packet. The first argument is a reference to a scalar containing the packet data. The second argument is the offset within the packet where the (possibly compressed) domain name is stored.</p>
+
+<p>Returns the domain name and the offset of the next location in the packet.</p>
+
+<p>Returns undef if the domain name could not be expanded.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="sign_tsig"
+>sign_tsig</a></h2>
+
+<pre class="sh_perl">    $key_name = &#34;tsig-key&#34;;
+    $key      = &#34;awwLOtRfpGE+rRKF2+DEiw==&#34;;
+
+    $update = Net::DNS::Update-&#62;new(&#34;example.com&#34;);
+    $update-&#62;push(&#34;update&#34;, rr_add(&#34;foo.example.com A 10.1.2.3&#34;));
+
+    $update-&#62;sign_tsig($key_name, $key);
+
+    $response = $res-&#62;send($update);</pre>
+
+<p>Attaches a TSIG resource record object containing a key, which will be used to signs a packet with a TSIG resource record (see RFC 2845). Uses the following defaults:</p>
+
+<pre class="sh_perl">    algorithm   = HMAC-MD5.SIG-ALG.REG.INT
+    time_signed = current time
+    fudge       = 300 seconds</pre>
+
+<p>If you wish to customize the TSIG record, you&#39;ll have to create it yourself and call the appropriate Net::DNS::RR::TSIG methods. The following example creates a TSIG record and sets the fudge to 60 seconds:</p>
+
+<pre class="sh_perl">    $key_name = &#34;tsig-key&#34;;
+    $key      = &#34;awwLOtRfpGE+rRKF2+DEiw==&#34;;
+
+    $tsig = Net::DNS::RR-&#62;new(&#34;$key_name TSIG $key&#34;);
+    $tsig-&#62;fudge(60);
+
+    $query = Net::DNS::Packet-&#62;new(&#34;www.example.com&#34;);
+    $query-&#62;sign_tsig($tsig);
+
+    $response = $res-&#62;send($query);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="sign_sig0"
+>sign_sig0</a></h2>
+
+<p>SIG0 support is provided through the Net::DNS::RR::SIG class. This class is not part of the default Net::DNS distribution but resides in the Net::DNS::SEC distribution.</p>
+
+<pre class="sh_perl">    $update = Net::DNS::Update-&#62;new(&#34;example.com&#34;);
+    $update-&#62;push(&#34;update&#34;, rr_add(&#34;foo.example.com A 10.1.2.3&#34;));
+    $update-&#62;sign_sig0(&#34;Kexample.com+003+25317.private&#34;);</pre>
+
+<p>SIG0 support is experimental see Net::DNS::RR::SIG for details.</p>
+
+<p>The method will call <code>Carp::croak()</code> if Net::DNS::RR::SIG cannot be found.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="truncate"
+>truncate</a></h2>
+
+<p>The truncate method takes a maximum length as argument and then tries to truncate the packet an set the TC bit according to the rules of RFC2181 Section 9.</p>
+
+<p>The minimum maximum length that is honored is 512 octets.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c)1997-2002 Michael Fuhr.</p>
+
+<p>Portions Copyright (c)2002-2004 Chris Reinhardt.</p>
+
+<p>Portions Copyright (c)2002-2009 Olaf Kolkman</p>
+
+<p>Portions Copyright (c)2007-2008 Dick Franks</p>
+
+<p>All rights reserved.</p>
+
+<p>This program is free software; you may redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?perl" class="podlinkpod"
+>perl</a>, <a href="/~olaf/Net-DNS-0.68/lib/Net/DNS.pm" class="podlinkpod"
+>Net::DNS</a>, <a href="/~olaf/Net-DNS-0.68/lib/Net/DNS/Resolver.pm" class="podlinkpod"
+>Net::DNS::Resolver</a>, <a href="/~olaf/Net-DNS-0.68/lib/Net/DNS/Update.pm" class="podlinkpod"
+>Net::DNS::Update</a>, <a href="/~olaf/Net-DNS-0.68/lib/Net/DNS/Header.pm" class="podlinkpod"
+>Net::DNS::Header</a>, <a href="/~olaf/Net-DNS-0.68/lib/Net/DNS/Question.pm" class="podlinkpod"
+>Net::DNS::Question</a>, <a href="/~olaf/Net-DNS-0.68/lib/Net/DNS/RR.pm" class="podlinkpod"
+>Net::DNS::RR</a>, RFC 1035 Section 4.1, RFC 2136 Section 2, RFC 2845</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78183 Uploads, 24710 Distributions
+106004 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 09:09:01 2012 GMT (0.0540230274200439) @cpansearch1 -->
+ </body>
+</html>

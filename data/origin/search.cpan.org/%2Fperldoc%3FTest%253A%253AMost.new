@@ -1,0 +1,746 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Test::Most - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Test-Most",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Test-Most-0.25",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Test::Most",3]);
+    _gaq.push(["_setCustomVar",1,"Author","OVID",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Test::Most">permalink</a></div>
+  <a href="/~ovid/">Curtis "Ovid" Poe</a> &gt;
+  <a href="/~ovid/Test-Most-0.25/">Test-Most-0.25</a> &gt;
+  Test::Most
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/7f633daa0796788b31b868b5ffe98157?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/O/OV/OVID/Test-Most-0.25.tar.gz">Test-Most-0.25.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Test%3A%3AMost;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~OVID/Test-Most-0.25/lib/Test/Most.pm">Annotate this POD
+(4)
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 2</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Test-Most">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.25 &nbsp;
+<span class="noprint">
+  <a href="/src/OVID/Test-Most-0.25/lib/Test/Most.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#EXPORT'>EXPORT</a>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#die_on_fail'>die_on_fail</a>
+    <li class='indexItem indexItem2'><a href='#bail_on_fail'>bail_on_fail</a>
+    <li class='indexItem indexItem2'><a href='#restore_fail'>restore_fail</a>
+    <li class='indexItem indexItem2'><a href='#set_failure_handler'>set_failure_handler</a>
+    <li class='indexItem indexItem2'><a href='#explain'>explain</a>
+    <li class='indexItem indexItem2'><a href='#show'>show</a>
+    <li class='indexItem indexItem2'><a href='#always_explain_and_always_show'>always_explain and always_show</a>
+    <li class='indexItem indexItem2'><a href='#all_done'>all_done</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#EXPORT_ON_DEMAND'>EXPORT ON DEMAND</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#timeit'>timeit</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DIE_OR_BAIL_ON_FAIL'>DIE OR BAIL ON FAIL</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Import_list'>Import list</a>
+    <li class='indexItem indexItem2'><a href='#Functions'>Functions</a>
+    <li class='indexItem indexItem2'><a href='#Environment_variables'>Environment variables</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#MISCELLANEOUS'>MISCELLANEOUS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Excluding_Test_Modules'>Excluding Test Modules</a>
+    <li class='indexItem indexItem2'><a href='#Excluding_Test_Symbols'>Excluding Test Symbols</a>
+    <li class='indexItem indexItem2'><a href='#Deferred_plans'>Deferred plans</a>
+    <li class='indexItem indexItem2'><a href='#One-stop_shopping'>One-stop shopping</a>
+    <li class='indexItem indexItem2'><a href='#use_ok'>use ok</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#RATIONALE'>RATIONALE</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#SUPPORT'>SUPPORT</a>
+  <li class='indexItem indexItem1'><a href='#TODO'>TODO</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Deferred_plans'>Deferred plans</a>
+    <li class='indexItem indexItem2'><a href='#Cleaner_skip()'>Cleaner skip()</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CAVEATS'>CAVEATS</a>
+  <li class='indexItem indexItem1'><a href='#ACKNOWLEDGEMENTS'>ACKNOWLEDGEMENTS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_&#38;_LICENSE'>COPYRIGHT &#38; LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Test::Most - Most commonly needed test functions and features.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Version 0.25</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Instead of this:</p>
+
+<pre class="sh_perl">    use strict;
+    use warnings;
+    use Test::Exception 0.88;
+    use Test::Differences 0.500;
+    use Test::Deep 0.106;
+    use Test::Warn 0.11;
+    use Test::More tests =&#62; 42;</pre>
+
+<p>You type this:</p>
+
+<pre class="sh_perl">    use Test::Most tests =&#62; 42;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~ovid/Test-Most-0.25/lib/Test/Most.pm" class="podlinkpod"
+>Test::Most</a> exists to reduce boilerplate and to make your testing life easier. We provide &#34;one stop shopping&#34; for most commonly used testing modules. In fact, we often require the latest versions so that you get bug fixes through <a href="/~ovid/Test-Most-0.25/lib/Test/Most.pm" class="podlinkpod"
+>Test::Most</a> and don&#39;t have to keep upgrading these modules separately.</p>
+
+<p>This module provides you with the most commonly used testing functions, along with automatically turning on strict and warning and gives you a bit more fine-grained control over your test suite.</p>
+
+<pre class="sh_perl">    use Test::Most tests =&#62; 4, &#39;die&#39;;
+
+    ok 1, &#39;Normal calls to ok() should succeed&#39;;
+    is 2, 2, &#39;... as should all passing tests&#39;;
+    eq_or_diff [3], [4], &#39;... but failing tests should die&#39;;
+    ok 4, &#39;... will never get to here&#39;;</pre>
+
+<p>As you can see, the <code>eq_or_diff</code> test will fail. Because &#39;die&#39; is in the import list, the test program will halt at that point.</p>
+
+<p>If you do not want strict and warnings enabled, you must explicitly disable them. Thus, you must be explicit about what you want and no longer need to worry about accidentally forgetting them.</p>
+
+<pre class="sh_perl">    use Test::Most tests =&#62; 4;
+    no strict;
+    no warnings;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORT"
+>EXPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>All functions from the following modules will automatically be exported into your namespace:</p>
+
+<ul>
+<li><a href="/perldoc?Test%3A%3AMore" class="podlinkpod"
+>Test::More</a></li>
+
+<li><a href="/perldoc?Test%3A%3AException" class="podlinkpod"
+>Test::Exception</a></li>
+
+<li><a href="/perldoc?Test%3A%3ADifferences" class="podlinkpod"
+>Test::Differences</a></li>
+
+<li><a href="/perldoc?Test%3A%3ADeep" class="podlinkpod"
+>Test::Deep</a></li>
+
+<li><a href="/perldoc?Test%3A%3AWarn" class="podlinkpod"
+>Test::Warn</a></li>
+</ul>
+
+<p>Functions which are <i>optionally</i> exported from any of those modules must be referred to by their fully-qualified name:</p>
+
+<pre class="sh_perl">  Test::Deep::render_stack( $var, $stack );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Several other functions are also automatically exported:</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="die_on_fail"
+><code>die_on_fail</code></a></h2>
+
+<pre class="sh_perl"> die_on_fail;
+ is_deeply $foo, bar, &#39;... we throw an exception if this fails&#39;;</pre>
+
+<p>This function, if called, will cause the test program to throw a <a href="/~ovid/Test-Most-0.25/lib/Test/Most/Exception.pm" class="podlinkpod"
+>Test::Most::Exception</a>, effectively halting the test.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="bail_on_fail"
+><code>bail_on_fail</code></a></h2>
+
+<pre class="sh_perl"> bail_on_fail;
+ is_deeply $foo, bar, &#39;... we bail out if this fails&#39;;</pre>
+
+<p>This function, if called, will cause the test suite to BAIL_OUT() if any tests fail after it.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="restore_fail"
+><code>restore_fail</code></a></h2>
+
+<pre class="sh_perl"> die_on_fail;
+ is_deeply $foo, bar, &#39;... we throw an exception if this fails&#39;;
+
+ restore_fail;
+ cmp_bag(\@got, \@bag, &#39;... we will not throw an exception if this fails&#39;;</pre>
+
+<p>This restores the original test failure behavior, so subsequent tests will no longer throw an exception or BAIL_OUT().</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="set_failure_handler"
+><code>set_failure_handler</code></a></h2>
+
+<p>If you prefer other behavior to &#39;die_on_fail&#39; or &#39;bail_on_fail&#39;, you can can set your own failure handler:</p>
+
+<pre class="sh_perl"> set_failure_handler( sub {
+     my $builder = shift;
+     if ( $builder &#38;&#38; $builder-&#62;{Test_Results}[-1] =~ /critical/ ) {
+        send_admin_email(&#34;critical failure in tests&#34;);
+     }
+ } );</pre>
+
+<p>It receives the <code>Test::Builder</code> instance as its only argument.</p>
+
+<p><b>Important</b>: Note that if the failing test is the very last test run, then the <code>$builder</code> will likely be undefined. This is an unfortunate side effect of how <code>Test::Builder</code> has been designed.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="explain"
+><code>explain</code></a></h2>
+
+<p>Similar to <code>note()</code>, the output will only be seen by the user by using the <code>-v</code> switch with <code>prove</code> or reading the raw TAP.</p>
+
+<p>Unlike <code>note()</code>, any reference in the argument list is automatically expanded using <code>Data::Dumper</code>. Thus, instead of this:</p>
+
+<pre class="sh_perl"> my $self = Some::Object-&#62;new($id);
+ use Data::Dumper;
+ explain &#39;I was just created&#39;, Dumper($self);</pre>
+
+<p>You can now just do this:</p>
+
+<pre class="sh_perl"> my $self = Some::Object-&#62;new($id);
+ explain &#39;I was just created:  &#39;, $self;</pre>
+
+<p>That output will look similar to:</p>
+
+<pre class="sh_perl"> I was just created: bless( {
+   &#39;id&#39; =&#62; 2,
+   &#39;stack&#39; =&#62; []
+ }, &#39;Some::Object&#39; )</pre>
+
+<p>Note that the &#34;dumpered&#34; output has the <code>Data::Dumper</code> variables <code>$Indent</code>, <code>Sortkeys</code> and <code>Terse</code> all set to the value of <code>1</code> (one). This allows for a much cleaner diagnostic output and at the present time cannot be overridden.</p>
+
+<p>Note that Test::More&#39;s <code>explain</code> acts differently. This <code>explain</code> is equivalent to <code>note explain</code> in Test::More.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="show"
+><code>show</code></a></h2>
+
+<p>Experimental. Just like <code>explain</code>, but also tries to show you the lexical variable names:</p>
+
+<pre class="sh_perl"> my $var   = 3;
+ my @array = qw/ foo bar /;
+ show $var, \@array;
+ __END__
+ $var = 3;
+ @array = [
+     &#39;foo&#39;,
+     &#39;bar&#39;
+ ];</pre>
+
+<p>It will show <code>$VAR1</code>, <code>$VAR2</code> ... <code>$VAR_N</code> for every variable it cannot figure out the variable name to:</p>
+
+<pre class="sh_perl"> my @array = qw/ foo bar /;
+ show @array;
+ __END__
+ $VAR1 = &#39;foo&#39;;
+ $VAR2 = &#39;bar&#39;;</pre>
+
+<p>Note that this relies on <a href="/perldoc?Data%3A%3ADumper%3A%3ANames" class="podlinkpod"
+>Data::Dumper::Names</a> version 0.03 or greater. If this is not present, it will warn and call <a href="/perldoc?explain" class="podlinkpod"
+>explain</a> instead. Also, it can only show the names for lexical variables. Globals such as <code>%ENV</code> or <code>%@</code> are not accessed via PadWalker and thus cannot be shown. It would be nice to find a workaround for this.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="always_explain_and_always_show"
+><code>always_explain</code> and <code>always_show</code></a></h2>
+
+<p>These are identical to <code>explain</code> and <code>show</code>, but like <a href="/perldoc?Test%3A%3AMore" class="podlinkpod"
+>Test::More</a>&#39;s <code>diag</code> function, these will always emit output, regardless of whether or not you&#39;re in verbose mode.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="all_done"
+><code>all_done</code></a></h2>
+
+<p><b>DEPRECATED</b>. Use the new <code>done_testing()</code> (added in <a href="/perldoc?Test%3A%3AMore" class="podlinkpod"
+>Test::More</a> since 0.87_01). Instead. We&#39;re leaving this in here for a long deprecation cycle. After a while, we might even start warning.</p>
+
+<p>If the plan is specified as <code>defer_plan</code>, you may call <code>&#38;all_done</code> at the end of the test with an optional test number. This lets you set the plan without knowing the plan before you run the tests.</p>
+
+<p>If you call it without a test number, the tests will still fail if you don&#39;t get to the end of the test. This is useful if you don&#39;t want to specify a plan but the tests exit unexpectedly. For example, the following would <i>pass</i> with <code>no_plan</code> but fails with <code>all_done</code>.</p>
+
+<pre class="sh_perl"> use Test::More &#39;defer_plan&#39;;
+ ok 1;
+ exit;
+ ok 2;
+ all_done;</pre>
+
+<p>See <a href="#Deferred_plans" class="podlinkpod"
+>&#34;Deferred plans&#34;</a> for more information.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORT_ON_DEMAND"
+>EXPORT ON DEMAND <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following will be exported only if requested:</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="timeit"
+><code>timeit</code></a></h2>
+
+<p>Prototype: <code>timeit(&#38;;$)</code></p>
+
+<p>This function will warn if <code>Time::HiRes</code> is not installed. The test will still be run, but no timing information will be displayed.</p>
+
+<pre class="sh_perl"> use Test::Most &#39;timeit&#39;;
+ timeit { is expensive_function(), $some_value, $message }
+    &#34;expensive_function()&#34;;
+ timeit { is expensive_function(), $some_value, $message };</pre>
+
+<p><code>timeit</code> accepts a code reference and an optional message. After the test is run, will <code>explain</code> the time of the function using <code>Time::HiRes</code>. If a message is supplied, it will be formatted as:</p>
+
+<pre class="sh_perl">  sprintf &#34;$message: took %s seconds&#34; =&#62; $time;</pre>
+
+<p>Otherwise, it will be formatted as:</p>
+
+<pre class="sh_perl">  sprintf &#34;$filename line $line: took %s seconds&#34; =&#62; $time;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIE_OR_BAIL_ON_FAIL"
+>DIE OR BAIL ON FAIL <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Sometimes you want your test suite to throw an exception or BAIL_OUT() if a test fails. In order to provide maximum flexibility, there are three ways to accomplish each of these.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Import_list"
+>Import list</a></h2>
+
+<pre class="sh_perl"> use Test::Most &#39;die&#39;, tests =&#62; 7;
+ use Test::Most qw&#60; no_plan bail &#62;;</pre>
+
+<p>If <code>die</code> or <code>bail</code> is anywhere in the import list, the test program/suite will throw a <code>Test::Most::Exception</code> or <code>BAIL_OUT()</code> as appropriate the first time a test fails. Calling <code>restore_fail</code> anywhere in the test program will restore the original behavior (not throwing an exception or bailing out).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Functions"
+>Functions</a></h2>
+
+<pre class="sh_perl"> use Test::Most &#39;no_plan&#39;;
+ ok $bar, &#39;The test suite will continue if this passes&#39;;
+
+ die_on_fail;
+ is_deeply $foo, bar, &#39;... we throw an exception if this fails&#39;;
+
+ restore_fail;
+ ok $baz, &#39;The test suite will continue if this passes&#39;;</pre>
+
+<p>The <code>die_on_fail</code> and <code>bail_on_fail</code> functions will automatically set the desired behavior at runtime.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Environment_variables"
+>Environment variables</a></h2>
+
+<pre class="sh_perl"> DIE_ON_FAIL=1 prove t/
+ BAIL_ON_FAIL=1 prove t/</pre>
+
+<p>If the <code>DIE_ON_FAIL</code> or <code>BAIL_ON_FAIL</code> environment variables are true, any tests which use <code>Test::Most</code> will throw an exception or call BAIL_OUT on test failure.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MISCELLANEOUS"
+>MISCELLANEOUS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Excluding_Test_Modules"
+>Excluding Test Modules</a></h2>
+
+<p>Sometimes you want a exclude a particular test module. For example, <a href="/perldoc?Test%3A%3ADeep" class="podlinkpod"
+>Test::Deep</a>, when used with <a href="/perldoc?Moose" class="podlinkpod"
+>Moose</a>, produces the following warning:</p>
+
+<pre class="sh_perl">    Prototype mismatch: sub main::blessed ($) vs none</pre>
+
+<p>You can exclude this with by adding the module to the import list with a &#39;-&#39; symbol in front:</p>
+
+<pre class="sh_perl">    use Test::Most tests =&#62; 42, &#39;-Test::Deep&#39;;</pre>
+
+<p>See <a href="https://rt.cpan.org/Ticket/Display.html?id=54362&#38;results=e73ff63c5bf9ba0f796efdba5773cf3f" class="podlinkurl"
+>https://rt.cpan.org/Ticket/Display.html?id=54362&#38;results=e73ff63c5bf9ba0f796efdba5773cf3f</a> for more information.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Excluding_Test_Symbols"
+>Excluding Test Symbols</a></h2>
+
+<p>Sometimes you don&#39;t want to exclude an entire test module, but just a particular symbol that is causing issues (e.g. see the &#39;blessed&#39; example above). You can exclude the symbol(s) in the standard way, by specifying the symbol in the import list with a &#39;!&#39; in front:</p>
+
+<pre class="sh_perl">    use Test::Most tests =&#62; 42, &#39;!blessed&#39;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Deferred_plans"
+>Deferred plans</a></h2>
+
+<p><b>DEPRECATED</b>. Use <code>done_testing()</code> from <a href="/perldoc?Test%3A%3AMore" class="podlinkpod"
+>Test::More</a> instead.</p>
+
+<pre class="sh_perl"> use Test::Most qw&#60;defer_plan&#62;;
+ use My::Tests;
+ my $test_count = My::Tests-&#62;run;
+ all_done($test_count);</pre>
+
+<p>Sometimes it&#39;s difficult to know the plan up front, but you can calculate the plan as your tests run. As a result, you want to defer the plan until the end of the test. Typically, the best you can do is this:</p>
+
+<pre class="sh_perl"> use Test::More &#39;no_plan&#39;;
+ use My::Tests;
+ My::Tests-&#62;run;</pre>
+
+<p>But when you do that, <code>Test::Builder</code> merely asserts that the number of tests you <i>ran</i> is the number of tests. Until now, there was no way of asserting that the number of tests you <i>expected</i> is the number of tests unless you do so before any tests have run. This fixes that problem.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="One-stop_shopping"
+>One-stop shopping</a></h2>
+
+<p>We generally require the latest stable versions of various test modules. Why? Because they have bug fixes and new features. You don&#39;t want to have to keep remembering them, so periodically we&#39;ll release new versions of <a href="/~ovid/Test-Most-0.25/lib/Test/Most.pm" class="podlinkpod"
+>Test::Most</a> just for bug fixes.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="use_ok"
+><code>use ok</code></a></h2>
+
+<p>We do not bundle <a href="/perldoc?Test%3A%3Ause%3A%3Aok" class="podlinkpod"
+>Test::use::ok</a>, though it&#39;s been requested. That&#39;s because <code>use_ok</code> is broken, but <a href="/perldoc?Test%3A%3Ause%3A%3Aok" class="podlinkpod"
+>Test::use::ok</a> is also subtly broken (and a touch harder to fix). See <a href="http://use.perl.org/~Ovid/journal/39859" class="podlinkurl"
+>http://use.perl.org/~Ovid/journal/39859</a> for more information.</p>
+
+<p>If you want to test if you can use a module, just use it. If it fails, the test will still fail and that&#39;s the desired result.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="RATIONALE"
+>RATIONALE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>People want more control over their test suites. Sometimes when you see hundreds of tests failing and whizzing by, you want the test suite to simply halt on the first failure. This module gives you that control.</p>
+
+<p>As for the reasons for the four test modules chosen, I ran code over a local copy of the CPAN to find the most commonly used testing modules. Here&#39;s the top twenty as of January 2010 (the numbers are different because we&#39;re now counting distributions which use a given module rather than simply the number of times a module is used).</p>
+
+<pre class="sh_perl">    1   Test::More                          14111
+    2   Test                                 1736
+    3   Test::Exception                       744
+    4   Test::Simple                          331
+    5   Test::Pod                             328
+    6   Test::Pod::Coverage                   274
+    7   Test::Perl::Critic                    248
+    8   Test::Base                            228
+    9   Test::NoWarnings                      155
+    10  Test::Distribution                    142
+    11  Test::Kwalitee                        138
+    12  Test::Deep                            128
+    13  Test::Warn                            127
+    14  Test::Differences                     102
+    15  Test::Spelling                        101
+    16  Test::MockObject                       87
+    17  Test::Builder::Tester                  84
+    18  Test::WWW::Mechanize::Catalyst         79
+    19  Test::UseAllModules                    63
+    20  Test::YAML::Meta                       61</pre>
+
+<p><a href="/~ovid/Test-Most-0.25/lib/Test/Most.pm" class="podlinkpod"
+>Test::Most</a> is number 24 on that list, if you&#39;re curious. See <a href="http://blogs.perl.org/users/ovid/2010/01/most-popular-testing-modules---january-2010.html" class="podlinkurl"
+>http://blogs.perl.org/users/ovid/2010/01/most-popular-testing-modules---january-2010.html</a>.</p>
+
+<p>The modules chosen seemed the best fit for what <code>Test::Most</code> is trying to do. As of 0.02, we&#39;ve added <a href="/perldoc?Test%3A%3AWarn" class="podlinkpod"
+>Test::Warn</a> by request. It&#39;s not in the top ten, but it&#39;s a great and useful module.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Curtis Poe, <code>&#60;ovid at cpan.org&#62;</code></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Please report any bugs or feature requests to <code>bug-test-extended at rt.cpan.org</code>, or through the web interface at <a href="http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Test-Most" class="podlinkurl"
+>http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Test-Most</a>. I will be notified, and then you&#39;ll automatically be notified of progress on your bug as I make changes.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUPPORT"
+>SUPPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>You can find documentation for this module with the perldoc command.</p>
+
+<pre class="sh_perl">    perldoc Test::Most</pre>
+
+<p>You can also look for information at:</p>
+
+<ul>
+<li>RT: CPAN&#39;s request tracker
+<p><a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-Most" class="podlinkurl"
+>http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-Most</a></p>
+</li>
+
+<li>AnnoCPAN: Annotated CPAN documentation
+<p><a href="http://annocpan.org/dist/Test-Most" class="podlinkurl"
+>http://annocpan.org/dist/Test-Most</a></p>
+</li>
+
+<li>CPAN Ratings
+<p><a href="http://cpanratings.perl.org/d/Test-Most" class="podlinkurl"
+>http://cpanratings.perl.org/d/Test-Most</a></p>
+</li>
+
+<li>Search CPAN
+<p><a href="http://search.cpan.org/dist/Test-Most" class="podlinkurl"
+>http://search.cpan.org/dist/Test-Most</a></p>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TODO"
+>TODO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Deferred_plans"
+>Deferred plans</a></h2>
+
+<p>Sometimes you don&#39;t know the number of tests you will run when you use <code>Test::More</code>. The <code>plan()</code> function allows you to delay specifying the plan, but you must still call it before the tests are run. This is an error:</p>
+
+<pre class="sh_perl"> use Test::More;
+
+ my $tests = 0;
+ foreach my $test (
+     my $count = run($test); # assumes tests are being run
+     $tests += $count;
+ }
+ plan($tests);</pre>
+
+<p>The way around this is typically to use &#39;no_plan&#39; and when the tests are done, <code>Test::Builder</code> merely sets the plan to the number of tests run. We&#39;d like for the programmer to specify this number instead of letting <code>Test::Builder</code> do it. However, <code>Test::Builder</code> internals are a bit difficult to work with, so we&#39;re delaying this feature.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Cleaner_skip()"
+>Cleaner skip()</a></h2>
+
+<pre class="sh_perl"> if ( $some_condition ) {
+     skip $message, $num_tests;
+ }
+ else {
+     # run those tests
+ }</pre>
+
+<p>That would be cleaner and I might add it if enough people want it.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEATS"
+>CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Because of how Perl handles arguments, and because diagnostics are not really part of the Test Anything Protocol, what actually happens internally is that we note that a test has failed and we throw an exception or bail out as soon as the <i>next</i> test is called (but before it runs). This means that its arguments are automatically evaulated before we can take action:</p>
+
+<pre class="sh_perl"> use Test::Most qw&#60;no_plan die&#62;;
+
+ ok $foo, &#39;Die if this fails&#39;;
+ ok factorial(123456),
+   &#39;... but wait a loooong time before you throw an exception&#39;;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ACKNOWLEDGEMENTS"
+>ACKNOWLEDGEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Many thanks to <code>perl-qa</code> for arguing about this so much that I just went ahead and did it :)</p>
+
+<p>Thanks to Aristotle for suggesting a better way to die or bailout.</p>
+
+<p>Thanks to &#39;swillert&#39; (<a href="http://use.perl.org/~swillert/" class="podlinkurl"
+>http://use.perl.org/~swillert/</a>) for suggesting a better implementation of my &#34;dumper explain&#34; idea (<a href="http://use.perl.org/~Ovid/journal/37004" class="podlinkurl"
+>http://use.perl.org/~Ovid/journal/37004</a>).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_&#38;_LICENSE"
+>COPYRIGHT &#38; LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2008 Curtis Poe, all rights reserved.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78272 Uploads, 24723 Distributions
+106001 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 20:07:59 2012 GMT (0.681266069412231) @cpansearch1 -->
+ </body>
+</html>

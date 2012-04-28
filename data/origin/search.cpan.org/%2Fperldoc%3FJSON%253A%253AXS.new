@@ -1,0 +1,1321 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>JSON::XS - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","JSON-XS",3]);
+    _gaq.push(["_setCustomVar",5,"Release","JSON-XS-2.32",3]);
+    _gaq.push(["_setCustomVar",3,"Module","JSON::XS",3]);
+    _gaq.push(["_setCustomVar",1,"Author","MLEHMANN",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?JSON::XS">permalink</a></div>
+  <a href="/~mlehmann/">Marc Lehmann</a> &gt;
+  <a href="/~mlehmann/JSON-XS-2.32/">JSON-XS-2.32</a> &gt;
+  JSON::XS
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/505a1a029b2b7d6c2eadf84bc82764f6?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/M/ML/MLEHMANN/JSON-XS-2.32.tar.gz">JSON-XS-2.32.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=JSON%3A%3AXS;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~MLEHMANN/JSON-XS-2.32/XS.pm">Annotate this POD
+(4)
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=JSON-XS">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.32 &nbsp;
+<span class="noprint">
+  <a href="/src/MLEHMANN/JSON-XS-2.32/XS.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#FEATURES'>FEATURES</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONAL_INTERFACE'>FUNCTIONAL INTERFACE</a>
+  <li class='indexItem indexItem1'><a href='#A_FEW_NOTES_ON_UNICODE_AND_PERL'>A FEW NOTES ON UNICODE AND PERL</a>
+  <li class='indexItem indexItem1'><a href='#OBJECT-ORIENTED_INTERFACE'>OBJECT-ORIENTED INTERFACE</a>
+  <li class='indexItem indexItem1'><a href='#INCREMENTAL_PARSING'>INCREMENTAL PARSING</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#LIMITATIONS'>LIMITATIONS</a>
+    <li class='indexItem indexItem2'><a href='#EXAMPLES'>EXAMPLES</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#MAPPING'>MAPPING</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#JSON_-&#62;_PERL'>JSON -&#62; PERL</a>
+    <li class='indexItem indexItem2'><a href='#PERL_-&#62;_JSON'>PERL -&#62; JSON</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#ENCODING/CODESET_FLAG_NOTES'>ENCODING/CODESET FLAG NOTES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#JSON_and_ECMAscript'>JSON and ECMAscript</a>
+    <li class='indexItem indexItem2'><a href='#JSON_and_YAML'>JSON and YAML</a>
+    <li class='indexItem indexItem2'><a href='#SPEED'>SPEED</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SECURITY_CONSIDERATIONS'>SECURITY CONSIDERATIONS</a>
+  <li class='indexItem indexItem1'><a href='#THREADS'>THREADS</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>JSON::XS - JSON serialising/deserialising,
+done correctly and fast</p>
+
+<p>JSON::XS - &#27491;&#12375;&#12367;&#12390;&#39640;&#36895;&#12394; JSON &#12471;&#12522;&#12450;&#12521;&#12452;&#12470;/&#12487;&#12471;&#12522;&#12450;&#12521;&#12452;&#12470; (<a href="http://fleur.hio.jp/perldoc/mix/lib/JSON/XS.html" class="podlinkurl"
+>http://fleur.hio.jp/perldoc/mix/lib/JSON/XS.html</a>)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> use JSON::XS;
+
+ # exported functions, they croak on error
+ # and expect/generate UTF-8
+
+ $utf8_encoded_json_text = encode_json $perl_hash_or_arrayref;
+ $perl_hash_or_arrayref  = decode_json $utf8_encoded_json_text;
+
+ # OO-interface
+
+ $coder = JSON::XS-&#62;new-&#62;ascii-&#62;pretty-&#62;allow_nonref;
+ $pretty_printed_unencoded = $coder-&#62;encode ($perl_scalar);
+ $perl_scalar = $coder-&#62;decode ($unicode_json_text);
+
+ # Note that JSON version 2.0 and above will automatically use JSON::XS
+ # if available, at virtually no speed overhead either, so you should
+ # be able to just:
+ 
+ use JSON;
+
+ # and do the same things, except that you have a pure-perl fallback now.</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module converts Perl data structures to JSON and vice versa. Its primary goal is to be <i>correct</i> and its secondary goal is to be <i>fast</i>. To reach the latter goal it was written in C.</p>
+
+<p>Beginning with version 2.0 of the JSON module, when both JSON and JSON::XS are installed, then JSON will fall back on JSON::XS (this can be overridden) with no overhead due to emulation (by inheriting constructor and methods). If JSON::XS is not available, it will fall back to the compatible JSON::PP module as backend, so using JSON instead of JSON::XS gives you a portable JSON API that can be fast when you need and doesn&#39;t require a C compiler when that is a problem.</p>
+
+<p>As this is the n-th-something JSON module on CPAN, what was the reason to write yet another JSON module? While it seems there are many JSON modules, none of them correctly handle all corner cases, and in most cases their maintainers are unresponsive, gone missing, or not listening to bug reports for other reasons.</p>
+
+<p>See MAPPING, below, on how JSON::XS maps perl values to JSON values and vice versa.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="FEATURES"
+>FEATURES</a></h2>
+
+<ul>
+<li>correct Unicode handling
+<p>This module knows how to handle Unicode, documents how and when it does so, and even documents what &#34;correct&#34; means.</p>
+</li>
+
+<li>round-trip integrity
+<p>When you serialise a perl data structure using only data types supported by JSON and Perl, the deserialised data structure is identical on the Perl level. (e.g. the string &#34;2.0&#34; doesn&#39;t suddenly become &#34;2&#34; just because it looks like a number). There <i>are</i> minor exceptions to this, read the MAPPING section below to learn about those.</p>
+</li>
+
+<li>strict checking of JSON correctness
+<p>There is no guessing, no generating of illegal JSON texts by default, and only JSON is accepted as input by default (the latter is a security feature).</p>
+</li>
+
+<li>fast
+<p>Compared to other JSON modules and other serialisers such as Storable, this module usually compares favourably in terms of speed, too.</p>
+</li>
+
+<li>simple to use
+<p>This module has both a simple functional interface as well as an object oriented interface interface.</p>
+</li>
+
+<li>reasonably versatile output formats
+<p>You can choose between the most compact guaranteed-single-line format possible (nice for simple line-based protocols), a pure-ASCII format (for when your transport is not 8-bit clean, still supports the whole Unicode range), or a pretty-printed format (for when you want to read that stuff). Or you can combine those features in whatever way you like.</p>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONAL_INTERFACE"
+>FUNCTIONAL INTERFACE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following convenience methods are provided by this module. They are exported by default:</p>
+
+<dl>
+<dt><a name='json_text'></a><a name="$json_text_=_encode_json_$perl_scalar"
+>$json_text = encode_json $perl_scalar</a></dt>
+
+<dd>
+<p>Converts the given Perl data structure to a UTF-8 encoded, binary string (that is, the string contains octets only). Croaks on error.</p>
+
+<p>This function call is functionally identical to:</p>
+
+<pre class="sh_perl">   $json_text = JSON::XS-&#62;new-&#62;utf8-&#62;encode ($perl_scalar)</pre>
+
+<p>Except being faster.</p>
+
+<dt><a name='perl_scalar'></a><a name="$perl_scalar_=_decode_json_$json_text"
+>$perl_scalar = decode_json $json_text</a></dt>
+
+<dd>
+<p>The opposite of <code>encode_json</code>: expects an UTF-8 (binary) string and tries to parse that as an UTF-8 encoded JSON text, returning the resulting reference. Croaks on error.</p>
+
+<p>This function call is functionally identical to:</p>
+
+<pre class="sh_perl">   $perl_scalar = JSON::XS-&#62;new-&#62;utf8-&#62;decode ($json_text)</pre>
+
+<p>Except being faster.</p>
+
+<dt><a name='is_boolean'></a><a name="$is_boolean_=_JSON::XS::is_bool_$scalar"
+>$is_boolean = JSON::XS::is_bool $scalar</a></dt>
+
+<dd>
+<p>Returns true if the passed scalar represents either JSON::XS::true or JSON::XS::false, two constants that act like <code>1</code> and <code>0</code>, respectively and are used to represent JSON <code>true</code> and <code>false</code> values in Perl.</p>
+
+<p>See MAPPING, below, for more information on how JSON values are mapped to Perl.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="A_FEW_NOTES_ON_UNICODE_AND_PERL"
+>A FEW NOTES ON UNICODE AND PERL <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Since this often leads to confusion, here are a few very clear words on how Unicode works in Perl, modulo bugs.</p>
+
+<dl>
+<dt><a name='1'></a><a name="1._Perl_strings_can_store_characters_with_ordinal_values_&#62;_255."
+>1. Perl strings can store characters with ordinal values &#62; 255.</a></dt>
+
+<dd>
+<p>This enables you to store Unicode characters as single characters in a Perl string - very natural.</p>
+
+<dt><a name='2'></a><a name="2._Perl_does_not_associate_an_encoding_with_your_strings."
+>2. Perl does <i>not</i> associate an encoding with your strings.</a></dt>
+
+<dd>
+<p>... until you force it to, e.g. when matching it against a regex, or printing the scalar to a file, in which case Perl either interprets your string as locale-encoded text, octets/binary, or as Unicode, depending on various settings. In no case is an encoding stored together with your data, it is <i>use</i> that decides encoding, not any magical meta data.</p>
+
+<dt><a name='3'></a><a name="3._The_internal_utf-8_flag_has_no_meaning_with_regards_to_the_encoding_of_your_string."
+>3. The internal utf-8 flag has no meaning with regards to the encoding of your string.</a></dt>
+
+<dd>
+<p>Just ignore that flag unless you debug a Perl bug, a module written in XS or want to dive into the internals of perl. Otherwise it will only confuse you, as, despite the name, it says nothing about how your string is encoded. You can have Unicode strings with that flag set, with that flag clear, and you can have binary data with that flag set and that flag clear. Other possibilities exist, too.</p>
+
+<p>If you didn&#39;t know about that flag, just the better, pretend it doesn&#39;t exist.</p>
+
+<dt><a name='4'></a><a name="4._A_&#34;Unicode_String&#34;_is_simply_a_string_where_each_character_can_be_validly_interpreted_as_a_Unicode_code_point."
+>4. A &#34;Unicode String&#34; is simply a string where each character can be validly interpreted as a Unicode code point.</a></dt>
+
+<dd>
+<p>If you have UTF-8 encoded data, it is no longer a Unicode string, but a Unicode string encoded in UTF-8, giving you a binary string.</p>
+
+<dt><a name='5'></a><a name="5._A_string_containing_&#34;high&#34;_(&#62;_255)_character_values_is_not_a_UTF-8_string."
+>5. A string containing &#34;high&#34; (&#62; 255) character values is <i>not</i> a UTF-8 string.</a></dt>
+
+<dd>
+<p>It&#39;s a fact. Learn to live with it.</p>
+</dd>
+</dl>
+
+<p>I hope this helps :)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OBJECT-ORIENTED_INTERFACE"
+>OBJECT-ORIENTED INTERFACE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The object oriented interface lets you configure your own encoding or decoding style, within the limits of supported formats.</p>
+
+<dl>
+<dt><a name='json'></a><a name="$json_=_new_JSON::XS"
+>$json = new JSON::XS</a></dt>
+
+<dd>
+<p>Creates a new JSON::XS object that can be used to de/encode JSON strings. All boolean flags described below are by default <i>disabled</i>.</p>
+
+<p>The mutators for flags all return the JSON object again and thus calls can be chained:</p>
+
+<pre class="sh_perl">   my $json = JSON::XS-&#62;new-&#62;utf8-&#62;space_after-&#62;encode ({a =&#62; [1,2]})
+   =&#62; {&#34;a&#34;: [1, 2]}</pre>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;ascii_([$enable])"
+>$json = $json-&#62;ascii ([$enable])</a></dt>
+
+<dd>
+<dt><a name='enabled'></a><a name="$enabled_=_$json-&#62;get_ascii"
+>$enabled = $json-&#62;get_ascii</a></dt>
+
+<dd>
+<p>If <code>$enable</code> is true (or missing), then the <code>encode</code> method will not generate characters outside the code range <code>0..127</code> (which is ASCII). Any Unicode characters outside that range will be escaped using either a single \uXXXX (BMP characters) or a double \uHHHH\uLLLLL escape sequence, as per RFC4627. The resulting encoded JSON text can be treated as a native Unicode string, an ascii-encoded, latin1-encoded or UTF-8 encoded string, or any other superset of ASCII.</p>
+
+<p>If <code>$enable</code> is false, then the <code>encode</code> method will not escape Unicode characters unless required by the JSON syntax or other flags. This results in a faster and more compact format.</p>
+
+<p>See also the section <i>ENCODING/CODESET FLAG NOTES</i> later in this document.</p>
+
+<p>The main use for this flag is to produce JSON texts that can be transmitted over a 7-bit channel, as the encoded JSON texts will not contain any 8 bit characters.</p>
+
+<pre class="sh_perl">  JSON::XS-&#62;new-&#62;ascii (1)-&#62;encode ([chr 0x10401])
+  =&#62; [&#34;\ud801\udc01&#34;]</pre>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;latin1_([$enable])"
+>$json = $json-&#62;latin1 ([$enable])</a></dt>
+
+<dd>
+<dt><a name='enabled'></a><a name="$enabled_=_$json-&#62;get_latin1"
+>$enabled = $json-&#62;get_latin1</a></dt>
+
+<dd>
+<p>If <code>$enable</code> is true (or missing), then the <code>encode</code> method will encode the resulting JSON text as latin1 (or iso-8859-1), escaping any characters outside the code range <code>0..255</code>. The resulting string can be treated as a latin1-encoded JSON text or a native Unicode string. The <code>decode</code> method will not be affected in any way by this flag, as <code>decode</code> by default expects Unicode, which is a strict superset of latin1.</p>
+
+<p>If <code>$enable</code> is false, then the <code>encode</code> method will not escape Unicode characters unless required by the JSON syntax or other flags.</p>
+
+<p>See also the section <i>ENCODING/CODESET FLAG NOTES</i> later in this document.</p>
+
+<p>The main use for this flag is efficiently encoding binary data as JSON text, as most octets will not be escaped, resulting in a smaller encoded size. The disadvantage is that the resulting JSON text is encoded in latin1 (and must correctly be treated as such when storing and transferring), a rare encoding for JSON. It is therefore most useful when you want to store data structures known to contain binary data efficiently in files or databases, not when talking to other JSON encoders/decoders.</p>
+
+<pre class="sh_perl">  JSON::XS-&#62;new-&#62;latin1-&#62;encode ([&#34;\x{89}\x{abc}&#34;]
+  =&#62; [&#34;\x{89}\\u0abc&#34;]    # (perl syntax, U+abc escaped, U+89 not)</pre>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;utf8_([$enable])"
+>$json = $json-&#62;utf8 ([$enable])</a></dt>
+
+<dd>
+<dt><a name='enabled'></a><a name="$enabled_=_$json-&#62;get_utf8"
+>$enabled = $json-&#62;get_utf8</a></dt>
+
+<dd>
+<p>If <code>$enable</code> is true (or missing), then the <code>encode</code> method will encode the JSON result into UTF-8, as required by many protocols, while the <code>decode</code> method expects to be handled an UTF-8-encoded string. Please note that UTF-8-encoded strings do not contain any characters outside the range <code>0..255</code>, they are thus useful for bytewise/binary I/O. In future versions, enabling this option might enable autodetection of the UTF-16 and UTF-32 encoding families, as described in RFC4627.</p>
+
+<p>If <code>$enable</code> is false, then the <code>encode</code> method will return the JSON string as a (non-encoded) Unicode string, while <code>decode</code> expects thus a Unicode string. Any decoding or encoding (e.g. to UTF-8 or UTF-16) needs to be done yourself, e.g. using the Encode module.</p>
+
+<p>See also the section <i>ENCODING/CODESET FLAG NOTES</i> later in this document.</p>
+
+<p>Example, output UTF-16BE-encoded JSON:</p>
+
+<pre class="sh_perl">  use Encode;
+  $jsontext = encode &#34;UTF-16BE&#34;, JSON::XS-&#62;new-&#62;encode ($object);</pre>
+
+<p>Example, decode UTF-32LE-encoded JSON:</p>
+
+<pre class="sh_perl">  use Encode;
+  $object = JSON::XS-&#62;new-&#62;decode (decode &#34;UTF-32LE&#34;, $jsontext);</pre>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;pretty_([$enable])"
+>$json = $json-&#62;pretty ([$enable])</a></dt>
+
+<dd>
+<p>This enables (or disables) all of the <code>indent</code>, <code>space_before</code> and <code>space_after</code> (and in the future possibly more) flags in one call to generate the most readable (or most compact) form possible.</p>
+
+<p>Example, pretty-print some simple structure:</p>
+
+<pre class="sh_perl">   my $json = JSON::XS-&#62;new-&#62;pretty(1)-&#62;encode ({a =&#62; [1,2]})
+   =&#62;
+   {
+      &#34;a&#34; : [
+         1,
+         2
+      ]
+   }</pre>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;indent_([$enable])"
+>$json = $json-&#62;indent ([$enable])</a></dt>
+
+<dd>
+<dt><a name='enabled'></a><a name="$enabled_=_$json-&#62;get_indent"
+>$enabled = $json-&#62;get_indent</a></dt>
+
+<dd>
+<p>If <code>$enable</code> is true (or missing), then the <code>encode</code> method will use a multiline format as output, putting every array member or object/hash key-value pair into its own line, indenting them properly.</p>
+
+<p>If <code>$enable</code> is false, no newlines or indenting will be produced, and the resulting JSON text is guaranteed not to contain any <code>newlines</code>.</p>
+
+<p>This setting has no effect when decoding JSON texts.</p>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;space_before_([$enable])"
+>$json = $json-&#62;space_before ([$enable])</a></dt>
+
+<dd>
+<dt><a name='enabled'></a><a name="$enabled_=_$json-&#62;get_space_before"
+>$enabled = $json-&#62;get_space_before</a></dt>
+
+<dd>
+<p>If <code>$enable</code> is true (or missing), then the <code>encode</code> method will add an extra optional space before the <code>:</code> separating keys from values in JSON objects.</p>
+
+<p>If <code>$enable</code> is false, then the <code>encode</code> method will not add any extra space at those places.</p>
+
+<p>This setting has no effect when decoding JSON texts. You will also most likely combine this setting with <code>space_after</code>.</p>
+
+<p>Example, space_before enabled, space_after and indent disabled:</p>
+
+<pre class="sh_perl">   {&#34;key&#34; :&#34;value&#34;}</pre>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;space_after_([$enable])"
+>$json = $json-&#62;space_after ([$enable])</a></dt>
+
+<dd>
+<dt><a name='enabled'></a><a name="$enabled_=_$json-&#62;get_space_after"
+>$enabled = $json-&#62;get_space_after</a></dt>
+
+<dd>
+<p>If <code>$enable</code> is true (or missing), then the <code>encode</code> method will add an extra optional space after the <code>:</code> separating keys from values in JSON objects and extra whitespace after the <code>,</code> separating key-value pairs and array members.</p>
+
+<p>If <code>$enable</code> is false, then the <code>encode</code> method will not add any extra space at those places.</p>
+
+<p>This setting has no effect when decoding JSON texts.</p>
+
+<p>Example, space_before and indent disabled, space_after enabled:</p>
+
+<pre class="sh_perl">   {&#34;key&#34;: &#34;value&#34;}</pre>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;relaxed_([$enable])"
+>$json = $json-&#62;relaxed ([$enable])</a></dt>
+
+<dd>
+<dt><a name='enabled'></a><a name="$enabled_=_$json-&#62;get_relaxed"
+>$enabled = $json-&#62;get_relaxed</a></dt>
+
+<dd>
+<p>If <code>$enable</code> is true (or missing), then <code>decode</code> will accept some extensions to normal JSON syntax (see below). <code>encode</code> will not be affected in anyway. <i>Be aware that this option makes you accept invalid JSON texts as if they were valid!</i>. I suggest only to use this option to parse application-specific files written by humans (configuration files, resource files etc.)</p>
+
+<p>If <code>$enable</code> is false (the default), then <code>decode</code> will only accept valid JSON texts.</p>
+
+<p>Currently accepted extensions are:</p>
+
+<ul>
+<li>list items can have an end-comma
+<p>JSON <i>separates</i> array elements and key-value pairs with commas. This can be annoying if you write JSON texts manually and want to be able to quickly append elements, so this extension accepts comma at the end of such items not just between them:</p>
+
+<pre class="sh_perl">   [
+      1,
+      2, &#60;- this comma not normally allowed
+   ]
+   {
+      &#34;k1&#34;: &#34;v1&#34;,
+      &#34;k2&#34;: &#34;v2&#34;, &#60;- this comma not normally allowed
+   }</pre>
+</li>
+
+<li>shell-style &#39;#&#39;-comments
+<p>Whenever JSON allows whitespace, shell-style comments are additionally allowed. They are terminated by the first carriage-return or line-feed character, after which more white-space and comments are allowed.</p>
+
+<pre class="sh_perl">  [
+     1, # this comment not allowed in JSON
+        # neither this one...
+  ]</pre>
+</li>
+</ul>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;canonical_([$enable])"
+>$json = $json-&#62;canonical ([$enable])</a></dt>
+
+<dd>
+<dt><a name='enabled'></a><a name="$enabled_=_$json-&#62;get_canonical"
+>$enabled = $json-&#62;get_canonical</a></dt>
+
+<dd>
+<p>If <code>$enable</code> is true (or missing), then the <code>encode</code> method will output JSON objects by sorting their keys. This is adding a comparatively high overhead.</p>
+
+<p>If <code>$enable</code> is false, then the <code>encode</code> method will output key-value pairs in the order Perl stores them (which will likely change between runs of the same script).</p>
+
+<p>This option is useful if you want the same data structure to be encoded as the same JSON text (given the same overall settings). If it is disabled, the same hash might be encoded differently even if contains the same data, as key-value pairs have no inherent ordering in Perl.</p>
+
+<p>This setting has no effect when decoding JSON texts.</p>
+
+<p>This setting has currently no effect on tied hashes.</p>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;allow_nonref_([$enable])"
+>$json = $json-&#62;allow_nonref ([$enable])</a></dt>
+
+<dd>
+<dt><a name='enabled'></a><a name="$enabled_=_$json-&#62;get_allow_nonref"
+>$enabled = $json-&#62;get_allow_nonref</a></dt>
+
+<dd>
+<p>If <code>$enable</code> is true (or missing), then the <code>encode</code> method can convert a non-reference into its corresponding string, number or null JSON value, which is an extension to RFC4627. Likewise, <code>decode</code> will accept those JSON values instead of croaking.</p>
+
+<p>If <code>$enable</code> is false, then the <code>encode</code> method will croak if it isn&#39;t passed an arrayref or hashref, as JSON texts must either be an object or array. Likewise, <code>decode</code> will croak if given something that is not a JSON object or array.</p>
+
+<p>Example, encode a Perl scalar as JSON value with enabled <code>allow_nonref</code>, resulting in an invalid JSON text:</p>
+
+<pre class="sh_perl">   JSON::XS-&#62;new-&#62;allow_nonref-&#62;encode (&#34;Hello, World!&#34;)
+   =&#62; &#34;Hello, World!&#34;</pre>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;allow_unknown_([$enable])"
+>$json = $json-&#62;allow_unknown ([$enable])</a></dt>
+
+<dd>
+<dt><a name='enabled'></a><a name="$enabled_=_$json-&#62;get_allow_unknown"
+>$enabled = $json-&#62;get_allow_unknown</a></dt>
+
+<dd>
+<p>If <code>$enable</code> is true (or missing), then <code>encode</code> will <i>not</i> throw an exception when it encounters values it cannot represent in JSON (for example, filehandles) but instead will encode a JSON <code>null</code> value. Note that blessed objects are not included here and are handled separately by c&#60;allow_nonref&#62;.</p>
+
+<p>If <code>$enable</code> is false (the default), then <code>encode</code> will throw an exception when it encounters anything it cannot encode as JSON.</p>
+
+<p>This option does not affect <code>decode</code> in any way, and it is recommended to leave it off unless you know your communications partner.</p>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;allow_blessed_([$enable])"
+>$json = $json-&#62;allow_blessed ([$enable])</a></dt>
+
+<dd>
+<dt><a name='enabled'></a><a name="$enabled_=_$json-&#62;get_allow_blessed"
+>$enabled = $json-&#62;get_allow_blessed</a></dt>
+
+<dd>
+<p>If <code>$enable</code> is true (or missing), then the <code>encode</code> method will not barf when it encounters a blessed reference. Instead, the value of the <b>convert_blessed</b> option will decide whether <code>null</code> (<code>convert_blessed</code> disabled or no <code>TO_JSON</code> method found) or a representation of the object (<code>convert_blessed</code> enabled and <code>TO_JSON</code> method found) is being encoded. Has no effect on <code>decode</code>.</p>
+
+<p>If <code>$enable</code> is false (the default), then <code>encode</code> will throw an exception when it encounters a blessed object.</p>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;convert_blessed_([$enable])"
+>$json = $json-&#62;convert_blessed ([$enable])</a></dt>
+
+<dd>
+<dt><a name='enabled'></a><a name="$enabled_=_$json-&#62;get_convert_blessed"
+>$enabled = $json-&#62;get_convert_blessed</a></dt>
+
+<dd>
+<p>If <code>$enable</code> is true (or missing), then <code>encode</code>, upon encountering a blessed object, will check for the availability of the <code>TO_JSON</code> method on the object&#39;s class. If found, it will be called in scalar context and the resulting scalar will be encoded instead of the object. If no <code>TO_JSON</code> method is found, the value of <code>allow_blessed</code> will decide what to do.</p>
+
+<p>The <code>TO_JSON</code> method may safely call die if it wants. If <code>TO_JSON</code> returns other blessed objects, those will be handled in the same way. <code>TO_JSON</code> must take care of not causing an endless recursion cycle (== crash) in this case. The name of <code>TO_JSON</code> was chosen because other methods called by the Perl core (== not by the user of the object) are usually in upper case letters and to avoid collisions with any <code>to_json</code> function or method.</p>
+
+<p>This setting does not yet influence <code>decode</code> in any way, but in the future, global hooks might get installed that influence <code>decode</code> and are enabled by this setting.</p>
+
+<p>If <code>$enable</code> is false, then the <code>allow_blessed</code> setting will decide what to do when a blessed object is found.</p>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;filter_json_object_([$coderef-&#62;($hashref)])"
+>$json = $json-&#62;filter_json_object ([$coderef-&#62;($hashref)])</a></dt>
+
+<dd>
+<p>When <code>$coderef</code> is specified, it will be called from <code>decode</code> each time it decodes a JSON object. The only argument is a reference to the newly-created hash. If the code references returns a single scalar (which need not be a reference), this value (i.e. a copy of that scalar to avoid aliasing) is inserted into the deserialised data structure. If it returns an empty list (NOTE: <i>not</i> <code>undef</code>, which is a valid scalar), the original deserialised hash will be inserted. This setting can slow down decoding considerably.</p>
+
+<p>When <code>$coderef</code> is omitted or undefined, any existing callback will be removed and <code>decode</code> will not change the deserialised hash in any way.</p>
+
+<p>Example, convert all JSON objects into the integer 5:</p>
+
+<pre class="sh_perl">   my $js = JSON::XS-&#62;new-&#62;filter_json_object (sub { 5 });
+   # returns [5]
+   $js-&#62;decode (&#39;[{}]&#39;)
+   # throw an exception because allow_nonref is not enabled
+   # so a lone 5 is not allowed.
+   $js-&#62;decode (&#39;{&#34;a&#34;:1, &#34;b&#34;:2}&#39;);</pre>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;filter_json_single_key_object_($key_[=&#62;_$coderef-&#62;($value)])"
+>$json = $json-&#62;filter_json_single_key_object ($key [=&#62; $coderef-&#62;($value)])</a></dt>
+
+<dd>
+<p>Works remotely similar to <code>filter_json_object</code>, but is only called for JSON objects having a single key named <code>$key</code>.</p>
+
+<p>This <code>$coderef</code> is called before the one specified via <code>filter_json_object</code>, if any. It gets passed the single value in the JSON object. If it returns a single value, it will be inserted into the data structure. If it returns nothing (not even <code>undef</code> but the empty list), the callback from <code>filter_json_object</code> will be called next, as if no single-key callback were specified.</p>
+
+<p>If <code>$coderef</code> is omitted or undefined, the corresponding callback will be disabled. There can only ever be one callback for a given key.</p>
+
+<p>As this callback gets called less often then the <code>filter_json_object</code> one, decoding speed will not usually suffer as much. Therefore, single-key objects make excellent targets to serialise Perl objects into, especially as single-key JSON objects are as close to the type-tagged value concept as JSON gets (it&#39;s basically an ID/VALUE tuple). Of course, JSON does not support this in any way, so you need to make sure your data never looks like a serialised Perl hash.</p>
+
+<p>Typical names for the single object key are <code>__class_whatever__</code>, or <code>$__dollars_are_rarely_used__$</code> or <code>}ugly_brace_placement</code>, or even things like <code>__class_md5sum(classname)__</code>, to reduce the risk of clashing with real hashes.</p>
+
+<p>Example, decode JSON objects of the form <code>{ &#34;__widget__&#34; =&#62; &#60;id&#62; }</code> into the corresponding <code>$WIDGET{&#60;id&#62;}</code> object:</p>
+
+<pre class="sh_perl">   # return whatever is in $WIDGET{5}:
+   JSON::XS
+      -&#62;new
+      -&#62;filter_json_single_key_object (__widget__ =&#62; sub {
+            $WIDGET{ $_[0] }
+         })
+      -&#62;decode (&#39;{&#34;__widget__&#34;: 5&#39;)
+
+   # this can be used with a TO_JSON method in some &#34;widget&#34; class
+   # for serialisation to json:
+   sub WidgetBase::TO_JSON {
+      my ($self) = @_;
+
+      unless ($self-&#62;{id}) {
+         $self-&#62;{id} = ..get..some..id..;
+         $WIDGET{$self-&#62;{id}} = $self;
+      }
+
+      { __widget__ =&#62; $self-&#62;{id} }
+   }</pre>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;shrink_([$enable])"
+>$json = $json-&#62;shrink ([$enable])</a></dt>
+
+<dd>
+<dt><a name='enabled'></a><a name="$enabled_=_$json-&#62;get_shrink"
+>$enabled = $json-&#62;get_shrink</a></dt>
+
+<dd>
+<p>Perl usually over-allocates memory a bit when allocating space for strings. This flag optionally resizes strings generated by either <code>encode</code> or <code>decode</code> to their minimum size possible. This can save memory when your JSON texts are either very very long or you have many short strings. It will also try to downgrade any strings to octet-form if possible: perl stores strings internally either in an encoding called UTF-X or in octet-form. The latter cannot store everything but uses less space in general (and some buggy Perl or C code might even rely on that internal representation being used).</p>
+
+<p>The actual definition of what shrink does might change in future versions, but it will always try to save space at the expense of time.</p>
+
+<p>If <code>$enable</code> is true (or missing), the string returned by <code>encode</code> will be shrunk-to-fit, while all strings generated by <code>decode</code> will also be shrunk-to-fit.</p>
+
+<p>If <code>$enable</code> is false, then the normal perl allocation algorithms are used. If you work with your data, then this is likely to be faster.</p>
+
+<p>In the future, this setting might control other things, such as converting strings that look like integers or floats into integers or floats internally (there is no difference on the Perl level), saving space.</p>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;max_depth_([$maximum_nesting_depth])"
+>$json = $json-&#62;max_depth ([$maximum_nesting_depth])</a></dt>
+
+<dd>
+<dt><a name='max_depth'></a><a name="$max_depth_=_$json-&#62;get_max_depth"
+>$max_depth = $json-&#62;get_max_depth</a></dt>
+
+<dd>
+<p>Sets the maximum nesting level (default <code>512</code>) accepted while encoding or decoding. If a higher nesting level is detected in JSON text or a Perl data structure, then the encoder and decoder will stop and croak at that point.</p>
+
+<p>Nesting level is defined by number of hash- or arrayrefs that the encoder needs to traverse to reach a given point or the number of <code>{</code> or <code>[</code> characters without their matching closing parenthesis crossed to reach a given character in a string.</p>
+
+<p>Setting the maximum depth to one disallows any nesting, so that ensures that the object is only a single hash/object or array.</p>
+
+<p>If no argument is given, the highest possible setting will be used, which is rarely useful.</p>
+
+<p>Note that nesting is implemented by recursion in C. The default value has been chosen to be as large as typical operating systems allow without crashing.</p>
+
+<p>See SECURITY CONSIDERATIONS, below, for more info on why this is useful.</p>
+
+<dt><a name='json'></a><a name="$json_=_$json-&#62;max_size_([$maximum_string_size])"
+>$json = $json-&#62;max_size ([$maximum_string_size])</a></dt>
+
+<dd>
+<dt><a name='max_size'></a><a name="$max_size_=_$json-&#62;get_max_size"
+>$max_size = $json-&#62;get_max_size</a></dt>
+
+<dd>
+<p>Set the maximum length a JSON text may have (in bytes) where decoding is being attempted. The default is <code>0</code>, meaning no limit. When <code>decode</code> is called on a string that is longer then this many bytes, it will not attempt to decode the string but throw an exception. This setting has no effect on <code>encode</code> (yet).</p>
+
+<p>If no argument is given, the limit check will be deactivated (same as when <code>0</code> is specified).</p>
+
+<p>See SECURITY CONSIDERATIONS, below, for more info on why this is useful.</p>
+
+<dt><a name='json_text'></a><a name="$json_text_=_$json-&#62;encode_($perl_scalar)"
+>$json_text = $json-&#62;encode ($perl_scalar)</a></dt>
+
+<dd>
+<p>Converts the given Perl data structure (a simple scalar or a reference to a hash or array) to its JSON representation. Simple scalars will be converted into JSON string or number sequences, while references to arrays become JSON arrays and references to hashes become JSON objects. Undefined Perl values (e.g. <code>undef</code>) become JSON <code>null</code> values. Neither <code>true</code> nor <code>false</code> values will be generated.</p>
+
+<dt><a name='perl_scalar'></a><a name="$perl_scalar_=_$json-&#62;decode_($json_text)"
+>$perl_scalar = $json-&#62;decode ($json_text)</a></dt>
+
+<dd>
+<p>The opposite of <code>encode</code>: expects a JSON text and tries to parse it, returning the resulting simple scalar or reference. Croaks on error.</p>
+
+<p>JSON numbers and strings become simple Perl scalars. JSON arrays become Perl arrayrefs and JSON objects become Perl hashrefs. <code>true</code> becomes <code>1</code>, <code>false</code> becomes <code>0</code> and <code>null</code> becomes <code>undef</code>.</p>
+
+<dt><a name='perl_scalar'></a><a name="($perl_scalar,_$characters)_=_$json-&#62;decode_prefix_($json_text)"
+>($perl_scalar, $characters) = $json-&#62;decode_prefix ($json_text)</a></dt>
+
+<dd>
+<p>This works like the <code>decode</code> method, but instead of raising an exception when there is trailing garbage after the first JSON object, it will silently stop parsing there and return the number of characters consumed so far.</p>
+
+<p>This is useful if your JSON texts are not delimited by an outer protocol (which is not the brightest thing to do in the first place) and you need to know where the JSON text ends.</p>
+
+<pre class="sh_perl">   JSON::XS-&#62;new-&#62;decode_prefix (&#34;[1] the tail&#34;)
+   =&#62; ([], 3)</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INCREMENTAL_PARSING"
+>INCREMENTAL PARSING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>In some cases, there is the need for incremental parsing of JSON texts. While this module always has to keep both JSON text and resulting Perl data structure in memory at one time, it does allow you to parse a JSON stream incrementally. It does so by accumulating text until it has a full JSON object, which it then can decode. This process is similar to using <code>decode_prefix</code> to see if a full JSON object is available, but is much more efficient (and can be implemented with a minimum of method calls).</p>
+
+<p>JSON::XS will only attempt to parse the JSON text once it is sure it has enough text to get a decisive result, using a very simple but truly incremental parser. This means that it sometimes won&#39;t stop as early as the full parser, for example, it doesn&#39;t detect mismatched parentheses. The only thing it guarantees is that it starts decoding as soon as a syntactically valid JSON text has been seen. This means you need to set resource limits (e.g. <code>max_size</code>) to ensure the parser will stop parsing in the presence if syntax errors.</p>
+
+<p>The following methods implement this incremental parser.</p>
+
+<dl>
+<dt><a name='void'></a><a name="[void,_scalar_or_list_context]_=_$json-&#62;incr_parse_([$string])"
+>[void, scalar or list context] = $json-&#62;incr_parse ([$string])</a></dt>
+
+<dd>
+<p>This is the central parsing function. It can both append new text and extract objects from the stream accumulated so far (both of these functions are optional).</p>
+
+<p>If <code>$string</code> is given, then this string is appended to the already existing JSON fragment stored in the <code>$json</code> object.</p>
+
+<p>After that, if the function is called in void context, it will simply return without doing anything further. This can be used to add more text in as many chunks as you want.</p>
+
+<p>If the method is called in scalar context, then it will try to extract exactly <i>one</i> JSON object. If that is successful, it will return this object, otherwise it will return <code>undef</code>. If there is a parse error, this method will croak just as <code>decode</code> would do (one can then use <code>incr_skip</code> to skip the errornous part). This is the most common way of using the method.</p>
+
+<p>And finally, in list context, it will try to extract as many objects from the stream as it can find and return them, or the empty list otherwise. For this to work, there must be no separators between the JSON objects or arrays, instead they must be concatenated back-to-back. If an error occurs, an exception will be raised as in the scalar context case. Note that in this case, any previously-parsed JSON texts will be lost.</p>
+
+<p>Example: Parse some JSON arrays/objects in a given string and return them.</p>
+
+<pre class="sh_perl">   my @objs = JSON::XS-&#62;new-&#62;incr_parse (&#34;[5][7][1,2]&#34;);</pre>
+
+<dt><a name='lvalue_string'></a><a name="$lvalue_string_=_$json-&#62;incr_text"
+>$lvalue_string = $json-&#62;incr_text</a></dt>
+
+<dd>
+<p>This method returns the currently stored JSON fragment as an lvalue, that is, you can manipulate it. This <i>only</i> works when a preceding call to <code>incr_parse</code> in <i>scalar context</i> successfully returned an object. Under all other circumstances you must not call this function (I mean it. although in simple tests it might actually work, it <i>will</i> fail under real world conditions). As a special exception, you can also call this method before having parsed anything.</p>
+
+<p>This function is useful in two cases: a) finding the trailing text after a JSON object or b) parsing multiple JSON objects separated by non-JSON text (such as commas).</p>
+
+<dt><a name='json'></a><a name="$json-&#62;incr_skip"
+>$json-&#62;incr_skip</a></dt>
+
+<dd>
+<p>This will reset the state of the incremental parser and will remove the parsed text from the input buffer so far. This is useful after <code>incr_parse</code> died, in which case the input buffer and incremental parser state is left unchanged, to skip the text parsed so far and to reset the parse state.</p>
+
+<p>The difference to <code>incr_reset</code> is that only text until the parse error occured is removed.</p>
+
+<dt><a name='json'></a><a name="$json-&#62;incr_reset"
+>$json-&#62;incr_reset</a></dt>
+
+<dd>
+<p>This completely resets the incremental parser, that is, after this call, it will be as if the parser had never parsed anything.</p>
+
+<p>This is useful if you want to repeatedly parse JSON objects and want to ignore any trailing data, which means you have to reset the parser after each successful decode.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="LIMITATIONS"
+>LIMITATIONS</a></h2>
+
+<p>All options that affect decoding are supported, except <code>allow_nonref</code>. The reason for this is that it cannot be made to work sensibly: JSON objects and arrays are self-delimited, i.e. you can concatenate them back to back and still decode them perfectly. This does not hold true for JSON numbers, however.</p>
+
+<p>For example, is the string <code>1</code> a single JSON number, or is it simply the start of <code>12</code>? Or is <code>12</code> a single JSON number, or the concatenation of <code>1</code> and <code>2</code>? In neither case you can tell, and this is why JSON::XS takes the conservative route and disallows this case.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES</a></h2>
+
+<p>Some examples will make all this clearer. First, a simple example that works similarly to <code>decode_prefix</code>: We want to decode the JSON object at the start of a string and identify the portion after the JSON object:</p>
+
+<pre class="sh_perl">   my $text = &#34;[1,2,3] hello&#34;;
+
+   my $json = new JSON::XS;
+
+   my $obj = $json-&#62;incr_parse ($text)
+      or die &#34;expected JSON object or array at beginning of string&#34;;
+
+   my $tail = $json-&#62;incr_text;
+   # $tail now contains &#34; hello&#34;</pre>
+
+<p>Easy, isn&#39;t it?</p>
+
+<p>Now for a more complicated example: Imagine a hypothetical protocol where you read some requests from a TCP stream, and each request is a JSON array, without any separation between them (in fact, it is often useful to use newlines as &#34;separators&#34;, as these get interpreted as whitespace at the start of the JSON text, which makes it possible to test said protocol with <code>telnet</code>...).</p>
+
+<p>Here is how you&#39;d do it (it is trivial to write this in an event-based manner):</p>
+
+<pre class="sh_perl">   my $json = new JSON::XS;
+
+   # read some data from the socket
+   while (sysread $socket, my $buf, 4096) {
+
+      # split and decode as many requests as possible
+      for my $request ($json-&#62;incr_parse ($buf)) {
+         # act on the $request
+      }
+   }</pre>
+
+<p>Another complicated example: Assume you have a string with JSON objects or arrays, all separated by (optional) comma characters (e.g. <code>[1],[2], [3]</code>). To parse them, we have to skip the commas between the JSON texts, and here is where the lvalue-ness of <code>incr_text</code> comes in useful:</p>
+
+<pre class="sh_perl">   my $text = &#34;[1],[2], [3]&#34;;
+   my $json = new JSON::XS;
+
+   # void context, so no parsing done
+   $json-&#62;incr_parse ($text);
+
+   # now extract as many objects as possible. note the
+   # use of scalar context so incr_text can be called.
+   while (my $obj = $json-&#62;incr_parse) {
+      # do something with $obj
+
+      # now skip the optional comma
+      $json-&#62;incr_text =~ s/^ \s* , //x;
+   }</pre>
+
+<p>Now lets go for a very complex example: Assume that you have a gigantic JSON array-of-objects, many gigabytes in size, and you want to parse it, but you cannot load it into memory fully (this has actually happened in the real world :).</p>
+
+<p>Well, you lost, you have to implement your own JSON parser. But JSON::XS can still help you: You implement a (very simple) array parser and let JSON decode the array elements, which are all full JSON objects on their own (this wouldn&#39;t work if the array elements could be JSON numbers, for example):</p>
+
+<pre class="sh_perl">   my $json = new JSON::XS;
+
+   # open the monster
+   open my $fh, &#34;&#60;bigfile.json&#34;
+      or die &#34;bigfile: $!&#34;;
+
+   # first parse the initial &#34;[&#34;
+   for (;;) {
+      sysread $fh, my $buf, 65536
+         or die &#34;read error: $!&#34;;
+      $json-&#62;incr_parse ($buf); # void context, so no parsing
+
+      # Exit the loop once we found and removed(!) the initial &#34;[&#34;.
+      # In essence, we are (ab-)using the $json object as a simple scalar
+      # we append data to.
+      last if $json-&#62;incr_text =~ s/^ \s* \[ //x;
+   }
+
+   # now we have the skipped the initial &#34;[&#34;, so continue
+   # parsing all the elements.
+   for (;;) {
+      # in this loop we read data until we got a single JSON object
+      for (;;) {
+         if (my $obj = $json-&#62;incr_parse) {
+            # do something with $obj
+            last;
+         }
+
+         # add more data
+         sysread $fh, my $buf, 65536
+            or die &#34;read error: $!&#34;;
+         $json-&#62;incr_parse ($buf); # void context, so no parsing
+      }
+
+      # in this loop we read data until we either found and parsed the
+      # separating &#34;,&#34; between elements, or the final &#34;]&#34;
+      for (;;) {
+         # first skip whitespace
+         $json-&#62;incr_text =~ s/^\s*//;
+
+         # if we find &#34;]&#34;, we are done
+         if ($json-&#62;incr_text =~ s/^\]//) {
+            print &#34;finished.\n&#34;;
+            exit;
+         }
+
+         # if we find &#34;,&#34;, we can continue with the next element
+         if ($json-&#62;incr_text =~ s/^,//) {
+            last;
+         }
+
+         # if we find anything else, we have a parse error!
+         if (length $json-&#62;incr_text) {
+            die &#34;parse error near &#34;, $json-&#62;incr_text;
+         }
+
+         # else add more data
+         sysread $fh, my $buf, 65536
+            or die &#34;read error: $!&#34;;
+         $json-&#62;incr_parse ($buf); # void context, so no parsing
+      }</pre>
+
+<p>This is a complex example, but most of the complexity comes from the fact that we are trying to be correct (bear with me if I am wrong, I never ran the above example :).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MAPPING"
+>MAPPING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This section describes how JSON::XS maps Perl values to JSON values and vice versa. These mappings are designed to &#34;do the right thing&#34; in most circumstances automatically, preserving round-tripping characteristics (what you put in comes out as something equivalent).</p>
+
+<p>For the more enlightened: note that in the following descriptions, lowercase <i>perl</i> refers to the Perl interpreter, while uppercase <i>Perl</i> refers to the abstract Perl language itself.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="JSON_-&#62;_PERL"
+>JSON -&#62; PERL</a></h2>
+
+<dl>
+<dt><a name="object"
+>object</a></dt>
+
+<dd>
+<p>A JSON object becomes a reference to a hash in Perl. No ordering of object keys is preserved (JSON does not preserve object key ordering itself).</p>
+
+<dt><a name="array"
+>array</a></dt>
+
+<dd>
+<p>A JSON array becomes a reference to an array in Perl.</p>
+
+<dt><a name="string"
+>string</a></dt>
+
+<dd>
+<p>A JSON string becomes a string scalar in Perl - Unicode codepoints in JSON are represented by the same codepoints in the Perl string, so no manual decoding is necessary.</p>
+
+<dt><a name="number"
+>number</a></dt>
+
+<dd>
+<p>A JSON number becomes either an integer, numeric (floating point) or string scalar in perl, depending on its range and any fractional parts. On the Perl level, there is no difference between those as Perl handles all the conversion details, but an integer may take slightly less memory and might represent more values exactly than floating point numbers.</p>
+
+<p>If the number consists of digits only, JSON::XS will try to represent it as an integer value. If that fails, it will try to represent it as a numeric (floating point) value if that is possible without loss of precision. Otherwise it will preserve the number as a string value (in which case you lose roundtripping ability, as the JSON number will be re-encoded toa JSON string).</p>
+
+<p>Numbers containing a fractional or exponential part will always be represented as numeric (floating point) values, possibly at a loss of precision (in which case you might lose perfect roundtripping ability, but the JSON number will still be re-encoded as a JSON number).</p>
+
+<p>Note that precision is not accuracy - binary floating point values cannot represent most decimal fractions exactly, and when converting from and to floating point, JSON::XS only guarantees precision up to but not including the leats significant bit.</p>
+
+<dt><a name='true'></a><a name="true,_false"
+>true, false</a></dt>
+
+<dd>
+<p>These JSON atoms become <code>JSON::XS::true</code> and <code>JSON::XS::false</code>, respectively. They are overloaded to act almost exactly like the numbers <code>1</code> and <code>0</code>. You can check whether a scalar is a JSON boolean by using the <code>JSON::XS::is_bool</code> function.</p>
+
+<dt><a name="null"
+>null</a></dt>
+
+<dd>
+<p>A JSON null atom becomes <code>undef</code> in Perl.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PERL_-&#62;_JSON"
+>PERL -&#62; JSON</a></h2>
+
+<p>The mapping from Perl to JSON is slightly more difficult, as Perl is a truly typeless language, so we can only guess which JSON type is meant by a Perl value.</p>
+
+<dl>
+<dt><a name='hash'></a><a name="hash_references"
+>hash references</a></dt>
+
+<dd>
+<p>Perl hash references become JSON objects. As there is no inherent ordering in hash keys (or JSON objects), they will usually be encoded in a pseudo-random order that can change between runs of the same program but stays generally the same within a single run of a program. JSON::XS can optionally sort the hash keys (determined by the <i>canonical</i> flag), so the same datastructure will serialise to the same JSON text (given same settings and version of JSON::XS), but this incurs a runtime overhead and is only rarely useful, e.g. when you want to compare some JSON text against another for equality.</p>
+
+<dt><a name='array'></a><a name="array_references"
+>array references</a></dt>
+
+<dd>
+<p>Perl array references become JSON arrays.</p>
+
+<dt><a name='other'></a><a name="other_references"
+>other references</a></dt>
+
+<dd>
+<p>Other unblessed references are generally not allowed and will cause an exception to be thrown, except for references to the integers <code>0</code> and <code>1</code>, which get turned into <code>false</code> and <code>true</code> atoms in JSON. You can also use <code>JSON::XS::false</code> and <code>JSON::XS::true</code> to improve readability.</p>
+
+<pre class="sh_perl">   encode_json [\0, JSON::XS::true]      # yields [false,true]</pre>
+
+<dt><a name='JSON'></a><a name="JSON::XS::true,_JSON::XS::false"
+>JSON::XS::true, JSON::XS::false</a></dt>
+
+<dd>
+<p>These special values become JSON true and JSON false values, respectively. You can also use <code>\1</code> and <code>\0</code> directly if you want.</p>
+
+<dt><a name='blessed'></a><a name="blessed_objects"
+>blessed objects</a></dt>
+
+<dd>
+<p>Blessed objects are not directly representable in JSON. See the <code>allow_blessed</code> and <code>convert_blessed</code> methods on various options on how to deal with this: basically, you can choose between throwing an exception, encoding the reference as if it weren&#39;t blessed, or provide your own serialiser method.</p>
+
+<dt><a name='simple'></a><a name="simple_scalars"
+>simple scalars</a></dt>
+
+<dd>
+<p>Simple Perl scalars (any scalar that is not a reference) are the most difficult objects to encode: JSON::XS will encode undefined scalars as JSON <code>null</code> values, scalars that have last been used in a string context before encoding as JSON strings, and anything else as number value:</p>
+
+<pre class="sh_perl">   # dump as number
+   encode_json [2]                      # yields [2]
+   encode_json [-3.0e17]                # yields [-3e+17]
+   my $value = 5; encode_json [$value]  # yields [5]
+
+   # used as string, so dump as string
+   print $value;
+   encode_json [$value]                 # yields [&#34;5&#34;]
+
+   # undef becomes null
+   encode_json [undef]                  # yields [null]</pre>
+
+<p>You can force the type to be a JSON string by stringifying it:</p>
+
+<pre class="sh_perl">   my $x = 3.1; # some variable containing a number
+   &#34;$x&#34;;        # stringified
+   $x .= &#34;&#34;;    # another, more awkward way to stringify
+   print $x;    # perl does it for you, too, quite often</pre>
+
+<p>You can force the type to be a JSON number by numifying it:</p>
+
+<pre class="sh_perl">   my $x = &#34;3&#34;; # some variable containing a string
+   $x += 0;     # numify it, ensuring it will be dumped as a number
+   $x *= 1;     # same thing, the choice is yours.</pre>
+
+<p>You can not currently force the type in other, less obscure, ways. Tell me if you need this capability (but don&#39;t forget to explain why it&#39;s needed :).</p>
+
+<p>Note that numerical precision has the same meaning as under Perl (so binary to decimal conversion follows the same rules as in Perl, which can differ to other languages). Also, your perl interpreter might expose extensions to the floating point numbers of your platform, such as infinities or NaN&#39;s - these cannot be represented in JSON, and it is an error to pass those in.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ENCODING/CODESET_FLAG_NOTES"
+>ENCODING/CODESET FLAG NOTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The interested reader might have seen a number of flags that signify encodings or codesets - <code>utf8</code>, <code>latin1</code> and <code>ascii</code>. There seems to be some confusion on what these do, so here is a short comparison:</p>
+
+<p><code>utf8</code> controls whether the JSON text created by <code>encode</code> (and expected by <code>decode</code>) is UTF-8 encoded or not, while <code>latin1</code> and <code>ascii</code> only control whether <code>encode</code> escapes character values outside their respective codeset range. Neither of these flags conflict with each other, although some combinations make less sense than others.</p>
+
+<p>Care has been taken to make all flags symmetrical with respect to <code>encode</code> and <code>decode</code>, that is, texts encoded with any combination of these flag values will be correctly decoded when the same flags are used - in general, if you use different flag settings while encoding vs. when decoding you likely have a bug somewhere.</p>
+
+<p>Below comes a verbose discussion of these flags. Note that a &#34;codeset&#34; is simply an abstract set of character-codepoint pairs, while an encoding takes those codepoint numbers and <i>encodes</i> them, in our case into octets. Unicode is (among other things) a codeset, UTF-8 is an encoding, and ISO-8859-1 (= latin 1) and ASCII are both codesets <i>and</i> encodings at the same time, which can be confusing.</p>
+
+<dl>
+<dt><a name='utf8'></a><a name="utf8_flag_disabled"
+><code>utf8</code> flag disabled</a></dt>
+
+<dd>
+<p>When <code>utf8</code> is disabled (the default), then <code>encode</code>/<code>decode</code> generate and expect Unicode strings, that is, characters with high ordinal Unicode values (&#62; 255) will be encoded as such characters, and likewise such characters are decoded as-is, no canges to them will be done, except &#34;(re-)interpreting&#34; them as Unicode codepoints or Unicode characters, respectively (to Perl, these are the same thing in strings unless you do funny/weird/dumb stuff).</p>
+
+<p>This is useful when you want to do the encoding yourself (e.g. when you want to have UTF-16 encoded JSON texts) or when some other layer does the encoding for you (for example, when printing to a terminal using a filehandle that transparently encodes to UTF-8 you certainly do NOT want to UTF-8 encode your data first and have Perl encode it another time).</p>
+
+<dt><a name='utf8'></a><a name="utf8_flag_enabled"
+><code>utf8</code> flag enabled</a></dt>
+
+<dd>
+<p>If the <code>utf8</code>-flag is enabled, <code>encode</code>/<code>decode</code> will encode all characters using the corresponding UTF-8 multi-byte sequence, and will expect your input strings to be encoded as UTF-8, that is, no &#34;character&#34; of the input string must have any value &#62; 255, as UTF-8 does not allow that.</p>
+
+<p>The <code>utf8</code> flag therefore switches between two modes: disabled means you will get a Unicode string in Perl, enabled means you get an UTF-8 encoded octet/binary string in Perl.</p>
+
+<dt><a name='latin1'></a><a name="latin1_or_ascii_flags_enabled"
+><code>latin1</code> or <code>ascii</code> flags enabled</a></dt>
+
+<dd>
+<p>With <code>latin1</code> (or <code>ascii</code>) enabled, <code>encode</code> will escape characters with ordinal values &#62; 255 (&#62; 127 with <code>ascii</code>) and encode the remaining characters as specified by the <code>utf8</code> flag.</p>
+
+<p>If <code>utf8</code> is disabled, then the result is also correctly encoded in those character sets (as both are proper subsets of Unicode, meaning that a Unicode string with all character values &#60; 256 is the same thing as a ISO-8859-1 string, and a Unicode string with all character values &#60; 128 is the same thing as an ASCII string in Perl).</p>
+
+<p>If <code>utf8</code> is enabled, you still get a correct UTF-8-encoded string, regardless of these flags, just some more characters will be escaped using <code>\uXXXX</code> then before.</p>
+
+<p>Note that ISO-8859-1-<i>encoded</i> strings are not compatible with UTF-8 encoding, while ASCII-encoded strings are. That is because the ISO-8859-1 encoding is NOT a subset of UTF-8 (despite the ISO-8859-1 <i>codeset</i> being a subset of Unicode), while ASCII is.</p>
+
+<p>Surprisingly, <code>decode</code> will ignore these flags and so treat all input values as governed by the <code>utf8</code> flag. If it is disabled, this allows you to decode ISO-8859-1- and ASCII-encoded strings, as both strict subsets of Unicode. If it is enabled, you can correctly decode UTF-8 encoded strings.</p>
+
+<p>So neither <code>latin1</code> nor <code>ascii</code> are incompatible with the <code>utf8</code> flag - they only govern when the JSON output engine escapes a character or not.</p>
+
+<p>The main use for <code>latin1</code> is to relatively efficiently store binary data as JSON, at the expense of breaking compatibility with most JSON decoders.</p>
+
+<p>The main use for <code>ascii</code> is to force the output to not contain characters with values &#62; 127, which means you can interpret the resulting string as UTF-8, ISO-8859-1, ASCII, KOI8-R or most about any character set and 8-bit-encoding, and still get the same data structure back. This is useful when your channel for JSON transfer is not 8-bit clean or the encoding might be mangled in between (e.g. in mail), and works because ASCII is a proper subset of most 8-bit and multibyte encodings in use in the world.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="JSON_and_ECMAscript"
+>JSON and ECMAscript</a></h2>
+
+<p>JSON syntax is based on how literals are represented in javascript (the not-standardised predecessor of ECMAscript) which is presumably why it is called &#34;JavaScript Object Notation&#34;.</p>
+
+<p>However, JSON is not a subset (and also not a superset of course) of ECMAscript (the standard) or javascript (whatever browsers actually implement).</p>
+
+<p>If you want to use javascript&#39;s <code>eval</code> function to &#34;parse&#34; JSON, you might run into parse errors for valid JSON texts, or the resulting data structure might not be queryable:</p>
+
+<p>One of the problems is that U+2028 and U+2029 are valid characters inside JSON strings, but are not allowed in ECMAscript string literals, so the following Perl fragment will not output something that can be guaranteed to be parsable by javascript&#39;s <code>eval</code>:</p>
+
+<pre class="sh_perl">   use JSON::XS;
+
+   print encode_json [chr 0x2028];</pre>
+
+<p>The right fix for this is to use a proper JSON parser in your javascript programs, and not rely on <code>eval</code> (see for example Douglas Crockford&#39;s <em>json2.js</em> parser).</p>
+
+<p>If this is not an option, you can, as a stop-gap measure, simply encode to ASCII-only JSON:</p>
+
+<pre class="sh_perl">   use JSON::XS;
+
+   print JSON::XS-&#62;new-&#62;ascii-&#62;encode ([chr 0x2028]);</pre>
+
+<p>Note that this will enlarge the resulting JSON text quite a bit if you have many non-ASCII characters. You might be tempted to run some regexes to only escape U+2028 and U+2029, e.g.:</p>
+
+<pre class="sh_perl">   # DO NOT USE THIS!
+   my $json = JSON::XS-&#62;new-&#62;utf8-&#62;encode ([chr 0x2028]);
+   $json =~ s/\xe2\x80\xa8/\\u2028/g; # escape U+2028
+   $json =~ s/\xe2\x80\xa9/\\u2029/g; # escape U+2029
+   print $json;</pre>
+
+<p>Note that <i>this is a bad idea</i>: the above only works for U+2028 and U+2029 and thus only for fully ECMAscript-compliant parsers. Many existing javascript implementations, however, have issues with other characters as well - using <code>eval</code> naively simply <i>will</i> cause problems.</p>
+
+<p>Another problem is that some javascript implementations reserve some property names for their own purposes (which probably makes them non-ECMAscript-compliant). For example, Iceweasel reserves the <code>__proto__</code> property name for its own purposes.</p>
+
+<p>If that is a problem, you could parse try to filter the resulting JSON output for these property strings, e.g.:</p>
+
+<pre class="sh_perl">   $json =~ s/&#34;__proto__&#34;\s*:/&#34;__proto__renamed&#34;:/g;</pre>
+
+<p>This works because <code>__proto__</code> is not valid outside of strings, so every occurence of <code>&#34;__proto__&#34;\s*:</code> must be a string used as property name.</p>
+
+<p>If you know of other incompatibilities, please let me know.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="JSON_and_YAML"
+>JSON and YAML</a></h2>
+
+<p>You often hear that JSON is a subset of YAML. This is, however, a mass hysteria(*) and very far from the truth (as of the time of this writing), so let me state it clearly: <i>in general, there is no way to configure JSON::XS to output a data structure as valid YAML</i> that works in all cases.</p>
+
+<p>If you really must use JSON::XS to generate YAML, you should use this algorithm (subject to change in future versions):</p>
+
+<pre class="sh_perl">   my $to_yaml = JSON::XS-&#62;new-&#62;utf8-&#62;space_after (1);
+   my $yaml = $to_yaml-&#62;encode ($ref) . &#34;\n&#34;;</pre>
+
+<p>This will <i>usually</i> generate JSON texts that also parse as valid YAML. Please note that YAML has hardcoded limits on (simple) object key lengths that JSON doesn&#39;t have and also has different and incompatible unicode character escape syntax, so you should make sure that your hash keys are noticeably shorter than the 1024 &#34;stream characters&#34; YAML allows and that you do not have characters with codepoint values outside the Unicode BMP (basic multilingual page). YAML also does not allow <code>\/</code> sequences in strings (which JSON::XS does not <i>currently</i> generate, but other JSON generators might).</p>
+
+<p>There might be other incompatibilities that I am not aware of (or the YAML specification has been changed yet again - it does so quite often). In general you should not try to generate YAML with a JSON generator or vice versa, or try to parse JSON with a YAML parser or vice versa: chances are high that you will run into severe interoperability problems when you least expect it.</p>
+
+<dl>
+<dt><a name="(*)"
+>(*)</a></dt>
+
+<dd>
+<p>I have been pressured multiple times by Brian Ingerson (one of the authors of the YAML specification) to remove this paragraph, despite him acknowledging that the actual incompatibilities exist. As I was personally bitten by this &#34;JSON is YAML&#34; lie, I refused and said I will continue to educate people about these issues, so others do not run into the same problem again and again. After this, Brian called me a (quote)<i>complete and worthless idiot</i>(unquote).</p>
+
+<p>In my opinion, instead of pressuring and insulting people who actually clarify issues with YAML and the wrong statements of some of its proponents, I would kindly suggest reading the JSON spec (which is not that difficult or long) and finally make YAML compatible to it, and educating users about the changes, instead of spreading lies about the real compatibility for many <i>years</i> and trying to silence people who point out that it isn&#39;t true.</p>
+
+<p>Addendum/2009: the YAML 1.2 spec is still incompatible with JSON, even though the incompatibilities have been documented (and are known to Brian) for many years and the spec makes explicit claims that YAML is a superset of JSON. It would be so easy to fix, but apparently, bullying people and corrupting userdata is so much easier.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SPEED"
+>SPEED</a></h2>
+
+<p>It seems that JSON::XS is surprisingly fast, as shown in the following tables. They have been generated with the help of the <code>eg/bench</code> program in the JSON::XS distribution, to make it easy to compare on your own system.</p>
+
+<p>First comes a comparison between various modules using a very short single-line JSON string (also available at <a href="http://dist.schmorp.de/misc/json/short.json" class="podlinkurl"
+>http://dist.schmorp.de/misc/json/short.json</a>).</p>
+
+<pre class="sh_perl">   {&#34;method&#34;: &#34;handleMessage&#34;, &#34;params&#34;: [&#34;user1&#34;,
+   &#34;we were just talking&#34;], &#34;id&#34;: null, &#34;array&#34;:[1,11,234,-5,1e5,1e7,
+   1,  0]}</pre>
+
+<p>It shows the number of encodes/decodes per second (JSON::XS uses the functional interface, while JSON::XS/2 uses the OO interface with pretty-printing and hashkey sorting enabled, JSON::XS/3 enables shrink. JSON::DWIW/DS uses the deserialise function, while JSON::DWIW::FJ uses the from_json method). Higher is better:</p>
+
+<pre class="sh_perl">   module        |     encode |     decode |
+   --------------|------------|------------|
+   JSON::DWIW/DS |  86302.551 | 102300.098 |
+   JSON::DWIW/FJ |  86302.551 |  75983.768 |
+   JSON::PP      |  15827.562 |   6638.658 |
+   JSON::Syck    |  63358.066 |  47662.545 |
+   JSON::XS      | 511500.488 | 511500.488 |
+   JSON::XS/2    | 291271.111 | 388361.481 |
+   JSON::XS/3    | 361577.931 | 361577.931 |
+   Storable      |  66788.280 | 265462.278 |
+   --------------+------------+------------+</pre>
+
+<p>That is, JSON::XS is almost six times faster than JSON::DWIW on encoding, about five times faster on decoding, and over thirty to seventy times faster than JSON&#39;s pure perl implementation. It also compares favourably to Storable for small amounts of data.</p>
+
+<p>Using a longer test string (roughly 18KB, generated from Yahoo! Locals search API (<a href="http://dist.schmorp.de/misc/json/long.json" class="podlinkurl"
+>http://dist.schmorp.de/misc/json/long.json</a>).</p>
+
+<pre class="sh_perl">   module        |     encode |     decode |
+   --------------|------------|------------|
+   JSON::DWIW/DS |   1647.927 |   2673.916 |
+   JSON::DWIW/FJ |   1630.249 |   2596.128 |
+   JSON::PP      |    400.640 |     62.311 |
+   JSON::Syck    |   1481.040 |   1524.869 |
+   JSON::XS      |  20661.596 |   9541.183 |
+   JSON::XS/2    |  10683.403 |   9416.938 |
+   JSON::XS/3    |  20661.596 |   9400.054 |
+   Storable      |  19765.806 |  10000.725 |
+   --------------+------------+------------+</pre>
+
+<p>Again, JSON::XS leads by far (except for Storable which non-surprisingly decodes a bit faster).</p>
+
+<p>On large strings containing lots of high Unicode characters, some modules (such as JSON::PC) seem to decode faster than JSON::XS, but the result will be broken due to missing (or wrong) Unicode handling. Others refuse to decode or encode properly, so it was impossible to prepare a fair comparison table for that case.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SECURITY_CONSIDERATIONS"
+>SECURITY CONSIDERATIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>When you are using JSON in a protocol, talking to untrusted potentially hostile creatures requires relatively few measures.</p>
+
+<p>First of all, your JSON decoder should be secure, that is, should not have any buffer overflows. Obviously, this module should ensure that and I am trying hard on making that true, but you never know.</p>
+
+<p>Second, you need to avoid resource-starving attacks. That means you should limit the size of JSON texts you accept, or make sure then when your resources run out, that&#39;s just fine (e.g. by using a separate process that can crash safely). The size of a JSON text in octets or characters is usually a good indication of the size of the resources required to decode it into a Perl structure. While JSON::XS can check the size of the JSON text, it might be too late when you already have it in memory, so you might want to check the size before you accept the string.</p>
+
+<p>Third, JSON::XS recurses using the C stack when decoding objects and arrays. The C stack is a limited resource: for instance, on my amd64 machine with 8MB of stack size I can decode around 180k nested arrays but only 14k nested JSON objects (due to perl itself recursing deeply on croak to free the temporary). If that is exceeded, the program crashes. To be conservative, the default nesting limit is set to 512. If your process has a smaller stack, you should adjust this setting accordingly with the <code>max_depth</code> method.</p>
+
+<p>Something else could bomb you, too, that I forgot to think of. In that case, you get to keep the pieces. I am always open for hints, though...</p>
+
+<p>Also keep in mind that JSON::XS might leak contents of your Perl data structures in its error messages, so when you serialise sensitive information you might want to make sure that exceptions thrown by JSON::XS will not end up in front of untrusted eyes.</p>
+
+<p>If you are using JSON::XS to return packets to consumption by JavaScript scripts in a browser you should have a look at <a href="http://blog.archive.jpsykes.com/47/practical-csrf-and-json-security/" class="podlinkurl"
+>http://blog.archive.jpsykes.com/47/practical-csrf-and-json-security/</a> to see whether you are vulnerable to some common attack vectors (which really are browser design bugs, but it is still you who will have to deal with it, as major browser developers care only for features, not about getting security right).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="THREADS"
+>THREADS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module is <i>not</i> guaranteed to be thread safe and there are no plans to change this until Perl gets thread support (as opposed to the horribly slow so-called &#34;threads&#34; which are simply slow and bloated process simulations - use fork, it&#39;s <i>much</i> faster, cheaper, better).</p>
+
+<p>(It might actually work, but you have been warned).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>While the goal of this module is to be correct, that unfortunately does not mean it&#39;s bug-free, only that I think its design is bug-free. If you keep reporting bugs they will be fixed swiftly, though.</p>
+
+<p>Please refrain from using rt.cpan.org or any other bug reporting service. I put the contact address into my modules for a reason.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The <em>json_xs</em> command line utility for quick experiments.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> Marc Lehmann &#60;schmorp@schmorp.de&#62;
+ <a href="http://home.schmorp.de/" class="podlinkurl"
+>http://home.schmorp.de/</a></pre>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78255 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 11:20:40 2012 GMT (0.842319965362549) @cpansearch1 -->
+ </body>
+</html>

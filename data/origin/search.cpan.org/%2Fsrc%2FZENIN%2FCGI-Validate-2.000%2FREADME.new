@@ -1,0 +1,28 @@
+    Basicly a blending of the CGI and Getopt::Long modules, and requires the
+    CGI module to function.
+
+    The basic concept of this module is to combine the best features of the
+    CGI and Getopt::Long modules. The CGI module is great for parsing,
+    building, and rebuilding forms, however it lacks any real error checking
+    abilitys such as misspelled form input names, the data types received
+    from them, missing values, etc. This however, is something that the
+    Getopt::Long module is vary good at doing. So, basicly this module is a
+    layer that collects the data using the CGI module and passes it to
+    routines to do type validation and name consistency checks all in one
+    clean try/catch style block.
+
+    The syntax of GetFormData() is mostly the same as the GetOptions() of
+    Getopt::Long, with a few exceptions (namely, the handling of exceptions)
+    . See the VALUE TYPES section for detail of the available types, and the
+    EXCEPTIONS section for exception handling options. If given without a
+    type, fields are assumed to be type ":s" (optional string), which is
+    normally correct.
+
+    If successful, GetFormData() returns the CGI object that it used to
+    parse the data incase you want to use it for anything else, and undef
+    otherwise.
+
+    If you only want to do value type and name validation, use
+    CheckFormData() instead with a field=type list. -See the SYNOPSIS for an
+    example.
+

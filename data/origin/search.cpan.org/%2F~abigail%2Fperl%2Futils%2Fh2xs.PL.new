@@ -1,0 +1,714 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>h2xs - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.15.9",3]);
+    _gaq.push(["_setCustomVar",4,"Document","h2xs",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ABIGAIL",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?h2xs">permalink</a></div>
+  <a href="/~abigail/">Abigail</a> &gt;
+  <a href="/~abigail/perl/">perl</a> &gt;
+  h2xs
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/bd4dd8327080d951d933fbd675e956d1?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/A/AB/ABIGAIL/perl-5.15.9.tar.gz">perl-5.15.9.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ABIGAIL/perl-5.15.9/utils/h2xs.PL">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/ABIGAIL/perl-5.15.9/utils/h2xs.PL">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#OPTIONS'>OPTIONS</a>
+  <li class='indexItem indexItem1'><a href='#EXAMPLES'>EXAMPLES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Extension_based_on_.h_and_.c_files'>Extension based on .h and .c files</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#ENVIRONMENT'>ENVIRONMENT</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#DIAGNOSTICS'>DIAGNOSTICS</a>
+  <li class='indexItem indexItem1'><a href='#LIMITATIONS_of_-x'>LIMITATIONS of -x</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>h2xs - convert .h C header files to Perl extensions</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><b>h2xs</b> [<b>OPTIONS</b> ...] [headerfile ...
+[extra_libraries]]</p>
+
+<p><b>h2xs</b> <b>-h</b>|<b>-?</b>|<b>--help</b></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><i>h2xs</i> builds a Perl extension from C header files.
+The extension will include functions which can be used to retrieve the value of any #define statement which was in the C header files.</p>
+
+<p>The <i>module_name</i> will be used for the name of the extension.
+If module_name is not supplied then the name of the first header file will be used,
+with the first character capitalized.</p>
+
+<p>If the extension might need extra libraries,
+they should be included here.
+The extension Makefile.PL will take care of checking whether the libraries actually exist and how they should be loaded.
+The extra libraries should be specified in the form -lm -lposix,
+etc,
+just as on the cc command line.
+By default,
+the Makefile.PL will search through the library path determined by Configure.
+That path can be augmented by including arguments of the form <b>-L/another/library/path</b> in the extra-libraries argument.</p>
+
+<p>In spite of its name,
+<i>h2xs</i> may also be used to create a skeleton pure Perl module.
+See the <b>-X</b> option.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OPTIONS"
+>OPTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='A'></a><a name="-A,_--omit-autoload"
+><b>-A</b>,
+<b>--omit-autoload</b></a></dt>
+
+<dd>
+<p>Omit all autoload facilities.
+This is the same as <b>-c</b> but also removes the <code>use&#160;AutoLoader</code> statement from the .pm file.</p>
+
+<dt><a name='B'></a><a name="-B,_--beta-version"
+><b>-B</b>,
+<b>--beta-version</b></a></dt>
+
+<dd>
+<p>Use an alpha/beta style version number.
+Causes version number to be &#34;0.00_01&#34; unless <b>-v</b> is specified.</p>
+
+<dt><a name='C'></a><a name="-C,_--omit-changes"
+><b>-C</b>,
+<b>--omit-changes</b></a></dt>
+
+<dd>
+<p>Omits creation of the <em>Changes</em> file,
+and adds a HISTORY section to the POD template.</p>
+
+<dt><a name='F'></a><a name="-F,_--cpp-flags=addflags"
+><b>-F</b>,
+<b>--cpp-flags</b>=<i>addflags</i></a></dt>
+
+<dd>
+<p>Additional flags to specify to C preprocessor when scanning header for function declarations.
+Writes these options in the generated <em>Makefile.PL</em> too.</p>
+
+<dt><a name='M'></a><a name="-M,_--func-mask=regular_expression"
+><b>-M</b>,
+<b>--func-mask</b>=<i>regular expression</i></a></dt>
+
+<dd>
+<p>selects functions/macros to process.</p>
+
+<dt><a name='O'></a><a name="-O,_--overwrite-ok"
+><b>-O</b>,
+<b>--overwrite-ok</b></a></dt>
+
+<dd>
+<p>Allows a pre-existing extension directory to be overwritten.</p>
+
+<dt><a name='P'></a><a name="-P,_--omit-pod"
+><b>-P</b>,
+<b>--omit-pod</b></a></dt>
+
+<dd>
+<p>Omit the autogenerated stub POD section.</p>
+
+<dt><a name='X'></a><a name="-X,_--omit-XS"
+><b>-X</b>,
+<b>--omit-XS</b></a></dt>
+
+<dd>
+<p>Omit the XS portion.
+Used to generate a skeleton pure Perl module.
+<code>-c</code> and <code>-f</code> are implicitly enabled.</p>
+
+<dt><a name='a'></a><a name="-a,_--gen-accessors"
+><b>-a</b>,
+<b>--gen-accessors</b></a></dt>
+
+<dd>
+<p>Generate an accessor method for each element of structs and unions.
+The generated methods are named after the element name; will return the current value of the element if called without additional arguments; and will set the element to the supplied value (and return the new value) if called with an additional argument.
+Embedded structures and unions are returned as a pointer rather than the complete structure,
+to facilitate chained calls.</p>
+
+<p>These methods all apply to the Ptr type for the structure; additionally two methods are constructed for the structure type itself,
+<code>_to_ptr</code> which returns a Ptr type pointing to the same structure,
+and a <code>new</code> method to construct and return a new structure,
+initialised to zeroes.</p>
+
+<dt><a name='b'></a><a name="-b,_--compat-version=version"
+><b>-b</b>,
+<b>--compat-version</b>=<i>version</i></a></dt>
+
+<dd>
+<p>Generates a .pm file which is backwards compatible with the specified perl version.</p>
+
+<p>For versions &#60; 5.6.0,
+the changes are.
+- no use of &#39;our&#39; (uses &#39;use vars&#39; instead) - no &#39;use warnings&#39;</p>
+
+<p>Specifying a compatibility version higher than the version of perl you are using to run h2xs will have no effect.
+If unspecified h2xs will default to compatibility with the version of perl you are using to run h2xs.</p>
+
+<dt><a name='c'></a><a name="-c,_--omit-constant"
+><b>-c</b>,
+<b>--omit-constant</b></a></dt>
+
+<dd>
+<p>Omit <code>constant()</code> from the .xs file and corresponding specialised <code>AUTOLOAD</code> from the .pm file.</p>
+
+<dt><a name='d'></a><a name="-d,_--debugging"
+><b>-d</b>,
+<b>--debugging</b></a></dt>
+
+<dd>
+<p>Turn on debugging messages.</p>
+
+<dt><a name='e'></a><a name="-e,_--omit-enums=[regular_expression]"
+><b>-e</b>,
+<b>--omit-enums</b>=[<i>regular expression</i>]</a></dt>
+
+<dd>
+<p>If <i>regular expression</i> is not given,
+skip all constants that are defined in a C enumeration.
+Otherwise skip only those constants that are defined in an enum whose name matches <i>regular expression</i>.</p>
+
+<p>Since <i>regular expression</i> is optional,
+make sure that this switch is followed by at least one other switch if you omit <i>regular expression</i> and have some pending arguments such as header-file names.
+This is ok:</p>
+
+<pre class="sh_perl">    h2xs -e -n Module::Foo foo.h</pre>
+
+<p>This is not ok:</p>
+
+<pre class="sh_perl">    h2xs -n Module::Foo -e foo.h</pre>
+
+<p>In the latter, foo.h is taken as <i>regular expression</i>.</p>
+
+<dt><a name='f'></a><a name="-f,_--force"
+><b>-f</b>, <b>--force</b></a></dt>
+
+<dd>
+<p>Allows an extension to be created for a header even if that header is not found in standard include directories.</p>
+
+<dt><a name='g'></a><a name="-g,_--global"
+><b>-g</b>, <b>--global</b></a></dt>
+
+<dd>
+<p>Include code for safely storing static data in the .xs file. Extensions that do no make use of static data can ignore this option.</p>
+
+<dt><a name='h'></a><a name="-h,_-?,_--help"
+><b>-h</b>, <b>-?</b>, <b>--help</b></a></dt>
+
+<dd>
+<p>Print the usage, help and version for this h2xs and exit.</p>
+
+<dt><a name='k'></a><a name="-k,_--omit-const-func"
+><b>-k</b>, <b>--omit-const-func</b></a></dt>
+
+<dd>
+<p>For function arguments declared as <code>const</code>, omit the const attribute in the generated XS code.</p>
+
+<dt><a name='m'></a><a name="-m,_--gen-tied-var"
+><b>-m</b>, <b>--gen-tied-var</b></a></dt>
+
+<dd>
+<p><b>Experimental</b>: for each variable declared in the header file(s), declare a perl variable of the same name magically tied to the C variable.</p>
+
+<dt><a name='n'></a><a name="-n,_--name=module_name"
+><b>-n</b>, <b>--name</b>=<i>module_name</i></a></dt>
+
+<dd>
+<p>Specifies a name to be used for the extension, e.g., -n&#160;RPC::DCE</p>
+
+<dt><a name='o'></a><a name="-o,_--opaque-re=regular_expression"
+><b>-o</b>, <b>--opaque-re</b>=<i>regular expression</i></a></dt>
+
+<dd>
+<p>Use &#34;opaque&#34; data type for the C types matched by the regular expression, even if these types are <code>typedef</code>-equivalent to types from typemaps. Should not be used without <b>-x</b>.</p>
+
+<p>This may be useful since, say, types which are <code>typedef</code>-equivalent to integers may represent OS-related handles, and one may want to work with these handles in OO-way, as in <code>$handle-&#62;do_something()</code>. Use <code>-o .</code> if you want to handle all the <code>typedef</code>ed types as opaque types.</p>
+
+<p>The type-to-match is whitewashed (except for commas, which have no whitespace before them, and multiple <code>*</code> which have no whitespace between them).</p>
+
+<dt><a name='p'></a><a name="-p,_--remove-prefix=prefix"
+><b>-p</b>, <b>--remove-prefix</b>=<i>prefix</i></a></dt>
+
+<dd>
+<p>Specify a prefix which should be removed from the Perl function names, e.g., -p&#160;sec_rgy_ This sets up the XS <b>PREFIX</b> keyword and removes the prefix from functions that are autoloaded via the <code>constant()</code> mechanism.</p>
+
+<dt><a name='s'></a><a name="-s,_--const-subs=sub1,sub2"
+><b>-s</b>, <b>--const-subs</b>=<i>sub1,sub2</i></a></dt>
+
+<dd>
+<p>Create a perl subroutine for the specified macros rather than autoload with the constant() subroutine. These macros are assumed to have a return type of <b>char *</b>, e.g., -s&#160;sec_rgy_wildcard_name,sec_rgy_wildcard_sid.</p>
+
+<dt><a name='t'></a><a name="-t,_--default-type=type"
+><b>-t</b>, <b>--default-type</b>=<i>type</i></a></dt>
+
+<dd>
+<p>Specify the internal type that the constant() mechanism uses for macros. The default is IV (signed integer). Currently all macros found during the header scanning process will be assumed to have this type. Future versions of <code>h2xs</code> may gain the ability to make educated guesses.</p>
+
+<dt><a name='use'></a><a name="--use-new-tests"
+><b>--use-new-tests</b></a></dt>
+
+<dd>
+<p>When <b>--compat-version</b> (<b>-b</b>) is present the generated tests will use <code>Test::More</code> rather than <code>Test</code> which is the default for versions before 5.6.2. <code>Test::More</code> will be added to PREREQ_PM in the generated <code>Makefile.PL</code>.</p>
+
+<dt><a name='use'></a><a name="--use-old-tests"
+><b>--use-old-tests</b></a></dt>
+
+<dd>
+<p>Will force the generation of test code that uses the older <code>Test</code> module.</p>
+
+<dt><a name='skip'></a><a name="--skip-exporter"
+><b>--skip-exporter</b></a></dt>
+
+<dd>
+<p>Do not use <code>Exporter</code> and/or export any symbol.</p>
+
+<dt><a name='skip'></a><a name="--skip-ppport"
+><b>--skip-ppport</b></a></dt>
+
+<dd>
+<p>Do not use <code>Devel::PPPort</code>: no portability to older version.</p>
+
+<dt><a name='skip'></a><a name="--skip-autoloader"
+><b>--skip-autoloader</b></a></dt>
+
+<dd>
+<p>Do not use the module <code>AutoLoader</code>; but keep the constant() function and <code>sub AUTOLOAD</code> for constants.</p>
+
+<dt><a name='skip'></a><a name="--skip-strict"
+><b>--skip-strict</b></a></dt>
+
+<dd>
+<p>Do not use the pragma <code>strict</code>.</p>
+
+<dt><a name='skip'></a><a name="--skip-warnings"
+><b>--skip-warnings</b></a></dt>
+
+<dd>
+<p>Do not use the pragma <code>warnings</code>.</p>
+
+<dt><a name='v'></a><a name="-v,_--version=version"
+><b>-v</b>, <b>--version</b>=<i>version</i></a></dt>
+
+<dd>
+<p>Specify a version number for this extension. This version number is added to the templates. The default is 0.01, or 0.00_01 if <code>-B</code> is specified. The version specified should be numeric.</p>
+
+<dt><a name='x'></a><a name="-x,_--autogen-xsubs"
+><b>-x</b>, <b>--autogen-xsubs</b></a></dt>
+
+<dd>
+<p>Automatically generate XSUBs basing on function declarations in the header file. The package <code>C::Scan</code> should be installed. If this option is specified, the name of the header file may look like <code>NAME1,NAME2</code>. In this case NAME1 is used instead of the specified string, but XSUBs are emitted only for the declarations included from file NAME2.</p>
+
+<p>Note that some types of arguments/return-values for functions may result in XSUB-declarations/typemap-entries which need hand-editing. Such may be objects which cannot be converted from/to a pointer (like <code>long long</code>), pointers to functions, or arrays. See also the section on <a href="#LIMITATIONS_of_-x" class="podlinkpod"
+>&#34;LIMITATIONS of <b>-x</b>&#34;</a>.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    # Default behavior, extension is Rusers
+    h2xs rpcsvc/rusers
+
+    # Same, but extension is RUSERS
+    h2xs -n RUSERS rpcsvc/rusers
+
+    # Extension is rpcsvc::rusers. Still finds &#60;rpcsvc/rusers.h&#62;
+    h2xs rpcsvc::rusers
+
+    # Extension is ONC::RPC.  Still finds &#60;rpcsvc/rusers.h&#62;
+    h2xs -n ONC::RPC rpcsvc/rusers
+
+    # Without constant() or AUTOLOAD
+    h2xs -c rpcsvc/rusers
+
+    # Creates templates for an extension named RPC
+    h2xs -cfn RPC
+
+    # Extension is ONC::RPC.
+    h2xs -cfn ONC::RPC
+
+    # Extension is a pure Perl module with no XS code.
+    h2xs -X My::Module
+
+    # Extension is Lib::Foo which works at least with Perl5.005_03.
+    # Constants are created for all #defines and enums h2xs can find
+    # in foo.h.
+    h2xs -b 5.5.3 -n Lib::Foo foo.h
+
+    # Extension is Lib::Foo which works at least with Perl5.005_03.
+    # Constants are created for all #defines but only for enums
+    # whose names do not start with &#39;bar_&#39;.
+    h2xs -b 5.5.3 -e &#39;^bar_&#39; -n Lib::Foo foo.h
+
+    # Makefile.PL will look for library -lrpc in
+    # additional directory /opt/net/lib
+    h2xs rpcsvc/rusers -L/opt/net/lib -lrpc
+
+    # Extension is DCE::rgynbase
+    # prefix &#34;sec_rgy_&#34; is dropped from perl function names
+    h2xs -n DCE::rgynbase -p sec_rgy_ dce/rgynbase
+
+    # Extension is DCE::rgynbase
+    # prefix &#34;sec_rgy_&#34; is dropped from perl function names
+    # subroutines are created for sec_rgy_wildcard_name and
+    # sec_rgy_wildcard_sid
+    h2xs -n DCE::rgynbase -p sec_rgy_ \
+    -s sec_rgy_wildcard_name,sec_rgy_wildcard_sid dce/rgynbase
+
+    # Make XS without defines in perl.h, but with function declarations
+    # visible from perl.h. Name of the extension is perl1.
+    # When scanning perl.h, define -DEXT=extern -DdEXT= -DINIT(x)=
+    # Extra backslashes below because the string is passed to shell.
+    # Note that a directory with perl header files would
+    #  be added automatically to include path.
+    h2xs -xAn perl1 -F &#34;-DEXT=extern -DdEXT= -DINIT\(x\)=&#34; perl.h
+
+    # Same with function declaration in proto.h as visible from perl.h.
+    h2xs -xAn perl2 perl.h,proto.h
+
+    # Same but select only functions which match /^av_/
+    h2xs -M &#39;^av_&#39; -xAn perl2 perl.h,proto.h
+
+    # Same but treat SV* etc as &#34;opaque&#34; types
+    h2xs -o &#39;^[S]V \*$&#39; -M &#39;^av_&#39; -xAn perl2 perl.h,proto.h</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Extension_based_on_.h_and_.c_files"
+>Extension based on <em>.h</em> and <em>.c</em> files</a></h2>
+
+<p>Suppose that you have some C files implementing some functionality, and the corresponding header files. How to create an extension which makes this functionality accessible in Perl? The example below assumes that the header files are <em>interface_simple.h</em> and <i>interface_hairy.h</i>, and you want the perl module be named as <code>Ext::Ension</code>. If you need some preprocessor directives and/or linking with external libraries, see the flags <code>-F</code>, <code>-L</code> and <code>-l</code> in <a href="#OPTIONS" class="podlinkpod"
+>&#34;OPTIONS&#34;</a>.</p>
+
+<dl>
+<dt><a name='Find'></a><a name="Find_the_directory_name"
+>Find the directory name</a></dt>
+
+<dd>
+<p>Start with a dummy run of h2xs:</p>
+
+<pre class="sh_perl">  h2xs -Afn Ext::Ension</pre>
+
+<p>The only purpose of this step is to create the needed directories, and let you know the names of these directories. From the output you can see that the directory for the extension is <em>Ext/Ension</em>.</p>
+
+<dt><a name='Copy'></a><a name="Copy_C_files"
+>Copy C files</a></dt>
+
+<dd>
+<p>Copy your header files and C files to this directory <em>Ext/Ension</em>.</p>
+
+<dt><a name='Create'></a><a name="Create_the_extension"
+>Create the extension</a></dt>
+
+<dd>
+<p>Run h2xs, overwriting older autogenerated files:</p>
+
+<pre class="sh_perl">  h2xs -Oxan Ext::Ension interface_simple.h interface_hairy.h</pre>
+
+<p>h2xs looks for header files <i>after</i> changing to the extension directory, so it will find your header files OK.</p>
+
+<dt><a name='Archive'></a><a name="Archive_and_test"
+>Archive and test</a></dt>
+
+<dd>
+<p>As usual, run</p>
+
+<pre class="sh_perl">  cd Ext/Ension
+  perl Makefile.PL
+  make dist
+  make
+  make test</pre>
+
+<dt><a name="Hints"
+>Hints</a></dt>
+
+<dd>
+<p>It is important to do <code>make dist</code> as early as possible. This way you can easily merge(1) your changes to autogenerated files if you decide to edit your <code>.h</code> files and rerun h2xs.</p>
+
+<p>Do not forget to edit the documentation in the generated <em>.pm</em> file.</p>
+
+<p>Consider the autogenerated files as skeletons only, you may invent better interfaces than what h2xs could guess.</p>
+
+<p>Consider this section as a guideline only, some other options of h2xs may better suit your needs.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ENVIRONMENT"
+>ENVIRONMENT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>No environment variables are used.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Larry Wall and others</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~abigail/perl-5.15.9/pod/perl.pod" class="podlinkpod"
+>perl</a>, <a href="/perldoc?perlxstut" class="podlinkpod"
+>perlxstut</a>, <a href="/perldoc?ExtUtils%3A%3AMakeMaker" class="podlinkpod"
+>ExtUtils::MakeMaker</a>, and <a href="/perldoc?AutoLoader" class="podlinkpod"
+>AutoLoader</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIAGNOSTICS"
+>DIAGNOSTICS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The usual warnings if it cannot read or write the files involved.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LIMITATIONS_of_-x"
+>LIMITATIONS of <b>-x</b> <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><em>h2xs</em> would not distinguish whether an argument to a C function which is of the form, say, <code>int *</code>, is an input, output, or input/output parameter. In particular, argument declarations of the form</p>
+
+<pre class="sh_perl">    int
+    foo(n)
+        int *n</pre>
+
+<p>should be better rewritten as</p>
+
+<pre class="sh_perl">    int
+    foo(n)
+        int &#38;n</pre>
+
+<p>if <code>n</code> is an input parameter.</p>
+
+<p>Additionally, <em>h2xs</em> has no facilities to intuit that a function</p>
+
+<pre class="sh_perl">   int
+   foo(addr,l)
+        char *addr
+        int   l</pre>
+
+<p>takes a pair of address and length of data at this address, so it is better to rewrite this function as</p>
+
+<pre class="sh_perl">    int
+    foo(sv)
+            SV *addr
+        PREINIT:
+            STRLEN len;
+            char *s;
+        CODE:
+            s = SvPV(sv,len);
+            RETVAL = foo(s, len);
+        OUTPUT:
+            RETVAL</pre>
+
+<p>or alternately</p>
+
+<pre class="sh_perl">    static int
+    my_foo(SV *sv)
+    {
+        STRLEN len;
+        char *s = SvPV(sv,len);
+
+        return foo(s, len);
+    }
+
+    MODULE = foo        PACKAGE = foo   PREFIX = my_
+
+    int
+    foo(sv)
+        SV *sv</pre>
+
+<p>See <a href="/perldoc?perlxs" class="podlinkpod"
+>perlxs</a> and <a href="/perldoc?perlxstut" class="podlinkpod"
+>perlxstut</a> for additional details.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">77959 Uploads, 24665 Distributions
+105773 Modules, 9632 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Wed Apr 18 18:41:58 2012 GMT (0.176785945892334) @cpansearch1 -->
+ </body>
+</html>

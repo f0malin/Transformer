@@ -1,0 +1,492 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>File::Find - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",3,"Module","File::Find",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?File::Find">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  File::Find
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=File%3A%3AFind;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/lib/File/Find.pm">Annotate this POD
+(5)
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?File%3A%3AFind%3A%3ARule">File::Find::Rule</a><br>
+<a href="/perldoc?File%3A%3ACopy">File::Copy</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?File%3A%3ASpec">File::Spec</a><br>
+<a href="/perldoc?File%3A%3ABasename">File::Basename</a><br>
+<a href="/perldoc?File%3A%3APath">File::Path</a><br>
+<a href="/perldoc?File%3A%3Astat">File::stat</a><br>
+<a href="/perldoc?Archive%3A%3ATar">Archive::Tar</a><br>
+<a href="/perldoc?Digest%3A%3AMD5">Digest::MD5</a><br>
+<a href="/perldoc?IO%3A%3ASocket">IO::Socket</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=File%3A%3AFind">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+
+</div>
+</div>
+  Module Version:  1.19 &nbsp;
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/lib/File/Find.pm">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~abigail/perl/lib/File/Find.pm">perl-5.15.9</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#%options'>%options</a>
+    <li class='indexItem indexItem2'><a href='#The_wanted_function'>The wanted function</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#WARNINGS'>WARNINGS</a>
+  <li class='indexItem indexItem1'><a href='#CAVEAT'>CAVEAT</a>
+  <li class='indexItem indexItem1'><a href='#BUGS_AND_CAVEATS'>BUGS AND CAVEATS</a>
+  <li class='indexItem indexItem1'><a href='#HISTORY'>HISTORY</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>File::Find - Traverse a directory tree.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use File::Find;
+    find(\&#38;wanted, @directories_to_search);
+    sub wanted { ... }
+
+    use File::Find;
+    finddepth(\&#38;wanted, @directories_to_search);
+    sub wanted { ... }
+
+    use File::Find;
+    find({ wanted =&#62; \&#38;process, follow =&#62; 1 }, &#39;.&#39;);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>These are functions for searching through directory trees doing work on each file found similar to the Unix <i>find</i> command. File::Find exports two functions, <code>find</code> and <code>finddepth</code>. They work similarly but have subtle differences.</p>
+
+<dl>
+<dt><a name="find"
+><b>find</b></a></dt>
+
+<dd>
+<pre class="sh_perl">  find(\&#38;wanted,  @directories);
+  find(\%options, @directories);</pre>
+
+<p><code>find()</code> does a depth-first search over the given <code>@directories</code> in the order they are given. For each file or directory found, it calls the <code>&#38;wanted</code> subroutine. (See below for details on how to use the <code>&#38;wanted</code> function). Additionally, for each directory found, it will <code>chdir()</code> into that directory and continue the search, invoking the <code>&#38;wanted</code> function on each file or subdirectory in the directory.</p>
+
+<dt><a name="finddepth"
+><b>finddepth</b></a></dt>
+
+<dd>
+<pre class="sh_perl">  finddepth(\&#38;wanted,  @directories);
+  finddepth(\%options, @directories);</pre>
+
+<p><code>finddepth()</code> works just like <code>find()</code> except that it invokes the <code>&#38;wanted</code> function for a directory <i>after</i> invoking it for the directory&#39;s contents. It does a postorder traversal instead of a preorder traversal, working from the bottom of the directory tree up where <code>find()</code> works from the top of the tree down.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="%options"
+>%options</a></h2>
+
+<p>The first argument to <code>find()</code> is either a code reference to your <code>&#38;wanted</code> function, or a hash reference describing the operations to be performed for each file. The code reference is described in <a href="#The_wanted_function" class="podlinkpod"
+>&#34;The wanted function&#34;</a> below.</p>
+
+<p>Here are the possible keys for the hash:</p>
+
+<dl>
+<dt><a name="wanted"
+><code>wanted</code></a></dt>
+
+<dd>
+<p>The value should be a code reference. This code reference is described in <a href="#The_wanted_function" class="podlinkpod"
+>&#34;The wanted function&#34;</a> below. The <code>&#38;wanted</code> subroutine is mandatory.</p>
+
+<dt><a name="bydepth"
+><code>bydepth</code></a></dt>
+
+<dd>
+<p>Reports the name of a directory only AFTER all its entries have been reported. Entry point <code>finddepth()</code> is a shortcut for specifying <code>{ bydepth =&#62; 1 }</code> in the first argument of <code>find()</code>.</p>
+
+<dt><a name="preprocess"
+><code>preprocess</code></a></dt>
+
+<dd>
+<p>The value should be a code reference. This code reference is used to preprocess the current directory. The name of the currently processed directory is in <code>$File::Find::dir</code>. Your preprocessing function is called after <code>readdir()</code>, but before the loop that calls the <code>wanted()</code> function. It is called with a list of strings (actually file/directory names) and is expected to return a list of strings. The code can be used to sort the file/directory names alphabetically, numerically, or to filter out directory entries based on their name alone. When <i>follow</i> or <i>follow_fast</i> are in effect, <code>preprocess</code> is a no-op.</p>
+
+<dt><a name="postprocess"
+><code>postprocess</code></a></dt>
+
+<dd>
+<p>The value should be a code reference. It is invoked just before leaving the currently processed directory. It is called in void context with no arguments. The name of the current directory is in <code>$File::Find::dir</code>. This hook is handy for summarizing a directory, such as calculating its disk usage. When <i>follow</i> or <i>follow_fast</i> are in effect, <code>postprocess</code> is a no-op.</p>
+
+<dt><a name="follow"
+><code>follow</code></a></dt>
+
+<dd>
+<p>Causes symbolic links to be followed. Since directory trees with symbolic links (followed) may contain files more than once and may even have cycles, a hash has to be built up with an entry for each file. This might be expensive both in space and time for a large directory tree. See <i>follow_fast</i> and <i>follow_skip</i> below. If either <i>follow</i> or <i>follow_fast</i> is in effect:</p>
+
+<ul>
+<li>It is guaranteed that an <i>lstat</i> has been called before the user&#39;s <code>wanted()</code> function is called. This enables fast file checks involving _. Note that this guarantee no longer holds if <i>follow</i> or <i>follow_fast</i> are not set.</li>
+
+<li>There is a variable <code>$File::Find::fullname</code> which holds the absolute pathname of the file with all symbolic links resolved. If the link is a dangling symbolic link, then fullname will be set to <code>undef</code>.</li>
+</ul>
+
+<p>This is a no-op on Win32.</p>
+
+<dt><a name="follow_fast"
+><code>follow_fast</code></a></dt>
+
+<dd>
+<p>This is similar to <i>follow</i> except that it may report some files more than once. It does detect cycles, however. Since only symbolic links have to be hashed, this is much cheaper both in space and time. If processing a file more than once (by the user&#39;s <code>wanted()</code> function) is worse than just taking time, the option <i>follow</i> should be used.</p>
+
+<p>This is also a no-op on Win32.</p>
+
+<dt><a name="follow_skip"
+><code>follow_skip</code></a></dt>
+
+<dd>
+<p><code>follow_skip==1</code>, which is the default, causes all files which are neither directories nor symbolic links to be ignored if they are about to be processed a second time. If a directory or a symbolic link are about to be processed a second time, File::Find dies.</p>
+
+<p><code>follow_skip==0</code> causes File::Find to die if any file is about to be processed a second time.</p>
+
+<p><code>follow_skip==2</code> causes File::Find to ignore any duplicate files and directories but to proceed normally otherwise.</p>
+
+<dt><a name="dangling_symlinks"
+><code>dangling_symlinks</code></a></dt>
+
+<dd>
+<p>If true and a code reference, will be called with the symbolic link name and the directory it lives in as arguments. Otherwise, if true and warnings are on, warning &#34;symbolic_link_name is a dangling symbolic link\n&#34; will be issued. If false, the dangling symbolic link will be silently ignored.</p>
+
+<dt><a name="no_chdir"
+><code>no_chdir</code></a></dt>
+
+<dd>
+<p>Does not <code>chdir()</code> to each directory as it recurses. The <code>wanted()</code> function will need to be aware of this, of course. In this case, <code>$_</code> will be the same as <code>$File::Find::name</code>.</p>
+
+<dt><a name="untaint"
+><code>untaint</code></a></dt>
+
+<dd>
+<p>If find is used in taint-mode (-T command line switch or if EUID != UID or if EGID != GID) then internally directory names have to be untainted before they can be chdir&#39;ed to. Therefore they are checked against a regular expression <i>untaint_pattern</i>. Note that all names passed to the user&#39;s <i>wanted()</i> function are still tainted. If this option is used while not in taint-mode, <code>untaint</code> is a no-op.</p>
+
+<dt><a name="untaint_pattern"
+><code>untaint_pattern</code></a></dt>
+
+<dd>
+<p>See above. This should be set using the <code>qr</code> quoting operator. The default is set to <code>qr|^([-+@\w./]+)$|</code>. Note that the parentheses are vital.</p>
+
+<dt><a name="untaint_skip"
+><code>untaint_skip</code></a></dt>
+
+<dd>
+<p>If set, a directory which fails the <i>untaint_pattern</i> is skipped, including all its sub-directories. The default is to &#39;die&#39; in such a case.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_wanted_function"
+>The wanted function</a></h2>
+
+<p>The <code>wanted()</code> function does whatever verifications you want on each file and directory. Note that despite its name, the <code>wanted()</code> function is a generic callback function, and does <b>not</b> tell File::Find if a file is &#34;wanted&#34; or not. In fact, its return value is ignored.</p>
+
+<p>The wanted function takes no arguments but rather does its work through a collection of variables.</p>
+
+<dl>
+<dt><a name='File'></a><a name="$File::Find::dir_is_the_current_directory_name,"
+><code>$File::Find::dir</code> is the current directory name,</a></dt>
+
+<dd>
+<dt><a name='_'></a><a name="$__is_the_current_filename_within_that_directory"
+><code>$_</code> is the current filename within that directory</a></dt>
+
+<dd>
+<dt><a name='File'></a><a name="$File::Find::name_is_the_complete_pathname_to_the_file."
+><code>$File::Find::name</code> is the complete pathname to the file.</a></dt>
+</dl>
+
+<p>The above variables have all been localized and may be changed without affecting data outside of the wanted function.</p>
+
+<p>For example, when examining the file <em>/some/path/foo.ext</em> you will have:</p>
+
+<pre class="sh_perl">    $File::Find::dir  = /some/path/
+    $_                = foo.ext
+    $File::Find::name = /some/path/foo.ext</pre>
+
+<p>You are chdir()&#39;d to <code>$File::Find::dir</code> when the function is called, unless <code>no_chdir</code> was specified. Note that when changing to directories is in effect the root directory (<em>/</em>) is a somewhat special case inasmuch as the concatenation of <code>$File::Find::dir</code>, <code>&#39;/&#39;</code> and <code>$_</code> is not literally equal to <code>$File::Find::name</code>. The table below summarizes all variants:</p>
+
+<pre class="sh_perl">              $File::Find::name  $File::Find::dir  $_
+ default      /                  /                 .
+ no_chdir=&#62;0  /etc               /                 etc
+              /etc/x             /etc              x
+
+ no_chdir=&#62;1  /                  /                 /
+              /etc               /                 /etc
+              /etc/x             /etc              /etc/x</pre>
+
+<p>When <code>follow</code> or <code>follow_fast</code> are in effect, there is also a <code>$File::Find::fullname</code>. The function may set <code>$File::Find::prune</code> to prune the tree unless <code>bydepth</code> was specified. Unless <code>follow</code> or <code>follow_fast</code> is specified, for compatibility reasons (find.pl, find2perl) there are in addition the following globals available: <code>$File::Find::topdir</code>, <code>$File::Find::topdev</code>, <code>$File::Find::topino</code>, <code>$File::Find::topmode</code> and <code>$File::Find::topnlink</code>.</p>
+
+<p>This library is useful for the <code>find2perl</code> tool, which when fed,</p>
+
+<pre class="sh_perl">    find2perl / -name .nfs\* -mtime +7 \
+        -exec rm -f {} \; -o -fstype nfs -prune</pre>
+
+<p>produces something like:</p>
+
+<pre class="sh_perl">    sub wanted {
+        /^\.nfs.*\z/s &#38;&#38;
+        (($dev, $ino, $mode, $nlink, $uid, $gid) = lstat($_)) &#38;&#38;
+        int(-M _) &#62; 7 &#38;&#38;
+        unlink($_)
+        ||
+        ($nlink || (($dev, $ino, $mode, $nlink, $uid, $gid) = lstat($_))) &#38;&#38;
+        $dev &#60; 0 &#38;&#38;
+        ($File::Find::prune = 1);
+    }</pre>
+
+<p>Notice the <code>_</code> in the above <code>int(-M _)</code>: the <code>_</code> is a magical filehandle that caches the information from the preceding <code>stat()</code>, <code>lstat()</code>, or filetest.</p>
+
+<p>Here&#39;s another interesting wanted function. It will find all symbolic links that don&#39;t resolve:</p>
+
+<pre class="sh_perl">    sub wanted {
+         -l &#38;&#38; !-e &#38;&#38; print &#34;bogus link: $File::Find::name\n&#34;;
+    }</pre>
+
+<p>See also the script <code>pfind</code> on CPAN for a nice application of this module.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="WARNINGS"
+>WARNINGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you run your program with the <code>-w</code> switch, or if you use the <code>warnings</code> pragma, File::Find will report warnings for several weird situations. You can disable these warnings by putting the statement</p>
+
+<pre class="sh_perl">    no warnings &#39;File::Find&#39;;</pre>
+
+<p>in the appropriate scope. See <a href="/~flora/perl-5.14.2/pod/perllexwarn.pod" class="podlinkpod"
+>perllexwarn</a> for more info about lexical warnings.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEAT"
+>CAVEAT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='dont_use_nlink'></a><a name="$dont_use_nlink"
+>$dont_use_nlink</a></dt>
+
+<dd>
+<p>You can set the variable <code>$File::Find::dont_use_nlink</code> to 1, if you want to force File::Find to always stat directories. This was used for file systems that do not have an <code>nlink</code> count matching the number of sub-directories. Examples are ISO-9660 (CD-ROM), AFS, HPFS (OS/2 file system), FAT (DOS file system) and a couple of others.</p>
+
+<p>You shouldn&#39;t need to set this variable, since File::Find should now detect such file systems on-the-fly and switch itself to using stat. This works even for parts of your file system, like a mounted CD-ROM.</p>
+
+<p>If you do set <code>$File::Find::dont_use_nlink</code> to 1, you will notice slow-downs.</p>
+
+<dt><a name="symlinks"
+>symlinks</a></dt>
+
+<dd>
+<p>Be aware that the option to follow symbolic links can be dangerous. Depending on the structure of the directory tree (including symbolic links to directories) you might traverse a given (physical) directory more than once (only if <code>follow_fast</code> is in effect). Furthermore, deleting or changing files in a symbolically linked directory might cause very unpleasant surprises, since you delete or change files in an unknown directory.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS_AND_CAVEATS"
+>BUGS AND CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Despite the name of the <code>finddepth()</code> function, both <code>find()</code> and <code>finddepth()</code> perform a depth-first search of the directory hierarchy.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="HISTORY"
+>HISTORY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>File::Find used to produce incorrect results if called recursively. During the development of perl 5.8 this bug was fixed. The first fixed version of File::Find was 1.01.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>find, find2perl.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78272 Uploads, 24723 Distributions
+106001 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 21:38:05 2012 GMT (0.0722470283508301) @cpansearch1 -->
+ </body>
+</html>

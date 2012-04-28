@@ -1,0 +1,1823 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Mail::Sender - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Mail-Sender",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Mail-Sender-0.8.16",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Mail::Sender",3]);
+    _gaq.push(["_setCustomVar",1,"Author","JENDA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Mail::Sender">permalink</a></div>
+  <a href="/~jenda/">Jan Krynicky</a> &gt;
+  <a href="/~jenda/Mail-Sender/">Mail-Sender</a> &gt;
+  Mail::Sender
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/88521907e2c9c585bc94e35a38893dc5?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/J/JE/JENDA/Mail-Sender-0.8.16.tar.gz">Mail-Sender-0.8.16.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Mail%3A%3ASender;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~JENDA/Mail-Sender-0.8.16/Sender.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?MIME%3A%3ALite">MIME::Lite</a><br>
+<a href="/perldoc?Net%3A%3ASMTP">Net::SMTP</a><br>
+<a href="/perldoc?Mail%3A%3ASendmail">Mail::Sendmail</a><br>
+<a href="/perldoc?Mail%3A%3AMailer">Mail::Mailer</a><br>
+<a href="/perldoc?File%3A%3AFind">File::Find</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Mail%3A%3ASend">Mail::Send</a><br>
+<a href="/perldoc?HTML%3A%3ATemplate">HTML::Template</a><br>
+<a href="/perldoc?CGI%3A%3ACarp">CGI::Carp</a><br>
+<a href="/perldoc?MIME%3A%3AEntity">MIME::Entity</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Mail%3A%3ASender">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 18</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Mail-Sender">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.8.16 &nbsp;
+<span class="noprint">
+  <a href="/src/JENDA/Mail-Sender-0.8.16/Sender.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#new_Mail::Sender'>new Mail::Sender</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Parameters'>Parameters</a>
+    <li class='indexItem indexItem2'><a href='#Return_codes'>Return codes</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Open'>Open</a>
+    <li class='indexItem indexItem2'><a href='#OpenMultipart'>OpenMultipart</a>
+    <li class='indexItem indexItem2'><a href='#MailMsg'>MailMsg</a>
+    <li class='indexItem indexItem2'><a href='#MailFile'>MailFile</a>
+    <li class='indexItem indexItem2'><a href='#Send'>Send</a>
+    <li class='indexItem indexItem2'><a href='#SendLine'>SendLine</a>
+    <li class='indexItem indexItem2'><a href='#print'>print</a>
+    <li class='indexItem indexItem2'><a href='#SendEnc'>SendEnc</a>
+    <li class='indexItem indexItem2'><a href='#SendLineEnc'>SendLineEnc</a>
+    <li class='indexItem indexItem2'><a href='#SendEx'>SendEx</a>
+    <li class='indexItem indexItem2'><a href='#SendLineEx'>SendLineEx</a>
+    <li class='indexItem indexItem2'><a href='#Part'>Part</a>
+    <li class='indexItem indexItem2'><a href='#Body'>Body</a>
+    <li class='indexItem indexItem2'><a href='#SendFile'>SendFile</a>
+    <li class='indexItem indexItem2'><a href='#Attach'>Attach</a>
+    <li class='indexItem indexItem2'><a href='#EndPart'>EndPart</a>
+    <li class='indexItem indexItem2'><a href='#Close'>Close</a>
+    <li class='indexItem indexItem2'><a href='#Cancel'>Cancel</a>
+    <li class='indexItem indexItem2'><a href='#QueryAuthProtocols'>QueryAuthProtocols</a>
+    <li class='indexItem indexItem2'><a href='#GetHandle'>GetHandle</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#GuessCType'>GuessCType</a>
+    <li class='indexItem indexItem2'><a href='#ResetGMTdiff'>ResetGMTdiff</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CONFIG'>CONFIG</a>
+  <li class='indexItem indexItem1'><a href='#AUTHENTICATION'>AUTHENTICATION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Other_protocols'>Other protocols</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#EXAMPLES'>EXAMPLES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Object_creation'>Object creation</a>
+    <li class='indexItem indexItem2'><a href='#Simple_single_part_message'>Simple single part message</a>
+    <li class='indexItem indexItem2'><a href='#Using_GetHandle()'>Using GetHandle()</a>
+    <li class='indexItem indexItem2'><a href='#Multipart_message_with_attachment'>Multipart message with attachment</a>
+    <li class='indexItem indexItem2'><a href='#Using_exceptions_(no_need_to_test_return_values_after_each_function)'>Using exceptions (no need to test return values after each function)</a>
+    <li class='indexItem indexItem2'><a href='#Using_MailMsg()_shortcut_to_send_simple_messages'>Using MailMsg() shortcut to send simple messages</a>
+    <li class='indexItem indexItem2'><a href='#Using_MailMsg_and_authentication'>Using MailMsg and authentication</a>
+    <li class='indexItem indexItem2'><a href='#Using_MailFile()_shortcut_to_send_an_attachment'>Using MailFile() shortcut to send an attachment</a>
+    <li class='indexItem indexItem2'><a href='#Sending_HTML_messages'>Sending HTML messages</a>
+    <li class='indexItem indexItem2'><a href='#Sending_HTML_messages_with_inline_images'>Sending HTML messages with inline images</a>
+    <li class='indexItem indexItem2'><a href='#Sending_message_with_plaintext_and_HTML_alternatives'>Sending message with plaintext and HTML alternatives</a>
+    <li class='indexItem indexItem2'><a href='#Sending_message_with_plaintext_and_HTML_alternatives_with_inline_images'>Sending message with plaintext and HTML alternatives with inline images</a>
+    <li class='indexItem indexItem2'><a href='#Sending_a_file_that_was_just_uploaded_from_an_HTML_form'>Sending a file that was just uploaded from an HTML form</a>
+    <li class='indexItem indexItem2'><a href='#Listing_the_authentication_protocols_supported_by_the_server'>Listing the authentication protocols supported by the server</a>
+    <li class='indexItem indexItem2'><a href='#FAQ'>FAQ</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Forwarding_the_messages_created_by_Mail::Sender_removes_accents._Why?'>Forwarding the messages created by Mail::Sender removes accents. Why?</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Sometimes_there_is_an_equals_sign_at_the_end_of_an_attached_file_when_I_open_the_email_in_Outlook._What&#39;s_wrong?'>Sometimes there is an equals sign at the end of an attached file when I open the email in Outlook. What&#39;s wrong?</a>
+    <li class='indexItem indexItem2'><a href='#WARNING'>WARNING</a>
+    <li class='indexItem indexItem2'><a href='#GOTCHAS'>GOTCHAS</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Local_user_&#34;someone@somewhere.com&#34;_doesn&#39;t_exist'>Local user &#34;someone@somewhere.com&#34; doesn&#39;t exist</a>
+      <li class='indexItem indexItem3'><a href='#Mail::Sendmail_works,_Mail::Sender_doesn&#39;t'>Mail::Sendmail works, Mail::Sender doesn&#39;t</a>
+      <li class='indexItem indexItem3'><a href='#$/_and_$\'>$/ and $\</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#DISCLAIMER'>DISCLAIMER</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Mail::Sender - module for sending mails with attachments through an SMTP server</p>
+
+<p>Version 0.8.16</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> use Mail::Sender;
+ $sender = new Mail::Sender
+  {smtp =&#62; &#39;mail.yourdomain.com&#39;, from =&#62; &#39;your@address.com&#39;};
+ $sender-&#62;MailFile({to =&#62; &#39;some@address.com&#39;,
+  subject =&#62; &#39;Here is the file&#39;,
+  msg =&#62; &#34;I&#39;m sending you the list you wanted.&#34;,
+  file =&#62; &#39;filename.txt&#39;});</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Mail::Sender</code> provides an object oriented interface to sending mails. It doesn&#39;t need any outer program. It connects to a mail server directly from Perl, using Socket.</p>
+
+<p>Sends mails directly from Perl through a socket connection.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="new_Mail::Sender"
+>new Mail::Sender <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> new Mail::Sender ([from [,replyto [,to [,smtp [,subject [,headers [,boundary]]]]]]])
+ new Mail::Sender {[from =&#62; &#39;somebody@somewhere.com&#39;] , [to =&#62; &#39;else@nowhere.com&#39;] [...]}</pre>
+
+<p>Prepares a sender. This doesn&#39;t start any connection to the server. You have to use <code>$Sender-</code>Open&#62; or <code>$Sender-</code>OpenMultipart&#62; to start talking to the server.</p>
+
+<p>The parameters are used in subsequent calls to <code>$Sender-</code>Open&#62; and <code>$Sender-</code>OpenMultipart&#62;. Each such call changes the saved variables. You can set <code>smtp</code>, <code>from</code> and other options here and then use the info in all messages.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Parameters"
+>Parameters</a></h2>
+
+<dl>
+<dt><a name="from"
+>from</a></dt>
+
+<dd>
+<p><code></code>=&#62; the sender&#39;s e-mail address</p>
+
+<dt><a name="fake_from"
+>fake_from</a></dt>
+
+<dd>
+<p><code></code>=&#62; the address that will be shown in headers.</p>
+
+<p>If not specified we use the value of <code>from</code>.</p>
+
+<dt><a name="replyto"
+>replyto</a></dt>
+
+<dd>
+<p><code></code>=&#62; the reply-to address</p>
+
+<dt><a name="to"
+>to</a></dt>
+
+<dd>
+<p><code></code>=&#62; the recipient&#39;s address(es)</p>
+
+<p>This parameter may be either a comma separated list of email addresses or a reference to a list of addresses.</p>
+
+<dt><a name="fake_to"
+>fake_to</a></dt>
+
+<dd>
+<p><code></code>=&#62; the recipient&#39;s address that will be shown in headers. If not specified we use the value of &#34;to&#34;.</p>
+
+<p>If the list of addresses you want to send your message to is long or if you do not want the recipients to see each other&#39;s address set the <code>fake_to</code> parameter to some informative, yet bogus, address or to the address of your mailing/distribution list.</p>
+
+<dt><a name="cc"
+>cc</a></dt>
+
+<dd>
+<p><code></code>=&#62; address(es) to send a copy (CC:) to</p>
+
+<dt><a name="fake_cc"
+>fake_cc</a></dt>
+
+<dd>
+<p><code></code>=&#62; the address that will be shown in headers.</p>
+
+<p>If not specified we use the value of &#34;cc&#34;.</p>
+
+<dt><a name="bcc"
+>bcc</a></dt>
+
+<dd>
+<p><code></code>=&#62; address(es) to send a copy (BCC: or blind carbon copy). these addresses will not be visible in the mail!</p>
+
+<dt><a name="smtp"
+>smtp</a></dt>
+
+<dd>
+<p><code></code>=&#62; the IP or domain address of your SMTP (mail) server</p>
+
+<p>This is the name of your LOCAL mail server, do NOT try to contact directly the adressee&#39;s mailserver! That would be slow and buggy, your script should only pass the messages to the nearest mail server and leave the rest to it. Keep in mind that the recipient&#39;s server may be down temporarily.</p>
+
+<dt><a name="port"
+>port</a></dt>
+
+<dd>
+<p><code></code>=&#62; the TCP/IP port used form the connection. By default getservbyname(&#39;smtp&#39;, &#39;tcp&#39;)||25. You should only need to use this option if your mail server waits on a nonstandard port.</p>
+
+<dt><a name="subject"
+>subject</a></dt>
+
+<dd>
+<p><code></code>=&#62; the subject of the message</p>
+
+<dt><a name="headers"
+>headers</a></dt>
+
+<dd>
+<p><code></code>=&#62; the additional headers</p>
+
+<p>You may use this parameter to add custon headers into the message. The parameter may be either a string containing the headers in the right format or a hash containing the headers and their values.</p>
+
+<dt><a name="boundary"
+>boundary</a></dt>
+
+<dd>
+<p><code></code>=&#62; the message boundary</p>
+
+<p>You usualy do not have to change this, it might only come in handy if you need to attach a multipart mail created by Mail::Sender to your message as a single part. Even in that case any problems are unlikely.</p>
+
+<dt><a name="multipart"
+>multipart</a></dt>
+
+<dd>
+<p><code></code>=&#62; the MIME subtype for the whole message (Mixed/Related/Alternative)</p>
+
+<p>You may need to change this setting if you want to send a HTML body with some inline images, or if you want to post the message in plain text as well as HTML (alternative). See the examples at the end of the docs. You may also use the nickname &#34;subtype&#34;.</p>
+
+<p>Please keep in mind though that it&#39;s not currently possible to create nested parts with Mail::Sender. If you need that level of control you should try MIME::Lite.</p>
+
+<dt><a name="ctype"
+>ctype</a></dt>
+
+<dd>
+<p><code></code>=&#62; the content type of a single part message</p>
+
+<p>Please do not confuse these two. The &#39;multipart&#39; parameter is used to specify the overall content type of a multipart message (for example a HTML document with inlined images) while ctype is an ordinary content type for a single part message. For example a HTML mail message without any inlines.</p>
+
+<dt><a name="encoding"
+>encoding</a></dt>
+
+<dd>
+<p><code></code>=&#62; encoding of a single part message or the body of a multipart message.</p>
+
+<p>If the text of the message contains some extended characters or very long lines you should use &#39;encoding =&#62; &#34;Quoted-printable&#34;&#39; in the call to Open(), OpenMultipart(), MailMsg() or MailFile().</p>
+
+<p>Keep in mind that if you use some encoding you should either use SendEnc() or encode the data yourself !</p>
+
+<dt><a name="charset"
+>charset</a></dt>
+
+<dd>
+<p><code></code>=&#62; the charset of the message</p>
+
+<dt><a name="client"
+>client</a></dt>
+
+<dd>
+<p><code></code>=&#62; the name of the client computer.</p>
+
+<p>During the connection you send the mailserver your computer&#39;s name. By default Mail::Sender sends <code>(gethostbyname &#39;localhost&#39;)[0]</code>. If that is not the address you need, you can specify a different one.</p>
+
+<dt><a name="priority"
+>priority</a></dt>
+
+<dd>
+<p><code></code>=&#62; the message priority number</p>
+
+<p>1 = highest, 2 = high, 3 = normal, 4 = low, 5 = lowest</p>
+
+<dt><a name="confirm"
+>confirm</a></dt>
+
+<dd>
+<p><code></code>=&#62; whether you request reading or delivery confirmations and to what addresses:</p>
+
+<pre class="sh_perl">        &#34;delivery&#34; - only delivery, to the C&#60;from&#62; address
+        &#34;reading&#34; - only reading, to the C&#60;from&#62; address
+        &#34;delivery, reading&#34; - both confirmations, to the C&#60;from&#62; address
+        &#34;delivery: my.other@address.com&#34; - only delivery, to my.other@address.com
+        ...</pre>
+
+<p>Keep in mind though that neither of those is guaranteed to work. Some servers/mail clients do not support this feature and some users/admins may have disabled it. So it&#39;s possible that your mail was delivered and read, but you wount get any confirmation!</p>
+
+<dt><a name="ESMPT"
+>ESMPT</a></dt>
+
+<dd>
+<pre class="sh_perl">        ESMTP =&#62; {
+                NOTIFY =&#62; &#39;SUCCESS,FAILURE,DELAY&#39;,
+                RET =&#62; &#39;HDRS&#39;,
+                ORCPT =&#62; &#39;rfc822;my.other@address.com&#39;,
+                ENVID =&#62; &#39;iuhsdfobwoe8t237&#39;,
+        }</pre>
+
+<p>This option contains data for SMTP extensions, for example it allows you to request delivery status notifications according to RFC1891.</p>
+
+<p>NOTIFY - to specify the conditions under which a delivery status notification should be generated. Should be either &#34;NEVER&#34; or a comma separated list of &#34;SUCCESS&#34;, &#34;FAILURE&#34; and &#34;DELAY&#34;.</p>
+
+<p>ORCPT - used to convey the &#34;original&#34; (sender-specified) recipient address</p>
+
+<p>RET - to request that Delivery Status Notifications containing an indication of delivery failure either return the entire contents of a message or only the message headers. Must be either FULL or HDRS</p>
+
+<p>ENVID - used to propagate an identifier for this message transmission envelope, which is also known to the sender and will, if present, be returned in any Delivery Status Notifications issued for this transmission</p>
+
+<p>You do not need to worry about encoding the ORCPT or ENVID parameters.</p>
+
+<p>If the SMTP server you connect to doesn&#39;t support this extension, the options will be ignored.</p>
+
+<dt><a name="debug"
+>debug</a></dt>
+
+<dd>
+<p><code></code>=&#62; <code>&#34;/path/to/debug/file.txt&#34;</code></p>
+
+<p>or</p>
+
+<p><code></code>=&#62; \*FILEHANDLE</p>
+
+<p>or</p>
+
+<p><code></code>=&#62; $FH</p>
+
+<p>All the conversation with the server will be logged to that file or handle. All lines in the file should end with CRLF (the Windows and Internet format). If even a single one of them does not, please let me know!</p>
+
+<p>If you pass the path to the log file, Mail::Sender will overwrite it. If you want to append to the file, you have to open it yourself and pass the filehandle:</p>
+
+<pre class="sh_perl">        open my $DEBUG, &#34;&#62;&#62; /path/to/debug/file.txt&#34;
+                or die &#34;Can&#39;t open the debug file: $!\n&#34;
+        $sender = new Mail::Sender ({
+                ...
+                debug =&#62; $DEBUG,
+        });</pre>
+
+<dt><a name="debug_level"
+>debug_level</a></dt>
+
+<dd>
+<p>Only taken into account if the <code>debug</code> option is specified.</p>
+
+<pre class="sh_perl">        1 - only log the conversation with the server, skip all message data
+        2 - log the conversation and message headers
+        3 - log the conversation and the message and part headers
+        4 - log everything (default)</pre>
+
+<dt><a name="auth"
+>auth</a></dt>
+
+<dd>
+<p>the SMTP authentication protocol to use to login to the server currently the only ones supported are LOGIN, PLAIN, CRAM-MD5 and NTLM.</p>
+
+<p>Some protocols have module dependencies. CRAM-MD5 depends on Digest::HMAC_MD5 and NTLM on Authen::NTLM.</p>
+
+<p>You may add support for other authentication protocols yourself. See below.</p>
+
+<dt><a name="authid"
+>authid</a></dt>
+
+<dd>
+<p>the username used to login to the server</p>
+
+<dt><a name="authpwd"
+>authpwd</a></dt>
+
+<dd>
+<p>the password used to login to the server</p>
+
+<dt><a name="authdomain"
+>authdomain</a></dt>
+
+<dd>
+<p>the domain name. Used optionaly by the NTLM authentication.</p>
+
+<p>Other authentication protocols may use other options as well. They should all start with &#34;auth&#34; though.</p>
+
+<p>Please see the authentication section bellow.</p>
+
+<dt><a name="auth_encoded"
+>auth_encoded</a></dt>
+
+<dd>
+<p>If set to a true value the LOGIN authentication assumes the authid and authpwd is already base64 encoded.</p>
+
+<dt><a name="keepconnection"
+>keepconnection</a></dt>
+
+<dd>
+<p>If set to a true value causes the Mail::Sender to keep the connection open for several messages. The connection will be closed if you call the Close() method with a true value or if you call Open, OpenMultipart, MailMsg or MailFile with the &#34;smtp&#34; parameter. This means that if you want the object to keep the connection you should pass the &#34;smtp&#34; either to &#34;new Mail::Sender&#34; or only to the first Open, OpenMultipart, MailMsg or MailFile!</p>
+
+<dt><a name="skip_bad_recipients"
+>skip_bad_recipients</a></dt>
+
+<dd>
+<p>If this option is set to false or not specified then Mail::Sender stops trying to send a message as soon as the first recipient&#39;s address fails. If it is set to a true value Mail::Sender skips the bad addresses and tries to send the message at least to the good ones. If all addresses are rejected by the server it reports an &#34;All recipients were rejected&#34; message.</p>
+
+<p>If any addresses were skipped the <code>$sender-&#62;{&#39;skipped_recipients&#39;}</code> will be a reference to a hash containing the failed address and the server&#39;s response.</p>
+
+<dt><a name="createmessageid"
+>createmessageid</a></dt>
+
+<dd>
+<p>This option allows you to overwrite the function that generates the message IDs for the emails. The function gets the &#34;pure&#34; sender&#39;s address as it&#39;s only parameter and is supposed to return a string. See the MessageID subroutine in Mail::Sender.pm.</p>
+
+<p>If you want to specify a message id you can also use the &#34;messageid&#34; parameter for the Open, OpenMultipart, MailMsg or MailFile methods.</p>
+
+<dt><a name="on_errors"
+>on_errors</a></dt>
+
+<dd>
+<p>This option allows you to affect the way Mail::Sender reports errors.</p>
+
+<pre class="sh_perl">        =&#62; &#39;die&#39; - raise an exception
+        =&#62; &#39;code&#39; - return the negative error code (default)
+        =&#62; &#39;undef&#39; - return an undef</pre>
+
+<p>$Mail::Sender::Error, $sender-&#62;{&#39;error&#39;} and $sender-&#62;{&#39;error_msg&#39;} are set in all the cases.</p>
+
+<p>All methods return the $sender object if they succeed.</p>
+
+<p>P.S.: The die_on_errors option is deprecated. You may still use it, but it may be removed in future versions!</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Return_codes"
+>Return codes</a></h2>
+
+<pre class="sh_perl">  ref to a Mail::Sender object =  success
+
+  -1 = $smtphost unknown
+  -2 = socket() failed
+  -3 = connect() failed
+  -4 = service not available
+  -5 = unspecified communication error
+  -6 = local user $to unknown on host $smtp
+  -7 = transmission of message failed
+  -8 = argument $to empty
+  -9 = no message specified in call to MailMsg or MailFile
+  -10 = no file name specified in call to SendFile or MailFile
+  -11 = file not found
+  -12 = not available in singlepart mode
+  -13 = site specific error
+  -14 = connection not established. Did you mean MailFile instead of SendFile?
+  -15 = no SMTP server specified
+  -16 = no From: address specified
+  -17 = authentication protocol not accepted by the server
+  -18 = login not accepted
+  -19 = authentication protocol is not implemented</pre>
+
+<p>$Mail::Sender::Error contains a textual description of last error.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Open"
+>Open</a></h2>
+
+<pre class="sh_perl"> Open([from [, replyto [, to [, smtp [, subject [, headers]]]]]])
+ Open({[from =&#62; &#34;somebody@somewhere.com&#34;] , [to =&#62; &#34;else@nowhere.com&#34;] [...]})</pre>
+
+<p>Opens a new message. If some parameters are unspecified or empty, it uses the parameters passed to the &#34;<code>$Sender=new Mail::Sender(...)</code>&#34;;</p>
+
+<p>See <code>new Mail::Sender</code> for info about the parameters.</p>
+
+<p>The only additional parameter that may not be specified directly in the <code>new Mail::Sender</code> is messageid. If you set this option then the message will be sent with this Message-ID, otherwise a new Message ID will be generated out of the sender&#39;s address, current date+time and a random number (or by the function you specified in the <code>createmessageid</code> option).</p>
+
+<p>After the message is sent <code>$sender-&#60;{messageid}</code> will contain the Message-ID with which the message was sent.</p>
+
+<p>Returns ref to the Mail::Sender object if successfull.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OpenMultipart"
+>OpenMultipart</a></h2>
+
+<pre class="sh_perl"> OpenMultipart([from [, replyto [, to [, smtp [, subject [, headers [, boundary]]]]]]])
+ OpenMultipart({[from =&#62; &#34;somebody@somewhere.com&#34;] , [to =&#62; &#34;else@nowhere.com&#34;] [...]})</pre>
+
+<p>Opens a multipart message. If some parameters are unspecified or empty, it uses the parameters passed to the <code>$Sender=new Mail::Sender(...)</code>.</p>
+
+<p>See <code>new Mail::Sender</code> for info about the parameters.</p>
+
+<p>Returns ref to the Mail::Sender object if successfull.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="MailMsg"
+>MailMsg</a></h2>
+
+<pre class="sh_perl"> MailMsg([from [, replyto [, to [, smtp [, subject [, headers]]]]]], message)
+ MailMsg({[from =&#62; &#34;somebody@somewhere.com&#34;]
+          [, to =&#62; &#34;else@nowhere.com&#34;] [...], msg =&#62; &#34;Message&#34;})</pre>
+
+<p>Sends a message. If a mail in $sender is opened it gets closed and a new mail is created and sent. $sender is then closed. If some parameters are unspecified or empty, it uses the parameters passed to the &#34;<code>$Sender=new Mail::Sender(...)</code>&#34;;</p>
+
+<p>See <code>new Mail::Sender</code> for info about the parameters.</p>
+
+<p>The module was made so that you could create an object initialized with all the necesary options and then send several messages without need to specify the SMTP server and others each time. If you need to send only one mail using MailMsg() or MailFile() you do not have to create a named object and then call the method. You may do it like this :</p>
+
+<pre class="sh_perl"> (new Mail::Sender)-&#62;MailMsg({smtp =&#62; &#39;mail.company.com&#39;, ...});</pre>
+
+<p>Returns ref to the Mail::Sender object if successfull.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="MailFile"
+>MailFile</a></h2>
+
+<pre class="sh_perl"> MailFile([from [, replyto [, to [, smtp [, subject [, headers]]]]]], message, file(s))
+ MailFile({[from =&#62; &#34;somebody@somewhere.com&#34;]
+           [, to =&#62; &#34;else@nowhere.com&#34;] [...],
+           msg =&#62; &#34;Message&#34;, file =&#62; &#34;File&#34;})</pre>
+
+<p>Sends one or more files by mail. If a mail in $sender is opened it gets closed and a new mail is created and sent. $sender is then closed. If some parameters are unspecified or empty, it uses the parameters passed to the &#34;<code>$Sender=new Mail::Sender(...)</code>&#34;;</p>
+
+<p>The <code>file</code> parameter may be a &#34;filename&#34;, a &#34;list, of, file, names&#34; or a \@list_of_file_names.</p>
+
+<p>see <code>new Mail::Sender</code> for info about the parameters.</p>
+
+<p>Just keep in mind that parameters like ctype, charset and encoding will be used for the attached file, not the body of the message. If you want to specify those parameters for the body you have to use b_ctype, b_charset and b_encoding. Sorry.</p>
+
+<p>Returns ref to the Mail::Sender object if successfull.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Send"
+>Send</a></h2>
+
+<pre class="sh_perl"> Send(@strings)</pre>
+
+<p>Prints the strings to the socket. Doesn&#39;t add any end-of-line characters. Doesn&#39;t encode the data! You should use <code>\r\n</code> as the end-of-line!</p>
+
+<p>UNLESS YOU ARE ABSOLUTELY SURE YOU KNOW WHAT YOU ARE DOING YOU SHOULD USE SendEnc() INSTEAD!</p>
+
+<p>Returns the object if successfull.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SendLine"
+>SendLine</a></h2>
+
+<pre class="sh_perl"> SendLine(@strings)</pre>
+
+<p>Prints the strings to the socket. Adds the end-of-line character at the end. Doesn&#39;t encode the data! You should use <code>\r\n</code> as the end-of-line!</p>
+
+<p>UNLESS YOU ARE ABSOLUTELY SURE YOU KNOW WHAT YOU ARE DOING YOU SHOULD USE SendLineEnc() INSTEAD!</p>
+
+<p>Returns the object if successfull.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="print"
+>print</a></h2>
+
+<p>Alias to SendEnc().</p>
+
+<p>Keep in mind that you can&#39;t write :</p>
+
+<pre class="sh_perl">        print $sender &#34;...&#34;;</pre>
+
+<p>you have to use</p>
+
+<pre class="sh_perl">        $sender-&#62;print(&#34;...&#34;);</pre>
+
+<p>If you want to be able to print into the message as if it was a normal file handle take a look at <code>GetHandle</code>()</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SendEnc"
+>SendEnc</a></h2>
+
+<pre class="sh_perl"> SendEnc(@strings)</pre>
+
+<p>Prints the strings to the socket. Doesn&#39;t add any end-of-line characters.</p>
+
+<p>Encodes the text using the selected encoding (none/Base64/Quoted-printable)</p>
+
+<p>Returns the object if successfull.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SendLineEnc"
+>SendLineEnc</a></h2>
+
+<pre class="sh_perl"> SendLineEnc(@strings)</pre>
+
+<p>Prints the strings to the socket and adds the end-of-line character at the end. Encodes the text using the selected encoding (none/Base64/Quoted-printable).</p>
+
+<p>Do NOT mix up /Send(Line)?(Ex)?/ and /Send(Line)?Enc/! SendEnc does some buffering necessary for correct Base64 encoding, and /Send(Ex)?/ is not aware of that!</p>
+
+<p>Usage of /Send(Line)?(Ex)?/ in non xBIT parts not recommended. Using <code>Send(encode_base64($string))</code> may work, but more likely it will not! In particular if you use several such to create one part, the data is very likely to get crippled.</p>
+
+<p>Returns the object if successfull.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SendEx"
+>SendEx</a></h2>
+
+<pre class="sh_perl"> SendEx(@strings)</pre>
+
+<p>Prints the strings to the socket. Doesn&#39;t add any end-of-line characters. Changes all end-of-lines to <code>\r\n</code>. Doesn&#39;t encode the data!</p>
+
+<p>UNLESS YOU ARE ABSOLUTELY SURE YOU KNOW WHAT YOU ARE DOING YOU SHOULD USE SendEnc() INSTEAD!</p>
+
+<p>Returns the object if successfull.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SendLineEx"
+>SendLineEx</a></h2>
+
+<pre class="sh_perl"> SendLineEx(@strings)</pre>
+
+<p>Prints the strings to the socket. Adds an end-of-line character at the end. Changes all end-of-lines to <code>\r\n</code>. Doesn&#39;t encode the data!</p>
+
+<p>UNLESS YOU ARE ABSOLUTELY SURE YOU KNOW WHAT YOU ARE DOING YOU SHOULD USE SendEnc() INSTEAD!</p>
+
+<p>Returns the object if successfull.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Part"
+>Part</a></h2>
+
+<pre class="sh_perl"> Part( I&#60;description&#62;, I&#60;ctype&#62;, I&#60;encoding&#62;, I&#60;disposition&#62; [, I&#60;content_id&#62; [, I&#60;msg&#62;]]);
+ Part( {[description =&#62; &#34;desc&#34;], [ctype =&#62; &#34;content-type&#34;], [encoding =&#62; &#34;...&#34;],
+     [disposition =&#62; &#34;...&#34;], [content_id =&#62; &#34;...&#34;], [msg =&#62; ...]});</pre>
+
+<p>Prints a part header for the multipart message and (if specified) the contents. The undefined or empty variables are ignored.</p>
+
+<dl>
+<dt><a name="description"
+>description</a></dt>
+
+<dd>
+<p>The title for this part.</p>
+
+<dt><a name="ctype"
+>ctype</a></dt>
+
+<dd>
+<p>the content type (MIME type) of this part. May contain some other parameters, such as <b>charset</b> or <b>name</b>.</p>
+
+<p>Defaults to &#34;application/octet-stream&#34;.</p>
+
+<p>Since 0.8.00 you may use even &#34;multipart/...&#34; types. Such a multipart part should be closed by a call to $sender-&#62;EndPart($ctype).</p>
+
+<pre class="sh_perl">        ...
+        $sender-&#62;Part({ctype =&#62; &#34;multipart/related&#34;, ...});
+                $sender-&#62;Part({ctype =&#62; &#39;text/html&#39;, ...});
+                $sender-&#62;Attach({file =&#62; &#39;some_image.gif&#39;, content_id =&#62; &#39;foo&#39;, ...});
+        $sender-&#62;EndPart(&#34;multipart/related&#34;);
+        ...</pre>
+
+<p>Please see the examples below.</p>
+
+<dt><a name="encoding"
+>encoding</a></dt>
+
+<dd>
+<p>the encoding used for this part of message. Eg. Base64, Uuencode, 7BIT ...</p>
+
+<p>Defaults to &#34;7BIT&#34;.</p>
+
+<dt><a name="disposition"
+>disposition</a></dt>
+
+<dd>
+<p>This parts disposition. Eg: &#39;attachment; filename=&#34;send.pl&#34;&#39;.</p>
+
+<p>Defaults to &#34;attachment&#34;. If you specify &#34;none&#34; or &#34;&#34;, the Content-disposition: line will not be included in the headers.</p>
+
+<dt><a name="content_id"
+>content_id</a></dt>
+
+<dd>
+<p>The content id of the part, used in multipart/related. If not specified, the header is not included.</p>
+
+<dt><a name="msg"
+>msg</a></dt>
+
+<dd>
+<p>The content of the part. You do not have to specify the content here, you may use SendEnc() to add content to the part.</p>
+
+<dt><a name="charset"
+>charset</a></dt>
+
+<dd>
+<p>The charset of the part.</p>
+</dd>
+</dl>
+
+<p>Returns the Mail::Sender object if successfull, negative error code if not.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Body"
+>Body</a></h2>
+
+<pre class="sh_perl"> Body([charset [, encoding [, content-type]]]);
+ Body({charset =&#62; &#39;...&#39;, encoding =&#62; &#39;...&#39;, ctype =&#62; &#39;...&#39;, msg =&#62; &#39;...&#39;);</pre>
+
+<p>Sends the head of the multipart message body. You can specify the charset and the encoding. Default is &#34;US-ASCII&#34;,&#34;7BIT&#34;,&#39;text/plain&#39;.</p>
+
+<p>If you pass undef or zero as the parameter, this function uses the default value:</p>
+
+<pre class="sh_perl">    Body(0,0,&#39;text/html&#39;);</pre>
+
+<p>Returns the Mail::Sender object if successfull, negative error code if not. You should NOT use this method in single part messages, that is, it works after OpenMultipart(), but has no meaning after Open()!</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SendFile"
+>SendFile</a></h2>
+
+<p>Alias to Attach()</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Attach"
+>Attach</a></h2>
+
+<pre class="sh_perl"> Attach( I&#60;description&#62;, I&#60;ctype&#62;, I&#60;encoding&#62;, I&#60;disposition&#62;, I&#60;file&#62;);
+ Attach( { [description =&#62; &#34;desc&#34;] , [ctype =&#62; &#34;ctype&#34;], [encoding =&#62; &#34;encoding&#34;],
+             [disposition =&#62; &#34;disposition&#34;], file =&#62; &#34;file&#34;});
+
+ Sends a file as a separate part of the mail message. Only in multipart mode.</pre>
+
+<dl>
+<dt><a name="description"
+>description</a></dt>
+
+<dd>
+<p>The title for this part.</p>
+
+<dt><a name="ctype"
+>ctype</a></dt>
+
+<dd>
+<p>the content type (MIME type) of this part. May contain some other parameters, such as <b>charset</b> or <b>name</b>.</p>
+
+<p>Defaults to &#34;application/octet-stream&#34;.</p>
+
+<dt><a name="encoding"
+>encoding</a></dt>
+
+<dd>
+<p>the encoding used for this part of message. Eg. Base64, Uuencode, 7BIT ...</p>
+
+<p>Defaults to &#34;Base64&#34;.</p>
+
+<dt><a name="disposition"
+>disposition</a></dt>
+
+<dd>
+<p>This parts disposition. Eg: &#39;attachment; filename=&#34;send.pl&#34;&#39;. If you use &#39;attachment; filename=*&#39; the * will be replaced by the respective names of the sent files.</p>
+
+<p>Defaults to &#34;attachment; filename=*&#34;. If you do not want to include this header use &#34;&#34; as the value.</p>
+
+<dt><a name="file"
+>file</a></dt>
+
+<dd>
+<p>The name of the file to send or a &#39;list, of, names&#39; or a [&#39;reference&#39;,&#39;to&#39;,&#39;a&#39;,&#39;list&#39;,&#39;of&#39;,&#39;filenames&#39;]. Each file will be sent as a separate part.</p>
+
+<p>Please keep in mind that if you pass a string as this parameter the module will split it on commas! If your filenames may contain commas and you want to be sure they are sent correctly you have to use the reference to array format:</p>
+
+<pre class="sh_perl">        file =&#62; [ $filename],</pre>
+
+<dt><a name="content_id"
+>content_id</a></dt>
+
+<dd>
+<p>The content id of the message part. Used in multipart/related.</p>
+
+<pre class="sh_perl"> Special values:
+  &#34;*&#34; =&#62; the name of the file
+  &#34;#&#34; =&#62; autoincremented number (starting from 0)</pre>
+</dd>
+</dl>
+
+<p>Returns the Mail::Sender object if successfull, negative error code if not.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="EndPart"
+>EndPart</a></h2>
+
+<pre class="sh_perl"> $sender-&#62;EndPart($ctype);</pre>
+
+<p>Closes a multipart part.</p>
+
+<p>If the $ctype is not present or evaluates to false, only the current SIMPLE part is closed! Don&#39;t do that unless you are really sure you know what you are doing.</p>
+
+<p>It&#39;s best to always pass to the -&#62;EndPart() the content type of the corresponding -&#62;Part().</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Close"
+>Close</a></h2>
+
+<pre class="sh_perl"> $sender-&#62;Close;
+ $sender-&#62;Close(1);</pre>
+
+<p>Close and send the email message. If you pass a true value to the method the connection will be closed even if the &#34;keepconnection&#34; was specified. You should only keep the connection open if you plan to send another message immediately. And you should not keep it open for hundreds of emails even if you do send them all in a row.</p>
+
+<p>This method should be called automatically when destructing the object, but you should not rely on it. If you want to be sure your message WAS processed by the SMTP server you SHOULD call Close() explicitely.</p>
+
+<p>Returns the Mail::Sender object if successfull, negative error code if not, zero if $sender was not connected at all. The zero usualy means that the Open/OpenMultipart failed and you did not test its return value.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Cancel"
+>Cancel</a></h2>
+
+<pre class="sh_perl"> $sender-&#62;Cancel;</pre>
+
+<p>Cancel an opened message.</p>
+
+<p>SendFile and other methods may set $sender-&#62;{&#39;error&#39;}. In that case &#34;undef $sender&#34; calls <code>$sender-</code>&#62;Cancel not <code>$sender-</code>&#62;Close!!!</p>
+
+<p>Returns the Mail::Sender object if successfull, negative error code if not.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="QueryAuthProtocols"
+>QueryAuthProtocols</a></h2>
+
+<pre class="sh_perl">        @protocols = $sender-&#62;QueryAuthProtocols();
+        @protocols = $sender-&#62;QueryAuthProtocols( $smtpserver);</pre>
+
+<p>Queryies the server (specified either in the default options for Mail::Sender, the &#34;new Mail::Sender&#34; command or as a parameter to this method for the authentication protocols it supports.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="GetHandle"
+>GetHandle</a></h2>
+
+<p>Returns a &#34;filehandle&#34; to which you can print the message or file to attach or whatever. The data you print to this handle will be encoded as necessary. Closing this handle closes either the message (for single part messages) or the part.</p>
+
+<pre class="sh_perl">        $sender-&#62;Open({...});
+        my $handle = $sender-&#62;GetHandle();
+        print $handle &#34;Hello world.\n&#34;
+        my ($mday,$mon,$year) = (localtime())[3,4,5];
+        printf $handle &#34;Today is %04d/%02d/%02d.&#34;, $year+1900, $mon+1, $mday;
+        close $handle;</pre>
+
+<p>P.S.: There is a big difference between the handle stored in $sender-&#62;{&#39;socket&#39;} and the handle returned by this function ! If you print something to $sender-&#62;{&#39;socket&#39;} it will be sent to the server without any modifications, encoding, escaping, ... You should NOT touch the $sender-&#62;{&#39;socket&#39;} unless you really really know what you are doing.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="GuessCType"
+>GuessCType</a></h2>
+
+<pre class="sh_perl">        $ctype = GuessCType $filename, $filepath;</pre>
+
+<p>Guesses the content type based on the filename or the file contents. This function is used when you attach a file and do not specify the content type. It is not exported by default!</p>
+
+<p>The builtin version uses the filename extension to guess the type. Currently there are only a few extensions defined, you may add other extensions this way:</p>
+
+<pre class="sh_perl">        $Mail::Sender::CTypes{&#39;EXT&#39;} = &#39;content/type&#39;;
+        ...</pre>
+
+<p>The extension has to be in UPPERCASE and will be matched case sensitively.</p>
+
+<p>The package now includes two addins improving the guesswork. If you &#34;use&#34; one of them in your script, it replaces the builtin GuessCType() subroutine with a better one:</p>
+
+<pre class="sh_perl">        Mail::Sender::CType::Win32
+                Win32 only, the content type is read from the registry
+        Mail::Sender::CType::Ext
+                any OS, a longer list of extensions from A. Guillaume</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="ResetGMTdiff"
+>ResetGMTdiff</a></h2>
+
+<pre class="sh_perl">        ResetGMTdiff()</pre>
+
+<p>The module computes the local vs. GMT time difference to include in the timestamps added into the message headers. As the time difference may change due to summer savings time changes you may want to reset the time difference ocassionaly in long running programs.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONFIG"
+>CONFIG <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you create a file named Sender.config in the same directory where Sender.pm resides, this file will be &#34;require&#34;d as soon as you &#34;use Mail::Sender&#34; in your script. Of course the Sender.config MUST &#34;return a true value&#34;, that is it has to be succesfully compiled and the last statement must return a true value. You may use this to forbide the use of Mail::Sender to some users.</p>
+
+<p>You may define the default settings for new Mail::Sender objects and do a few more things.</p>
+
+<p>The default options are stored in hash %Mail::Sender::default. You may use all the options you&#39;d use in <code>new</code>, <code>Open</code>, <code>OpenMultipart</code>, <code>MailMsg</code> or <code>MailFile</code>.</p>
+
+<pre class="sh_perl"> Eg.
+  %default = (
+    smtp =&#62; &#39;mail.yourhost.cz&#39;,
+    from =&#62; getlogin.&#39;yourhost.cz&#39;,
+    client =&#62; getlogin.&#39;.yourhost.cz&#39;
+  );
+  # of course you will use your own mail server here !</pre>
+
+<p>The other options you may set here (or later of course) are $Mail::Sender::SITE_HEADERS, $Mail::Sender::NO_X_MAILER and $Mail::Sender::NO_DATE. (These are plain old scalar variables, there is no function or method for modifying them. Just set them to anything you need.)</p>
+
+<p>The $Mail::Sender::SITE_HEADERS may contain headers that will be added to each mail message sent by this script, the $Mail::Sender::NO_X_MAILER disables the header item specifying that the message was sent by Mail::Sender and $Mail::Sender::NO_DATE turns off the Date: header generation.</p>
+
+<p>!!! $Mail::Sender::SITE_HEADERS may NEVER end with \r\n !!!</p>
+
+<p>If you want to set the $Mail::Sender::SITE_HEADERS for every script sent from your server without your users being able to change it you may use this hack:</p>
+
+<pre class="sh_perl"> $loginname = something_that_identifies_the_user();
+ *Mail::Sender::SITE_HEADERS = \&#34;X-Sender: $loginname via $0&#34;;
+ $Mail::Sender::NO_X_MAILER = 1;</pre>
+
+<p>You may even &#34;install&#34; your custom function that will be evaluated for each message just before contacting the server. You may change all the options from within as well as stop sending the message.</p>
+
+<p>All you have to do is to create a function named SiteHook in Mail::Sender package. This function will get the Mail::Sender object as its first argument. If it returns a TRUE value the message is sent, if it returns FALSE the sending is canceled and the user gets &#34;Site specific error&#34; error message.</p>
+
+<p>If you want to give some better error message you may do it like this :</p>
+
+<pre class="sh_perl"> sub SiteHook {
+  my $self = shift;
+  if (whatever($self)) {
+    $self-&#62;Error( SITEERROR);
+    $Mail::Sender::Error = &#34;I don&#39;t like this mail&#34;;
+    return 0
+  } else {
+    return 1;
+  }
+ }</pre>
+
+<p>This example will ensure the from address is the users real address :</p>
+
+<pre class="sh_perl"> sub SiteHook {
+  my $self = shift;
+  $self-&#62;{&#39;fromaddr&#39;} = getlogin.&#39;@yoursite.com&#39;;
+  $self-&#62;{&#39;from&#39;} = getlogin.&#39;@yoursite.com&#39;;
+  1;
+ }</pre>
+
+<p>Please note that at this stage the from address is in two different object properties.</p>
+
+<p>$self-&#62;{&#39;from&#39;} is the address as it will appear in the mail, that is it may include the full name of the user or any other comment ( &#34;Jan Krynicky &#60;jenda@krynicky.cz&#62;&#34; for example), while the $self-&#62;{&#39;fromaddr&#39;} is realy just the email address per se and it will be used in conversation with the SMTP server. It must be without comments (&#34;jenda@krynicky.cz&#34; for example)!</p>
+
+<p>Without write access to .../lib/Mail/Sender.pm or .../lib/Mail/Sender.config your users will then be unable to get rid of this header. Well ... everything is doable, if they are cheeky enough ... :-(</p>
+
+<p>So if you take care of some site with virtual servers for several clients and implement some policy via SiteHook() or $Mail::Sender::SITE_HEADERS search the clients&#39; scripts for &#34;SiteHook&#34; and &#34;SITE_HEADERS&#34; from time to time. To see who&#39;s cheating.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHENTICATION"
+>AUTHENTICATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you get a &#34;Local user &#34;xxx@yyy.com&#34; unknown on host &#34;zzz&#34;&#34; message it usualy means that your mail server is set up to forbid mail relay. That is it only accepts messages to or from a local user. If you need to be able to send a message with both the sender&#39;s and recipient&#39;s address remote, you need to somehow authenticate to the server. You may need the help of the mail server&#39;s administrator to find out what username and password and/or what authentication protocol are you supposed to use.</p>
+
+<p>There are many authentication protocols defined for ESTMP, Mail::Sender natively supports only PLAIN, LOGIN, CRAM-MD5 and NTLM (please see the docs for <code>new Mail::Sender</code>).</p>
+
+<p>If you want to know what protocols are supported by your server you may get the list by this:</p>
+
+<pre class="sh_perl">        /tmp# perl -MMail::Sender -e &#39;Mail::Sender-&#62;printAuthProtocols(&#34;the.server.com&#34;)&#39;
+  or
+        c:\&#62; perl -MMail::Sender -e &#34;Mail::Sender-&#62;printAuthProtocols(&#39;the.server.com&#39;)&#34;</pre>
+
+<p>There is one more way to authenticate. Some servers want you to login by POP3 before you can send a message. You have to use Net::POP3 or Mail::POP3Client to do this.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Other_protocols"
+>Other protocols</a></h2>
+
+<p>It is possible to add new authentication protocols to Mail::Sender. All you have to do is to define a function Mail::Sender::Auth::PROTOCOL_NAME that will implement the login. The function gets one parameter ... the Mail::Sender object. It can access these properties:</p>
+
+<pre class="sh_perl">        $obj-&#62;{&#39;socket&#39;} : the socket to print to and read from
+                you may use the send_cmd() function to send a request
+                and read a response from the server
+        $obj-&#62;{&#39;authid&#39;} : the username specified in the new Mail::Sender,
+                Open or OpenMultipart call
+        $obj-&#62;{&#39;authpwd&#39;} : the password
+        $obj-&#62;{auth...} : all unknown parameters passed to the constructor or the mail
+                opening/creation methods are preserved in the object. If the protocol requires
+                any other options, please use names starting with &#34;auth&#34;. Eg. &#34;authdomain&#34;, ...
+        $obj-&#62;{&#39;error&#39;} : this should be set to a negative error number. Please use numbers
+                below -1000 for custom errors.
+        $obj-&#62;{&#39;error_msg&#39;} : this should be set to the error message
+
+        If the login fails you should
+                1) Set $Mail::Sender::Error to the error message
+                2) Set $obj-&#62;{&#39;error_msg&#39;} to the error message
+                2) Set $obj-&#62;{&#39;error&#39;} to a negative number
+                3) return a negative number
+        If it succeeds, please return &#34;nothing&#34; :
+                return;</pre>
+
+<p>Please use the protocols defined within Sender.pm as examples.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Object_creation"
+>Object creation</a></h2>
+
+<pre class="sh_perl"> ref ($sender = new Mail::Sender { from =&#62; &#39;somebody@somewhere.com&#39;,
+       smtp =&#62; &#39;mail.yourISP.com&#39;, boundary =&#62; &#39;This-is-a-mail-boundary-435427&#39;})
+ or die &#34;Error in mailing : $Mail::Sender::Error\n&#34;;</pre>
+
+<p>or</p>
+
+<pre class="sh_perl"> my $sender = new Mail::Sender { ... };
+ die &#34;Error in mailing : $Mail::Sender::Error\n&#34; unless ref $sender;</pre>
+
+<p>or</p>
+
+<pre class="sh_perl"> my $sender = new Mail::Sender { ..., on_errors =&#62; &#39;undef&#39; }
+   or die &#34;Error in mailing : $Mail::Sender::Error\n&#34;;</pre>
+
+<p>You may specify the options either when creating the Mail::Sender object or later when you open a message. You may also set the default options when installing the module (See <code>CONFIG</code> section). This way the admin may set the SMTP server and even the authentication options and the users do not have to specify it again.</p>
+
+<p>You should keep in mind that the way Mail::Sender reports failures depends on the &#39;on_errors&#39;=&#62; option. If you set it to &#39;die&#39; it throws an exception, if you set it to <code>undef</code> or <code>&#39;undef&#39;</code> it returns undef and otherwise it returns a negative error code!</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Simple_single_part_message"
+>Simple single part message</a></h2>
+
+<pre class="sh_perl">        $sender = new Mail::Sender {
+                smtp =&#62; &#39;mail.yourISP.com&#39;,
+                from =&#62; &#39;somebody@somewhere.com&#39;,
+                on_errors =&#62; undef,
+        }
+                or die &#34;Can&#39;t create the Mail::Sender object: $Mail::Sender::Error\n&#34;;
+        $sender-&#62;Open({
+                to =&#62; &#39;mama@home.org, papa@work.com&#39;,
+                cc =&#62; &#39;somebody@somewhere.com&#39;,
+                subject =&#62; &#39;Sorry, I\&#39;ll come later.&#39;
+        })
+                or die &#34;Can&#39;t open the message: $sender-&#62;{&#39;error_msg&#39;}\n&#34;;
+        $sender-&#62;SendLineEnc(&#34;I&#39;m sorry, but thanks to the lusers,
+                I&#39;ll come at 10pm at best.&#34;);
+        $sender-&#62;SendLineEnc(&#34;\nHi, Jenda&#34;);
+        $sender-&#62;Close()
+                or die &#34;Failed to send the message: $sender-&#62;{&#39;error_msg&#39;}\n&#34;;</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">        eval {
+                $sender = new Mail::Sender {
+                        smtp =&#62; &#39;mail.yourISP.com&#39;,
+                        from =&#62; &#39;somebody@somewhere.com&#39;,
+                        on_errors =&#62; &#39;die&#39;,
+                };
+                $sender-&#62;Open({
+                        to =&#62; &#39;mama@home.org, papa@work.com&#39;,
+                        cc =&#62; &#39;somebody@somewhere.com&#39;,
+                        subject =&#62; &#39;Sorry, I\&#39;ll come later.&#39;
+                });
+                $sender-&#62;SendLineEnc(&#34;I&#39;m sorry, but thanks to the lusers,
+                        I&#39;ll come at 10pm at best.&#34;);
+                $sender-&#62;SendLineEnc(&#34;\nHi, Jenda&#34;);
+                $sender-&#62;Close();
+        };
+        if ($@) {
+                die &#34;Failed to send the message: $@\n&#34;;
+        }</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">        $sender = new Mail::Sender {
+                smtp =&#62; &#39;mail.yourISP.com&#39;,
+                from =&#62; &#39;somebody@somewhere.com&#39;,
+                on_errors =&#62; &#39;code&#39;,
+        };
+        die &#34;Can&#39;t create the Mail::Sender object: $Mail::Sender::Error\n&#34;
+                unless ref $sender;
+        ref $sender-&#62;Open({
+                to =&#62; &#39;mama@home.org, papa@work.com&#39;,
+                cc =&#62; &#39;somebody@somewhere.com&#39;,
+                subject =&#62; &#39;Sorry, I\&#39;ll come later.&#39;
+        })
+                or die &#34;Can&#39;t open the message: $sender-&#62;{&#39;error_msg&#39;}\n&#34;;
+        $sender-&#62;SendLineEnc(&#34;I&#39;m sorry, but thanks to the lusers,
+                I&#39;ll come at 10pm at best.&#34;);
+        $sender-&#62;SendLineEnc(&#34;\nHi, Jenda&#34;);
+        ref $sender-&#62;Close
+                or die &#34;Failed to send the message: $sender-&#62;{&#39;error_msg&#39;}\n&#34;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Using_GetHandle()"
+>Using GetHandle()</a></h2>
+
+<pre class="sh_perl">  ref $sender-&#62;Open({to =&#62; &#39;friend@other.com&#39;, subject =&#62; &#39;Hello dear friend&#39;})
+         or die &#34;Error: $Mail::Sender::Error\n&#34;;
+  my $FH = $sender-&#62;GetHandle();
+  print $FH &#34;How are you?\n\n&#34;;
+  print $FH &#60;&#60;&#39;*END*&#39;;
+  I&#39;ve found these jokes.
+
+   Doctor, I feel like a pack of cards.
+   Sit down and I&#39;ll deal with you later.
+
+   Doctor, I keep thinking I&#39;m a dustbin.
+   Don&#39;t talk rubbish.
+
+  Hope you like&#39;em. Jenda
+  *END*
+
+  $sender-&#62;Close;
+  # or
+  # close $FH;</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">  eval {
+    $sender-&#62;Open({ on_errors =&#62; &#39;die&#39;,
+                         to =&#62; &#39;mama@home.org, papa@work.com&#39;,
+                cc =&#62; &#39;somebody@somewhere.com&#39;,
+                subject =&#62; &#39;Sorry, I\&#39;ll come later.&#39;});
+    $sender-&#62;SendLineEnc(&#34;I&#39;m sorry, but due to a big load of work,
+  I&#39;ll come at 10pm at best.&#34;);
+    $sender-&#62;SendLineEnc(&#34;\nHi, Jenda&#34;);
+    $sender-&#62;Close;
+  };
+  if ($@) {
+    print &#34;Error sending the email: $@\n&#34;;
+  } else {
+    print &#34;The mail was sent.\n&#34;;
+  }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Multipart_message_with_attachment"
+>Multipart message with attachment</a></h2>
+
+<pre class="sh_perl"> $sender-&#62;OpenMultipart({to =&#62; &#39;Perl-Win32-Users@activeware.foo&#39;,
+                         subject =&#62; &#39;Mail::Sender.pm - new module&#39;});
+ $sender-&#62;Body;
+ $sender-&#62;SendEnc(&#60;&#60;&#39;*END*&#39;);
+ Here is a new module Mail::Sender.
+ It provides an object based interface to sending SMTP mails.
+ It uses a direct socket connection, so it doesn&#39;t need any
+ additional program.
+
+ Enjoy, Jenda
+ *END*
+ $sender-&#62;Attach(
+  {description =&#62; &#39;Perl module Mail::Sender.pm&#39;,
+   ctype =&#62; &#39;application/x-zip-encoded&#39;,
+   encoding =&#62; &#39;Base64&#39;,
+   disposition =&#62; &#39;attachment; filename=&#34;Sender.zip&#34;; type=&#34;ZIP archive&#34;&#39;,
+   file =&#62; &#39;sender.zip&#39;
+  });
+ $sender-&#62;Close;</pre>
+
+<p>or</p>
+
+<pre class="sh_perl"> $sender-&#62;OpenMultipart({to =&#62; &#39;Perl-Win32-Users@activeware.foo&#39;,
+                         subject =&#62; &#39;Mail::Sender.pm - new version&#39;});
+ $sender-&#62;Body({ msg =&#62; &#60;&#60;&#39;*END*&#39; });
+ Here is a new module Mail::Sender.
+ It provides an object based interface to sending SMTP mails.
+ It uses a direct socket connection, so it doesn&#39;t need any
+ additional program.
+
+ Enjoy, Jenda
+ *END*
+ $sender-&#62;Attach(
+  {description =&#62; &#39;Perl module Mail::Sender.pm&#39;,
+   ctype =&#62; &#39;application/x-zip-encoded&#39;,
+   encoding =&#62; &#39;Base64&#39;,
+   disposition =&#62; &#39;attachment; filename=&#34;Sender.zip&#34;; type=&#34;ZIP archive&#34;&#39;,
+   file =&#62; &#39;sender.zip&#39;
+  });
+ $sender-&#62;Close;</pre>
+
+<p>or (in case you have the file contents in a scalar)</p>
+
+<pre class="sh_perl"> $sender-&#62;OpenMultipart({to =&#62; &#39;Perl-Win32-Users@activeware.foo&#39;,
+                         subject =&#62; &#39;Mail::Sender.pm - new version&#39;});
+ $sender-&#62;Body({ msg =&#62; &#60;&#60;&#39;*END*&#39; });
+ Here is a new module Mail::Sender.
+ It provides an object based interface to sending SMTP mails.
+ It uses a direct socket connection, so it doesn&#39;t need any
+ additional program.
+
+ Enjoy, Jenda
+ *END*
+ $sender-&#62;Part(
+  {description =&#62; &#39;Perl module Mail::Sender.pm&#39;,
+   ctype =&#62; &#39;application/x-zip-encoded&#39;,
+   encoding =&#62; &#39;Base64&#39;,
+   disposition =&#62; &#39;attachment; filename=&#34;Sender.zip&#34;; type=&#34;ZIP archive&#34;&#39;,
+   msg =&#62; $sender_zip_contents,
+  });
+ $sender-&#62;Close;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Using_exceptions_(no_need_to_test_return_values_after_each_function)"
+>Using exceptions (no need to test return values after each function)</a></h2>
+
+<pre class="sh_perl"> use Mail::Sender;
+ eval {
+ (new Mail::Sender {on_errors =&#62; &#39;die&#39;})
+        -&#62;OpenMultipart({smtp=&#62; &#39;jenda.krynicky.cz&#39;, to =&#62; &#39;jenda@krynicky.cz&#39;,subject =&#62; &#39;Mail::Sender.pm - new version&#39;})
+        -&#62;Body({ msg =&#62; &#60;&#60;&#39;*END*&#39; })
+ Here is a new module Mail::Sender.
+ It provides an object based interface to sending SMTP mails.
+ It uses a direct socket connection, so it doesn&#39;t need any
+ additional program.
+
+ Enjoy, Jenda
+ *END*
+        -&#62;Attach({
+                description =&#62; &#39;Perl module Mail::Sender.pm&#39;,
+                ctype =&#62; &#39;application/x-zip-encoded&#39;,
+                encoding =&#62; &#39;Base64&#39;,
+                disposition =&#62; &#39;attachment; filename=&#34;Sender.zip&#34;; type=&#34;ZIP archive&#34;&#39;,
+                file =&#62; &#39;W:\jenda\packages\Mail\Sender\Mail-Sender-0.7.14.3.tar.gz&#39;
+        })
+        -&#62;Close();
+ } or print &#34;Error sending mail: $@\n&#34;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Using_MailMsg()_shortcut_to_send_simple_messages"
+>Using MailMsg() shortcut to send simple messages</a></h2>
+
+<p>If everything you need is to send a simple message you may use:</p>
+
+<pre class="sh_perl"> if (ref ($sender-&#62;MailMsg({to =&#62;&#39;Jenda@Krynicky.czX&#39;, subject =&#62; &#39;this is a test&#39;,
+                         msg =&#62; &#34;Hi Johnie.\nHow are you?&#34;}))) {
+  print &#34;Mail sent OK.&#34;
+ } else {
+  die &#34;$Mail::Sender::Error\n&#34;;
+ }</pre>
+
+<p>or</p>
+
+<pre class="sh_perl"> if ($sender-&#62;MailMsg({
+   smtp =&#62; &#39;mail.yourISP.com&#39;,
+   from =&#62; &#39;somebody@somewhere.com&#39;,
+   to =&#62;&#39;Jenda@Krynicky.czX&#39;,
+   subject =&#62; &#39;this is a test&#39;,
+   msg =&#62; &#34;Hi Johnie.\nHow are you?&#34;
+ }) &#60; 0) {
+  die &#34;$Mail::Sender::Error\n&#34;;
+ }
+ print &#34;Mail sent OK.&#34;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Using_MailMsg_and_authentication"
+>Using MailMsg and authentication</a></h2>
+
+<pre class="sh_perl"> if ($sender-&#62;MailMsg({
+   smtp =&#62; &#39;mail.yourISP.com&#39;,
+   from =&#62; &#39;somebody@somewhere.com&#39;,
+   to =&#62;&#39;Jenda@Krynicky.czX&#39;,
+   subject =&#62; &#39;this is a test&#39;,
+   msg =&#62; &#34;Hi Johnie.\nHow are you?&#34;
+   auth =&#62; &#39;NTLM&#39;,
+   authid =&#62; &#39;jenda&#39;,
+   authpwd =&#62; &#39;benda&#39;,
+ }) &#60; 0) {
+  die &#34;$Mail::Sender::Error\n&#34;;
+ }
+ print &#34;Mail sent OK.&#34;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Using_MailFile()_shortcut_to_send_an_attachment"
+>Using MailFile() shortcut to send an attachment</a></h2>
+
+<p>If you want to attach some files:</p>
+
+<pre class="sh_perl"> (ref ($sender-&#62;MailFile(
+  {to =&#62;&#39;you@address.com&#39;, subject =&#62; &#39;this is a test&#39;,
+   msg =&#62; &#34;Hi Johnie.\nI&#39;m sending you the pictures you wanted.&#34;,
+   file =&#62; &#39;image1.jpg,image2.jpg&#39;
+  }))
+  and print &#34;Mail sent OK.&#34;
+ )
+ or die &#34;$Mail::Sender::Error\n&#34;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Sending_HTML_messages"
+>Sending HTML messages</a></h2>
+
+<p>If you are sure the HTML doesn&#39;t contain any accentuated characters (with codes above 127).</p>
+
+<pre class="sh_perl"> open IN, $htmlfile or die &#34;Cannot open $htmlfile : $!\n&#34;;
+ $sender-&#62;Open({ from =&#62; &#39;your@address.com&#39;, to =&#62; &#39;other@address.com&#39;,
+        subject =&#62; &#39;HTML test&#39;,
+        ctype =&#62; &#34;text/html&#34;,
+        encoding =&#62; &#34;7bit&#34;
+ }) or die $Mail::Sender::Error,&#34;\n&#34;;
+
+ while (&#60;IN&#62;) { $sender-&#62;SendEx($_) };
+ close IN;
+ $sender-&#62;Close();</pre>
+
+<p>Otherwise use SendEnc() instead of SendEx() and &#34;quoted-printable&#34; instead of &#34;7bit&#34;.</p>
+
+<p>Another ... quicker way ... would be:</p>
+
+<pre class="sh_perl"> open IN, $htmlfile or die &#34;Cannot open $htmlfile : $!\n&#34;;
+ $sender-&#62;Open({ from =&#62; &#39;your@address.com&#39;, to =&#62; &#39;other@address.com&#39;,
+        subject =&#62; &#39;HTML test&#39;,
+        ctype =&#62; &#34;text/html&#34;,
+        encoding =&#62; &#34;quoted-printable&#34;
+ }) or die $Mail::Sender::Error,&#34;\n&#34;;
+
+ while (read IN, $buff, 4096) { $sender-&#62;SendEnc($buff) };
+ close IN;
+ $sender-&#62;Close();</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Sending_HTML_messages_with_inline_images"
+>Sending HTML messages with inline images</a></h2>
+
+<pre class="sh_perl">        if (ref $sender-&#62;OpenMultipart({
+                from =&#62; &#39;someone@somewhere.net&#39;, to =&#62; $recipients,
+                subject =&#62; &#39;Embedded Image Test&#39;,
+                boundary =&#62; &#39;boundary-test-1&#39;,
+                multipart =&#62; &#39;related&#39;})) {
+                $sender-&#62;Attach(
+                         {description =&#62; &#39;html body&#39;,
+                         ctype =&#62; &#39;text/html; charset=us-ascii&#39;,
+                         encoding =&#62; &#39;7bit&#39;,
+                         disposition =&#62; &#39;NONE&#39;,
+                         file =&#62; &#39;test.html&#39;
+                });
+                $sender-&#62;Attach({
+                        description =&#62; &#39;ed\&#39;s gif&#39;,
+                        ctype =&#62; &#39;image/gif&#39;,
+                        encoding =&#62; &#39;base64&#39;,
+                        disposition =&#62; &#34;inline; filename=\&#34;apache_pb.gif\&#34;;\r\nContent-ID: &#60;img1&#62;&#34;,
+                        file =&#62; &#39;apache_pb.gif&#39;
+                });
+                $sender-&#62;Close() or die &#34;Close failed! $Mail::Sender::Error\n&#34;;
+        } else {
+                die &#34;Cannot send mail: $Mail::Sender::Error\n&#34;;
+        }</pre>
+
+<p>And in the HTML you&#39;ll have this : ... &#60;IMG src=&#34;cid:img1&#34;&#62; ... on the place where you want the inlined image.</p>
+
+<p>Please keep in mind that the image name is unimportant, it&#39;s the Content-ID what counts!</p>
+
+<p># or using the eval{ $obj-&#62;Method()-&#62;Method()-&#62;...-&#62;Close()} trick ...</p>
+
+<pre class="sh_perl">        use Mail::Sender;
+        eval {
+        (new Mail::Sender)
+                -&#62;OpenMultipart({
+                        to =&#62; &#39;someone@somewhere.com&#39;,
+                        subject =&#62; &#39;Embedded Image Test&#39;,
+                        boundary =&#62; &#39;boundary-test-1&#39;,
+                        type =&#62; &#39;multipart/related&#39;
+                })
+                -&#62;Attach({
+                        description =&#62; &#39;html body&#39;,
+                        ctype =&#62; &#39;text/html; charset=us-ascii&#39;,
+                        encoding =&#62; &#39;7bit&#39;,
+                        disposition =&#62; &#39;NONE&#39;,
+                        file =&#62; &#39;c:\temp\zk\HTMLTest.htm&#39;
+                })
+                -&#62;Attach({
+                        description =&#62; &#39;Test gif&#39;,
+                        ctype =&#62; &#39;image/gif&#39;,
+                        encoding =&#62; &#39;base64&#39;,
+                        disposition =&#62; &#34;inline; filename=\&#34;test.gif\&#34;;\r\nContent-ID: &#60;img1&#62;&#34;,
+                        file =&#62; &#39;test.gif&#39;
+                })
+                -&#62;Close()
+        }
+        or die &#34;Cannot send mail: $Mail::Sender::Error\n&#34;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Sending_message_with_plaintext_and_HTML_alternatives"
+>Sending message with plaintext and HTML alternatives</a></h2>
+
+<pre class="sh_perl">        use Mail::Sender;
+
+        eval {
+                (new Mail::Sender)
+                -&#62;OpenMultipart({
+                        to =&#62; &#39;someone@somewhere.com&#39;,
+                        subject =&#62; &#39;Alternatives&#39;,
+        #               debug =&#62; &#39;c:\temp\zkMailFlow.log&#39;,
+                        multipart =&#62; &#39;mixed&#39;,
+                })
+                        -&#62;Part({ctype =&#62; &#39;multipart/alternative&#39;})
+                                -&#62;Part({ ctype =&#62; &#39;text/plain&#39;, disposition =&#62; &#39;NONE&#39;, msg =&#62; &#60;&#60;&#39;*END*&#39; })
+        A long
+        mail
+        message.
+        *END*
+                                -&#62;Part({ctype =&#62; &#39;text/html&#39;, disposition =&#62; &#39;NONE&#39;, msg =&#62; &#60;&#60;&#39;*END*&#39;})
+        &#60;html&#62;&#60;body&#62;&#60;h1&#62;A long&#60;/h1&#62;&#60;p align=center&#62;
+        mail
+        message.
+        &#60;/p&#62;&#60;/body&#62;&#60;/html&#62;
+        *END*
+                        -&#62;EndPart(&#34;multipart/alternative&#34;)
+                -&#62;Close();
+        } or print &#34;Error sending mail: $Mail::Sender::Error\n&#34;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Sending_message_with_plaintext_and_HTML_alternatives_with_inline_images"
+>Sending message with plaintext and HTML alternatives with inline images</a></h2>
+
+<pre class="sh_perl">        use Mail::Sender;
+
+        eval {
+                (new Mail::Sender)
+                -&#62;OpenMultipart({
+                        to =&#62; &#39;someone@somewhere.com&#39;,
+                        subject =&#62; &#39;Alternatives with images&#39;,
+        #               debug =&#62; &#39;c:\temp\zkMailFlow.log&#39;,
+                        multipart =&#62; &#39;related&#39;,
+                })
+                        -&#62;Part({ctype =&#62; &#39;multipart/alternative&#39;})
+                                -&#62;Part({ ctype =&#62; &#39;text/plain&#39;, disposition =&#62; &#39;NONE&#39;, msg =&#62; &#60;&#60;&#39;*END*&#39; })
+        A long
+        mail
+        message.
+        *END*
+                                -&#62;Part({ctype =&#62; &#39;text/html&#39;, disposition =&#62; &#39;NONE&#39;, msg =&#62; &#60;&#60;&#39;*END*&#39;})
+        &#60;html&#62;&#60;body&#62;&#60;h1&#62;A long&#60;/h1&#62;&#60;p align=center&#62;
+        mail
+        message.
+        &#60;img src=&#34;cid:img1&#34;&#62;
+        &#60;/p&#62;&#60;/body&#62;&#60;/html&#62;
+        *END*
+                        -&#62;EndPart(&#34;multipart/alternative&#34;)
+                        -&#62;Attach({
+                                description =&#62; &#39;ed\&#39;s jpg&#39;,
+                                ctype =&#62; &#39;image/jpeg&#39;,
+                                encoding =&#62; &#39;base64&#39;,
+                                disposition =&#62; &#34;inline; filename=\&#34;0518m_b.jpg\&#34;;\r\nContent-ID: &#60;img1&#62;&#34;,
+                                file =&#62; &#39;E:\pix\humor\0518m_b.jpg&#39;
+                        })
+                -&#62;Close();
+        } or print &#34;Error sending mail: $Mail::Sender::Error\n&#34;;</pre>
+
+<p>Keep in mind please that different mail clients display messages differently. You may need to try several ways to create messages so that they appear the way you need. These two examples looked like I expected in Pegasus Email and MS Outlook.</p>
+
+<p>If this doesn&#39;t work with your mail client, please let me know and we might find a way.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Sending_a_file_that_was_just_uploaded_from_an_HTML_form"
+>Sending a file that was just uploaded from an HTML form</a></h2>
+
+<pre class="sh_perl"> use CGI;
+ use Mail::Sender;
+
+ $query = new CGI;
+
+ # uploading the file...
+ $filename = $query-&#62;param(&#39;mailformFile&#39;);
+ if ($filename ne &#34;&#34;){
+  $tmp_file = $query-&#62;tmpFileName($filename);
+ }
+
+ $sender = new Mail::Sender {from =&#62; &#39;script@krynicky.cz&#39;,smtp =&#62; &#39;mail.krynicky.czX&#39;};
+ $sender-&#62;OpenMultipart({to=&#62; &#39;jenda@krynicky.czX&#39;,subject=&#62; &#39;test CGI attach&#39;});
+ $sender-&#62;Body();
+ $sender-&#62;Send(&#60;&#60;&#34;*END*&#34;);
+ This is just a test of mail with an uploaded file.
+
+ Jenda
+ *END*
+ $sender-&#62;Attach({
+    encoding =&#62; &#39;Base64&#39;,
+    description =&#62; $filename,
+    ctype =&#62; $query-&#62;uploadInfo($filename)-&#62;{&#39;Content-Type&#39;},
+    disposition =&#62; &#34;attachment; filename = $filename&#34;,
+    file =&#62; $tmp_file
+ });
+ $sender-&#62;Close();
+
+ print &#34;Content-type: text/plain\n\nYes, it&#39;s sent\n\n&#34;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Listing_the_authentication_protocols_supported_by_the_server"
+>Listing the authentication protocols supported by the server</a></h2>
+
+<pre class="sh_perl"> use Mail::Sender;
+ my $sender = new Mail::Sender {smtp =&#62; &#39;localhost&#39;};
+ die &#34;Error: $Mail::Sender::Error\n&#34; unless ref $sender;
+ print join(&#39;, &#39;, $sender-&#62;QueryAuthProtocols()),&#34;\n&#34;;</pre>
+
+<p>or (if you have Mail::Sender 0.8.05 or newer)</p>
+
+<pre class="sh_perl"> use Mail::Sender;
+ print join(&#39;, &#39;, Mail::Sender-&#62;QueryAuthProtocols(&#39;localhost&#39;)),&#34;\n&#34;;</pre>
+
+<p>or</p>
+
+<pre class="sh_perl"> use Mail::Sender;
+ print join(&#39;, &#39;, Mail::Sender::QueryAuthProtocols(&#39;localhost&#39;)),&#34;\n&#34;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="FAQ"
+>FAQ</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Forwarding_the_messages_created_by_Mail::Sender_removes_accents._Why?"
+>Forwarding the messages created by Mail::Sender removes accents. Why?</a></h3>
+
+<p>The most likely colprit is missing or incorrect charset specified for the body or a part of the email. You should add something like</p>
+
+<pre class="sh_perl">        charset =&#62; &#39;iso-8859-1&#39;,
+        encoding =&#62; &#39;quoted-printable&#39;,</pre>
+
+<p>to the parameters passed to Open(), OpenMultipart(), MailMsg(), Body() or Part() or</p>
+
+<pre class="sh_perl">        b_charset =&#62; &#39;iso-8859-1&#39;,
+        b_encoding =&#62; &#39;quoted-printable&#39;,</pre>
+
+<p>to the parameters for MailFile().</p>
+
+<p>If you use a different charset (&#39;iso-8859-2&#39;, &#39;win-1250&#39;, ...) you will of course need to specify that charset. If you are not sure, try to send a mail with some other mail client and then look at the message/part headers.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Sometimes_there_is_an_equals_sign_at_the_end_of_an_attached_file_when_I_open_the_email_in_Outlook._What&#39;s_wrong?"
+>Sometimes there is an equals sign at the end of an attached file when I open the email in Outlook. What&#39;s wrong?</a></h2>
+
+<p>Outlook is. It has (had) a bug in its quoted printable decoding routines. This problem happens only in quoted-printable encoded parts on multipart messages. And only if the data in that part do not end with a newline. (This is new in 0.8.08, in older versions it happened in all QP encoded parts.)</p>
+
+<p>The problem is that an equals sign at the end of a line in a quoted printable encoded text means &#34;ignore the newline&#34;. That is</p>
+
+<pre class="sh_perl">        fooo sdfg sdfg sdfh dfh =
+        dfsgdsfg</pre>
+
+<p>should be decoded as</p>
+
+<pre class="sh_perl">        fooo sdfg sdfg sdfh dfh dfsgdsfg</pre>
+
+<p>The problem is at the very end of a file. The part boundary (text separating different parts of a multipart message) has to start on a new line, if the attached file ends by a newline everything is cool. If it doesn&#39;t I need to add a newline and to denote that the newline is not part of the original file I add an equals:</p>
+
+<pre class="sh_perl">        dfgd dsfgh dfh dfh dfhdfhdfhdfgh
+        this is the last line.=
+        --message-boundary-146464--</pre>
+
+<p>Otherwise I&#39;d add a newline at the end of the file. If you do not care about the newline and want to be sure Outlook doesn&#39;t add the equals to the file add</p>
+
+<pre class="sh_perl">        bypass_outlook_bug =&#62; 1</pre>
+
+<p>parameter to <code>new Mail::Sender</code> or <code>Open</code>/<code>OpenMultipart</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="WARNING"
+>WARNING</a></h2>
+
+<p>DO NOT mix Open(Multipart)|Send(Line)(Ex)|Close with MailMsg or MailFile. Both Mail(Msg/File) close any Open-ed mail. Do not try this:</p>
+
+<pre class="sh_perl"> $sender = new Mail::Sender ...;
+ $sender-&#62;OpenMultipart...;
+ $sender-&#62;Body;
+ $sender-&#62;Send(&#34;...&#34;);
+ $sender-&#62;MailFile({file =&#62; &#39;something.ext&#39;);
+ $sender-&#62;Close;</pre>
+
+<p>This WON&#39;T work!!!</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="GOTCHAS"
+>GOTCHAS</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Local_user_&#34;someone@somewhere.com&#34;_doesn&#39;t_exist"
+>Local user &#34;someone@somewhere.com&#34; doesn&#39;t exist</a></h3>
+
+<p>&#34;Thanks&#34; to spammers mail servers usualy do not allow just anyone to post a message through them. Most often they require that either the sender or the recipient is local to the server</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Mail::Sendmail_works,_Mail::Sender_doesn&#39;t"
+>Mail::Sendmail works, Mail::Sender doesn&#39;t</a></h3>
+
+<p>If you are able to connect to the mail server and scripts using Mail::Sendmail work, but Mail::Sender fails with &#34;connect() failed&#34;, please review the settings in /etc/services. The port for SMTP should be 25.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="$/_and_$\"
+>$/ and $\</a></h3>
+
+<p>If you change the $/ ($RS, $INPUT_RECORD_SEPARATOR) or $\ ($ORS, $OUTPUT_RECORD_SEPARATOR) or $, ($OFS, $OUTPUT_FIELD_SEPARATOR) Mail::Sender may stop working! Keep in mind that those variables are global and therefore they change the behaviour of &#60;&#62; and print everywhere. And since the SMTP is a plain text protocol if you change the notion of lines you can break it.</p>
+
+<p>If you have to fiddle with $/, $\ or $, do it in the smallest possible block of code and local()ize the change!</p>
+
+<pre class="sh_perl">        open my $IN, &#39;&#60;&#39;, $filename or die &#34;Can&#39;t open $filename: $!\n&#34;;
+        my $data = do {local $/; &#60;$IN&#62;};
+        close $IN;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>I&#39;m sure there are many. Please let me know if you find any.</p>
+
+<p>The problem with multiline responses from some SMTP servers (namely qmail) is solved. At last.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?MIME%3A%3ALite" class="podlinkpod"
+>MIME::Lite</a>, <a href="/perldoc?MIME%3A%3AEntity" class="podlinkpod"
+>MIME::Entity</a>, <a href="/perldoc?Mail%3A%3ASendmail" class="podlinkpod"
+>Mail::Sendmail</a>, <a href="/perldoc?Mail%3A%3AMailer" class="podlinkpod"
+>Mail::Mailer</a>, ...</p>
+
+<p>There are lots of mail related modules on CPAN, with different capabilities and interfaces. You have to find the right one yourself :-)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DISCLAIMER"
+>DISCLAIMER <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module is based on SendMail.pm Version : 1.21 that appeared in Perl-Win32-Users@activeware.com mailing list. I don&#39;t remember the name of the poster and it&#39;s not mentioned in the script. Thank you mr. <code>undef</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Jan Krynicky &#60;Jenda@Krynicky.cz&#62; <a href="http://Jenda.Krynicky.cz" class="podlinkurl"
+>http://Jenda.Krynicky.cz</a></p>
+
+<p>With help of Rodrigo Siqueira &#60;rodrigo@insite.com.br&#62;, Ed McGuigan &#60;itstech1@gate.net&#62;, John Sanche &#60;john@quadrant.net&#62;, Brian Blakley &#60;bblakley@mp5.net&#62;, and others.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 1997-2006 Jan Krynicky &#60;Jenda@Krynicky.cz&#62;. All rights reserved.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. There is only one aditional condition, you may NOT use this module for SPAMing! NEVER! (see <a href="http://spam.abuse.net/" class="podlinkurl"
+>http://spam.abuse.net/</a> for definition)</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78163 Uploads, 24704 Distributions
+105968 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 20:54:01 2012 GMT (0.19110107421875) @cpansearch1 -->
+ </body>
+</html>

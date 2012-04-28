@@ -1,0 +1,85 @@
+
+                       Net::SNMP, version 6.0.1 
+
+NAME
+
+    Net::SNMP - Object oriented interface to SNMP 
+
+DESCRIPTION
+
+    The Net::SNMP module implements an object oriented interface to the 
+    Simple Network Management Protocol.  Perl applications can use the  
+    module to retrieve or update information on a remote host using the 
+    SNMP protocol.  The module supports SNMP version-1, SNMP version-2c 
+    (Community-Based SNMPv2), and SNMP version-3.  The Net::SNMP module 
+    assumes that the user has a basic understanding of the Simple Network 
+    Management Protocol and related network management concepts.
+
+INSTALLATION
+
+    To install the Net::SNMP module and all of it's dependencies directly
+    from the Comprehensive Perl Archive Network (CPAN) execute the 
+    command:
+
+	perl -MCPAN -e "install Net::SNMP"
+
+    The Net::SNMP module can also be installed using the distribution file
+    downloaded from CPAN.  After unpacking the file, perform one of the 
+    following steps while in the top level directory of the distribution:
+
+        a.  Create a makefile by running Perl against Makefile.PL and 
+            then run make:
+
+                perl Makefile.PL
+                make test
+                make install
+
+        b.  If the Module::Build module is installed, create a Build script
+            by running Perl against Build.PL and then use it to install the
+            module:
+
+                perl Build.PL
+                perl Build
+                perl Build test
+                perl Build install
+
+        c.  Copy or move the entire directory structure (including 
+            files) located under the lib/Net directory in the 
+            distribution into a directory named Net in a Perl library 
+            directory.
+
+REQUIREMENTS
+
+    Net::SNMP uses syntax that is not supported in versions of Perl 
+    earlier than v5.6.0. 
+
+    The non-core modules Crypt::DES, Digest::MD5, Digest::SHA1, and 
+    Digest::HMAC are needed to support SNMPv3.
+
+    In order to support the AES Cipher Algorithm as a SNMPv3 privacy 
+    protocol, the non-core module Crypt::Rijndael is needed.
+
+    To use UDP/IPv6 or TCP/IPv6 as a Transport Domain, the non-core 
+    module Socket6 is needed.
+
+DOCUMENTATION
+
+    Documentation is included as part of the Net::SNMP module in 
+    Plain Old Documentation (POD) format. 
+
+AUTHOR
+
+    David M. Town <dtown@cpan.org>
+    
+LICENSE AND COPYRIGHT
+
+    Copyright (c) 1998-2010 David M. Town.  All rights reserved.
+
+    This program is free software; you may redistribute it and/or
+    modify it under the same terms as the Perl 5 programming language
+    system itself.
+
+RCS
+
+    $Id: README,v 6.1 2010/09/10 00:01:22 dtown Rel $
+

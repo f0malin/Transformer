@@ -1,0 +1,645 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Error - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Error",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Error-0.17017",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Error",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SHLOMIF",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Error">permalink</a></div>
+  <a href="/~shlomif/">Shlomi Fish</a> &gt;
+  <a href="/~shlomif/Error-0.17017/">Error-0.17017</a> &gt;
+  Error
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/072331b92b0e6e9d9bc31c3af8f8ccea?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SH/SHLOMIF/Error-0.17017.tar.gz">Error-0.17017.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Error;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SHLOMIF/Error-0.17017/lib/Error.pm">Annotate this POD
+(2)
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Error">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.17017 &nbsp;
+<span class="noprint">
+  <a href="/src/SHLOMIF/Error-0.17017/lib/Error.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#WARNING'>WARNING</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#PROCEDURAL_INTERFACE'>PROCEDURAL INTERFACE</a>
+  <li class='indexItem indexItem1'><a href='#COMPATIBILITY'>COMPATIBILITY</a>
+  <li class='indexItem indexItem1'><a href='#CLASS_INTERFACE'>CLASS INTERFACE</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#CONSTRUCTORS'>CONSTRUCTORS</a>
+    <li class='indexItem indexItem2'><a href='#STATIC_METHODS'>STATIC METHODS</a>
+    <li class='indexItem indexItem2'><a href='#OBJECT_METHODS'>OBJECT METHODS</a>
+    <li class='indexItem indexItem2'><a href='#OVERLOAD_METHODS'>OVERLOAD METHODS</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#PRE-DEFINED_ERROR_CLASSES'>PRE-DEFINED ERROR CLASSES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Error::Simple'>Error::Simple</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#$Error::ObjectifyCallback'>$Error::ObjectifyCallback</a>
+  <li class='indexItem indexItem1'><a href='#MESSAGE_HANDLERS'>MESSAGE HANDLERS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#EXAMPLE'>EXAMPLE</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#KNOWN_BUGS'>KNOWN BUGS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#MAINTAINER'>MAINTAINER</a>
+  <li class='indexItem indexItem1'><a href='#PAST_MAINTAINERS'>PAST MAINTAINERS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Error - Error/exception handling in an OO-ish way</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="WARNING"
+>WARNING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Using the &#34;Error&#34; module is <b>no longer recommended</b> due to the black-magical nature of its syntactic sugar,
+which often tends to break.
+Its maintainers have stopped actively writing code that uses it,
+and discourage people from doing so.
+See the &#34;SEE ALSO&#34; section below for better recommendations.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Error qw(:try);
+
+    throw Error::Simple( &#34;A simple error&#34;);
+
+    sub xyz {
+        ...
+        record Error::Simple(&#34;A simple error&#34;)
+            and return;
+    }
+ 
+    unlink($file) or throw Error::Simple(&#34;$file: $!&#34;,$!);
+
+    try {
+        do_some_stuff();
+        die &#34;error!&#34; if $condition;
+        throw Error::Simple &#34;Oops!&#34; if $other_condition;
+    }
+    catch Error::IO with {
+        my $E = shift;
+        print STDERR &#34;File &#34;, $E-&#62;{&#39;-file&#39;}, &#34; had a problem\n&#34;;
+    }
+    except {
+        my $E = shift;
+        my $general_handler=sub {send_message $E-&#62;{-description}};
+        return {
+            UserException1 =&#62; $general_handler,
+            UserException2 =&#62; $general_handler
+        };
+    }
+    otherwise {
+        print STDERR &#34;Well I don&#39;t know what to say\n&#34;;
+    }
+    finally {
+        close_the_garage_door_already(); # Should be reliable
+    }; # Don&#39;t forget the trailing ; or you might be surprised</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The <code>Error</code> package provides two interfaces. Firstly <code>Error</code> provides a procedural interface to exception handling. Secondly <code>Error</code> is a base class for errors/exceptions that can either be thrown, for subsequent catch, or can simply be recorded.</p>
+
+<p>Errors in the class <code>Error</code> should not be thrown directly, but the user should throw errors from a sub-class of <code>Error</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PROCEDURAL_INTERFACE"
+>PROCEDURAL INTERFACE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Error</code> exports subroutines to perform exception handling. These will be exported if the <code>:try</code> tag is used in the <code>use</code> line.</p>
+
+<dl>
+<dt><a name='try'></a><a name="try_BLOCK_CLAUSES"
+>try BLOCK CLAUSES</a></dt>
+
+<dd>
+<p><code>try</code> is the main subroutine called by the user. All other subroutines exported are clauses to the try subroutine.</p>
+
+<p>The BLOCK will be evaluated and, if no error is throw, try will return the result of the block.</p>
+
+<p><code>CLAUSES</code> are the subroutines below, which describe what to do in the event of an error being thrown within BLOCK.</p>
+
+<dt><a name='catch'></a><a name="catch_CLASS_with_BLOCK"
+>catch CLASS with BLOCK</a></dt>
+
+<dd>
+<p>This clauses will cause all errors that satisfy <code>$err-&#62;isa(CLASS)</code> to be caught and handled by evaluating <code>BLOCK</code>.</p>
+
+<p><code>BLOCK</code> will be passed two arguments. The first will be the error being thrown. The second is a reference to a scalar variable. If this variable is set by the catch block then, on return from the catch block, try will continue processing as if the catch block was never found. The error will also be available in <code>$@</code>.</p>
+
+<p>To propagate the error the catch block may call <code>$err-&#62;throw</code></p>
+
+<p>If the scalar reference by the second argument is not set, and the error is not thrown. Then the current try block will return with the result from the catch block.</p>
+
+<dt><a name='except'></a><a name="except_BLOCK"
+>except BLOCK</a></dt>
+
+<dd>
+<p>When <code>try</code> is looking for a handler, if an except clause is found <code>BLOCK</code> is evaluated. The return value from this block should be a HASHREF or a list of key-value pairs, where the keys are class names and the values are CODE references for the handler of errors of that type.</p>
+
+<dt><a name='otherwise'></a><a name="otherwise_BLOCK"
+>otherwise BLOCK</a></dt>
+
+<dd>
+<p>Catch any error by executing the code in <code>BLOCK</code></p>
+
+<p>When evaluated <code>BLOCK</code> will be passed one argument, which will be the error being processed. The error will also be available in <code>$@</code>.</p>
+
+<p>Only one otherwise block may be specified per try block</p>
+
+<dt><a name='finally'></a><a name="finally_BLOCK"
+>finally BLOCK</a></dt>
+
+<dd>
+<p>Execute the code in <code>BLOCK</code> either after the code in the try block has successfully completed, or if the try block throws an error then <code>BLOCK</code> will be executed after the handler has completed.</p>
+
+<p>If the handler throws an error then the error will be caught, the finally block will be executed and the error will be re-thrown.</p>
+
+<p>Only one finally block may be specified per try block</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COMPATIBILITY"
+>COMPATIBILITY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Moose" class="podlinkpod"
+>Moose</a> exports a keyword called <code>with</code> which clashes with Error&#39;s. This example returns a prototype mismatch error:</p>
+
+<pre class="sh_perl">    package MyTest;
+
+    use warnings;
+    use Moose;
+    use Error qw(:try);</pre>
+
+<p>(Thanks to <code>maik.hentsche@amd.com</code> for the report.).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CLASS_INTERFACE"
+>CLASS INTERFACE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="CONSTRUCTORS"
+>CONSTRUCTORS</a></h2>
+
+<p>The <code>Error</code> object is implemented as a HASH. This HASH is initialized with the arguments that are passed to it&#39;s constructor. The elements that are used by, or are retrievable by the <code>Error</code> class are listed below, other classes may add to these.</p>
+
+<pre class="sh_perl">        -file
+        -line
+        -text
+        -value
+        -object</pre>
+
+<p>If <code>-file</code> or <code>-line</code> are not specified in the constructor arguments then these will be initialized with the file name and line number where the constructor was called from.</p>
+
+<p>If the error is associated with an object then the object should be passed as the <code>-object</code> argument. This will allow the <code>Error</code> package to associate the error with the object.</p>
+
+<p>The <code>Error</code> package remembers the last error created, and also the last error associated with a package. This could either be the last error created by a sub in that package, or the last error which passed an object blessed into that package as the <code>-object</code> argument.</p>
+
+<dl>
+<dt><a name='Error'></a><a name="Error-&#62;new()"
+>Error-&#62;new()</a></dt>
+
+<dd>
+<p>See the Error::Simple documentation.</p>
+
+<dt><a name='throw'></a><a name="throw_(_[_ARGS_]_)"
+>throw ( [ ARGS ] )</a></dt>
+
+<dd>
+<p>Create a new <code>Error</code> object and throw an error, which will be caught by a surrounding <code>try</code> block, if there is one. Otherwise it will cause the program to exit.</p>
+
+<p><code>throw</code> may also be called on an existing error to re-throw it.</p>
+
+<dt><a name='with'></a><a name="with_(_[_ARGS_]_)"
+>with ( [ ARGS ] )</a></dt>
+
+<dd>
+<p>Create a new <code>Error</code> object and returns it. This is defined for syntactic sugar, eg</p>
+
+<pre class="sh_perl">    die with Some::Error ( ... );</pre>
+
+<dt><a name='record'></a><a name="record_(_[_ARGS_]_)"
+>record ( [ ARGS ] )</a></dt>
+
+<dd>
+<p>Create a new <code>Error</code> object and returns it. This is defined for syntactic sugar, eg</p>
+
+<pre class="sh_perl">    record Some::Error ( ... )
+        and return;</pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="STATIC_METHODS"
+>STATIC METHODS</a></h2>
+
+<dl>
+<dt><a name='prior'></a><a name="prior_(_[_PACKAGE_]_)"
+>prior ( [ PACKAGE ] )</a></dt>
+
+<dd>
+<p>Return the last error created, or the last error associated with <code>PACKAGE</code></p>
+
+<dt><a name='flush'></a><a name="flush_(_[_PACKAGE_]_)"
+>flush ( [ PACKAGE ] )</a></dt>
+
+<dd>
+<p>Flush the last error created, or the last error associated with <code>PACKAGE</code>.It is necessary to clear the error stack before exiting the package or uncaught errors generated using <code>record</code> will be reported.</p>
+
+<pre class="sh_perl">     $Error-&#62;flush;</pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OBJECT_METHODS"
+>OBJECT METHODS</a></h2>
+
+<dl>
+<dt><a name="stacktrace"
+>stacktrace</a></dt>
+
+<dd>
+<p>If the variable <code>$Error::Debug</code> was non-zero when the error was created, then <code>stacktrace</code> returns a string created by calling <code>Carp::longmess</code>. If the variable was zero the <code>stacktrace</code> returns the text of the error appended with the filename and line number of where the error was created, providing the text does not end with a newline.</p>
+
+<dt><a name="object"
+>object</a></dt>
+
+<dd>
+<p>The object this error was associated with</p>
+
+<dt><a name="file"
+>file</a></dt>
+
+<dd>
+<p>The file where the constructor of this error was called from</p>
+
+<dt><a name="line"
+>line</a></dt>
+
+<dd>
+<p>The line where the constructor of this error was called from</p>
+
+<dt><a name="text"
+>text</a></dt>
+
+<dd>
+<p>The text of the error</p>
+
+<dt><a name='err'></a><a name="$err-&#62;associate($obj)"
+>$err-&#62;associate($obj)</a></dt>
+
+<dd>
+<p>Associates an error with an object to allow error propagation. I.e:</p>
+
+<pre class="sh_perl">    $ber-&#62;encode(...) or
+        return Error-&#62;prior($ber)-&#62;associate($ldap);</pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OVERLOAD_METHODS"
+>OVERLOAD METHODS</a></h2>
+
+<dl>
+<dt><a name="stringify"
+>stringify</a></dt>
+
+<dd>
+<p>A method that converts the object into a string. This method may simply return the same as the <code>text</code> method, or it may append more information. For example the file name and line number.</p>
+
+<p>By default this method returns the <code>-text</code> argument that was passed to the constructor, or the string <code>&#34;Died&#34;</code> if none was given.</p>
+
+<dt><a name="value"
+>value</a></dt>
+
+<dd>
+<p>A method that will return a value that can be associated with the error. For example if an error was created due to the failure of a system call, then this may return the numeric value of <code>$!</code> at the time.</p>
+
+<p>By default this method returns the <code>-value</code> argument that was passed to the constructor.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PRE-DEFINED_ERROR_CLASSES"
+>PRE-DEFINED ERROR CLASSES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Error::Simple"
+>Error::Simple</a></h2>
+
+<p>This class can be used to hold simple error strings and values. It&#39;s constructor takes two arguments. The first is a text value, the second is a numeric value. These values are what will be returned by the overload methods.</p>
+
+<p>If the text value ends with <code>at file line 1</code> as $@ strings do, then this infomation will be used to set the <code>-file</code> and <code>-line</code> arguments of the error object.</p>
+
+<p>This class is used internally if an eval&#39;d block die&#39;s with an error that is a plain string. (Unless <code>$Error::ObjectifyCallback</code> is modified)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="$Error::ObjectifyCallback"
+>$Error::ObjectifyCallback <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This variable holds a reference to a subroutine that converts errors that are plain strings to objects. It is used by Error.pm to convert textual errors to objects, and can be overrided by the user.</p>
+
+<p>It accepts a single argument which is a hash reference to named parameters. Currently the only named parameter passed is <code>&#39;text&#39;</code> which is the text of the error, but others may be available in the future.</p>
+
+<p>For example the following code will cause Error.pm to throw objects of the class MyError::Bar by default:</p>
+
+<pre class="sh_perl">    sub throw_MyError_Bar
+    {
+        my $args = shift;
+        my $err = MyError::Bar-&#62;new();
+        $err-&#62;{&#39;MyBarText&#39;} = $args-&#62;{&#39;text&#39;};
+        return $err;
+    }
+
+    {
+        local $Error::ObjectifyCallback = \&#38;throw_MyError_Bar;
+
+        # Error handling here.
+    }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MESSAGE_HANDLERS"
+>MESSAGE HANDLERS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Error</code> also provides handlers to extend the output of the <code>warn()</code> perl function, and to handle the printing of a thrown <code>Error</code> that is not caught or otherwise handled. These are not installed by default, but are requested using the <code>:warndie</code> tag in the <code>use</code> line.</p>
+
+<pre class="sh_perl"> use Error qw( :warndie );</pre>
+
+<p>These new error handlers are installed in <code>$SIG{__WARN__}</code> and <code>$SIG{__DIE__}</code>. If these handlers are already defined when the tag is imported, the old values are stored, and used during the new code. Thus, to arrange for custom handling of warnings and errors, you will need to perform something like the following:</p>
+
+<pre class="sh_perl"> BEGIN {
+   $SIG{__WARN__} = sub {
+     print STDERR &#34;My special warning handler: $_[0]&#34;
+   };
+ }
+
+ use Error qw( :warndie );</pre>
+
+<p>Note that setting <code>$SIG{__WARN__}</code> after the <code>:warndie</code> tag has been imported will overwrite the handler that <code>Error</code> provides. If this cannot be avoided, then the tag can be explicitly <code>import</code>ed later</p>
+
+<pre class="sh_perl"> use Error;
+
+ $SIG{__WARN__} = ...;
+
+ import Error qw( :warndie );</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLE"
+>EXAMPLE</a></h2>
+
+<p>The <code>__DIE__</code> handler turns messages such as</p>
+
+<pre class="sh_perl"> Can&#39;t call method &#34;foo&#34; on an undefined value at examples/warndie.pl line 16.</pre>
+
+<p>into</p>
+
+<pre class="sh_perl"> Unhandled perl error caught at toplevel:
+
+   Can&#39;t call method &#34;foo&#34; on an undefined value
+
+ Thrown from: examples/warndie.pl:16
+
+ Full stack trace:
+
+         main::inner(&#39;undef&#39;) called at examples/warndie.pl line 20
+         main::outer(&#39;undef&#39;) called at examples/warndie.pl line 23</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>See <a href="/perldoc?Exception%3A%3AClass" class="podlinkpod"
+>Exception::Class</a> for a different module providing Object-Oriented exception handling, along with a convenient syntax for declaring hierarchies for them. It doesn&#39;t provide Error&#39;s syntactic sugar of <code>try { ... }</code>, <code>catch { ... }</code>, etc. which may be a good thing or a bad thing based on what you want. (Because Error&#39;s syntactic sugar tends to break.)</p>
+
+<p><a href="/perldoc?Error%3A%3AException" class="podlinkpod"
+>Error::Exception</a> aims to combine <a href="/~shlomif/Error-0.17017/lib/Error.pm" class="podlinkpod"
+>Error</a> and <a href="/perldoc?Exception%3A%3AClass" class="podlinkpod"
+>Exception::Class</a> &#34;with correct stringification&#34;.</p>
+
+<p><a href="/perldoc?TryCatch" class="podlinkpod"
+>TryCatch</a> and <a href="/perldoc?Try%3A%3ATiny" class="podlinkpod"
+>Try::Tiny</a> are similar in concept to Error.pm only providing a syntax that hopefully breaks less.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="KNOWN_BUGS"
+>KNOWN BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>None, but that does not mean there are not any.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Graham Barr &#60;gbarr@pobox.com&#62;</p>
+
+<p>The code that inspired me to write this was originally written by Peter Seibel &#60;peter@weblogic.com&#62; and adapted by Jesse Glick &#60;jglick@sig.bsh.com&#62;.</p>
+
+<p><code>:warndie</code> handlers added by Paul Evans &#60;leonerd@leonerd.org.uk&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MAINTAINER"
+>MAINTAINER <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Shlomi Fish &#60;shlomif@iglu.org.il&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PAST_MAINTAINERS"
+>PAST MAINTAINERS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Arun Kumar U &#60;u_arunkumar@yahoo.com&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 1997-8 Graham Barr. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78227 Uploads, 24723 Distributions
+106028 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Thu Apr 26 19:35:58 2012 GMT (0.102092027664185) @cpansearch1 -->
+ </body>
+</html>

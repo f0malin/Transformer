@@ -1,0 +1,1474 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Net::Server - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Net-Server",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Net-Server-0.99",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Net::Server",3]);
+    _gaq.push(["_setCustomVar",1,"Author","RHANDOM",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Net::Server">permalink</a></div>
+  <a href="/~rhandom/">Paul Seamons</a> &gt;
+  <a href="/~rhandom/Net-Server-0.99/">Net-Server-0.99</a> &gt;
+  Net::Server
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/155a7fc84d55b819ca4a55f6423fcad9?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/R/RH/RHANDOM/Net-Server-0.99.tar.gz">Net-Server-0.99.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Net%3A%3AServer;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~RHANDOM/Net-Server-0.99/lib/Net/Server.pod">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?IO%3A%3ASocket">IO::Socket</a><br>
+<a href="/perldoc?IO%3A%3ASelect">IO::Select</a><br>
+<a href="/perldoc?Net%3A%3ADaemon">Net::Daemon</a><br>
+<a href="/perldoc?HTTP%3A%3ADaemon">HTTP::Daemon</a><br>
+<a href="/perldoc?XML%3A%3ATwig">XML::Twig</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?WWW%3A%3AMechanize">WWW::Mechanize</a><br>
+<a href="/perldoc?IO%3A%3APipe">IO::Pipe</a><br>
+<a href="/perldoc?Object%3A%3AInsideOut">Object::InsideOut</a><br>
+<a href="/perldoc?HTML%3A%3ATemplate">HTML::Template</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Net%3A%3AServer">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 27</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 12</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Net-Server">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.99 &nbsp;
+<span class="noprint">
+  <a href="/src/RHANDOM/Net-Server-0.99/lib/Net/Server.pm">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~janl/Net-Server/lib/Net/Server.pod">Net-Server-0.99.6.1</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#FEATURES'>FEATURES</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#PERSONALITIES'>PERSONALITIES</a>
+  <li class='indexItem indexItem1'><a href='#SOCKET_ACCESS'>SOCKET ACCESS</a>
+  <li class='indexItem indexItem1'><a href='#SAMPLE_CODE'>SAMPLE CODE</a>
+  <li class='indexItem indexItem1'><a href='#ARGUMENTS'>ARGUMENTS</a>
+  <li class='indexItem indexItem1'><a href='#ADDING_CUSTOM_ARGUMENTS'>ADDING CUSTOM ARGUMENTS</a>
+  <li class='indexItem indexItem1'><a href='#DEFAULT_ARGUMENTS_FOR_Net::Server'>DEFAULT ARGUMENTS FOR Net::Server</a>
+  <li class='indexItem indexItem1'><a href='#PROPERTIES'>PROPERTIES</a>
+  <li class='indexItem indexItem1'><a href='#CONFIGURATION_FILE'>CONFIGURATION FILE</a>
+  <li class='indexItem indexItem1'><a href='#PROCESS_FLOW'>PROCESS FLOW</a>
+  <li class='indexItem indexItem1'><a href='#MAIN_SERVER_METHODS'>MAIN SERVER METHODS</a>
+  <li class='indexItem indexItem1'><a href='#MAIN_CLIENT_CONNECTION_METHODS'>MAIN CLIENT CONNECTION METHODS</a>
+  <li class='indexItem indexItem1'><a href='#HOOKS'>HOOKS</a>
+  <li class='indexItem indexItem1'><a href='#OTHER_METHODS'>OTHER METHODS</a>
+  <li class='indexItem indexItem1'><a href='#RESTARTING'>RESTARTING</a>
+  <li class='indexItem indexItem1'><a href='#FILES'>FILES</a>
+  <li class='indexItem indexItem1'><a href='#INSTALL'>INSTALL</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#THANKS'>THANKS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#TODO'>TODO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Net::Server - Extensible,
+general Perl server engine</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    #!/usr/bin/perl -w -T
+    package MyPackage;
+
+    use base qw(Net::Server);
+
+    sub process_request {
+        my $self = shift;
+        while (&#60;STDIN&#62;) {
+            s/\r?\n$//;
+            print &#34;You said &#39;$_&#39;\r\n&#34;; # basic echo
+            last if /quit/i;
+        }
+    }
+
+    MyPackage-&#62;run(port =&#62; 160);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FEATURES"
+>FEATURES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> * Single Server Mode
+ * Inetd Server Mode
+ * Preforking Simple Mode (PreForkSimple)
+ * Preforking Managed Mode (PreFork)
+ * Forking Mode
+ * Multiplexing Mode using a single process
+ * Multi port accepts on Single, Preforking, and Forking modes
+ * Basic HTTP Daemon handler
+ * Simultaneous accept/recv on tcp, udp, and unix and ssl/tcp sockets
+ * Working SSL sockets
+ * Safe signal handling in Fork/PreFork avoids perl signal trouble
+ * User customizable hooks
+ * Chroot ability after bind
+ * Change of user and group after bind
+ * Basic allow/deny access control
+ * Customized logging (choose Syslog, log_file, or STDERR)
+ * HUP able server (clean restarts via sig HUP)
+ * Dequeue ability in all Fork and PreFork modes.
+ * Taint clean
+ * Written in Perl
+ * Protection against buffer overflow
+ * Clean process flow
+ * Extensibility</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Net::Server</code> is an extensible, generic Perl server engine. <code>Net::Server</code> combines the good properties from <code>Net::Daemon</code> (0.34), <code>NetServer::Generic</code> (1.03), and <code>Net::FTPServer</code> (1.0), and also from various concepts in the Apache Webserver.</p>
+
+<p><code>Net::Server</code> attempts to be a generic server as in <code>Net::Daemon</code> and <code>NetServer::Generic</code>. It includes with it the ability to run as an inetd process (<code>Net::Server::INET</code>), a single connection server (<code>Net::Server</code> or <code>Net::Server::Single</code>), a forking server (<code>Net::Server::Fork</code>), a preforking server which maintains a constant number of preforked children (<code>Net::Server::PreForkSimple</code>), or as a managed preforking server which maintains the number of children based on server load (<code>Net::Server::PreFork</code>). In all but the inetd type, the server provides the ability to connect to one or to multiple server ports.</p>
+
+<p><code>Net::Server</code> uses ideologies of <code>Net::FTPServer</code> in order to provide extensibility. The additional server types are made possible via &#34;personalities&#34; or sub classes of the <code>Net::Server</code>. By moving the multiple types of servers out of the main <code>Net::Server</code> class, the <code>Net::Server</code> concept is easily extended to other types (in the near future, we would like to add a &#34;Thread&#34; personality).</p>
+
+<p><code>Net::Server</code> borrows several concepts from the Apache Webserver. <code>Net::Server</code> uses &#34;hooks&#34; to allow custom servers such as SMTP, HTTP, POP3, etc. to be layered over the base <code>Net::Server</code> class. In addition the <code>Net::Server::PreFork</code> class borrows concepts of min_start_servers, max_servers, and min_waiting servers. <code>Net::Server::PreFork</code> also uses the concept of an flock serialized accept when accepting on multiple ports (PreFork can choose between flock, IPC::Semaphore, and pipe to control serialization).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PERSONALITIES"
+>PERSONALITIES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Net::Server</code> is built around a common class (Net::Server) and is extended using sub classes, or <code>personalities</code>. Each personality inherits, overrides, or enhances the base methods of the base class.</p>
+
+<p>Included with the Net::Server package are several basic personalities, each of which has their own use.</p>
+
+<dl>
+<dt><a name="Fork"
+>Fork</a></dt>
+
+<dd>
+<p>Found in the module Net/Server/Fork.pm (see <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/Fork.pm" class="podlinkpod"
+>Net::Server::Fork</a>). This server binds to one or more ports and then waits for a connection. When a client request is received, the parent forks a child, which then handles the client and exits. This is good for moderately hit services.</p>
+
+<dt><a name="INET"
+>INET</a></dt>
+
+<dd>
+<p>Found in the module Net/Server/INET.pm (see <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/INET.pm" class="podlinkpod"
+>Net::Server::INET</a>). This server is designed to be used with inetd. The <code>pre_bind</code>, <code>bind</code>, <code>accept</code>, and <code>post_accept</code> are all overridden as these services are taken care of by the INET daemon.</p>
+
+<dt><a name="MultiType"
+>MultiType</a></dt>
+
+<dd>
+<p>Found in the module Net/Server/MultiType.pm (see <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/MultiType.pm" class="podlinkpod"
+>Net::Server::MultiType</a>). This server has no server functionality of its own. It is designed for servers which need a simple way to easily switch between different personalities. Multiple <code>server_type</code> parameters may be given and Net::Server::MultiType will cycle through until it finds a class that it can use.</p>
+
+<dt><a name="Multiplex"
+>Multiplex</a></dt>
+
+<dd>
+<p>Found in the module Net/Server/Multiplex.pm (see <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/Multiplex.pm" class="podlinkpod"
+>Net::Server::Multiplex</a>). This server binds to one or more ports. It uses IO::Multiplex to multiplex between waiting for new connections and waiting for input on currently established connections. This personality is designed to run as one process without forking. The <code>process_request</code> method is never used but the <code>mux_input</code> callback is used instead (see also <a href="/perldoc?IO%3A%3AMultiplex" class="podlinkpod"
+>IO::Multiplex</a>). See examples/samplechat.pl for an example using most of the features of Net::Server::Multiplex.</p>
+
+<dt><a name="PreForkSimple"
+>PreForkSimple</a></dt>
+
+<dd>
+<p>Found in the module Net/Server/PreFork.pm (see <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/PreFork.pm" class="podlinkpod"
+>Net::Server::PreFork</a>). This server binds to one or more ports and then forks <code>max_servers</code> child process. The server will make sure that at any given time there are always <code>max_servers</code> available to receive a client request. Each of these children will process up to <code>max_requests</code> client connections. This type is good for a heavily hit site that can dedicate max_server processes no matter what the load. It should scale well for most applications. Multi port accept is accomplished using either flock, IPC::Semaphore, or pipe to serialize the children. Serialization may also be switched on for single port in order to get around an OS that does not allow multiple children to accept at the same time. For a further discussion of serialization see <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/PreFork.pm" class="podlinkpod"
+>Net::Server::PreFork</a>.</p>
+
+<dt><a name="PreFork"
+>PreFork</a></dt>
+
+<dd>
+<p>Found in the module Net/Server/PreFork.pm (see <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/PreFork.pm" class="podlinkpod"
+>Net::Server::PreFork</a>). This server binds to one or more ports and then forks <code>min_servers</code> child process. The server will make sure that at any given time there are at least <code>min_spare_servers</code> but not more than <code>max_spare_servers</code> available to receive a client request, up to <code>max_servers</code>. Each of these children will process up to <code>max_requests</code> client connections. This type is good for a heavily hit site, and should scale well for most applications. Multi port accept is accomplished using either flock, IPC::Semaphore, or pipe to serialize the children. Serialization may also be switched on for single port in order to get around an OS that does not allow multiple children to accept at the same time. For a further discussion of serialization see <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/PreFork.pm" class="podlinkpod"
+>Net::Server::PreFork</a>.</p>
+
+<dt><a name="Single"
+>Single</a></dt>
+
+<dd>
+<p>All methods fall back to Net::Server. This personality is provided only as parallelism for Net::Server::MultiType.</p>
+
+<dt><a name="HTTP"
+>HTTP</a></dt>
+
+<dd>
+<p>Not a distinct personality. Provides a basic HTTP daemon. This can be combined with the SSLEAY proto to provide an HTTPS Daemon. See <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/HTTP.pm" class="podlinkpod"
+>Net::Server::HTTP</a>.</p>
+</dd>
+</dl>
+
+<p><code>Net::Server</code> was partially written to make it easy to add new personalities. Using separate modules built upon an open architecture allows for easy addition of new features, a separate development process, and reduced code bloat in the core module.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SOCKET_ACCESS"
+>SOCKET ACCESS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Once started, the Net::Server will take care of binding to port and waiting for connections. Once a connection is received, the Net::Server will accept on the socket and will store the result (the client connection) in $self-&#62;{server}-&#62;{client}. This property is a Socket blessed into the the IO::Socket classes. UDP servers are slightly different in that they will perform a <b>recv</b> instead of an <b>accept</b>.</p>
+
+<p>To make programming easier, during the post_accept phase, STDIN and STDOUT are opened to the client connection. This allows for programs to be written using &#60;STDIN&#62; and print &#34;out\n&#34; to print to the client connection. UDP will require using a -&#62;send call.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SAMPLE_CODE"
+>SAMPLE CODE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following is a very simple server. The main functionality occurs in the process_request method call as shown below. Notice the use of timeouts to prevent Denial of Service while reading. (Other examples of using <code>Net::Server</code> can, or will, be included with this distribution).</p>
+
+<pre class="sh_perl">    #!/usr/bin/perl -w -T
+
+    package MyPackage;
+
+    use strict;
+    use base qw(Net::Server::PreFork); # any personality will do
+
+    MyPackage-&#62;run;
+
+    ### over-ridden subs below
+
+    sub process_request {
+        my $self = shift;
+        eval {
+
+            local $SIG{&#39;ALRM&#39;} = sub { die &#34;Timed Out!\n&#34; };
+            my $timeout = 30; # give the user 30 seconds to type some lines
+
+            my $previous_alarm = alarm($timeout);
+            while (&#60;STDIN&#62;) {
+                s/\r?\n$//;
+                print &#34;You said &#39;$_&#39;\r\n&#34;;
+                alarm($timeout);
+            }
+            alarm($previous_alarm);
+
+        };
+
+        if ($@ =~ /timed out/i) {
+            print STDOUT &#34;Timed Out.\r\n&#34;;
+            return;
+        }
+
+    }
+
+    1;</pre>
+
+<p>Playing this file from the command line will invoke a Net::Server using the PreFork personality. When building a server layer over the Net::Server, it is important to use features such as timeouts to prevent Denial Of Service attacks.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ARGUMENTS"
+>ARGUMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>There are five possible ways to pass arguments to Net::Server. They are <i>passing to the new method</i>, <i>passing on command line</i>, <i>passing parameters to run</i>, <i>using a conf file</i>, <i>returning values in the default_values method</i>, or <i>configuring the values in post_configure_hook</i>.</p>
+
+<p>The <code>options</code> method is used to determine which arguments the server will search for and can be used to extend the parsed parameters. Any arguments found from the command line, parameters passed to run, and arguments found in the conf_file will be matched against the keys of the options template. Any commandline parameters that do not match will be left in place and can be further processed by the server in the various hooks (by looking at @ARGV). Arguments passed to new will automatically win over any other options (this can be used if you would like to disallow a user passing in other arguments).</p>
+
+<p>Arguments consist of key value pairs. On the commandline these pairs follow the POSIX fashion of <code>--key value</code> or <code>--key=value</code>, and also <code>key=value</code>. In the conf file the parameter passing can best be shown by the following regular expression: ($key,$val)=~/^(\w+)\s+(\S+?)\s+$/. Passing arguments to the run method is done as follows: <code>&#60;Net::Server-&#62;run(key1 =</code> &#39;val1&#39;)&#62;&#62;. Passing arguments via a prebuilt object can best be shown in the following code:</p>
+
+<pre class="sh_perl">    #!/usr/bin/perl -w -T
+
+    package MyPackage;
+    use strict;
+    use base qw(Net::Server);
+
+    my $server = MyPackage-&#62;new({
+        key1 =&#62; &#39;val1&#39;,
+    });
+
+    $server-&#62;run;</pre>
+
+<p>All five methods for passing arguments may be used at the same time. Once an argument has been set, it is not over written if another method passes the same argument. <code>Net::Server</code> will look for arguments in the following order:</p>
+
+<pre class="sh_perl">  1) Arguments passed to the C&#60;new&#62; method.
+  2) Arguments passed on command line.
+  3) Arguments passed to the C&#60;run&#62; method.
+  4) Arguments passed via a conf file.
+  5) Arguments set in the C&#60;default_values&#62; method.</pre>
+
+<p>Additionally the following hooks are available:</p>
+
+<pre class="sh_perl">  1) Arguments set in the configure_hook (occurs after new
+     but before any of the other areas are checked).
+  2) Arguments set and validated in the post_configure_hook
+     (occurs after all of the other areas are checked).</pre>
+
+<p>Each of these levels will override parameters of the same name specified in subsequent levels. For example, specifying --setsid=0 on the command line will override a value of &#34;setsid 1&#34; in the conf file.</p>
+
+<p>Note that the configure_hook method doesn&#39;t return values to set, but is there to allow for setting up configured values before the configure method is called.</p>
+
+<p>Key/value pairs used by the server are removed by the configuration process so that server layers on top of <code>Net::Server</code> can pass and read their own parameters.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ADDING_CUSTOM_ARGUMENTS"
+>ADDING CUSTOM ARGUMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>It is possible to add in your own custom parameters to those parsed by Net::Server. The following code shows how this is done:</p>
+
+<pre class="sh_perl">    sub options {
+        my $self     = shift;
+        my $prop     = $self-&#62;{&#39;server&#39;};
+        my $template = shift;
+
+        ### setup options in the parent classes
+        $self-&#62;SUPER::options($template);
+
+        ### add a single value option
+        $prop-&#62;{&#39;my_option&#39;} ||= undef;
+        $template-&#62;{&#39;my_option&#39;} = \ $prop-&#62;{&#39;my_option&#39;};
+
+        ### add a multi value option
+        $prop-&#62;{&#39;an_arrayref_item&#39;} ||= [];
+        $template-&#62;{&#39;an_arrayref_item&#39;} = $prop-&#62;{&#39;an_arrayref_item&#39;};
+    }</pre>
+
+<p>Overriding the <code>options</code> method allows for adding your own custom fields. A template hashref is passed in, that should then be modified to contain an of your custom fields. Fields which are intended to receive a single scalar value should have a reference to the destination scalar given. Fields which are intended to receive multiple values should reference the corresponding destination arrayref.</p>
+
+<p>You are responsible for validating your custom options once they have been parsed. The post_configure_hook is a good place to do your validation.</p>
+
+<p>Some emails have asked why we use this &#34;template&#34; method. The idea is that you are creating the the data structure to store the values in, and you are also creating a way to get the values into the data structure. The template is the way to get the values to the servers data structure. One of the possibilities (that probably isn&#39;t used that much) is that by letting you specify the mapping, you could build a nested data structure - even though the passed in arguments are flat. It also allows you to setup aliases to your names.</p>
+
+<p>For example, a basic structure might look like this:</p>
+
+<pre class="sh_perl">   $prop = $self-&#62;{&#39;server&#39;}
+
+   $prop-&#62;{&#39;my_custom_option&#39;} ||= undef;
+   $prop-&#62;{&#39;my_custom_array&#39;}  ||= [];
+
+   $template = {
+      my_custom_option =&#62; \ $prop-&#62;{&#39;my_custom_option&#39;},
+      mco              =&#62; \ $prop-&#62;{&#39;my_custom_option&#39;}, # alias
+      my_custom_array  =&#62; $prop-&#62;{&#39;my_custom_array&#39;},
+      mca              =&#62; $prop-&#62;{&#39;my_custom_array&#39;}, # an alias
+   };
+
+   $template-&#62;{&#39;mco2&#39;} = $template-&#62;{&#39;mco&#39;}; # another way to alias</pre>
+
+<p>But you could also have more complex data:</p>
+
+<pre class="sh_perl">   $prop = $self-&#62;{&#39;server&#39;};
+
+   $prop-&#62;{&#39;one_layer&#39;} = {
+       two_layer =&#62; [
+           undef,
+           undef,
+       ],
+   };
+
+   $template = {
+        param1 =&#62; \ $prop-&#62;{&#39;one_layer&#39;}-&#62;{&#39;two_layer&#39;}-&#62;[0],
+        param2 =&#62; \ $prop-&#62;{&#39;one_layer&#39;}-&#62;{&#39;two_layer&#39;}-&#62;[1],
+   };</pre>
+
+<p>This is of course a contrived example - but it does show that you can get the data from the flat passed in arguments to whatever type of structure you need - with only a little bit of effort.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DEFAULT_ARGUMENTS_FOR_Net::Server"
+>DEFAULT ARGUMENTS FOR Net::Server <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following arguments are available in the default <code>Net::Server</code> or <code>Net::Server::Single</code> modules. (Other personalities may use additional parameters and may optionally not use parameters from the base class.)</p>
+
+<pre class="sh_perl">  Key               Value                    Default
+  conf_file         &#34;filename&#34;               undef
+
+  log_level         0-4                      2
+  log_file          (filename|Sys::Syslog)   undef
+
+  ## syslog parameters
+  syslog_logsock    (native|unix|inet|udp
+                     |tcp|stream|console)    unix (on Sys::Syslog &#60; 0.15)
+  syslog_ident      &#34;identity&#34;               &#34;net_server&#34;
+  syslog_logopt     (cons|ndelay|nowait|pid) pid
+  syslog_facility   \w+                      daemon
+
+  port              \d+                      20203
+  host              &#34;host&#34;                   &#34;*&#34;
+  proto             (tcp|udp|unix)           &#34;tcp&#34;
+  listen            \d+                      SOMAXCONN
+
+  reverse_lookups   1                        undef
+  allow             /regex/                  none
+  deny              /regex/                  none
+  cidr_allow        CIDR                     none
+  cidr_deny         CIDR                     none
+
+  ## daemonization parameters
+  pid_file          &#34;filename&#34;               undef
+  chroot            &#34;directory&#34;              undef
+  user              (uid|username)           &#34;nobody&#34;
+  group             (gid|group)              &#34;nobody&#34;
+  background        1                        undef
+  setsid            1                        undef
+
+  no_close_by_child (1|undef)                undef
+
+  ## See Net::Server::Proto::(TCP|UDP|UNIX|SSLeay|etc)
+  ## for more sample parameters.</pre>
+
+<dl>
+<dt><a name="conf_file"
+>conf_file</a></dt>
+
+<dd>
+<p>Filename from which to read additional key value pair arguments for starting the server. Default is undef.</p>
+
+<p>There are two ways that you can specify a default location for a conf_file. The first is to pass the default value to the run method as in:</p>
+
+<pre class="sh_perl">    MyServer-&#62;run({
+       conf_file =&#62; &#39;/etc/my_server.conf&#39;,
+    });</pre>
+
+<p>If the end user passes in --conf_file=/etc/their_server.conf then the value will be overridden.</p>
+
+<p>The second way to do this was added in the 0.96 version. It uses the default_values method as in:</p>
+
+<pre class="sh_perl">    sub default_values {
+        return {
+            conf_file =&#62; &#39;/etc/my_server.conf&#39;,
+        }
+    }</pre>
+
+<p>This method has the advantage of also being able to be overridden in the run method.</p>
+
+<p>If you do not want the user to be able to specify a conf_file at all, you can pass conf_file to the new method when creating your object:</p>
+
+<pre class="sh_perl">    MyServer-&#62;new({
+       conf_file =&#62; &#39;/etc/my_server.conf&#39;,
+    })-&#62;run;</pre>
+
+<p>If passed this way, the value passed to new will &#34;win&#34; over any of the other passed in values.</p>
+
+<dt><a name="log_level"
+>log_level</a></dt>
+
+<dd>
+<p>Ranges from 0 to 4 in level. Specifies what level of error will be logged. &#34;O&#34; means logging is off. &#34;4&#34; means very verbose. These levels should be able to correlate to syslog levels. Default is 2. These levels correlate to syslog levels as defined by the following key/value pairs: 0=&#62;&#39;err&#39;, 1=&#62;&#39;warning&#39;, 2=&#62;&#39;notice&#39;, 3=&#62;&#39;info&#39;, 4=&#62;&#39;debug&#39;.</p>
+
+<dt><a name="log_file"
+>log_file</a></dt>
+
+<dd>
+<p>Name of log file to be written to. If no name is given and hook is not overridden, log goes to STDERR. Default is undef. If the magic name &#34;Sys::Syslog&#34; is used, all logging will take place via the Sys::Syslog module. If syslog is used the parameters <code>syslog_logsock</code>, <code>syslog_ident</code>, and <code>syslog_logopt</code>,and <code>syslog_facility</code> may also be defined. If a <code>log_file</code> is given or if <code>setsid</code> is set, STDIN and STDOUT will automatically be opened to /dev/null and STDERR will be opened to STDOUT. This will prevent any output from ending up at the terminal.</p>
+
+<dt><a name="pid_file"
+>pid_file</a></dt>
+
+<dd>
+<p>Filename to store pid of parent process. Generally applies only to forking servers. Default is none (undef).</p>
+
+<dt><a name="syslog_logsock"
+>syslog_logsock</a></dt>
+
+<dd>
+<p>Only available if <code>log_file</code> is equal to &#34;Sys::Syslog&#34;. May be either unix, inet, native, console, stream, udp, or tcp, or an arrayref of the types to try. Default is &#34;unix&#34; if the version of Sys::Syslog &#60; 0.15 - otherwise the default is to not call setlogsock.</p>
+
+<p>See <a href="/perldoc?Sys%3A%3ASyslog" class="podlinkpod"
+>Sys::Syslog</a>.</p>
+
+<dt><a name="syslog_ident"
+>syslog_ident</a></dt>
+
+<dd>
+<p>Only available if <code>log_file</code> is equal to &#34;Sys::Syslog&#34;. Id to prepend on syslog entries. Default is &#34;net_server&#34;. See <a href="/perldoc?Sys%3A%3ASyslog" class="podlinkpod"
+>Sys::Syslog</a>.</p>
+
+<dt><a name="syslog_logopt"
+>syslog_logopt</a></dt>
+
+<dd>
+<p>Only available if <code>log_file</code> is equal to &#34;Sys::Syslog&#34;. May be either zero or more of &#34;pid&#34;,&#34;cons&#34;,&#34;ndelay&#34;,&#34;nowait&#34;. Default is &#34;pid&#34;. See <a href="/perldoc?Sys%3A%3ASyslog" class="podlinkpod"
+>Sys::Syslog</a>.</p>
+
+<dt><a name="syslog_facility"
+>syslog_facility</a></dt>
+
+<dd>
+<p>Only available if <code>log_file</code> is equal to &#34;Sys::Syslog&#34;. See <a href="/perldoc?Sys%3A%3ASyslog" class="podlinkpod"
+>Sys::Syslog</a> and <a href="/perldoc?syslog" class="podlinkpod"
+>syslog</a>. Default is &#34;daemon&#34;.</p>
+
+<dt><a name="port"
+>port</a></dt>
+
+<dd>
+<p>See <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/Proto.pm" class="podlinkpod"
+>Net::Server::Proto</a>. Local port/socket on which to bind. If low port, process must start as root. If multiple ports are given, all will be bound at server startup. May be of the form <code>host:port/proto</code>, <code>host:port</code>, <code>port/proto</code>, or <code>port</code>, where <i>host</i> represents a hostname residing on the local box, where <i>port</i> represents either the number of the port (eg. &#34;80&#34;) or the service designation (eg. &#34;http&#34;), and where <i>proto</i> represents the protocol to be used. See <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/Proto.pm" class="podlinkpod"
+>Net::Server::Proto</a>. If you are working with unix sockets, you may also specify <code>socket_file|unix</code> or <code>socket_file|type|unix</code> where type is SOCK_DGRAM or SOCK_STREAM. If the protocol is not specified, <i>proto</i> will default to the <code>proto</code> specified in the arguments. If <code>proto</code> is not specified there it will default to &#34;tcp&#34;. If <i>host</i> is not specified, <i>host</i> will default to <code>host</code> specified in the arguments. If <code>host</code> is not specified there it will default to &#34;*&#34;. Default port is 20203. Configuration passed to new or run may be either a scalar containing a single port number or an arrayref of ports.</p>
+
+<p>On systems that support it, a port value of 0 may be used to ask the OS to auto-assign a port. The value of the auto-assigned port will be stored in the NS_port property of the Net::Server::Proto::TCP object and is also available in the sockport method. When the server is processing a request, the $self-&#62;{server}-&#62;{sockport} property contains the port that was connected through.</p>
+
+<dt><a name="host"
+>host</a></dt>
+
+<dd>
+<p>Local host or addr upon which to bind port. If a value of &#39;*&#39; is given, the server will bind that port on all available addresses on the box. See <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/Proto.pm" class="podlinkpod"
+>Net::Server::Proto</a>. See <a href="/perldoc?IO%3A%3ASocket" class="podlinkpod"
+>IO::Socket</a>. Configuration passed to new or run may be either a scalar containing a single host or an arrayref of hosts - if the hosts array is shorter than the ports array, the last host entry will be used to augment the hosts arrary to the size of the ports array.</p>
+
+<dt><a name="proto"
+>proto</a></dt>
+
+<dd>
+<p>See <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/Proto.pm" class="podlinkpod"
+>Net::Server::Proto</a>. Protocol to use when binding ports. See <a href="/perldoc?IO%3A%3ASocket" class="podlinkpod"
+>IO::Socket</a>. As of release 0.70, Net::Server supports tcp, udp, and unix. Other types will need to be added later (or custom modules extending the Net::Server::Proto class may be used). Configuration passed to new or run may be either a scalar containing a single proto or an arrayref of protos - if the protos array is shorter than the ports array, the last proto entry will be used to augment the protos arrary to the size of the ports array.</p>
+
+<dt><a name="listen"
+>listen</a></dt>
+
+<dd>
+<pre class="sh_perl">  See L&#60;IO::Socket&#62;.  Not used with udp protocol (or UNIX SOCK_DGRAM).</pre>
+
+<dt><a name="reverse_lookups"
+>reverse_lookups</a></dt>
+
+<dd>
+<p>Specify whether to lookup the hostname of the connected IP. Information is cached in server object under <code>peerhost</code> property. Default is to not use reverse_lookups (undef).</p>
+
+<dt><a name='allow'></a><a name="allow/deny"
+>allow/deny</a></dt>
+
+<dd>
+<p>May be specified multiple times. Contains regex to compare to incoming peeraddr or peerhost (if reverse_lookups has been enabled). If allow or deny options are given, the incoming client must match an allow and not match a deny or the client connection will be closed. Defaults to empty array refs.</p>
+
+<dt><a name='cidr_allow'></a><a name="cidr_allow/cidr_deny"
+>cidr_allow/cidr_deny</a></dt>
+
+<dd>
+<p>May be specified multiple times. Contains a CIDR block to compare to incoming peeraddr. If cidr_allow or cidr_deny options are given, the incoming client must match a cidr_allow and not match a cidr_deny or the client connection will be closed. Defaults to empty array refs.</p>
+
+<dt><a name="chroot"
+>chroot</a></dt>
+
+<dd>
+<p>Directory to chroot to after bind process has taken place and the server is still running as root. Defaults to undef.</p>
+
+<dt><a name="user"
+>user</a></dt>
+
+<dd>
+<p>Userid or username to become after the bind process has occured. Defaults to &#34;nobody.&#34; If you would like the server to run as root, you will have to specify <code>user</code> equal to &#34;root&#34;.</p>
+
+<dt><a name="group"
+>group</a></dt>
+
+<dd>
+<p>Groupid or groupname to become after the bind process has occured. Defaults to &#34;nobody.&#34; If you would like the server to run as root, you will have to specify <code>group</code> equal to &#34;root&#34;.</p>
+
+<dt><a name="background"
+>background</a></dt>
+
+<dd>
+<p>Specifies whether or not the server should fork after the bind method to release itself from the command line. Defaults to undef. Process will also background if <code>setsid</code> is set.</p>
+
+<dt><a name="setsid"
+>setsid</a></dt>
+
+<dd>
+<p>Specifies whether or not the server should fork after the bind method to release itself from the command line and then run the <code>POSIX::setsid()</code> command to truly daemonize. Defaults to undef. If a <code>log_file</code> is given or if <code>setsid</code> is set, STDIN and STDOUT will automatically be opened to /dev/null and STDERR will be opened to STDOUT. This will prevent any output from ending up at the terminal.</p>
+
+<dt><a name="no_close_by_child"
+>no_close_by_child</a></dt>
+
+<dd>
+<p>Boolean. Specifies whether or not a forked child process has permission or not to shutdown the entire server process. If set to 1, the child may NOT signal the parent to shutdown all children. Default is undef (not set).</p>
+
+<dt><a name="no_client_stdout"
+>no_client_stdout</a></dt>
+
+<dd>
+<p>Boolean. Default undef (not set). Specifies that STDIN and STDOUT should not be opened on the client handle once a connection has been accepted. By default the Net::Server will open STDIN and STDOUT on the client socket making it easier for many types of scripts to read directly from and write directly to the socket using normal print and read methods. Disabling this is useful on clients that may be opening their own connections to STDIN and STDOUT.</p>
+
+<p>This option has no affect on STDIN and STDOUT which has a magic client property that is tied to the already open STDIN and STDOUT.</p>
+
+<dt><a name="leave_children_open_on_hup"
+>leave_children_open_on_hup</a></dt>
+
+<dd>
+<p>Boolean. Default undef (not set). If set, the parent will not attempt to close child processes if the parent receives a SIG HUP. The parent will rebind the the open port and begin tracking a fresh set of children.</p>
+
+<p>Children of a Fork server will exit after their current request. Children of a Prefork type server will finish the current request and then exit.</p>
+
+<p>Note - the newly restarted parent will start up a fresh set of servers on fork servers. The new parent will attempt to keep track of the children from the former parent but custom communication channels (open pipes from the child to the old parent) will no longer be available to the old child processes. New child processes will still connect properly to the new parent.</p>
+
+<dt><a name="tie_client_stdout"
+>tie_client_stdout</a></dt>
+
+<dd>
+<p>Default undef. If set will use Net::Server::TiedHandle tied interface for STDIN and STDOUT. This interface allows SSLEAY to work. It also allows for intercepting read and write via the tied_stdin_callback and tied_stdout_callback.</p>
+
+<dt><a name="tied_stdin_callback"
+>tied_stdin_callback</a></dt>
+
+<dd>
+<p>Default undef. Called during a read of STDIN data if tie_client_stdout has been set, or if the client handle&#39;s tie_stdout method returns true. It is passed the client connection, the name of the method that would be called, and the arguments that are being passed. The callback is then responsible for calling that method on the handle or for performing some other input operation.</p>
+
+<dt><a name="tied_stdout_callback"
+>tied_stdout_callback</a></dt>
+
+<dd>
+<p>Default undef. Called during a write of data to STDOUT if tie_client_stdout has been set, or if the client handle&#39;s tie_stdout method returns true. It is passed the client connection, the name of the method that would be called, and the arguments that are being passed. The callback is then responsible for calling that method on the handle or for performing some other output operation.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PROPERTIES"
+>PROPERTIES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>All of the <code>ARGUMENTS</code> listed above become properties of the server object under the same name. These properties, as well as other internal properties, are available during hooks and other method calls.</p>
+
+<p>The structure of a Net::Server object is shown below:</p>
+
+<pre class="sh_perl">  $self = bless( {
+                   &#39;server&#39; =&#62; {
+                                 &#39;key1&#39; =&#62; &#39;val1&#39;,
+                                 # more key/vals
+                               }
+                 }, &#39;Net::Server&#39; );</pre>
+
+<p>This structure was chosen so that all server related properties are grouped under a single key of the object hashref. This is so that other objects could layer on top of the Net::Server object class and still have a fairly clean namespace in the hashref.</p>
+
+<p>You may get and set properties in two ways. The suggested way is to access properties directly via</p>
+
+<pre class="sh_perl">  my $val = $self-&#62;{server}-&#62;{key1};</pre>
+
+<p>Accessing the properties directly will speed the server process - though some would deem this as bad style. A second way has been provided for object oriented types who believe in methods. The second way consists of the following methods:</p>
+
+<pre class="sh_perl">  my $val = $self-&#62;get_property( &#39;key1&#39; );
+  my $self-&#62;set_property( key1 =&#62; &#39;val1&#39; );</pre>
+
+<p>Properties are allowed to be changed at any time with caution (please do not undef the sock property or you will close the client connection).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONFIGURATION_FILE"
+>CONFIGURATION FILE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Net::Server</code> allows for the use of a configuration file to read in server parameters. The format of this conf file is simple key value pairs. Comments and blank lines are ignored.</p>
+
+<pre class="sh_perl">  #-------------- file test.conf --------------
+
+  ### user and group to become
+  user        somebody
+  group       everybody
+
+  ### logging ?
+  log_file    /var/log/server.log
+  log_level   3
+  pid_file    /tmp/server.pid
+
+  ### optional syslog directive
+  ### used in place of log_file above
+  #log_file       Sys::Syslog
+  #syslog_logsock unix
+  #syslog_ident   myserver
+  #syslog_logopt  pid|cons
+
+  ### access control
+  allow       .+\.(net|com)
+  allow       domain\.com
+  deny        a.+
+  cidr_allow  127.0.0.0/8
+  cidr_allow  192.0.2.0/24
+  cidr_deny   192.0.2.4/30
+
+  ### background the process?
+  background  1
+
+  ### ports to bind (this should bind
+  ### 127.0.0.1:20205 and localhost:20204)
+  ### See Net::Server::Proto
+  host        127.0.0.1
+  port        localhost:20204
+  port        20205
+
+  ### reverse lookups ?
+  # reverse_lookups on
+
+  #-------------- file test.conf --------------</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PROCESS_FLOW"
+>PROCESS FLOW <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The process flow is written in an open, easy to override, easy to hook, fashion. The basic flow is shown below. This is the flow of the <code>$self-&#62;run</code> method.</p>
+
+<pre class="sh_perl">  $self-&#62;configure_hook;
+
+  $self-&#62;configure(@_);
+
+  $self-&#62;post_configure;
+
+  $self-&#62;post_configure_hook;
+
+  $self-&#62;pre_bind;
+
+  $self-&#62;bind;
+
+  $self-&#62;post_bind_hook;
+
+  $self-&#62;post_bind;
+
+  $self-&#62;pre_loop_hook;
+
+  $self-&#62;loop;
+
+  ### routines inside a standard $self-&#62;loop
+  # $self-&#62;accept;
+  # $self-&#62;run_client_connection;
+  # $self-&#62;done;
+
+  $self-&#62;pre_server_close_hook;
+
+  $self-&#62;server_close;</pre>
+
+<p>The server then exits.</p>
+
+<p>During the client processing phase (<code>$self-&#62;run_client_connection</code>), the following represents the program flow:</p>
+
+<pre class="sh_perl">  $self-&#62;post_accept;
+
+  $self-&#62;get_client_info;
+
+  $self-&#62;post_accept_hook;
+
+  if( $self-&#62;allow_deny
+
+      &#38;&#38; $self-&#62;allow_deny_hook ){
+
+    $self-&#62;process_request;
+
+  }else{
+
+    $self-&#62;request_denied_hook;
+
+  }
+
+  $self-&#62;post_process_request_hook;
+
+  $self-&#62;post_process_request;
+
+  $self-&#62;post_client_connection_hook;</pre>
+
+<p>The process then loops and waits for the next connection. For a more in depth discussion, please read the code.</p>
+
+<p>During the server shutdown phase (<code>$self-&#62;server_close</code>), the following represents the program flow:</p>
+
+<pre class="sh_perl">  $self-&#62;close_children;  # if any
+
+  $self-&#62;post_child_cleanup_hook;
+
+  if( Restarting server ){
+     $self-&#62;restart_close_hook();
+     $self-&#62;hup_server;
+  }
+
+  $self-&#62;shutdown_sockets;
+
+  $self-&#62;server_exit;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MAIN_SERVER_METHODS"
+>MAIN SERVER METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='self'></a><a name="$self-&#62;run"
+><code>$self-&#62;run</code></a></dt>
+
+<dd>
+<p>This method incorporates the main process flow. This flow is listed above.</p>
+
+<p>The method run may be called in any of the following ways.</p>
+
+<pre class="sh_perl">   MyPackage-&#62;run(port =&#62; 20201);
+
+   MyPackage-&#62;new({port =&#62; 20201})-&#62;run;
+
+   my $obj = bless {server=&#62;{port =&#62; 20201}}, &#39;MyPackage&#39;;
+   $obj-&#62;run;</pre>
+
+<p>The -&#62;run method should typically be the last method called in a server start script (the server will exit at the end of the -&#62;run method).</p>
+
+<dt><a name='self'></a><a name="$self-&#62;configure"
+><code>$self-&#62;configure</code></a></dt>
+
+<dd>
+<p>This method attempts to read configurations from the commandline, from the run method call, or from a specified conf_file (the conf_file may be specified by passed in parameters, or in the default_values). All of the configured parameters are then stored in the {&#34;server&#34;} property of the Server object.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;post_configure"
+><code>$self-&#62;post_configure</code></a></dt>
+
+<dd>
+<p>The post_configure hook begins the startup of the server. During this method running server instances are checked for, pid_files are created, log_files are created, Sys::Syslog is initialized (as needed), process backgrounding occurs and the server closes STDIN and STDOUT (as needed).</p>
+
+<dt><a name='self'></a><a name="$self-&#62;pre_bind"
+><code>$self-&#62;pre_bind</code></a></dt>
+
+<dd>
+<p>This method is used to initialize all of the socket objects used by the server.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;bind"
+><code>$self-&#62;bind</code></a></dt>
+
+<dd>
+<p>This method actually binds to the inialized sockets (or rebinds if the server has been HUPed).</p>
+
+<dt><a name='self'></a><a name="$self-&#62;post_bind"
+><code>$self-&#62;post_bind</code></a></dt>
+
+<dd>
+<p>During this method priveleges are dropped. The INT, TERM, and QUIT signals are set to run server_close. Sig PIPE is set to IGNORE. Sig CHLD is set to sig_chld. And sig HUP is set to call sig_hup.</p>
+
+<p>Under the Fork, PreFork, and PreFork simple personalities, these signals are registered using Net::Server::SIG to allow for safe signal handling.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;loop"
+><code>$self-&#62;loop</code></a></dt>
+
+<dd>
+<p>During this phase, the server accepts incoming connections. The behavior of how the accepting occurs and if a child process handles the connection is controlled by what type of Net::Server personality the server is using.</p>
+
+<p>Net::Server and Net::Server single accept only one connection at a time.</p>
+
+<p>Net::Server::INET runs one connection and then exits (for use by inetd or xinetd daemons).</p>
+
+<p>Net::Server::MultiPlex allows for one process to simultaneously handle multiple connections (but requires rewriting the process_request code to operate in a more &#34;packet-like&#34; manner).</p>
+
+<p>Net::Server::Fork forks off a new child process for each incoming connection.</p>
+
+<p>Net::Server::PreForkSimple starts up a fixed number of processes that all accept on incoming connections.</p>
+
+<p>Net::Server::PreFork starts up a base number of child processes which all accept on incoming connections. The server throttles the number of processes running depending upon the number of requests coming in (similar to concept to how Apache controls its child processes in a PreFork server).</p>
+
+<p>Read the documentation for each of the types for more information.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;server_close"
+><code>$self-&#62;server_close</code></a></dt>
+
+<dd>
+<p>This method is called once the server has been signaled to end, or signaled for the server to restart (via HUP), or the loop method has been exited.</p>
+
+<p>This method takes care of cleaning up any remaining child processes, setting appropriate flags on sockets (for HUPing), closing up logging, and then closing open sockets.</p>
+
+<p>Can optionally be passed an exit value that will be passed to the server_exit call.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;server_exit"
+><code>$self-&#62;server_exit</code></a></dt>
+
+<dd>
+<p>This method is called at the end of server_close. It calls exit, but may be overridden to do other items. At this point all services should be shut down.</p>
+
+<p>Can optionally be passed an exit value that will be passed to the exit call.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MAIN_CLIENT_CONNECTION_METHODS"
+>MAIN CLIENT CONNECTION METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='self'></a><a name="$self-&#62;run_client_connection"
+><code>$self-&#62;run_client_connection</code></a></dt>
+
+<dd>
+<p>This method is run after the server has accepted and received a client connection. The full process flow is listed above under PROCESS FLOWS. This method takes care of handling each client connection.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;post_accept"
+><code>$self-&#62;post_accept</code></a></dt>
+
+<dd>
+<p>This method opens STDIN and STDOUT to the client socket. This allows any of the methods during the run_client_connection phase to print directly to and read directly from the client socket.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;get_client_info"
+><code>$self-&#62;get_client_info</code></a></dt>
+
+<dd>
+<p>This method looks up information about the client connection such as ip address, socket type, and hostname (as needed).</p>
+
+<dt><a name='self'></a><a name="$self-&#62;allow_deny"
+><code>$self-&#62;allow_deny</code></a></dt>
+
+<dd>
+<p>This method uses the rules defined in the allow and deny configuration parameters to determine if the ip address should be accepted.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;process_request"
+><code>$self-&#62;process_request</code></a></dt>
+
+<dd>
+<p>This method is intended to handle all of the client communication. At this point STDIN and STDOUT are opened to the client, the ip address has been verified. The server can then interact with the client connection according to whatever API or protocol the server is implementing. Note that the stub implementation uses STDIN and STDOUT and will not work if the no_client_stdout flag is set.</p>
+
+<p>This is the main method to override.</p>
+
+<p>The default method implements a simple echo server that will repeat whatever is sent. It will quit the child if &#34;quit&#34; is sent, and will exit the server if &#34;exit&#34; is sent.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;post_process_request"
+><code>$self-&#62;post_process_request</code></a></dt>
+
+<dd>
+<p>This method is used to clean up the client connection and to handle any parent/child accounting for the forking servers.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="HOOKS"
+>HOOKS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Net::Server</code> provides a number of &#34;hooks&#34; allowing for servers layered on top of <code>Net::Server</code> to respond at different levels of execution without having to &#34;SUPER&#34; class the main built-in methods. The placement of the hooks can be seen in the PROCESS FLOW section.</p>
+
+<p>Almost all of the default hook methods do nothing. To use a hook you simply need to override the method in your subclass. For example to add your own post_configure_hook you could do something like the following:</p>
+
+<pre class="sh_perl">    package MyServer;
+
+    sub post_configure_hook {
+        my $self = shift;
+        my $prop = $self-&#62;{&#39;server&#39;};
+
+        # do some validation here
+    }</pre>
+
+<p>The following describes the hooks available in the plain Net::Server class (other flavors such as Fork or PreFork have additional hooks).</p>
+
+<dl>
+<dt><a name='self'></a><a name="$self-&#62;configure_hook()"
+><code>$self-&#62;configure_hook()</code></a></dt>
+
+<dd>
+<p>This hook takes place immediately after the <code>-&#62;run()</code> method is called. This hook allows for setting up the object before any built in configuration takes place. This allows for custom configurability.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;post_configure_hook()"
+><code>$self-&#62;post_configure_hook()</code></a></dt>
+
+<dd>
+<p>This hook occurs just after the reading of configuration parameters and initiation of logging and pid_file creation. It also occurs before the <code>-&#62;pre_bind()</code> and <code>-&#62;bind()</code> methods are called. This hook allows for verifying configuration parameters.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;post_bind_hook()"
+><code>$self-&#62;post_bind_hook()</code></a></dt>
+
+<dd>
+<p>This hook occurs just after the bind process and just before any chrooting, change of user, or change of group occurs. At this point the process will still be running as the user who started the server.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;pre_loop_hook()"
+><code>$self-&#62;pre_loop_hook()</code></a></dt>
+
+<dd>
+<p>This hook occurs after chroot, change of user, and change of group has occured. It allows for preparation before looping begins.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;can_read_hook()"
+><code>$self-&#62;can_read_hook()</code></a></dt>
+
+<dd>
+<p>This hook occurs after a socket becomes readible on an accept_multi_port request (accept_multi_port is used if there are multiple bound ports to accept on, or if the &#34;multi_port&#34; configuration parameter is set to true). This hook is intended to allow for processing of arbitrary handles added to the IO::Select used for the accept_multi_port. These handles could be added during the post_bind_hook. No internal support is added for processing these handles or adding them to the IO::Socket. Care must be used in how much occurs during the can_read_hook as a long response time will result in the server being susceptible to DOS attacks. A return value of true indicates that the Server should not pass the readible handle on to the post_accept and process_request phases.</p>
+
+<p>It is generally suggested that other avenues be pursued for sending messages via sockets not created by the Net::Server.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;post_accept_hook()"
+><code>$self-&#62;post_accept_hook()</code></a></dt>
+
+<dd>
+<p>This hook occurs after a client has connected to the server. At this point STDIN and STDOUT are mapped to the client socket. This hook occurs before the processing of the request.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;allow_deny_hook()"
+><code>$self-&#62;allow_deny_hook()</code></a></dt>
+
+<dd>
+<p>This hook allows for the checking of ip and host information beyond the <code>$self-&#62;allow_deny()</code> routine. If this hook returns 1, the client request will be processed, otherwise, the request will be denied processing.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;request_denied_hook()"
+><code>$self-&#62;request_denied_hook()</code></a></dt>
+
+<dd>
+<p>This hook occurs if either the <code>$self-&#62;allow_deny()</code> or <code>$self-&#62;allow_deny_hook()</code> have taken place.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;post_process_request_hook()"
+><code>$self-&#62;post_process_request_hook()</code></a></dt>
+
+<dd>
+<p>This hook occurs after the processing of the request, but before the client connection has been closed.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;post_client_connection_hook"
+><code>$self-&#62;post_client_connection_hook</code></a></dt>
+
+<dd>
+<p>This is one final hook that occurs at the very end of the run_client_connection method. At this point all other methods and hooks that will run during the run_client_connection have finished and the client connection has already been closed.</p>
+
+<p>item <code>$self-&#62;other_child_died_hook($pid)</code></p>
+
+<p>Net::Server takes control of signal handling and child process cleanup; this makes it difficult to tell when a child process terminates if that child process was not started by Net::Server itself. If Net::Server notices another child process dying that it did not start, it will fire this hook with the PID of the terminated process.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;pre_server_close_hook()"
+><code>$self-&#62;pre_server_close_hook()</code></a></dt>
+
+<dd>
+<p>This hook occurs before the server begins shutting down.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;write_to_log_hook"
+><code>$self-&#62;write_to_log_hook</code></a></dt>
+
+<dd>
+<p>This hook handles writing to log files. The default hook is to write to STDERR, or to the filename contained in the parameter <code>log_file</code>. The arguments passed are a log level of 0 to 4 (4 being very verbose), and a log line. If log_file is equal to &#34;Sys::Syslog&#34;, then logging will go to Sys::Syslog and will bypass the write_to_log_hook.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;fatal_hook"
+><code>$self-&#62;fatal_hook</code></a></dt>
+
+<dd>
+<p>This hook occurs when the server has encountered an unrecoverable error. Arguments passed are the error message, the package, file, and line number. The hook may close the server, but it is suggested that it simply return and use the built in shut down features.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;post_child_cleanup_hook"
+><code>$self-&#62;post_child_cleanup_hook</code></a></dt>
+
+<dd>
+<p>This hook occurs in the parent server process after all children have been shut down and just before the server either restarts or exits. It is intended for additional cleanup of information. At this point pid_files and lockfiles still exist.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;restart_open_hook"
+><code>$self-&#62;restart_open_hook</code></a></dt>
+
+<dd>
+<p>This hook occurs if a server has been HUPed (restarted via the HUP signal. It occurs just before reopening to the filenos of the sockets that were already opened.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;restart_close_hook"
+><code>$self-&#62;restart_close_hook</code></a></dt>
+
+<dd>
+<p>This hook occurs if a server has been HUPed (restarted via the HUP signal. It occurs just before restarting the server via exec.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OTHER_METHODS"
+>OTHER METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='self'></a><a name="$self-&#62;default_values"
+><code>$self-&#62;default_values</code></a></dt>
+
+<dd>
+<p>Allow for returning configuration values that will be used if no other value could be found.</p>
+
+<p>Should return a hashref.</p>
+
+<pre class="sh_perl">    sub default_values {
+      return {
+        port =&#62; 20201,
+      };
+    }</pre>
+
+<dt><a name='self'></a><a name="$self-&#62;handle_syslog_error"
+><code>$self-&#62;handle_syslog_error</code></a></dt>
+
+<dd>
+<p>Called when log_file is set to &#39;Sys::Syslog&#39; and an error occurs while writing to the syslog. It is passed two arguments, the value of $@, and an arrayref containing the arguments that were passed to the log method when the error occured.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;log"
+><code>$self-&#62;log</code></a></dt>
+
+<dd>
+<p>Parameters are a log_level and a message.</p>
+
+<p>If log_level is set to &#39;Sys::Syslog&#39;, the parameters may alternately be a log_level, a format string, and format string parameters. (The second parameter is assumed to be a format string if additional arguments are passed along). Passing arbitrary format strings to Sys::Syslog will allow the server to be vulnerable to exploit. The server maintainer should make sure that any string treated as a format string is controlled.</p>
+
+<pre class="sh_perl">    # assuming log_file = &#39;Sys::Syslog&#39;
+
+    $self-&#62;log(1, &#34;My Message with %s in it&#34;);
+    # sends &#34;%s&#34;, &#34;My Message with %s in it&#34; to syslog
+
+    $self-&#62;log(1, &#34;My Message with %s in it&#34;, &#34;Foo&#34;);
+    # sends &#34;My Message with %s in it&#34;, &#34;Foo&#34; to syslog</pre>
+
+<p>If log_file is set to a file (other than Sys::Syslog), the message will be appended to the log file by calling the write_to_log_hook.</p>
+
+<p>If the log_file is Sys::Syslog and an error occurs during write, the handle_syslog_error method will be called and passed the error exception. The default option of handle_syslog_error is to die - but could easily be told to do nothing by using the following code in your subclassed server:</p>
+
+<pre class="sh_perl">    sub handle_syslog_error {}</pre>
+
+<p>It the log had been closed, you could attempt to reopen it in the error handler with the following code:</p>
+
+<pre class="sh_perl">    sub handle_syslog_error {
+      my $self = shift;
+      $self-&#62;open_syslog;
+    }</pre>
+
+<dt><a name='self'></a><a name="$self-&#62;new"
+><code>$self-&#62;new</code></a></dt>
+
+<dd>
+<p>As of Net::Server 0.91 there is finally a new method. This method takes a class name and an argument hashref as parameters. The argument hashref becomes the &#34;server&#34; property of the object.</p>
+
+<pre class="sh_perl">   package MyPackage;
+   use base qw(Net::Server);
+
+   my $obj = MyPackage-&#62;new({port =&#62; 20201});
+
+   # same as
+
+   my $obj = bless {server =&#62; {port =&#62; 20201}}, &#39;MyPackage&#39;;</pre>
+
+<dt><a name='self'></a><a name="$self-&#62;open_syslog"
+><code>$self-&#62;open_syslog</code></a></dt>
+
+<dd>
+<p>Called during post_configure when the log_file option is set to &#39;Sys::Syslog&#39;. By default it use the parsed configuration options listed in this document. If more custom behavior is desired, the method could be overridden and Sys::Syslog::openlog should be called with the custom parameters.</p>
+
+<dt><a name='self'></a><a name="$self-&#62;shutdown_sockets"
+><code>$self-&#62;shutdown_sockets</code></a></dt>
+
+<dd>
+<p>This method will close any remaining open sockets. This is called at the end of the server_close method.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="RESTARTING"
+>RESTARTING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Each of the server personalities (except for INET), support restarting via a HUP signal (see &#34;kill -l&#34;). When a HUP is received, the server will close children (if any), make sure that sockets are left open, and re-exec using the same commandline parameters that initially started the server. (Note: for this reason it is important that @ARGV is not modified until <code>-&#62;run</code> is called).</p>
+
+<p>The Net::Server will attempt to find out the commandline used for starting the program. The attempt is made before any configuration files or other arguments are processed. The outcome of this attempt is stored using the method <code>-&#62;commandline</code>. The stored commandline may also be retrieved using the same method name. The stored contents will undoubtedly contain Tainted items that will cause the server to die during a restart when using the -T flag (Taint mode). As it is impossible to arbitrarily decide what is taint safe and what is not, the individual program must clean up the tainted items before doing a restart.</p>
+
+<pre class="sh_perl">  sub configure_hook{
+    my $self = shift;
+
+    ### see the contents
+    my $ref  = $self-&#62;commandline;
+    use Data::Dumper;
+    print Dumper $ref;
+
+    ### arbitrary untainting - VERY dangerous
+    my @untainted = map {/(.+)/;$1} @$ref;
+
+    $self-&#62;commandline(\@untainted)
+  }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FILES"
+>FILES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following files are installed as part of this distribution.</p>
+
+<pre class="sh_perl">    Net/Server.pm
+    Net/Server/Fork.pm
+    Net/Server/INET.pm
+    Net/Server/MultiType.pm
+    Net/Server/PreForkSimple.pm
+    Net/Server/PreFork.pm
+    Net/Server/Single.pm
+    Net/Server/Daemonize.pm
+    Net/Server/SIG.pm
+    Net/Server/Proto.pm
+    Net/Server/Proto/*.pm</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INSTALL"
+>INSTALL <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Download and extract tarball before running these commands in its base directory:</p>
+
+<pre class="sh_perl">    perl Makefile.PL
+    make
+    make test
+    make install</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Paul Seamons &#60;paul at seamons.com&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="THANKS"
+>THANKS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Thanks to Rob Brown (bbb at cpan.org) for help with miscellaneous concepts such as tracking down the serialized select via flock ala Apache and the reference to IO::Select making multiport servers possible. And for researching into allowing sockets to remain open upon exec (making HUP possible).</p>
+
+<p>Thanks to Jonathan J. Miner &#60;miner at doit.wisc.edu&#62; for patching a blatant problem in the reverse lookups.</p>
+
+<p>Thanks to Bennett Todd &#60;bet at rahul.net&#62; for pointing out a problem in Solaris 2.5.1 which does not allow multiple children to accept on the same port at the same time. Also for showing some sample code from Viktor Duchovni which now represents the semaphore option of the serialize argument in the PreFork server.</p>
+
+<p>Thanks to <i>traveler</i> and <i>merlyn</i> from <a href="http://perlmonks.org" class="podlinkurl"
+>http://perlmonks.org</a> for pointing me in the right direction for determining the protocol used on a socket connection.</p>
+
+<p>Thanks to Jeremy Howard &#60;j+daemonize at howard.fm&#62; for numerous suggestions and for work on Net::Server::Daemonize.</p>
+
+<p>Thanks to Vadim &#60;vadim at hardison.net&#62; for patches to implement parent/child communication on PreFork.pm.</p>
+
+<p>Thanks to Carl Lewis for suggesting &#34;-&#34; in user names.</p>
+
+<p>Thanks to Slaven Rezic for suggesing Reuse =&#62; 1 in Proto::UDP.</p>
+
+<p>Thanks to Tim Watt for adding udp_broadcast to Proto::UDP.</p>
+
+<p>Thanks to Christopher A Bongaarts for pointing out problems with the Proto::SSL implementation that currently locks around the socket accept and the SSL negotiation. See <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/Proto/SSL.pm" class="podlinkpod"
+>Net::Server::Proto::SSL</a>.</p>
+
+<p>Thanks to Alessandro Zummo for pointing out various bugs including some in configuration, commandline args, and cidr_allow.</p>
+
+<p>Thanks to various other people for bug fixes over the years. These and future thank-you&#39;s are available in the Changes file as well as CVS comments.</p>
+
+<p>Thanks to Ben Cohen and tye (on Permonks) for finding and diagnosing more correct behavior for dealing with re-opening STDIN and STDOUT on the client handles.</p>
+
+<p>Thanks to Mark Martinec for trouble shooting other problems with STDIN and STDOUT (he proposed having a flag that is now the no_client_stdout flag).</p>
+
+<p>Thanks to David (DSCHWEI) on cpan for asking for the nofatal option with syslog.</p>
+
+<p>Thanks to Andreas Kippnick and Peter Beckman for suggesting leaving open child connections open during a HUP (this is now available via the leave_children_open_on_hup flag).</p>
+
+<p>Thanks to LUPE on cpan for helping patch HUP with taint on.</p>
+
+<p>Thanks to Michael Virnstein for fixing a bug in the check_for_dead section of PreFork server.</p>
+
+<p>Thanks to Rob Mueller for patching PreForkSimple to only open lock_file once during parent call. This patch should be portable on systems supporting flock. Rob also suggested not closing STDIN/STDOUT but instead reopening them to /dev/null to prevent spurious warnings. Also suggested short circuit in post_accept if in UDP. Also for cleaning up some of the child managment code of PreFork.</p>
+
+<p>Thanks to Mark Martinec for suggesting additional log messages for failure during accept.</p>
+
+<p>Thanks to Bill Nesbitt and Carlos Velasco for pointing out double decrement bug in PreFork.pm (rt #21271)</p>
+
+<p>Thanks to John W. Krahn for pointing out glaring precended with non-parened open and ||.</p>
+
+<p>Thanks to Ricardo Signes for pointing out setuid bug for perl 5.6.1 (rt #21262).</p>
+
+<p>Thanks to Carlos Velasco for updating the Syslog options (rt #21265). And for additional fixes later.</p>
+
+<p>Thanks to Steven Lembark for pointing out that no_client_stdout wasn&#39;t working with the Multiplex server.</p>
+
+<p>Thanks to Peter Beckman for suggesting allowing Sys::SysLog keyworks be passed through the -&#62;log method and for suggesting we allow more types of characters through in syslog_ident. Also to Peter Beckman for pointing out that a poorly setup localhost will cause tests to hang.</p>
+
+<p>Thanks to Curtis Wilbar for pointing out that the Fork server called post_accept_hook twice. Changed to only let the child process call this, but added the pre_fork_hook method.</p>
+
+<p>And just a general Thanks You to everybody who is using Net::Server or who has contributed fixes over the years.</p>
+
+<p>Thanks to Paul Miller for some -&#62;autoflush, FileHandle fixes.</p>
+
+<p>Thanks to Patrik Wallstrom for suggesting handling syslog errors better.</p>
+
+<p>Thanks again to Rob Mueller for more logic cleanup for child accounting in PreFork server.</p>
+
+<p>Thanks to David Schweikert for suggesting handling setlogsock a little better on newer versions of Sys::Syslog (&#62;= 0.15).</p>
+
+<p>Thanks to Mihail Nasedkin for suggesting adding a hook that is now called post_client_connection_hook.</p>
+
+<p>Thanks to Graham Barr for adding the ability to set the check_for_spawn and min_child_ttl settings of the PreFork server.</p>
+
+<p>Thanks to Daniel Kahn Gillmor for adding the other_child_died_hook.</p>
+
+<p>Thanks to Dominic Humphries for helping not kill pid files on HUP.</p>
+
+<p>Thanks to Kristoffer M&#195;&#184;llerh&#195;&#184;j for fixing UDP on Multiplex.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Please see also <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/Fork.pm" class="podlinkpod"
+>Net::Server::Fork</a>, <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/INET.pm" class="podlinkpod"
+>Net::Server::INET</a>, <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/PreForkSimple.pm" class="podlinkpod"
+>Net::Server::PreForkSimple</a>, <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/PreFork.pm" class="podlinkpod"
+>Net::Server::PreFork</a>, <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/MultiType.pm" class="podlinkpod"
+>Net::Server::MultiType</a>, <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/Single.pm" class="podlinkpod"
+>Net::Server::Single</a> <a href="/~rhandom/Net-Server-0.99/lib/Net/Server/HTTP.pm" class="podlinkpod"
+>Net::Server::HTTP</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TODO"
+>TODO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  Improve test suite to fully cover code (using Devel::Cover).  Anybody
+  that wanted to send me patches to the t/*.t tests that improved coverage
+  would earn a big thank you :) (Sorry there isn&#39;t a whole lot more than that to give).</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  Paul Seamons &#60;paul at seamons.com&#62;
+  <a href="http://seamons.com/" class="podlinkurl"
+>http://seamons.com/</a>
+
+  Rob Brown &#60;bbb at cpan.org&#62;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This package may be distributed under the terms of either the</p>
+
+<pre class="sh_perl">  GNU General Public License
+    or the
+  Perl Artistic License</pre>
+
+<p>All rights reserved.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78156 Uploads, 24703 Distributions
+105960 Modules, 9642 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 17:40:10 2012 GMT (0.211925983428955) @cpansearch1 -->
+ </body>
+</html>

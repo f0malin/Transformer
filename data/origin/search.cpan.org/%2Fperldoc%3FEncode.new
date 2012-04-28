@@ -1,0 +1,804 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Encode - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Encode",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Encode-2.44",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Encode",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DANKOGAI",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Encode">permalink</a></div>
+  <a href="/~dankogai/">Dan Kogai</a> &gt;
+  <a href="/~dankogai/Encode-2.44/">Encode-2.44</a> &gt;
+  Encode
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/ebe7cfa2e0a96291daa3a63a024e37a6?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DA/DANKOGAI/Encode-2.44.tar.gz">Encode-2.44.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Encode;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DANKOGAI/Encode-2.44/Encode.pm">Annotate this POD
+(5)
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 9</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 28</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Encode">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.44 &nbsp;
+<span class="noprint">
+  <a href="/src/DANKOGAI/Encode-2.44/Encode.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Table_of_Contents'>Table of Contents</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#TERMINOLOGY'>TERMINOLOGY</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#THE_PERL_ENCODING_API'>THE PERL ENCODING API</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Listing_available_encodings'>Listing available encodings</a>
+    <li class='indexItem indexItem2'><a href='#Defining_Aliases'>Defining Aliases</a>
+    <li class='indexItem indexItem2'><a href='#Finding_IANA_Character_Set_Registry_names'>Finding IANA Character Set Registry names</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Encoding_via_PerlIO'>Encoding via PerlIO</a>
+  <li class='indexItem indexItem1'><a href='#Handling_Malformed_Data'>Handling Malformed Data</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#coderef_for_CHECK'>coderef for CHECK</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Defining_Encodings'>Defining Encodings</a>
+  <li class='indexItem indexItem1'><a href='#The_UTF8_flag'>The UTF8 flag</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Messing_with_Perl&#39;s_Internals'>Messing with Perl&#39;s Internals</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#UTF-8_vs._utf8_vs._UTF8'>UTF-8 vs. utf8 vs. UTF8</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#MAINTAINER'>MAINTAINER</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Encode - character encodings in Perl</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Encode;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Table_of_Contents"
+>Table of Contents</a></h2>
+
+<p>Encode consists of a collection of modules whose details are too extensive to fit in one document. This one itself explains the top-level APIs and general topics at a glance. For other topics and more details, see the documentation for these modules:</p>
+
+<pre class="sh_perl">  Name                          Description
+  --------------------------------------------------------
+  Encode::Alias         Alias definitions to encodings
+  Encode::Encoding      Encode Implementation Base Class
+  Encode::Supported     List of Supported Encodings
+  Encode::CN            Simplified Chinese Encodings
+  Encode::JP            Japanese Encodings
+  Encode::KR            Korean Encodings
+  Encode::TW            Traditional Chinese Encodings
+  --------------------------------------------------------</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The <code>Encode</code> module provides the interface between Perl strings and the rest of the system. Perl strings are sequences of <i>characters</i>.</p>
+
+<p>The repertoire of characters that Perl can represent is a superset of those defined by the Unicode Consortium. On most platforms the ordinal values of a character as returned by <code>ord(<i>S</i>)</code> is the <i>Unicode codepoint</i> for that character. The exceptions are platforms where the legacy encoding is some variant of EBCDIC rather than a superset of ASCII; see <a href="/perldoc?perlebcdic" class="podlinkpod"
+>perlebcdic</a>.</p>
+
+<p>During recent history, data is moved around a computer in 8-bit chunks, often called &#34;bytes&#34; but also known as &#34;octets&#34; in standards documents. Perl is widely used to manipulate data of many types: not only strings of characters representing human or computer languages, but also &#34;binary&#34; data, being the machine&#39;s representation of numbers, pixels in an image, or just about anything.</p>
+
+<p>When Perl is processing &#34;binary data&#34;, the programmer wants Perl to process &#34;sequences of bytes&#34;. This is not a problem for Perl: because a byte has 256 possible values, it easily fits in Perl&#39;s much larger &#34;logical character&#34;.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="TERMINOLOGY"
+>TERMINOLOGY</a></h2>
+
+<ul>
+<li><i>character</i>: a character in the range 0 .. 2**32-1 (or more); what Perl&#39;s strings are made of.</li>
+
+<li><i>byte</i>: a character in the range 0..255; A special case of a Perl character.</li>
+
+<li><i>octet</i>: 8 bits of data, with ordinal values 0..255; Term for bytes passed to or from a non-Perl context, such as a disk file.</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="THE_PERL_ENCODING_API"
+>THE PERL ENCODING API <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='octets'></a><a name="$octets_=_encode(ENCODING,_STRING[,_CHECK])"
+>$octets = encode(ENCODING, STRING[, CHECK])</a></dt>
+
+<dd>
+<p>Encodes the scalar value <i>STRING</i> from Perl&#39;s internal form into <i>ENCODING</i> and returns a sequence of octets. <i>ENCODING</i> can be either a canonical name or an alias. For encoding names and aliases, see <a href="#Defining_Aliases" class="podlinkpod"
+>&#34;Defining Aliases&#34;</a>. For CHECK, see <a href="#Handling_Malformed_Data" class="podlinkpod"
+>&#34;Handling Malformed Data&#34;</a>.</p>
+
+<p>For example, to convert a string from Perl&#39;s internal format into ISO-8859-1, also known as Latin1:</p>
+
+<pre class="sh_perl">  $octets = encode(&#34;iso-8859-1&#34;, $string);</pre>
+
+<p><b>CAVEAT</b>: When you run <code>$octets = encode(&#34;utf8&#34;, $string)</code>, then $octets <i>might not be equal to</i> $string. Though both contain the same data, the UTF8 flag for $octets is <i>always</i> off. When you encode anything, the UTF8 flag on the result is always off, even when it contains a completely valid utf8 string. See <a href="#The_UTF8_flag" class="podlinkpod"
+>&#34;The UTF8 flag&#34;</a> below.</p>
+
+<p>If the $string is <code>undef</code>, then <code>undef</code> is returned.</p>
+
+<dt><a name='string'></a><a name="$string_=_decode(ENCODING,_OCTETS[,_CHECK])"
+>$string = decode(ENCODING, OCTETS[, CHECK])</a></dt>
+
+<dd>
+<p>This function returns the string that results from decoding the scalar value <i>OCTETS</i>, assumed to be a sequence of octets in <i>ENCODING</i>, into Perl&#39;s internal form. The returns the resulting string. As with encode(), <i>ENCODING</i> can be either a canonical name or an alias. For encoding names and aliases, see <a href="#Defining_Aliases" class="podlinkpod"
+>&#34;Defining Aliases&#34;</a>; for <i>CHECK</i>, see <a href="#Handling_Malformed_Data" class="podlinkpod"
+>&#34;Handling Malformed Data&#34;</a>.</p>
+
+<p>For example, to convert ISO-8859-1 data into a string in Perl&#39;s internal format:</p>
+
+<pre class="sh_perl">  $string = decode(&#34;iso-8859-1&#34;, $octets);</pre>
+
+<p><b>CAVEAT</b>: When you run <code>$string = decode(&#34;utf8&#34;, $octets)</code>, then $string <i>might not be equal to</i> $octets. Though both contain the same data, the UTF8 flag for $string is on unless $octets consists entirely of ASCII data on ASCII machines or EBCDIC on EBCDIC machines. See <a href="#The_UTF8_flag" class="podlinkpod"
+>&#34;The UTF8 flag&#34;</a> below.</p>
+
+<p>If the $string is <code>undef</code>, then <code>undef</code> is returned.</p>
+
+<dt><a name='obj'></a><a name="[$obj_=]_find_encoding(ENCODING)"
+>[$obj =] find_encoding(ENCODING)</a></dt>
+
+<dd>
+<p>Returns the <i>encoding object</i> corresponding to <i>ENCODING</i>. Returns <code>undef</code> if no matching <i>ENCODING</i> is find. The returned object is what does the actual encoding or decoding.</p>
+
+<pre class="sh_perl">  $utf8 = decode($name, $bytes);</pre>
+
+<p>is in fact</p>
+
+<pre class="sh_perl">    $utf8 = do {
+        $obj = find_encoding($name);
+        croak qq(encoding &#34;$name&#34; not found) unless ref $obj;
+        $obj-&#62;decode($bytes);
+    };</pre>
+
+<p>with more error checking.</p>
+
+<p>You can therefore save time by reusing this object as follows;</p>
+
+<pre class="sh_perl">    my $enc = find_encoding(&#34;iso-8859-1&#34;);
+    while(&#60;&#62;) {
+        my $utf8 = $enc-&#62;decode($_);
+        ... # now do something with $utf8;
+    }</pre>
+
+<p>Besides <code>-&#62;decode</code> and <code>-&#62;encode</code>, other methods are available as well. For instance, <code>-&#62;name</code> returns the canonical name of the encoding object.</p>
+
+<pre class="sh_perl">  find_encoding(&#34;latin1&#34;)-&#62;name; # iso-8859-1</pre>
+
+<p>See <a href="/~dankogai/Encode-2.44/lib/Encode/Encoding.pm" class="podlinkpod"
+>Encode::Encoding</a> for details.</p>
+
+<dt><a name='length'></a><a name="[$length_=]_from_to($octets,_FROM_ENC,_TO_ENC_[,_CHECK])"
+>[$length =] from_to($octets, FROM_ENC, TO_ENC [, CHECK])</a></dt>
+
+<dd>
+<p>Converts <i>in-place</i> data between two encodings. The data in $octets must be encoded as octets and <i>not</i> as characters in Perl&#39;s internal format. For example, to convert ISO-8859-1 data into Microsoft&#39;s CP1250 encoding:</p>
+
+<pre class="sh_perl">  from_to($octets, &#34;iso-8859-1&#34;, &#34;cp1250&#34;);</pre>
+
+<p>and to convert it back:</p>
+
+<pre class="sh_perl">  from_to($octets, &#34;cp1250&#34;, &#34;iso-8859-1&#34;);</pre>
+
+<p>Because the conversion happens in place, the data to be converted cannot be a string constant: it must be a scalar variable.</p>
+
+<p>from_to() returns the length of the converted string in octets on success, and <code>undef</code> on error.</p>
+
+<p><b>CAVEAT</b>: The following operations may look the same, but are not:</p>
+
+<pre class="sh_perl">  from_to($data, &#34;iso-8859-1&#34;, &#34;utf8&#34;); #1
+  $data = decode(&#34;iso-8859-1&#34;, $data);  #2</pre>
+
+<p>Both #1 and #2 make $data consist of a completely valid UTF-8 string, but only #2 turns the UTF8 flag on. #1 is equivalent to:</p>
+
+<pre class="sh_perl">  $data = encode(&#34;utf8&#34;, decode(&#34;iso-8859-1&#34;, $data));</pre>
+
+<p>See <a href="#The_UTF8_flag" class="podlinkpod"
+>&#34;The UTF8 flag&#34;</a> below.</p>
+
+<p>Also note that:</p>
+
+<pre class="sh_perl">  from_to($octets, $from, $to, $check);</pre>
+
+<p>is equivalent t:o</p>
+
+<pre class="sh_perl">  $octets = encode($to, decode($from, $octets), $check);</pre>
+
+<p>Yes, it does <i>not</i> respect the $check during decoding. It is deliberately done that way. If you need minute control, use <code>decode</code> followed by <code>encode</code> as follows:</p>
+
+<pre class="sh_perl">  $octets = encode($to, decode($from, $octets, $check_from), $check_to);</pre>
+
+<dt><a name='octets'></a><a name="$octets_=_encode_utf8($string);"
+>$octets = encode_utf8($string);</a></dt>
+
+<dd>
+<p>Equivalent to <code>$octets = encode(&#34;utf8&#34;, $string)</code>. The characters in $string are encoded in Perl&#39;s internal format, and the result is returned as a sequence of octets. Because all possible characters in Perl have a (loose, not strict) UTF-8 representation, this function cannot fail.</p>
+
+<dt><a name='string'></a><a name="$string_=_decode_utf8($octets_[,_CHECK]);"
+>$string = decode_utf8($octets [, CHECK]);</a></dt>
+
+<dd>
+<p>Equivalent to <code>$string = decode(&#34;utf8&#34;, $octets [, CHECK])</code>. The sequence of octets represented by $octets is decoded from UTF-8 into a sequence of logical characters. Because not all sequences of octets are valid UTF-8, it is quite possible for this function to fail. For CHECK, see <a href="#Handling_Malformed_Data" class="podlinkpod"
+>&#34;Handling Malformed Data&#34;</a>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Listing_available_encodings"
+>Listing available encodings</a></h2>
+
+<pre class="sh_perl">  use Encode;
+  @list = Encode-&#62;encodings();</pre>
+
+<p>Returns a list of canonical names of available encodings that have already been loaded. To get a list of all available encodings including those that have not yet been loaded, say:</p>
+
+<pre class="sh_perl">  @all_encodings = Encode-&#62;encodings(&#34;:all&#34;);</pre>
+
+<p>Or you can give the name of a specific module:</p>
+
+<pre class="sh_perl">  @with_jp = Encode-&#62;encodings(&#34;Encode::JP&#34;);</pre>
+
+<p>When &#34;<code>::</code>&#34; is not in the name, &#34;<code>Encode::</code>&#34; is assumed.</p>
+
+<pre class="sh_perl">  @ebcdic = Encode-&#62;encodings(&#34;EBCDIC&#34;);</pre>
+
+<p>To find out in detail which encodings are supported by this package, see <a href="/~dankogai/Encode-2.44/lib/Encode/Supported.pod" class="podlinkpod"
+>Encode::Supported</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Defining_Aliases"
+>Defining Aliases</a></h2>
+
+<p>To add a new alias to a given encoding, use:</p>
+
+<pre class="sh_perl">  use Encode;
+  use Encode::Alias;
+  define_alias(NEWNAME =&#62; ENCODING);</pre>
+
+<p>After that, <i>NEWNAME</i> can be used as an alias for <i>ENCODING</i>. &#60;ENCODING&#62; may be either the name of an encoding or an <i>encoding object</i>.</p>
+
+<p>Before you do that, first make sure the alias is nonexistent using <code>resolve_alias()</code>, which returns the canonical name thereof. For example:</p>
+
+<pre class="sh_perl">  Encode::resolve_alias(&#34;latin1&#34;) eq &#34;iso-8859-1&#34; # true
+  Encode::resolve_alias(&#34;iso-8859-12&#34;)   # false; nonexistent
+  Encode::resolve_alias($name) eq $name  # true if $name is canonical</pre>
+
+<p>resolve_alias() does not need <code>use Encode::Alias</code>; it can be imported via <code>use Encode qw(resolve_alias)</code>.</p>
+
+<p>See <a href="/~dankogai/Encode-2.44/lib/Encode/Alias.pm" class="podlinkpod"
+>Encode::Alias</a> for details.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Finding_IANA_Character_Set_Registry_names"
+>Finding IANA Character Set Registry names</a></h2>
+
+<p>The canonical name of a given encoding does not necessarily agree with IANA Character Set Registry, commonly seen as <code>Content-Type: text/plain; charset=<i>WHATEVER</i></code>. For most cases, the canonical name works, but sometimes it does not, most notably with &#34;utf-8-strict&#34;.</p>
+
+<p>As of <code>Encode</code> version 2.21, a new method <code>mime_name()</code> is thereforeadded.</p>
+
+<pre class="sh_perl">  use Encode;
+  my $enc = find_encoding(&#34;UTF-8&#34;);
+  warn $enc-&#62;name;      # utf-8-strict
+  warn $enc-&#62;mime_name; # UTF-8</pre>
+
+<p>See also: <a href="/~dankogai/Encode-2.44/lib/Encode/Encoding.pm" class="podlinkpod"
+>Encode::Encoding</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Encoding_via_PerlIO"
+>Encoding via PerlIO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If your perl supports <code>PerlIO</code> (which is the default), you can use a <code>PerlIO</code> layer to decode and encode directly via a filehandle. The following two examples are fully identical in functionality:</p>
+
+<pre class="sh_perl">  ### Version 1 via PerlIO
+    open(INPUT,  &#34;&#60; :encoding(shiftjis)&#34;, $infile)
+        || die &#34;Can&#39;t open &#60; $infile for reading: $!&#34;;
+    open(OUTPUT, &#34;&#62; :encoding(euc-jp)&#34;,  $outfile)
+        || die &#34;Can&#39;t open &#62; $output for writing: $!&#34;;
+    while (&#60;INPUT&#62;) {   # auto decodes $_
+        print OUTPUT;   # auto encodes $_
+    }
+    close(INPUT)   || die &#34;can&#39;t close $infile: $!&#34;;
+    close(OUTPUT)  || die &#34;can&#39;t close $outfile: $!&#34;;
+
+  ### Version 2 via from_to()
+    open(INPUT,  &#34;&#60; :raw&#34;, $infile)
+        || die &#34;Can&#39;t open &#60; $infile for reading: $!&#34;;
+    open(OUTPUT, &#34;&#62; :raw&#34;,  $outfile)
+        || die &#34;Can&#39;t open &#62; $output for writing: $!&#34;;
+
+    while (&#60;INPUT&#62;) {
+        from_to($_, &#34;shiftjis&#34;, &#34;euc-jp&#34;, 1);  # switch encoding
+        print OUTPUT;   # emit raw (but properly encoded) data
+    }
+    close(INPUT)   || die &#34;can&#39;t close $infile: $!&#34;;
+    close(OUTPUT)  || die &#34;can&#39;t close $outfile: $!&#34;;</pre>
+
+<p>In the first version above, you let the appropriate encoding layer handle the conversion. In the second, you explicitly translate from one encoding to the other.</p>
+
+<p>Unfortunately, it may be that encodings are <code>PerlIO</code>-savvy. You can check to see whether your encoding is supported by <code>PerlIO</code> by invoking the <code>perlio_ok</code> method on it:</p>
+
+<pre class="sh_perl">  Encode::perlio_ok(&#34;hz&#34;);             # false
+  find_encoding(&#34;euc-cn&#34;)-&#62;perlio_ok;  # true wherever PerlIO is available
+
+  use Encode qw(perlio_ok);            # imported upon request
+  perlio_ok(&#34;euc-jp&#34;)</pre>
+
+<p>Fortunately, all encodings that come with <code>Encode</code> core are <code>PerlIO</code>-savvy except for &#34;hz&#34; and &#34;ISO-2022-kr&#34;. For the gory details, see <a href="/~dankogai/Encode-2.44/lib/Encode/Encoding.pm" class="podlinkpod"
+>Encode::Encoding</a> and <a href="/~dankogai/Encode-2.44/lib/Encode/PerlIO.pod" class="podlinkpod"
+>Encode::PerlIO</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Handling_Malformed_Data"
+>Handling Malformed Data <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The optional <i>CHECK</i> argument tells <code>Encode</code> what to do when encountering malformed data. Without <i>CHECK</i>, <code>Encode::FB_DEFAULT</code> (== 0) is assumed.</p>
+
+<p>As of version 2.12, <code>Encode</code> supports coderef values for <code>CHECK</code>; see below.</p>
+
+<dl>
+<dt><a name='NOTE'></a><a name="NOTE:_Not_all_encoding_support_this_feature"
+><b>NOTE:</b> Not all encoding support this feature</a></dt>
+
+<dd>
+<p>Some encodings ignore <i>CHECK</i> argument. For example, <a href="/~dankogai/Encode-2.44/Unicode/Unicode.pm" class="podlinkpod"
+>Encode::Unicode</a> ignores <i>CHECK</i> and it always croaks on error.</p>
+</dd>
+</dl>
+
+<p>Now here is the list of <i>CHECK</i> values available</p>
+
+<dl>
+<dt><a name='CHECK'></a><a name="CHECK_=_Encode::FB_DEFAULT_(_==_0)"
+><i>CHECK</i> = Encode::FB_DEFAULT ( == 0)</a></dt>
+
+<dd>
+<p>If <i>CHECK</i> is 0, encoding and decoding replace any malformed character with a <i>substitution character</i>. When you encode, <i>SUBCHAR</i> is used. When you decode, the Unicode REPLACEMENT CHARACTER, code point U+FFFD, is used. If the data is supposed to be UTF-8, an optional lexical warning of warning category <code>&#34;utf8&#34;</code> is given.</p>
+
+<dt><a name='CHECK'></a><a name="CHECK_=_Encode::FB_CROAK_(_==_1)"
+><i>CHECK</i> = Encode::FB_CROAK ( == 1)</a></dt>
+
+<dd>
+<p>If <i>CHECK</i> is 1, methods immediately die with an error message. Therefore, when <i>CHECK</i> is 1, you should trap exceptions with <code>eval{}</code>, unless you really want to let it <code>die</code>.</p>
+
+<dt><a name='CHECK'></a><a name="CHECK_=_Encode::FB_QUIET"
+><i>CHECK</i> = Encode::FB_QUIET</a></dt>
+
+<dd>
+<p>If <i>CHECK</i> is set to <code>Encode::FB_QUIET</code>, encoding and decoding immediately return the portion of the data that has been processed so far when an error occurs. The data argument is overwritten with everything after that point; that is, the unprocessed portion of the data. This is handy when you have to call <code>decode</code> repeatedly in the case where your source data may contain partial multi-byte character sequences, (that is, you are reading with a fixed-width buffer). Here&#39;s some sample code to do exactly that:</p>
+
+<pre class="sh_perl">    my($buffer, $string) = (&#34;&#34;, &#34;&#34;);
+    while (read($fh, $buffer, 256, length($buffer))) {
+        $string .= decode($encoding, $buffer, Encode::FB_QUIET);
+        # $buffer now contains the unprocessed partial character
+    }</pre>
+
+<dt><a name='CHECK'></a><a name="CHECK_=_Encode::FB_WARN"
+><i>CHECK</i> = Encode::FB_WARN</a></dt>
+
+<dd>
+<p>This is the same as <code>FB_QUIET</code> above, except that instead of being silent on errors, it issues a warning. This is handy for when you are debugging.</p>
+
+<dt><a name='perlqq'></a><a name="perlqq_mode_(CHECK_=_Encode::FB_PERLQQ)"
+>perlqq mode (<i>CHECK</i> = Encode::FB_PERLQQ)</a></dt>
+
+<dd>
+<dt><a name='HTML'></a><a name="HTML_charref_mode_(CHECK_=_Encode::FB_HTMLCREF)"
+>HTML charref mode (<i>CHECK</i> = Encode::FB_HTMLCREF)</a></dt>
+
+<dd>
+<dt><a name='XML'></a><a name="XML_charref_mode_(CHECK_=_Encode::FB_XMLCREF)"
+>XML charref mode (<i>CHECK</i> = Encode::FB_XMLCREF)</a></dt>
+
+<dd>
+<p>For encodings that are implemented by the <code>Encode::XS</code> module, <code>CHECK</code> <code>==</code> <code>Encode::FB_PERLQQ</code> puts <code>encode</code> and <code>decode</code> into <code>perlqq</code> fallback mode.</p>
+
+<p>When you decode, <code>\x<i>HH</i></code> is inserted for a malformed character, where <i>HH</i> is the hex representation of the octet that could not be decoded to utf8. When you encode, <code>\x{<i>HHHH</i>}</code> will be inserted, where <i>HHHH</i> is the Unicode code point (in any number of hex digits) of the character that cannot be found in the character repertoire of the encoding.</p>
+
+<p>The HTML/XML character reference modes are about the same. In place of <code>\x{<i>HHHH</i>}</code>, HTML uses <code>&#38;#<i>NNN</i>;</code> where <i>NNN</i> is a decimal number, and XML uses <code>&#38;#x<i>HHHH</i>;</code> where <i>HHHH</i> is the hexadecimal number.</p>
+
+<p>In <code>Encode</code> 2.10 or later, <code>LEAVE_SRC</code> is also implied.</p>
+
+<dt><a name='The'></a><a name="The_bitmask"
+>The bitmask</a></dt>
+
+<dd>
+<p>These modes are all actually set via a bitmask. Here is how the <code>FB_<i>XXX</i></code> constants are laid out. You can import the <code>FB_<i>XXX</i></code> constants via <code>use Encode qw(:fallbacks)</code>, and you can import the generic bitmask constants via <code>use Encode qw(:fallback_all)</code>.</p>
+
+<pre class="sh_perl">                     FB_DEFAULT FB_CROAK FB_QUIET FB_WARN  FB_PERLQQ
+ DIE_ON_ERR    0x0001             X
+ WARN_ON_ERR   0x0002                               X
+ RETURN_ON_ERR 0x0004                      X        X
+ LEAVE_SRC     0x0008                                        X
+ PERLQQ        0x0100                                        X
+ HTMLCREF      0x0200
+ XMLCREF       0x0400</pre>
+</dd>
+</dl>
+
+<dl>
+<dt><a name='Encode'></a><a name="Encode::LEAVE_SRC"
+>Encode::LEAVE_SRC</a></dt>
+
+<dd>
+<p>If the <code>Encode::LEAVE_SRC</code> bit is <i>not</i> set but <i>CHECK</i> is set, then the second argument to encode() or decode() will be overwritten in place. If you&#39;re not interested in this, then bitwise-OR it with the bitmask.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="coderef_for_CHECK"
+>coderef for CHECK</a></h2>
+
+<p>As of <code>Encode</code> 2.12, <code>CHECK</code> can also be a code reference which takes the ordinal value of the unmapped caharacter as an argument and returns a string that represents the fallback character. For instance:</p>
+
+<pre class="sh_perl">  $ascii = encode(&#34;ascii&#34;, $utf8, sub{ sprintf &#34;&#60;U+%04X&#62;&#34;, shift });</pre>
+
+<p>Acts like <code>FB_PERLQQ</code> but U+<i>XXXX</i> is used instead of <code>\x{<i>XXXX</i>}</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Defining_Encodings"
+>Defining Encodings <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>To define a new encoding, use:</p>
+
+<pre class="sh_perl">    use Encode qw(define_encoding);
+    define_encoding($object, CANONICAL_NAME [, alias...]);</pre>
+
+<p><i>CANONICAL_NAME</i> will be associated with <i>$object</i>. The object should provide the interface described in <a href="/~dankogai/Encode-2.44/lib/Encode/Encoding.pm" class="podlinkpod"
+>Encode::Encoding</a>. If more than two arguments are provided, additional arguments are considered aliases for <i>$object</i>.</p>
+
+<p>See <a href="/~dankogai/Encode-2.44/lib/Encode/Encoding.pm" class="podlinkpod"
+>Encode::Encoding</a> for details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="The_UTF8_flag"
+>The UTF8 flag <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Before the introduction of Unicode support in Perl, The <code>eq</code> operator just compared the strings represented by two scalars. Beginning with Perl 5.8, <code>eq</code> compares two strings with simultaneous consideration of <i>the UTF8 flag</i>. To explain why we made it so, I quote from page 402 of <i>Programming Perl, 3rd ed.</i></p>
+
+<dl>
+<dt><a name='Goal'></a><a name="Goal_#1:"
+>Goal #1:</a></dt>
+
+<dd>
+<p>Old byte-oriented programs should not spontaneously break on the old byte-oriented data they used to work on.</p>
+
+<dt><a name='Goal'></a><a name="Goal_#2:"
+>Goal #2:</a></dt>
+
+<dd>
+<p>Old byte-oriented programs should magically start working on the new character-oriented data when appropriate.</p>
+
+<dt><a name='Goal'></a><a name="Goal_#3:"
+>Goal #3:</a></dt>
+
+<dd>
+<p>Programs should run just as fast in the new character-oriented mode as in the old byte-oriented mode.</p>
+
+<dt><a name='Goal'></a><a name="Goal_#4:"
+>Goal #4:</a></dt>
+
+<dd>
+<p>Perl should remain one language, rather than forking into a byte-oriented Perl and a character-oriented Perl.</p>
+</dd>
+</dl>
+
+<p>When <i>Programming Perl, 3rd ed.</i> was written, not even Perl 5.6.0 had been born yet, many features documented in the book remained unimplemented for a long time. Perl 5.8 corrected much of this, and the introduction of the UTF8 flag is one of them. You can think of there being two fundamentally different kinds of strings and string-operations in Perl: one a byte-oriented mode for when the internal UTF8 flag is off, and the other a character-oriented mode for when the internal UTF8 flag is on.</p>
+
+<p>Here is how <code>Encode</code> handles the UTF8 flag.</p>
+
+<ul>
+<li>When you <i>encode</i>, the resulting UTF8 flag is always <b>off</b>.</li>
+
+<li>When you <i>decode</i>, the resulting UTF8 flag is <b>on</b>--<i>unless</i> you can unambiguously represent data. Here is what we mean by &#34;unambiguously&#34;. After <code>$utf8 = decode(&#34;foo&#34;, $octet)</code>,
+<pre class="sh_perl">  When $octet is...   The UTF8 flag in $utf8 is
+  ---------------------------------------------
+  In ASCII only (or EBCDIC only)            OFF
+  In ISO-8859-1                              ON
+  In any other Encoding                      ON
+  ---------------------------------------------</pre>
+
+<p>As you see, there is one exception: in ASCII. That way you can assume Goal #1. And with <code>Encode</code>, Goal #2 is assumed but you still have to be careful in the cases mentioned in the <b>CAVEAT</b> paragraphs above.</p>
+
+<p>This UTF8 flag is not visible in Perl scripts, exactly for the same reason you cannot (or rather, you <i>don&#39;t have to</i>) see whether a scalar contains a string, an integer, or a floating-point number. But you can still peek and poke these if you will. See the next section.</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Messing_with_Perl&#39;s_Internals"
+>Messing with Perl&#39;s Internals</a></h2>
+
+<p>The following API uses parts of Perl&#39;s internals in the current implementation. As such, they are efficient but may change in a future release.</p>
+
+<dl>
+<dt><a name='is_utf8'></a><a name="is_utf8(STRING_[,_CHECK])"
+>is_utf8(STRING [, CHECK])</a></dt>
+
+<dd>
+<p>[INTERNAL] Tests whether the UTF8 flag is turned on in the <i>STRING</i>. If <i>CHECK</i> is true, also checks whether <i>STRING</i> contains well-formed UTF-8. Returns true if successful, false otherwise.</p>
+
+<p>As of Perl 5.8.1, <a href="/perldoc?utf8" class="podlinkpod"
+>utf8</a> also has the <code>utf8::is_utf8</code> function.</p>
+
+<dt><a name='_utf8_on'></a><a name="_utf8_on(STRING)"
+>_utf8_on(STRING)</a></dt>
+
+<dd>
+<p>[INTERNAL] Turns the <i>STRING</i>&#39;s internal UTF8 flag <b>on</b>. The <i>STRING</i> is <i>not</i> checked for containing only well-formed UTF-8. Do not use this unless you <i>know with absolute certainty</i> that the STRING holds only well-formed UTF-8. Returns the previous state of the UTF8 flag (so please don&#39;t treat the return value as indicating success or failure), or <code>undef</code> if <i>STRING</i> is not a string.</p>
+
+<p><b>NOTE</b>: For security reasons, this function does not work on tainted values.</p>
+
+<dt><a name='_utf8_off'></a><a name="_utf8_off(STRING)"
+>_utf8_off(STRING)</a></dt>
+
+<dd>
+<p>[INTERNAL] Turns the <i>STRING</i>&#39;s internal UTF8 flag <b>off</b>. Do not use frivolously. Returns the previous state of the UTF8 flag, or <code>undef</code> if <i>STRING</i> is not a string. Do not treat the return value as indicative of success or failure, because that isn&#39;t what it means: it is only the previous setting.</p>
+
+<p><b>NOTE</b>: For security reasons, this function does not work on tainted values.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="UTF-8_vs._utf8_vs._UTF8"
+>UTF-8 vs. utf8 vs. UTF8 <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  ....We now view strings not as sequences of bytes, but as sequences
+  of numbers in the range 0 .. 2**32-1 (or in the case of 64-bit
+  computers, 0 .. 2**64-1) -- Programming Perl, 3rd ed.</pre>
+
+<p>That has historically been Perl&#39;s notion of UTF-8, as that is how UTF-8 was first conceived by Ken Thompson when he invented it. However, thanks to later revisions to the applicable standards, official UTF-8 is now rather stricter than that. For example, its range is much narrower (0 .. 0x10_FFFF to cover only 21 bits instead of 32 or 64 bits) and some sequences are not allowed, like those used in surrogate pairs, the 31 non-character code points 0xFDD0 .. 0xFDEF, the last two code points in <i>any</i> plane (0x<i>XX</i>_FFFE and 0x<i>XX</i>_FFFF), all non-shortest encodings, etc.</p>
+
+<p>The former default in which Perl would always use a loose interpretation of UTF-8 has now been overruled:</p>
+
+<pre class="sh_perl">  From: Larry Wall &#60;larry@wall.org&#62;
+  Date: December 04, 2004 11:51:58 JST
+  To: perl-unicode@perl.org
+  Subject: Re: Make Encode.pm support the real UTF-8
+  Message-Id: &#60;20041204025158.GA28754@wall.org&#62;
+
+  On Fri, Dec 03, 2004 at 10:12:12PM +0000, Tim Bunce wrote:
+  : I&#39;ve no problem with &#39;utf8&#39; being perl&#39;s unrestricted uft8 encoding,
+  : but &#34;UTF-8&#34; is the name of the standard and should give the
+  : corresponding behaviour.
+
+  For what it&#39;s worth, that&#39;s how I&#39;ve always kept them straight in my
+  head.
+
+  Also for what it&#39;s worth, Perl 6 will mostly default to strict but
+  make it easy to switch back to lax.
+
+  Larry</pre>
+
+<p>Got that? As of Perl 5.8.7, <b>&#34;UTF-8&#34;</b> means UTF-8 in its current sense, which is conservative and strict and security-conscious, whereas <b>&#34;utf8&#34;</b> means UTF-8 in its former sense, which was liberal and loose and lax. <code>Encode</code> version 2.10 or later thus groks this subtle but critically important distinction between <code>&#34;UTF-8&#34;</code> and <code>&#34;utf8&#34;</code>.</p>
+
+<pre class="sh_perl">  encode(&#34;utf8&#34;,  &#34;\x{FFFF_FFFF}&#34;, 1); # okay
+  encode(&#34;UTF-8&#34;, &#34;\x{FFFF_FFFF}&#34;, 1); # croaks</pre>
+
+<p>In the <code>Encode</code> module, <code>&#34;UTF-8&#34;</code> is actually a canonical name for <code>&#34;utf-8-strict&#34;</code>. That hyphen between the <code>&#34;UTF&#34;</code> and the <code>&#34;8&#34;</code> is critical; without it, <code>Encode</code> goes &#34;liberal&#34; and (perhaps overly-)permissive:</p>
+
+<pre class="sh_perl">  find_encoding(&#34;UTF-8&#34;)-&#62;name # is &#39;utf-8-strict&#39;
+  find_encoding(&#34;utf-8&#34;)-&#62;name # ditto. names are case insensitive
+  find_encoding(&#34;utf_8&#34;)-&#62;name # ditto. &#34;_&#34; are treated as &#34;-&#34;
+  find_encoding(&#34;UTF8&#34;)-&#62;name  # is &#39;utf8&#39;.</pre>
+
+<p>Perl&#39;s internal UTF8 flag is called &#34;UTF8&#34;, without a hyphen. It indicates whether a string is internally encoded as &#34;utf8&#34;, also without a hyphen.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~dankogai/Encode-2.44/lib/Encode/Encoding.pm" class="podlinkpod"
+>Encode::Encoding</a>, <a href="/~dankogai/Encode-2.44/lib/Encode/Supported.pod" class="podlinkpod"
+>Encode::Supported</a>, <a href="/~dankogai/Encode-2.44/lib/Encode/PerlIO.pod" class="podlinkpod"
+>Encode::PerlIO</a>, <a href="/~dankogai/Encode-2.44/encoding.pm" class="podlinkpod"
+>encoding</a>, <a href="/perldoc?perlebcdic" class="podlinkpod"
+>perlebcdic</a>, <a href="/perldoc?perlfunc#open" class="podlinkpod"
+>&#34;open&#34; in perlfunc</a>, <a href="/perldoc?perlunicode" class="podlinkpod"
+>perlunicode</a>, <a href="/perldoc?perluniintro" class="podlinkpod"
+>perluniintro</a>, <a href="/perldoc?perlunifaq" class="podlinkpod"
+>perlunifaq</a>, <a href="/perldoc?perlunitut" class="podlinkpod"
+>perlunitut</a> <a href="/perldoc?utf8" class="podlinkpod"
+>utf8</a>, the Perl Unicode Mailing List &#60;perl-unicode@perl.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MAINTAINER"
+>MAINTAINER <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This project was originated by the late Nick Ing-Simmons and later maintained by Dan Kogai <i>&#60;dankogai@dan.co.jp&#62;</i>. See AUTHORS for a full list of people involved. For any questions, send mail to <i>&#60;perl-unicode@perl.org&#62;</i> so that we can all share.</p>
+
+<p>While Dan Kogai retains the copyright as a maintainer, credit should go to all those involved. See AUTHORS for a list of those who submitted code to the project.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2002-2011 Dan Kogai <i>&#60;dankogai@dan.co.jp&#62;</i>.</p>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78231 Uploads, 24723 Distributions
+106029 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Thu Apr 26 21:05:06 2012 GMT (0.0956518650054932) @cpansearch1 -->
+ </body>
+</html>

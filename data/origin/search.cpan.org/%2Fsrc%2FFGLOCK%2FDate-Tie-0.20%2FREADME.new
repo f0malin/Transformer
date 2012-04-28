@@ -1,0 +1,34 @@
+NAME
+    Date::Tie - a perlish interface to dates
+
+SYNOPSIS
+	use Date::Tie;
+
+	tie %date, 'Date::Tie';
+	%date = { year => 2001, month => 11, day => '09' };
+	$date{year}++;
+	$date{month} += 12;    # 2003-11-09
+
+	# you can also do this
+	$date = Date::Tie->new( year => 2001, month => 11, day => '09' );
+	$date->{year}++;
+	$date->{month} += 12;  # 2003-11-09
+
+DESCRIPTION
+
+Date::Tie is an attempt to simplify date operations syntax.
+
+Date::Tie manages a hash containing the keys: 
+epoch, utc_epoch, year, month, day, hour, minute, second,
+yearday, week, weekday, weekyear, tz, tzhour, tzminute.
+
+Whenever a new value is stored in a key, it will change 
+the other keys following the common (ISO) date rules. 
+
+For example: 
+	 print $a{hour}, ":", $a{minute};     #  00:59
+	 $a{minute}++;
+	 print $a{hour}, ":", $a{minute};     #  01:00
+
+AUTHOR
+    Flávio Soibelmann Glock (fglock@gmail.com)

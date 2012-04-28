@@ -1,0 +1,370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>perlstyle - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",4,"Document","perlstyle",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?perlstyle">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  perlstyle
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/pod/perlstyle.pod">Annotate this POD
+(3)
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/pod/perlstyle.pod">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~abigail/perl/pod/perlstyle.pod">perl-5.15.9</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>perlstyle - Perl style guide</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Each programmer will,
+of course,
+have his or her own preferences in regards to formatting,
+but there are some general guidelines that will make your programs easier to read,
+understand,
+and maintain.</p>
+
+<p>The most important thing is to run your programs under the <b>-w</b> flag at all times.
+You may turn it off explicitly for particular portions of code via the <code>no warnings</code> pragma or the <code>$^W</code> variable if you must.
+You should also always run under <code>use strict</code> or know the reason why not.
+The <code>use sigtrap</code> and even <code>use diagnostics</code> pragmas may also prove useful.</p>
+
+<p>Regarding aesthetics of code lay out,
+about the only thing Larry cares strongly about is that the closing curly bracket of a multi-line BLOCK should line up with the keyword that started the construct.
+Beyond that,
+he has other preferences that aren&#39;t so strong:</p>
+
+<ul>
+<li>4-column indent.</li>
+
+<li>Opening curly on same line as keyword,
+if possible,
+otherwise line up.</li>
+
+<li>Space before the opening curly of a multi-line BLOCK.</li>
+
+<li>One-line BLOCK may be put on one line,
+including curlies.</li>
+
+<li>No space before the semicolon.</li>
+
+<li>Semicolon omitted in &#34;short&#34; one-line BLOCK.</li>
+
+<li>Space around most operators.</li>
+
+<li>Space around a &#34;complex&#34; subscript (inside brackets).</li>
+
+<li>Blank lines between chunks that do different things.</li>
+
+<li>Uncuddled elses.</li>
+
+<li>No space between function name and its opening parenthesis.</li>
+
+<li>Space after each comma.</li>
+
+<li>Long lines broken after an operator (except <code>and</code> and <code>or</code>).</li>
+
+<li>Space after last parenthesis matching on current line.</li>
+
+<li>Line up corresponding items vertically.</li>
+
+<li>Omit redundant punctuation as long as clarity doesn&#39;t suffer.</li>
+</ul>
+
+<p>Larry has his reasons for each of these things,
+but he doesn&#39;t claim that everyone else&#39;s mind works the same as his does.</p>
+
+<p>Here are some other more substantive style issues to think about:</p>
+
+<ul>
+<li>Just because you <i>CAN</i> do something a particular way doesn&#39;t mean that you <i>SHOULD</i> do it that way.
+Perl is designed to give you several ways to do anything,
+so consider picking the most readable one.
+For instance
+<pre class="sh_perl">    open(FOO,$foo) || die &#34;Can&#39;t open $foo: $!&#34;;</pre>
+
+<p>is better than</p>
+
+<pre class="sh_perl">    die &#34;Can&#39;t open $foo: $!&#34; unless open(FOO,$foo);</pre>
+
+<p>because the second way hides the main point of the statement in a modifier. On the other hand</p>
+
+<pre class="sh_perl">    print &#34;Starting analysis\n&#34; if $verbose;</pre>
+
+<p>is better than</p>
+
+<pre class="sh_perl">    $verbose &#38;&#38; print &#34;Starting analysis\n&#34;;</pre>
+
+<p>because the main point isn&#39;t whether the user typed <b>-v</b> or not.</p>
+
+<p>Similarly, just because an operator lets you assume default arguments doesn&#39;t mean that you have to make use of the defaults. The defaults are there for lazy systems programmers writing one-shot programs. If you want your program to be readable, consider supplying the argument.</p>
+
+<p>Along the same lines, just because you <i>CAN</i> omit parentheses in many places doesn&#39;t mean that you ought to:</p>
+
+<pre class="sh_perl">    return print reverse sort num values %array;
+    return print(reverse(sort num (values(%array))));</pre>
+
+<p>When in doubt, parenthesize. At the very least it will let some poor schmuck bounce on the % key in <b>vi</b>.</p>
+
+<p>Even if you aren&#39;t in doubt, consider the mental welfare of the person who has to maintain the code after you, and who will probably put parentheses in the wrong place.</p>
+</li>
+
+<li>Don&#39;t go through silly contortions to exit a loop at the top or the bottom, when Perl provides the <code>last</code> operator so you can exit in the middle. Just &#34;outdent&#34; it a little to make it more visible:
+<pre class="sh_perl">    LINE:
+        for (;;) {
+            statements;
+          last LINE if $foo;
+            next LINE if /^#/;
+            statements;
+        }</pre>
+</li>
+
+<li>Don&#39;t be afraid to use loop labels--they&#39;re there to enhance readability as well as to allow multilevel loop breaks. See the previous example.</li>
+
+<li>Avoid using <code>grep()</code> (or <code>map()</code>) or `backticks` in a void context, that is, when you just throw away their return values. Those functions all have return values, so use them. Otherwise use a <code>foreach()</code> loop or the <code>system()</code> function instead.</li>
+
+<li>For portability, when using features that may not be implemented on every machine, test the construct in an eval to see if it fails. If you know what version or patchlevel a particular feature was implemented, you can test <code>$]</code> (<code>$PERL_VERSION</code> in <code>English</code>) to see if it will be there. The <code>Config</code> module will also let you interrogate values determined by the <b>Configure</b> program when Perl was installed.</li>
+
+<li>Choose mnemonic identifiers. If you can&#39;t remember what mnemonic means, you&#39;ve got a problem.</li>
+
+<li>While short identifiers like <code>$gotit</code> are probably ok, use underscores to separate words in longer identifiers. It is generally easier to read <code>$var_names_like_this</code> than <code>$VarNamesLikeThis</code>, especially for non-native speakers of English. It&#39;s also a simple rule that works consistently with <code>VAR_NAMES_LIKE_THIS</code>.
+<p>Package names are sometimes an exception to this rule. Perl informally reserves lowercase module names for &#34;pragma&#34; modules like <code>integer</code> and <code>strict</code>. Other modules should begin with a capital letter and use mixed case, but probably without underscores due to limitations in primitive file systems&#39; representations of module names as files that must fit into a few sparse bytes.</p>
+</li>
+
+<li>You may find it helpful to use letter case to indicate the scope or nature of a variable. For example:
+<pre class="sh_perl">    $ALL_CAPS_HERE   constants only (beware clashes with perl vars!)
+    $Some_Caps_Here  package-wide global/static
+    $no_caps_here    function scope my() or local() variables</pre>
+
+<p>Function and method names seem to work best as all lowercase. E.g., <code>$obj-&#62;as_string()</code>.</p>
+
+<p>You can use a leading underscore to indicate that a variable or function should not be used outside the package that defined it.</p>
+</li>
+
+<li>If you have a really hairy regular expression, use the <code>/x</code> modifier and put in some whitespace to make it look a little less like line noise. Don&#39;t use slash as a delimiter when your regexp has slashes or backslashes.</li>
+
+<li>Use the new <code>and</code> and <code>or</code> operators to avoid having to parenthesize list operators so much, and to reduce the incidence of punctuation operators like <code>&#38;&#38;</code> and <code>||</code>. Call your subroutines as if they were functions or list operators to avoid excessive ampersands and parentheses.</li>
+
+<li>Use here documents instead of repeated <code>print()</code> statements.</li>
+
+<li>Line up corresponding things vertically, especially if it&#39;d be too long to fit on one line anyway.
+<pre class="sh_perl">    $IDX = $ST_MTIME;
+    $IDX = $ST_ATIME       if $opt_u;
+    $IDX = $ST_CTIME       if $opt_c;
+    $IDX = $ST_SIZE        if $opt_s;
+
+    mkdir $tmpdir, 0700 or die &#34;can&#39;t mkdir $tmpdir: $!&#34;;
+    chdir($tmpdir)      or die &#34;can&#39;t chdir $tmpdir: $!&#34;;
+    mkdir &#39;tmp&#39;,   0777 or die &#34;can&#39;t mkdir $tmpdir/tmp: $!&#34;;</pre>
+</li>
+
+<li>Always check the return codes of system calls. Good error messages should go to <code>STDERR</code>, include which program caused the problem, what the failed system call and arguments were, and (VERY IMPORTANT) should contain the standard system error message for what went wrong. Here&#39;s a simple but sufficient example:
+<pre class="sh_perl">    opendir(D, $dir)     or die &#34;can&#39;t opendir $dir: $!&#34;;</pre>
+</li>
+
+<li>Line up your transliterations when it makes sense:
+<pre class="sh_perl">    tr [abc]
+       [xyz];</pre>
+</li>
+
+<li>Think about reusability. Why waste brainpower on a one-shot when you might want to do something like it again? Consider generalizing your code. Consider writing a module or object class. Consider making your code run cleanly with <code>use strict</code> and <code>use warnings</code> (or <b>-w</b>) in effect. Consider giving away your code. Consider changing your whole world view. Consider... oh, never mind.</li>
+
+<li>Try to document your code and use Pod formatting in a consistent way. Here are commonly expected conventions:
+<ul>
+<li>use <code>C&#60;&#62;</code> for function, variable and module names (and more generally anything that can be considered part of code, like filehandles or specific values). Note that function names are considered more readable with parentheses after their name, that is <code>function()</code>.</li>
+
+<li>use <code>B&#60;&#62;</code> for commands names like <b>cat</b> or <b>grep</b>.</li>
+
+<li>use <code>F&#60;&#62;</code> or <code>C&#60;&#62;</code> for file names. <code>F&#60;&#62;</code> should be the only Pod code for file names, but as most Pod formatters render it as italic, Unix and Windows paths with their slashes and backslashes may be less readable, and better rendered with <code>C&#60;&#62;</code>.</li>
+</ul>
+</li>
+
+<li>Be consistent.</li>
+
+<li>Be nice.</li>
+</ul>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78245 Uploads, 24724 Distributions
+106031 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 03:06:57 2012 GMT (0.0637581348419189) @cpansearch1 -->
+ </body>
+</html>

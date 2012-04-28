@@ -1,0 +1,817 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>File::Cache - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","File-Cache",3]);
+    _gaq.push(["_setCustomVar",5,"Release","File-Cache-0.16",3]);
+    _gaq.push(["_setCustomVar",3,"Module","File::Cache",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DCLINTON",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?File::Cache">permalink</a></div>
+  <a href="/~dclinton/">DeWitt Clinton</a> &gt;
+  <a href="/~dclinton/File-Cache-0.16/">File-Cache-0.16</a> &gt;
+  File::Cache
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/ba46313d627247be4b9e17a5a04e283b?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DC/DCLINTON/File-Cache-0.16.tar.gz">File-Cache-0.16.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=File%3A%3ACache;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DCLINTON/File-Cache-0.16/Cache.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?CGI%3A%3AApplication">CGI::Application</a><br>
+<a href="/perldoc?Apache%3A%3ASession">Apache::Session</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Image%3A%3AMagick">Image::Magick</a><br>
+<a href="/perldoc?Win32%3A%3AProcess">Win32::Process</a><br>
+<a href="/perldoc?Cache%3A%3ACache">Cache::Cache</a><br>
+<a href="/perldoc?Devel%3A%3APeek">Devel::Peek</a><br>
+<a href="/perldoc?DBD%3A%3AOracle">DBD::Oracle</a><br>
+<a href="/perldoc?Apache%3A%3ADBI">Apache::DBI</a><br>
+<a href="/perldoc?CGI%3A%3ACarp">CGI::Carp</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=File%3A%3ACache">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=File-Cache">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.16 &nbsp;
+<span class="noprint">
+  <a href="/src/DCLINTON/File-Cache-0.16/Cache.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#NOTE'>NOTE</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#TYPICAL_USAGE'>TYPICAL USAGE</a>
+    <li class='indexItem indexItem2'><a href='#METHODS'>METHODS</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>File::Cache - Share data between processes via filesystem</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTE"
+>NOTE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Use of File::Cache is now discouraged in favor of the new Cache::Cache project,
+also available on CPAN.
+Cache::Cache offers all of the functionality of File::Cache,
+as well as integrating the functionality of IPC::Cache and a number of new features.
+You can view the Cache::Cache project page at:</p>
+
+<pre class="sh_perl">  <a href="http://sourceforge.net/projects/perl-cache/" class="podlinkurl"
+>http://sourceforge.net/projects/perl-cache/</a></pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><b>File::Cache</b> is a perl module that implements an object storage space where data is persisted across process boundaries via the filesystem.</p>
+
+<p>File::Cache builds a cache in the file system using a multi-level directory structure that looks like this:</p>
+
+<pre class="sh_perl">  &#60;CACHE_KEY&#62;/&#60;USERNAME&#62;/&#60;NAMESPACE&#62;/[D1]/[D2]/.../&#60;OBJECTS&#62;</pre>
+
+<p>CACHE_KEY is the location of the root level of the cache. The cache key defaults to &#60;TMPDIR&#62;/File::Cache, where &#60;TMPDIR&#62; is the temporary directory on your system. USERNAME is the user identifier. This value defaults to the userid, if it can be determined from the system, or &#34;nobody&#34; if it can not. &#60;NAMESPACE&#62; defaults to &#34;_default&#34;. D1, D2, etc. are subdirectories that are created to hold the cache objects. The number subdirectories depends on the <i>cache_depth</i> value, which defaults to 0. Objects are stored in the cache using a method which depends on the <i>persistence_mechanism</i> value.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> use File::Cache;
+
+ # create a cache in the default namespace, where objects
+ # do not expire
+
+ my $cache = new File::Cache();
+
+ # create a user-private cache in the specified
+ # namespace, where objects will expire in one day, and
+ # will automatically be removed from the cache.
+
+ my $cache = new File::Cache( { namespace  =&#62; &#39;MyCache&#39;,
+                                expires_in =&#62; 86400,
+                                filemode =&#62; 0600 } );
+
+ # create a public cache in the specified namespace,
+ # where objects will expire in one day, but will not be
+ # removed from the cache automatically.
+
+ my $cache = new File::Cache( { namespace  =&#62; &#39;MyCache&#39;,
+                                expires_in =&#62; 86400,
+                                username =&#62; &#39;shared_user&#39;,
+                                auto_remove_stale =&#62; 0,
+                                filemode =&#62; 0666 } );
+
+ # create a cache readable by the user and the user&#39;s
+ # group in the specified namespace, where objects will
+ # expire in one day, but may be removed from the cache
+ # earlier if the size becomes more than a megabyte. Also,
+ # request that the cache use subdirectories to increase
+ # performance of large number of objects
+
+ my $cache = new File::Cache( { namespace  =&#62; &#39;MyCache&#39;,
+                                expires_in =&#62; 86400,
+                                max_size =&#62; 1048576,
+                                username =&#62; &#39;shared_user&#39;,
+                                filemode =&#62; 0660,
+                                cache_depth =&#62; 3 } );
+
+ # store a value in the cache (will expire in one day)
+
+ $cache-&#62;set(&#34;key1&#34;, &#34;value1&#34;);
+
+ # retrieve a value from the cache
+
+ $cache-&#62;get(&#34;key1&#34;);
+
+ # retrieve a stale value from the cache.
+ # (Undefined behavior if auto_remove_stale is 1)
+
+ $cache-&#62;get_stale(&#34;key1&#34;);
+
+ # store a value that expires in one hour
+
+ $cache-&#62;set(&#34;key2&#34;, &#34;value2&#34;, 3600);
+
+ # reduce the cache size to 3600 bytes
+
+ $cache-&#62;reduce_size(3600);
+
+ # clear this cache&#39;s contents
+
+ $cache-&#62;clear();
+
+ # delete all namespaces from the filesystem
+
+ File::Cache::CLEAR();</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="TYPICAL_USAGE"
+>TYPICAL USAGE</a></h2>
+
+<p>A typical scenario for this would be a mod_perl or perl CGI application. In a multi-tier architecture, it is likely that a trip from the front-end to the database is the most expensive operation, and that data may not change frequently. Using this module will help keep that data on the front-end.</p>
+
+<p>Consider the following usage in a mod_perl application, where a mod_perl application serves out images that are retrieved from a database. Those images change infrequently, but we want to check them once an hour, just in case.</p>
+
+<p>my $imageCache = new Cache( { namespace =&#62; &#39;Images&#39;, expires_in =&#62; 3600 } );</p>
+
+<p>my $image = $imageCache-&#62;get(&#34;the_requested_image&#34;);</p>
+
+<p>if (!$image) {</p>
+
+<pre class="sh_perl">    # $image = [expensive database call to get the image]
+
+    $imageCache-&#62;set(&#34;the_requested_image&#34;, $image);</pre>
+
+<p>}</p>
+
+<p>That bit of code, executed in any instance of the mod_perl/httpd process will first try the filesystem cache, and only perform the expensive database call if the image has not been fetched before, has timed out, or the cache has been cleared.</p>
+
+<p>The current implementation of this module automatically removes expired items from the cache when the get() method is called and the auto_remove_stale setting is true. Automatic removal does not occur when the set() method is called, which means that the cache can become polluted with expired items if many items are stored in the cache for short periods of time, and are rarely accessed. This is a design decision that favors efficiency in the common case, where items are accessed frequently. If you want to limit cache growth, see the max_size option, which will automatically shrink the cache when the set() method is called. (max_size is unaffected by the value of auto_remove_stale.)</p>
+
+<p>Be careful that you call the purge method periodically if auto_remove_stale is 0 and max_size has its default value of unlimited size. In this configuration, the cache size will be a function of the number of items inserted into the cache since the last purge. (i.e. It can grow extremely large if you put lots of different items in the cache.)</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS</a></h2>
+
+<dl>
+<dt><a name='new'></a><a name="new(\%options)"
+><b>new(\%options)</b></a></dt>
+
+<dd>
+<p>Creates a new instance of the cache object. The constructor takes a reference to an options hash which can contain any or all of the following:</p>
+
+<dl>
+<dt><a name='options'></a><a name="$options{namespace}"
+>$options{namespace}</a></dt>
+
+<dd>
+<p>Namespaces provide isolation between objects. Each cache refers to one and only one namespace. Multiple caches can refer to the same namespace, however. While specifying a namespace is not required, it is recommended so as not to have data collide.</p>
+
+<dt><a name='options'></a><a name="$options{expires_in}"
+>$options{expires_in}</a></dt>
+
+<dd>
+<p>If the &#34;expires_in&#34; option is set, all objects in this cache will be cleared in that number of seconds. It can be overridden on a per-object basis. If expires_in is not set, the objects will never expire unless explicitly set.</p>
+
+<dt><a name='options'></a><a name="$options{cache_key}"
+>$options{cache_key}</a></dt>
+
+<dd>
+<p>The &#34;cache_key&#34; is used to determine the underlying filesystem namespace to use. In typical usage, leaving this unset and relying on namespaces alone will be more than adequate.</p>
+
+<dt><a name='options'></a><a name="$options{username}"
+>$options{username}</a></dt>
+
+<dd>
+<p>The &#34;username&#34; is used to explicitely set the username. This is useful for cases where one wishes to share a cache among multiple users. If left unset, the value will be the current user&#39;s username. (Also see $options{filemode}.) Note that the username is not used to set ownership of the cache files -- the i.e. the username does not have to be a user of the system.</p>
+
+<dt><a name='options'></a><a name="$options{filemode}"
+>$options{filemode}</a></dt>
+
+<dd>
+<p>&#34;filemode&#34; specifies the permissions for cache files. This is useful for cases where one wishes to share a cache among multiple users. If left unset, the value will be &#34;u&#34;, indicating that only the current user can read an write the cache files. See the filemode() method documentation for the specification syntax.</p>
+
+<dt><a name='options'></a><a name="$options{max_size}"
+>$options{max_size}</a></dt>
+
+<dd>
+<p>&#34;max_size&#34; specifies the maximum size of the cache, in bytes. Cache objects are removed during the set() operation in order to reduce the cache size before the new cache value is added. See the reduce_size() documentation for the cache object removal policy. The max_size will be maintained regardless of the value of auto_remove_stale. The default is $File::Cache::sNO_MAX_SIZE, which indicates that the cache has no maximum size.</p>
+
+<dt><a name='options'></a><a name="$options(auto_remove_stale}"
+>$options(auto_remove_stale}</a></dt>
+
+<dd>
+<p>&#34;auto_remove_stale&#34; specifies that the cache should remove expired objects from the cache when they are requested.</p>
+
+<dt><a name='options'></a><a name="$options(cache_depth}"
+>$options(cache_depth}</a></dt>
+
+<dd>
+<p>&#34;cache_depth&#34; specifies the depth of the subdirectories that should be created. This is helpful when especially large numbers of objects are being cached (&#62;1000) at once. The optimal number of files per directory is dependent on the type of filesystem, so some hand-tuning may be required.</p>
+</dd>
+</dl>
+
+<dt><a name='set'></a><a name="set($identifier,_$object,_$expires_in)"
+><b>set($identifier, $object, $expires_in)</b></a></dt>
+
+<dd>
+<p>Adds an object to the cache. set takes the following parameters:</p>
+
+<dl>
+<dt><a name='identifier'></a><a name="$identifier"
+>$identifier</a></dt>
+
+<dd>
+<p>The key the refers to this object.</p>
+
+<dt><a name='object'></a><a name="$object"
+>$object</a></dt>
+
+<dd>
+<p>The object to be stored. This any Storable or Data::Dumper-able scalar or (optionally blessed) ref. Filehandles and database handles can not be stored, but most other references to objects can be.</p>
+
+<dt><a name='expires_in'></a><a name="$expires_in_(optional)"
+>$expires_in <i>(optional)</i></a></dt>
+
+<dd>
+<p>The object will be cleared from the cache in this number of seconds. Overrides the default expires_in value for the cache.</p>
+</dd>
+</dl>
+
+<dt><a name='get'></a><a name="get($identifier)"
+><b>get($identifier)</b></a></dt>
+
+<dd>
+<p>get retrieves an object from the cache. If the object referred to by the identifier exists in the cache and has not expired then then object will be returned. If the object does not exist then get will return undef. If the object does exist but has expired then get will return undef and, depending on the setting of auto_remove_stale, remove the expired object from the cache.</p>
+
+<dl>
+<dt><a name='identifier'></a><a name="$identifier"
+>$identifier</a></dt>
+
+<dd>
+<p>The key referring to the object to be retrieved.</p>
+</dd>
+</dl>
+
+<dt><a name='get_stale'></a><a name="get_stale($identifier)"
+><b>get_stale($identifier)</b></a></dt>
+
+<dd>
+<p>get_stale retrieves objects that have expired from the cache. Normally, expired objects are removed automatically and can not be retrieved via get_stale, but if the auto_remove_stale option is set to false, then expired objects will be left in the cache. get_stale returns undef if the object does not exist at all or has not expired yet.</p>
+
+<dl>
+<dt><a name='identifier'></a><a name="$identifier"
+>$identifier</a></dt>
+
+<dd>
+<p>The key referring to the object to be retrieved.</p>
+</dd>
+</dl>
+
+<dt><a name='remove'></a><a name="remove($identifier)"
+><b>remove($identifier)</b></a></dt>
+
+<dd>
+<p>Removes an object from the cache.</p>
+
+<dl>
+<dt><a name='identifier'></a><a name="$identifier"
+>$identifier</a></dt>
+
+<dd>
+<p>The key referring to the object to be removed.</p>
+</dd>
+</dl>
+
+<dt><a name='clear'></a><a name="clear()"
+><b>clear()</b></a></dt>
+
+<dd>
+<p>Removes all objects from this cache.</p>
+
+<dt><a name='purge'></a><a name="purge()"
+><b>purge()</b></a></dt>
+
+<dd>
+<p>Removes all objects that have expired</p>
+
+<dt><a name='size'></a><a name="size()"
+><b>size()</b></a></dt>
+
+<dd>
+<p>Return an estimate of the disk usage of the current namespace.</p>
+
+<dt><a name='reduce_size'></a><a name="reduce_size($size)"
+><b>reduce_size($size)</b></a></dt>
+
+<dd>
+<p>Reduces the size of the cache so that it is below $size. Note that the cache size is approximate, and may slightly exceed the value of $size.</p>
+
+<p>Cache objects are removed in order of nearest expiration time, or latest access time if there are no cache objects with expiration times. (If there are a mix of cache objects with expiration times and without, the ones with expiration times are removed first.) reduce_size takes the following parameter:</p>
+
+<dl>
+<dt><a name='size'></a><a name="$size"
+>$size</a></dt>
+
+<dd>
+<p>The new target cache size.</p>
+</dd>
+</dl>
+
+<dt><a name='get_creation_time'></a><a name="get_creation_time($identifier)"
+><b>get_creation_time($identifier)</b></a></dt>
+
+<dd>
+<p>Gets the time at which the data associated with $identifier was stored in the cache. Returns undef if $identifier is not cached.</p>
+
+<dl>
+<dt><a name='identifier'></a><a name="$identifier"
+>$identifier</a></dt>
+
+<dd>
+<p>The key referring to the object to be retrieved.</p>
+</dd>
+</dl>
+
+<dt><a name='get_expiration_time'></a><a name="get_expiration_time($identifier)"
+><b>get_expiration_time($identifier)</b></a></dt>
+
+<dd>
+<p>Gets the time at which the data associated with $identifier will expire from the cache. Returns undef if $identifier is not cached.</p>
+
+<dl>
+<dt><a name='identifier'></a><a name="$identifier"
+>$identifier</a></dt>
+
+<dd>
+<p>The key referring to the object to be retrieved.</p>
+</dd>
+</dl>
+
+<dt><a name='get_global_expires_in'></a><a name="get_global_expires_in()"
+><b>get_global_expires_in()</b></a></dt>
+
+<dd>
+<p>Returns the default number of seconds before an object in the cache expires.</p>
+
+<dt><a name='set_global_expires_in'></a><a name="set_global_expires_in($global_expires_in)"
+><b>set_global_expires_in($global_expires_in)</b></a></dt>
+
+<dd>
+<p>Sets the default number of seconds before an object in the cache expires. set_global_expires_in takes the following parameter:</p>
+
+<dl>
+<dt><a name='global_expires_in'></a><a name="$global_expires_in"
+>$global_expires_in</a></dt>
+
+<dd>
+<p>The default number of seconds before an object in the cache expires. It should be a number greater than zero, $File::Cache::sEXPIRES_NEVER, or $File::Cache::sEXPIRES_NOW.</p>
+</dd>
+</dl>
+
+<dt><a name='get_auto_remove_stale'></a><a name="get_auto_remove_stale()"
+><b>get_auto_remove_stale()</b></a></dt>
+
+<dd>
+<p>Returns whether or not the cache will automatically remove objects after they expire.</p>
+
+<dt><a name='set_auto_remove_stale'></a><a name="set_auto_remove_stale($auto_remove_stale)"
+><b>set_auto_remove_stale($auto_remove_stale)</b></a></dt>
+
+<dd>
+<p>Sets whether or not the cache will automatically remove objects after they expire. set_auto_remove_stale takes the following parameter:</p>
+
+<dl>
+<dt><a name='auto_remove_stale'></a><a name="$auto_remove_stale"
+>$auto_remove_stale</a></dt>
+
+<dd>
+<p>The new auto_remove_stale value. If $auto_remove_stale is 1 or $File::Cache::sTRUE, then the cache will automatically remove items when they are being retrieved if they have expired. If $auto_remove_stale is 0 or $File::Cache::sFALSE, the cache will only remove expired items when the purge() method is called, or if max_size is set. Note that the behavior of get_stale is undefined if $auto_remove_stale is true.</p>
+</dd>
+</dl>
+
+<dt><a name='get_username'></a><a name="get_username()"
+><b>get_username()</b></a></dt>
+
+<dd>
+<p>Returns the username that is currently being used to define the location of this cache.</p>
+
+<dt><a name='set_username'></a><a name="set_username($username)"
+><b>set_username($username)</b></a></dt>
+
+<dd>
+<p>Sets the username that is currently being used to define the location of this cache. set_username takes the following parameter:</p>
+
+<dl>
+<dt><a name='username'></a><a name="$username"
+>$username</a></dt>
+
+<dd>
+<p>The username that is to be used to define the location of this cache. It is not directly used to determine the ownership of the cache files, but can be used to isolate sections of a cache for different permissions.</p>
+</dd>
+</dl>
+
+<dt><a name='get_namespace'></a><a name="get_namespace()"
+><b>get_namespace()</b></a></dt>
+
+<dd>
+<p>Returns the current cache namespace.</p>
+
+<dt><a name='set_namespace'></a><a name="set_namespace($namespace)"
+><b>set_namespace($namespace)</b></a></dt>
+
+<dd>
+<p>Sets the cache namespace. set_namespace takes the following parameter:</p>
+
+<dl>
+<dt><a name='namespace'></a><a name="$namespace"
+>$namespace</a></dt>
+
+<dd>
+<p>The namespace that is to be used by the cache. The namespace can be used to isolate sections of a cache.</p>
+</dd>
+</dl>
+
+<dt><a name='get_max_size'></a><a name="get_max_size()"
+><b>get_max_size()</b></a></dt>
+
+<dd>
+<p>Returns the current cache maximum size. $File::Cache::sNO_MAX_SIZE (the default) indicates no maximum size.</p>
+
+<dt><a name='set_max_size'></a><a name="set_max_size($max_size)"
+><b>set_max_size($max_size)</b></a></dt>
+
+<dd>
+<p>Sets the maximum cache size. The cache size is reduced as necessary. set_max_size takes the following parameter:</p>
+
+<dl>
+<dt><a name='max_size'></a><a name="$max_size"
+>$max_size</a></dt>
+
+<dd>
+<p>The maximum size of the cache. $File::Cache::sNO_MAX_SIZE indicates no maximum size.</p>
+</dd>
+</dl>
+
+<dt><a name='get_cache_depth'></a><a name="get_cache_depth()"
+><b>get_cache_depth()</b></a></dt>
+
+<dd>
+<p>Returns the current cache depth.</p>
+
+<dt><a name='set_cache_depth'></a><a name="set_cache_depth($cache_depth)"
+><b>set_cache_depth($cache_depth)</b></a></dt>
+
+<dd>
+<p>Sets the cache depth. Consider calling clear() before resetting the cache depth in order to prevent inaccessible cache objects from occupying disk space. set_cache_depth takes the following parameter:</p>
+
+<dl>
+<dt><a name='cache_depth'></a><a name="$cache_depth"
+>$cache_depth</a></dt>
+
+<dd>
+<p>The depth of subdirectories that are to be used by the cache when storing cache objects.</p>
+</dd>
+</dl>
+
+<dt><a name='get_persistence_mechanism'></a><a name="get_persistence_mechanism()"
+><b>get_persistence_mechanism()</b></a></dt>
+
+<dd>
+<p>Returns the current cache persistence mechanism.</p>
+
+<dt><a name='set_persistence_mechanism'></a><a name="set_persistence_mechanism($persistence_mechanism)"
+><b>set_persistence_mechanism($persistence_mechanism)</b></a></dt>
+
+<dd>
+<p>Sets the cache persistence mechanism. This method clears the cache in order to ensure consistent cache objects. set_persistence_mechanism takes the following parameter:</p>
+
+<dl>
+<dt><a name='persistence_mechanism'></a><a name="$persistence_mechanism"
+>$persistence_mechanism</a></dt>
+
+<dd>
+<p>The persistence mechanism that is to be used by the cache. This value can be either &#34;Storable&#34; or &#34;Data::Dumper&#34;.</p>
+</dd>
+</dl>
+
+<dt><a name='get_filemode'></a><a name="get_filemode()"
+><b>get_filemode()</b></a></dt>
+
+<dd>
+<p>Returns the filemode specification for newly created cache objects.</p>
+
+<dt><a name='set_filemode'></a><a name="set_filemode($mode)"
+><b>set_filemode($mode)</b></a></dt>
+
+<dd>
+<p>Sets the filemode specification for newly created cache objects. set_filemode takes the following parameter:</p>
+
+<dl>
+<dt><a name='mode'></a><a name="$mode"
+>$mode</a></dt>
+
+<dd>
+<p>The file mode -- a numerical mode identical to that used by chmod(). See the chmod() documentation for more information.</p>
+</dd>
+</dl>
+
+<dt><a name='File'></a><a name="File::Cache::CLEAR($cache_key)"
+><b>File::Cache::CLEAR($cache_key)</b></a></dt>
+
+<dd>
+<p>Removes this cache and all the associated namespaces from the filesystem. CLEAR takes the following parameter:</p>
+
+<dl>
+<dt><a name='cache_key'></a><a name="$cache_key_(optional)"
+>$cache_key <i>(optional)</i></a></dt>
+
+<dd>
+<p>Specifies the filesystem data to be cleared. Needed only if a cache was created with a non-standard cache key.</p>
+</dd>
+</dl>
+
+<dt><a name='File'></a><a name="File::Cache::PURGE($cache_key)"
+><b>File::Cache::PURGE($cache_key)</b></a></dt>
+
+<dd>
+<p>Removes all objects in all namespaces that have expired. PURGE takes the following parameter:</p>
+
+<dl>
+<dt><a name='cache_key'></a><a name="$cache_key_(optional)"
+>$cache_key <i>(optional)</i></a></dt>
+
+<dd>
+<p>Specifies the filesystem data to be purged. Needed only if a cache was created with a non-standard cache key.</p>
+</dd>
+</dl>
+
+<dt><a name='File'></a><a name="File::Cache::SIZE($cache_key)"
+><b>File::Cache::SIZE($cache_key)</b></a></dt>
+
+<dd>
+<p>Roughly estimates the amount of memory in use. SIZE takes the following parameter:</p>
+
+<dl>
+<dt><a name='cache_key'></a><a name="$cache_key_(optional)"
+>$cache_key <i>(optional)</i></a></dt>
+
+<dd>
+<p>Specifies the filesystem data to be examined. Needed only if a cache was created with a non-standard cache key.</p>
+</dd>
+</dl>
+
+<dt><a name='File'></a><a name="File::Cache::REDUCE_SIZE($size,_$cache_key)"
+><b>File::Cache::REDUCE_SIZE($size, $cache_key)</b></a></dt>
+
+<dd>
+<p>Reduces the size of the cache so that it is below $size. Note that the cache size is approximate, and may slightly exceed the value of $size.</p>
+
+<p>Cache objects are removed in order of nearest expiration time, or latest access time if there are no cache objects with expiration times. (If there are a mix of cache objects with expiration times and without, the ones with expiration times are removed first.) REDUCE_SIZE takes the following parameters:</p>
+
+<dl>
+<dt><a name='size'></a><a name="$size"
+>$size</a></dt>
+
+<dd>
+<p>The new target cache size.</p>
+
+<dt><a name='cache_key'></a><a name="$cache_key_(optional)"
+>$cache_key <i>(optional)</i></a></dt>
+
+<dd>
+<p>Specifies the filesystem data to be examined. Needed only if a cache was created with a non-standard cache key.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li>The root of the cache namespace is created with global read/write permissions.</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?IPC%3A%3ACache" class="podlinkpod"
+>IPC::Cache</a>, Storable, <a href="/perldoc?Data%3A%3ADumper" class="podlinkpod"
+>Data::Dumper</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DeWitt Clinton &#60;dewitt@unto.net&#62;, and please see the CREDITS file</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78254 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 10:10:32 2012 GMT (0.143962144851685) @cpansearch1 -->
+ </body>
+</html>

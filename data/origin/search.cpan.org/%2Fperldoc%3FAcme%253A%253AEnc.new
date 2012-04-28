@@ -1,0 +1,325 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Acme::Enc - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Acme-Enc",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Acme-Enc-v0.0.1",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Acme::Enc",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DMUEY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Acme::Enc">permalink</a></div>
+  <a href="/~dmuey/">Daniel Muey</a> &gt;
+  <a href="/~dmuey/Acme-Enc-v0.0.1/">Acme-Enc-v0.0.1</a> &gt;
+  Acme::Enc
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/a8077057d69242e2c9ee3770bd88ddc5?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DM/DMUEY/Acme-Enc-v0.0.1.tar.gz">Acme-Enc-v0.0.1.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Acme%3A%3AEnc;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DMUEY/Acme-Enc-v0.0.1/Enc.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Net%3A%3ASSH%3A%3AExpect">Net::SSH::Expect</a><br>
+<a href="/perldoc?MIME%3A%3ABase64">MIME::Base64</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Acme%3A%3AEnc">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Acme-Enc">View/Report Bugs</a><br/>
+
+</div>
+</div>
+  Module Version:  0.0.1 &nbsp;
+<span class="noprint">
+  <a href="/src/DMUEY/Acme-Enc-v0.0.1/Enc.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#OPTIONS'>OPTIONS</a>
+  <li class='indexItem indexItem1'><a href='#Will_this_make_it_so_no_one_can_see_my_source_since_my_code_is_so_great_that_everyone_wants_to_steal_it?'>Will this make it so no one can see my source since my code is so great that everyone wants to steal it?</a>
+  <li class='indexItem indexItem1'><a href='#So_why_would_I_use_this_if_it_won&#39;t_get_me_riches_and_glory_and_only_make_my_script_slower?'>So why would I use this if it won&#39;t get me riches and glory and only make my script slower?</a>
+  <li class='indexItem indexItem1'><a href='#Whats_the_deal_with_the_comment_undeneathe_the_use_statement_after_its_ecrypted?'>Whats the deal with the comment undeneathe the use statement after its ecrypted?</a>
+  <li class='indexItem indexItem1'><a href='#See_Also'>See Also</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Acme::Enc - Perl extension for Encypting your source code,
+Acme Style</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">   use Acme::Enc;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">   use Acme::Enc;
+   
+   print &#34;Hello World&#34;;</pre>
+
+<p>After you run it the first time it will now look like this:</p>
+
+<pre class="sh_perl">   use Acme::Enc;
+   [ encypted version here ]</pre>
+
+<p>but run exactly the same :)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OPTIONS"
+>OPTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Acme::Enc qw(cyphertext 1);
+    use Acme::Enc qw(cyphertext);
+    use Acme::Enc qw(\&#38;get_cyphertext 1);
+    use Acme::Enc qw(\&#38;get_cyphertext);</pre>
+
+<p>This lets you specify the cyphertext or a code reference that returns a cyphertext to use to [de|en]crypt the source.</p>
+
+<p>If a second argument is true then it uses ASCII Armour.</p>
+
+<p>The code reference has $0 as its only argument so you could use that in cypher fetching. (IE based on a database or algorythm)</p>
+
+<p>Note that to have it call your funtion to unencrypt it you must specify it as a string &#39;\&#38;foo&#39; in main:: or else the return value of your function will be used:</p>
+
+<pre class="sh_perl">    use Digest::MD5 qw(md5_hex);
+    sub get_cyphertext { return md5_hex(shift()) }
+    use Acme::Enc qw(\&#38;get_cyphertext);
+    [ your code here ]</pre>
+
+<p>results in:</p>
+
+<pre class="sh_perl">    use Digest::MD5 qw(md5_hex);
+    sub get_cyphertext { return md5_hex(shift()) }
+    use Acme::Enc \&#38;get_cyphertext;
+    [ encypted version here ]</pre>
+
+<p>while:</p>
+
+<pre class="sh_perl">    use Digest::MD5 qw(md5_hex);
+    sub get_cyphertext { return md5_hex(shift()) }
+    use Acme::Enc \&#38;get_cyphertext;
+    [ your code here ]</pre>
+
+<p>results in:</p>
+
+<pre class="sh_perl">    use Digest::MD5 qw(md5_hex);
+    sub get_cyphertext { return md5_hex(shift()) }
+    use Acme::Enc &#39;b2d92a2245e0b046e4ef703ecd9a29ae&#39;;
+    [ encypted version here ]</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Will_this_make_it_so_no_one_can_see_my_source_since_my_code_is_so_great_that_everyone_wants_to_steal_it?"
+>Will this make it so no one can see my source since my code is so great that everyone wants to steal it? <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Don&#39;t be stupid, they&#39;ll easily be able to unencrypt it, the same way Acme::Enc unencypts it.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="So_why_would_I_use_this_if_it_won&#39;t_get_me_riches_and_glory_and_only_make_my_script_slower?"
+>So why would I use this if it won&#39;t get me riches and glory and only make my script slower? <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Why does anyone do anything really?</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Whats_the_deal_with_the_comment_undeneathe_the_use_statement_after_its_ecrypted?"
+>Whats the deal with the comment undeneathe the use statement after its ecrypted? <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>I needed a tag to look for to allow for binary encryption, I chose my name. You no like? Boo hoo :)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="See_Also"
+>See Also <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Crypt%3A%3AOpenPGP" class="podlinkpod"
+>Crypt::OpenPGP</a> and <a href="/perldoc?Acme%3A%3ABleach" class="podlinkpod"
+>Acme::Bleach</a> (any resemblance of my pants to Damian Conway&#39;s shirt is purely not coincidental and the names were not changed because no one is innocent)</p>
+
+<p>Thanks Damian you rock!! Tell Larry hi for me ;p</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Daniel Muey, <a href="http://drmuey.com/cpan_contact.pl" class="podlinkurl"
+>http://drmuey.com/cpan_contact.pl</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2005 by Daniel Muey</p>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78262 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 16:35:05 2012 GMT (0.0590319633483887) @cpansearch1 -->
+ </body>
+</html>

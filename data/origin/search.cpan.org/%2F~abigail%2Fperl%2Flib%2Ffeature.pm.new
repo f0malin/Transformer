@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>feature - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.15.9",3]);
+    _gaq.push(["_setCustomVar",3,"Module","feature",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ABIGAIL",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?feature">permalink</a></div>
+  <a href="/~abigail/">Abigail</a> &gt;
+  <a href="/~abigail/perl/">perl</a> &gt;
+  feature
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/bd4dd8327080d951d933fbd675e956d1?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/A/AB/ABIGAIL/perl-5.15.9.tar.gz">perl-5.15.9.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=feature;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ABIGAIL/perl-5.15.9/lib/feature.pm">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+  Module Version:  1.27 &nbsp;
+<span class="noprint">
+  <a href="/src/ABIGAIL/perl-5.15.9/lib/feature.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Lexical_effect'>Lexical effect</a>
+    <li class='indexItem indexItem2'><a href='#no_feature'>no feature</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AVAILABLE_FEATURES'>AVAILABLE FEATURES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#The_&#39;say&#39;_feature'>The &#39;say&#39; feature</a>
+    <li class='indexItem indexItem2'><a href='#The_&#39;state&#39;_feature'>The &#39;state&#39; feature</a>
+    <li class='indexItem indexItem2'><a href='#The_&#39;switch&#39;_feature'>The &#39;switch&#39; feature</a>
+    <li class='indexItem indexItem2'><a href='#The_&#39;unicode_strings&#39;_feature'>The &#39;unicode_strings&#39; feature</a>
+    <li class='indexItem indexItem2'><a href='#The_&#39;unicode_eval&#39;_and_&#39;evalbytes&#39;_features'>The &#39;unicode_eval&#39; and &#39;evalbytes&#39; features</a>
+    <li class='indexItem indexItem2'><a href='#The_&#39;current_sub&#39;_feature'>The &#39;current_sub&#39; feature</a>
+    <li class='indexItem indexItem2'><a href='#The_&#39;array_base&#39;_feature'>The &#39;array_base&#39; feature</a>
+    <li class='indexItem indexItem2'><a href='#The_&#39;fc&#39;_feature'>The &#39;fc&#39; feature</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#FEATURE_BUNDLES'>FEATURE BUNDLES</a>
+  <li class='indexItem indexItem1'><a href='#IMPLICIT_LOADING'>IMPLICIT LOADING</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>feature - Perl pragma to enable new features</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use feature qw(say switch);
+    given ($foo) {
+        when (1)          { say &#34;\$foo == 1&#34; }
+        when ([2,3])      { say &#34;\$foo == 2 || \$foo == 3&#34; }
+        when (/^a[bc]d$/) { say &#34;\$foo eq &#39;abd&#39; || \$foo eq &#39;acd&#39;&#34; }
+        when ($_ &#62; 100)   { say &#34;\$foo &#62; 100&#34; }
+        default           { say &#34;None of the above&#34; }
+    }
+
+    use feature &#39;:5.10&#39;; # loads all features available in perl 5.10
+
+    use v5.10;           # implicitly loads :5.10 feature bundle</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>It is usually impossible to add new syntax to Perl without breaking some existing programs. This pragma provides a way to minimize that risk. New syntactic constructs, or new semantic meanings to older constructs, can be enabled by <code>use feature &#39;foo&#39;</code>, and will be parsed only when the appropriate feature pragma is in scope. (Nevertheless, the <code>CORE::</code> prefix provides access to all Perl keywords, regardless of this pragma.)</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Lexical_effect"
+>Lexical effect</a></h2>
+
+<p>Like other pragmas (<code>use strict</code>, for example), features have a lexical effect. <code>use feature qw(foo)</code> will only make the feature &#34;foo&#34; available from that point to the end of the enclosing block.</p>
+
+<pre class="sh_perl">    {
+        use feature &#39;say&#39;;
+        say &#34;say is available here&#34;;
+    }
+    print &#34;But not here.\n&#34;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="no_feature"
+><code>no feature</code></a></h2>
+
+<p>Features can also be turned off by using <code>no feature &#34;foo&#34;</code>. This too has lexical effect.</p>
+
+<pre class="sh_perl">    use feature &#39;say&#39;;
+    say &#34;say is available here&#34;;
+    {
+        no feature &#39;say&#39;;
+        print &#34;But not here.\n&#34;;
+    }
+    say &#34;Yet it is here.&#34;;</pre>
+
+<p><code>no feature</code> with no features specified will reset to the default group. To disable <i>all</i> features (an unusual request!) use <code>no feature &#39;:all&#39;</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AVAILABLE_FEATURES"
+>AVAILABLE FEATURES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_&#39;say&#39;_feature"
+>The &#39;say&#39; feature</a></h2>
+
+<p><code>use feature &#39;say&#39;</code> tells the compiler to enable the Perl 6 style <code>say</code> function.</p>
+
+<p>See <a href="/~abigail/perl-5.15.9/pod/perlfunc.pod#say" class="podlinkpod"
+>&#34;say&#34; in perlfunc</a> for details.</p>
+
+<p>This feature is available starting with Perl 5.10.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_&#39;state&#39;_feature"
+>The &#39;state&#39; feature</a></h2>
+
+<p><code>use feature &#39;state&#39;</code> tells the compiler to enable <code>state</code> variables.</p>
+
+<p>See <a href="/~abigail/perl-5.15.9/pod/perlsub.pod#Persistent_Private_Variables" class="podlinkpod"
+>&#34;Persistent Private Variables&#34; in perlsub</a> for details.</p>
+
+<p>This feature is available starting with Perl 5.10.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_&#39;switch&#39;_feature"
+>The &#39;switch&#39; feature</a></h2>
+
+<p><code>use feature &#39;switch&#39;</code> tells the compiler to enable the Perl 6 given/when construct.</p>
+
+<p>See <a href="/~abigail/perl-5.15.9/pod/perlsyn.pod#Switch_Statements" class="podlinkpod"
+>&#34;Switch Statements&#34; in perlsyn</a> for details.</p>
+
+<p>This feature is available starting with Perl 5.10.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_&#39;unicode_strings&#39;_feature"
+>The &#39;unicode_strings&#39; feature</a></h2>
+
+<p><code>use feature &#39;unicode_strings&#39;</code> tells the compiler to use Unicode semantics in all string operations executed within its scope (unless they are also within the scope of either <code>use locale</code> or <code>use bytes</code>). The same applies to all regular expressions compiled within the scope, even if executed outside it.</p>
+
+<p><code>no feature &#39;unicode_strings&#39;</code> tells the compiler to use the traditional Perl semantics wherein the native character set semantics is used unless it is clear to Perl that Unicode is desired. This can lead to some surprises when the behavior suddenly changes. (See <a href="/~abigail/perl-5.15.9/pod/perlunicode.pod#The_&#34;Unicode_Bug&#34;" class="podlinkpod"
+>&#34;The &#34;Unicode Bug&#34;&#34; in perlunicode</a> for details.) For this reason, if you are potentially using Unicode in your program, the <code>use feature &#39;unicode_strings&#39;</code> subpragma is <b>strongly</b> recommended.</p>
+
+<p>This feature is available starting with Perl 5.12; was almost fully implemented in Perl 5.14; and extended in Perl 5.16 to cover <code>quotemeta</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_&#39;unicode_eval&#39;_and_&#39;evalbytes&#39;_features"
+>The &#39;unicode_eval&#39; and &#39;evalbytes&#39; features</a></h2>
+
+<p>Under the <code>unicode_eval</code> feature, Perl&#39;s <code>eval</code> function, when passed a string, will evaluate it as a string of characters, ignoring any <code>use utf8</code> declarations. <code>use utf8</code> exists to declare the encoding of the script, which only makes sense for a stream of bytes, not a string of characters. Source filters are forbidden, as they also really only make sense on strings of bytes. Any attempt to activate a source filter will result in an error.</p>
+
+<p>The <code>evalbytes</code> feature enables the <code>evalbytes</code> keyword, which evaluates the argument passed to it as a string of bytes. It dies if the string contains any characters outside the 8-bit range. Source filters work within <code>evalbytes</code>: they apply to the contents of the string being evaluated.</p>
+
+<p>Together, these two features are intended to replace the historical <code>eval</code> function, which has (at least) two bugs in it, that cannot easily be fixed without breaking existing programs:</p>
+
+<ul>
+<li><code>eval</code> behaves differently depending on the internal encoding of the string, sometimes treating its argument as a string of bytes, and sometimes as a string of characters.</li>
+
+<li>Source filters activated within <code>eval</code> leak out into whichever <i>file</i> scope is currently being compiled. To give an example with the CPAN module <a href="/perldoc?Semi%3A%3ASemicolons" class="podlinkpod"
+>Semi::Semicolons</a>:
+<pre class="sh_perl">    BEGIN { eval &#34;use Semi::Semicolons;  # not filtered here &#34; }
+    # filtered here!</pre>
+
+<p><code>evalbytes</code> fixes that to work the way one would expect:</p>
+
+<pre class="sh_perl">    use feature &#34;evalbytes&#34;;
+    BEGIN { evalbytes &#34;use Semi::Semicolons;  # filtered &#34; }
+    # not filtered</pre>
+</li>
+</ul>
+
+<p>These two features are available starting with Perl 5.16.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_&#39;current_sub&#39;_feature"
+>The &#39;current_sub&#39; feature</a></h2>
+
+<p>This provides the <code>__SUB__</code> token that returns a reference to the current subroutine or <code>undef</code> outside of a subroutine.</p>
+
+<p>This feature is available starting with Perl 5.16.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_&#39;array_base&#39;_feature"
+>The &#39;array_base&#39; feature</a></h2>
+
+<p>This feature supports the legacy <code>$[</code> variable. See <a href="/~abigail/perl-5.15.9/pod/perlvar.pod#$[" class="podlinkpod"
+>&#34;$[&#34; in perlvar</a> and <a href="/~abigail/perl-5.15.9/ext/arybase/arybase.pm" class="podlinkpod"
+>arybase</a>. It is on by default but disabled under <code>use v5.16</code> (see <a href="#IMPLICIT_LOADING" class="podlinkpod"
+>&#34;IMPLICIT LOADING&#34;</a>, below).</p>
+
+<p>This feature is available under this name starting with Perl 5.16. In previous versions, it was simply on all the time, and this pragma knew nothing about it.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_&#39;fc&#39;_feature"
+>The &#39;fc&#39; feature</a></h2>
+
+<p><code>use feature &#39;fc&#39;</code> tells the compiler to enable the <code>fc</code> function, which implements Unicode casefolding.</p>
+
+<p>See <a href="/~abigail/perl-5.15.9/pod/perlfunc.pod#fc" class="podlinkpod"
+>&#34;fc&#34; in perlfunc</a> for details.</p>
+
+<p>This feature is available from Perl 5.16 onwards.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FEATURE_BUNDLES"
+>FEATURE BUNDLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>It&#39;s possible to load multiple features together, using a <i>feature bundle</i>. The name of a feature bundle is prefixed with a colon, to distinguish it from an actual feature.</p>
+
+<pre class="sh_perl">  use feature &#34;:5.10&#34;;</pre>
+
+<p>The following feature bundles are available:</p>
+
+<pre class="sh_perl">  bundle    features included
+  --------- -----------------
+  :default  array_base
+
+  :5.10     say state switch array_base
+
+  :5.12     say state switch unicode_strings array_base
+
+  :5.14     say state switch unicode_strings array_base
+
+  :5.16     say state switch unicode_strings
+            unicode_eval evalbytes current_sub fc</pre>
+
+<p>The <code>:default</code> bundle represents the feature set that is enabled before any <code>use feature</code> or <code>no feature</code> declaration.</p>
+
+<p>Specifying sub-versions such as the <code>0</code> in <code>5.14.0</code> in feature bundles has no effect. Feature bundles are guaranteed to be the same for all sub-versions.</p>
+
+<pre class="sh_perl">  use feature &#34;:5.14.0&#34;;    # same as &#34;:5.14&#34;
+  use feature &#34;:5.14.1&#34;;    # same as &#34;:5.14&#34;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="IMPLICIT_LOADING"
+>IMPLICIT LOADING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Instead of loading feature bundles by name, it is easier to let Perl do implicit loading of a feature bundle for you.</p>
+
+<p>There are two ways to load the <code>feature</code> pragma implicitly:</p>
+
+<ul>
+<li>By using the <code>-E</code> switch on the Perl command-line instead of <code>-e</code>. That will enable the feature bundle for that version of Perl in the main compilation unit (that is, the one-liner that follows <code>-E</code>).</li>
+
+<li>By explicitly requiring a minimum Perl version number for your program, with the <code>use VERSION</code> construct. That is,
+<pre class="sh_perl">    use v5.10.0;</pre>
+
+<p>will do an implicit</p>
+
+<pre class="sh_perl">    no feature &#39;:all&#39;;
+    use feature &#39;:5.10&#39;;</pre>
+
+<p>and so on. Note how the trailing sub-version is automatically stripped from the version.</p>
+
+<p>But to avoid portability warnings (see <a href="/~abigail/perl-5.15.9/pod/perlfunc.pod#use" class="podlinkpod"
+>&#34;use&#34; in perlfunc</a>), you may prefer:</p>
+
+<pre class="sh_perl">    use 5.010;</pre>
+
+<p>with the same effect.</p>
+
+<p>If the required version is older than Perl 5.10, the &#34;:default&#34; feature bundle is automatically loaded instead.</p>
+</li>
+</ul>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78059 Uploads, 24684 Distributions
+105888 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 08:35:31 2012 GMT (0.113445043563843) @cpansearch1 -->
+ </body>
+</html>

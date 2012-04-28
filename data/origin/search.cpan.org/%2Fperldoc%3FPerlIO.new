@@ -1,0 +1,466 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>PerlIO - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",3,"Module","PerlIO",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?PerlIO">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  PerlIO
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=PerlIO;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/lib/PerlIO.pm">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+  Module Version:  1.07 &nbsp;
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/lib/PerlIO.pm">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~abigail/perl/lib/PerlIO.pm">perl-5.15.9</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Custom_Layers'>Custom Layers</a>
+    <li class='indexItem indexItem2'><a href='#Alternatives_to_raw'>Alternatives to raw</a>
+    <li class='indexItem indexItem2'><a href='#Defaults_and_how_to_override_them'>Defaults and how to override them</a>
+    <li class='indexItem indexItem2'><a href='#Querying_the_layers_of_filehandles'>Querying the layers of filehandles</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>PerlIO - On demand loader for PerlIO layers and root of PerlIO::* name space</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  open($fh,&#34;&#60;:crlf&#34;, &#34;my.txt&#34;); # support platform-native and CRLF text files
+
+  open($fh,&#34;&#60;&#34;,&#34;his.jpg&#34;);      # portably open a binary file for reading
+  binmode($fh);
+
+  Shell:
+    PERLIO=perlio perl ....</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>When an undefined layer &#39;foo&#39; is encountered in an <code>open</code> or <code>binmode</code> layer specification then C code performs the equivalent of:</p>
+
+<pre class="sh_perl">  use PerlIO &#39;foo&#39;;</pre>
+
+<p>The perl code in PerlIO.pm then attempts to locate a layer by doing</p>
+
+<pre class="sh_perl">  require PerlIO::foo;</pre>
+
+<p>Otherwise the <code>PerlIO</code> package is a place holder for additional PerlIO related functions.</p>
+
+<p>The following layers are currently defined:</p>
+
+<dl>
+<dt><a name='unix'></a><a name=":unix"
+>:unix</a></dt>
+
+<dd>
+<p>Lowest level layer which provides basic PerlIO operations in terms of UNIX/POSIX numeric file descriptor calls (open(), read(), write(), lseek(), close()).</p>
+
+<dt><a name='stdio'></a><a name=":stdio"
+>:stdio</a></dt>
+
+<dd>
+<p>Layer which calls <code>fread</code>, <code>fwrite</code> and <code>fseek</code>/<code>ftell</code> etc. Note that as this is &#34;real&#34; stdio it will ignore any layers beneath it and go straight to the operating system via the C library as usual.</p>
+
+<dt><a name='perlio'></a><a name=":perlio"
+>:perlio</a></dt>
+
+<dd>
+<p>A from scratch implementation of buffering for PerlIO. Provides fast access to the buffer for <code>sv_gets</code> which implements perl&#39;s readline/&#60;&#62; and in general attempts to minimize data copying.</p>
+
+<p><code>:perlio</code> will insert a <code>:unix</code> layer below itself to do low level IO.</p>
+
+<dt><a name='crlf'></a><a name=":crlf"
+>:crlf</a></dt>
+
+<dd>
+<p>A layer that implements DOS/Windows like CRLF line endings. On read converts pairs of CR,LF to a single &#34;\n&#34; newline character. On write converts each &#34;\n&#34; to a CR,LF pair. Note that this layer will silently refuse to be pushed on top of itself.</p>
+
+<p>It currently does <i>not</i> mimic MS-DOS as far as treating of Control-Z as being an end-of-file marker.</p>
+
+<p>Based on the <code>:perlio</code> layer.</p>
+
+<dt><a name='mmap'></a><a name=":mmap"
+>:mmap</a></dt>
+
+<dd>
+<p>A layer which implements &#34;reading&#34; of files by using <code>mmap()</code> to make a (whole) file appear in the process&#39;s address space, and then using that as PerlIO&#39;s &#34;buffer&#34;. This <i>may</i> be faster in certain circumstances for large files, and may result in less physical memory use when multiple processes are reading the same file.</p>
+
+<p>Files which are not <code>mmap()</code>-able revert to behaving like the <code>:perlio</code> layer. Writes also behave like the <code>:perlio</code> layer, as <code>mmap()</code> for write needs extra house-keeping (to extend the file) which negates any advantage.</p>
+
+<p>The <code>:mmap</code> layer will not exist if the platform does not support <code>mmap()</code>.</p>
+
+<dt><a name='utf8'></a><a name=":utf8"
+>:utf8</a></dt>
+
+<dd>
+<p>Declares that the stream accepts perl&#39;s <i>internal</i> encoding of characters. (Which really is UTF-8 on ASCII machines, but is UTF-EBCDIC on EBCDIC machines.) This allows any character perl can represent to be read from or written to the stream. The UTF-X encoding is chosen to render simple text parts (i.e. non-accented letters, digits and common punctuation) human readable in the encoded file.</p>
+
+<p>Here is how to write your native data out using UTF-8 (or UTF-EBCDIC) and then read it back in.</p>
+
+<pre class="sh_perl">        open(F, &#34;&#62;:utf8&#34;, &#34;data.utf&#34;);
+        print F $out;
+        close(F);
+
+        open(F, &#34;&#60;:utf8&#34;, &#34;data.utf&#34;);
+        $in = &#60;F&#62;;
+        close(F);</pre>
+
+<p>Note that this layer does not validate byte sequences. For reading input, using <code>:encoding(utf8)</code> instead of bare <code>:utf8</code> is strongly recommended.</p>
+
+<dt><a name='bytes'></a><a name=":bytes"
+>:bytes</a></dt>
+
+<dd>
+<p>This is the inverse of the <code>:utf8</code> layer. It turns off the flag on the layer below so that data read from it is considered to be &#34;octets&#34; i.e. characters in the range 0..255 only. Likewise on output perl will warn if a &#34;wide&#34; character is written to a such a stream.</p>
+
+<dt><a name='raw'></a><a name=":raw"
+>:raw</a></dt>
+
+<dd>
+<p>The <code>:raw</code> layer is <i>defined</i> as being identical to calling <code>binmode($fh)</code> - the stream is made suitable for passing binary data, i.e. each byte is passed as-is. The stream will still be buffered.</p>
+
+<p>In Perl 5.6 and some books the <code>:raw</code> layer (previously sometimes also referred to as a &#34;discipline&#34;) is documented as the inverse of the <code>:crlf</code> layer. That is no longer the case - other layers which would alter the binary nature of the stream are also disabled. If you want UNIX line endings on a platform that normally does CRLF translation, but still want UTF-8 or encoding defaults, the appropriate thing to do is to add <code>:perlio</code> to the PERLIO environment variable.</p>
+
+<p>The implementation of <code>:raw</code> is as a pseudo-layer which when &#34;pushed&#34; pops itself and then any layers which do not declare themselves as suitable for binary data. (Undoing :utf8 and :crlf are implemented by clearing flags rather than popping layers but that is an implementation detail.)</p>
+
+<p>As a consequence of the fact that <code>:raw</code> normally pops layers, it usually only makes sense to have it as the only or first element in a layer specification. When used as the first element it provides a known base on which to build e.g.</p>
+
+<pre class="sh_perl">    open($fh,&#34;:raw:utf8&#34;,...)</pre>
+
+<p>will construct a &#34;binary&#34; stream, but then enable UTF-8 translation.</p>
+
+<dt><a name='pop'></a><a name=":pop"
+>:pop</a></dt>
+
+<dd>
+<p>A pseudo layer that removes the top-most layer. Gives perl code a way to manipulate the layer stack. Should be considered as experimental. Note that <code>:pop</code> only works on real layers and will not undo the effects of pseudo layers like <code>:utf8</code>. An example of a possible use might be:</p>
+
+<pre class="sh_perl">    open($fh,...)
+    ...
+    binmode($fh,&#34;:encoding(...)&#34;);  # next chunk is encoded
+    ...
+    binmode($fh,&#34;:pop&#34;);            # back to un-encoded</pre>
+
+<p>A more elegant (and safer) interface is needed.</p>
+
+<dt><a name='win32'></a><a name=":win32"
+>:win32</a></dt>
+
+<dd>
+<p>On Win32 platforms this <i>experimental</i> layer uses the native &#34;handle&#34; IO rather than the unix-like numeric file descriptor layer. Known to be buggy as of perl 5.8.2.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Custom_Layers"
+>Custom Layers</a></h2>
+
+<p>It is possible to write custom layers in addition to the above builtin ones, both in C/XS and Perl. Two such layers (and one example written in Perl using the latter) come with the Perl distribution.</p>
+
+<dl>
+<dt><a name='encoding'></a><a name=":encoding"
+>:encoding</a></dt>
+
+<dd>
+<p>Use <code>:encoding(ENCODING)</code> either in open() or binmode() to install a layer that transparently does character set and encoding transformations, for example from Shift-JIS to Unicode. Note that under <code>stdio</code> an <code>:encoding</code> also enables <code>:utf8</code>. See <a href="/~flora/perl-5.14.2/ext/PerlIO-encoding/encoding.pm" class="podlinkpod"
+>PerlIO::encoding</a> for more information.</p>
+
+<dt><a name='via'></a><a name=":via"
+>:via</a></dt>
+
+<dd>
+<p>Use <code>:via(MODULE)</code> either in open() or binmode() to install a layer that does whatever transformation (for example compression / decompression, encryption / decryption) to the filehandle. See <a href="/~flora/perl-5.14.2/ext/PerlIO-via/via.pm" class="podlinkpod"
+>PerlIO::via</a> for more information.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Alternatives_to_raw"
+>Alternatives to raw</a></h2>
+
+<p>To get a binary stream an alternate method is to use:</p>
+
+<pre class="sh_perl">    open($fh,&#34;whatever&#34;)
+    binmode($fh);</pre>
+
+<p>this has the advantage of being backward compatible with how such things have had to be coded on some platforms for years.</p>
+
+<p>To get an unbuffered stream specify an unbuffered layer (e.g. <code>:unix</code>) in the open call:</p>
+
+<pre class="sh_perl">    open($fh,&#34;&#60;:unix&#34;,$path)</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Defaults_and_how_to_override_them"
+>Defaults and how to override them</a></h2>
+
+<p>If the platform is MS-DOS like and normally does CRLF to &#34;\n&#34; translation for text files then the default layers are :</p>
+
+<pre class="sh_perl">  unix crlf</pre>
+
+<p>(The low level &#34;unix&#34; layer may be replaced by a platform specific low level layer.)</p>
+
+<p>Otherwise if <code>Configure</code> found out how to do &#34;fast&#34; IO using the system&#39;s stdio, then the default layers are:</p>
+
+<pre class="sh_perl">  unix stdio</pre>
+
+<p>Otherwise the default layers are</p>
+
+<pre class="sh_perl">  unix perlio</pre>
+
+<p>These defaults may change once perlio has been better tested and tuned.</p>
+
+<p>The default can be overridden by setting the environment variable PERLIO to a space separated list of layers (<code>unix</code> or platform low level layer is always pushed first).</p>
+
+<p>This can be used to see the effect of/bugs in the various layers e.g.</p>
+
+<pre class="sh_perl">  cd .../perl/t
+  PERLIO=stdio  ./perl harness
+  PERLIO=perlio ./perl harness</pre>
+
+<p>For the various values of PERLIO see <a href="/~flora/perl-5.14.2/pod/perlrun.pod#PERLIO" class="podlinkpod"
+>&#34;PERLIO&#34; in perlrun</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Querying_the_layers_of_filehandles"
+>Querying the layers of filehandles</a></h2>
+
+<p>The following returns the <b>names</b> of the PerlIO layers on a filehandle.</p>
+
+<pre class="sh_perl">   my @layers = PerlIO::get_layers($fh); # Or FH, *FH, &#34;FH&#34;.</pre>
+
+<p>The layers are returned in the order an open() or binmode() call would use them. Note that the &#34;default stack&#34; depends on the operating system and on the Perl version, and both the compile-time and runtime configurations of Perl.</p>
+
+<p>The following table summarizes the default layers on UNIX-like and DOS-like platforms and depending on the setting of <code>$ENV{PERLIO}</code>:</p>
+
+<pre class="sh_perl"> PERLIO     UNIX-like                   DOS-like
+ ------     ---------                   --------
+ unset / &#34;&#34; unix perlio / stdio [1]     unix crlf
+ stdio      unix perlio / stdio [1]     stdio
+ perlio     unix perlio                 unix perlio
+ mmap       unix mmap                   unix mmap
+
+ # [1] &#34;stdio&#34; if Configure found out how to do &#34;fast stdio&#34; (depends
+ # on the stdio implementation) and in Perl 5.8, otherwise &#34;unix perlio&#34;</pre>
+
+<p>By default the layers from the input side of the filehandle are returned; to get the output side, use the optional <code>output</code> argument:</p>
+
+<pre class="sh_perl">   my @layers = PerlIO::get_layers($fh, output =&#62; 1);</pre>
+
+<p>(Usually the layers are identical on either side of a filehandle but for example with sockets there may be differences, or if you have been using the <code>open</code> pragma.)</p>
+
+<p>There is no set_layers(), nor does get_layers() return a tied array mirroring the stack, or anything fancy like that. This is not accidental or unintentional. The PerlIO layer stack is a bit more complicated than just a stack (see for example the behaviour of <code>:raw</code>). You are supposed to use open() and binmode() to manipulate the stack.</p>
+
+<p><b>Implementation details follow, please close your eyes.</b></p>
+
+<p>The arguments to layers are by default returned in parentheses after the name of the layer, and certain layers (like <code>utf8</code>) are not real layers but instead flags on real layers; to get all of these returned separately, use the optional <code>details</code> argument:</p>
+
+<pre class="sh_perl">   my @layer_and_args_and_flags = PerlIO::get_layers($fh, details =&#62; 1);</pre>
+
+<p>The result will be up to be three times the number of layers: the first element will be a name, the second element the arguments (unspecified arguments will be <code>undef</code>), the third element the flags, the fourth element a name again, and so forth.</p>
+
+<p><b>You may open your eyes now.</b></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Nick Ing-Simmons &#60;nick@ing-simmons.net&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~flora/perl-5.14.2/pod/perlfunc.pod#binmode" class="podlinkpod"
+>&#34;binmode&#34; in perlfunc</a>, <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#open" class="podlinkpod"
+>&#34;open&#34; in perlfunc</a>, <a href="/~flora/perl-5.14.2/pod/perlunicode.pod" class="podlinkpod"
+>perlunicode</a>, <a href="/~flora/perl-5.14.2/pod/perliol.pod" class="podlinkpod"
+>perliol</a>, <a href="/perldoc?Encode" class="podlinkpod"
+>Encode</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78231 Uploads, 24723 Distributions
+106029 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Thu Apr 26 21:00:47 2012 GMT (0.0673730373382568) @cpansearch1 -->
+ </body>
+</html>

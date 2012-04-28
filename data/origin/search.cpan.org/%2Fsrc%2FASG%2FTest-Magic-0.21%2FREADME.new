@@ -1,0 +1,100 @@
+Test::Magic - terse tests with useful error feedback
+
+SYNOPSIS
+
+    use Test::Magic tests => 9;
+
+    test 'numbers',
+      is 1 == 1,
+      is 1 > 2;
+
+    test 'strings',
+      is 'asdf' eq 'asdf',
+      is 'asdf' gt 'asdf';
+
+    test 'regex',
+      is 'abcd' == qr/bc/,   # == is overloaded when rhs is a regex
+      is 'abcd' ~~ q/bc/,    # ~~ can be used with a string rhs in perl 5.10+
+      is 'badc' ~~ q/bc/;
+
+    test 'data structures',
+      is [1, 2, 3] == [1, 2, 3],   # also overloaded when rhs is a reference
+      is {a => 1, b => 2} == {a => 1, b => 1};
+
+results in the following output:
+
+    1..9
+    ok 1 - numbers 1
+    not ok 2 - numbers 2
+    #   Failed test 'numbers 2'
+    #   at example.t line 3.
+    #     '1'
+    #         >
+    #     '2'
+    ok 3 - strings 1
+    not ok 4 - strings 2
+    #   Failed test 'strings 2'
+    #   at example.t line 7.
+    #     'asdf'
+    #         gt
+    #     'asdf'
+    ok 5 - regex 1
+    ok 6 - regex 2
+    not ok 7 - regex 3
+    #   Failed test 'regex 3'
+    #   at example.t line 11.
+    #                   'badc'
+    #     doesn't match '(?-xism:bc)'
+    ok 8 - data structures 1
+    not ok 9 - data structures 2
+    #   Failed test 'data structures 2'
+    #   at example.t line 16.
+    #     Structures begin differing at:
+    #          $got->{b} = '2'
+    #     $expected->{b} = '1'
+    # Looks like you failed 4 tests of 9.
+
+you get the output of L<Test::More>'s C< cmp_ok >, C< like >, or C< is_deeply >
+with a more natural syntax, and the test's name is moved before the test and is
+numbered if you have more than one test.
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Build.PL
+	./Build
+	./Build test
+	./Build install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Test::Magic
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-Magic
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/Test-Magic
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/Test-Magic
+
+    Search CPAN
+        http://search.cpan.org/dist/Test-Magic/
+
+
+LICENSE AND COPYRIGHT
+
+Copyright (C) 2010 Eric Strom
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.

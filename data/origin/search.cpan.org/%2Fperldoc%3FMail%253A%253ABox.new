@@ -1,0 +1,1806 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Mail::Box - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Mail-Box",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Mail-Box-2.104",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Mail::Box",3]);
+    _gaq.push(["_setCustomVar",1,"Author","MARKOV",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Mail::Box">permalink</a></div>
+  <a href="/~markov/">Mark Overmeer</a> &gt;
+  <a href="/~markov/Mail-Box-2.104/">Mail-Box-2.104</a> &gt;
+  Mail::Box
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/18f0494979b7feef52388275080aaa34?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/M/MA/MARKOV/Mail-Box-2.104.tar.gz">Mail-Box-2.104.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Mail%3A%3ABox;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~MARKOV/Mail-Box-2.104/lib/Mail/Box.pod">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?MIME%3A%3ALite">MIME::Lite</a><br>
+<a href="/perldoc?Mail%3A%3AAddress">Mail::Address</a><br>
+<a href="/perldoc?MIME%3A%3AParser">MIME::Parser</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Mail%3A%3AInternet">Mail::Internet</a><br>
+<a href="/perldoc?Net%3A%3APOP3">Net::POP3</a><br>
+<a href="/perldoc?Net%3A%3ASMTP">Net::SMTP</a><br>
+<a href="/perldoc?Mail%3A%3AMboxParser">Mail::MboxParser</a><br>
+<a href="/perldoc?HTTP%3A%3ADaemon">HTTP::Daemon</a><br>
+<a href="/perldoc?Mail%3A%3ASendmail">Mail::Sendmail</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Mail%3A%3ABox">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 2</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Mail-Box">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.104 &nbsp;
+<span class="noprint">
+  <a href="/src/MARKOV/Mail-Box-2.104/lib/Mail/Box.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#INHERITANCE'>INHERITANCE</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#OVERLOADED'>OVERLOADED</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Constructors'>Constructors</a>
+    <li class='indexItem indexItem2'><a href='#The_folder'>The folder</a>
+    <li class='indexItem indexItem2'><a href='#Folder_flags'>Folder flags</a>
+    <li class='indexItem indexItem2'><a href='#The_messages'>The messages</a>
+    <li class='indexItem indexItem2'><a href='#Sub-folders'>Sub-folders</a>
+    <li class='indexItem indexItem2'><a href='#Internals'>Internals</a>
+    <li class='indexItem indexItem2'><a href='#Other_methods'>Other methods</a>
+    <li class='indexItem indexItem2'><a href='#Error_handling'>Error handling</a>
+    <li class='indexItem indexItem2'><a href='#Cleanup'>Cleanup</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DETAILS'>DETAILS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Different_kinds_of_folders'>Different kinds of folders</a>
+    <li class='indexItem indexItem2'><a href='#Available_folder_types'>Available folder types</a>
+    <li class='indexItem indexItem2'><a href='#Folder_class_implementation'>Folder class implementation</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DIAGNOSTICS'>DIAGNOSTICS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Mail::Box - manage a mailbox,
+a folder with messages</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INHERITANCE"
+>INHERITANCE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> Mail::Box
+   is a Mail::Reporter
+
+ Mail::Box is extended by
+   Mail::Box::Dir
+   Mail::Box::File
+   Mail::Box::Net</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> use Mail::Box::Manager;
+ my $mgr    = Mail::Box::Manager-&#62;new;
+ my $folder = $mgr-&#62;open(folder =&#62; $ENV{MAIL}, ...);
+ print $folder-&#62;name;
+
+ # Get the first message.
+ print $folder-&#62;message(0);
+
+ # Delete the third message
+ $folder-&#62;message(3)-&#62;delete;
+
+ # Get the number of messages in scalar context.
+ my $emails = $folder-&#62;messages;
+
+ # Iterate over the messages.
+ foreach ($folder-&#62;messages) {...} # all messages
+ foreach (@$folder) {...}          # all messages
+
+ $folder-&#62;addMessage(Mail::Box::Message-&#62;new(...));</pre>
+
+<p>Tied-interface:</p>
+
+<pre class="sh_perl"> tie my(@inbox), &#39;Mail::Box::Tie::ARRAY&#39;, $inbox;
+
+ # Four times the same:
+ $inbox[3]-&#62;print;                 # tied
+ $folder-&#62;[3]-&#62;print;              # overloaded folder
+ $folder-&#62;message(3)-&#62;print;       # usual
+ print $folder-&#62;[3];               # overloaded message
+
+ tie my(%inbox), &#39;Mail::Box::Tie::HASH&#39;, $inbox;
+
+ # Twice times the same
+ $inbox{$msgid}-&#62;print;            # tied
+ $folder-&#62;messageId($msgid)-&#62;print;# usual</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>A <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Manager.pod" class="podlinkpod"
+>Mail::Box::Manager</a> creates <code>Mail::Box</code> objects. But you already knew, because you started with the <a href="/~markov/Mail-Box-2.104/lib/Mail/Box-Overview.pod" class="podlinkpod"
+>Mail::Box-Overview</a> manual page. That page is obligatory reading, sorry!</p>
+
+<p><code>Mail::Box</code> is the base class for accessing various types of mailboxes (folders) in a uniform manner. The various folder types vary on how they store their messages, but when some effort those differences could be hidden behind a general API. For example, some folders store many messages in one single file, where other store each message in a separate file withing the same directory.</p>
+
+<p>No object in your program will be of type <code>Mail::Box</code>: it is only used as base class for the real folder types. <code>Mail::Box</code> is extended by</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OVERLOADED"
+>OVERLOADED <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='overload'></a><a name="overload:_&#34;&#34;()"
+>overload: <b>&#34;&#34;</b>()</a></dt>
+
+<dd>
+<p>(stringification) The folder objects stringify to their name. This simplifies especially print statements and sorting a lot.</p>
+
+<p>example: use overloaded folder as string</p>
+
+<pre class="sh_perl"> # Three lines with overloading: resp. cmp, @{}, and &#34;&#34;
+ foreach my $folder (sort @folders)
+ {   my $msgcount = @$folder;
+     print &#34;$folder contains $msgcount messages\n&#34;;
+ }</pre>
+
+<dt><a name='overload'></a><a name="overload:_@{}()"
+>overload: <b>@{}</b>()</a></dt>
+
+<dd>
+<p>When the folder is used as if it is a reference to an array, it will show the messages, like <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_messages" class="podlinkpod"
+>messages()</a> and <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_messages" class="podlinkpod"
+>message()</a> would do.</p>
+
+<p>example: use overloaded folder as array</p>
+
+<pre class="sh_perl"> my $msg = $folder-&#62;[3];
+ my $msg = $folder-&#62;message(3);          # same
+
+ foreach my $msg (@$folder) ...
+ foreach my $msg ($folder-&#62;messages) ... # same</pre>
+
+<dt><a name='overload'></a><a name="overload:_cmp()"
+>overload: <b>cmp</b>()</a></dt>
+
+<dd>
+<p>(string comparison) folders are compared based on their name. The sort rules are those of the build-in <code>cmp</code>.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Constructors"
+>Constructors</a></h2>
+
+<dl>
+<dt><a name='Mail'></a><a name="Mail::Box-&#62;new(OPTIONS)"
+>Mail::Box-&#62;<b>new</b>(OPTIONS)</a></dt>
+
+<dd>
+<p>Open a new folder. A list of labeled OPTIONS for the mailbox can be supplied. Some options pertain to Mail::Box, and others are added by sub-classes.</p>
+
+<p>To control delay-loading of messages, as well the headers as the bodies, a set of <code>*_type</code> options are available. <code>extract</code> determines whether we want delay-loading.</p>
+
+<pre class="sh_perl"> -Option           --Defined in     --Default
+  access                              &#39;r&#39;
+  body_delayed_type                   Mail::Message::Body::Delayed
+  body_type                           &#60;folder specific&#62;
+  coerce_options                      []
+  create                              &#60;false&#62;
+  extract                             10240
+  field_type                          undef
+  fix_headers                         &#60;false&#62;
+  folder                              $ENV{MAIL}
+  folderdir                           undef
+  head_delayed_type                   Mail::Message::Head::Delayed
+  head_type                           Mail::Message::Head::Complete
+  keep_dups                           &#60;false&#62;
+  lock_file                           undef
+  lock_timeout                        1 hour
+  lock_type                           Mail::Box::Locker::DotLock
+  lock_wait                           10 seconds
+  locker                              undef
+  log                Mail::Reporter   &#39;WARNINGS&#39;
+  manager                             undef
+  message_type                        Mail::Box::Message
+  multipart_type                      Mail::Message::Body::Multipart
+  remove_when_empty                   &#60;true&#62;
+  save_on_exit                        &#60;true&#62;
+  trace              Mail::Reporter   &#39;WARNINGS&#39;
+  trusted                             &#60;depends on folder location&#62;</pre>
+
+<dl>
+<dt><a name='access'></a><a name="access_=&#62;_MODE"
+>access =&#62; MODE</a></dt>
+
+<dd>
+<p>Access-rights to the folder. Folders are opened for read-only (which means write-protected) by default! MODE can be</p>
+
+<dl>
+<dt><a name='r'></a><a name="&#39;r&#39;:_read-only_(default)"
+><code>&#39;r&#39;</code>: read-only (default)</a></dt>
+
+<dd>
+<dt><a name='a'></a><a name="&#39;a&#39;:_append"
+><code>&#39;a&#39;</code>: append</a></dt>
+
+<dd>
+<dt><a name='rw'></a><a name="&#39;rw&#39;:_read-write"
+><code>&#39;rw&#39;</code>: read-write</a></dt>
+
+<dd>
+<dt><a name='d'></a><a name="&#39;d&#39;:_delete"
+><code>&#39;d&#39;</code>: delete</a></dt>
+</dl>
+
+<p>These MODE has no relation to the modes actually used to open the folder files within this module. For instance, if you specify <code>&#34;rw&#34;</code>, and open the folder, only read permission on the folder-file is required.</p>
+
+<p>Be warned: writing a MBOX folder may create a new file to replace the old folder. The permissions and owner of the file may get changed by this.</p>
+
+<dt><a name='body_delayed_type'></a><a name="body_delayed_type_=&#62;_CLASS"
+>body_delayed_type =&#62; CLASS</a></dt>
+
+<dd>
+<p>The bodies which are delayed: which will be read from file when it is needed, but not before.</p>
+
+<dt><a name='body_type'></a><a name="body_type_=&#62;_CLASS|CODE"
+>body_type =&#62; CLASS|CODE</a></dt>
+
+<dd>
+<p>When messages are read from a folder-file, the headers will be stored in a <code>head_type</code> object. For the body, however, there is a range of choices about type, which are all described in <a href="/~markov/Mail-Box-2.104/lib/Mail/Message/Body.pod" class="podlinkpod"
+>Mail::Message::Body</a>.</p>
+
+<p>Specify a CODE-reference which produces the body-type to be created, or a CLASS of the body which is used when the body is not a multipart or nested. In case of a code reference, the header structure is passed as first argument to the routine.</p>
+
+<p>Do <i>not</i> return a delayed body-type (like <code>::Delayed</code>), because that is determined by the <code>extract</code> option while the folder is opened. Even delayed message will require some real body type when they get parsed eventually. Multiparts and nested messages are also outside your control.</p>
+
+<p>For instance:</p>
+
+<pre class="sh_perl"> $mgr-&#62;open(&#39;InBox&#39;, body_type =&#62; \&#38;which_body);
+
+ sub which_body($) {
+     my $head = shift;
+     my $size = $head-&#62;guessBodySize || 0;
+     my $type = $size &#62; 100000 ? &#39;File&#39; : &#39;Lines&#39;;
+     &#34;Mail::Message::Body::$type&#34;;
+ }</pre>
+
+<p>The default depends on the mail-folder type, although the general default is <a href="/~markov/Mail-Box-2.104/lib/Mail/Message/Body/Lines.pod" class="podlinkpod"
+>Mail::Message::Body::Lines</a>. Please check the applicable manual pages.</p>
+
+<dt><a name='coerce_options'></a><a name="coerce_options_=&#62;_ARRAY"
+>coerce_options =&#62; ARRAY</a></dt>
+
+<dd>
+<p>Keep configuration information for messages which are coerced into the specified folder type, starting with a different folder type (or even no folder at all). Messages which are coerced are always fully read, so this kind of information does not need to be kept here.</p>
+
+<dt><a name='create'></a><a name="create_=&#62;_BOOLEAN"
+>create =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Automatically create the folder when it does not exist yet. This will only work when access is granted for writing or appending to the folder.</p>
+
+<p>Be careful: you may create a different folder type than you expect unless you explicitly specify <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Manager.pod#Manage_open_folders" class="podlinkpod"
+>Mail::Box::Manager::open(type)</a>.</p>
+
+<dt><a name='extract'></a><a name="extract_=&#62;_INTEGER_|_CODE_|_METHOD_|_&#39;LAZY&#39;|&#39;ALWAYS&#39;"
+>extract =&#62; INTEGER | CODE | METHOD | &#39;LAZY&#39;|&#39;ALWAYS&#39;</a></dt>
+
+<dd>
+<p>Defines when to parse (process) the content of the message. When the header of a message is read, you may want to postpone the reading of the body: header information is more often needed than the body data, so why parse it always together? The cost of delaying is not too high, and with some luck you may never need parsing the body.</p>
+
+<p>If you supply an INTEGER to this option, bodies of those messages with a total size less than that number will be extracted from the folder only when necessary. Messages where the size (in the <code>Content-Length</code> field) is not included in the header, like often the case for multiparts and nested messages, will not be extracted by default.</p>
+
+<p>If you supply a CODE reference, that subroutine is called every time that the extraction mechanism wants to determine whether to parse the body or not. The subroutine is called with the following arguments:</p>
+
+<pre class="sh_perl"> CODE-&#62;(FOLDER, HEAD)</pre>
+
+<p>where FOLDER is a reference to the folder we are reading. HEAD refers to the <a href="/~markov/Mail-Box-2.104/lib/Mail/Message/Head/Complete.pod" class="podlinkpod"
+>Mail::Message::Head::Complete</a> head of the message at hand. The routine must return a <code>true</code> value (extract now) or a <code>false</code> value (be lazy, do not parse yet). Think about using the <a href="/~markov/Mail-Box-2.104/lib/Mail/Message/Head.pod#About_the_body" class="podlinkpod"
+>Mail::Message::Head::guessBodySize()</a> and <a href="/~markov/Mail-Box-2.104/lib/Mail/Message.pod#The_header" class="podlinkpod"
+>Mail::Message::guessTimestamp()</a> on the header to determine your choice.</p>
+
+<p>The third possibility is to specify the NAME of a method. In that case, for each message is called:</p>
+
+<pre class="sh_perl"> FOLDER-&#62;NAME(HEAD)</pre>
+
+<p>Where each component has the same meaning as described above.</p>
+
+<p>The fourth way to use this option involves constants: with <code>LAZY</code> all messages will be delayed. With <code>ALWAYS</code> you enforce unconditional parsing, no delaying will take place. The latter is usuful when you are sure you always need all the messages in the folder.</p>
+
+<pre class="sh_perl"> $folder-&#62;new(extract =&#62; &#39;LAZY&#39;);  # Very lazy
+ $folder-&#62;new(extract =&#62; 10000);   # Less than 10kB
+
+ # same, but implemented yourself
+ $folder-&#62;new(extract =&#62; &#38;large);
+ sub large($) {
+    my ($f, $head) = @_;
+    my $size = $head-&#62;guessBodySize;
+    defined $size ? $size &#60; 10000 : 1
+ };
+
+ # method call by name, useful for Mail::Box
+ # extensions. The example selects all messages
+ # sent by you to be loaded without delay.
+ # Other messages will be delayed.
+ $folder-&#62;new(extract =&#62; &#39;sent_by_me&#39;);
+ sub Mail::Box::send_by_me($) {
+     my ($self, $header) = @_;
+     $header-&#62;get(&#39;from&#39;) =~ m/\bmy\@example.com\b/i;
+ }</pre>
+
+<dt><a name='field_type'></a><a name="field_type_=&#62;_CLASS"
+>field_type =&#62; CLASS</a></dt>
+
+<dd>
+<p>The type of the fields to be used in a header. Must extend <a href="/~markov/Mail-Box-2.104/lib/Mail/Message/Field.pod" class="podlinkpod"
+>Mail::Message::Field</a>.</p>
+
+<dt><a name='fix_headers'></a><a name="fix_headers_=&#62;_BOOLEAN"
+>fix_headers =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Broken MIME headers usually stop the parser: all lines not parsed are added to the body of the message. With this flag set, the erroneous line is added to the previous header field and parsing is continued. See <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Parser/Perl.pod#METHODS" class="podlinkpod"
+>Mail::Box::Parser::Perl::new(fix_header_errors)</a>.</p>
+
+<dt><a name='folder'></a><a name="folder_=&#62;_FOLDERNAME"
+>folder =&#62; FOLDERNAME</a></dt>
+
+<dd>
+<p>Which folder to open (for reading or writing). When used for reading (the <code>access</code> option set to <code>&#34;r&#34;</code> or <code>&#34;a&#34;</code>) the mailbox should already exist and must be readable. The file or directory of the mailbox need not exist if it is opened for reading and writing (<code>&#34;rw&#34;</code>). Write-permission is checked when opening an existing mailbox.</p>
+
+<p>The folder name can be preceded by a <code>&#34;=&#34;</code>, to indicate that it is named relative to the directory specified in new(folderdir). Otherwise, it is taken as relative or absolute path.</p>
+
+<dt><a name='folderdir'></a><a name="folderdir_=&#62;_DIRECTORY"
+>folderdir =&#62; DIRECTORY</a></dt>
+
+<dd>
+<p>Where are folders to be found by default? A folder-name may be preceded by a equals-sign (<code>=</code>, a <code>mutt</code> convension) to explicitly state that the folder is located below the default directory. For example: in case <code>folderdir =&#62; &#39;/tmp&#39;</code> and <code>folder =&#62; &#39;=abc&#39;</code>, the name of the folder-file is <code>&#39;/tmp/abc&#39;</code>. Each folder type has already some default set.</p>
+
+<dt><a name='head_delayed_type'></a><a name="head_delayed_type_=&#62;_CLASS"
+>head_delayed_type =&#62; CLASS</a></dt>
+
+<dd>
+<p>The headers which are delayed: which will be read from file when it is needed, but not before.</p>
+
+<dt><a name='head_type'></a><a name="head_type_=&#62;_CLASS"
+>head_type =&#62; CLASS</a></dt>
+
+<dd>
+<p>The type of header which contains all header information. Must extend <a href="/~markov/Mail-Box-2.104/lib/Mail/Message/Head/Complete.pod" class="podlinkpod"
+>Mail::Message::Head::Complete</a>.</p>
+
+<dt><a name='keep_dups'></a><a name="keep_dups_=&#62;_BOOLEAN"
+>keep_dups =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Indicates whether or not duplicate messages within the folder should be retained. A message is considered to be a duplicate if its message-id is the same as a previously parsed message within the same folder. If this option is false (the default) such messages are automatically deleted, because it is considered useless to store the same message twice.</p>
+
+<dt><a name='lock_file'></a><a name="lock_file_=&#62;_FILENAME"
+>lock_file =&#62; FILENAME</a></dt>
+
+<dd>
+<p>The name of the file which is used to lock. This must be specified when locking is to be used.</p>
+
+<dt><a name='lock_timeout'></a><a name="lock_timeout_=&#62;_SECONDS"
+>lock_timeout =&#62; SECONDS</a></dt>
+
+<dd>
+<p>When the lock file is older than the specified number of SECONDS, it is considered a mistake. The original lock is released, and accepted for this folder.</p>
+
+<dt><a name='lock_type'></a><a name="lock_type_=&#62;_CLASS|STRING|ARRAY"
+>lock_type =&#62; CLASS|STRING|ARRAY</a></dt>
+
+<dd>
+<p>The type of the locker object. This may be the full name of a CLASS which extends Mail::Box::Locker, or one of the known locker types <code>DotLock</code>, <code>Flock</code>, <code>Mutt</code>, <code>NFS</code>, <code>POSIX</code>, or <code>NONE</code>. If an ARRAY is specified, then a Multi locker is built which uses the specified list.</p>
+
+<dt><a name='lock_wait'></a><a name="lock_wait_=&#62;_SECONDS"
+>lock_wait =&#62; SECONDS</a></dt>
+
+<dd>
+<p>SECONDS to wait before failing on opening this folder.</p>
+
+<dt><a name='locker'></a><a name="locker_=&#62;_OBJECT"
+>locker =&#62; OBJECT</a></dt>
+
+<dd>
+<p>An OBJECT which extends <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Locker.pod" class="podlinkpod"
+>Mail::Box::Locker</a>, and will handle folder locking replacing the default lock behavior.</p>
+
+<dt><a name='log'></a><a name="log_=&#62;_LEVEL"
+>log =&#62; LEVEL</a></dt>
+
+<dd>
+<dt><a name='manager'></a><a name="manager_=&#62;_MANAGER"
+>manager =&#62; MANAGER</a></dt>
+
+<dd>
+<p>A reference to the object which manages this folder -- typically an <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Manager.pod" class="podlinkpod"
+>Mail::Box::Manager</a> instance.</p>
+
+<dt><a name='message_type'></a><a name="message_type_=&#62;_CLASS"
+>message_type =&#62; CLASS</a></dt>
+
+<dd>
+<p>What kind of message objects are stored in this type of folder. The default is <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Message.pod" class="podlinkpod"
+>Mail::Box::Message</a> (which is a sub-class of <a href="/~markov/Mail-Box-2.104/lib/Mail/Message.pod" class="podlinkpod"
+>Mail::Message</a>). The class you offer must be an extension of <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Message.pod" class="podlinkpod"
+>Mail::Box::Message</a>.</p>
+
+<dt><a name='multipart_type'></a><a name="multipart_type_=&#62;_CLASS"
+>multipart_type =&#62; CLASS</a></dt>
+
+<dd>
+<p>The default type of objects which are to be created for multipart message bodies.</p>
+
+<dt><a name='remove_when_empty'></a><a name="remove_when_empty_=&#62;_BOOLEAN"
+>remove_when_empty =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Determines whether to remove the folder file or directory automatically when the write would result in a folder without messages nor sub-folders.</p>
+
+<dt><a name='save_on_exit'></a><a name="save_on_exit_=&#62;_BOOLEAN"
+>save_on_exit =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Sets the policy for saving the folder when it is closed. A folder can be closed manually (see <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_folder" class="podlinkpod"
+>close()</a>) or in a number of implicit ways, including on the moment the program is terminated.</p>
+
+<dt><a name='trace'></a><a name="trace_=&#62;_LEVEL"
+>trace =&#62; LEVEL</a></dt>
+
+<dd>
+<dt><a name='trusted'></a><a name="trusted_=&#62;_BOOLEAN"
+>trusted =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Flags whether to trust the data in the folder or not. Folders which reside in your <code>folderdir</code> will be trusted by default (even when the names if not specified staring with <code>=</code>). Folders which are outside the folderdir or read from STDIN (<a href="/~markov/Mail-Box-2.104/lib/Mail/Message/Construct/Read.pod#Constructing_a_message" class="podlinkpod"
+>Mail::Message::Construct::read()</a>) are not trused by default, and require some extra checking.</p>
+
+<p>If you do not check encodings of received messages, you may print binary data to the screen, which is a security risk.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_folder"
+>The folder</a></h2>
+
+<dl>
+<dt><a name='obj'></a><a name="$obj-&#62;addMessage(MESSAGE,_OPTIONS)"
+>$obj-&#62;<b>addMessage</b>(MESSAGE, OPTIONS)</a></dt>
+
+<dd>
+<p>Add a message to the folder. A message is usually a <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Message.pod" class="podlinkpod"
+>Mail::Box::Message</a> object or a sub-class thereof. The message shall not be in an other folder, when you use this method. In case it is, use <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Manager.pod#Move_messages_to_folders" class="podlinkpod"
+>Mail::Box::Manager::moveMessage()</a> or <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Manager.pod#Move_messages_to_folders" class="podlinkpod"
+>Mail::Box::Manager::copyMessage()</a> via the manager.</p>
+
+<p>Messages with id&#39;s which already exist in this folder are not added.</p>
+
+<p>BE WARNED that message labels may get lost when a message is moved from one folder type to an other. An attempt is made to translate labels, but there are many differences in interpretation by applications.</p>
+
+<pre class="sh_perl"> -Option--Default
+  share   &#60;not used&#62;</pre>
+
+<dl>
+<dt><a name='share'></a><a name="share_=&#62;_BOOLEAN"
+>share =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Try to share the physical resource of the current message with the indicated message. It is sometimes possible to share messages between different folder types. When the sharing is not possible, than this option is simply ignored.</p>
+
+<p>Sharing the resource is quite dangerous, and only available for a limited number of folder types, at the moment only some <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Dir.pod" class="podlinkpod"
+>Mail::Box::Dir</a> folders; these file-based messages can be hardlinked (on platforms that support it). The link may get broken when one message is modified in one of the folders.... but maybe not, depending on the folder types involved.</p>
+</dd>
+</dl>
+
+<p>example:</p>
+
+<pre class="sh_perl"> $folder-&#62;addMessage($msg);
+ $folder-&#62;addMessages($msg1, $msg2, ...);</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;addMessages(MESSAGE_[,_MESSAGE,_...])"
+>$obj-&#62;<b>addMessages</b>(MESSAGE [, MESSAGE, ...])</a></dt>
+
+<dd>
+<p>Adds a set of MESSAGE objects to the open folder at once. For some folder types this may be faster than adding them one at a time.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl"> $folder-&#62;addMessages($msg1, $msg2, ...);</pre>
+
+<dt><a name='Mail'></a><a name="Mail::Box-&#62;appendMessages(OPTIONS)"
+>Mail::Box-&#62;<b>appendMessages</b>(OPTIONS)</a></dt>
+
+<dd>
+<p>Append one or more messages to an unopened folder. Usually, this method is called by the <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Manager.pod#Move_messages_to_folders" class="podlinkpod"
+>Mail::Box::Manager::appendMessage()</a>, in which case the correctness of the folder type is checked.</p>
+
+<p>For some folder types it is required to open the folder before it can be used for appending. This can be fast, but this can also be very slow (depends on the implementation). All OPTIONS passed will also be used to open the folder, if needed.</p>
+
+<pre class="sh_perl"> -Option  --Default
+  folder    &#60;required&#62;
+  message   undef
+  messages  undef
+  share     &#60;false&#62;</pre>
+
+<dl>
+<dt><a name='folder'></a><a name="folder_=&#62;_FOLDERNAME"
+>folder =&#62; FOLDERNAME</a></dt>
+
+<dd>
+<p>The name of the folder to which the messages are to be appended. The folder implementation will avoid opening the folder when possible, because this is resource consuming.</p>
+
+<dt><a name='message'></a><a name="message_=&#62;_MESSAGE"
+>message =&#62; MESSAGE</a></dt>
+
+<dd>
+<dt><a name='messages'></a><a name="messages_=&#62;_ARRAY-OF-MESSAGES"
+>messages =&#62; ARRAY-OF-MESSAGES</a></dt>
+
+<dd>
+<p>One reference to a MESSAGE or a reference to an ARRAY of MESSAGEs, which may be of any type. The messages will be first coerced into the correct message type to fit in the folder, and then will be added to it.</p>
+
+<dt><a name='share'></a><a name="share_=&#62;_BOOLEAN"
+>share =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Try to share physical storage of the message. Only available for a limited number of folder types, otherwise no-op.</p>
+</dd>
+</dl>
+
+<p>example:</p>
+
+<pre class="sh_perl"> my $message = Mail::Message-&#62;new(...);
+ Mail::Box::Mbox-&#62;appendMessages
+  ( folder    =&#62; &#39;=xyz&#39;
+  , message   =&#62; $message
+  , folderdir =&#62; $ENV{FOLDERS}
+  );</pre>
+
+<p>better:</p>
+
+<pre class="sh_perl"> my Mail::Box::Manager $mgr;
+ $mgr-&#62;appendMessages($message, folder =&#62; &#39;=xyz&#39;);</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;close(OPTIONS)"
+>$obj-&#62;<b>close</b>(OPTIONS)</a></dt>
+
+<dd>
+<p>Close the folder, which usually implies writing the changes. This will return <code>false</code> when writing is required but fails. Please do check this result.</p>
+
+<p>WARNING: When moving messages from one folder to another, be sure to write the destination folder before writing and closing the source folder. Otherwise you may lose data if the system crashes or if there are software problems.</p>
+
+<pre class="sh_perl"> -Option      --Default
+  force         &#60;false&#62;
+  save_deleted  false
+  write         MODIFIED</pre>
+
+<dl>
+<dt><a name='force'></a><a name="force_=&#62;_BOOLEAN"
+>force =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Override the <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Constructors" class="podlinkpod"
+>new(access)</a> setting which was specified when the folder was opened. This option only has an effect if its value is TRUE. NOTE: Writing to the folder may not be permitted by the operating system, in which case even <code>force</code> will not help.</p>
+
+<dt><a name='save_deleted'></a><a name="save_deleted_=&#62;_BOOLEAN"
+>save_deleted =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Do also write messages which where flagged to be deleted to their folder. The flag for deletion is conserved (when possible), which means that a re-open of the folder may remove the messages for real. See <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Internals" class="podlinkpod"
+>write(save_deleted)</a>.</p>
+
+<dt><a name='write'></a><a name="write_=&#62;_&#39;ALWAYS&#39;|&#39;NEVER&#39;|&#39;MODIFIED&#39;"
+>write =&#62; &#39;ALWAYS&#39;|&#39;NEVER&#39;|&#39;MODIFIED&#39;</a></dt>
+
+<dd>
+<p>Specifies whether the folder should be written. As could be expected, <code>ALWAYS</code> means always (even if there are no changes), <code>NEVER</code> means that changes to the folder will be lost, and <code>MODIFIED</code> only saves the folder if there are any changes.</p>
+</dd>
+</dl>
+
+<p>example:</p>
+
+<pre class="sh_perl"> my $f = $mgr-&#62;open(&#39;spam&#39;, access =&#62; &#39;rw&#39;)
+     or die &#34;Cannot open spam: $!\n&#34;;
+
+ $f-&#62;message(0)-&#62;delete
+     if $f-&#62;messages;
+
+ $f-&#62;close
+     or die &#34;Couldn&#39;t write $f: $!\n&#34;;</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;copyTo(FOLDER,_OPTIONS)"
+>$obj-&#62;<b>copyTo</b>(FOLDER, OPTIONS)</a></dt>
+
+<dd>
+<p>Copy the folder&#39;s messages to a new folder. The new folder may be of a different type.</p>
+
+<pre class="sh_perl"> -Option       --Default
+  delete_copied  &#60;false&#62;
+  select         &#39;ACTIVE&#39;
+  share          &#60;not used&#62;
+  subfolders     &#60;folder type dependent&#62;</pre>
+
+<dl>
+<dt><a name='delete_copied'></a><a name="delete_copied_=&#62;_BOOLEAN"
+>delete_copied =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Flag the messages from the source folder to be deleted, just after it was copied. The deletion will only take effect when the originating folder is closed.</p>
+
+<dt><a name='select'></a><a name="select_=&#62;_&#39;ACTIVE&#39;|&#39;DELETED&#39;|&#39;ALL&#39;|LABEL|!LABEL|FILTER"
+>select =&#62; &#39;ACTIVE&#39;|&#39;DELETED&#39;|&#39;ALL&#39;|LABEL|!LABEL|FILTER</a></dt>
+
+<dd>
+<p>Which messages are to be copied. See the description of <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_messages" class="podlinkpod"
+>messages()</a> about how this works.</p>
+
+<dt><a name='share'></a><a name="share_=&#62;_BOOLEAN"
+>share =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Try to share the message between the folders. Some <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Dir.pod" class="podlinkpod"
+>Mail::Box::Dir</a> folder types do support it by creating a hardlink (on UNIX/Linux).</p>
+
+<dt><a name='subfolders'></a><a name="subfolders_=&#62;_BOOLEAN|&#39;FLATTEN&#39;|&#39;RECURSE&#39;"
+>subfolders =&#62; BOOLEAN|&#39;FLATTEN&#39;|&#39;RECURSE&#39;</a></dt>
+
+<dd>
+<p>How to handle sub-folders. When false (<code>0</code> or <code>undef</code>), sub-folders are simply ignored. With <code>FLATTEN</code>, messages from sub-folders are included in the main copy. <code>RECURSE</code> recursively copies the sub-folders as well. By default, when the destination folder supports sub-folders <code>RECURSE</code> is used, otherwise <code>FLATTEN</code>. A value of true will select the default.</p>
+</dd>
+</dl>
+
+<p>example:</p>
+
+<pre class="sh_perl"> my $mgr  = Mail::Box::Manager-&#62;new;
+ my $imap = $mgr-&#62;open(type =&#62; &#39;imap&#39;, host =&#62; ...);
+ my $mh   = $mgr-&#62;open(type =&#62; &#39;mh&#39;, folder =&#62; &#39;/tmp/mh&#39;,
+     create =&#62; 1, access =&#62; &#39;w&#39;);
+
+ $imap-&#62;copyTo($mh, delete_copied =&#62; 1);
+ $mh-&#62;close; $imap-&#62;close;</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;delete(OPTIONS)"
+>$obj-&#62;<b>delete</b>(OPTIONS)</a></dt>
+
+<dd>
+<p>Remove the specified folder file or folder directory (depending on the type of folder) from disk. Of course, THIS IS DANGEROUS: you &#34;may&#34; lose data. Returns a <code>true</code> value on success.</p>
+
+<p>WARNING: When moving messages from one folder to another, be sure to write the destination folder before deleting the source folder. Otherwise you may lose data if the system crashes or if there are software problems.</p>
+
+<pre class="sh_perl"> -Option   --Default
+  recursive  1</pre>
+
+<dl>
+<dt><a name='recursive'></a><a name="recursive_=&#62;_BOOLEAN"
+>recursive =&#62; BOOLEAN</a></dt>
+</dl>
+
+<p>example: removing an open folder</p>
+
+<pre class="sh_perl"> my $folder = Mail::Box::Mbox-&#62;new(folder =&#62; &#39;InBox&#39;, access =&#62; &#39;rw&#39;);
+ ... some other code ...
+ $folder-&#62;delete;</pre>
+
+<p>example: removing an closed folder</p>
+
+<pre class="sh_perl"> my $folder = Mail::Box::Mbox-&#62;new(folder =&#62; &#39;INBOX&#39;, access =&#62; &#39;d&#39;);
+ $folder-&#62;delete;</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;folderdir([DIRECTORY])"
+>$obj-&#62;<b>folderdir</b>([DIRECTORY])</a></dt>
+
+<dd>
+<p>Get or set the DIRECTORY which is used to store mail-folders by default.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl"> print $folder-&#62;folderdir;
+ $folder-&#62;folderdir(&#34;$ENV{HOME}/nsmail&#34;);</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;name()"
+>$obj-&#62;<b>name</b>()</a></dt>
+
+<dd>
+<p>Returns the name of the folder. What the name represents depends on the actual type of mailbox used.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl"> print $folder-&#62;name;
+ print &#34;$folder&#34;;       # overloaded stringification</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;organization()"
+>$obj-&#62;<b>organization</b>()</a></dt>
+
+<dd>
+<p>Returns how the folder is organized: as one <code>FILE</code> with many messages, a <code>DIRECTORY</code> with one message per file, or by a <code>REMOTE</code> server.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;size()"
+>$obj-&#62;<b>size</b>()</a></dt>
+
+<dd>
+<p>Returns the size of the folder in bytes, not counting in the deleted messages. The error in the presented result may be as large as 10%, because the in-memory representation of messages is not always the same as the size when they are written.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;type()"
+>$obj-&#62;<b>type</b>()</a></dt>
+
+<dd>
+<p>Returns a name for the type of mail box. This can be <code>mbox</code>, <code>mh</code>, <code>maildir</code>, or <code>pop3</code>.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;update(OPTIONS)"
+>$obj-&#62;<b>update</b>(OPTIONS)</a></dt>
+
+<dd>
+<p>Read new messages from the folder, which where received after opening it. This is quite dangerous and shouldn&#39;t be possible: folders which are open are locked. However, some applications do not use locks or the wrong kind of locks. This method reads the changes (not always failsafe) and incorporates them in the open folder administration.</p>
+
+<p>The OPTIONS are extra values which are passed to the <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Internals" class="podlinkpod"
+>updateMessages()</a> method which is doing the actual work here.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;url()"
+>$obj-&#62;<b>url</b>()</a></dt>
+
+<dd>
+<p>Represent the folder as a URL (Universal Resource Locator) string. You may pass such a URL as folder name to <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Manager.pod#Manage_open_folders" class="podlinkpod"
+>Mail::Box::Manager::open()</a>.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl"> print $folder-&#62;url;
+ # may result in
+ #   mbox:/var/mail/markov   or
+ #   pop3://user:password@pop.aol.com:101</pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Folder_flags"
+>Folder flags</a></h2>
+
+<dl>
+<dt><a name='obj'></a><a name="$obj-&#62;access()"
+>$obj-&#62;<b>access</b>()</a></dt>
+
+<dd>
+<p>Returns the access mode of the folder, as set by <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Constructors" class="podlinkpod"
+>new(access)</a></p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;isModified()"
+>$obj-&#62;<b>isModified</b>()</a></dt>
+
+<dd>
+<p>Checks if the folder, as stored in memory, is modified. A true value is returned when any of the messages is to be deleted, has changed, or messages were added after the folder was read from file.</p>
+
+<p>WARNING: this flag is not related to an external change to the folder structure on disk. Have a look at <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_folder" class="podlinkpod"
+>update()</a> for that.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;modified([BOOLEAN])"
+>$obj-&#62;<b>modified</b>([BOOLEAN])</a></dt>
+
+<dd>
+<p>Sets whether the folder is modified or not.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;writable()"
+>$obj-&#62;<b>writable</b>()</a></dt>
+
+<dd>
+<p>Checks whether the current folder is writable.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl"> $folder-&#62;addMessage($msg) if $folder-&#62;writable;</pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_messages"
+>The messages</a></h2>
+
+<dl>
+<dt><a name='obj'></a><a name="$obj-&#62;current([NUMBER|MESSAGE|MESSAGE-ID])"
+>$obj-&#62;<b>current</b>([NUMBER|MESSAGE|MESSAGE-ID])</a></dt>
+
+<dd>
+<p>Some mail-readers keep the <i>current</i> message, which represents the last used message. This method returns [after setting] the current message. You may specify a NUMBER, to specify that that message number is to be selected as current, or a MESSAGE/MESSAGE-ID (as long as you are sure that the header is already loaded, otherwise they are not recognized).</p>
+
+<p>example:</p>
+
+<pre class="sh_perl"> $folder-&#62;current(0);
+ $folder-&#62;current($message);</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;find(MESSAGE-ID)"
+>$obj-&#62;<b>find</b>(MESSAGE-ID)</a></dt>
+
+<dd>
+<p>Like <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_messages" class="podlinkpod"
+>messageId()</a>, this method searches for a message with the MESSAGE-ID, returning the corresponding message object. However, <code>find</code> will cause unparsed message in the folder to be parsed until the message-id is found. The folder will be scanned back to front.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;findFirstLabeled(LABEL,_[BOOLEAN,_[ARRAY-OF-MSGS]])"
+>$obj-&#62;<b>findFirstLabeled</b>(LABEL, [BOOLEAN, [ARRAY-OF-MSGS]])</a></dt>
+
+<dd>
+<p>Find the first message which has this LABEL with the correct setting. The BOOLEAN indicates whether any true value or any false value is to be found. By default, a true value is searched for. When a message does not have the requested label, it is taken as false.</p>
+
+<p>example: looking for a labeled message</p>
+
+<pre class="sh_perl"> my $current = $folder-&#62;findFirstLabeled(&#39;current&#39;);
+
+ my $first   = $folder-&#62;findFirstLabeled(seen =&#62; 0);
+
+ my $last    = $folder-&#62;findFirstLabeled(seen =&#62; 0,
+                 [ reverse $self-&#62;messages(&#39;ACTIVE&#39;) ] )</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;message(INDEX_[,MESSAGE])"
+>$obj-&#62;<b>message</b>(INDEX [,MESSAGE])</a></dt>
+
+<dd>
+<p>Get or set a message with on a certain index. Messages which are flagged for deletion are counted. Negative indexes start at the end of the folder.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl"> my $msg = $folder-&#62;message(3);
+ $folder-&#62;message(3)-&#62;delete;   # status changes to `deleted&#39;
+ $folder-&#62;message(3, $msg);
+ print $folder-&#62;message(-1);    # last message.</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;messageId(MESSAGE-ID_[,MESSAGE])"
+>$obj-&#62;<b>messageId</b>(MESSAGE-ID [,MESSAGE])</a></dt>
+
+<dd>
+<p>With one argument, returns the message in the folder with the specified MESSAGE-ID. If a reference to a message object is passed as the optional second argument, the message is first stored in the folder, replacing any existing message whose message ID is MESSAGE-ID. (The message ID of MESSAGE need not match MESSAGE-ID.)</p>
+
+<p>!!WARNING!!: when the message headers are delay-parsed, the message might be in the folder but not yet parsed into memory. In this case, use <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_messages" class="podlinkpod"
+>find()</a> instead of <code>messageId()</code> if you really need a thorough search. This is especially the case for directory organized folders without special indexi, like <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/MH.pod" class="podlinkpod"
+>Mail::Box::MH</a>.</p>
+
+<p>The MESSAGE-ID may still be in angles, which will be stripped. In that case blanks (which origin from header line folding) are removed too. Other info around the angles will be removed too.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl"> my $msg = $folder-&#62;messageId(&#39;&#60;complex-message.id&#62;&#39;);
+ $folder-&#62;messageId(&#34;&#60;complex-message\n.id&#62;&#34;, $msg);
+ my $msg = $folder-&#62;messageId(&#39;complex-message.id&#39;);
+ my $msg = $folder-&#62;messageId(&#39;garbage &#60;complex-message.id&#62; trash&#39;);</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;messageIds()"
+>$obj-&#62;<b>messageIds</b>()</a></dt>
+
+<dd>
+<p>Returns a list of <i>all</i> message-ids in the folder, including those of messages which are to be deleted.</p>
+
+<p>For some folder-types (like MH), this method may cause all message-files to be read. See their respective manual pages.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl"> foreach my $id ($folder-&#62;messageIds) {
+    $folder-&#62;messageId($id)-&#62;print;
+ }</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;messages([&#39;ALL&#39;,RANGE,&#39;ACTIVE&#39;,&#39;DELETED&#39;,LABEL,!LABEL,FILTER])"
+>$obj-&#62;<b>messages</b>([&#39;ALL&#39;,RANGE,&#39;ACTIVE&#39;,&#39;DELETED&#39;,LABEL,!LABEL,FILTER])</a></dt>
+
+<dd>
+<p>Returns multiple messages from the folder. The default is <code>ALL</code> which will return (as expected maybe) all the messages in the folder. The <code>ACTIVE</code> flag will return the messages not flagged for deletion. This is the opposite of <code>DELETED</code>, which returns all messages from the folder which will be deleted when the folder is closed.</p>
+
+<p>You may also specify a RANGE: two numbers specifying begin and end index in the array of messages. Negative indexes count from the end of the folder. When an index is out-of-range, the returned list will be shorter without complaints.</p>
+
+<p>Everything else than the predefined names is seen as labels. The messages which have that label set will be returned. When the sequence starts with an exclamation mark (!), the search result is reversed.</p>
+
+<p>For more complex searches, you can specify a FILTER, which is simply a code reference. The message is passed as only argument.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl"> foreach my $message ($folder-&#62;messages) {...}
+ foreach my $message (@$folder) {...}
+
+ # twice the same
+ my @messages   = $folder-&#62;messages;
+ my @messages   = $folder-&#62;messages(&#39;ALL&#39;);
+
+ # Selection based on a range (begin, end)
+ my $subset     = $folder-&#62;messages(10,-8);
+
+ # twice the same:
+ my @not_deleted= grep {not $_-&#62;isDeleted}
+                     $folder-&#62;messages;
+ my @not_deleted= $folder-&#62;messages(&#39;ACTIVE&#39;);
+
+ # scalar context the number of messages
+ my $nr_of_msgs = $folder-&#62;messages;
+
+ # third message, via overloading
+ $folder-&#62;[2];
+
+ # Selection based on labels
+ $mgr-&#62;moveMessages($spam, $inbox-&#62;message(&#39;spam&#39;));
+ $mgr-&#62;moveMessages($archive, $inbox-&#62;message(&#39;seen&#39;));</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;nrMessages(OPTIONS)"
+>$obj-&#62;<b>nrMessages</b>(OPTIONS)</a></dt>
+
+<dd>
+<p>Simply calls <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_messages" class="podlinkpod"
+>messages()</a> in scalar context to return a count instead of the messages itself. Some people seem to understand this better. Note that nrMessages() will default to returning a count of <code>ALL</code> messages in the folder, including both <code>ACTIVE</code> and <code>DELETED</code>.</p>
+
+<p>The OPTIONS are passed to (and explained in) <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_messages" class="podlinkpod"
+>messages()</a>.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;scanForMessages(MESSAGE,_MESSAGE-IDS,_TIMESPAN,_WINDOW)"
+>$obj-&#62;<b>scanForMessages</b>(MESSAGE, MESSAGE-IDS, TIMESPAN, WINDOW)</a></dt>
+
+<dd>
+<p>You start with a MESSAGE, and are looking for a set of messages which are related to it. For instance, messages which appear in the &#39;In-Reply-To&#39; and &#39;Reference&#39; header fields of that message. These messages are known by their MESSAGE-IDS and you want to find them in the folder.</p>
+
+<p>When all message-ids are known, then looking-up messages is simple: they are found in a plain hash using <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_messages" class="podlinkpod"
+>messageId()</a>. But Mail::Box is lazy where it can, so many messages may not have been read from file yet, and that&#39;s the preferred situation, because that saves time and memory.</p>
+
+<p>It is not smart to search for the messages from front to back in the folder: the chances are much higher that related message reside closely to each other. Therefore, this method starts scanning the folder from the specified MESSAGE, back to the front of the folder.</p>
+
+<p>The TIMESPAN can be used to terminate the search based on the time enclosed in the message. When the constant string <code>EVER</code> is used as TIMESPAN, then the search is not limited by that. When an integer is specified, it will be used as absolute time in time-ticks as provided by your platform dependent <code>time</code> function. In other cases, it is passed to <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Other_methods" class="podlinkpod"
+>timespan2seconds()</a> to determine the threshold as time relative to the message&#39;s time.</p>
+
+<p>The WINDOW is used to limit the search in number of messages to be scanned as integer or constant string <code>ALL</code>.</p>
+
+<p>Returned are the message-ids which were not found during the scan. Be warned that a message-id could already be known and therefore not found: check that first.</p>
+
+<p>example: scanning through a folder for a message</p>
+
+<pre class="sh_perl"> my $refs   = $msg-&#62;get(&#39;References&#39;) or return;
+ my @msgids = $ref =~ m/\&#60;([^&#62;]+\&#62;/g;
+ my @failed = $folder-&#62;scanForMessages($msg, \@msgids, &#39;3 days&#39;, 50);</pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Sub-folders"
+>Sub-folders</a></h2>
+
+<dl>
+<dt><a name='obj'></a><a name="$obj-&#62;listSubFolders(OPTIONS)"
+>$obj-&#62;<b>listSubFolders</b>(OPTIONS)</a></dt>
+
+<dd>
+<dt><a name='Mail'></a><a name="Mail::Box-&#62;listSubFolders(OPTIONS)"
+>Mail::Box-&#62;<b>listSubFolders</b>(OPTIONS)</a></dt>
+
+<dd>
+<p>List the names of all sub-folders to this folder, not recursively decending. Use these names as argument to <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Sub-folders" class="podlinkpod"
+>openSubFolder()</a>, to get access to that folder.</p>
+
+<p>For MBOX folders, sub-folders are simulated.</p>
+
+<pre class="sh_perl"> -Option    --Default
+  check       &#60;false&#62;
+  folder      &#60;from calling object&#62;
+  folderdir   &#60;from folder&#62;
+  skip_empty  &#60;false&#62;</pre>
+
+<dl>
+<dt><a name='check'></a><a name="check_=&#62;_BOOLEAN"
+>check =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Should all returned foldernames be checked to be sure that they are of the right type? Each sub-folder may need to be opened to check this, with a folder type dependent penalty (in some cases very expensive).</p>
+
+<dt><a name='folder'></a><a name="folder_=&#62;_FOLDERNAME"
+>folder =&#62; FOLDERNAME</a></dt>
+
+<dd>
+<p>The folder whose sub-folders should be listed.</p>
+
+<dt><a name='folderdir'></a><a name="folderdir_=&#62;_DIRECTORY"
+>folderdir =&#62; DIRECTORY</a></dt>
+
+<dd>
+<dt><a name='skip_empty'></a><a name="skip_empty_=&#62;_BOOL"
+>skip_empty =&#62; BOOL</a></dt>
+
+<dd>
+<p>Shall empty folders (folders which currently do not contain any messages) be included? Empty folders are not useful to open, but may be useful to save to.</p>
+</dd>
+</dl>
+
+<p>example:</p>
+
+<pre class="sh_perl"> my $folder = $mgr-&#62;open(&#39;=in/new&#39;);
+ my @subs = $folder-&#62;listSubFolders;
+
+ my @subs = Mail::Box::Mbox-&#62;listSubFolders(folder =&#62; &#39;=in/new&#39;);
+ my @subs = Mail::Box::Mbox-&#62;listSubFolders; # toplevel folders.</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;nameOfSubFolder(SUBNAME,_[PARENTNAME])"
+>$obj-&#62;<b>nameOfSubFolder</b>(SUBNAME, [PARENTNAME])</a></dt>
+
+<dd>
+<dt><a name='Mail'></a><a name="Mail::Box-&#62;nameOfSubFolder(SUBNAME,_[PARENTNAME])"
+>Mail::Box-&#62;<b>nameOfSubFolder</b>(SUBNAME, [PARENTNAME])</a></dt>
+
+<dd>
+<p>Returns the constructed name of the folder with NAME, which is a sub-folder of this current one. You have either to call this method as instance method, or specify a PARENTNAME.</p>
+
+<p>example: how to get the name of a subfolder</p>
+
+<pre class="sh_perl"> my $sub = Mail::Box::Mbox-&#62;nameOfSubfolder(&#39;xyz&#39;, &#39;abc&#39;);
+ print $sub;                        # abc/xyz
+
+ my $f = Mail::Box::Mbox-&#62;new(folder =&#62; &#39;abc&#39;);
+ print $f-&#62;nameOfSubfolder(&#39;xyz&#39;);  # abc/xyz
+
+ my $sub = Mail::Box::Mbox-&#62;nameOfSubfolder(&#39;xyz&#39;, undef);
+ print $sub;                        # xyz</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;openRelatedFolder(OPTIONS)"
+>$obj-&#62;<b>openRelatedFolder</b>(OPTIONS)</a></dt>
+
+<dd>
+<p>Open a folder (usually a sub-folder) with the same options as this one. If there is a folder manager in use, it will be informed about this new folder. OPTIONS overrule the options which where used for the folder this method is called upon.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;openSubFolder(SUBNAME,_OPTIONS)"
+>$obj-&#62;<b>openSubFolder</b>(SUBNAME, OPTIONS)</a></dt>
+
+<dd>
+<p>Open (or create, if it does not exist yet) a new subfolder in an existing folder.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl"> my $folder = Mail::Box::Mbox-&#62;new(folder =&#62; &#39;=Inbox&#39;);
+ my $sub    = $folder-&#62;openSubFolder(&#39;read&#39;);</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;topFolderWithMessages()"
+>$obj-&#62;<b>topFolderWithMessages</b>()</a></dt>
+
+<dd>
+<dt><a name='Mail'></a><a name="Mail::Box-&#62;topFolderWithMessages()"
+>Mail::Box-&#62;<b>topFolderWithMessages</b>()</a></dt>
+
+<dd>
+<p>Some folder types can have messages in the top-level folder, some other can&#39;t.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Internals"
+>Internals</a></h2>
+
+<dl>
+<dt><a name='obj'></a><a name="$obj-&#62;coerce(MESSAGE,_OPTIONS)"
+>$obj-&#62;<b>coerce</b>(MESSAGE, OPTIONS)</a></dt>
+
+<dd>
+<p>Coerce the MESSAGE to be of the correct type to be placed in the folder. You can specify <a href="/perldoc?Mail%3A%3AInternet" class="podlinkpod"
+>Mail::Internet</a> and MIME::Entity objects here: they will be translated into Mail::Message messages first.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;create(FOLDERNAME,_OPTIONS)"
+>$obj-&#62;<b>create</b>(FOLDERNAME, OPTIONS)</a></dt>
+
+<dd>
+<dt><a name='Mail'></a><a name="Mail::Box-&#62;create(FOLDERNAME,_OPTIONS)"
+>Mail::Box-&#62;<b>create</b>(FOLDERNAME, OPTIONS)</a></dt>
+
+<dd>
+<p>Create a folder. If the folder already exists, it will be left unchanged. The folder is created, but not opened! If you want to open a file which may need to be created, then use <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Manager.pod#Manage_open_folders" class="podlinkpod"
+>Mail::Box::Manager::open()</a> with the create flag, or <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Constructors" class="podlinkpod"
+>Mail::Box::new(create)</a>.</p>
+
+<pre class="sh_perl"> -Option   --Default
+  folderdir  undef</pre>
+
+<dl>
+<dt><a name='folderdir'></a><a name="folderdir_=&#62;_DIRECTORY"
+>folderdir =&#62; DIRECTORY</a></dt>
+
+<dd>
+<p>When the foldername is preceded by a <code>=</code>, the <code>folderdir</code> directory will be searched for the named folder.</p>
+</dd>
+</dl>
+
+<dt><a name='obj'></a><a name="$obj-&#62;determineBodyType(MESSAGE,_HEAD)"
+>$obj-&#62;<b>determineBodyType</b>(MESSAGE, HEAD)</a></dt>
+
+<dd>
+<p>Determine which kind of body will be created for this message when reading the folder initially.</p>
+
+<dt><a name='Mail'></a><a name="Mail::Box-&#62;foundIn([FOLDERNAME],_OPTIONS)"
+>Mail::Box-&#62;<b>foundIn</b>([FOLDERNAME], OPTIONS)</a></dt>
+
+<dd>
+<p>Determine if the specified folder is of the type handled by the folder class. This method is extended by each folder sub-type.</p>
+
+<p>The FOLDERNAME specifies the name of the folder, as is specified by the application. You need to specified the <code>folder</code> option when you skip this first argument.</p>
+
+<p>OPTIONS is a list of extra information for the request. Read the documentation for each type of folder for type specific options, but each folder class will at least support the <code>folderdir</code> option:</p>
+
+<pre class="sh_perl"> -Option   --Default
+  folderdir  undef</pre>
+
+<dl>
+<dt><a name='folderdir'></a><a name="folderdir_=&#62;_DIRECTORY"
+>folderdir =&#62; DIRECTORY</a></dt>
+
+<dd>
+<p>The location where the folders of this class are stored by default. If the user specifies a name starting with a <code>=</code>, that indicates that the folder is to be found in this default DIRECTORY.</p>
+</dd>
+</dl>
+
+<p>example:</p>
+
+<pre class="sh_perl"> Mail::Box::Mbox-&#62;foundIn(&#39;=markov&#39;,
+     folderdir =&#62; &#34;$ENV{HOME}/Mail&#34;);
+ Mail::Box::MH-&#62;foundIn(folder =&#62; &#39;=markov&#39;);</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;lineSeparator([STRING|&#39;CR&#39;|&#39;LF&#39;|&#39;CRLF&#39;])"
+>$obj-&#62;<b>lineSeparator</b>([STRING|&#39;CR&#39;|&#39;LF&#39;|&#39;CRLF&#39;])</a></dt>
+
+<dd>
+<p>Returns the character or characters used to separate lines in the folder file, optionally after setting it to STRING, or one of the constants. The first line of the folder sets the default.</p>
+
+<p>UNIX uses a LF character, Mac a CR, and Windows both a CR and a LF. Each separator will be represented by a &#34;\n&#34; within your program. However, when processing platform foreign folders, complications appear. Think about the <code>Size</code> field in the header.</p>
+
+<p>When the separator is changed, the whole folder me be rewritten. Although, that may not be required.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;locker()"
+>$obj-&#62;<b>locker</b>()</a></dt>
+
+<dd>
+<p>Returns the locking object.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;read(OPTIONS)"
+>$obj-&#62;<b>read</b>(OPTIONS)</a></dt>
+
+<dd>
+<p>Read messages from the folder into memory. The OPTIONS are folder specific. Do not call <code>read()</code> yourself: it will be called for you when you open the folder via the manager or instantiate a folder object directly.</p>
+
+<p>NOTE: if you are copying messages from one folder to another, use <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_folder" class="podlinkpod"
+>addMessages()</a> instead of <code>read()</code>.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl"> my $mgr = Mail::Box::Manager-&#62;new;
+ my $folder = $mgr-&#62;open(&#39;InBox&#39;);             # implies read
+ my $folder = Mail::Box::Mbox-&#62;new(folder =&#62; &#39;Inbox&#39;); # same</pre>
+
+<dt><a name='obj'></a><a name="$obj-&#62;readMessages(OPTIONS)"
+>$obj-&#62;<b>readMessages</b>(OPTIONS)</a></dt>
+
+<dd>
+<p>Called by <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Internals" class="podlinkpod"
+>read()</a> to actually read the messages from one specific folder type. The <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Internals" class="podlinkpod"
+>read()</a> organizes the general activities.</p>
+
+<p>The OPTIONS are <code>trusted</code>, <code>head_type</code>, <code>field_type</code>, <code>message_type</code>, <code>body_delayed_type</code>, and <code>head_delayed_type</code> as defined by the folder at hand. The defaults are the constructor defaults (see <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Constructors" class="podlinkpod"
+>new()</a>).</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;storeMessage(MESSAGE)"
+>$obj-&#62;<b>storeMessage</b>(MESSAGE)</a></dt>
+
+<dd>
+<p>Store the message in the folder without the checks as performed by <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_folder" class="podlinkpod"
+>addMessage()</a>.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;toBeThreaded(MESSAGES)"
+>$obj-&#62;<b>toBeThreaded</b>(MESSAGES)</a></dt>
+
+<dd>
+<p>The specified message is ready to be removed from a thread. This will be passed on to the mail-manager, which keeps an overview on which thread-detection objects are floating around.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;toBeUnthreaded(MESSAGES)"
+>$obj-&#62;<b>toBeUnthreaded</b>(MESSAGES)</a></dt>
+
+<dd>
+<p>The specified message is ready to be included in a thread. This will be passed on to the mail-manager, which keeps an overview on which thread-detection objects are floating around.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;updateMessages(OPTIONS)"
+>$obj-&#62;<b>updateMessages</b>(OPTIONS)</a></dt>
+
+<dd>
+<p>Called by <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_folder" class="podlinkpod"
+>update()</a> to read messages which arrived in the folder after it was opened. Sometimes, external applications dump messages in a folder without locking (or using a different lock than your application does).</p>
+
+<p>Although this is quite a dangerous, it only fails when a folder is updated (reordered or message removed) at exactly the same time as new messages arrive. These collisions are sparse.</p>
+
+<p>The options are the same as for <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Internals" class="podlinkpod"
+>readMessages()</a>.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;write(OPTIONS)"
+>$obj-&#62;<b>write</b>(OPTIONS)</a></dt>
+
+<dd>
+<p>Write the data to disk. The folder (a <code>true</code> value) is returned if successful. Deleted messages are transformed into destroyed messages: their memory is freed.</p>
+
+<p>WARNING: When moving messages from one folder to another, be sure to write (or <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_folder" class="podlinkpod"
+>close()</a>) the destination folder before writing (or closing) the source folder: otherwise you may lose data if the system crashes or if there are software problems.</p>
+
+<p>To write a folder to a different file, you must first create a new folder, then move all the messages, and then write or <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_folder" class="podlinkpod"
+>close()</a> that new folder.</p>
+
+<pre class="sh_perl"> -Option      --Default
+  force         &#60;false&#62;
+  save_deleted  &#60;false&#62;</pre>
+
+<dl>
+<dt><a name='force'></a><a name="force_=&#62;_BOOLEAN"
+>force =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Override write-protection with <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Constructors" class="podlinkpod"
+>new(access)</a> while opening the folder (whenever possible, it may still be blocked by the operating system).</p>
+
+<dt><a name='save_deleted'></a><a name="save_deleted_=&#62;_BOOLEAN"
+>save_deleted =&#62; BOOLEAN</a></dt>
+
+<dd>
+<p>Do also write messages which where flagged to be deleted to their folder. The flag for deletion is conserved (when possible), which means that a re-open of the folder may remove the messages for real. See <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_folder" class="podlinkpod"
+>close(save_deleted)</a>.</p>
+</dd>
+</dl>
+
+<dt><a name='obj'></a><a name="$obj-&#62;writeMessages(OPTIONS)"
+>$obj-&#62;<b>writeMessages</b>(OPTIONS)</a></dt>
+
+<dd>
+<p>Called by <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Internals" class="podlinkpod"
+>write()</a> to actually write the messages from one specific folder type. The <code>write</code> organizes the general activities. All options to <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Internals" class="podlinkpod"
+>write()</a> are passed to <code>writeMessages</code> as well. Besides, a few extra are added by <code>write</code> itself.</p>
+
+<pre class="sh_perl"> -Option  --Default
+  messages  &#60;required&#62;</pre>
+
+<dl>
+<dt><a name='messages'></a><a name="messages_=&#62;_ARRAY"
+>messages =&#62; ARRAY</a></dt>
+
+<dd>
+<p>The messages to be written, which is a sub-set of all messages in the current folder.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Other_methods"
+>Other methods</a></h2>
+
+<dl>
+<dt><a name='obj'></a><a name="$obj-&#62;timespan2seconds(TIME)"
+>$obj-&#62;<b>timespan2seconds</b>(TIME)</a></dt>
+
+<dd>
+<dt><a name='Mail'></a><a name="Mail::Box-&#62;timespan2seconds(TIME)"
+>Mail::Box-&#62;<b>timespan2seconds</b>(TIME)</a></dt>
+
+<dd>
+<p>TIME is a string, which starts with a float, and then one of the words &#39;hour&#39;, &#39;hours&#39;, &#39;day&#39;, &#39;days&#39;, &#39;week&#39;, or &#39;weeks&#39;. For instance: &#39;1 hour&#39; or &#39;4 weeks&#39;.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Error_handling"
+>Error handling</a></h2>
+
+<dl>
+<dt><a name='obj'></a><a name="$obj-&#62;AUTOLOAD()"
+>$obj-&#62;<b>AUTOLOAD</b>()</a></dt>
+
+<dd>
+<p>See <a href="/~markov/Mail-Box-2.104/lib/Mail/Reporter.pod#Error_handling" class="podlinkpod"
+>&#34;Error handling&#34; in Mail::Reporter</a></p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;addReport(OBJECT)"
+>$obj-&#62;<b>addReport</b>(OBJECT)</a></dt>
+
+<dd>
+<p>See <a href="/~markov/Mail-Box-2.104/lib/Mail/Reporter.pod#Error_handling" class="podlinkpod"
+>&#34;Error handling&#34; in Mail::Reporter</a></p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;defaultTrace([LEVEL]|[LOGLEVEL,_TRACELEVEL]|[LEVEL,_CALLBACK])"
+>$obj-&#62;<b>defaultTrace</b>([LEVEL]|[LOGLEVEL, TRACELEVEL]|[LEVEL, CALLBACK])</a></dt>
+
+<dd>
+<dt><a name='Mail'></a><a name="Mail::Box-&#62;defaultTrace([LEVEL]|[LOGLEVEL,_TRACELEVEL]|[LEVEL,_CALLBACK])"
+>Mail::Box-&#62;<b>defaultTrace</b>([LEVEL]|[LOGLEVEL, TRACELEVEL]|[LEVEL, CALLBACK])</a></dt>
+
+<dd>
+<p>See <a href="/~markov/Mail-Box-2.104/lib/Mail/Reporter.pod#Error_handling" class="podlinkpod"
+>&#34;Error handling&#34; in Mail::Reporter</a></p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;errors()"
+>$obj-&#62;<b>errors</b>()</a></dt>
+
+<dd>
+<p>See <a href="/~markov/Mail-Box-2.104/lib/Mail/Reporter.pod#Error_handling" class="podlinkpod"
+>&#34;Error handling&#34; in Mail::Reporter</a></p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;log([LEVEL_[,STRINGS]])"
+>$obj-&#62;<b>log</b>([LEVEL [,STRINGS]])</a></dt>
+
+<dd>
+<dt><a name='Mail'></a><a name="Mail::Box-&#62;log([LEVEL_[,STRINGS]])"
+>Mail::Box-&#62;<b>log</b>([LEVEL [,STRINGS]])</a></dt>
+
+<dd>
+<p>See <a href="/~markov/Mail-Box-2.104/lib/Mail/Reporter.pod#Error_handling" class="podlinkpod"
+>&#34;Error handling&#34; in Mail::Reporter</a></p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;logPriority(LEVEL)"
+>$obj-&#62;<b>logPriority</b>(LEVEL)</a></dt>
+
+<dd>
+<dt><a name='Mail'></a><a name="Mail::Box-&#62;logPriority(LEVEL)"
+>Mail::Box-&#62;<b>logPriority</b>(LEVEL)</a></dt>
+
+<dd>
+<p>See <a href="/~markov/Mail-Box-2.104/lib/Mail/Reporter.pod#Error_handling" class="podlinkpod"
+>&#34;Error handling&#34; in Mail::Reporter</a></p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;logSettings()"
+>$obj-&#62;<b>logSettings</b>()</a></dt>
+
+<dd>
+<p>See <a href="/~markov/Mail-Box-2.104/lib/Mail/Reporter.pod#Error_handling" class="podlinkpod"
+>&#34;Error handling&#34; in Mail::Reporter</a></p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;notImplemented()"
+>$obj-&#62;<b>notImplemented</b>()</a></dt>
+
+<dd>
+<p>See <a href="/~markov/Mail-Box-2.104/lib/Mail/Reporter.pod#Error_handling" class="podlinkpod"
+>&#34;Error handling&#34; in Mail::Reporter</a></p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;report([LEVEL])"
+>$obj-&#62;<b>report</b>([LEVEL])</a></dt>
+
+<dd>
+<p>See <a href="/~markov/Mail-Box-2.104/lib/Mail/Reporter.pod#Error_handling" class="podlinkpod"
+>&#34;Error handling&#34; in Mail::Reporter</a></p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;reportAll([LEVEL])"
+>$obj-&#62;<b>reportAll</b>([LEVEL])</a></dt>
+
+<dd>
+<p>See <a href="/~markov/Mail-Box-2.104/lib/Mail/Reporter.pod#Error_handling" class="podlinkpod"
+>&#34;Error handling&#34; in Mail::Reporter</a></p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;trace([LEVEL])"
+>$obj-&#62;<b>trace</b>([LEVEL])</a></dt>
+
+<dd>
+<p>See <a href="/~markov/Mail-Box-2.104/lib/Mail/Reporter.pod#Error_handling" class="podlinkpod"
+>&#34;Error handling&#34; in Mail::Reporter</a></p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;warnings()"
+>$obj-&#62;<b>warnings</b>()</a></dt>
+
+<dd>
+<p>See <a href="/~markov/Mail-Box-2.104/lib/Mail/Reporter.pod#Error_handling" class="podlinkpod"
+>&#34;Error handling&#34; in Mail::Reporter</a></p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Cleanup"
+>Cleanup</a></h2>
+
+<dl>
+<dt><a name='obj'></a><a name="$obj-&#62;DESTROY()"
+>$obj-&#62;<b>DESTROY</b>()</a></dt>
+
+<dd>
+<p>This method is called by Perl when an folder-object is no longer accessible by the rest of the program.</p>
+
+<dt><a name='obj'></a><a name="$obj-&#62;inGlobalDestruction()"
+>$obj-&#62;<b>inGlobalDestruction</b>()</a></dt>
+
+<dd>
+<p>See <a href="/~markov/Mail-Box-2.104/lib/Mail/Reporter.pod#Cleanup" class="podlinkpod"
+>&#34;Cleanup&#34; in Mail::Reporter</a></p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DETAILS"
+>DETAILS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Different_kinds_of_folders"
+>Different kinds of folders</a></h2>
+
+<p>In general, there are three classes of folders: those who group messages per file, those who group messages in a directory, and those do not provide direct access to the message data. These folder types are each based on a different base class.</p>
+
+<ul>
+<li>File based folders <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/File.pod" class="podlinkpod"
+>Mail::Box::File</a>
+<p>File based folders maintain a folder (a set of messages) in one single file. The advantage is that your folder has only one single file to access, which speeds-up things when all messages must be accessed at once.</p>
+
+<p>One of the main disadvantages over directory based folders is that you have to construct some means to keep all message apart. For instance MBOX adds a message separator line between the messages in the file, and this line can cause confusion with the message&#39;s contents.</p>
+
+<p>Where access to all messages at once is faster in file based folders, access to a single message is (much) slower, because the whole folder must be read. However, in directory based folders you have to figure-out which message you need, which may be a hassle as well.</p>
+
+<p>Examples of file based folders are MBOX, DBX, and NetScape.</p>
+</li>
+
+<li>Directory based folders <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Dir.pod" class="podlinkpod"
+>Mail::Box::Dir</a>
+<p>In stead of collecting multiple messages in one file, you can also put each message in a separate file and collect those files in a directory to represent a folder.</p>
+
+<p>The main disadvantages of these folders are the enormous amount of tiny files you usually get in your file-system. It is extremely slow to search through your whole folder, because many files have to be opened to do so.</p>
+
+<p>The best feature of this organization is that each message is kept exactly as it was received, and can be processed with external scripts as well: you do not need any mail user agent (MUA).</p>
+
+<p>Examples of directoy organized folders are MH, Maildir, EMH, and XMH.</p>
+</li>
+
+<li>Network (external) folders <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Net.pod" class="podlinkpod"
+>Mail::Box::Net</a>
+<p>Where both types described before provide direct access to the message data, maintain these folder types the message data for you: you have to request for messages or parts of them. These folders do not have a filename, file-system privileges and system locking to worry about, but typically require a hostname, folder and message IDs, and authorization.</p>
+
+<p>Examples of these folder types are the popular POP and IMAP, and database oriented message storage.</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Available_folder_types"
+>Available folder types</a></h2>
+
+<ul>
+<li><a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Dbx.pod" class="podlinkpod"
+>Mail::Box::Dbx</a> (read only)
+<p>Dbx files are created by Outlook Express. Using the external (optional) Mail::Transport::Dbx module, you can read these folders, even when you are running MailBox on a UNIX/Linux platform.</p>
+
+<p>Writing and deleting messages is not supported by the library, and therefore not by MailBox. Read access is enough to do folder conversions, for instance.</p>
+</li>
+
+<li><a href="/~markov/Mail-Box-2.104/lib/Mail/Box/IMAP4.pod" class="podlinkpod"
+>Mail::Box::IMAP4</a> (partially)
+<p>The IMAP protocol is very complex. Some parts are implemented to create (sub-optimal but usable) IMAP clients. Besides, there are also some parts for IMAP servers present. The most important lacking feature is support for encrypted connections.</p>
+</li>
+
+<li><a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Maildir.pod" class="podlinkpod"
+>Mail::Box::Maildir</a>
+<p>Maildir folders have a directory for each folder. A folder directory contains <code>tmp</code>, <code>new</code>, and <code>cur</code> sub-directories, each containting messages with a different purpose. Files with new messages are created in <code>tmp</code>, then moved to <code>new</code> (ready to be accepted). Later, they are moved to the <code>cur</code> directory (accepted). Each message is one file with a name starting with timestamp. The name also contains flags about the status of the message.</p>
+
+<p>Maildir folders can not be used on Windows by reason of file-name limitations on that platform.</p>
+</li>
+
+<li><a href="/~markov/Mail-Box-2.104/lib/Mail/Box/Mbox.pod" class="podlinkpod"
+>Mail::Box::Mbox</a>
+<p>A folder type in which all related messages are stored in one file. This is a very common folder type for UNIX.</p>
+</li>
+
+<li><a href="/~markov/Mail-Box-2.104/lib/Mail/Box/MH.pod" class="podlinkpod"
+>Mail::Box::MH</a>
+<p>This folder creates a directory for each folder, and a message is one file inside that directory. The message files are numbered sequentially on order of arrival. A special <code>.mh_sequences</code> file maintains flags about the messages.</p>
+</li>
+
+<li><a href="/~markov/Mail-Box-2.104/lib/Mail/Box/POP3.pod" class="podlinkpod"
+>Mail::Box::POP3</a> (read/delete only)
+<p>POP3 is a protocol which can be used to retreive messages from a remote system. After the connection to a POP server is made, the messages can be looked at and removed as if they are on the local system.</p>
+</li>
+
+<li>Mail::Box::Netzwert
+<p>The Netzwert folder type is optimized for mailbox handling on a cluster of systems with a shared NFS storage. The code is not released under GPL (yet)</p>
+</li>
+</ul>
+
+<p>Other folder types are on the (long) wishlist to get implemented. Please, help implementing more of them.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Folder_class_implementation"
+>Folder class implementation</a></h2>
+
+<p>The class structure of folders is very close to that of messages. For instance, a <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/File/Message.pod" class="podlinkpod"
+>Mail::Box::File::Message</a> relates to a <a href="/~markov/Mail-Box-2.104/lib/Mail/Box/File.pod" class="podlinkpod"
+>Mail::Box::File</a> folder. The folder types are:</p>
+
+<pre class="sh_perl">                    Mail::Box::Netzwert
+ Mail::Box::Mbox   | Mail::Box::Maildir Mail::Box::POP3
+ |  Mail::Box::Dbx | | Mail::Box::MH    |  Mail::Box::IMAP4
+ |  |               | | |                 |  |
+ |  |               | | |                 |  |
+ Mail::Box::File   Mail::Box::Dir       Mail::Box::Net
+       |                  |                   |
+       `--------------.   |   .---------------&#39;
+                      |   |   |
+                      Mail::Box
+                          |
+                          |
+                    Mail::Reporter (general base class)</pre>
+
+<p>By far most folder features are implemented in <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod" class="podlinkpod"
+>Mail::Box</a>, so available to all folder types. Sometimes, features which appear in only some of the folder types are simulated for folders that miss them, like sub-folder support for MBOX.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIAGNOSTICS"
+>DIAGNOSTICS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='Warning'></a><a name="Warning:_Changes_not_written_to_read-only_folder_$self."
+>Warning: Changes not written to read-only folder $self.</a></dt>
+
+<dd>
+<p>You have opened the folder read-only --which is the default set by <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Constructors" class="podlinkpod"
+>new(access)</a>--, made modifications, and now want to close it. Set <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_folder" class="podlinkpod"
+>close(force)</a> if you want to overrule the access mode, or close the folder with <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#The_folder" class="podlinkpod"
+>close(write)</a> set to <code>NEVER</code>.</p>
+
+<dt><a name='Error'></a><a name="Error:_Copying_failed_for_one_message."
+>Error: Copying failed for one message.</a></dt>
+
+<dd>
+<p>For some reason, for instance disc full, removed by external process, or read-protection, it is impossible to copy one of the messages. Copying will proceed for the other messages.</p>
+
+<dt><a name='Error'></a><a name="Error:_Destination_folder_$name_is_not_writable."
+>Error: Destination folder $name is not writable.</a></dt>
+
+<dd>
+<p>The folder where the messages are copied to is not opened with write access (see <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Constructors" class="podlinkpod"
+>new(access)</a>). This has no relation with write permission to the folder which is controled by your operating system.</p>
+
+<dt><a name='Warning'></a><a name="Warning:_Different_messages_with_id_$msgid"
+>Warning: Different messages with id $msgid</a></dt>
+
+<dd>
+<p>The message id is discovered more than once within the same folder, but the content of the message seems to be different. This should not be possible: each message must be unique.</p>
+
+<dt><a name='Error'></a><a name="Error:_Folder_$name_is_opened_read-only"
+>Error: Folder $name is opened read-only</a></dt>
+
+<dd>
+<p>You can not write to this folder unless you have opened the folder to write or append with <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Constructors" class="podlinkpod"
+>new(access)</a>, or the <code>force</code> option is set true.</p>
+
+<dt><a name='Error'></a><a name="Error:_Folder_$name_not_deleted:_not_writable."
+>Error: Folder $name not deleted: not writable.</a></dt>
+
+<dd>
+<p>The folder must be opened with write access via <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Constructors" class="podlinkpod"
+>new(access)</a>, otherwise removing it will be refused. So, you may have write-access according to the operating system, but that will not automatically mean that this <code>delete</code> method permits you to. The reverse remark is valid as well.</p>
+
+<dt><a name='Error'></a><a name="Error:_Invalid_timespan_&#39;$timespan&#39;_specified."
+>Error: Invalid timespan &#39;$timespan&#39; specified.</a></dt>
+
+<dd>
+<p>The string does not follow the strict rules of the time span syntax which is permitted as parameter.</p>
+
+<dt><a name='Warning'></a><a name="Warning:_Message-id_&#39;$msgid&#39;_does_not_contain_a_domain."
+>Warning: Message-id &#39;$msgid&#39; does not contain a domain.</a></dt>
+
+<dd>
+<p>According to the RFCs, message-ids need to contain a unique random part, then an <code>@</code>, and then a domain name. This is made to avoid the creation of two messages with the same id. The warning emerges when the <code>@</code> is missing from the string.</p>
+
+<dt><a name='Error'></a><a name="Error:_No_folder_name_specified."
+>Error: No folder name specified.</a></dt>
+
+<dd>
+<p>You did not specify the name of a folder to be opened. Use the <a href="/~markov/Mail-Box-2.104/lib/Mail/Box.pod#Constructors" class="podlinkpod"
+>new(folder)</a> option or set the <code>MAIL</code> environment variable.</p>
+
+<dt><a name='Error'></a><a name="Error:_Package_$package_does_not_implement_$method."
+>Error: Package $package does not implement $method.</a></dt>
+
+<dd>
+<p>Fatal error: the specific package (or one of its superclasses) does not implement this method where it should. This message means that some other related classes do implement this method however the class at hand does not. Probably you should investigate this and probably inform the author of the package.</p>
+
+<dt><a name='Error'></a><a name="Error:_Unable_to_create_subfolder_$name_of_$folder."
+>Error: Unable to create subfolder $name of $folder.</a></dt>
+
+<dd>
+<p>The copy includes the subfolders, but for some reason it was not possible to copy one of these. Copying will proceed for all other sub-folders.</p>
+
+<dt><a name='Error'></a><a name="Error:_Writing_folder_$name_failed"
+>Error: Writing folder $name failed</a></dt>
+
+<dd>
+<p>For some reason (you probably got more error messages about this problem) it is impossible to write the folder, although you should because there were changes made.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module is part of Mail-Box distribution version 2.104, built on April 23, 2012. Website: <em><a href="http://perl.overmeer.net/mailbox/" class="podlinkurl"
+>http://perl.overmeer.net/mailbox/</a></em></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyrights 2001-2012 by [Mark Overmeer]. For other contributors see ChangeLog.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. See <em><a href="http://www.perl.com/perl/misc/Artistic.html" class="podlinkurl"
+>http://www.perl.com/perl/misc/Artistic.html</a></em></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78262 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 16:33:27 2012 GMT (0.411228895187378) @cpansearch1 -->
+ </body>
+</html>

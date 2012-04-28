@@ -1,0 +1,45 @@
+Module-Starter-XSimple version 0.0.1
+
+This is a replacement for Module::Starter::Simple which generates XS files
+(with matching .PM stub files) instead of conventional Perl templates.
+As such, it requires the presence of Devel::PPPort to generate an
+up-to-date ppport.h.
+
+To use this, you can either call the module-starter script like this:
+
+    module-starter --module=[modulename] --class=Module::Starter::XSimple
+
+or create a .module-starter/config file with at least the following lines:
+
+    author:  your name
+    email:   your_address@example.com
+    builder: Module::Build
+    plugins: Module::Starter::XSimple
+
+At present, M::S::XSimple only supports Module::Build, because where the
+XS and associated files is different between M::B and ExtUtils::ModuleMaker.
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+    perl Build.PL
+    ./Build
+    ./Build test
+    ./Build install
+
+
+DEPENDENCIES
+
+Devel::PPPort
+Module::Starter
+Test::More
+version
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2005, John Peacock
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.

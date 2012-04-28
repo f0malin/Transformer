@@ -1,0 +1,716 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Opcode - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Opcode",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Opcode">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  Opcode
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Opcode;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/ext/Opcode/Opcode.pm">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+  Module Version:  1.18 &nbsp;
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/ext/Opcode/Opcode.pm">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~abigail/perl/ext/Opcode/Opcode.pm">perl-5.15.9</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#NOTE'>NOTE</a>
+  <li class='indexItem indexItem1'><a href='#WARNING'>WARNING</a>
+  <li class='indexItem indexItem1'><a href='#Operator_Names_and_Operator_Lists'>Operator Names and Operator Lists</a>
+  <li class='indexItem indexItem1'><a href='#Opcode_Functions'>Opcode Functions</a>
+  <li class='indexItem indexItem1'><a href='#Manipulating_Opsets'>Manipulating Opsets</a>
+  <li class='indexItem indexItem1'><a href='#TO_DO_(maybe)'>TO DO (maybe)</a>
+  <li class='indexItem indexItem1'><a href='#Predefined_Opcode_Tags'>Predefined Opcode Tags</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Opcode - Disable named opcodes when compiling perl code</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use Opcode;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Perl code is always compiled into an internal format before execution.</p>
+
+<p>Evaluating perl code (e.g. via &#34;eval&#34; or &#34;do &#39;file&#39;&#34;) causes the code to be compiled into an internal format and then, provided there was no error in the compilation, executed. The internal format is based on many distinct <i>opcodes</i>.</p>
+
+<p>By default no opmask is in effect and any code can be compiled.</p>
+
+<p>The Opcode module allow you to define an <i>operator mask</i> to be in effect when perl <i>next</i> compiles any code. Attempting to compile code which contains a masked opcode will cause the compilation to fail with an error. The code will not be executed.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTE"
+>NOTE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The Opcode module is not usually used directly. See the ops pragma and Safe modules for more typical uses.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="WARNING"
+>WARNING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The authors make <b>no warranty</b>, implied or otherwise, about the suitability of this software for safety or security purposes.</p>
+
+<p>The authors shall not in any case be liable for special, incidental, consequential, indirect or other similar damages arising from the use of this software.</p>
+
+<p>Your mileage will vary. If in any doubt <b>do not use it</b>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Operator_Names_and_Operator_Lists"
+>Operator Names and Operator Lists <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The canonical list of operator names is the contents of the array PL_op_name defined and initialised in file <em>opcode.h</em> of the Perl source distribution (and installed into the perl library).</p>
+
+<p>Each operator has both a terse name (its opname) and a more verbose or recognisable descriptive name. The opdesc function can be used to return a list of descriptions for a list of operators.</p>
+
+<p>Many of the functions and methods listed below take a list of operators as parameters. Most operator lists can be made up of several types of element. Each element can be one of</p>
+
+<dl>
+<dt><a name='an'></a><a name="an_operator_name_(opname)"
+>an operator name (opname)</a></dt>
+
+<dd>
+<p>Operator names are typically small lowercase words like enterloop, leaveloop, last, next, redo etc. Sometimes they are rather cryptic like gv2cv, i_ncmp and ftsvtx.</p>
+
+<dt><a name='an'></a><a name="an_operator_tag_name_(optag)"
+>an operator tag name (optag)</a></dt>
+
+<dd>
+<p>Operator tags can be used to refer to groups (or sets) of operators. Tag names always begin with a colon. The Opcode module defines several optags and the user can define others using the define_optag function.</p>
+
+<dt><a name='a'></a><a name="a_negated_opname_or_optag"
+>a negated opname or optag</a></dt>
+
+<dd>
+<p>An opname or optag can be prefixed with an exclamation mark, e.g., !mkdir. Negating an opname or optag means remove the corresponding ops from the accumulated set of ops at that point.</p>
+
+<dt><a name='an'></a><a name="an_operator_set_(opset)"
+>an operator set (opset)</a></dt>
+
+<dd>
+<p>An <i>opset</i> as a binary string of approximately 44 bytes which holds a set or zero or more operators.</p>
+
+<p>The opset and opset_to_ops functions can be used to convert from a list of operators to an opset and <i>vice versa</i>.</p>
+
+<p>Wherever a list of operators can be given you can use one or more opsets. See also Manipulating Opsets below.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Opcode_Functions"
+>Opcode Functions <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The Opcode package contains functions for manipulating operator names tags and sets. All are available for export by the package.</p>
+
+<dl>
+<dt><a name="opcodes"
+>opcodes</a></dt>
+
+<dd>
+<p>In a scalar context opcodes returns the number of opcodes in this version of perl (around 350 for perl-5.7.0).</p>
+
+<p>In a list context it returns a list of all the operator names. (Not yet implemented, use @names = opset_to_ops(full_opset).)</p>
+
+<dt><a name='opset'></a><a name="opset_(OP,_...)"
+>opset (OP, ...)</a></dt>
+
+<dd>
+<p>Returns an opset containing the listed operators.</p>
+
+<dt><a name='opset_to_ops'></a><a name="opset_to_ops_(OPSET)"
+>opset_to_ops (OPSET)</a></dt>
+
+<dd>
+<p>Returns a list of operator names corresponding to those operators in the set.</p>
+
+<dt><a name='opset_to_hex'></a><a name="opset_to_hex_(OPSET)"
+>opset_to_hex (OPSET)</a></dt>
+
+<dd>
+<p>Returns a string representation of an opset. Can be handy for debugging.</p>
+
+<dt><a name="full_opset"
+>full_opset</a></dt>
+
+<dd>
+<p>Returns an opset which includes all operators.</p>
+
+<dt><a name="empty_opset"
+>empty_opset</a></dt>
+
+<dd>
+<p>Returns an opset which contains no operators.</p>
+
+<dt><a name='invert_opset'></a><a name="invert_opset_(OPSET)"
+>invert_opset (OPSET)</a></dt>
+
+<dd>
+<p>Returns an opset which is the inverse set of the one supplied.</p>
+
+<dt><a name='verify_opset'></a><a name="verify_opset_(OPSET,_...)"
+>verify_opset (OPSET, ...)</a></dt>
+
+<dd>
+<p>Returns true if the supplied opset looks like a valid opset (is the right length etc) otherwise it returns false. If an optional second parameter is true then verify_opset will croak on an invalid opset instead of returning false.</p>
+
+<p>Most of the other Opcode functions call verify_opset automatically and will croak if given an invalid opset.</p>
+
+<dt><a name='define_optag'></a><a name="define_optag_(OPTAG,_OPSET)"
+>define_optag (OPTAG, OPSET)</a></dt>
+
+<dd>
+<p>Define OPTAG as a symbolic name for OPSET. Optag names always start with a colon <code>:</code>.</p>
+
+<p>The optag name used must not be defined already (define_optag will croak if it is already defined). Optag names are global to the perl process and optag definitions cannot be altered or deleted once defined.</p>
+
+<p>It is strongly recommended that applications using Opcode should use a leading capital letter on their tag names since lowercase names are reserved for use by the Opcode module. If using Opcode within a module you should prefix your tags names with the name of your module to ensure uniqueness and thus avoid clashes with other modules.</p>
+
+<dt><a name='opmask_add'></a><a name="opmask_add_(OPSET)"
+>opmask_add (OPSET)</a></dt>
+
+<dd>
+<p>Adds the supplied opset to the current opmask. Note that there is currently <i>no</i> mechanism for unmasking ops once they have been masked. This is intentional.</p>
+
+<dt><a name="opmask"
+>opmask</a></dt>
+
+<dd>
+<p>Returns an opset corresponding to the current opmask.</p>
+
+<dt><a name='opdesc'></a><a name="opdesc_(OP,_...)"
+>opdesc (OP, ...)</a></dt>
+
+<dd>
+<p>This takes a list of operator names and returns the corresponding list of operator descriptions.</p>
+
+<dt><a name='opdump'></a><a name="opdump_(PAT)"
+>opdump (PAT)</a></dt>
+
+<dd>
+<p>Dumps to STDOUT a two column list of op names and op descriptions. If an optional pattern is given then only lines which match the (case insensitive) pattern will be output.</p>
+
+<p>It&#39;s designed to be used as a handy command line utility:</p>
+
+<pre class="sh_perl">        perl -MOpcode=opdump -e opdump
+        perl -MOpcode=opdump -e &#39;opdump Eval&#39;</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Manipulating_Opsets"
+>Manipulating Opsets <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Opsets may be manipulated using the perl bit vector operators &#38; (and), | (or), ^ (xor) and ~ (negate/invert).</p>
+
+<p>However you should never rely on the numerical position of any opcode within the opset. In other words both sides of a bit vector operator should be opsets returned from Opcode functions.</p>
+
+<p>Also, since the number of opcodes in your current version of perl might not be an exact multiple of eight, there may be unused bits in the last byte of an upset. This should not cause any problems (Opcode functions ignore those extra bits) but it does mean that using the ~ operator will typically not produce the same &#39;physical&#39; opset &#39;string&#39; as the invert_opset function.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TO_DO_(maybe)"
+>TO DO (maybe) <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    $bool = opset_eq($opset1, $opset2)  true if opsets are logically eqiv
+
+    $yes = opset_can($opset, @ops)      true if $opset has all @ops set
+
+    @diff = opset_diff($opset1, $opset2) =&#62; (&#39;foo&#39;, &#39;!bar&#39;, ...)</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Predefined_Opcode_Tags"
+>Predefined Opcode Tags <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='base_core'></a><a name=":base_core"
+>:base_core</a></dt>
+
+<dd>
+<pre class="sh_perl">    null stub scalar pushmark wantarray const defined undef
+
+    rv2sv sassign
+
+    rv2av aassign aelem aelemfast aslice av2arylen
+
+    rv2hv helem hslice each values keys exists delete aeach akeys avalues
+    boolkeys reach rvalues rkeys
+
+    preinc i_preinc predec i_predec postinc i_postinc postdec i_postdec
+    int hex oct abs pow multiply i_multiply divide i_divide
+    modulo i_modulo add i_add subtract i_subtract
+
+    left_shift right_shift bit_and bit_xor bit_or negate i_negate
+    not complement
+
+    lt i_lt gt i_gt le i_le ge i_ge eq i_eq ne i_ne ncmp i_ncmp
+    slt sgt sle sge seq sne scmp
+
+    substr vec stringify study pos length index rindex ord chr
+
+    ucfirst lcfirst uc lc quotemeta trans transr chop schop chomp schomp
+
+    match split qr
+
+    list lslice splice push pop shift unshift reverse
+
+    cond_expr flip flop andassign orassign dorassign and or dor xor
+
+    warn die lineseq nextstate scope enter leave
+
+    rv2cv anoncode prototype
+
+    entersub leavesub leavesublv return method method_named -- XXX loops via recursion?
+
+    leaveeval -- needed for Safe to operate, is safe without entereval</pre>
+
+<dt><a name='base_mem'></a><a name=":base_mem"
+>:base_mem</a></dt>
+
+<dd>
+<p>These memory related ops are not included in :base_core because they can easily be used to implement a resource attack (e.g., consume all available memory).</p>
+
+<pre class="sh_perl">    concat repeat join range
+
+    anonlist anonhash</pre>
+
+<p>Note that despite the existence of this optag a memory resource attack may still be possible using only :base_core ops.</p>
+
+<p>Disabling these ops is a <i>very</i> heavy handed way to attempt to prevent a memory resource attack. It&#39;s probable that a specific memory limit mechanism will be added to perl in the near future.</p>
+
+<dt><a name='base_loop'></a><a name=":base_loop"
+>:base_loop</a></dt>
+
+<dd>
+<p>These loop ops are not included in :base_core because they can easily be used to implement a resource attack (e.g., consume all available CPU time).</p>
+
+<pre class="sh_perl">    grepstart grepwhile
+    mapstart mapwhile
+    enteriter iter
+    enterloop leaveloop unstack
+    last next redo
+    goto</pre>
+
+<dt><a name='base_io'></a><a name=":base_io"
+>:base_io</a></dt>
+
+<dd>
+<p>These ops enable <i>filehandle</i> (rather than filename) based input and output. These are safe on the assumption that only pre-existing filehandles are available for use. Usually, to create new filehandles other ops such as open would need to be enabled, if you don&#39;t take into account the magical open of ARGV.</p>
+
+<pre class="sh_perl">    readline rcatline getc read
+
+    formline enterwrite leavewrite
+
+    print say sysread syswrite send recv
+
+    eof tell seek sysseek
+
+    readdir telldir seekdir rewinddir</pre>
+
+<dt><a name='base_orig'></a><a name=":base_orig"
+>:base_orig</a></dt>
+
+<dd>
+<p>These are a hotchpotch of opcodes still waiting to be considered</p>
+
+<pre class="sh_perl">    gvsv gv gelem
+
+    padsv padav padhv padany
+
+    once
+
+    rv2gv refgen srefgen ref
+
+    bless -- could be used to change ownership of objects (reblessing)
+
+    pushre regcmaybe regcreset regcomp subst substcont
+
+    sprintf prtf -- can core dump
+
+    crypt
+
+    tie untie
+
+    dbmopen dbmclose
+    sselect select
+    pipe_op sockpair
+
+    getppid getpgrp setpgrp getpriority setpriority localtime gmtime
+
+    entertry leavetry -- can be used to &#39;hide&#39; fatal errors
+
+    entergiven leavegiven
+    enterwhen leavewhen
+    break continue
+    smartmatch
+
+    custom -- where should this go</pre>
+
+<dt><a name='base_math'></a><a name=":base_math"
+>:base_math</a></dt>
+
+<dd>
+<p>These ops are not included in :base_core because of the risk of them being used to generate floating point exceptions (which would have to be caught using a $SIG{FPE} handler).</p>
+
+<pre class="sh_perl">    atan2 sin cos exp log sqrt</pre>
+
+<p>These ops are not included in :base_core because they have an effect beyond the scope of the compartment.</p>
+
+<pre class="sh_perl">    rand srand</pre>
+
+<dt><a name='base_thread'></a><a name=":base_thread"
+>:base_thread</a></dt>
+
+<dd>
+<p>These ops are related to multi-threading.</p>
+
+<pre class="sh_perl">    lock</pre>
+
+<dt><a name='default'></a><a name=":default"
+>:default</a></dt>
+
+<dd>
+<p>A handy tag name for a <i>reasonable</i> default set of ops. (The current ops allowed are unstable while development continues. It will change.)</p>
+
+<pre class="sh_perl">    :base_core :base_mem :base_loop :base_orig :base_thread</pre>
+
+<p>This list used to contain :base_io prior to Opcode 1.07.</p>
+
+<p>If safety matters to you (and why else would you be using the Opcode module?) then you should not rely on the definition of this, or indeed any other, optag!</p>
+
+<dt><a name='filesys_read'></a><a name=":filesys_read"
+>:filesys_read</a></dt>
+
+<dd>
+<pre class="sh_perl">    stat lstat readlink
+
+    ftatime ftblk ftchr ftctime ftdir fteexec fteowned fteread
+    ftewrite ftfile ftis ftlink ftmtime ftpipe ftrexec ftrowned
+    ftrread ftsgid ftsize ftsock ftsuid fttty ftzero ftrwrite ftsvtx
+
+    fttext ftbinary
+
+    fileno</pre>
+
+<dt><a name='sys_db'></a><a name=":sys_db"
+>:sys_db</a></dt>
+
+<dd>
+<pre class="sh_perl">    ghbyname ghbyaddr ghostent shostent ehostent      -- hosts
+    gnbyname gnbyaddr gnetent snetent enetent         -- networks
+    gpbyname gpbynumber gprotoent sprotoent eprotoent -- protocols
+    gsbyname gsbyport gservent sservent eservent      -- services
+
+    gpwnam gpwuid gpwent spwent epwent getlogin       -- users
+    ggrnam ggrgid ggrent sgrent egrent                -- groups</pre>
+
+<dt><a name='browse'></a><a name=":browse"
+>:browse</a></dt>
+
+<dd>
+<p>A handy tag name for a <i>reasonable</i> default set of ops beyond the :default optag. Like :default (and indeed all the other optags) its current definition is unstable while development continues. It will change.</p>
+
+<p>The :browse tag represents the next step beyond :default. It it a superset of the :default ops and adds :filesys_read the :sys_db. The intent being that scripts can access more (possibly sensitive) information about your system but not be able to change it.</p>
+
+<pre class="sh_perl">    :default :filesys_read :sys_db</pre>
+
+<dt><a name='filesys_open'></a><a name=":filesys_open"
+>:filesys_open</a></dt>
+
+<dd>
+<pre class="sh_perl">    sysopen open close
+    umask binmode
+
+    open_dir closedir -- other dir ops are in :base_io</pre>
+
+<dt><a name='filesys_write'></a><a name=":filesys_write"
+>:filesys_write</a></dt>
+
+<dd>
+<pre class="sh_perl">    link unlink rename symlink truncate
+
+    mkdir rmdir
+
+    utime chmod chown
+
+    fcntl -- not strictly filesys related, but possibly as dangerous?</pre>
+
+<dt><a name='subprocess'></a><a name=":subprocess"
+>:subprocess</a></dt>
+
+<dd>
+<pre class="sh_perl">    backtick system
+
+    fork
+
+    wait waitpid
+
+    glob -- access to Cshell via &#60;`rm *`&#62;</pre>
+
+<dt><a name='ownprocess'></a><a name=":ownprocess"
+>:ownprocess</a></dt>
+
+<dd>
+<pre class="sh_perl">    exec exit kill
+
+    time tms -- could be used for timing attacks (paranoid?)</pre>
+
+<dt><a name='others'></a><a name=":others"
+>:others</a></dt>
+
+<dd>
+<p>This tag holds groups of assorted specialist opcodes that don&#39;t warrant having optags defined for them.</p>
+
+<p>SystemV Interprocess Communications:</p>
+
+<pre class="sh_perl">    msgctl msgget msgrcv msgsnd
+
+    semctl semget semop
+
+    shmctl shmget shmread shmwrite</pre>
+
+<dt><a name='load'></a><a name=":load"
+>:load</a></dt>
+
+<dd>
+<p>This tag holds opcodes related to loading modules and getting information about calling environment and args.</p>
+
+<pre class="sh_perl">    require dofile 
+    caller</pre>
+
+<dt><a name='still_to_be_decided'></a><a name=":still_to_be_decided"
+>:still_to_be_decided</a></dt>
+
+<dd>
+<pre class="sh_perl">    chdir
+    flock ioctl
+
+    socket getpeername ssockopt
+    bind connect listen accept shutdown gsockopt getsockname
+
+    sleep alarm -- changes global timer state and signal handling
+    sort -- assorted problems including core dumps
+    tied -- can be used to access object implementing a tie
+    pack unpack -- can be used to create/use memory pointers
+
+    hintseval -- constant op holding eval hints
+
+    entereval -- can be used to hide code from initial compile
+
+    reset
+
+    dbstate -- perl -d version of nextstate(ment) opcode</pre>
+
+<dt><a name='dangerous'></a><a name=":dangerous"
+>:dangerous</a></dt>
+
+<dd>
+<p>This tag is simply a bucket for opcodes that are unlikely to be used via a tag name but need to be tagged for completeness and documentation.</p>
+
+<pre class="sh_perl">    syscall dump chroot</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~flora/perl-5.14.2/ext/Opcode/ops.pm" class="podlinkpod"
+>ops</a> -- perl pragma interface to Opcode module.</p>
+
+<p><a href="/perldoc?Safe" class="podlinkpod"
+>Safe</a> -- Opcode and namespace limited execution compartments</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Originally designed and implemented by Malcolm Beattie, mbeattie@sable.ox.ac.uk as part of Safe version 1.</p>
+
+<p>Split out from Safe module version 1, named opcode tags and other changes added by Tim Bunce.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78124 Uploads, 24699 Distributions
+105950 Modules, 9642 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 07:45:52 2012 GMT (0.147375106811523) @cpansearch1 -->
+ </body>
+</html>

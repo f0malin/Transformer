@@ -1,0 +1,678 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Pod::Simple - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Pod-Simple",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Pod-Simple-3.20",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Pod::Simple",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DWHEELER",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Pod::Simple">permalink</a></div>
+  <a href="/~dwheeler/">David E. Wheeler</a> &gt;
+  <a href="/~dwheeler/Pod-Simple-3.20/">Pod-Simple-3.20</a> &gt;
+  Pod::Simple
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/de2fe609ec8ae522883ea1235f1e8792?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DW/DWHEELER/Pod-Simple-3.20.tar.gz">Pod-Simple-3.20.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Pod%3A%3ASimple;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DWHEELER/Pod-Simple-3.20/lib/Pod/Simple.pod">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://search.cpan.org/dist/Pod-Simple/">Website</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Pod%3A%3AHTML">Pod::HTML</a><br>
+<a href="/perldoc?Pod%3A%3AParser">Pod::Parser</a><br>
+<a href="/perldoc?IO%3A%3AScalar">IO::Scalar</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Class%3A%3ADBI">Class::DBI</a><br>
+<a href="/perldoc?Pod%3A%3APOM">Pod::POM</a><br>
+<a href="/perldoc?HTTP%3A%3ADaemon">HTTP::Daemon</a><br>
+<a href="/perldoc?Pod%3A%3ATree">Pod::Tree</a><br>
+<a href="/perldoc?Apache%3A%3ARegistry">Apache::Registry</a><br>
+<a href="/perldoc?Pod%3A%3ASelect">Pod::Select</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Pod%3A%3ASimple">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<a href="mailto:bug-pod-simple@rt.cpan.org">View/Report Bugs</a><br/>
+
+</div>
+</div>
+  Module Version:  3.20 &nbsp;
+<span class="noprint">
+  <a href="/src/DWHEELER/Pod-Simple-3.20/lib/Pod/Simple.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#MAIN_METHODS'>MAIN METHODS</a>
+  <li class='indexItem indexItem1'><a href='#SECONDARY_METHODS'>SECONDARY METHODS</a>
+  <li class='indexItem indexItem1'><a href='#TERTIARY_METHODS'>TERTIARY METHODS</a>
+  <li class='indexItem indexItem1'><a href='#CAVEATS'>CAVEATS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#SUPPORT'>SUPPORT</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_DISCLAIMERS'>COPYRIGHT AND DISCLAIMERS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Pod::Simple - framework for parsing Pod</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> TODO</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Pod::Simple is a Perl library for parsing text in the Pod (&#34;plain old documentation&#34;) markup language that is typically used for writing documentation for Perl and for Perl modules. The Pod format is explained <a href="/perldoc?perlpod" class="podlinkpod"
+>perlpod</a>; the most common formatter is called <code>perldoc</code>.</p>
+
+<p>Pod formatters can use Pod::Simple to parse Pod documents and render them into plain text, HTML, or any number of other formats. Typically, such formatters will be subclasses of Pod::Simple, and so they will inherit its methods, like <code>parse_file</code>.</p>
+
+<p>If you&#39;re reading this document just because you have a Pod-processing subclass that you want to use, this document (plus the documentation for the subclass) is probably all you need to read.</p>
+
+<p>If you&#39;re reading this document because you want to write a formatter subclass, continue reading it and then read <a href="/~dwheeler/Pod-Simple-3.20/lib/Pod/Simple/Subclassing.pod" class="podlinkpod"
+>Pod::Simple::Subclassing</a>, and then possibly even read <a href="/perldoc?perlpodspec" class="podlinkpod"
+>perlpodspec</a> (some of which is for parser-writers, but much of which is notes to formatter-writers).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MAIN_METHODS"
+>MAIN METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='parser'></a><a name="$parser_=_SomeClass-&#62;new();"
+><code>$parser = <i>SomeClass</i>-&#62;new();</code></a></dt>
+
+<dd>
+<p>This returns a new parser object, where <i><code>SomeClass</code></i> is a subclass of Pod::Simple.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;output_fh(_*OUT_);"
+><code>$parser-&#62;output_fh( *OUT );</code></a></dt>
+
+<dd>
+<p>This sets the filehandle that <code>$parser</code>&#39;s output will be written to. You can pass <code>*STDOUT</code>, otherwise you should probably do something like this:</p>
+
+<pre class="sh_perl">    my $outfile = &#34;output.txt&#34;;
+    open TXTOUT, &#34;&#62;$outfile&#34; or die &#34;Can&#39;t write to $outfile: $!&#34;;
+    $parser-&#62;output_fh(*TXTOUT);</pre>
+
+<p>...before you call one of the <code>$parser-&#62;parse_<i>whatever</i></code> methods.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;output_string(_\$somestring_);"
+><code>$parser-&#62;output_string( \$somestring );</code></a></dt>
+
+<dd>
+<p>This sets the string that <code>$parser</code>&#39;s output will be sent to, instead of any filehandle.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;parse_file(_$some_filename_);"
+><code>$parser-&#62;parse_file( <i>$some_filename</i> );</code></a></dt>
+
+<dd>
+<dt><a name='parser'></a><a name="$parser-&#62;parse_file(_*INPUT_FH_);"
+><code>$parser-&#62;parse_file( *INPUT_FH );</code></a></dt>
+
+<dd>
+<p>This reads the Pod content of the file (or filehandle) that you specify, and processes it with that <code>$parser</code> object, according to however <code>$parser</code>&#39;s class works, and according to whatever parser options you have set up for this <code>$parser</code> object.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;parse_string_document(_$all_content_);"
+><code>$parser-&#62;parse_string_document( <i>$all_content</i> );</code></a></dt>
+
+<dd>
+<p>This works just like <code>parse_file</code> except that it reads the Pod content not from a file, but from a string that you have already in memory.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;parse_lines(_...@lines...,_undef_);"
+><code>$parser-&#62;parse_lines( <i>...@lines...</i>, undef );</code></a></dt>
+
+<dd>
+<p>This processes the lines in <code>@lines</code> (where each list item must be a defined value, and must contain exactly one line of content -- so no items like <code>&#34;foo\nbar&#34;</code> are allowed). The final <code>undef</code> is used to indicate the end of document being parsed.</p>
+
+<p>The other <code>parser_<i>whatever</i></code> methods are meant to be called only once per <code>$parser</code> object; but <code>parse_lines</code> can be called as many times per <code>$parser</code> object as you want, as long as the last call (and only the last call) ends with an <code>undef</code> value.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;content_seen"
+><code>$parser-&#62;content_seen</code></a></dt>
+
+<dd>
+<p>This returns true only if there has been any real content seen for this document. Returns false in cases where the document contains content, but does not make use of any Pod markup.</p>
+
+<dt><a name='SomeClass'></a><a name="SomeClass-&#62;filter(_$filename_);"
+><code><i>SomeClass</i>-&#62;filter( <i>$filename</i> );</code></a></dt>
+
+<dd>
+<dt><a name='SomeClass'></a><a name="SomeClass-&#62;filter(_*INPUT_FH_);"
+><code><i>SomeClass</i>-&#62;filter( <i>*INPUT_FH</i> );</code></a></dt>
+
+<dd>
+<dt><a name='SomeClass'></a><a name="SomeClass-&#62;filter(_\$document_content_);"
+><code><i>SomeClass</i>-&#62;filter( <i>\$document_content</i> );</code></a></dt>
+
+<dd>
+<p>This is a shortcut method for creating a new parser object, setting the output handle to STDOUT, and then processing the specified file (or filehandle, or in-memory document). This is handy for one-liners like this:</p>
+
+<pre class="sh_perl">  perl -MPod::Simple::Text -e &#34;Pod::Simple::Text-&#62;filter(&#39;thingy.pod&#39;)&#34;</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SECONDARY_METHODS"
+>SECONDARY METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Some of these methods might be of interest to general users, as well as of interest to formatter-writers.</p>
+
+<p>Note that the general pattern here is that the accessor-methods read the attribute&#39;s value with <code>$value = $parser-&#62;<i>attribute</i></code> and set the attribute&#39;s value with <code>$parser-&#62;<i>attribute</i>(<i>newvalue</i>)</code>. For each accessor, I typically only mention one syntax or another, based on which I think you are actually most likely to use.</p>
+
+<dl>
+<dt><a name='parser'></a><a name="$parser-&#62;no_whining(_SOMEVALUE_)"
+><code>$parser-&#62;no_whining( <i>SOMEVALUE</i> )</code></a></dt>
+
+<dd>
+<p>If you set this attribute to a true value, you will suppress the parser&#39;s complaints about irregularities in the Pod coding. By default, this attribute&#39;s value is false, meaning that irregularities will be reported.</p>
+
+<p>Note that turning this attribute to true won&#39;t suppress one or two kinds of complaints about rarely occurring unrecoverable errors.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;no_errata_section(_SOMEVALUE_)"
+><code>$parser-&#62;no_errata_section( <i>SOMEVALUE</i> )</code></a></dt>
+
+<dd>
+<p>If you set this attribute to a true value, you will stop the parser from generating a &#34;POD ERRORS&#34; section at the end of the document. By default, this attribute&#39;s value is false, meaning that an errata section will be generated, as necessary.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;complain_stderr(_SOMEVALUE_)"
+><code>$parser-&#62;complain_stderr( <i>SOMEVALUE</i> )</code></a></dt>
+
+<dd>
+<p>If you set this attribute to a true value, it will send reports of parsing errors to STDERR. By default, this attribute&#39;s value is false, meaning that no output is sent to STDERR.</p>
+
+<p>Setting <code>complain_stderr</code> also sets <code>no_errata_section</code>.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;source_filename"
+><code>$parser-&#62;source_filename</code></a></dt>
+
+<dd>
+<p>This returns the filename that this parser object was set to read from.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;doc_has_started"
+><code>$parser-&#62;doc_has_started</code></a></dt>
+
+<dd>
+<p>This returns true if <code>$parser</code> has read from a source, and has seen Pod content in it.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;source_dead"
+><code>$parser-&#62;source_dead</code></a></dt>
+
+<dd>
+<p>This returns true if <code>$parser</code> has read from a source, and come to the end of that source.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;strip_verbatim_indent(_SOMEVALUE_)"
+><code>$parser-&#62;strip_verbatim_indent( <i>SOMEVALUE</i> )</code></a></dt>
+
+<dd>
+<p>The perlpod spec for a Verbatim paragraph is &#34;It should be reproduced exactly...&#34;, which means that the whitespace you&#39;ve used to indent your verbatim blocks will be preserved in the output. This can be annoying for outputs such as HTML, where that whitespace will remain in front of every line. It&#39;s an unfortunate case where syntax is turned into semantics.</p>
+
+<p>If the POD your parsing adheres to a consistent indentation policy, you can have such indentation stripped from the beginning of every line of your verbatim blocks. This method tells Pod::Simple what to strip. For two-space indents, you&#39;d use:</p>
+
+<pre class="sh_perl">  $parser-&#62;strip_verbatim_indent(&#39;  &#39;);</pre>
+
+<p>For tab indents, you&#39;d use a tab character:</p>
+
+<pre class="sh_perl">  $parser-&#62;strip_verbatim_indent(&#34;\t&#34;);</pre>
+
+<p>If the POD is inconsistent about the indentation of verbatim blocks, but you have figured out a heuristic to determine how much a particular verbatim block is indented, you can pass a code reference instead. The code reference will be executed with one argument, an array reference of all the lines in the verbatim block, and should return the value to be stripped from each line. For example, if you decide that you&#39;re fine to use the first line of the verbatim block to set the standard for indentation of the rest of the block, you can look at the first line and return the appropriate value, like so:</p>
+
+<pre class="sh_perl">  $new-&#62;strip_verbatim_indent(sub {
+      my $lines = shift;
+      (my $indent = $lines-&#62;[0]) =~ s/\S.*//;
+      return $indent;
+  });</pre>
+
+<p>If you&#39;d rather treat each line individually, you can do that, too, by just transforming them in-place in the code reference and returning <code>undef</code>. Say that you don&#39;t want <i>any</i> lines indented. You can do something like this:</p>
+
+<pre class="sh_perl">  $new-&#62;strip_verbatim_indent(sub {
+      my $lines = shift;
+      sub { s/^\s+// for @{ $lines },
+      return undef;
+  });</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TERTIARY_METHODS"
+>TERTIARY METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='parser'></a><a name="$parser-&#62;abandon_output_fh()"
+><code>$parser-&#62;abandon_output_fh()</code><!--
+	INDEX: abandon_output_fh
+--></a></dt>
+
+<dd>
+<p>Cancel output to the file handle. Any POD read by the <code>$parser</code> is not effected.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;abandon_output_string()"
+><code>$parser-&#62;abandon_output_string()</code><!--
+	INDEX: abandon_output_string
+--></a></dt>
+
+<dd>
+<p>Cancel output to the output string. Any POD read by the <code>$parser</code> is not effected.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;accept_code(_@codes_)"
+><code>$parser-&#62;accept_code( @codes )</code><!--
+	INDEX: accept_code
+--></a></dt>
+
+<dd>
+<p>Alias for <a href="/perldoc?accept_codes" class="podlinkpod"
+>accept_codes</a>.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;accept_codes(_@codes_)"
+><code>$parser-&#62;accept_codes( @codes )</code><!--
+	INDEX: accept_codes
+--></a></dt>
+
+<dd>
+<p>Allows <code>$parser</code> to accept a list of <a href="/perldoc?perlpod#Formatting_Codes" class="podlinkpod"
+>&#34;Formatting Codes&#34; in perlpod</a>. This can be used to implement user-defined codes.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;accept_directive_as_data(_@directives_)"
+><code>$parser-&#62;accept_directive_as_data( @directives )</code><!--
+	INDEX: accept_directive_as_data
+--></a></dt>
+
+<dd>
+<p>Allows <code>$parser</code> to accept a list of directives for data paragraphs. A directive is the label of a <a href="/perldoc?perlpod#Command_Paragraph" class="podlinkpod"
+>&#34;Command Paragraph&#34; in perlpod</a>. A data paragraph is one delimited by <code>=begin/=for/=end</code> directives. This can be used to implement user-defined directives.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;accept_directive_as_processed(_@directives_)"
+><code>$parser-&#62;accept_directive_as_processed( @directives )</code><!--
+	INDEX: accept_directive_as_processed
+--></a></dt>
+
+<dd>
+<p>Allows <code>$parser</code> to accept a list of directives for processed paragraphs. A directive is the label of a <a href="/perldoc?perlpod#Command_Paragraph" class="podlinkpod"
+>&#34;Command Paragraph&#34; in perlpod</a>. A processed paragraph is also known as <a href="/perldoc?perlpod#Ordinary_Paragraph" class="podlinkpod"
+>&#34;Ordinary Paragraph&#34; in perlpod</a>. This can be used to implement user-defined directives.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;accept_directive_as_verbatim(_@directives_)"
+><code>$parser-&#62;accept_directive_as_verbatim( @directives )</code><!--
+	INDEX: accept_directive_as_verbatim
+--></a></dt>
+
+<dd>
+<p>Allows <code>$parser</code> to accept a list of directives for <a href="/perldoc?perlpod#Verbatim_Paragraph" class="podlinkpod"
+>&#34;Verbatim Paragraph&#34; in perlpod</a>. A directive is the label of a <a href="/perldoc?perlpod#Command_Paragraph" class="podlinkpod"
+>&#34;Command Paragraph&#34; in perlpod</a>. This can be used to implement user-defined directives.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;accept_target(_@targets_)"
+><code>$parser-&#62;accept_target( @targets )</code><!--
+	INDEX: accept_target
+--></a></dt>
+
+<dd>
+<p>Alias for <a href="/perldoc?accept_targets" class="podlinkpod"
+>accept_targets</a>.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;accept_target_as_text(_@targets_)"
+><code>$parser-&#62;accept_target_as_text( @targets )</code><!--
+	INDEX: accept_target_as_text
+--></a></dt>
+
+<dd>
+<p>Alias for <a href="/perldoc?accept_targets_as_text" class="podlinkpod"
+>accept_targets_as_text</a>.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;accept_targets(_@targets_)"
+><code>$parser-&#62;accept_targets( @targets )</code><!--
+	INDEX: accept_targets
+--></a></dt>
+
+<dd>
+<p>Accepts targets for <code>=begin/=for/=end</code> sections of the POD.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;accept_targets_as_text(_@targets_)"
+><code>$parser-&#62;accept_targets_as_text( @targets )</code><!--
+	INDEX: accept_targets_as_text
+--></a></dt>
+
+<dd>
+<p>Accepts targets for <code>=begin/=for/=end</code> sections that should be parsed as POD. For details, see <a href="/perldoc?perlpodspec#About_Data_Paragraphs" class="podlinkpod"
+>&#34;About Data Paragraphs&#34; in perlpodspec</a>.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;any_errata_seen()"
+><code>$parser-&#62;any_errata_seen()</code><!--
+	INDEX: any_errata_seen
+--></a></dt>
+
+<dd>
+<p>Used to check if any errata was seen.</p>
+
+<p><i>Example:</i></p>
+
+<pre class="sh_perl">  die &#34;too many errors\n&#34; if $parser-&#62;any_errata_seen();</pre>
+
+<dt><a name='parser'></a><a name="$parser-&#62;parse_from_file(_$source,_$to_)"
+><code>$parser-&#62;parse_from_file( $source, $to )</code><!--
+	INDEX: parse_from_file
+--></a></dt>
+
+<dd>
+<p>Parses from <code>$source</code> file to <code>$to</code> file. Similar to <a href="/perldoc?Pod%3A%3AParser#parse_from_file" class="podlinkpod"
+>&#34;parse_from_file&#34; in Pod::Parser</a>.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;scream(_@error_messages_)"
+><code>$parser-&#62;scream( @error_messages )</code><!--
+	INDEX: scream
+--></a></dt>
+
+<dd>
+<p>Log an error that can&#39;t be ignored.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;unaccept_code(_@codes_)"
+><code>$parser-&#62;unaccept_code( @codes )</code><!--
+	INDEX: unaccept_code
+--></a></dt>
+
+<dd>
+<p>Alias for <a href="/perldoc?unaccept_codes" class="podlinkpod"
+>unaccept_codes</a>.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;unaccept_codes(_@codes_)"
+><code>$parser-&#62;unaccept_codes( @codes )</code><!--
+	INDEX: unaccept_codes
+--></a></dt>
+
+<dd>
+<p>Removes <code>@codes</code> as valid codes for the parse.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;unaccept_directive(_@directives_)"
+><code>$parser-&#62;unaccept_directive( @directives )</code><!--
+	INDEX: unaccept_directive
+--></a></dt>
+
+<dd>
+<p>Alias for <a href="/perldoc?unaccept_directives" class="podlinkpod"
+>unaccept_directives</a>.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;unaccept_directives(_@directives_)"
+><code>$parser-&#62;unaccept_directives( @directives )</code><!--
+	INDEX: unaccept_directives
+--></a></dt>
+
+<dd>
+<p>Removes <code>@directives</code> as valid directives for the parse.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;unaccept_target(_@targets_)"
+><code>$parser-&#62;unaccept_target( @targets )</code><!--
+	INDEX: unaccept_target
+--></a></dt>
+
+<dd>
+<p>Alias for <a href="/perldoc?unaccept_targets" class="podlinkpod"
+>unaccept_targets</a>.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;unaccept_targets(_@targets_)"
+><code>$parser-&#62;unaccept_targets( @targets )</code><!--
+	INDEX: unaccept_targets
+--></a></dt>
+
+<dd>
+<p>Removes <code>@targets</code> as valid targets for the parse.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;version_report()"
+><code>$parser-&#62;version_report()</code><!--
+	INDEX: version_report
+--></a></dt>
+
+<dd>
+<p>Returns a string describing the version.</p>
+
+<dt><a name='parser'></a><a name="$parser-&#62;whine(_@error_messages_)"
+><code>$parser-&#62;whine( @error_messages )</code><!--
+	INDEX: whine
+--></a></dt>
+
+<dd>
+<p>Log an error unless <code>$parser-&#62;no_whining( TRUE );</code>.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEATS"
+>CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This is just a beta release -- there are a good number of things still left to do. Notably, support for EBCDIC platforms is still half-done, an untested.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~dwheeler/Pod-Simple-3.20/lib/Pod/Simple/Subclassing.pod" class="podlinkpod"
+>Pod::Simple::Subclassing</a></p>
+
+<p><a href="/perldoc?perlpod" class="podlinkpod"
+>perlpod</a></p>
+
+<p><a href="/perldoc?perlpodspec" class="podlinkpod"
+>perlpodspec</a></p>
+
+<p><a href="/perldoc?Pod%3A%3AEscapes" class="podlinkpod"
+>Pod::Escapes</a></p>
+
+<p><a href="/perldoc?perldoc" class="podlinkpod"
+>perldoc</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUPPORT"
+>SUPPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Questions or discussion about POD and Pod::Simple should be sent to the pod-people@perl.org mail list. Send an empty email to pod-people-subscribe@perl.org to subscribe.</p>
+
+<p>This module is managed in an open GitHub repository, <a href="http://github.com/theory/pod-simple/" class="podlinkurl"
+>http://github.com/theory/pod-simple/</a>. Feel free to fork and contribute, or to clone <a href="git://github.com/theory/pod-simple.git" class="podlinkurl"
+>git://github.com/theory/pod-simple.git</a> and send patches!</p>
+
+<p>Patches against Pod::Simple are welcome. Please send bug reports to &#60;bug-pod-simple@rt.cpan.org&#62;.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_DISCLAIMERS"
+>COPYRIGHT AND DISCLAIMERS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2002 Sean M. Burke.</p>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>This program is distributed in the hope that it will be useful, but without any warranty; without even the implied warranty of merchantability or fitness for a particular purpose.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Pod::Simple was created by Sean M. Burke &#60;sburke@cpan.org&#62;. But don&#39;t bother him, he&#39;s retired.</p>
+
+<p>Pod::Simple is maintained by:</p>
+
+<ul>
+<li>Allison Randal <code>allison@perl.org</code></li>
+
+<li>Hans Dieter Pearcey <code>hdp@cpan.org</code></li>
+
+<li>David E. Wheeler <code>dwheeler@cpan.org</code></li>
+</ul>
+
+<p>Documentation has been contributed by:</p>
+
+<ul>
+<li>Gabor Szabo <code>szabgab@gmail.com</code></li>
+
+<li>Shawn H Corey <code>SHCOREY at cpan.org</code></li>
+</ul>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78275 Uploads, 24724 Distributions
+106002 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 28 02:18:06 2012 GMT (0.182584047317505) @cpansearch1 -->
+ </body>
+</html>

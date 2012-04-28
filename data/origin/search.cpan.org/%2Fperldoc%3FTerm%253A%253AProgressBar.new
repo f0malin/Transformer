@@ -1,0 +1,654 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Term::ProgressBar - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Term-ProgressBar",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Term-ProgressBar-2.11",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Term::ProgressBar",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SZABGAB",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Term::ProgressBar">permalink</a></div>
+  <a href="/~szabgab/">&#x5D2;&#x5D0;&#x5D1;&#x5D5;&#x5E8; &#x5E1;&#x5D1;&#x5D5; - G&aacute;bor Szab&oacute;</a> &gt;
+  <a href="/~szabgab/Term-ProgressBar-2.11/">Term-ProgressBar-2.11</a> &gt;
+  Term::ProgressBar
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/4e0a6fe2acda5df6095514e7d6329e91?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SZ/SZABGAB/Term-ProgressBar-2.11.tar.gz">Term-ProgressBar-2.11.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Term%3A%3AProgressBar;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SZABGAB/Term-ProgressBar-2.11/lib/Term/ProgressBar.pm">Annotate this POD
+(2)
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Time%3A%3AHiRes">Time::HiRes</a><br>
+<a href="/perldoc?Win32%3A%3AConsole">Win32::Console</a><br>
+<a href="/perldoc?Net%3A%3AFTP">Net::FTP</a><br>
+<a href="/perldoc?File%3A%3AFind">File::Find</a><br>
+<a href="/perldoc?MIME%3A%3ALite">MIME::Lite</a><br>
+<a href="/perldoc?Term%3A%3ATwiddle">Term::Twiddle</a><br>
+<a href="/perldoc?Object%3A%3AInsideOut">Object::InsideOut</a><br>
+<a href="/perldoc?Tie%3A%3ACycle">Tie::Cycle</a><br>
+<a href="/perldoc?Tk%3A%3AProgressBar">Tk::ProgressBar</a><br>
+<a href="/perldoc?Pod%3A%3AUsage">Pod::Usage</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Term%3A%3AProgressBar">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 5</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 2</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Term-ProgressBar">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.11 &nbsp;
+<span class="noprint">
+  <a href="/src/SZABGAB/Term-ProgressBar-2.11/lib/Term/ProgressBar.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#EXAMPLES'>EXAMPLES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#A_really_simple_use'>A really simple use</a>
+    <li class='indexItem indexItem2'><a href='#A_smoother_bar_update'>A smoother bar update</a>
+    <li class='indexItem indexItem2'><a href='#A_(much)_more_efficient_update'>A (much) more efficient update</a>
+    <li class='indexItem indexItem2'><a href='#Using_Completion_Time_Estimation'>Using Completion Time Estimation</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CLASS_CONSTANTS'>CLASS CONSTANTS</a>
+  <li class='indexItem indexItem1'><a href='#INSTANCE_CONSTRUCTION'>INSTANCE CONSTRUCTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#INSTANCE_COMPONENTS'>INSTANCE COMPONENTS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Scalar_Components.'>Scalar Components.</a>
+    <li class='indexItem indexItem2'><a href='#Boolean_Components'>Boolean Components</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#INSTANCE_HIGHER-LEVEL_PROCEDURES'>INSTANCE HIGHER-LEVEL PROCEDURES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#update'>update</a>
+    <li class='indexItem indexItem2'><a href='#message'>message</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#REPORTING_BUGS'>REPORTING BUGS</a>
+  <li class='indexItem indexItem1'><a href='#COMPATIBILITY'>COMPATIBILITY</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Term::ProgressBar - provide a progress meter on a standard terminal</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use Term::ProgressBar;
+
+  $progress = Term::ProgressBar-&#62;new ({count =&#62; $count});
+  $progress-&#62;update ($so_far);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Term::ProgressBar provides a simple progress bar on the terminal, to let the user know that something is happening, roughly how much stuff has been done, and maybe an estimate at how long remains.</p>
+
+<p>A typical use sets up the progress bar with a number of items to do, and then calls <a href="#update" class="podlinkpod"
+>update</a> to update the bar whenever an item is processed.</p>
+
+<p>Often, this would involve updating the progress bar many times with no user-visible change. To avoid uneccessary work, the update method returns a value, being the update value at which the user will next see a change. By only calling update when the current value exceeds the next update value, the call overhead is reduced.</p>
+
+<p>Remember to call the <code>$progress-&#62;update($max_value)</code> when the job is done to get a nice 100% done bar.</p>
+
+<p>A progress bar by default is simple; it just goes from left-to-right, filling the bar with &#39;=&#39; characters. These are called <b>major</b> characters. For long-running jobs, this may be too slow, so two additional features are available: a linear completion time estimator, and/or a <b>minor</b> character: this is a character that <i>moves</i> from left-to-right on the progress bar (it does not fill it as the major character does), traversing once for each major-character added. This exponentially increases the granularity of the bar for the same width.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="A_really_simple_use"
+>A really simple use</a></h2>
+
+<pre class="sh_perl">  #!/usr/bin/perl
+
+  use Term::ProgressBar 2.00;
+
+  use constant MAX =&#62; 100_000;
+
+  my $progress = Term::ProgressBar-&#62;new(MAX);
+
+  for (0..MAX) {
+    my $is_power = 0;
+    for(my $i = 0; 2**$i &#60;= $_; $i++) {
+      $is_power = 1
+        if 2**$i == $_;
+    }
+
+    if ( $is_power ) {
+      $progress-&#62;update($_);
+    }
+  }</pre>
+
+<p>see eg/simle_use.pl</p>
+
+<p>Here is a simple example. The process considers all the numbers between 0 and MAX, and updates the progress bar whenever it finds one. Note that the progress bar update will be very erratic. See below for a smoother example. Note also that the progress bar will never complete; see below to solve this.</p>
+
+<p>The complete text of this example is in <em>examples/powers</em> in the distribution set (it is not installed as part of the module).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="A_smoother_bar_update"
+>A smoother bar update</a></h2>
+
+<pre class="sh_perl">  my $progress = Term::ProgressBar-&#62;new($max);
+
+  for (0..$max) {
+    my $is_power = 0;
+    for(my $i = 0; 2**$i &#60;= $_; $i++) {
+      $is_power = 1
+        if 2**$i == $_;
+    }
+
+    $progress-&#62;update($_)
+  }</pre>
+
+<p>See eg/smooth_bar.pl</p>
+
+<p>This example calls update for each value considered. This will result in a much smoother progress update, but more program time is spent updating the bar than doing the &#34;real&#34; work. See below to remedy this. This example does <i>not</i> call <code>$progress-&#62;update($max);</code> at the end, since it is unnecessary, and ProgressBar will throw an exception at an attempt to update a finished bar.</p>
+
+<p>The complete text of this example is in <em>examples/powers2</em> in the distribution set (it is not installed as part of the module.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="A_(much)_more_efficient_update"
+>A (much) more efficient update</a></h2>
+
+<pre class="sh_perl">  my $progress = Term::ProgressBar-&#62;new({name =&#62; &#39;Powers&#39;, count =&#62; $max, remove =&#62; 1});
+  $progress-&#62;minor(0);
+  my $next_update = 0;
+
+  for (0..$max) {
+    my $is_power = 0;
+    for(my $i = 0; 2**$i &#60;= $_; $i++) {
+      $is_power = 1
+        if 2**$i == $_;
+    }
+
+    $next_update = $progress-&#62;update($_)
+      if $_ &#62;= $next_update;
+  }
+  $progress-&#62;update($max)
+    if $max &#62;= $next_update;</pre>
+
+<p>This example does two things to improve efficiency: firstly, it uses the value returned by <a href="#update" class="podlinkpod"
+>update</a> to only call it again when needed; secondly, it switches off the use of minor characters to update a lot less frequently (<code>$progress-&#62;minor(0);</code>. The use of the return value of <a href="#update" class="podlinkpod"
+>update</a> means that the call of <code>$progress-&#62;update($max);</code> at the end is required to ensure that the bar ends on 100%, which gives the user a nice feeling.</p>
+
+<p>This example also sets the name of the progress bar.</p>
+
+<p>This example also demonstrates the use of the &#39;remove&#39; flag, which removes the progress bar from the terminal when done.</p>
+
+<p>The complete text of this example is in <em>examples/powers3</em> in the distribution set (it is not installed as part of the module.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Using_Completion_Time_Estimation"
+>Using Completion Time Estimation</a></h2>
+
+<pre class="sh_perl">  my $progress = Term::ProgressBar-&#62;new({name  =&#62; &#39;Powers&#39;,
+                                         count =&#62; $max,
+                                         ETA   =&#62; linear, });
+  $progress-&#62;max_update_rate(1);
+  my $next_update = 0;
+
+  for (0..$max) {
+    my $is_power = 0;
+    for(my $i = 0; 2**$i &#60;= $_; $i++) {
+      if ( 2**$i == $_ ) {
+        $is_power = 1;
+        $progress-&#62;message(sprintf &#34;Found %8d to be 2 ** %2d&#34;, $_, $i);
+      }
+    }
+
+    $next_update = $progress-&#62;update($_)
+      if $_ &#62; $next_update;
+  }
+  $progress-&#62;update($max)
+      if $max &#62;= $next_update;</pre>
+
+<p>This example uses the <a href="#ETA" class="podlinkpod"
+>ETA</a> option to switch on completion estimation. Also, the update return is tuned to try to update the bar approximately once per second, with the <a href="#max_update_rate" class="podlinkpod"
+>max_update_rate</a> call. See the documentation for the <a href="/perldoc?new" class="podlinkpod"
+>new</a> method for details of the format(s) used.</p>
+
+<p>This example also provides an example of the use of the <a href="#message" class="podlinkpod"
+>message</a> function to output messages to the same filehandle whilst keeping the progress bar intact</p>
+
+<p>The complete text of this example is in <em>examples/powers5</em> in the distribution set (it is not installed as part of the module.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CLASS_CONSTANTS"
+>CLASS CONSTANTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INSTANCE_CONSTRUCTION"
+>INSTANCE CONSTRUCTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+>new</a></h2>
+
+<p>Create &#38; return a new Term::ProgressBar instance.</p>
+
+<dl>
+<dt><a name="ARGUMENTS"
+>ARGUMENTS</a></dt>
+
+<dd>
+<p>If one argument is provided, and it is a hashref, then the hash is treated as a set of key/value pairs, with the following keys; otherwise, it is treated as a number, being equivalent to the <code>count</code> key.</p>
+
+<dl>
+<dt><a name="count"
+>count</a></dt>
+
+<dd>
+<p>The item count. The progress is marked at 100% when update <i>count</i> is invoked, and proportionally until then.</p>
+
+<dt><a name="name"
+>name</a></dt>
+
+<dd>
+<p>A name to prefix the progress bar with.</p>
+
+<dt><a name="fh"
+>fh</a></dt>
+
+<dd>
+<p>The filehandle to output to. Defaults to stderr. Do not try to use *foo{THING} syntax if you want Term capabilities; it does not work. Pass in a globref instead.</p>
+
+<dt><a name="ETA"
+>ETA</a></dt>
+
+<dd>
+<p>A total time estimation to use. If enabled, a time finished estimation is printed on the RHS (once sufficient updates have been performed to make such an estimation feasible). Naturally, this is an <i>estimate</i>; no guarantees are made. The format of the estimate</p>
+
+<p>Note that the format is intended to be as compact as possible while giving over the relevant information. Depending upon the time remaining, the format is selected to provide some resolution whilst remaining compact. Since the time remaining decreases, the format typically changes over time.</p>
+
+<p>As the ETA approaches, the format will state minutes &#38; seconds left. This is identifiable by the word <code>&#39;Left&#39;</code> at the RHS of the line. If the ETA is further away, then an estimate time of completion (rather than time left) is given, and is identifiable by <code>&#39;ETA&#39;</code> at the LHS of the ETA box (on the right of the progress bar). A time or date may be presented; these are of the form of a 24 hour clock, e.g. <code>&#39;13:33&#39;</code>, a time plus days (e.g., <code>&#39; 7PM+3&#39;</code> for around in over 3 days time) or a day/date, e.g. <code>&#39; 1Jan&#39;</code> or <code>&#39;27Feb&#39;</code>.</p>
+
+<p>If ETA is switched on, the return value of <a href="#update" class="podlinkpod"
+>update</a> is also affected: the idea here is that if the progress bar seems to be moving quicker than the eye would normally care for (and thus a great deal of time is spent doing progress updates rather than &#34;real&#34; work), the next value is increased to slow it. The maximum rate aimed for is tunable via the <a href="#max_update_rate" class="podlinkpod"
+>max_update_rate</a> component.</p>
+
+<p>The available values for this are:</p>
+
+<dl>
+<dt><a name="undef"
+>undef</a></dt>
+
+<dd>
+<p>Do not do estimation. The default.</p>
+
+<dt><a name="linear"
+>linear</a></dt>
+
+<dd>
+<p>Perform linear estimation. This is simply that the amount of time between the creation of the progress bar and now is divided by the current amount done, and completion estimated linearly.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<dt><a name="EXAMPLES"
+>EXAMPLES</a></dt>
+
+<dd>
+<pre class="sh_perl">  my $progress = Term::ProgressBar-&#62;new(100); # count from 1 to 100
+  my $progress = Term::ProgressBar-&#62;new({ count =&#62; 100 }); # same
+
+  # Count to 200 thingies, outputting to stdout instead of stderr,
+  # prefix bar with &#39;thingy&#39;
+  my $progress = Term::ProgressBar-&#62;new({ count =&#62; 200,
+                                          fh    =&#62; \*STDOUT,
+                                          name  =&#62; &#39;thingy&#39; });</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INSTANCE_COMPONENTS"
+>INSTANCE COMPONENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Scalar_Components."
+>Scalar Components.</a></h2>
+
+<p>See <a href="/perldoc?Class%3A%3AMethodMaker#get_set" class="podlinkpod"
+>&#34;get_set&#34; in Class::MethodMaker</a> for usage.</p>
+
+<dl>
+<dt><a name="target"
+>target</a></dt>
+
+<dd>
+<p>The final target. Updates are measured in terms of this. Changes will have no effect until the next update, but the next update value should be relative to the new target. So</p>
+
+<pre class="sh_perl">  $p = Term::ProgressBar({count =&#62; 20});
+  # Halfway
+  $p-&#62;update(10);
+  # Double scale
+  $p-&#62;target(40)
+  $p-&#62;update(21);</pre>
+
+<p>will cause the progress bar to update to 52.5%</p>
+
+<dt><a name="max_update_rate"
+>max_update_rate</a></dt>
+
+<dd>
+<p>This value is taken as being the maximum speed between updates to aim for. <b>It is only meaningful if ETA is switched on.</b> It defaults to 0.5, being the number of seconds between updates.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Boolean_Components"
+>Boolean Components</a></h2>
+
+<p>See <a href="/perldoc?Class%3A%3AMethodMaker#get_set" class="podlinkpod"
+>&#34;get_set&#34; in Class::MethodMaker</a> for usage.</p>
+
+<dl>
+<dt><a name="minor"
+>minor</a></dt>
+
+<dd>
+<p>Default: set. If unset, no minor scale will be calculated or updated.</p>
+
+<p>Minor characters are used on the progress bar to give the user the idea of progress even when there are so many more tasks than the terminal is wide that the granularity would be too great. By default, Term::ProgressBar makes a guess as to when minor characters would be valuable. However, it may not always guess right, so this method may be called to force it one way or the other. Of course, the efficiency saving is minimal unless the client is utilizing the return value of <a href="#update" class="podlinkpod"
+>update</a>.</p>
+
+<p>See <em>examples/powers4</em> and <em>examples/powers3</em> to see minor characters in action, and not in action, respectively.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INSTANCE_HIGHER-LEVEL_PROCEDURES"
+>INSTANCE HIGHER-LEVEL PROCEDURES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="update"
+>update</a></h2>
+
+<p>Update the progress bar.</p>
+
+<dl>
+<dt><a name="ARGUMENTS"
+>ARGUMENTS</a></dt>
+
+<dd>
+<dl>
+<dt><a name="so_far"
+>so_far</a></dt>
+
+<dd>
+<p>Current progress point, in whatever units were passed to <code>new</code>.</p>
+
+<p>If not defined, assumed to be 1+ whatever was the value last time <code>update</code> was called (starting at 0).</p>
+</dd>
+</dl>
+
+<dt><a name="RETURNS"
+>RETURNS</a></dt>
+
+<dd>
+<dl>
+<dt><a name="next_call"
+>next_call</a></dt>
+
+<dd>
+<p>The next value of so_far at which to call <code>update</code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="message"
+>message</a></h2>
+
+<p>Output a message. This is very much like print, but we try not to disturb the terminal.</p>
+
+<dl>
+<dt><a name="ARGUMENTS"
+>ARGUMENTS</a></dt>
+
+<dd>
+<dl>
+<dt><a name="string"
+>string</a></dt>
+
+<dd>
+<p>The message to output.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="REPORTING_BUGS"
+>REPORTING BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Email the author.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COMPATIBILITY"
+>COMPATIBILITY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If exactly two arguments are provided, then <a href="#new" class="podlinkpod"
+>new</a> operates in v1 compatibility mode: the arguments are considered to be name, and item count. Various other defaults are set to emulate version one (e.g., the major output character is &#39;#&#39;, the bar width is set to 50 characters and the output filehandle is not treated as a terminal). This mode is deprecated.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Martyn J. Pearce fluffy@cpan.org</p>
+
+<p>Significant contributions from Ed Avis, amongst others.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2001, 2002, 2003, 2004, 2005 Martyn J. Pearce. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78067 Uploads, 24685 Distributions
+105889 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 16:06:33 2012 GMT (0.293226003646851) @cpansearch1 -->
+ </body>
+</html>

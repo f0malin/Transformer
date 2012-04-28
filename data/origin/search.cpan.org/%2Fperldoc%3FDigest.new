@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Digest - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Digest",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Digest-1.17",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Digest",3]);
+    _gaq.push(["_setCustomVar",1,"Author","GAAS",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Digest">permalink</a></div>
+  <a href="/~gaas/">Gisle Aas</a> &gt;
+  <a href="/~gaas/Digest-1.17/">Digest-1.17</a> &gt;
+  Digest
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/80ccd89a65d9faf08c2fb6be2991ba57?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/G/GA/GAAS/Digest-1.17.tar.gz">Digest-1.17.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Digest;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~GAAS/Digest-1.17/Digest.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Digest">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.17 &nbsp;
+<span class="noprint">
+  <a href="/src/GAAS/Digest-1.17/Digest.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#OO_INTERFACE'>OO INTERFACE</a>
+  <li class='indexItem indexItem1'><a href='#Digest_speed'>Digest speed</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Digest - Modules that calculate message digests</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  $md5  = Digest-&#62;new(&#34;MD5&#34;);
+  $sha1 = Digest-&#62;new(&#34;SHA-1&#34;);
+  $sha256 = Digest-&#62;new(&#34;SHA-256&#34;);
+  $sha384 = Digest-&#62;new(&#34;SHA-384&#34;);
+  $sha512 = Digest-&#62;new(&#34;SHA-512&#34;);
+
+  $hmac = Digest-&#62;HMAC_MD5($key);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The <code>Digest::</code> modules calculate digests, also called &#34;fingerprints&#34; or &#34;hashes&#34;, of some data, called a message. The digest is (usually) some small/fixed size string. The actual size of the digest depend of the algorithm used. The message is simply a sequence of arbitrary bytes or bits.</p>
+
+<p>An important property of the digest algorithms is that the digest is <i>likely</i> to change if the message change in some way. Another property is that digest functions are one-way functions, that is it should be <i>hard</i> to find a message that correspond to some given digest. Algorithms differ in how &#34;likely&#34; and how &#34;hard&#34;, as well as how efficient they are to compute.</p>
+
+<p>Note that the properties of the algorithms change over time, as the algorithms are analyzed and machines grow faster. If your application for instance depends on it being &#34;impossible&#34; to generate the same digest for a different message it is wise to make it easy to plug in stronger algorithms as the one used grow weaker. Using the interface documented here should make it easy to change algorithms later.</p>
+
+<p>All <code>Digest::</code> modules provide the same programming interface. A functional interface for simple use, as well as an object oriented interface that can handle messages of arbitrary length and which can read files directly.</p>
+
+<p>The digest can be delivered in three formats:</p>
+
+<dl>
+<dt><a name="binary"
+><i>binary</i></a></dt>
+
+<dd>
+<p>This is the most compact form, but it is not well suited for printing or embedding in places that can&#39;t handle arbitrary data.</p>
+
+<dt><a name="hex"
+><i>hex</i></a></dt>
+
+<dd>
+<p>A twice as long string of lowercase hexadecimal digits.</p>
+
+<dt><a name="base64"
+><i>base64</i></a></dt>
+
+<dd>
+<p>A string of portable printable characters. This is the base64 encoded representation of the digest with any trailing padding removed. The string will be about 30% longer than the binary version. <a href="/perldoc?MIME%3A%3ABase64" class="podlinkpod"
+>MIME::Base64</a> tells you more about this encoding.</p>
+</dd>
+</dl>
+
+<p>The functional interface is simply importable functions with the same name as the algorithm. The functions take the message as argument and return the digest. Example:</p>
+
+<pre class="sh_perl">  use Digest::MD5 qw(md5);
+  $digest = md5($message);</pre>
+
+<p>There are also versions of the functions with &#34;_hex&#34; or &#34;_base64&#34; appended to the name, which returns the digest in the indicated form.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OO_INTERFACE"
+>OO INTERFACE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following methods are available for all <code>Digest::</code> modules:</p>
+
+<dl>
+<dt><a name='ctx'></a><a name="$ctx_=_Digest-&#62;XXX($arg,...)"
+>$ctx = Digest-&#62;XXX($arg,...)</a></dt>
+
+<dd>
+<dt><a name='ctx'></a><a name="$ctx_=_Digest-&#62;new(XXX_=&#62;_$arg,...)"
+>$ctx = Digest-&#62;new(XXX =&#62; $arg,...)</a></dt>
+
+<dd>
+<dt><a name='ctx'></a><a name="$ctx_=_Digest::XXX-&#62;new($arg,...)"
+>$ctx = Digest::XXX-&#62;new($arg,...)</a></dt>
+
+<dd>
+<p>The constructor returns some object that encapsulate the state of the message-digest algorithm. You can add data to the object and finally ask for the digest. The &#34;XXX&#34; should of course be replaced by the proper name of the digest algorithm you want to use.</p>
+
+<p>The two first forms are simply syntactic sugar which automatically load the right module on first use. The second form allow you to use algorithm names which contains letters which are not legal perl identifiers, e.g. &#34;SHA-1&#34;. If no implementation for the given algorithm can be found, then an exception is raised.</p>
+
+<p>If new() is called as an instance method (i.e. $ctx-&#62;new) it will just reset the state the object to the state of a newly created object. No new object is created in this case, and the return value is the reference to the object (i.e. $ctx).</p>
+
+<dt><a name='other_ctx'></a><a name="$other_ctx_=_$ctx-&#62;clone"
+>$other_ctx = $ctx-&#62;clone</a></dt>
+
+<dd>
+<p>The clone method creates a copy of the digest state object and returns a reference to the copy.</p>
+
+<dt><a name='ctx'></a><a name="$ctx-&#62;reset"
+>$ctx-&#62;reset</a></dt>
+
+<dd>
+<p>This is just an alias for $ctx-&#62;new.</p>
+
+<dt><a name='ctx'></a><a name="$ctx-&#62;add(_$data_)"
+>$ctx-&#62;add( $data )</a></dt>
+
+<dd>
+<dt><a name='ctx'></a><a name="$ctx-&#62;add(_$chunk1,_$chunk2,_..._)"
+>$ctx-&#62;add( $chunk1, $chunk2, ... )</a></dt>
+
+<dd>
+<p>The string value of the $data provided as argument is appended to the message we calculate the digest for. The return value is the $ctx object itself.</p>
+
+<p>If more arguments are provided then they are all appended to the message, thus all these lines will have the same effect on the state of the $ctx object:</p>
+
+<pre class="sh_perl">  $ctx-&#62;add(&#34;a&#34;); $ctx-&#62;add(&#34;b&#34;); $ctx-&#62;add(&#34;c&#34;);
+  $ctx-&#62;add(&#34;a&#34;)-&#62;add(&#34;b&#34;)-&#62;add(&#34;c&#34;);
+  $ctx-&#62;add(&#34;a&#34;, &#34;b&#34;, &#34;c&#34;);
+  $ctx-&#62;add(&#34;abc&#34;);</pre>
+
+<p>Most algorithms are only defined for strings of bytes and this method might therefore croak if the provided arguments contain chars with ordinal number above 255.</p>
+
+<dt><a name='ctx'></a><a name="$ctx-&#62;addfile(_$io_handle_)"
+>$ctx-&#62;addfile( $io_handle )</a></dt>
+
+<dd>
+<p>The $io_handle is read until EOF and the content is appended to the message we calculate the digest for. The return value is the $ctx object itself.</p>
+
+<p>The addfile() method will croak() if it fails reading data for some reason. If it croaks it is unpredictable what the state of the $ctx object will be in. The addfile() method might have been able to read the file partially before it failed. It is probably wise to discard or reset the $ctx object if this occurs.</p>
+
+<p>In most cases you want to make sure that the $io_handle is in &#34;binmode&#34; before you pass it as argument to the addfile() method.</p>
+
+<dt><a name='ctx'></a><a name="$ctx-&#62;add_bits(_$data,_$nbits_)"
+>$ctx-&#62;add_bits( $data, $nbits )</a></dt>
+
+<dd>
+<dt><a name='ctx'></a><a name="$ctx-&#62;add_bits(_$bitstring_)"
+>$ctx-&#62;add_bits( $bitstring )</a></dt>
+
+<dd>
+<p>The add_bits() method is an alternative to add() that allow partial bytes to be appended to the message. Most users should just ignore this method as partial bytes is very unlikely to be of any practical use.</p>
+
+<p>The two argument form of add_bits() will add the first $nbits bits from $data. For the last potentially partial byte only the high order <code>$nbits % 8</code> bits are used. If $nbits is greater than <code>length($data) * 8</code>, then this method would do the same as <code>$ctx-&#62;add($data)</code>.</p>
+
+<p>The one argument form of add_bits() takes a $bitstring of &#34;1&#34; and &#34;0&#34; chars as argument. It&#39;s a shorthand for <code>$ctx-&#62;add_bits(pack(&#34;B*&#34;, $bitstring), length($bitstring))</code>.</p>
+
+<p>The return value is the $ctx object itself.</p>
+
+<p>This example shows two calls that should have the same effect:</p>
+
+<pre class="sh_perl">   $ctx-&#62;add_bits(&#34;111100001010&#34;);
+   $ctx-&#62;add_bits(&#34;\xF0\xA0&#34;, 12);</pre>
+
+<p>Most digest algorithms are byte based and for these it is not possible to add bits that are not a multiple of 8, and the add_bits() method will croak if you try.</p>
+
+<dt><a name='ctx'></a><a name="$ctx-&#62;digest"
+>$ctx-&#62;digest</a></dt>
+
+<dd>
+<p>Return the binary digest for the message.</p>
+
+<p>Note that the <code>digest</code> operation is effectively a destructive, read-once operation. Once it has been performed, the $ctx object is automatically <code>reset</code> and can be used to calculate another digest value. Call $ctx-&#62;clone-&#62;digest if you want to calculate the digest without resetting the digest state.</p>
+
+<dt><a name='ctx'></a><a name="$ctx-&#62;hexdigest"
+>$ctx-&#62;hexdigest</a></dt>
+
+<dd>
+<p>Same as $ctx-&#62;digest, but will return the digest in hexadecimal form.</p>
+
+<dt><a name='ctx'></a><a name="$ctx-&#62;b64digest"
+>$ctx-&#62;b64digest</a></dt>
+
+<dd>
+<p>Same as $ctx-&#62;digest, but will return the digest as a base64 encoded string.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Digest_speed"
+>Digest speed <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This table should give some indication on the relative speed of different algorithms. It is sorted by throughput based on a benchmark done with of some implementations of this API:</p>
+
+<pre class="sh_perl"> Algorithm      Size    Implementation                  MB/s
+
+ MD4            128     Digest::MD4 v1.3               165.0
+ MD5            128     Digest::MD5 v2.33               98.8
+ SHA-256        256     Digest::SHA2 v1.1.0             66.7
+ SHA-1          160     Digest::SHA v4.3.1              58.9
+ SHA-1          160     Digest::SHA1 v2.10              48.8
+ SHA-256        256     Digest::SHA v4.3.1              41.3
+ Haval-256      256     Digest::Haval256 v1.0.4         39.8
+ SHA-384        384     Digest::SHA2 v1.1.0             19.6
+ SHA-512        512     Digest::SHA2 v1.1.0             19.3
+ SHA-384        384     Digest::SHA v4.3.1              19.2
+ SHA-512        512     Digest::SHA v4.3.1              19.2
+ Whirlpool      512     Digest::Whirlpool v1.0.2        13.0
+ MD2            128     Digest::MD2 v2.03                9.5
+
+ Adler-32        32     Digest::Adler32 v0.03            1.3
+ CRC-16          16     Digest::CRC v0.05                1.1
+ CRC-32          32     Digest::CRC v0.05                1.1
+ MD5            128     Digest::Perl::MD5 v1.5           1.0
+ CRC-CCITT       16     Digest::CRC v0.05                0.8</pre>
+
+<p>These numbers was achieved Apr 2004 with ActivePerl-5.8.3 running under Linux on a P4 2.8 GHz CPU. The last 5 entries differ by being pure perl implementations of the algorithms, which explains why they are so slow.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Digest%3A%3AAdler32" class="podlinkpod"
+>Digest::Adler32</a>, <a href="/perldoc?Digest%3A%3ACRC" class="podlinkpod"
+>Digest::CRC</a>, <a href="/perldoc?Digest%3A%3AHaval256" class="podlinkpod"
+>Digest::Haval256</a>, <a href="/perldoc?Digest%3A%3AHMAC" class="podlinkpod"
+>Digest::HMAC</a>, <a href="/perldoc?Digest%3A%3AMD2" class="podlinkpod"
+>Digest::MD2</a>, <a href="/perldoc?Digest%3A%3AMD4" class="podlinkpod"
+>Digest::MD4</a>, <a href="/perldoc?Digest%3A%3AMD5" class="podlinkpod"
+>Digest::MD5</a>, <a href="/perldoc?Digest%3A%3ASHA" class="podlinkpod"
+>Digest::SHA</a>, <a href="/perldoc?Digest%3A%3ASHA1" class="podlinkpod"
+>Digest::SHA1</a>, <a href="/perldoc?Digest%3A%3ASHA2" class="podlinkpod"
+>Digest::SHA2</a>, <a href="/perldoc?Digest%3A%3AWhirlpool" class="podlinkpod"
+>Digest::Whirlpool</a></p>
+
+<p>New digest implementations should consider subclassing from <a href="/~gaas/Digest-1.17/Digest/base.pm" class="podlinkpod"
+>Digest::base</a>.</p>
+
+<p><a href="/perldoc?MIME%3A%3ABase64" class="podlinkpod"
+>MIME::Base64</a></p>
+
+<p><a href="http://en.wikipedia.org/wiki/Cryptographic_hash_function" class="podlinkurl"
+>http://en.wikipedia.org/wiki/Cryptographic_hash_function</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Gisle Aas &#60;gisle@aas.no&#62;</p>
+
+<p>The <code>Digest::</code> interface is based on the interface originally developed by Neil Winton for his <code>MD5</code> module.</p>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<pre class="sh_perl">    Copyright 1998-2006 Gisle Aas.
+    Copyright 1995,1996 Neil Winton.</pre>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78063 Uploads, 24684 Distributions
+105888 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 12:15:15 2012 GMT (0.0925478935241699) @cpansearch1 -->
+ </body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Hook::Filter - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Hook-Filter",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Hook-Filter-0.10",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Hook::Filter",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ERWAN",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Hook::Filter">permalink</a></div>
+  <a href="/~erwan/">Erwan Lemonnier</a> &gt;
+  <a href="/~erwan/Hook-Filter-0.10/">Hook-Filter-0.10</a> &gt;
+  Hook::Filter
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/d1a5de69703482aec09488e1d2be9111?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/E/ER/ERWAN/Hook-Filter-0.10.tar.gz">Hook-Filter-0.10.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Hook%3A%3AFilter;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ERWAN/Hook-Filter-0.10/lib/Hook/Filter.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Hook-Filter">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.10 &nbsp;
+<span class="noprint">
+  <a href="/src/ERWAN/Hook-Filter-0.10/lib/Hook/Filter.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#RULES'>RULES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#SYNTAX'>SYNTAX</a>
+    <li class='indexItem indexItem2'><a href='#RULE_POOL'>RULE POOL</a>
+    <li class='indexItem indexItem2'><a href='#PASS_ALL_CALLS_BY_DEFAULT'>PASS ALL CALLS BY DEFAULT</a>
+    <li class='indexItem indexItem2'><a href='#EXTENDING_THE_PLUGIN_LIBRARY'>EXTENDING THE PLUGIN LIBRARY</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#INTERFACE'>INTERFACE</a>
+  <li class='indexItem indexItem1'><a href='#DIAGNOSTICS'>DIAGNOSTICS</a>
+  <li class='indexItem indexItem1'><a href='#RESTRICTIONS'>RESTRICTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#SECURITY'>SECURITY</a>
+    <li class='indexItem indexItem2'><a href='#CAVEATS'>CAVEATS</a>
+    <li class='indexItem indexItem2'><a href='#THREADS'>THREADS</a>
+    <li class='indexItem indexItem2'><a href='#KEEP_IT_SIMPLE'>KEEP IT SIMPLE</a>
+    <li class='indexItem indexItem2'><a href='#USING_Hook::Filter_VIA_REQUIRE/EVAL'>USING Hook::Filter VIA REQUIRE/EVAL</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#USE_CASE'>USE CASE</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#BUGS_AND_LIMITATIONS'>BUGS AND LIMITATIONS</a>
+  <li class='indexItem indexItem1'><a href='#REPOSITORY'>REPOSITORY</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Hook::Filter - A runtime firewall for subroutine calls</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Hook::Filter is a runtime firewall for subroutine calls.</p>
+
+<p>Hook::Filter lets you wrap one or more subroutines with a filter that either forwards calls to the subroutine or blocks them,
+depending on a number of rules that you define yourself.
+Each rule is simply one line of Perl code that must evaluate to false (block the call) or true (allow it).</p>
+
+<p>The filtering rules are fetched from a file,
+called the rules file,
+or they can be injected dynamically at runtime.</p>
+
+<p>Each time a call is made to one of the filtered subroutines,
+all the filtering rules are eval-ed,
+and if one of them returns true,
+the call is forwarded,
+otherwise it is blocked.
+If no rules are defined,
+all calls are forwarded by default.</p>
+
+<p>Filtering rules are very flexible.
+You can block or allow calls to a subroutine based on things such as the caller&#39;s identity,
+the values of the arguments passed to the subroutine,
+the structure of the call stack,
+or basically any other test that can be implemented in Perl.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>To filter calls to the local subroutines <code>mydebug</code>,
+<code>myinfo</code> and to <code>Some::Other::Module::mywarn</code>:</p>
+
+<pre class="sh_perl">    use Hook::Filter hook =&#62; [ &#34;mydebug&#34; ,&#34;myinfo&#34;, &#34;Some::Other::Module::mywarn&#34; ];</pre>
+
+<p>To filter calls to the local subroutine <code>_debug</code>, and import filtering rules from the file <code>~/debug.rules</code>:</p>
+
+<pre class="sh_perl">    use Hook::Filter hook =&#62; &#39;_debug&#39;, rules =&#62; &#39;~/debug.rules&#39;;</pre>
+
+<p>The rule file <code>~/debug.rules</code> could contain the following rules:</p>
+
+<pre class="sh_perl">    # allow calls to &#39;mydebug&#39; from within module &#39;My::Filthy:Attempt&#39;
+    subname eq &#39;mydebug&#39; &#38;&#38; from =~ /^My::Filthy::Attempt/
+
+    # allow calls only from within a specific subroutine
+    from eq &#39;My::Filthy::Attempt::func&#39;
+
+    # allow calls only if the subroutine&#39;s 2nd argument matches /bob/
+    args(1) =~ /bob/
+
+    # all other calls to &#39;myinfo&#39;, &#39;mydebug&#39; or &#39;mywarn&#39; will be skipped</pre>
+
+<p>You could also inject those rules dynamically at runtime:</p>
+
+<pre class="sh_perl">    use Hook::Filter::RulePool qw(get_rule_pool);
+
+    get_rule_pool-&#62;add_rule(&#34;subname eq &#39;mydebug&#39; &#38;&#38; from =~ /^My::Filthy::Attempt/&#34;);
+                 -&#62;add_rule(&#34;from =~ /^My::Filthy::Attempt::func$/&#34;);
+                 -&#62;add_rule(&#34;args(1) =~ /bob/&#34;);</pre>
+
+<p>To see which test functions can be used in rules, see Hook::Filter::Plugins::Library.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="RULES"
+>RULES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SYNTAX"
+>SYNTAX</a></h2>
+
+<p>A rule is a string containing one line of valid perl code that returns either true or false when eval-ed. This line of code is usually made of boolean operators combining functions that are exported by the modules located under <code>Hook::Filter::Plugins::</code>. See those modules for more details.</p>
+
+<p>If you specify a rule file with the import parameter <code>rules</code>, the rules will be parsed out of this file according to the following syntax:</p>
+
+<ul>
+<li>any line starting with <code>#</code> is a comment.</li>
+
+<li>any empty line is ignored.</li>
+
+<li>any other line is considered to be a rule, ie a valid line of perl code that can be eval-ed.</li>
+</ul>
+
+<p>Each time one of the filtered subroutines is called, all loaded rules are eval-ed until one returns true or all returned false. If one returns true, the call is forwarded to the filtered subroutine, otherwise it is skipped and a return value spoofed: either undef or an empty list, depending on the context.</p>
+
+<p>If a rule dies/croaks/confess upon being eval-ed (f.ex. when you left a syntax error in the rule&#39;s string), it will be assumed to have returned true. This is a form of fail-safe policy. You will also get a warning message with a complete diagnostic.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="RULE_POOL"
+>RULE POOL</a></h2>
+
+<p>All rules are stored in a rule pool. You can use this pool to access and manipulate rules during runtime.</p>
+
+<p>There are 2 mechanisms to load rules into the pool:</p>
+
+<ul>
+<li>Rules can be imported from a file at INIT time. Just specify the path and name of this file with the import parameter <code>rules</code>, and fill this file with rules as shown in SYNOPSIS.</li>
+
+<li>Rules can also be injected dynamically at runtime. The following code injects a rule that is always true, hence always allowing calls to the filtered subroutines:
+<pre class="sh_perl">    use Hook::Filter::RulePool qw(get_rule_pool);
+    get_rule_pool-&#62;add_rule(&#34;1&#34;);</pre>
+</li>
+</ul>
+
+<p>Rules can all be flushed at runtime:</p>
+
+<pre class="sh_perl">    get_rule_pool-&#62;flush_rules();</pre>
+
+<p>For other operations on rules, see the modules <code>Hook::Filter::RulePool</code> and <code>Hook::Filter::Rule</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PASS_ALL_CALLS_BY_DEFAULT"
+>PASS ALL CALLS BY DEFAULT</a></h2>
+
+<p>If no rules are registered in the rule pool, or if all registered rules die/croak when eval-ed, the default behaviour is to allow all calls to the filtered subroutines.</p>
+
+<p>That would happen for example if you specify no rule file via the import parameter <code>rules</code> and register no rules dynamically afterward.</p>
+
+<p>To change this default behaviour, just add one default rule that always returns false:</p>
+
+<pre class="sh_perl">    use Hook::Filter::RulePool qw(get_rule_pool);
+    get_rule_pool-&#62;add_rule(&#34;0&#34;);</pre>
+
+<p>All calls to the filtered subroutines are then blocked by default, as long as no rule evals to true.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="EXTENDING_THE_PLUGIN_LIBRARY"
+>EXTENDING THE PLUGIN LIBRARY</a></h2>
+
+<p>The default plugin <code>Hook::Filter::Plugins::Library</code> offers a number of functions that can be used inside the filter rules, but you may want to extend this library with your own functions.</p>
+
+<p>You can easily do that by writing a new plugin module having the same structure as <code>Hook::Filter::Plugins::Library</code> and placing it under <code>Hook/Filter/Plugins/</code>. See <code>Hook::Filter::Hooker</code> and <code>Hook::Filter::Plugins::Library</code> for details on how to do that.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INTERFACE"
+>INTERFACE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Hook::Filter</code> exports no functions, but <code>Hook::Filter</code> accepts the following import parameters:</p>
+
+<dl>
+<dt><a name='rules'></a><a name="rules_=&#62;_$rules_file"
+><code>rules =&#62; $rules_file</code></a></dt>
+
+<dd>
+<p>Optional. Specify the complete path to a rule file. This import parameter can be used only once in a program (usually in package <code>main</code>) independently of how many times <code>Hook::Filter</code> is used. The file is parsed at INIT time.</p>
+
+<p>See the RULES section for details.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">    # look for rules in the local file &#39;my_rules&#39;
+    use Hook::Filter rules =&#62; &#39;my_rules&#39;;</pre>
+
+<dt><a name='hook'></a><a name="hook_=&#62;_$subname1_or_hook_=&#62;_[$subname1,$subname2...]"
+><code>hook =&#62; $subname1</code> or <code>hook =&#62; [$subname1,$subname2...]</code></a></dt>
+
+<dd>
+<p>Mandatory. Specify which subroutines to filter. <code>$subname</code> can either be a fully qualified name or just the name of a subroutine located in the current package.</p>
+
+<p>Examples:</p>
+
+<pre class="sh_perl">    # filter function debug() in the current package
+    use Hook::Filter hook =&#62; &#39;debug&#39;;
+
+    # filter function debug() in an other package
+    use Hook::Filter hook=&#62; &#39;Other::Package::debug&#39;;
+
+    # do both at once
+    use Hook::Filter hook=&#62; [ &#39;Other::Package::debug&#39;, &#39;debug&#39; ];</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIAGNOSTICS"
+>DIAGNOSTICS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='Passing'></a><a name="Passing_wrong_arguments_to_Hook::Filter&#39;s_import_parameters_will_cause_it_to_croak."
+>Passing wrong arguments to <code>Hook::Filter</code>&#39;s import parameters will cause it to croak.</a></dt>
+
+<dd>
+<dt><a name='The'></a><a name="The_import_parameter_hook_must_be_used_at_least_once_otherwise_Hook::Filter_croaks_with_an_error_message."
+>The import parameter <code>hook</code> must be used at least once otherwise <code>Hook::Filter</code> croaks with an error message.</a></dt>
+
+<dd>
+<dt><a name='An'></a><a name="An_IO_error_when_opening_the_rule_file_causes_Hook::Filter_to_die."
+>An IO error when opening the rule file causes Hook::Filter to die.</a></dt>
+
+<dd>
+<dt><a name='An'></a><a name="An_error_in_a_filter_rule_will_be_reported_with_a_perl_warning."
+>An error in a filter rule will be reported with a perl warning.</a></dt>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="RESTRICTIONS"
+>RESTRICTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SECURITY"
+>SECURITY</a></h2>
+
+<p><code>Hook::Filter</code> gives anybody with write permissions toward the rule file the possibility to inject code into your application. This can be highly dangerous! Protect your filesystem.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEATS"
+>CAVEATS</a></h2>
+
+<ul>
+<li>Return values: when a call to a subroutine is allowed, the input and output arguments of the subroutine are forwarded without modification. But when the call is blocked, the subroutine&#39;s return value is simulated and will be <code>undef</code> in SCALAR context and an empty list in ARRAY context. Therefore, DO NOT filter subroutines whose return values are significant for the rest of your code.</li>
+
+<li>Speed: Hook::Filter evaluates all filter rules for each call to a filtered subroutine, which is slow. It would therefore be very unappropriate to filter a heavily used subroutine in speed requiring applications.</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="THREADS"
+>THREADS</a></h2>
+
+<p>Hook::Filter is not thread safe.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="KEEP_IT_SIMPLE"
+>KEEP IT SIMPLE</a></h2>
+
+<p>The concept of blocking/allowing subroutine calls dynamically is somewhat unusual and fun. Don&#39;t let yourself get too excited though. Doing that kind of dynamic stuff makes your code harder to understand for non-dynamic developers, hence reducing code stability.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="USING_Hook::Filter_VIA_REQUIRE/EVAL"
+>USING Hook::Filter VIA REQUIRE/EVAL</a></h2>
+
+<p>If you do something like:</p>
+
+<pre class="sh_perl">    eval &#34;use Hook::Filter hook =&#62; &#39;some_sub&#39;&#34;;</pre>
+
+<p>You will get a &#39;Too late to run INIT block&#39; warning, and the subroutine <code>some_sub</code> will not be filtered.</p>
+
+<p>There is unfortunately no simple way to fix that.</p>
+
+<p>A rather ugly work-around would be to run explicitly the private function <code>_filter_subs</code> from <code>Hook::Filter</code>:</p>
+
+<pre class="sh_perl">    {
+        no warnings &#39;void&#39;;
+        eval &#34;use Hook::Filter hook =&#62; &#39;some_sub&#39;, qw(filter_subs)&#34;;
+    }
+    ...
+
+    # later on, call filter_subs explicitly
+    Hook::Filter::_filter_subs;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="USE_CASE"
+>USE CASE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Why would one need a firewall for subroutine calls? Here are a couple of relevant use cases:</p>
+
+<ul>
+<li>A large application logs a lot of information. You want to implement a logging policy to limit the amount of logged information, but you don&#39;t want to modify the logging code. You do that by filtering the functions defined in the logging API with <code>Hook::Filter</code>, and by defining a rule file that implements your logging policy.</li>
+
+<li>A large application crashes regularly so you decide to turn on debugging messages system wide with full verbosity. You get megazillions of log messages. Instead of greping your way through them or starting your debugger, you use <code>Hook::Filter</code> to filter the function that logs debug messages and define tailored rules that allow only relevant debug messages to be logged.</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>See <a href="/~erwan/Hook-Filter-0.10/lib/Hook/Filter/Rule.pm" class="podlinkpod"
+>Hook::Filter::Rule</a>, <a href="/~erwan/Hook-Filter-0.10/lib/Hook/Filter/RulePool.pm" class="podlinkpod"
+>Hook::Filter::RulePool</a>, <a href="/perldoc?Hook%3A%3AFilter%3A%3APlugins%3A%3ALibrary" class="podlinkpod"
+>Hook::Filter::Plugins::Library</a>, <a href="/~erwan/Hook-Filter-0.10/lib/Hook/Filter/Hooker.pm" class="podlinkpod"
+>Hook::Filter::Hooker</a>. See even <a href="/perldoc?Hook%3A%3AWrapSub" class="podlinkpod"
+>Hook::WrapSub</a>, <a href="/perldoc?Log%3A%3ALocalized" class="podlinkpod"
+>Log::Localized</a>, <a href="/perldoc?Log%3A%3ALog4perl" class="podlinkpod"
+>Log::Log4perl</a>, <a href="/perldoc?Log%3A%3ADispatch" class="podlinkpod"
+>Log::Dispatch</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS_AND_LIMITATIONS"
+>BUGS AND LIMITATIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Please report any bugs or feature requests to <code>bug-hook-filter@rt.cpan.org</code>, or through the web interface at <a href="http://rt.cpan.org" class="podlinkurl"
+>http://rt.cpan.org</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="REPOSITORY"
+>REPOSITORY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The source of Hook::Filter is hosted at sourceforge. You can access it at <a href="https://sourceforge.net/projects/hook-filter/" class="podlinkurl"
+>https://sourceforge.net/projects/hook-filter/</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Written by Erwan Lemonnier <code>&#60;erwan@cpan.org&#62;</code> based on inspiration received during the 2005 Nordic Perl Workshop. Kind thanks to Claes Jakobsson &#38; Jerker Montelius for their suggestions and support!</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>See the LICENSE file included in this distribution.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78269 Uploads, 24722 Distributions
+105999 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 18:39:19 2012 GMT (0.857396125793457) @cpansearch1 -->
+ </body>
+</html>

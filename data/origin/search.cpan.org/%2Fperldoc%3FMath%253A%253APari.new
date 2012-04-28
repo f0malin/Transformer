@@ -1,0 +1,948 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Math::Pari - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Math-Pari",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Math-Pari-2.01080605",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Math::Pari",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ILYAZ",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Math::Pari">permalink</a></div>
+  <a href="/~ilyaz/">Ilya Zakharevich</a> &gt;
+  <a href="/~ilyaz/Math-Pari-2.01080605/">Math-Pari-2.01080605</a> &gt;
+  Math::Pari
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/e90ba719ee073073ffd29b58ad53b8b7?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/I/IL/ILYAZ/modules/Math-Pari-2.01080605.tar.gz">modules/Math-Pari-2.01080605.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Math%3A%3APari;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ILYAZ/Math-Pari-2.01080605/Pari.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Net%3A%3ASSH%3A%3APerl">Net::SSH::Perl</a><br>
+<a href="/perldoc?Net%3A%3ASFTP">Net::SFTP</a><br>
+<a href="/perldoc?Math%3A%3ABigInt">Math::BigInt</a><br>
+<a href="/perldoc?Crypt%3A%3ARandom">Crypt::Random</a><br>
+<a href="/perldoc?Net%3A%3ASSH">Net::SSH</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Inline%3A%3AC">Inline::C</a><br>
+<a href="/perldoc?List%3A%3AUtil">List::Util</a><br>
+<a href="/perldoc?Crypt%3A%3ARSA">Crypt::RSA</a><br>
+<a href="/perldoc?Net%3A%3ASSH2">Net::SSH2</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Math%3A%3APari">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 31</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 34</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Math-Pari">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.01080605 &nbsp;
+<span class="noprint">
+  <a href="/src/ILYAZ/Math-Pari-2.01080605/Pari.pm">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~ilyaz/Math-Pari/Pari.pm">Math-Pari-2.0305_01080605</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#EXPORTed_functions'>EXPORTed functions</a>
+  <li class='indexItem indexItem1'><a href='#Available_functions'>Available functions</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Directly_accessible_from_Perl'>Directly accessible from Perl</a>
+    <li class='indexItem indexItem2'><a href='#Arguments'>Arguments</a>
+    <li class='indexItem indexItem2'><a href='#Return_values'>Return values</a>
+    <li class='indexItem indexItem2'><a href='#Additional_functions'>Additional functions</a>
+    <li class='indexItem indexItem2'><a href='#Looping_functions'>Looping functions</a>
+    <li class='indexItem indexItem2'><a href='#Accessing_Perl_functions_from_PARI_code'>Accessing Perl functions from PARI code</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#PARI_objects'>PARI objects</a>
+  <li class='indexItem indexItem1'><a href='#PARI_monomials_and_Perl_barewords'>PARI monomials and Perl barewords</a>
+  <li class='indexItem indexItem1'><a href='#Overloading_and_automatic_conversion'>Overloading and automatic conversion</a>
+  <li class='indexItem indexItem1'><a href='#PREREQUISITES'>PREREQUISITES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Perl'>Perl</a>
+    <li class='indexItem indexItem2'><a href='#PARI'>PARI</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Perl_vs._PARI:_different_syntax'>Perl vs. PARI: different syntax</a>
+  <li class='indexItem indexItem1'><a href='#High-resolution_graphics'>High-resolution graphics</a>
+  <li class='indexItem indexItem1'><a href='#libPARI_documentation'>libPARI documentation</a>
+  <li class='indexItem indexItem1'><a href='#ENVIRONMENT'>ENVIRONMENT</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#INITIALIZATION'>INITIALIZATION</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Math::Pari - Perl interface to PARI.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use Math::Pari;
+  $a = PARI 2;
+  print $a**10000;</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">  use Math::Pari qw(Mod);
+  $a = Mod(3,5);
+  print $a**10000;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This package is a Perl interface to famous library PARI for numerical/scientific/number-theoretic calculations. It allows use of most PARI functions as Perl functions, and (almost) seamless merging of PARI and Perl data. In what follows we suppose prior knowledge of what PARI is (see <a href="ftp://megrez.math.u-bordeaux.fr/pub/pari" class="podlinkurl"
+>ftp://megrez.math.u-bordeaux.fr/pub/pari</a>, or <a href="/perldoc?Math%3A%3AlibPARI" class="podlinkpod"
+>Math::libPARI</a>).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORTed_functions"
+>EXPORTed functions <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name="DEFAULT"
+>DEFAULT</a></dt>
+
+<dd>
+<p>By default the package exports functions PARI(), PARIcol(), PARIvar(), PARImat() and PARImat_tr() which convert their argument(s) to a PARI object. (In fact PARI() is just an alias for <code>new Math::Pari</code>). The function PARI() accepts following data as its arguments</p>
+
+<dl>
+<dt><a name='One'></a><a name="One_integer"
+>One integer</a></dt>
+
+<dd>
+<p>Is converted to a PARI integer.</p>
+
+<dt><a name='One'></a><a name="One_float"
+>One float</a></dt>
+
+<dd>
+<p>Is converted to a PARI float.</p>
+
+<dt><a name='One'></a><a name="One_string"
+>One string</a></dt>
+
+<dd>
+<p>Is executed as a PARI expresion (so should not contain whitespace).</p>
+
+<dt><a name='PARI'></a><a name="PARI_object"
+>PARI object</a></dt>
+
+<dd>
+<p>Is passed unchanged.</p>
+
+<dt><a name='Reference'></a><a name="Reference_to_a_Perl_array"
+>Reference to a Perl array</a></dt>
+
+<dd>
+<p>Each element is converted using the same rules, PARI vector-row with these elements is returned.</p>
+
+<dt><a name='Several'></a><a name="Several_of_above"
+>Several of above</a></dt>
+
+<dd>
+<p>The same as with a reference to array.</p>
+</dd>
+</dl>
+
+<dt><a name='Conflicts'></a><a name="Conflicts_of_rules_in_PARI()"
+>Conflicts of rules in PARI()</a></dt>
+
+<dd>
+<p>In deciding what rule of the above to apply the preference is given to the uppermost choice of those available <i>now</i>. If none matches, then the string rule is used. So <code>PARI(1)</code> returns integer, <code>PARI(1.)</code> returns float, <code>PARI(&#34;1&#34;)</code> evaluates <code>1</code> as a PARI expression (well, the result is the same as <code>PARI(1)</code>, only slower).</p>
+
+<p>Note that for Perl these data are synonimous, since Perl freely converts between integers, float and strings. However, to PARI() only what the argument <i>is now</i> is important. If $v is <code>1</code> in the Perl world, <code>PARI($v)</code> may convert it to an integer, float, or to the result of evaluating the PARI program <code>1</code> (all depending on how $v was created and accessed in Perl).</p>
+
+<p>This is a fundamental limitation of creating an interface between two systems, both with polymorphic objects, but with subtly different semantic of the flavors of these objects. In reality, however, this is rarely a problem.</p>
+
+<dt><a name='PARIcol'></a><a name="PARIcol(),_PARImat()_and_PARImat_tr()"
+>PARIcol(), PARImat() and PARImat_tr()</a></dt>
+
+<dd>
+<p>PARIcol() behaves in the same way as PARI() unless given several arguments. In the latter case it returns a vector-column instead of a vector-row.</p>
+
+<p>PARImat() constructs a matrix out of the given arguments. It will work if PARI() will construct a vector of vectors given the same arguments. The internal vectors become columns of the matrix. PARImat_tr() behaves similarly, but the internal vectors become rows of the matrix.</p>
+
+<p>Since PARI matrices are similar to vector-rows of vector-columns, PARImat() is quickier, but PARImat_tr() better corresponds to the PARI input and output forms of matrices:</p>
+
+<pre class="sh_perl">  print PARImat    [[1,2], [3,4]];      # prints [1,3;2,4]
+  print PARImat_tr [[1,2], [3,4]];      # prints [1,2;3,4]</pre>
+
+<dt><a name='use'></a><a name="use_with_arguments"
+><code>use</code> with arguments</a></dt>
+
+<dd>
+<p>If arguments are specified in the <code>use Math::Pari</code> directive, the PARI functions appearing as arguments are exported in the caller context. In this case the function PARI() and friends is not exported, so if you need them, you should include them into export list explicitely, or include <code>:DEFAULT</code> tag:</p>
+
+<pre class="sh_perl">  use Math::Pari qw(factorint PARI);
+  use Math::Pari qw(:DEFAULT factorint);</pre>
+
+<p>or simply do it in two steps</p>
+
+<pre class="sh_perl">  use Math::Pari;
+  use Math::Pari &#39;factorint&#39;;</pre>
+
+<p>The other tags recognized are <code>:PARI</code>, <code>:all</code>, <code>prec=NUMBER</code>, number tags (e.g., <code>:4</code>), overloaded constants tags (<code>:int</code>, <code>:float</code>, <code>:hex</code>) and section names tags. The number tags export functions from the PARI library from the given class (except for <code>:PARI</code>, which exports all of the classes). Tag <code>:all</code> exports all of the exportable symbols and <code>:PARI</code>.</p>
+
+<p>Giving <code>?</code> command to <code>gp</code> (<b>PARI</b> calculator) lists the following classes:</p>
+
+<pre class="sh_perl">  1: Standard monadic or dyadic OPERATORS
+  2: CONVERSIONS and similar elementary functions
+  3: TRANSCENDENTAL functions
+  4: NUMBER THEORETICAL functions
+  5: Functions related to ELLIPTIC CURVES
+  6: Functions related to general NUMBER FIELDS
+  7: POLYNOMIALS and power series
+  8: Vectors, matrices, LINEAR ALGEBRA and sets
+  9: SUMS, products, integrals and similar functions
+  10: GRAPHIC functions
+  11: PROGRAMMING under GP</pre>
+
+<p>One can use section names instead of number tags. Recognized names are</p>
+
+<pre class="sh_perl">  :standard :conversions :transcendental :number :elliptic
+  :fields :polynomials :vectors :sums :graphic :programming</pre>
+
+<p>One can get the list of all of the functions accessible by <code>Math::Pari</code>, or the accessible functions from the given section using listPari() function.</p>
+
+<p>Starting from version 5.005 of Perl, three constant-overload tags are supported: <code>:int</code>, <code>:float</code>, <code>:hex</code>. If used, all the integer/float/hex-or-octal-or-binary literals in Perl will be automatically converted to became PARI objects. For example,</p>
+
+<pre class="sh_perl">  use Math::Pari &#39;:int&#39;;
+  print 2**1000;</pre>
+
+<p>is equivalent to</p>
+
+<pre class="sh_perl">  print PARI(2)**PARI(1000);</pre>
+
+<p>(The support for this Perl feature is buggy before the Perl version 5.005_57 - unless Perl uses mymalloc options; you can check for this with <code>perl -V:usemymalloc</code>.) Note also that (at least with some versions of Perl) one should enable <code>&#39;:float&#39;</code> for conversion of long integer literals (<i>Perl</i> may consider them as floats, since they won&#39;t fit into Perl integers); note that it is PARI which determines which PARI subtype is assigned to each such literal:</p>
+
+<pre class="sh_perl">  use Math::Pari &#39;:float&#39;, &#39;type_name&#39;;
+  print type_name 22222222222222222222222;</pre>
+
+<p>prints <code>t_INT</code>.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Available_functions"
+>Available functions <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Directly_accessible_from_Perl"
+>Directly accessible from Perl</a></h2>
+
+<p>This package supports <i>all</i> the functions from the PARI library with a <i>signature</i> which can be recognized by Math::Pari. This means that when you update the PARI library, the newly added functions will we available without any change to this package; only a recompile is needed. In fact no recompile will be needed if you link libPARI dynamically (you need to modify the <em>Makefile</em> manually to do this).</p>
+
+<p>You can &#34;reach&#34; unsupported functions via going directly to PARI parser using the string flavor of PARI() function, as in</p>
+
+<pre class="sh_perl">  3 + PARI(&#39;O(x^17)&#39;);</pre>
+
+<p>For some &#34;unreachable&#34; functions there is a special wrapper functions, such as <code>O(variable,power)</code>).</p>
+
+<p>The following functions are specific to GP calculator, thus are not available to Math::Pari in any way:</p>
+
+<pre class="sh_perl">  default error extern input print print1 printp printp1
+  printtex quit read system whatnow write write1 writetex</pre>
+
+<p>whatnow() function is useless, since Math::Pari does not support the &#34;compatibility&#34; mode (with older PARI library). The functionality of print(), write() and variants is available via automatic string translation, and pari_print() function and its variants (see <a href="#Printout_functions" class="podlinkpod"
+>&#34;Printout functions&#34;</a>).</p>
+
+<p>default() is the only important function with functionality not supported by the current interface. Note however, that four most important default() actions are supported by allocatemem(), setprimelimit(), setprecision() and setseriesprecision() functions. (When called without arguments, these functions return the current values.)</p>
+
+<p>allocatemem($bytes) should not be called from inside Math::Pari functions (such as forprimes()).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Arguments"
+>Arguments</a></h2>
+
+<p>Arguments to PARI functions are automatically converted to <code>long</code> or a PARI object depending on the signature of the actual library function. The arguments are <i>forced</i> into the given type, so even if <code>gp</code> rejects your code similar to</p>
+
+<pre class="sh_perl">  func(2.5);                    # func() takes a long in C</pre>
+
+<p>arguing that a particular argument should be of <code>type T_INT</code> (i.e., a Pari integer), the corresponding code will work in <code>Math::Pari</code>, since 2.5 is silently converted to <code>long</code>, per the function signature.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Return_values"
+>Return values</a></h2>
+
+<p>PARI functions return a PARI object or a Perl&#39;s integer depending on what the actual library function returns.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Additional_functions"
+>Additional functions</a></h2>
+
+<p>Some PARI functions are available in <code>gp</code> (i.e., in <code>PARI</code> calculator) via infix notation only. In <code>Math::Pari</code> these functions are available in functional notations too. Some other convenience functions are also made available.</p>
+
+<dl>
+<dt><a name='Infix'></a><a name="Infix,_prefix_and_postfix_operations"
+>Infix, prefix and postfix operations</a></dt>
+
+<dd>
+<p>are available under names</p>
+
+<pre class="sh_perl">  gneg, gadd, gsub, gmul, gdiv, gdivent, gmod, gpui,
+  gle, gge, glt, ggt, geq, gne, gegal, gor, gand,
+  gcmp, gcmp0, gcmp1, gcmp_1.</pre>
+
+<p><code>gdivent</code> means euclidean quotient, <code>gpui</code> is power, <code>gegal</code> checks whether two objects are equal, <code>gcmp</code> is applicable to two real numbers only, <code>gcmp0</code>, <code>gcmp1</code>, <code>gcmp_1</code> compare with 0, 1 and -1 correspondingly (see PARI user manual for details, or <a href="/perldoc?Math%3A%3AlibPARI" class="podlinkpod"
+>Math::libPARI</a>). Note that all these functions are more readily available via operator overloading, so instead of</p>
+
+<pre class="sh_perl">  gadd(gneg($x), $y)</pre>
+
+<p>one can write</p>
+
+<pre class="sh_perl">  -$x+$y</pre>
+
+<p>(as far as overloading may be triggered, see <a href="/perldoc?overload" class="podlinkpod"
+>overload</a>, so we assume that at least one of $x or $y is a PARI object).</p>
+
+<dt><a name='Conversion'></a><a name="Conversion_functions"
+>Conversion functions</a></dt>
+
+<dd>
+<pre class="sh_perl">  pari2iv, pari2nv, pari2num, pari2pv, pari2bool</pre>
+
+<p>convert a PARI object to an integer, float, integer/float (whatever is better), string, and a boolean value correspondingly. Most the time you do not need these functions due to automatic conversions.</p>
+
+<dt><a name='Printout'></a><a name="Printout_functions"
+>Printout functions</a></dt>
+
+<dd>
+<pre class="sh_perl">  pari_print, pari_pprint, pari_texprint</pre>
+
+<p>perform the same conversions to strings as their PARI counterparts, but do not print the result. The difference of pari_print() with pari2pv() is the number of significant digits they output, and whitespace in the output. pari2pv(), which is intended for &#34;computer-readable strings&#34;, outputs as many digits as is supported by the current precision of the number; while pari_print(), which targets human-readable strings, takes into account the currently specified output precision too.</p>
+
+<dt><a name='Constant'></a><a name="Constant_functions"
+>Constant functions</a></dt>
+
+<dd>
+<p>Some mathematical constants appear as function without arguments in PARI. These functions are available in Math::Pari too. If you export them as in</p>
+
+<pre class="sh_perl">  use Math::Pari qw(:DEFAULT Pi I Euler);</pre>
+
+<p>they can be used as barewords in your program:</p>
+
+<pre class="sh_perl">  $x = Pi ** Euler;</pre>
+
+<dt><a name='Low'></a><a name="Low-level_functions"
+>Low-level functions</a></dt>
+
+<dd>
+<p>For convenience of low-level PARI programmers some low-level functions are made available as well (all except type_name() and changevalue() are not exportable):</p>
+
+<pre class="sh_perl">  typ($x)
+  lg($x)
+  lgef($x)
+  lgefint($x)
+  longword($x, $n)
+  type_name($x)
+  changevalue($name,$newvalue)</pre>
+
+<p>Here longword($x,$n) returns <code>$n</code>-th word in the memory representation of $x (including non-code words). type_name() differs from the PARI function type(): type() returns a PARI object, while type_name() returns a Perl string. (PARI objects of string type behave very non-intuitive w.r.t. string comparison functions; remember that they are compared using lex() to <i>the results of evaluation</i> of other argument of comparison!)</p>
+
+<p>The function listPari($number) outputs a list of names of PARI functions in the section $number. Use listPari(-1) to get the list across all of the sections.</p>
+
+<dt><a name='Uncompatible'></a><a name="Uncompatible_functions"
+>Uncompatible functions</a></dt>
+
+<dd>
+<pre class="sh_perl">  O</pre>
+
+<p>Since implementing <code>O(7**6)</code> would be very tedious, we provide a two-argument form <code>O(7,6)</code> instead (meaning the same as <code>O(7^6)</code> in PARI). Note that with polynomials there is no problem like this one, both <code>O($x,6)</code> and <code>O($x**6)</code> work.</p>
+
+<pre class="sh_perl">  ifact(n)</pre>
+
+<p>integer factorial functions, available from <code>gp</code> as <code>n!</code>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Looping_functions"
+>Looping functions</a></h2>
+
+<p>PARI has a big collection of functions which loops over some set. Such a function takes two <i>special</i> arguments: loop variable, and the code to execute in the loop.</p>
+
+<p>The code can be either a string (which contains PARI code to execute - thus should not contain whitespace), or a Perl code reference. The loop variable can be a string giving the name of PARI variable (as in</p>
+
+<pre class="sh_perl">  fordiv(28, &#39;j&#39;, &#39;a=a+j+j^2&#39;);</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">  $j= &#39;j&#39;;
+  fordiv(28, $j, &#39;a=a+j+j^2&#39;);</pre>
+
+<p>), a PARI monomial (as in</p>
+
+<pre class="sh_perl">  $j = PARI &#39;j&#39;;
+  fordiv(28, $j, sub { $a += $j + $j**2 });</pre>
+
+<p>), or a &#34;delayed Math::Pari variable&#34; (as in</p>
+
+<pre class="sh_perl">  $j = PARIvar &#39;j&#39;;
+  fordiv(28, $j, &#39;a=a+j+j^2&#39;);</pre>
+
+<p>). If none of these applies, as in</p>
+
+<pre class="sh_perl">  my $j;        # Have this in a separate statement
+  fordiv(28, $j, sub { $a += $j + $j**2 });</pre>
+
+<p>then during the execution of the <code>sub</code>, Math::Pari would autogenerate a PARI variable, and would put its value in $j; this value of $j is temporary only, the old contents of $j is restored when fordiv() returns.</p>
+
+<p>Note that since you have no control over this name, you will not be able to use this variable from your PARI code; e.g.,</p>
+
+<pre class="sh_perl">  $j = 7.8;
+  fordiv(28, $j, &#39;a=a+j+j^2&#39;);</pre>
+
+<p>will not make <code>j</code> mirror $j (unless you explicitely set up <code>j</code> to be a no-argument PARI function mirroring $j, see <a href="#Accessing_Perl_functions_from_PARI_code" class="podlinkpod"
+>&#34;Accessing Perl functions from PARI code&#34;</a>).</p>
+
+<p><b>Caveats</b>. There are 2 flavors of the &#34;code&#34; arguments (string/<code>sub</code>), and 4 types of the &#34;variable&#34; arguments (string/monomial/<code>PARIvar</code>/other). However, not all 8 combinations make sense. As we already explained, an &#34;other&#34; variable cannot work with a &#34;string&#34; code.</p>
+
+<p><b>Useless musing alert! Do not read the rest of this section!</b> Do not use &#34;string&#34; variables with <code>sub</code> code, and do not ask <i>why</i>!</p>
+
+<p>Additionally, the following code will not do what you expect</p>
+
+<pre class="sh_perl">  $x = 0;
+  $j = PARI &#39;j&#39;;
+  fordiv(28, &#39;j&#39;, sub { $x += $j } );   # Use $j as a loop variable!</pre>
+
+<p>since the PARI function <code>fordiv</code> <i>localizes</i> the PARI variable <code>j</code> inside the loop, but $j will still reference the old value; the old value is a monomial, not the index of the loop (which is an integer each time <code>sub</code> is called). The simplest workaround is not to use the above syntax (i.e., not mixing literal loop variable with Perl loop code, just using $j as the second argument to <code>fordiv</code> is enough):</p>
+
+<pre class="sh_perl">  $x = 0;
+  $j = PARI &#39;j&#39;;
+  fordiv(28, $j, sub { $x += $j } );</pre>
+
+<p>Alternately, one can make a <i>delayed</i> variable $j which will always reference the same thing <code>j</code> references in PARI <i>now</i> by using <code>PARIvar</code> constructor</p>
+
+<pre class="sh_perl">  $x = 0;
+  $j = PARIvar &#39;j&#39;;
+  fordiv(28, &#39;j&#39;, sub { $x += $j } );</pre>
+
+<p>(This problem is similar to</p>
+
+<pre class="sh_perl">  $ref = \$_;                   # $$ref is going to be old value even after
+                                # localizing $_ in Perl&#39;s grep/map</pre>
+
+<p>not accessing localized values of $_ in the plain Perl.)</p>
+
+<p>Another possible quirk is that</p>
+
+<pre class="sh_perl">  fordiv(28, my $j, sub { $a += $j + $j**2 });</pre>
+
+<p>will not work too - by a different reason. <code>my</code> declarations change the <i>meaning</i> of $j only <i>after</i> the end of the current statement; thus $j inside <code>sub</code> will access a <i>different</i> variable $j (typically a non-lexical, global variable $j) than one you declared on this line.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Accessing_Perl_functions_from_PARI_code"
+>Accessing Perl functions from PARI code</a></h2>
+
+<p>Use the same name inside PARI code:</p>
+
+<pre class="sh_perl">  sub counter { $i += shift; }
+  $i = 145;
+  PARI &#39;k=5&#39; ;
+  fordiv(28, &#39;j&#39;, &#39;k=k+counter(j)&#39;);
+  print PARI(&#39;k&#39;), &#34;\n&#34;;</pre>
+
+<p>prints</p>
+
+<pre class="sh_perl">   984</pre>
+
+<p>Due to a difference in the semantic of variable-number-of-parameters-functions between PARI and Perl, if the Perl subroutine takes a variable number of arguments (via <code>@</code> in the prototype or a missing prototype), up to 6 arguments are supported when this function is called from PARI. If called from PARI with fewer arguments, the rest of arguments will be set to be integers <code>PARI 0</code>.</p>
+
+<p>Note also that no direct import of Perl variables is available yet (but you can write a function wrapper for this):</p>
+
+<pre class="sh_perl">  sub getv () {$v}</pre>
+
+<p>There is an unsupported (and undocumented ;-) function for explicitely importing Perl functions into PARI, possibly with a different name, and possibly with explicitely specifying number of arguments.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PARI_objects"
+>PARI objects <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Functions from PARI library may take as arguments and/or return values the objects of C type <code>GEN</code>. In Perl these data are encapsulated into special kind of Perl variables: PARI objects. You can check for a variable <code>$obj</code> to be a PARI object using</p>
+
+<pre class="sh_perl">  ref $obj and $obj-&#62;isa(&#39;Math::Pari&#39;);</pre>
+
+<p>Most the time you do not need this due to automatic conversions and overloading.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PARI_monomials_and_Perl_barewords"
+>PARI monomials and Perl barewords <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If very lazy, one can code in Perl the same way one does it in PARI. Variables in PARI are denoted by barewords, as in <code>x</code>, and in the default configuration (no warnings, no strict) Perl allows the same - up to some extent. Do not do this, since there are many surprising problems.</p>
+
+<p>Some bareletters denote Perl operators, like <code>q</code>, <code>x</code>, <code>y</code>, <code>s</code>. This can lead to errors in Perl parsing your expression. E.g.,</p>
+
+<pre class="sh_perl">  print sin(tan(t))-tan(sin(t))-asin(atan(t))+atan(asin(t));</pre>
+
+<p>may parse OK after <code>use Math::Pari qw(sin tan asin atan)</code>. Why?</p>
+
+<p>After importing, the word <code>sin</code> will denote the PARI function sin(), not Perl operator sin(). The difference is subtle: the PARI function <i>implicitly</i> forces its arguments to be converted PARI objects; it gets <code>&#39;t&#39;</code> as the argument, which is a string, thus is converted to what <code>t</code> denotes in PARI - a monomial. While the Perl operator sin() grants overloading (i.e., it will call PARI function sin() if the argument is a PARI object), it does not <i>force</i> its argument; given <code>&#39;t&#39;</code> as argument, it converts it to what sin() understands, a float (producing <code>0.</code>), so will give <code>0.</code> as the answer.</p>
+
+<p>However</p>
+
+<pre class="sh_perl">  print sin(tan(y))-tan(sin(y))-asin(atan(y))+atan(asin(y));</pre>
+
+<p>would not compile. You should avoid lower-case barewords used as PARI variables, e.g., do</p>
+
+<pre class="sh_perl">  $y = PARI &#39;y&#39;;
+  print sin(tan($y))-tan(sin($y))-asin(atan($y))+atan(asin($y));</pre>
+
+<p>to get</p>
+
+<pre class="sh_perl">  -1/18*y^9+26/4725*y^11-41/1296*y^13+328721/16372125*y^15+O(y^16)</pre>
+
+<p>(BTW, it is a very good exercise to get the leading term by hand).</p>
+
+<p>Well, the same advice again: do not use barewords anywhere in your program!</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Overloading_and_automatic_conversion"
+>Overloading and automatic conversion <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Whenever an arithmetic operation includes at least one PARI object, the other arguments are converted to a PARI object and the corresponding PARI library functions is used to implement the operation. Currently the following arithmetic operations are overloaded:</p>
+
+<pre class="sh_perl">  unary -
+  + - * / % ** abs cos sin exp log sqrt
+  &#60;&#60; &#62;&#62;
+  &#60;= == =&#62; &#60;  &#62;  != &#60;=&#62;
+  le eq ge lt gt ne cmp
+  | &#38; ^ ~</pre>
+
+<p>Numeric comparison operations are converted to <code>gcmp</code> and friends, string comparisons compare in lexicographical order using <code>lex</code>.</p>
+
+<p>Additionally, whenever a PARI object appears in a situation that requires integer, numeric, boolean or string data, it is converted to the corresponding type. Boolean conversion is subject to usual PARI pitfalls related to imprecise zeros (see documentation of <code>gcmp0</code> in PARI reference).</p>
+
+<p>For details on overloading, see <a href="/perldoc?overload" class="podlinkpod"
+>overload</a>.</p>
+
+<p>Note that a check for equality is subject to same pitfalls as in PARI due to imprecise values. PARI may also refuse to compare data of different types for equality if it thinks this may lead to counterintuitive results.</p>
+
+<p>Note also that in PARI the numeric ordering is not defined for some types of PARI objects. For string comparison operations we use PARI-lexicographical ordering.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PREREQUISITES"
+>PREREQUISITES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Perl"
+>Perl</a></h2>
+
+<p>In the versions of perl earlier than 5.003 overloading used a different interface, so you may need to convert <code>use overload</code> line to <code>%OVERLOAD</code>, or, better, upgrade.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PARI"
+>PARI</a></h2>
+
+<p>Starting from version 2.0, this module comes without a PARI library included.</p>
+
+<p>For the source of PARI library see <a href="ftp://megrez.math.u-bordeaux.fr/pub/pari" class="podlinkurl"
+>ftp://megrez.math.u-bordeaux.fr/pub/pari</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Perl_vs._PARI:_different_syntax"
+>Perl vs. PARI: different syntax <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Note that the PARI notations should be used in the string arguments to PARI() function, while the Perl notations should be used otherwise.</p>
+
+<dl>
+<dt><a name="^"
+><code>^</code></a></dt>
+
+<dd>
+<p>Power is denoted by <code>**</code> in Perl.</p>
+
+<dt><a name='and'></a><a name="\_and_\/"
+><code>\</code> and <code>\/</code></a></dt>
+
+<dd>
+<p>There are no such operators in Perl, use the word forms <code>gdivent(x,y)</code> and <code>gdivround(x,y)</code> instead.</p>
+
+<dt><a name="~"
+><code>~</code></a></dt>
+
+<dd>
+<p>There is no postfix <code>~</code> Perl operator. Use mattranspose() instead.</p>
+
+<dt><a name="&#39;"
+><code>&#39;</code></a></dt>
+
+<dd>
+<p>There is no postfix <code>&#39;</code> Perl operator. Use deriv() instead.</p>
+
+<dt><a name="!"
+><code>!</code></a></dt>
+
+<dd>
+<p>There is no postfix <code>!</code> Perl operator. Use factorial()/ifact() instead (returning a real or an integer correspondingly).</p>
+
+<dt><a name='big'></a><a name="big_integers"
+>big integers</a></dt>
+
+<dd>
+<p>Perl converts big <i>literal</i> integers to doubles if they could not be put into <b>C</b> integers (the particular flavor can be found in the output of <code>perl -V</code> in newer version of Perl, look for <code>ivtype</code>/<code>ivsize</code>). If you want to input such an integer, use</p>
+
+<pre class="sh_perl">  while ($x &#60; PARI(&#39;12345678901234567890&#39;)) ...</pre>
+
+<p>instead of</p>
+
+<pre class="sh_perl">  while ($x &#60; 12345678901234567890) ...</pre>
+
+<p>Why? Because conversion to double leads to precision loss (typically above 1e15, see <a href="/perldoc?perlnumber" class="podlinkpod"
+>perlnumber</a>), and you will get something like 12345678901234567168 otherwise.</p>
+
+<p>Starting from version 5.005 of Perl, if the tag <code>:int</code> is used on the &#39;use Math::Pari&#39; line, all of the integer literals in Perl will be automatically converted to became PARI objects. E.g.,</p>
+
+<pre class="sh_perl">  use Math::Pari &#39;:int&#39;;
+  print 2**1000;</pre>
+
+<p>is equivalent to</p>
+
+<pre class="sh_perl">  print PARI(2)**PARI(1000);</pre>
+
+<p>Similarly, large integer literals do not lose precision.</p>
+
+<p>This directive is lexically scoped. There is a similar tag <code>:hex</code> which affects hexadecimal, octal and binary constants. One may also need to use tag <code>:float</code> for auto-conversion of large integer literals which Perl considers as floating point literals (see <a href="#use_with_arguments" class="podlinkpod"
+>&#34;<code>use</code> with arguments&#34;</a> for details).</p>
+
+<dt><a name="doubles"
+>doubles</a></dt>
+
+<dd>
+<p>Doubles in Perl are typically of precision approximately 15 digits (see <a href="/perldoc?perlnumber" class="podlinkpod"
+>perlnumber</a>). When you use them as arguments to PARI functions, they are converted to PARI real variables, and due to intermediate 15-digits-to-binary conversion of Perl variables the result may be different than with the PARI many-digits-to-binary conversion. E.g., <code>PARI(0.01)</code> and <code>PARI(&#39;0.01&#39;)</code> differ at 19-th place, as</p>
+
+<pre class="sh_perl">  setprecision(38);
+  print pari_print(0.01),   &#34;\n&#34;,
+        pari_print(&#39;0.01&#39;), &#34;\n&#34;;</pre>
+
+<p>shows.</p>
+
+<p>Note that setprecision() changes the output format of pari_print() and friends, as well as the default internal precision. The generic PARI===&#62;string conversion does not take into account the output format, thus</p>
+
+<pre class="sh_perl">  setprecision(38);
+  print PARI(0.01),       &#34;\n&#34;,
+        PARI(&#39;0.01&#39;),     &#34;\n&#34;,
+        pari_print(0.01), &#34;\n&#34;;</pre>
+
+<p>will print all the lines with different number of digits after the point: the first one with 22, since the double 0.01 was converted to a low-precision PARI object, the second one with 41, since internal form for precision 38 requires that many digits for representation, and the last one with 39 to have 38 significant digits.</p>
+
+<p>Starting from version 5.005 of Perl, if the tag <code>:float</code> is used on the <code>use Math::Pari</code> line, all the float literals in Perl will be automatically converted to became PARI objects. E.g.,</p>
+
+<pre class="sh_perl">  use Math::Pari &#39;:float&#39;;
+  print atan(1.);</pre>
+
+<p>is equivalent to</p>
+
+<pre class="sh_perl">  print atan(PARI(&#39;1.&#39;));</pre>
+
+<p>Similarly, large float literals do not lose precision.</p>
+
+<p>This directive is lexically scoped.</p>
+
+<dt><a name='array'></a><a name="array_base"
+>array base</a></dt>
+
+<dd>
+<p>Arrays are 1-based in PARI, are 0-based in Perl. So while array access is possible in Perl, you need to use different indices:</p>
+
+<pre class="sh_perl">  $nf = PARI &#39;nf&#39;;      # assume that PARI variable nf contains a number field
+  $a = PARI(&#39;nf[7]&#39;);
+  $b = $nf-&#62;[6];</pre>
+
+<p>Now $a and $b contain the same value.</p>
+
+<dt><a name="matrices"
+>matrices</a></dt>
+
+<dd>
+<p>Note that <code>PARImat([[...],...,[...])</code> constructor creates a matrix with specified columns, while in PARI the command <code>[1,2,3;4,5,6]</code> creates a matrix with specified rows. Use a convenience function PARImat_tr() which will transpose a matrix created by PARImat() to use the same order of elements as in PARI.</p>
+
+<dt><a name='builtin'></a><a name="builtin_perl_functions"
+>builtin perl functions</a></dt>
+
+<dd>
+<p>Some PARI functions, like <code>length</code> and <code>eval</code>, are Perl (semi-)reserved words. To reach these functions, one should either import them:</p>
+
+<pre class="sh_perl">  use Math::Pari qw(length eval);</pre>
+
+<p>or call them with prefix (like <code>&#38;length</code>) or the full name (like <code>Math::Pari::length</code>).</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="High-resolution_graphics"
+>High-resolution graphics <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you have Term::Gnuplot Perl module installed, you may use high-resolution graphic primitives of <b>PARI</b>. Before the usage you need to establish a link between Math::Pari and Term::Gnuplot by calling link_gnuplot(). You can change the output filehandle by calling set_plot_fh(), and output terminal by calling plotterm(), as in</p>
+
+<pre class="sh_perl">    use Math::Pari qw(:graphic asin);
+
+    open FH, &#39;&#62;out.tex&#39; or die;
+    link_gnuplot();             # automatically loads Term::Gnuplot
+    set_plot_fh(\*FH);
+    plotterm(&#39;emtex&#39;);
+    ploth($x, .5, .999, sub {asin $x});
+    close FH or die;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="libPARI_documentation"
+>libPARI documentation <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>libPARI documentation is included, see <a href="/perldoc?Math%3A%3AlibPARI" class="podlinkpod"
+>Math::libPARI</a>. It is converted from Chapter 3 of <b>PARI/GP</b> documentation by the <em>gphelp</em> script of GP/PARI.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ENVIRONMENT"
+>ENVIRONMENT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>No environment variables are used.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li>A few of PARI functions are available indirectly only.</li>
+
+<li>Using overloading constants with the Perl versions below 5.005_57 could lead to segfaults (at least without <code>-D usemymalloc</code>), as in:
+<pre class="sh_perl">  use Math::Pari &#39;:int&#39;;
+  for ( $i = 0; $i &#60; 10 ; $i++ ) { print &#34;$i\n&#34; }</pre>
+</li>
+
+<li>It may be possible that conversion of a Perl value which has both the integer slot and the floating slot set may create a PARI integer, even if the actual value is not an integer.</li>
+
+<li>problems with refcounting of array elements and Mod().
+<p>Workaround: make the modulus live longer than the result of Mod(). Until Perl version <code>5.6.1</code>, one should exercise a special care so that the modulus goes out of scope on a different statement than the result:</p>
+
+<pre class="sh_perl">  { my $modulus = 125;
+    { my $res = Mod(34, $modulus);
+      print $res;
+    }
+    $fake = 1;          # A (fake) statement here is required
+  }</pre>
+
+<p>Here $res is destructed before the <code>$fake = 1</code> statement, $modulus is destructed before the first statement after the provided block. However, if you remove the <code>$fake = 1</code> statement, both these variables are destructed on the first statement after the provided block (and in a wrong order!).</p>
+
+<p>In <code>5.6.1</code> declaring $modulus before $res is all that is needed to circumvent the same problem:</p>
+
+<pre class="sh_perl">  { my $modulus = 125;
+    my $res = Mod(34, $modulus);
+    print $res;
+  }                     # destruction will happen in a correct order.</pre>
+
+<p>Access to array elements may result in similar problems. Hard to fix since in PARI the data is not refcounted.</p>
+</li>
+
+<li>Legacy implementations of dynalinking require the code of DLL to be compiled to be &#34;position independent&#34; code (PIC). This slows down the execution, while allowing sharing the loaded copy of the DLL between different processes. [On contemeporary architectures the same effect is allowed without the position-independent hack.]
+<p>Currently, PARI assembler files are not position-independent. When compiled for the dynamic linking on legacy systems, this creates a DLL which cannot be shared between processes. Some legacy systems are reported to recognize this situation, and load the DLL as a non-shared module. However, there may be systems (are there?) on which this can cause some &#34;problems&#34;.</p>
+
+<p>Summary: if the dynaloading on your system requires some kind of <code>-fPIC</code> flag, using &#34;assembler&#34; compiles (anything but <code>machine=none</code>) *may* force you to do a static build (i.e., creation of a custom Perl executable with</p>
+
+<pre class="sh_perl"> perl Makefile.PL static
+ make perl
+ make test_static</pre>
+
+<p>).</p>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INITIALIZATION"
+>INITIALIZATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>When Math::Pari is loaded, it examines variables $Math::Pari::initmem and $Math::Pari::initprimes. They specify up to which number the initial list of primes should be precalculated, and how large should be the arena for PARI calculations (in bytes). (These values have safe defaults.)</p>
+
+<p>Since setting these values before loading requires either a <code>BEGIN</code> block, or postponing the loading (<code>use</code> vs. <code>require</code>), it may be more convenient to set them via Math::PariInit:</p>
+
+<pre class="sh_perl">  use Math::PariInit qw( primes=12000000 stack=1e8 );</pre>
+
+<p><code>use Math::PariInit</code> also accepts arbitrary Math::Pari import directives, see <a href="/~ilyaz/Math-Pari-2.01080605/PariInit.pm" class="podlinkpod"
+>Math::PariInit</a>.</p>
+
+<p>These values may be changed at runtime too, via allocatemem() and setprimelimit(), with performance penalties for recalculation/reallocation.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Ilya Zakharevich, <i>ilyaz@cpan.org</i></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78272 Uploads, 24723 Distributions
+106001 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 20:08:36 2012 GMT (0.0913259983062744) @cpansearch1 -->
+ </body>
+</html>

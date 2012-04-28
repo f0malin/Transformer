@@ -1,0 +1,59 @@
+Revision history for Perl extension Tatsumaki
+
+0.1013  Thu Jul  7 11:49:18 PDT 2011
+        - Added $self->binary(1) in Handler classes to indicate binary responses (gbarr, mateu)
+        - Allow $self->json to be set to customize the way JSON is encoded (ask)
+
+0.1012  Sun Feb 13 20:01:46 PST 2011
+        - No code changes. Updated terribly outdated Tatsumaki.pm POD
+
+0.1011  Tue Dec 21 11:49:49 PST 2010
+        - Fixed to use $r->parameters to make it work with newer Plack::Request
+        - Fixed MessageQueue leak when long-poll client immediately reconnects after disconnection (mash)
+
+0.1010  Wed Apr  7 15:48:43 PDT 2010
+        - INCOMPATIBLE: '/' in the mapping matches only with '/'. If you need the catch-all behavior,
+          use '/.*' instead.
+        - special case favicon.ico to serve from static/ directory
+        - Handlers now handle HEAD the same as GET by default
+
+0.1009  Tue Mar  2 14:31:15 PST 2010
+        - Fixed a rare condition where response starter returns something and garbage
+          collection breaks.
+        - Fixed dependency and depend on Twiggy not Plack::Server::AnyEvent (zamolxes)
+        - Removed BlockingFallback middleware
+
+0.1008  Sun Jan 31 14:16:02 PST 2010
+        - Fixed a MessageQueue bug where long poll cleanup timer is discarded
+          (Thanks to yoshimax, hiratara and jshirley)
+
+0.1007  Tue Dec 22 10:07:18 PST 2009
+        - Make Test::Warn test optional
+
+0.1006  Fri Dec 18 06:45:57 PST 2009
+        - Fixed a bug in ->psgi_app where it could potentially let $app object disappear
+
+0.1005  Sat Dec 12 00:57:20 PST 2009
+        - Fixed services conflicts with the latest Moose (hiratara)
+        - Use path_info rather than path to dispatch
+        - Push buffered events immediately in long-poll (hiratara)
+        - Fixed params bug where multiple values are flattened (ingy)
+
+0.1004  Tue Dec  8 07:21:24 PST 2009
+        - Fixed a memory leak in MessageQueue (jshirly)
+        - Added experimental methods to set and get services from Application
+
+0.1003  Mon Nov 16 21:38:04 PST 2009
+        - Revert to use Text::MicroTemplate::File for now
+
+0.1002  Mon Nov 16 18:03:50 PST 2009
+        - Remove client ID from MXHR example because it's not needed
+        - Specify lowest Mouse deps to make it work
+        - Delay load Text::MicroTemplate so you can use other template engines like TT2 (ingydotnet)
+        - Use Text::MicroTemplate::Extended by default (faultier, typester)
+
+0.1001  Wed Nov 11 23:30:24 PST 2009
+        - use Any::Moose: now all deps should run in pure perl, with optional XS speedups
+
+0.1000  Wed Nov 11 01:35:05 PST 2009
+        - Initial version to CPAN

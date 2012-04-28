@@ -1,0 +1,725 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Luka - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Luka",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Luka-1.08",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Luka",3]);
+    _gaq.push(["_setCustomVar",1,"Author","TPG",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Luka">permalink</a></div>
+  <a href="/~tpg/">Toni Prug</a> &gt;
+  <a href="/~tpg/Luka-1.08/">Luka-1.08</a> &gt;
+  Luka
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/e74e87357718ee0e3ccaf33ba3a1c36d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/T/TP/TPG/Luka-1.08.tar.gz">Luka-1.08.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Luka;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~TPG/Luka-1.08/lib/Luka.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Luka">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.08 &nbsp;
+<span class="noprint">
+  <a href="/src/TPG/Luka-1.08/lib/Luka.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Example_config'>Example config</a>
+    <li class='indexItem indexItem2'><a href='#Example_of_error_report'>Example of error report</a>
+    <li class='indexItem indexItem2'><a href='#Example_of_success_report'>Example of success report</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#LUKA_EVENT_DATA_MODEL'>LUKA EVENT DATA MODEL</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Structure'>Structure</a>
+    <li class='indexItem indexItem2'><a href='#Fields'>Fields</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#report'>report</a>
+    <li class='indexItem indexItem2'><a href='#report_success(_$message_)'>report_success( $message )</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DIAGNOSTICS'>DIAGNOSTICS</a>
+  <li class='indexItem indexItem1'><a href='#CONFIGURATION'>CONFIGURATION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#global_section'>global section</a>
+    <li class='indexItem indexItem2'><a href='#component_sections'>component sections</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DEPENDENCIES'>DEPENDENCIES</a>
+  <li class='indexItem indexItem1'><a href='#INCOMPATIBILITIES'>INCOMPATIBILITIES</a>
+  <li class='indexItem indexItem1'><a href='#BUGS_AND_LIMITATIONS'>BUGS AND LIMITATIONS</a>
+  <li class='indexItem indexItem1'><a href='#TODO'>TODO</a>
+  <li class='indexItem indexItem1'><a href='#ACKNOWLEDGEMENTS'>ACKNOWLEDGEMENTS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Luka - Exception handling and reporting framework</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Error qw(:try);
+    use Luka;
+  
+    try {
+
+        $ftp-&#62;login(&#34;someuser&#34;, &#34;somepass&#34;) ||
+            throw Luka::Exception::External
+                ( error =&#62; $ftp-&#62;message . $@, id =&#62; &#34;login&#34;,
+                  context =&#62; &#34;FTP error: couldn&#39;t login&#34;, severity =&#62; 3,
+                  args =&#62; &#34;user=someuser,pass=somepass&#34; );
+        
+    } catch Luka::Exception with {
+
+        my $e = shift;
+        $e-&#62;report;
+        return 17;
+
+    } catch Error with {
+
+        my $e = shift;
+        $e-&#62;report;
+        return 18;      
+
+    };</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Luka is an exception handling and reporting framework. It&#39;s useful to look at it as an event handling framework.</p>
+
+<p>It comes from operational understanding of networks.</p>
+
+<p>Scenario that Luka is addressing is following: on a network with multiple hosts running multiple applications, it is very difficult to track operational status of all the functionality that those applications and hosts are meant to deliver. In order to make it easier, we decided to specify the error handling and reporting data model that each component delivering functionality has to conform to. What is a component? In most cases, it is a script, often run from cronjob, in some cases it is a class in an application. In all cases, a component has to successfully complete a task on which functionality of an application, or entire network, relies on.</p>
+
+<p>It is common practice that programmers choose their way of handling errors and reporting. Luka is an attempt to standardize that process. Its primary goal is to make it easier for smaller number of people to keep larger number of applications and networks running.</p>
+
+<p>Policy on script error handling that Luka suggests:</p>
+
+<dl>
+<dt><a name='NO'></a><a name="NO_ERROR_CODES_are_used,_instead_exceptions_are_thrown"
+>NO ERROR CODES are used, instead exceptions are thrown</a></dt>
+
+<dd>
+<p>Already a common practice, especially in applications/components that are not small.</p>
+
+<dt><a name='Standard'></a><a name="Standard_set_of_error_english_names_is_established_(network_connection_error)"
+>Standard set of error english names is established (network connection error)</a></dt>
+
+<dd>
+<p>As opposed to each network library, for example, having it&#39;s own way to report connection error.</p>
+
+<dt><a name='Page'></a><a name="Page_for_each_component_(script/class)_documenting_relevant_details"
+>Page for each component (script/class) documenting relevant details</a></dt>
+
+<dd>
+<p>Already a common practice. Luka suggests that link to page describing all possible errors, along with dependencies and schedules (for components that run regularly), should exist. It is part of the Luka event data model.</p>
+
+<dt><a name='EACH'></a><a name="EACH_time_an_error_occurs_following_MUST_be_attempted:"
+>EACH time an error occurs following MUST be attempted:</a></dt>
+
+<dd>
+<dl>
+<dt><a name='1'></a><a name="1._Capture_defined_data_set"
+>1. Capture defined data set</a></dt>
+
+<dd>
+<dt><a name='2'></a><a name="2._Log_summary_to_to_system_log"
+>2. Log summary to to system log</a></dt>
+
+<dd>
+<dt><a name='3'></a><a name="3._attempt_delivery_to_end_points"
+>3. attempt delivery to end points</a></dt>
+</dl>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Example_config"
+>Example config</a></h2>
+
+<pre class="sh_perl">  [global]
+  debug=0
+  single_char_error_code=E
+  single_char_success_code=I
+  doc_base=<a href="http://localhost/" class="podlinkurl"
+>http://localhost/</a>
+  email_domain=lists.mydomain.org
+  syslogopt=pid,nowait
+  syslogfacility=daemon
+  expected_ip=10.1.8
+
+  [myscript.pl]
+  on_success=Task completed
+  doc=LukaTests
+  about=this library does something useful
+  from=root@localhost
+  cc=me@mydomain.org
+  nomail=0</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Example_of_error_report"
+>Example of error report</a></h2>
+
+<p>On an error caught, in syslog:</p>
+
+<pre class="sh_perl">  Feb 26 15:34:39 localhost myscript.pl[1298]: Luka initiating... 
+  Feb 26 15:34:39 localhost myscript.pl[1298]: Error at line 20: Net::FTP: Bad hostname &#39;bla.org&#39; at myscript.pl line 324.  
+  Feb 26 15:34:39 localhost myscript.pl[1298]: Error report sent to myscript.pl@lists.mydomain.org,me@mydomain.org</pre>
+
+<p>Email headers:</p>
+
+<pre class="sh_perl">  From: root@localhost
+  To: myscript.pl@lists.mydomain.org
+  Cc: me@mydomain.org
+  Subject: [galeb][2006-2-26T15:34:42][E] Net::FTP: Bad hostname &#39;bla.org&#39;</pre>
+
+<p>Event (used verbatim in email body):</p>
+
+<pre class="sh_perl">  this library does something useful
+
+  <a href="http://localhost/LukaTests#ftp_object_creation" class="podlinkurl"
+>http://localhost/LukaTests#ftp_object_creation</a>
+
+  host=galeb
+  hosterr=
+  ipaddr=10.1.8.18
+  time=2006-2-26T15:34:42
+  script=myscript.pl
+  path=/home/toni/dev/cvs/perl/modules/luka
+  line=245
+  pid=1298
+  severity=3
+  context=FTP error: couldn&#39;t create object
+  args=ftp.false
+  id=ftp_object_creation
+  error=Net::FTP: Bad hostname &#39;bla.org&#39; 
+
+  Trace begun at myscript.pl line 245
+  main::__ANON__ at /usr/local/share/perl/5.8.7/Error.pm line 372
+  eval {...} at /usr/local/share/perl/5.8.7/Error.pm line 371
+  Error::subs::try at myscript.pl line 255
+  main::ftp_luka_catch at myscript.pl line 123
+  main::__ANON__ at /usr/local/share/perl/5.8.7/Test/Exception.pm line 281
+  eval {...} at /usr/local/share/perl/5.8.7/Test/Exception.pm line 281
+  Test::Exception::lives_and at myscript.pl line 124</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Example_of_success_report"
+>Example of success report</a></h2>
+
+<p>On a captured report, in syslog:</p>
+
+<pre class="sh_perl">  Feb 26 15:34:22 localhost myscript.pl[1273]: Luka initiating... 
+  Feb 26 15:34:22 localhost myscript.pl[1273]: Success report sent to myscript.pl@lists.mydomain.org,me@mydomain.org</pre>
+
+<p>Email headers:</p>
+
+<pre class="sh_perl">  From: root@localhost
+  To: myscript.pl@lists.mydomain.org
+  Cc: me@mydomain.org
+  Subject: [galeb][2006-2-26T15:34:22][I] Task completed</pre>
+
+<p>Event (used verbatim in email body):</p>
+
+<pre class="sh_perl">  this library does something useful
+
+  <a href="http://localhost/LukaTests" class="podlinkurl"
+>http://localhost/LukaTests</a>
+
+  host=galeb
+  hosterr=
+  ipaddr=10.1.8.18
+  time=2006-2-26T15:34:22
+  script=myscript.pl
+  pid=1273</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LUKA_EVENT_DATA_MODEL"
+>LUKA EVENT DATA MODEL <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Structure"
+>Structure</a></h2>
+
+<pre class="sh_perl">  ABOUT COMPONENT
+  \n
+  DOC
+  \n
+  attribute=value
+  attribute=value
+  attribute=value
+  attribute=attribute=value,attribute=value
+  attribute=value
+  \n
+  \n
+  STACKTRACE</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Fields"
+>Fields</a></h2>
+
+<blockquote>
+<p><b>ABOUT COMPONENT</b> Comes from config file component section.</p>
+
+<p><b>DOC</b> Location of the documentation. Can be URL, or some other protocol address. Can be specific to the error reported, or component general. Comes from config file component section.</p>
+
+<p><b>host</b> - Name of the host where the event originates from. Collected.</p>
+
+<p><b>hosterr</b> - Name of the services that Luka couldn&#39;t use as expected on the host. Collected. The only possible value is, at the moment, <i>syslogd</i>.</p>
+
+<p><b>ipaddr</b> - IP address of the host. Collected. When multiple IPs present (most cases), regular expression matching one from the configuration file field <code>expected_ip</code> will be chosen.</p>
+
+<p><b>time</b> - Timestamp, conforming to RFC3339 &#34;Date and Time on the Internet: Timestamps&#34;, see <a href="http://www.ietf.org/rfc/rfc3339.txt" class="podlinkurl"
+>http://www.ietf.org/rfc/rfc3339.txt</a>. Example: <code>2006-2-26T15:34:42</code>. Constructed out of host time.</p>
+
+<p><b>script</b> - Name of the component that generated event. Collected.</p>
+
+<p><b>pid</b> - Process ID of the component that generated the event. Collected from the host.</p>
+
+<p><b>path</b> - Path to the component that generated event. Collected. Error event only.</p>
+
+<p><b>line</b> - Line number where event generation occurred. Collected. Error event only. Error event only.</p>
+
+<p><b>severity</b> - Severity level of the event (ambiguous, see TODO section). Supplied by the programmer at the location of event creation. Error event only.</p>
+
+<p><b>context</b> - Descriptive text, context of the event. Specific to the functionality that components performs from the user perspective, rather than from the strictly technical perspective of programming libraries. Supplied by the programmer at the location of event creation. Error event only.</p>
+
+<p><b>args</b> - Arguments relevant for the event generated (passed to the function, object). Supplied by the programmer at the location of event creation. Error event only.</p>
+
+<p><b>id</b> - ID of the event. Supplied by the programmer at the location of event creation. Matches the documentation for the component. Error event only.</p>
+
+<p><b>error</b> - Technical text of the error. Supplied by the programmer at the location of event creation. Supplement to the <code>context</code> field, from the technical perspective, can contain error text returned by used programming library. Error event only.</p>
+</blockquote>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="report"
+>report</a></h2>
+
+<p>Luka report to syslog what happens by default.</p>
+
+<pre class="sh_perl">  Aug 26 11:27:49 localhost myscript.pl[1038]: Error at line 46: Net::FTP: Bad hostname
+  &#39;ftp.bla.bla&#39; at myscript.pl line 80.  
+
+  Aug 26 11:27:49 localhost myscript.pl[1038]: Error report sent to myscript.pl@lists.mydomain.org</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="report_success(_$message_)"
+>report_success( $message )</a></h2>
+
+<p>If the <code>$message</code> is not supplied, value of the field <code>on_success</code> from the component section of Luka configuration file will be used.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIAGNOSTICS"
+>DIAGNOSTICS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='Luka'></a><a name="Luka_system_not_functional_for_&#39;%s&#39;_script._Couldn&#39;t_read_its_section_&#39;%s&#39;_in_config_file_&#39;%s&#39;"
+><code>Luka system not functional for &#39;%s&#39; script. Couldn&#39;t read its section &#39;%s&#39; in config file &#39;%s&#39;</code></a></dt>
+
+<dd>
+<p>Throws Luka::Exception::Program exception. Luka can not deliver event if section for given script is missing in given config. Sections are by default named by the script name.</p>
+
+<dt><a name='Luka'></a><a name="Luka_system_disabled._Couldn&#39;t_read_its_config_file_&#39;%s&#39;:_%s"
+><code>Luka system disabled. Couldn&#39;t read its config file &#39;%s&#39;: %s</code></a></dt>
+
+<dd>
+<p>Throws Luka::Exception::Program exception. Luka can not do anything if its config file is missing or can not be parsed. However, if syslogd is running, it will place a warning in syslog:</p>
+
+<pre class="sh_perl">  Feb 26 12:26:59 localhost Luka::Conf[30438]: Luka system disabled. Couldn&#39;t read its config file &#39;bla.txt&#39;:
+  Failed to open bla.txt: No such file or directory at lib/Luka/Conf.pm line 63</pre>
+
+<dt><a name='Couldn'></a><a name="Couldn&#39;t_report_by_email_to:%s;cc:%s;from:%s"
+><code>Couldn&#39;t report by email to:%s;cc:%s;from:%s</code></a></dt>
+
+<dd>
+<p>Throws Luka::Exception::External. If MTA is not running, or if Luka can not connect to it, stdout will receive:</p>
+
+<pre class="sh_perl">  ERROR: Can&#39;t connect to localhost:25
+  Couldn&#39;t report by email to:test@localhost;cc:toni@localhost;from:root@localhost</pre>
+
+<p>In the syslog, warning will be:</p>
+
+<pre class="sh_perl">  Feb 26 13:42:08 localhost myscript.pl[3071]: Couldn&#39;t report by email: to: myscript.pl@lists.mydomain.org,
+  cc: me@mydomain.org, from: root@localhost 
+
+  Feb 26 13:42:08 localhost myscript.pl[3071]: Mail system reported: ERROR: Can&#39;t connect to localhost:25</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONFIGURATION"
+>CONFIGURATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="global_section"
+>global section</a></h2>
+
+<p>Single section, applies to the host on which Luka runs.</p>
+
+<pre class="sh_perl">  [global]
+  debug=0
+  single_char_error_code=E
+  single_char_success_code=I
+  doc_base=<a href="http://localhost/" class="podlinkurl"
+>http://localhost/</a>
+  email_domain=lists.mydomain.org
+  syslogopt=pid,nowait
+  syslogfacility=daemon
+  expected_ip=10.1.8</pre>
+
+<p>Fields:</p>
+
+<blockquote>
+<p><b>debug</b> - Turns debugging mode on when set to 1.</p>
+
+<p><b>single_char_error_code</b> - Delivery field. Single character error code. Default is &#34;E&#34;. In email delivery, part of header SUBJECT field.</p>
+
+<p><b>single_char_success_code</b> - Delivery field. Single character success code. Default is &#34;I&#34;. In email delivery, part of header SUBJECT field.</p>
+
+<p><b>doc_base</b> - Event field. Base part of the DOC field in the event data model.</p>
+
+<p><b>email_domain</b> Delivery field. Email. Domain part of the header TO field.</p>
+
+<p><b>syslogopt</b> <i>$logopt</i> options passed to Sys::Syslog&#39;s <i>openlog</i> function</p>
+
+<p><b>syslogfacility</b> <i>$facility</i> option passed to Sys::Syslog&#39;s <i>openlog</i> function</p>
+
+<p><b>expected_ip</b> Event field. See above IPADDR field in the event data model. Luka discovers IPs on the host. Since multiple IPs are present in most cases, regular expression matching one from this configuration file field <i>expected_ip</i> will be selected. This would be a drawback on a host with many interfaces, and solution with fixed IP would be a lot more efficient in that case.</p>
+</blockquote>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="component_sections"
+>component sections</a></h2>
+
+<p>One or more sections, applies to components programmed to use Luka.</p>
+
+<pre class="sh_perl">  [myscript.pl]
+  on_success=Task completed
+  doc=LukaTests
+  about=this library does something useful
+  from=root@localhost
+  cc=me@mydomain.org
+  nomail=0</pre>
+
+<p>Fields:</p>
+
+<blockquote>
+<p><b>on_success</b> - Delivery field. In email delivery, part of header SUBJECT field.</p>
+
+<p><b>doc</b> - Event field. Component part of the DOC field in the event data model.</p>
+
+<p><b>about</b> - Event field. See above COMPONENT field in the event data model.</p>
+
+<p><b>from</b> - Delivery field. Email. Header FROM field.</p>
+
+<p><b>cc</b> - Delivery field. Email. Header CC field.</p>
+
+<p><b>nomail</b> - If set to 1, event will not be delivered via email.</p>
+</blockquote>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DEPENDENCIES"
+>DEPENDENCIES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li><a href="/perldoc?Error" class="podlinkpod"
+>Error</a> - implementation of try/catch syntax</li>
+
+<li><a href="/perldoc?Exception%3A%3AClass" class="podlinkpod"
+>Exception::Class</a> - easy definition of hierarchy of exception classes</li>
+
+<li><a href="/perldoc?Config%3A%3AIniFiles" class="podlinkpod"
+>Config::IniFiles</a> - config file handling</li>
+
+<li><a href="/perldoc?Sys%3A%3ASyslog" class="podlinkpod"
+>Sys::Syslog</a> - writing to syslog</li>
+
+<li><a href="/perldoc?Sys%3A%3AHostname" class="podlinkpod"
+>Sys::Hostname</a> - determining hostname</li>
+
+<li><a href="/perldoc?Sys%3A%3AHostname%3A%3ALong" class="podlinkpod"
+>Sys::Hostname::Long</a> - determining hostname</li>
+
+<li><a href="/perldoc?Mail%3A%3ASendEasy" class="podlinkpod"
+>Mail::SendEasy</a> - sending reports by email</li>
+
+<li><a href="/perldoc?Class%3A%3AStd" class="podlinkpod"
+>Class::Std</a> - inside/out classes builder</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INCOMPATIBILITIES"
+>INCOMPATIBILITIES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Mod-perl, due to use of Class::Std. I wasn&#39;t aware of Class::Std limitations at the time of writing Luka. There are other implementations of inside-out classes on CPAN that should be used as replacements in of next releases of Luka. At the moment, best candidate seems to be <a href="/perldoc?Object%3A%3AInsideOut" class="podlinkpod"
+>Object::InsideOut</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS_AND_LIMITATIONS"
+>BUGS AND LIMITATIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Please report any bugs or feature requests to <code>bug-luka@rt.cpan.org</code>, or through the web interface at <a href="http://rt.cpan.org" class="podlinkurl"
+>http://rt.cpan.org</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TODO"
+>TODO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='mod'></a><a name="mod-perl_compatibility"
+>mod-perl compatibility</a></dt>
+
+<dd>
+<p>Migration from Class::Std to Object::InsideOut, or some other inside-out class.</p>
+
+<dt><a name='severity'></a><a name="severity_definitions"
+>severity definitions</a></dt>
+
+<dd>
+<p>Severity needs defining, according to appropriate existing standard.</p>
+
+<dt><a name='date'></a><a name="date-time_format,_timezone_missing"
+>date-time format, timezone missing</a></dt>
+
+<dd>
+<p>Timezone needs adding to the date-time (RFC 3339) format.</p>
+
+<dt><a name='report'></a><a name="report_delivery_mechanism_abstraction"
+>report delivery mechanism abstraction</a></dt>
+
+<dd>
+<p>Reporting is also event delivery, and event delivery can be done in many ways. Currently, email is hardcoded as a delivery mechanism. Instead, reporting delivery has to be configurable. It could be done via dynamic loading (from a value in the config) of class implementing desired mechanism.</p>
+
+<dt><a name='reporting'></a><a name="reporting_to_syslog_config_setting"
+>reporting to syslog config setting</a></dt>
+
+<dd>
+<p>It is default now that Luka method <code>report</code> uses syslog for short reporting. It should be made optional, in global, and script, setting. Global config setting should be default; individual script setting should override it.</p>
+
+<dt><a name='event'></a><a name="event_delivery_on_missing_component_section"
+>event delivery on missing component section</a></dt>
+
+<dd>
+<p>When a section for component is missing in the config file, exception is thrown (see DIAGNOSTICS above). Instead, event should still be delivered, as long as relevant details about the destination of delivery are in the global part of the Luka configuration file.</p>
+
+<dt><a name='improve'></a><a name="improve_documentation"
+>improve documentation</a></dt>
+
+<dd>
+<p>Documentation needs careful re-reading and improving. Any comments on this especially appreciated.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ACKNOWLEDGEMENTS"
+>ACKNOWLEDGEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Ideas for underlining premises of Luka came out of discussions with Bill Hulley.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Toni Prug &#60;toni@irational.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2006. Toni Prug. All rights reserved.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA</p>
+
+<p>See <a href="http://www.gnu.org/licenses/gpl.html" class="podlinkurl"
+>http://www.gnu.org/licenses/gpl.html</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78105 Uploads, 24690 Distributions
+105909 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Mon Apr 23 02:48:39 2012 GMT (0.149750947952271) @cpansearch1 -->
+ </body>
+</html>

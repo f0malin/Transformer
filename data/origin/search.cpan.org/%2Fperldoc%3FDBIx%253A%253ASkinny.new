@@ -1,0 +1,904 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>DBIx::Skinny - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","DBIx-Skinny",3]);
+    _gaq.push(["_setCustomVar",5,"Release","DBIx-Skinny-0.0742",3]);
+    _gaq.push(["_setCustomVar",3,"Module","DBIx::Skinny",3]);
+    _gaq.push(["_setCustomVar",1,"Author","NEKOKAK",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?DBIx::Skinny">permalink</a></div>
+  <a href="/~nekokak/">Atsushi Kobayashi</a> &gt;
+  <a href="/~nekokak/DBIx-Skinny-0.0742/">DBIx-Skinny-0.0742</a> &gt;
+  DBIx::Skinny
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/a9932ed86fc5822e91de91364727fe6f?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/N/NE/NEKOKAK/DBIx-Skinny-0.0742.tar.gz">DBIx-Skinny-0.0742.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=DBIx%3A%3ASkinny;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~NEKOKAK/DBIx-Skinny-0.0742/lib/DBIx/Skinny.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=DBIx-Skinny">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.0742 &nbsp;
+<span class="noprint">
+  <a href="/src/NEKOKAK/DBIx-Skinny-0.0742/lib/DBIx/Skinny.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#ARCHITECTURE'>ARCHITECTURE</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#MODEL'>MODEL</a>
+    <li class='indexItem indexItem2'><a href='#SCHEMA'>SCHEMA</a>
+    <li class='indexItem indexItem2'><a href='#ROW'>ROW</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <li class='indexItem indexItem1'><a href='#ATTRIBUTES'>ATTRIBUTES</a>
+  <li class='indexItem indexItem1'><a href='#ENVIRONMENT_VARIABLES'>ENVIRONMENT VARIABLES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#SKINNY_PROFILE'>SKINNY_PROFILE</a>
+    <li class='indexItem indexItem2'><a href='#SKINNY_TRACE'>SKINNY_TRACE</a>
+    <li class='indexItem indexItem2'><a href='#TRIGGER'>TRIGGER</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#BUGS_AND_LIMITATIONS'>BUGS AND LIMITATIONS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#CONTRIBUTORS'>CONTRIBUTORS</a>
+  <li class='indexItem indexItem1'><a href='#SUPPORT'>SUPPORT</a>
+  <li class='indexItem indexItem1'><a href='#REPOSITORY'>REPOSITORY</a>
+  <li class='indexItem indexItem1'><a href='#LICENCE_AND_COPYRIGHT'>LICENCE AND COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DBIx::Skinny - simple DBI wrapper/ORMapper</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>create your db model base class.</p>
+
+<pre class="sh_perl">    package Your::Model;
+    use DBIx::Skinny connect_info =&#62; {
+        dsn =&#62; &#39;dbi:SQLite:&#39;,
+        username =&#62; &#39;&#39;,
+        password =&#62; &#39;&#39;,
+    };
+    1;</pre>
+
+<p>create your db schema class. See DBIx::Skinny::Schema for docs on defining schema class.</p>
+
+<pre class="sh_perl">    package Your::Model::Schema;
+    use DBIx::Skinny::Schema;
+    
+    install_table user =&#62; schema {
+        pk &#39;id&#39;;
+        columns qw/
+            id
+            name
+        /;
+    };
+    1;</pre>
+
+<p>in your script.</p>
+
+<pre class="sh_perl">    use Your::Model;
+    
+    my $skinny = Your::Model-&#62;new;
+    # insert new record.
+    my $row = $skinny-&#62;insert(&#39;user&#39;,
+        {
+            id   =&#62; 1,
+        }
+    );
+    $row-&#62;update({name =&#62; &#39;nekokak&#39;});
+
+    $row = $skinny-&#62;search_by_sql(q{SELECT id, name FROM user WHERE id = ?}, [ 1 ]);
+    $row-&#62;delete(&#39;user&#39;);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DBIx::Skinny is simple DBI wrapper and simple O/R Mapper. It aims to be lightweight, with minimal dependencies so it&#39;s easier to install.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ARCHITECTURE"
+>ARCHITECTURE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DBIx::Skinny classes are comprised of three distinct components:</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="MODEL"
+>MODEL</a></h2>
+
+<p>The <code>model</code> is where you say</p>
+
+<pre class="sh_perl">    package MyApp::Model;
+    use DBIx::Skinny;</pre>
+
+<p>This is the entry point to using DBIx::Skinny. You connect, insert, update, delete, select stuff using this object.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SCHEMA"
+>SCHEMA</a></h2>
+
+<p>The <code>schema</code> is a simple class that describes your table definitions. Note that this is different from DBIx::Class terms. DBIC&#39;s schema is equivalent to DBIx::Skinny&#39;s model + schema, where the actual schema information is scattered across the result classes.</p>
+
+<p>In DBIx::Skinny, you simply use DBIx::Skinny::Schema&#39;s domain specific languaage to define a set of tables</p>
+
+<pre class="sh_perl">    package MyApp::Model::Schema;
+    use DBIx::Skinny::Schema;
+
+    install_table $table_name =&#62; schema {
+        pk $primary_key_column;
+        columns qw(
+            column1
+            column2
+            column3
+        );
+    }
+
+    ... and other tables ...</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="ROW"
+>ROW</a></h2>
+
+<p>Unlike DBIx::Class, you don&#39;t need to have a set of classes that represent a row type (i.e. &#34;result&#34; classes in DBIC terms). In DBIx::Skinny, the row objects are blessed into anonymous classes that inherit from DBIx::Skinny::Row, so you don&#39;t have to create these classes if you just want to use some simple queries.</p>
+
+<p>If you want to define methods to be performed by your row objects, simply create a row class like so:</p>
+
+<pre class="sh_perl">    package MyApp::Model::Row::CamelizedTableName;
+    use base qw(DBIx::Skinny::Row);</pre>
+
+<p>Note that your table name will be camelized using String::CamelCase.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DBIx::Skinny provides a number of methods to all your classes,</p>
+
+<dl>
+<dt><a name='skinny'></a><a name="$skinny-&#62;new([\%connection_info])"
+>$skinny-&#62;new([\%connection_info])</a></dt>
+
+<dd>
+<p>create your skinny instance. It is possible to use it even by the class method.</p>
+
+<p>$connection_info is optional argment.</p>
+
+<p>When $connection_info is specified, new method connect new DB connection from $connection_info.</p>
+
+<p>When $connection_info is not specified, it becomes use already setup connection or it doesn&#39;t do at all.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl">    my $db = Your::Model-&#62;new;</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">    # connect new database connection.
+    my $db = Your::Model-&#62;new(+{
+        dsn      =&#62; $dsn,
+        username =&#62; $username,
+        password =&#62; $password,
+        connect_options =&#62; $connect_options,
+    });</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">    my $dbh = DBI-&#62;connect();
+    my $db = Your::Model-&#62;new(+{
+        dbh =&#62; $dbh,
+    });</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;insert($table_name,_\%row_data)"
+>$skinny-&#62;insert($table_name, \%row_data)</a></dt>
+
+<dd>
+<p>insert new record and get inserted row object.</p>
+
+<p>if insert to table has auto increment then return $row object with fill in key column by last_insert_id.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl">    my $row = Your::Model-&#62;insert(&#39;user&#39;,{
+        id   =&#62; 1,
+        name =&#62; &#39;nekokak&#39;,
+    });
+    say $row-&#62;id; # show last_insert_id()</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">    my $db = Your::Model-&#62;new;
+    my $row = $db-&#62;insert(&#39;user&#39;,{
+        id   =&#62; 1,
+        name =&#62; &#39;nekokak&#39;,
+    });</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;create($table_name,_\%row_data)"
+>$skinny-&#62;create($table_name, \%row_data)</a></dt>
+
+<dd>
+<p>insert method alias.</p>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;replace($table_name,_\%row_data)"
+>$skinny-&#62;replace($table_name, \%row_data)</a></dt>
+
+<dd>
+<p>The data that already exists is replaced.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl">    Your::Model-&#62;replace(&#39;user&#39;,{
+        id   =&#62; 1,
+        name =&#62; &#39;tokuhirom&#39;,
+    });</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">    my $db = Your::Model-&#62;new;
+    my $row = $db-&#62;replace(&#39;user&#39;,{
+        id   =&#62; 1,
+        name =&#62; &#39;tokuhirom&#39;,
+    });</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;bulk_insert($table_name,_\@rows_data)"
+>$skinny-&#62;bulk_insert($table_name, \@rows_data)</a></dt>
+
+<dd>
+<p>Accepts either an arrayref of hashrefs. each hashref should be a structure suitable forsubmitting to a Your::Model-&#62;insert(...) method.</p>
+
+<p>insert many record by bulk.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl">    Your::Model-&#62;bulk_insert(&#39;user&#39;,[
+        {
+            id   =&#62; 1,
+            name =&#62; &#39;nekokak&#39;,
+        },
+        {
+            id   =&#62; 2,
+            name =&#62; &#39;yappo&#39;,
+        },
+        {
+            id   =&#62; 3,
+            name =&#62; &#39;walf443&#39;,
+        },
+    ]);</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;update($table_name,_\%update_row_data,_[\%update_condition])"
+>$skinny-&#62;update($table_name, \%update_row_data, [\%update_condition])</a></dt>
+
+<dd>
+<p>$update_condition is optional argment.</p>
+
+<p>update record.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl">    my $update_row_count = Your::Model-&#62;update(&#39;user&#39;,{
+        name =&#62; &#39;nomaneko&#39;,
+    },{ id =&#62; 1 });</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">    # see) DBIx::Skinny::Row&#39;s POD
+    my $row = Your::Model-&#62;single(&#39;user&#39;,{id =&#62; 1});
+    $row-&#62;update({name =&#62; &#39;nomaneko&#39;});</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;update_by_sql($sql,_[\@bind_values])"
+>$skinny-&#62;update_by_sql($sql, [\@bind_values])</a></dt>
+
+<dd>
+<p>update record by specific sql. return update row count.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl">    my $update_row_count = Your::Model-&#62;update_by_sql(
+        q{UPDATE user SET name = ?},
+        [&#39;nomaneko&#39;]
+    );</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;delete($table,_\%delete_condition)"
+>$skinny-&#62;delete($table, \%delete_condition)</a></dt>
+
+<dd>
+<p>delete record. return delete row count.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl">    my $delete_row_count = Your::Model-&#62;delete(&#39;user&#39;,{
+        id =&#62; 1,
+    });</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">    # see) DBIx::Skinny::Row&#39;s POD
+    my $row = Your::Model-&#62;single(&#39;user&#39;, {id =&#62; 1});
+    $row-&#62;delete</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;delete_by_sql($sql,_\@bind_values)"
+>$skinny-&#62;delete_by_sql($sql, \@bind_values)</a></dt>
+
+<dd>
+<p>delete record by specific sql. return delete row count.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl">    my $delete_row_count = Your::Model-&#62;delete_by_sql(
+        q{DELETE FROM user WHERE id = ?},
+        [1]
+    });</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;find_or_create($table,_\%values)"
+>$skinny-&#62;find_or_create($table, \%values)</a></dt>
+
+<dd>
+<p>create record if not exsists record.</p>
+
+<p>return DBIx::Skinny::Row&#39;s instance object.</p>
+
+<p>example:</p>
+
+<pre class="sh_perl">    my $row = Your::Model-&#62;find_or_create(&#39;usr&#39;,{
+        id   =&#62; 1,
+        name =&#62; &#39;nekokak&#39;,
+    });</pre>
+
+<p>NOTICE: find_or_create has bug.</p>
+
+<p>reproduction example:</p>
+
+<pre class="sh_perl">    my $row = Your::Model-&#62;find_or_create(&#39;user&#39;,{
+        id   =&#62; 1,
+        name =&#62; undef,
+    });</pre>
+
+<p>In this case, it becomes an error by insert.</p>
+
+<p>If you want to do the same thing in this case,</p>
+
+<pre class="sh_perl">    my $row = Your::Model-&#62;single(&#39;user&#39;, {
+        id   =&#62; 1,
+        name =&#62; \&#39;IS NULL&#39;,
+    })
+    unless ($row) {
+        Your::Model-&#62;insert(&#39;user&#39;, {
+            id =&#62; 1,
+        });
+    }</pre>
+
+<p>Because the interchangeable rear side is lost, it doesn&#39;t mend.</p>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;find_or_insert($table,_\%values)"
+>$skinny-&#62;find_or_insert($table, \%values)</a></dt>
+
+<dd>
+<p>find_or_create method alias.</p>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;search($table_name,_[\%search_condition,_[\%search_attr]])"
+>$skinny-&#62;search($table_name, [\%search_condition, [\%search_attr]])</a></dt>
+
+<dd>
+<p>simple search method. search method get DBIx::Skinny::Iterator&#39;s instance object.</p>
+
+<p>see <a href="/~nekokak/DBIx-Skinny-0.0742/lib/DBIx/Skinny/Iterator.pm" class="podlinkpod"
+>DBIx::Skinny::Iterator</a></p>
+
+<p>get iterator:</p>
+
+<pre class="sh_perl">    my $itr = Your::Model-&#62;search(&#39;user&#39;,{id =&#62; 1},{order_by =&#62; &#39;id&#39;});</pre>
+
+<p>get rows:</p>
+
+<pre class="sh_perl">    my @rows = Your::Model-&#62;search(&#39;user&#39;,{id =&#62; 1},{order_by =&#62; &#39;id&#39;});</pre>
+
+<p>See <a href="#ATTRIBUTES" class="podlinkpod"
+>&#34;ATTRIBUTES&#34;</a> for more information for \%search_attr.</p>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;search_rs($table_name,_[\%search_condition,_[\%search_attr]])"
+>$skinny-&#62;search_rs($table_name, [\%search_condition, [\%search_attr]])</a></dt>
+
+<dd>
+<p>simple search method. search_rs method always get DBIx::Skinny::Iterator&#39;s instance object.</p>
+
+<p>This method does the same exact thing as search() except it will always return a iterator, even in list context.</p>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;single($table_name,_\%search_condition)"
+>$skinny-&#62;single($table_name, \%search_condition)</a></dt>
+
+<dd>
+<p>get one record. give back one case of the beginning when it is acquired plural records by single method.</p>
+
+<pre class="sh_perl">    my $row = Your::Model-&#62;single(&#39;user&#39;,{id =&#62;1});</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;resultset(\%options)"
+>$skinny-&#62;resultset(\%options)</a></dt>
+
+<dd>
+<p>resultset case:</p>
+
+<pre class="sh_perl">    my $rs = Your::Model-&#62;resultset(
+        {
+            select =&#62; [qw/id name/],
+            from   =&#62; [qw/user/],
+        }
+    );
+    $rs-&#62;add_where(&#39;name&#39; =&#62; {op =&#62; &#39;like&#39;, value =&#62; &#34;%neko%&#34;});
+    $rs-&#62;limit(10);
+    $rs-&#62;offset(10);
+    $rs-&#62;order({ column =&#62; &#39;id&#39;, desc =&#62; &#39;DESC&#39; });
+    my $itr = $rs-&#62;retrieve;</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;count($table_name,_$target_column,_[\%search_condition])"
+>$skinny-&#62;count($table_name, $target_column, [\%search_condition])</a></dt>
+
+<dd>
+<p>get simple count</p>
+
+<pre class="sh_perl">    my $cnt = Your::Model-&#62;count(&#39;user&#39; =&#62; &#39;id&#39;, {age =&#62; 30});</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;search_named($sql,_[\%bind_values,_[\@sql_parts,_[$table_name]]])"
+>$skinny-&#62;search_named($sql, [\%bind_values, [\@sql_parts, [$table_name]]])</a></dt>
+
+<dd>
+<p>execute named query</p>
+
+<pre class="sh_perl">    my $itr = Your::Model-&#62;search_named(q{SELECT * FROM user WHERE id = :id}, {id =&#62; 1});</pre>
+
+<p>If you give ArrayRef to value, that is expanded to &#34;(?,?,?,?)&#34; in SQL. It&#39;s useful in case use IN statement.</p>
+
+<pre class="sh_perl">    # SELECT * FROM user WHERE id IN (?,?,?);
+    # bind [1,2,3]
+    my $itr = Your::Model-&#62;search_named(q{SELECT * FROM user WHERE id IN :ids}, {ids =&#62; [1, 2, 3]});</pre>
+
+<p>If you give \@sql_parts,</p>
+
+<pre class="sh_perl">    # SELECT * FROM user WHERE id IN (?,?,?) AND unsubscribed_at IS NOT NULL;
+    # bind [1,2,3]
+    my $itr = Your::Model-&#62;search_named(q{SELECT * FROM user WHERE id IN :ids %s}, {ids =&#62; [1, 2, 3]}, [&#39;AND unsubscribed_at IS NOT NULL&#39;]);</pre>
+
+<p>If you give table_name. It is assumed the hint that makes DBIx::Skinny::Row&#39;s Object.</p>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;search_by_sql($sql,_[\@bind_vlues,_[$table_name]])"
+>$skinny-&#62;search_by_sql($sql, [\@bind_vlues, [$table_name]])</a></dt>
+
+<dd>
+<p>execute your SQL</p>
+
+<pre class="sh_perl">    my $itr = Your::Model-&#62;search_by_sql(q{
+        SELECT
+            id, name
+        FROM
+            user
+        WHERE
+            id = ?
+    },[ 1 ]);</pre>
+
+<p>If $opt_table_info is specified, it set table infomation to result iterator. So, you can use table row class to search_by_sql result.</p>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;txn_scope"
+>$skinny-&#62;txn_scope</a></dt>
+
+<dd>
+<p>get transaction scope object.</p>
+
+<pre class="sh_perl">    do {
+        my $txn = Your::Model-&#62;txn_scope;
+
+        $row-&#62;update({foo =&#62; &#39;bar&#39;});
+
+        $txn-&#62;commit;
+    }</pre>
+
+<p>An alternative way of transaction handling based on <a href="/perldoc?DBIx%3A%3ASkinny%3A%3ATransaction" class="podlinkpod"
+>DBIx::Skinny::Transaction</a>.</p>
+
+<p>If an exception occurs, or the guard object otherwise leaves the scope before <code>$txn-&#62;commit</code> is called, the transaction will be rolled back by an explicit <a href="#txn_rollback" class="podlinkpod"
+>&#34;txn_rollback&#34;</a> call. In essence this is akin to using a <a href="#txn_begin" class="podlinkpod"
+>&#34;txn_begin&#34;</a>/<a href="#txn_commit" class="podlinkpod"
+>&#34;txn_commit&#34;</a> pair, without having to worry about calling <a href="#txn_rollback" class="podlinkpod"
+>&#34;txn_rollback&#34;</a> at the right places. Note that since there is no defined code closure, there will be no retries and other magic upon database disconnection.</p>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;hash_to_row($table_name,_$row_data_hash_ref)"
+>$skinny-&#62;hash_to_row($table_name, $row_data_hash_ref)</a></dt>
+
+<dd>
+<p>make DBIx::Skinny::Row&#39;s class from hash_ref.</p>
+
+<pre class="sh_perl">    my $row = Your::Model-&#62;hash_to_row(&#39;user&#39;,
+        {
+            id   =&#62; 1,
+            name =&#62; &#39;lestrrat&#39;,
+        }
+    );</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;data2itr($table_name,_\@rows_data)"
+>$skinny-&#62;data2itr($table_name, \@rows_data)</a></dt>
+
+<dd>
+<p>DBIx::Skinny::Iterator is made based on \@rows_data.</p>
+
+<pre class="sh_perl">    my $itr = Your::Model-&#62;data2itr(&#39;user&#39;,[
+        {
+            id   =&#62; 1,
+            name =&#62; &#39;nekokak&#39;,
+        },
+        {
+            id   =&#62; 2,
+            name =&#62; &#39;yappo&#39;,
+        },
+        {
+            id   =&#62; 3,
+            name =&#62; &#39;walf43&#39;,
+        },
+    ]);
+
+    my $row = $itr-&#62;first;
+    $row-&#62;insert; # inser data.</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;find_or_new($table_name,_\%row_data)"
+>$skinny-&#62;find_or_new($table_name, \%row_data)</a></dt>
+
+<dd>
+<p>Find an existing record from database.</p>
+
+<p>If none exists, instantiate a new row object and return it.</p>
+
+<p>The object will not be saved into your storage until you call &#34;insert&#34; in DBIx::Skinny::Row on it.</p>
+
+<pre class="sh_perl">    my $row = Your::Model-&#62;find_or_new(&#39;user&#39;,{name =&#62; &#39;nekokak&#39;});</pre>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;do($sql,_[$option,_$bind_values])"
+>$skinny-&#62;do($sql, [$option, $bind_values])</a></dt>
+
+<dd>
+<p>execute your query.</p>
+
+<p>See) <a href="http://search.cpan.org/dist/DBI/DBI.pm#do" class="podlinkurl"
+>http://search.cpan.org/dist/DBI/DBI.pm#do</a></p>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;dbh"
+>$skinny-&#62;dbh</a></dt>
+
+<dd>
+<p>get database handle.</p>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;connect([\%connection_info])"
+>$skinny-&#62;connect([\%connection_info])</a></dt>
+
+<dd>
+<p>connect database handle.</p>
+
+<p>If you give \%connection_info, create new database connection.</p>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;reconnect(\%connection_info)"
+>$skinny-&#62;reconnect(\%connection_info)</a></dt>
+
+<dd>
+<p>re connect database handle.</p>
+
+<p>If you give \%connection_info, create new database connection.</p>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;disconnect()"
+>$skinny-&#62;disconnect()</a></dt>
+
+<dd>
+<p>Disconnects from the currently connected database.</p>
+
+<dt><a name='skinny'></a><a name="$skinny-&#62;suppress_row_objects($flag)"
+>$skinny-&#62;suppress_row_objects($flag)</a></dt>
+
+<dd>
+<p>set row object creation mode.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ATTRIBUTES"
+>ATTRIBUTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name="order_by"
+>order_by</a></dt>
+
+<dd>
+<pre class="sh_perl">    { order_by =&#62; [ { id =&#62; &#39;desc&#39; } ] }
+    # or
+    { order_by =&#62; { id =&#62; &#39;desc&#39; } }
+    # or 
+    { order_by =&#62; &#39;name&#39; }</pre>
+
+<dt><a name="for_update"
+>for_update</a></dt>
+
+<dd>
+<pre class="sh_perl">    { for_update =&#62; 1 }</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ENVIRONMENT_VARIABLES"
+>ENVIRONMENT VARIABLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SKINNY_PROFILE"
+>SKINNY_PROFILE</a></h2>
+
+<p>for debugging sql.</p>
+
+<p>see <a href="/perldoc?DBIx%3A%3ASkinny%3A%3AProfile" class="podlinkpod"
+>DBIx::Skinny::Profile</a></p>
+
+<pre class="sh_perl">        $ SKINNY_PROFILE=1 perl ./your_script.pl</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SKINNY_TRACE"
+>SKINNY_TRACE</a></h2>
+
+<p>for debugging sql.</p>
+
+<p>see <a href="/~nekokak/DBIx-Skinny-0.0742/lib/DBIx/Skinny/Profiler/Trace.pm" class="podlinkpod"
+>DBIx::Skinny::Profiler::Trace</a></p>
+
+<pre class="sh_perl">    $ SKINNY_TRACE=1 perl ./your_script.pl</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="TRIGGER"
+>TRIGGER</a></h2>
+
+<pre class="sh_perl">    my $row = $db-&#62;insert($args);
+    # pre_insert: ($db, $args, $table_name)
+    # post_insert: ($db, $row, $table_name)
+
+    my $updated_rows_count = $db-&#62;update($args);
+    my $updated_rows_count = $row-&#62;update(); # example $args: +{ id =&#62; $row-&#62;id }
+    # pre_update: ($db, $args, $table_name)
+    # post_update: ($db, $updated_rows_count, $table_name)
+
+    my $deleted_rows_count = $db-&#62;delete($args);
+    my $deleted_rows_count = $row-&#62;delete(); # example $args: +{ id =&#62; $row-&#62;id }
+    # pre_delete: ($db, $args, $table_name)
+    # post_delete: ($db, $deleted_rows_count, $table_name)</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS_AND_LIMITATIONS"
+>BUGS AND LIMITATIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>No bugs have been reported.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Atsushi Kobayashi <code>&#60;nekokak __at__ gmail.com&#62;</code></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONTRIBUTORS"
+>CONTRIBUTORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>walf443 : Keiji Yoshimi</p>
+
+<p>TBONE : Terrence Brannon</p>
+
+<p>nekoya : Ryo Miyake</p>
+
+<p>oinume: Kazuhiro Oinuma</p>
+
+<p>fujiwara: Shunichiro Fujiwara</p>
+
+<p>pjam: Tomoyuki Misonou</p>
+
+<p>magicalhat</p>
+
+<p>Makamaka Hannyaharamitu</p>
+
+<p>nihen: Masahiro Chiba</p>
+
+<p>lestrrat: Daisuke Maki</p>
+
+<p>tokuhirom: Tokuhiro Matsuno</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUPPORT"
+>SUPPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  irc: #dbix-skinny@irc.perl.org
+
+  ML: <a href="http://groups.google.com/group/dbix-skinny" class="podlinkurl"
+>http://groups.google.com/group/dbix-skinny</a></pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="REPOSITORY"
+>REPOSITORY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  git clone <a href="git://github.com/nekokak/p5-dbix-skinny.git" class="podlinkurl"
+>git://github.com/nekokak/p5-dbix-skinny.git</a>  </pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENCE_AND_COPYRIGHT"
+>LICENCE AND COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2010, Atsushi Kobayashi <code>&#60;nekokak __at__ gmail.com&#62;</code>. All rights reserved.</p>
+
+<p>This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself. See <a href="/perldoc?perlartistic" class="podlinkpod"
+>perlartistic</a>.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78283 Uploads, 24725 Distributions
+106015 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 28 07:26:42 2012 GMT (0.246762037277222) @cpansearch1 -->
+ </body>
+</html>

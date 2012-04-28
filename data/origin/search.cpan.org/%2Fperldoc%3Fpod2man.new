@@ -1,0 +1,687 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>pod2man - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.8.1",3]);
+    _gaq.push(["_setCustomVar",4,"Document","pod2man",3]);
+    _gaq.push(["_setCustomVar",1,"Author","JHI",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?pod2man">permalink</a></div>
+  <a href="/~jhi/">Jarkko Hietaniemi</a> &gt;
+  <a href="/~jhi/perl-5.8.1/">perl-5.8.1</a> &gt;
+  pod2man
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/5aaaee305cd57a85e1be8f889fbfac7e?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/J/JH/JHI/perl-5.8.1.tar.gz">perl-5.8.1.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~JHI/perl-5.8.1/pod/pod2man.PL">Annotate this POD
+</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/JHI/perl-5.8.1/pod/pod2man.PL">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~rgarcia/perl/pod/pod2man.PL">perl-5.6.2</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#OPTIONS'>OPTIONS</a>
+  <li class='indexItem indexItem1'><a href='#DIAGNOSTICS'>DIAGNOSTICS</a>
+  <li class='indexItem indexItem1'><a href='#EXAMPLES'>EXAMPLES</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#NOTES'>NOTES</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>pod2man - Convert POD data to formatted *roff input</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>pod2man [<b>--section</b>=<i>manext</i>] [<b>--release</b>=<i>version</i>] [<b>--center</b>=<i>string</i>] [<b>--date</b>=<i>string</i>] [<b>--fixed</b>=<i>font</i>] [<b>--fixedbold</b>=<i>font</i>] [<b>--fixeditalic</b>=<i>font</i>] [<b>--fixedbolditalic</b>=<i>font</i>] [<b>--name</b>=<i>name</i>] [<b>--official</b>] [<b>--lax</b>] [<b>--quotes</b>=<i>quotes</i>] [<b>--verbose</b>] [<i>input</i> [<i>output</i>] ...]</p>
+
+<p>pod2man <b>--help</b></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><b>pod2man</b> is a front-end for Pod::Man,
+using it to generate *roff input from POD source.
+The resulting *roff code is suitable for display on a terminal using nroff(1),
+normally via man(1),
+or printing using troff(1).</p>
+
+<p><i>input</i> is the file to read for POD source (the POD can be embedded in code).
+If <i>input</i> isn&#39;t given,
+it defaults to STDIN.
+<i>output</i>,
+if given,
+is the file to which to write the formatted output.
+If <i>output</i> isn&#39;t given,
+the formatted output is written to STDOUT.
+Several POD files can be processed in the same <b>pod2man</b> invocation (saving module load and compile times) by providing multiple pairs of <i>input</i> and <i>output</i> files on the command line.</p>
+
+<p><b>--section</b>,
+<b>--release</b>,
+<b>--center</b>,
+<b>--date</b>,
+and <b>--official</b> can be used to set the headers and footers to use; if not given,
+Pod::Man will assume various defaults.
+See below or <a href="/~jhi/perl-5.8.1/lib/Pod/Man.pm" class="podlinkpod"
+>Pod::Man</a> for details.</p>
+
+<p><b>pod2man</b> assumes that your *roff formatters have a fixed-width font named CW.
+If yours is called something else (like CR),
+use <b>--fixed</b> to specify it.
+This generally only matters for troff output for printing.
+Similarly,
+you can set the fonts used for bold,
+italic,
+and bold italic fixed-width output.</p>
+
+<p>Besides the obvious pod conversions,
+Pod::Man,
+and therefore pod2man also takes care of formatting func(),
+func(n),
+and simple variable references like $foo or @bar so you don&#39;t have to use code escapes for them; complex expressions like <code>$fred{&#39;stuff&#39;}</code> will still need to be escaped,
+though.
+It also translates dashes that aren&#39;t used as hyphens into en dashes,
+makes long dashes--like this--into proper em dashes,
+fixes &#34;paired quotes,&#34; and takes care of several other troff-specific tweaks.
+See <a href="/~jhi/perl-5.8.1/lib/Pod/Man.pm" class="podlinkpod"
+>Pod::Man</a> for complete information.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OPTIONS"
+>OPTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='c'></a><a name="-c_string,_--center=string"
+><b>-c</b> <i>string</i>,
+<b>--center</b>=<i>string</i></a></dt>
+
+<dd>
+<p>Sets the centered page header to <i>string</i>.
+The default is &#34;User Contributed Perl Documentation&#34;,
+but also see <b>--official</b> below.</p>
+
+<dt><a name='d'></a><a name="-d_string,_--date=string"
+><b>-d</b> <i>string</i>,
+<b>--date</b>=<i>string</i></a></dt>
+
+<dd>
+<p>Set the left-hand footer string to this value.
+By default,
+the modification date of the input file will be used,
+or the current date if input comes from STDIN.</p>
+
+<dt><a name='fixed'></a><a name="--fixed=font"
+><b>--fixed</b>=<i>font</i></a></dt>
+
+<dd>
+<p>The fixed-width font to use for vertabim text and code.
+Defaults to CW.
+Some systems may want CR instead.
+Only matters for troff(1) output.</p>
+
+<dt><a name='fixedbold'></a><a name="--fixedbold=font"
+><b>--fixedbold</b>=<i>font</i></a></dt>
+
+<dd>
+<p>Bold version of the fixed-width font.
+Defaults to CB.
+Only matters for troff(1) output.</p>
+
+<dt><a name='fixeditalic'></a><a name="--fixeditalic=font"
+><b>--fixeditalic</b>=<i>font</i></a></dt>
+
+<dd>
+<p>Italic version of the fixed-width font (actually,
+something of a misnomer,
+since most fixed-width fonts only have an oblique version,
+not an italic version).
+Defaults to CI.
+Only matters for troff(1) output.</p>
+
+<dt><a name='fixedbolditalic'></a><a name="--fixedbolditalic=font"
+><b>--fixedbolditalic</b>=<i>font</i></a></dt>
+
+<dd>
+<p>Bold italic (probably actually oblique) version of the fixed-width font.
+Pod::Man doesn&#39;t assume you have this,
+and defaults to CB.
+Some systems (such as Solaris) have this font available as CX.
+Only matters for troff(1) output.</p>
+
+<dt><a name='h'></a><a name="-h,_--help"
+><b>-h</b>,
+<b>--help</b></a></dt>
+
+<dd>
+<p>Print out usage information.</p>
+
+<dt><a name='l'></a><a name="-l,_--lax"
+><b>-l</b>,
+<b>--lax</b></a></dt>
+
+<dd>
+<p>No longer used.
+<b>pod2man</b> used to check its input for validity as a manual page,
+but this should now be done by <a href="http://man.he.net/man1/podchecker" class="podlinkman"
+>podchecker(1)</a> instead.
+Accepted for backwards compatibility; this option no longer does anything.</p>
+
+<dt><a name='n'></a><a name="-n_name,_--name=name"
+><b>-n</b> <i>name</i>,
+<b>--name</b>=<i>name</i></a></dt>
+
+<dd>
+<p>Set the name of the manual page to <i>name</i>.
+Without this option,
+the manual name is set to the uppercased base name of the file being converted unless the manual section is 3,
+in which case the path is parsed to see if it is a Perl module path.
+If it is,
+a path like <code>.../lib/Pod/Man.pm</code> is converted into a name like <code>Pod::Man</code>.
+This option,
+if given,
+overrides any automatic determination of the name.</p>
+
+<p>Note that this option is probably not useful when converting multiple POD files at once.
+The convention for Unix man pages for commands is for the man page title to be in all-uppercase even if the command isn&#39;t.</p>
+
+<dt><a name='o'></a><a name="-o,_--official"
+><b>-o</b>,
+<b>--official</b></a></dt>
+
+<dd>
+<p>Set the default header to indicate that this page is part of the standard Perl release,
+if <b>--center</b> is not also given.</p>
+
+<dt><a name='q'></a><a name="-q_quotes,_--quotes=quotes"
+><b>-q</b> <i>quotes</i>,
+<b>--quotes</b>=<i>quotes</i></a></dt>
+
+<dd>
+<p>Sets the quote marks used to surround C&#60;&#62; text to <i>quotes</i>.
+If <i>quotes</i> is a single character,
+it is used as both the left and right quote; if <i>quotes</i> is two characters,
+the first character is used as the left quote and the second as the right quoted; and if <i>quotes</i> is four characters,
+the first two are used as the left quote and the second two as the right quote.</p>
+
+<p><i>quotes</i> may also be set to the special value <code>none</code>,
+in which case no quote marks are added around C&#60;&#62; text (but the font is still changed for troff output).</p>
+
+<dt><a name='r'></a><a name="-r,_--release"
+><b>-r</b>,
+<b>--release</b></a></dt>
+
+<dd>
+<p>Set the centered footer.
+By default,
+this is the version of Perl you run <b>pod2man</b> under.
+Note that some system an macro sets assume that the centered footer will be a modification date and will prepend something like &#34;Last modified: &#34;; if this is the case,
+you may want to set <b>--release</b> to the last modified date and <b>--date</b> to the version number.</p>
+
+<dt><a name='s'></a><a name="-s,_--section"
+><b>-s</b>,
+<b>--section</b></a></dt>
+
+<dd>
+<p>Set the section for the <code>.TH</code> macro.
+The standard section numbering convention is to use 1 for user commands,
+2 for system calls,
+3 for functions,
+4 for devices,
+5 for file formats,
+6 for games,
+7 for miscellaneous information,
+and 8 for administrator commands.
+There is a lot of variation here,
+however; some systems (like Solaris) use 4 for file formats,
+5 for miscellaneous information,
+and 7 for devices.
+Still others use 1m instead of 8,
+or some mix of both.
+About the only section numbers that are reliably consistent are 1,
+2,
+and 3.</p>
+
+<p>By default,
+section 1 will be used unless the file ends in .pm in which case section 3 will be selected.</p>
+
+<dt><a name='v'></a><a name="-v,_--verbose"
+><b>-v</b>,
+<b>--verbose</b></a></dt>
+
+<dd>
+<p>Print out the name of each output file as it is being generated.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIAGNOSTICS"
+>DIAGNOSTICS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If <b>pod2man</b> fails with errors,
+see <a href="/~jhi/perl-5.8.1/lib/Pod/Man.pm" class="podlinkpod"
+>Pod::Man</a> and <a href="/~jhi/perl-5.8.1/lib/Pod/Parser.pm" class="podlinkpod"
+>Pod::Parser</a> for information about what those errors might mean.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    pod2man program &#62; program.1
+    pod2man SomeModule.pm /usr/perl/man/man3/SomeModule.3
+    pod2man --section=7 note.pod &#62; note.7</pre>
+
+<p>If you would like to print out a lot of man page continuously, you probably want to set the C and D registers to set contiguous page numbering and even/odd paging, at least on some versions of man(7).</p>
+
+<pre class="sh_perl">    troff -man -rC1 -rD1 perl.1 perldata.1 perlsyn.1 ...</pre>
+
+<p>To get index entries on stderr, turn on the F register, as in:</p>
+
+<pre class="sh_perl">    troff -man -rF1 perl.1</pre>
+
+<p>The indexing merely outputs messages via <code>.tm</code> for each major page, section, subsection, item, and any <code>X&#60;&#62;</code> directives. See <a href="/~jhi/perl-5.8.1/lib/Pod/Man.pm" class="podlinkpod"
+>Pod::Man</a> for more details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Lots of this documentation is duplicated from <a href="/~jhi/perl-5.8.1/lib/Pod/Man.pm" class="podlinkpod"
+>Pod::Man</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTES"
+>NOTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>For those not sure of the proper layout of a man page, here are some notes on writing a proper man page.</p>
+
+<p>The name of the program being documented is conventionally written in bold (using B&#60;&#62;) wherever it occurs, as are all program options. Arguments should be written in italics (I&#60;&#62;). Functions are traditionally written in italics; if you write a function as function(), Pod::Man will take care of this for you. Literal code or commands should be in C&#60;&#62;. References to other man pages should be in the form <code>manpage(section)</code>, and Pod::Man will automatically format those appropriately. As an exception, it&#39;s traditional not to use this form when referring to module documentation; use <code>L&#60;Module::Name&#62;</code> instead.</p>
+
+<p>References to other programs or functions are normally in the form of man page references so that cross-referencing tools can provide the user with links and the like. It&#39;s possible to overdo this, though, so be careful not to clutter your documentation with too much markup.</p>
+
+<p>The major headers should be set out using a <code>=head1</code> directive, and are historically written in the rather startling ALL UPPER CASE format, although this is not mandatory. Minor headers may be included using <code>=head2</code>, and are typically in mixed case.</p>
+
+<p>The standard sections of a manual page are:</p>
+
+<dl>
+<dt><a name="NAME"
+>NAME</a></dt>
+
+<dd>
+<p>Mandatory section; should be a comma-separated list of programs or functions documented by this podpage, such as:</p>
+
+<pre class="sh_perl">    foo, bar - programs to do something</pre>
+
+<p>Manual page indexers are often extremely picky about the format of this section, so don&#39;t put anything in it except this line. A single dash, and only a single dash, should separate the list of programs or functions from the description. Functions should not be qualified with <code>()</code> or the like. The description should ideally fit on a single line, even if a man program replaces the dash with a few tabs.</p>
+
+<dt><a name="SYNOPSIS"
+>SYNOPSIS</a></dt>
+
+<dd>
+<p>A short usage summary for programs and functions. This section is mandatory for section 3 pages.</p>
+
+<dt><a name="DESCRIPTION"
+>DESCRIPTION</a></dt>
+
+<dd>
+<p>Extended description and discussion of the program or functions, or the body of the documentation for man pages that document something else. If particularly long, it&#39;s a good idea to break this up into subsections <code>=head2</code> directives like:</p>
+
+<pre class="sh_perl">    =head2 Normal Usage
+
+    =head2 Advanced Features
+
+    =head2 Writing Configuration Files</pre>
+
+<p>or whatever is appropriate for your documentation.</p>
+
+<dt><a name="OPTIONS"
+>OPTIONS</a></dt>
+
+<dd>
+<p>Detailed description of each of the command-line options taken by the program. This should be separate from the description for the use of things like <a href="/~jhi/perl-5.8.1/lib/Pod/Usage.pm" class="podlinkpod"
+>Pod::Usage</a>. This is normally presented as a list, with each option as a separate <code>=item</code>. The specific option string should be enclosed in B&#60;&#62;. Any values that the option takes should be enclosed in I&#60;&#62;. For example, the section for the option <b>--section</b>=<i>manext</i> would be introduced with:</p>
+
+<pre class="sh_perl">    =item B&#60;--section&#62;=I&#60;manext&#62;</pre>
+
+<p>Synonymous options (like both the short and long forms) are separated by a comma and a space on the same <code>=item</code> line, or optionally listed as their own item with a reference to the canonical name. For example, since <b>--section</b> can also be written as <b>-s</b>, the above would be:</p>
+
+<pre class="sh_perl">    =item B&#60;-s&#62; I&#60;manext&#62;, B&#60;--section&#62;=I&#60;manext&#62;</pre>
+
+<p>(Writing the short option first is arguably easier to read, since the long option is long enough to draw the eye to it anyway and the short option can otherwise get lost in visual noise.)</p>
+
+<dt><a name='RETURN'></a><a name="RETURN_VALUE"
+>RETURN VALUE</a></dt>
+
+<dd>
+<p>What the program or function returns, if successful. This section can be omitted for programs whose precise exit codes aren&#39;t important, provided they return 0 on success as is standard. It should always be present for functions.</p>
+
+<dt><a name="ERRORS"
+>ERRORS</a></dt>
+
+<dd>
+<p>Exceptions, error return codes, exit statuses, and errno settings. Typically used for function documentation; program documentation uses DIAGNOSTICS instead. The general rule of thumb is that errors printed to STDOUT or STDERR and intended for the end user are documented in DIAGNOSTICS while errors passed internal to the calling program and intended for other programmers are documented in ERRORS. When documenting a function that sets errno, a full list of the possible errno values should be given here.</p>
+
+<dt><a name="DIAGNOSTICS"
+>DIAGNOSTICS</a></dt>
+
+<dd>
+<p>All possible messages the program can print out--and what they mean. You may wish to follow the same documentation style as the Perl documentation; see perldiag(1) for more details (and look at the POD source as well).</p>
+
+<p>If applicable, please include details on what the user should do to correct the error; documenting an error as indicating &#34;the input buffer is too small&#34; without telling the user how to increase the size of the input buffer (or at least telling them that it isn&#39;t possible) aren&#39;t very useful.</p>
+
+<dt><a name="EXAMPLES"
+>EXAMPLES</a></dt>
+
+<dd>
+<p>Give some example uses of the program or function. Don&#39;t skimp; users often find this the most useful part of the documentation. The examples are generally given as verbatim paragraphs.</p>
+
+<p>Don&#39;t just present an example without explaining what it does. Adding a short paragraph saying what the example will do can increase the value of the example immensely.</p>
+
+<dt><a name="ENVIRONMENT"
+>ENVIRONMENT</a></dt>
+
+<dd>
+<p>Environment variables that the program cares about, normally presented as a list using <code>=over</code>, <code>=item</code>, and <code>=back</code>. For example:</p>
+
+<pre class="sh_perl">    =over 6
+
+    =item HOME
+
+    Used to determine the user&#39;s home directory.  F&#60;.foorc&#62; in this
+    directory is read for configuration details, if it exists.
+
+    =back</pre>
+
+<p>Since environment variables are normally in all uppercase, no additional special formatting is generally needed; they&#39;re glaring enough as it is.</p>
+
+<dt><a name="FILES"
+>FILES</a></dt>
+
+<dd>
+<p>All files used by the program or function, normally presented as a list, and what it uses them for. File names should be enclosed in F&#60;&#62;. It&#39;s particularly important to document files that will be potentially modified.</p>
+
+<dt><a name="CAVEATS"
+>CAVEATS</a></dt>
+
+<dd>
+<p>Things to take special care with, sometimes called WARNINGS.</p>
+
+<dt><a name="BUGS"
+>BUGS</a></dt>
+
+<dd>
+<p>Things that are broken or just don&#39;t work quite right.</p>
+
+<dt><a name="RESTRICTIONS"
+>RESTRICTIONS</a></dt>
+
+<dd>
+<p>Bugs you don&#39;t plan to fix. :-)</p>
+
+<dt><a name="NOTES"
+>NOTES</a></dt>
+
+<dd>
+<p>Miscellaneous commentary.</p>
+
+<dt><a name='SEE'></a><a name="SEE_ALSO"
+>SEE ALSO</a></dt>
+
+<dd>
+<p>Other man pages to check out, like man(1), man(7), makewhatis(8), or catman(8). Normally a simple list of man pages separated by commas, or a paragraph giving the name of a reference work. Man page references, if they use the standard <code>name(section)</code> form, don&#39;t have to be enclosed in L&#60;&#62; (although it&#39;s recommended), but other things in this section probably should be when appropriate.</p>
+
+<p>If the package has a mailing list, include a URL or subscription instructions here.</p>
+
+<p>If the package has a web site, include a URL here.</p>
+
+<dt><a name="AUTHOR"
+>AUTHOR</a></dt>
+
+<dd>
+<p>Who wrote it (use AUTHORS for multiple people). Including your current e-mail address (or some e-mail address to which bug reports should be sent) so that users have a way of contacting you is a good idea. Remember that program documentation tends to roam the wild for far longer than you expect and pick an e-mail address that&#39;s likely to last if possible.</p>
+
+<dt><a name='COPYRIGHT'></a><a name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE</a></dt>
+
+<dd>
+<p>For copyright</p>
+
+<pre class="sh_perl">    Copyright YEAR(s) by YOUR NAME(s)</pre>
+
+<p>(No, (C) is not needed. No, &#34;all rights reserved&#34; is not needed.)</p>
+
+<p>For licensing the easiest way is to use the same licensing as Perl itself:</p>
+
+<pre class="sh_perl">    This library is free software; you may redistribute it and/or modify
+    it under the same terms as Perl itself.</pre>
+
+<p>This makes it easy for people to use your module with Perl. Note that this licensing is neither an endorsement or a requirement, you are of course free to choose any licensing.</p>
+
+<dt><a name="HISTORY"
+>HISTORY</a></dt>
+
+<dd>
+<p>Programs derived from other sources sometimes have this, or you might keep a modification log here. If the log gets overly long or detailed, consider maintaining it in a separate file, though.</p>
+</dd>
+</dl>
+
+<p>In addition, some systems use CONFORMING TO to note conformance to relevant standards and MT-LEVEL to note safeness for use in threaded programs or signal handlers. These headings are primarily useful when documenting parts of a C library. Documentation of object-oriented libraries or modules may use CONSTRUCTORS and METHODS sections for detailed documentation of the parts of the library and save the DESCRIPTION section for an overview; other large modules may use FUNCTIONS for similar reasons. Some people use OVERVIEW to summarize the description if it&#39;s quite long.</p>
+
+<p>Section ordering varies, although NAME should <i>always</i> be the first section (you&#39;ll break some man page systems otherwise), and NAME, SYNOPSIS, DESCRIPTION, and OPTIONS generally always occur first and in that order if present. In general, SEE ALSO, AUTHOR, and similar material should be left for last. Some systems also move WARNINGS and NOTES to last. The order given above should be reasonable for most purposes.</p>
+
+<p>Finally, as a general note, try not to use an excessive amount of markup. As documented here and in <a href="/~jhi/perl-5.8.1/lib/Pod/Man.pm" class="podlinkpod"
+>Pod::Man</a>, you can safely leave Perl variables, function names, man page references, and the like unadorned by markup and the POD translators will figure it out for you. This makes it much easier to later edit the documentation. Note that many existing translators (including this one currently) will do the wrong thing with e-mail addresses or URLs when wrapped in L&#60;&#62;, so don&#39;t do that.</p>
+
+<p>For additional information that may be more accurate for your specific system, see either <a href="http://man.he.net/man5/man" class="podlinkman"
+>man(5)</a> or <a href="http://man.he.net/man7/man" class="podlinkman"
+>man(7)</a> depending on your system manual section numbering conventions.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~jhi/perl-5.8.1/lib/Pod/Man.pm" class="podlinkpod"
+>Pod::Man</a>, <a href="/~jhi/perl-5.8.1/lib/Pod/Parser.pm" class="podlinkpod"
+>Pod::Parser</a>, <a href="http://man.he.net/man1/man" class="podlinkman"
+>man(1)</a>, <a href="http://man.he.net/man1/nroff" class="podlinkman"
+>nroff(1)</a>, <a href="http://man.he.net/man1/podchecker" class="podlinkman"
+>podchecker(1)</a>, <a href="http://man.he.net/man1/troff" class="podlinkman"
+>troff(1)</a>, <a href="http://man.he.net/man7/man" class="podlinkman"
+>man(7)</a></p>
+
+<p>The man page documenting the an macro set may be <a href="http://man.he.net/man5/man" class="podlinkman"
+>man(5)</a> instead of <a href="http://man.he.net/man7/man" class="podlinkman"
+>man(7)</a> on your system.</p>
+
+<p>The current version of this script is always available from its web site at <a href="http://www.eyrie.org/~eagle/software/podlators/" class="podlinkurl"
+>http://www.eyrie.org/~eagle/software/podlators/</a>. It is also part of the Perl core distribution as of 5.6.0.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Russ Allbery &#60;rra@stanford.edu&#62;, based <i>very</i> heavily on the original <b>pod2man</b> by Larry Wall and Tom Christiansen. Large portions of this documentation, particularly the sections on the anatomy of a proper man page, are taken from the <b>pod2man</b> documentation by Tom.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 1999, 2000, 2001 by Russ Allbery &#60;rra@stanford.edu&#62;.</p>
+
+<p>This program is free software; you may redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78231 Uploads, 24723 Distributions
+106029 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Thu Apr 26 22:32:29 2012 GMT (0.125574111938477) @cpansearch1 -->
+ </body>
+</html>

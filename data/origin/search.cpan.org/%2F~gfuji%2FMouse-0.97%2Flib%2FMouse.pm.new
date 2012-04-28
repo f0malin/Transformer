@@ -1,0 +1,585 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Mouse - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Mouse",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Mouse-0.97",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Mouse",3]);
+    _gaq.push(["_setCustomVar",1,"Author","GFUJI",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Mouse">permalink</a></div>
+  <a href="/~gfuji/">&#x85E4; &#x543E;&#x90CE;</a> &gt;
+  <a href="/~gfuji/Mouse-0.97/">Mouse-0.97</a> &gt;
+  Mouse
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/9278c3a06b8d8752fb913dea93f959c1?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/G/GF/GFUJI/Mouse-0.97.tar.gz">Mouse-0.97.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Mouse;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~GFUJI/Mouse-0.97/lib/Mouse.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 6</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 5</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Mouse">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.97 &nbsp;
+<span class="noprint">
+  <a href="/src/GFUJI/Mouse-0.97/lib/Mouse.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Moose_Compatibility'>Moose Compatibility</a>
+    <li class='indexItem indexItem2'><a href='#Mouse_Extentions'>Mouse Extentions</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#KEYWORDS'>KEYWORDS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#$object-&#62;meta_-&#62;_Mouse::Meta::Class'>$object-&#62;meta -&#62; Mouse::Meta::Class</a>
+    <li class='indexItem indexItem2'><a href='#extends_superclasses'>extends superclasses</a>
+    <li class='indexItem indexItem2'><a href='#before_(method|methods|regexp)_=&#62;_CodeRef'>before (method|methods|regexp) =&#62; CodeRef</a>
+    <li class='indexItem indexItem2'><a href='#after_(method|methods|regexp)_=&#62;_CodeRef'>after (method|methods|regexp) =&#62; CodeRef</a>
+    <li class='indexItem indexItem2'><a href='#around_(method|methods|regexp)_=&#62;_CodeRef'>around (method|methods|regexp) =&#62; CodeRef</a>
+    <li class='indexItem indexItem2'><a href='#has_(name|names)_=&#62;_parameters'>has (name|names) =&#62; parameters</a>
+    <li class='indexItem indexItem2'><a href='#confess(message)_-&#62;_BOOM'>confess(message) -&#62; BOOM</a>
+    <li class='indexItem indexItem2'><a href='#blessed(value)_-&#62;_ClassName_|_undef'>blessed(value) -&#62; ClassName | undef</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#MISC'>MISC</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#import'>import</a>
+    <li class='indexItem indexItem2'><a href='#unimport'>unimport</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SOURCE_CODE_ACCESS'>SOURCE CODE ACCESS</a>
+  <li class='indexItem indexItem1'><a href='#DEPENDENCIES'>DEPENDENCIES</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Mouse - Moose minus the antlers</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This document describes Mouse version 0.97</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    package Point;
+    use Mouse; # automatically turns on strict and warnings
+
+    has &#39;x&#39; =&#62; (is =&#62; &#39;rw&#39;, isa =&#62; &#39;Int&#39;);
+    has &#39;y&#39; =&#62; (is =&#62; &#39;rw&#39;, isa =&#62; &#39;Int&#39;);
+
+    sub clear {
+        my $self = shift;
+        $self-&#62;x(0);
+        $self-&#62;y(0);
+    }
+
+
+    __PACKAGE__-&#62;meta-&#62;make_immutable();
+
+    package Point3D;
+    use Mouse;
+
+    extends &#39;Point&#39;;
+
+    has &#39;z&#39; =&#62; (is =&#62; &#39;rw&#39;, isa =&#62; &#39;Int&#39;);
+
+    after &#39;clear&#39; =&#62; sub {
+        my $self = shift;
+        $self-&#62;z(0);
+    };
+
+    __PACKAGE__-&#62;meta-&#62;make_immutable();</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Moose" class="podlinkpod"
+>Moose</a> is a postmodern object system for Perl5. Moose is wonderful.</p>
+
+<p>Unfortunately, Moose has a compile-time penalty. Though significant progress has been made over the years, the compile time penalty is a non-starter for some very specific applications. If you are writing a command-line application or CGI script where startup time is essential, you may not be able to use Moose (we recommend that you instead use persistent Perl executing environments like <code>FastCGI</code> for the latter, if possible).</p>
+
+<p>Mouse is a Moose compatible object system, which aims to alleviate this penalty by providing a subset of Moose&#39;s functionality.</p>
+
+<p>We&#39;re also going as light on dependencies as possible. Mouse currently has <b>no dependencies</b> except for building/testing modules. Mouse also works without XS, although it has an XS backend to make it much faster.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Moose_Compatibility"
+>Moose Compatibility</a></h2>
+
+<p>Compatibility with Moose has been the utmost concern. The sugary interface is highly compatible with Moose. Even the error messages are taken from Moose. The Mouse code just runs its test suite 4x faster.</p>
+
+<p>The idea is that, if you need the extra power, you should be able to run <code>s/Mouse/Moose/g</code> on your codebase and have nothing break. To that end, we have written <a href="/perldoc?Any%3A%3AMoose" class="podlinkpod"
+>Any::Moose</a> which will act as Mouse unless Moose is loaded, in which case it will act as Moose. Since Mouse is a little sloppier than Moose, if you run into weird errors, it would be worth running:</p>
+
+<pre class="sh_perl">    ANY_MOOSE=Moose perl your-script.pl</pre>
+
+<p>to see if the bug is caused by Mouse. Moose&#39;s diagnostics and validation are also better.</p>
+
+<p>See also <a href="/~gfuji/Mouse-0.97/lib/Mouse/Spec.pm" class="podlinkpod"
+>Mouse::Spec</a> for compatibility and incompatibility with Moose.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Mouse_Extentions"
+>Mouse Extentions</a></h2>
+
+<p>Please don&#39;t copy MooseX code to MouseX. If you need extensions, you really should upgrade to Moose. We don&#39;t need two parallel sets of extensions!</p>
+
+<p>If you really must write a Mouse extension, please contact the Moose mailing list or #moose on IRC beforehand.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="KEYWORDS"
+>KEYWORDS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$object-&#62;meta_-&#62;_Mouse::Meta::Class"
+><code>$object-&#62;meta -&#62; Mouse::Meta::Class</code></a></h2>
+
+<p>Returns this class&#39; metaclass instance.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="extends_superclasses"
+><code>extends superclasses</code></a></h2>
+
+<p>Sets this class&#39; superclasses.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="before_(method|methods|regexp)_=&#62;_CodeRef"
+><code>before (method|methods|regexp) =&#62; CodeRef</code></a></h2>
+
+<p>Installs a &#34;before&#34; method modifier. See <a href="/perldoc?Moose#before" class="podlinkpod"
+>&#34;before&#34; in Moose</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="after_(method|methods|regexp)_=&#62;_CodeRef"
+><code>after (method|methods|regexp) =&#62; CodeRef</code></a></h2>
+
+<p>Installs an &#34;after&#34; method modifier. See <a href="/perldoc?Moose#after" class="podlinkpod"
+>&#34;after&#34; in Moose</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="around_(method|methods|regexp)_=&#62;_CodeRef"
+><code>around (method|methods|regexp) =&#62; CodeRef</code></a></h2>
+
+<p>Installs an &#34;around&#34; method modifier. See <a href="/perldoc?Moose#around" class="podlinkpod"
+>&#34;around&#34; in Moose</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="has_(name|names)_=&#62;_parameters"
+><code>has (name|names) =&#62; parameters</code></a></h2>
+
+<p>Adds an attribute (or if passed an arrayref of names, multiple attributes) to this class. Options:</p>
+
+<dl>
+<dt><a name='is'></a><a name="is_=&#62;_ro|rw|bare"
+><code>is =&#62; ro|rw|bare</code></a></dt>
+
+<dd>
+<p>The <i>is</i> option accepts either <i>rw</i> (for read/write), <i>ro</i> (for read only) or <i>bare</i> (for nothing). These will create either a read/write accessor or a read-only accessor respectively, using the same name as the <code>$name</code> of the attribute.</p>
+
+<p>If you need more control over how your accessors are named, you can use the <code>reader</code>, <code>writer</code> and <code>accessor</code> options, however if you use those, you won&#39;t need the <i>is</i> option.</p>
+
+<dt><a name='isa'></a><a name="isa_=&#62;_TypeName_|_ClassName"
+><code>isa =&#62; TypeName | ClassName</code></a></dt>
+
+<dd>
+<p>Provides type checking in the constructor and accessor. The following types are supported. Any unknown type is taken to be a class check (e.g. <code>isa =&#62; &#39;DateTime&#39;</code> would accept only <a href="/perldoc?DateTime" class="podlinkpod"
+>DateTime</a> objects).</p>
+
+<pre class="sh_perl">    Any Item Bool Undef Defined Value Num Int Str ClassName
+    Ref ScalarRef ArrayRef HashRef CodeRef RegexpRef GlobRef
+    FileHandle Object</pre>
+
+<p>For more documentation on type constraints, see <a href="/~gfuji/Mouse-0.97/lib/Mouse/Util/TypeConstraints.pm" class="podlinkpod"
+>Mouse::Util::TypeConstraints</a>.</p>
+
+<dt><a name='does'></a><a name="does_=&#62;_RoleName"
+><code>does =&#62; RoleName</code></a></dt>
+
+<dd>
+<p>This will accept the name of a role which the value stored in this attribute is expected to have consumed.</p>
+
+<dt><a name='coerce'></a><a name="coerce_=&#62;_Bool"
+><code>coerce =&#62; Bool</code></a></dt>
+
+<dd>
+<p>This will attempt to use coercion with the supplied type constraint to change the value passed into any accessors or constructors. You <b>must</b> have supplied a type constraint in order for this to work. See <a href="/perldoc?Moose%3A%3ACookbook%3A%3ABasics%3A%3ARecipe5" class="podlinkpod"
+>Moose::Cookbook::Basics::Recipe5</a> for an example.</p>
+
+<dt><a name='required'></a><a name="required_=&#62;_Bool"
+><code>required =&#62; Bool</code></a></dt>
+
+<dd>
+<p>Whether this attribute is required to have a value. If the attribute is lazy or has a builder, then providing a value for the attribute in the constructor is optional.</p>
+
+<dt><a name='init_arg'></a><a name="init_arg_=&#62;_Str_|_Undef"
+><code>init_arg =&#62; Str | Undef</code></a></dt>
+
+<dd>
+<p>Allows you to use a different key name in the constructor. If undef, the attribute can&#39;t be passed to the constructor.</p>
+
+<dt><a name='default'></a><a name="default_=&#62;_Value_|_CodeRef"
+><code>default =&#62; Value | CodeRef</code></a></dt>
+
+<dd>
+<p>Sets the default value of the attribute. If the default is a coderef, it will be invoked to get the default value. Due to quirks of Perl, any bare reference is forbidden, you must wrap the reference in a coderef. Otherwise, all instances will share the same reference.</p>
+
+<dt><a name='lazy'></a><a name="lazy_=&#62;_Bool"
+><code>lazy =&#62; Bool</code></a></dt>
+
+<dd>
+<p>If specified, the default is calculated on demand instead of in the constructor.</p>
+
+<dt><a name='predicate'></a><a name="predicate_=&#62;_Str"
+><code>predicate =&#62; Str</code></a></dt>
+
+<dd>
+<p>Lets you specify a method name for installing a predicate method, which checks that the attribute has a value. It will not invoke a lazy default or builder method.</p>
+
+<dt><a name='clearer'></a><a name="clearer_=&#62;_Str"
+><code>clearer =&#62; Str</code></a></dt>
+
+<dd>
+<p>Lets you specify a method name for installing a clearer method, which clears the attribute&#39;s value from the instance. On the next read, lazy or builder will be invoked.</p>
+
+<dt><a name='handles'></a><a name="handles_=&#62;_HashRef|ArrayRef|Regexp"
+><code>handles =&#62; HashRef|ArrayRef|Regexp</code></a></dt>
+
+<dd>
+<p>Lets you specify methods to delegate to the attribute. ArrayRef forwards the given method names to method calls on the attribute. HashRef maps local method names to remote method names called on the attribute. Other forms of <a href="#handles" class="podlinkpod"
+>&#34;handles&#34;</a>, such as RoleName and CodeRef, are not yet supported.</p>
+
+<dt><a name='weak_ref'></a><a name="weak_ref_=&#62;_Bool"
+><code>weak_ref =&#62; Bool</code></a></dt>
+
+<dd>
+<p>Lets you automatically weaken any reference stored in the attribute.</p>
+
+<p>Use of this feature requires <a href="/perldoc?Scalar%3A%3AUtil" class="podlinkpod"
+>Scalar::Util</a>!</p>
+
+<dt><a name='trigger'></a><a name="trigger_=&#62;_CodeRef"
+><code>trigger =&#62; CodeRef</code></a></dt>
+
+<dd>
+<p>Any time the attribute&#39;s value is set (either through the accessor or the constructor), the trigger is called on it. The trigger receives as arguments the instance, the new value, and the attribute instance.</p>
+
+<dt><a name='builder'></a><a name="builder_=&#62;_Str"
+><code>builder =&#62; Str</code></a></dt>
+
+<dd>
+<p>Defines a method name to be called to provide the default value of the attribute. <code>builder =&#62; &#39;build_foo&#39;</code> is mostly equivalent to <code>default =&#62; sub { $_[0]-&#62;build_foo }</code>.</p>
+
+<dt><a name='auto_deref'></a><a name="auto_deref_=&#62;_Bool"
+><code>auto_deref =&#62; Bool</code></a></dt>
+
+<dd>
+<p>Allows you to automatically dereference ArrayRef and HashRef attributes in list context. In scalar context, the reference is returned (NOT the list length or bucket status). You must specify an appropriate type constraint to use auto_deref.</p>
+
+<dt><a name='lazy_build'></a><a name="lazy_build_=&#62;_Bool"
+><code>lazy_build =&#62; Bool</code></a></dt>
+
+<dd>
+<p>Automatically define the following options:</p>
+
+<pre class="sh_perl">    has $attr =&#62; (
+        # ...
+        lazy      =&#62; 1
+        builder   =&#62; &#34;_build_$attr&#34;,
+        clearer   =&#62; &#34;clear_$attr&#34;,
+        predicate =&#62; &#34;has_$attr&#34;,
+    );</pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="confess(message)_-&#62;_BOOM"
+><code>confess(message) -&#62; BOOM</code></a></h2>
+
+<p><a href="/perldoc?Carp#confess" class="podlinkpod"
+>&#34;confess&#34; in Carp</a> for your convenience.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="blessed(value)_-&#62;_ClassName_|_undef"
+><code>blessed(value) -&#62; ClassName | undef</code></a></h2>
+
+<p><a href="/perldoc?Scalar%3A%3AUtil#blessed" class="podlinkpod"
+>&#34;blessed&#34; in Scalar::Util</a> for your convenience.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MISC"
+>MISC <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="import"
+>import</a></h2>
+
+<p>Importing Mouse will default your class&#39; superclass list to <a href="/~gfuji/Mouse-0.97/lib/Mouse/Object.pm" class="podlinkpod"
+>Mouse::Object</a>. You may use <a href="#extends" class="podlinkpod"
+>&#34;extends&#34;</a> to replace the superclass list.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="unimport"
+>unimport</a></h2>
+
+<p>Please unimport Mouse (<code>no Mouse</code>) so that if someone calls one of the keywords (such as <a href="#extends" class="podlinkpod"
+>&#34;extends&#34;</a>) it will break loudly instead breaking subtly.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SOURCE_CODE_ACCESS"
+>SOURCE CODE ACCESS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>We have a public git repository:</p>
+
+<pre class="sh_perl"> git clone <a href="git://git.moose.perl.org/Mouse.git" class="podlinkurl"
+>git://git.moose.perl.org/Mouse.git</a></pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DEPENDENCIES"
+>DEPENDENCIES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Perl 5.6.2 or later.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~gfuji/Mouse-0.97/lib/Mouse/Role.pm" class="podlinkpod"
+>Mouse::Role</a></p>
+
+<p><a href="/~gfuji/Mouse-0.97/lib/Mouse/Spec.pm" class="podlinkpod"
+>Mouse::Spec</a></p>
+
+<p><a href="/perldoc?Moose" class="podlinkpod"
+>Moose</a></p>
+
+<p><a href="/perldoc?Moose%3A%3AManual" class="podlinkpod"
+>Moose::Manual</a></p>
+
+<p><a href="/perldoc?Moose%3A%3ACookbook" class="podlinkpod"
+>Moose::Cookbook</a></p>
+
+<p><a href="/perldoc?Class%3A%3AMOP" class="podlinkpod"
+>Class::MOP</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Shawn M Moore &#60;sartak at gmail.com&#62;</p>
+
+<p>Yuval Kogman &#60;nothingmuch at woobling.org&#62;</p>
+
+<p>tokuhirom</p>
+
+<p>Yappo</p>
+
+<p>wu-lee</p>
+
+<p>Goro Fuji (gfx) &#60;gfuji at cpan.org&#62;</p>
+
+<p>with plenty of code borrowed from <a href="/perldoc?Class%3A%3AMOP" class="podlinkpod"
+>Class::MOP</a> and <a href="/perldoc?Moose" class="podlinkpod"
+>Moose</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>All complex software has bugs lurking in it, and this module is no exception. Please report any bugs to <code>bug-mouse at rt.cpan.org</code>, or through the web interface at <a href="http://rt.cpan.org/Public/Dist/Display.html?Name=Mouse" class="podlinkurl"
+>http://rt.cpan.org/Public/Dist/Display.html?Name=Mouse</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2008-2010 Infinity Interactive, Inc.</p>
+
+<p><a href="http://www.iinteractive.com/" class="podlinkurl"
+>http://www.iinteractive.com/</a></p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78197 Uploads, 24711 Distributions
+106008 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 13:48:15 2012 GMT (0.133032083511353) @cpansearch1 -->
+ </body>
+</html>

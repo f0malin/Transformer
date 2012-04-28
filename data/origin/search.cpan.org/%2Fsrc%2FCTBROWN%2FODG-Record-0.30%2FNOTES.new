@@ -1,0 +1,29 @@
+
+
+ODG::Record 
+ODG::Layout
+ODG::Metadata
+ODG::Record::Buffered
+
+
+ODG::RecordSet
+ODG::RecordSet::Sorted
+
+
+If we have a base class and want to extend it use extends.
+If we want add functionality use Role/with.
+
+ODG::Record::Sorted should extend ODG::Record
+ODG::Record
+- Simply takes the _layout_ and installs accessors.
+
+
+If we use index ... how do we set up the class to use the index.
+ODG::Record::BUILD will look through the attributes and install based on the index value
+ODG::Record::DBI will use ArrayRef to look through the records and install based on the DBI
+ODG::RecordSet::DBI
+
+What is the minimum we need to do.
+1) Hardcode.
+
+

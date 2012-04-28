@@ -1,0 +1,653 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>PAR::Repository - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","PAR-Repository",3]);
+    _gaq.push(["_setCustomVar",5,"Release","PAR-Repository-0.20",3]);
+    _gaq.push(["_setCustomVar",3,"Module","PAR::Repository",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SMUELLER",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?PAR::Repository">permalink</a></div>
+  <a href="/~smueller/">Steffen M&uuml;ller</a> &gt;
+  <a href="/~smueller/PAR-Repository-0.20/">PAR-Repository-0.20</a> &gt;
+  PAR::Repository
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/ac0c0eab36df58cd3676c1f03f4d5185?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SM/SMUELLER/PAR-Repository-0.20.tar.gz">PAR-Repository-0.20.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=PAR%3A%3ARepository;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SMUELLER/PAR-Repository-0.20/lib/PAR/Repository.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=PAR-Repository">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.20 &nbsp;
+<span class="noprint">
+  <a href="/src/SMUELLER/PAR-Repository-0.20/lib/PAR/Repository.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#PAR_REPOSITORIES'>PAR REPOSITORIES</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#inject'>inject</a>
+    <li class='indexItem indexItem2'><a href='#remove'>remove</a>
+    <li class='indexItem indexItem2'><a href='#verbose'>verbose</a>
+    <li class='indexItem indexItem2'><a href='#_cmp_dist_versions'>_cmp_dist_versions</a>
+    <li class='indexItem indexItem2'><a href='#_add_packages'>_add_packages</a>
+    <li class='indexItem indexItem2'><a href='#_add_scripts'>_add_scripts</a>
+    <li class='indexItem indexItem2'><a href='#_add_symlink'>_add_symlink</a>
+    <li class='indexItem indexItem2'><a href='#_add_dependencies'>_add_dependencies</a>
+    <li class='indexItem indexItem2'><a href='#_update_info_version'>_update_info_version</a>
+    <li class='indexItem indexItem2'><a href='#_remove_files_from_db'>_remove_files_from_db</a>
+    <li class='indexItem indexItem2'><a href='#_remove_symlink'>_remove_symlink</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CAVEATS'>CAVEATS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>PAR::Repository - Create and modify PAR repositories</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  # Usually, you want to use the &#39;parrepo&#39; script which comes with
+  # this distribution.
+  use PAR::Repository;
+  
+  my $repo = PAR::Repository-&#62;new( path =&#62; &#39;/path/to/repository&#39; );
+  # creates a new repository if it doesn&#39;t exist, opens it if it
+  # does exist.
+  
+  $repo-&#62;inject(
+    file =&#62; &#39;Foo-Bar-0.01-x86_64-linux-gnu-thread-multi-5.8.7.par&#39;
+  );
+  $repo-&#62;remove(
+    file =&#62; &#39;...&#39;
+  );
+  $repo-&#62;query_module(regex =&#62; &#39;Foo::Bar&#39;);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module is intended for creation and maintenance of PAR repositories. A PAR repository is collection of <em>.par</em> archives which contain Perl code and associated libraries for use on specific platforms. In the most common case, these archives differ from CPAN distributions in that they ship the (possibly compiled) output of <code>make</code> in the <em>blib/</em> subdirectory of the CPAN distribution&#39;s build directory.</p>
+
+<p>You can access a PAR repository using the <a href="/perldoc?PAR%3A%3ARepository%3A%3AClient" class="podlinkpod"
+>PAR::Repository::Client</a> module or the <a href="/perldoc?PAR" class="podlinkpod"
+>PAR</a> module which provides syntactic sugar around the client. <a href="/perldoc?PAR" class="podlinkpod"
+>PAR</a> allows you to load libraries from repositories on demand.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PAR_REPOSITORIES"
+>PAR REPOSITORIES</a></h2>
+
+<p>A PAR repository is, basically, just a directory with certain stuff in it. It contains:</p>
+
+<dl>
+<dt><a name='modules_dists'></a><a name="modules_dists.dbm.zip"
+>modules_dists.dbm.zip</a></dt>
+
+<dd>
+<p>An index that maps module names to file names. Details can be found in <a href="/~smueller/PAR-Repository-0.20/lib/PAR/Repository/DBM.pm" class="podlinkpod"
+>PAR::Repository::DBM</a>.</p>
+
+<dt><a name='symlinks'></a><a name="symlinks.dbm.zip"
+>symlinks.dbm.zip</a></dt>
+
+<dd>
+<p>An index that maps file names to other files. You shouldn&#39;t have to care about it. Details can be found in <a href="/~smueller/PAR-Repository-0.20/lib/PAR/Repository/DBM.pm" class="podlinkpod"
+>PAR::Repository::DBM</a>.</p>
+
+<dt><a name='scripts_dists'></a><a name="scripts_dists.dbm.zip"
+>scripts_dists.dbm.zip</a></dt>
+
+<dd>
+<p>An index that maps script names to file names. Details can be found in <a href="/~smueller/PAR-Repository-0.20/lib/PAR/Repository/DBM.pm" class="podlinkpod"
+>PAR::Repository::DBM</a>.</p>
+
+<dt><a name='repository_info'></a><a name="repository_info.yml"
+>repository_info.yml</a></dt>
+
+<dd>
+<p>A simple YAML file which contains meta information for the repository. It currently contains the following bits of information:</p>
+
+<dt><a name='dbm_checksums'></a><a name="dbm_checksums.txt"
+>dbm_checksums.txt</a></dt>
+
+<dd>
+<p>A text file associating the DBM files with their MD5 checksums. (new in 0.15)</p>
+
+<dl>
+<dt><a name="repository_version"
+>repository_version</a></dt>
+
+<dd>
+<p>The version of PAR::Repository this repository was created with. When opening an existing repository, PAR::Repository checks that the repository was created by a compatible PAR::Repository version.</p>
+
+<p>Similarily, PAR::Repository::Client checks that the repository has a compatible version.</p>
+</dd>
+</dl>
+
+<dt><a name='arch'></a><a name="arch/perl-version_directories"
+><i>arch/perl-version</i> directories</a></dt>
+
+<dd>
+<p>Your system architecture is identified with a certain string. For example, my development box is <code>x86_64-linux-gnu-thread-multi</code>. For every such architecture for which there are PAR archives in the repository, there is a directory with the name of the architecture.</p>
+
+<p>There is one special directory called <code>any_arch</code> which is meant for PAR archives that are architecture independent. (Usually <i>pure-perl</i> modules.)</p>
+
+<p>In every such architecture directory, there is a number of directories for every Perl version. (5.6.0, 5.6.1, 5.8.0, ...) Again, there is a special directory for modules that work with any version of Perl. This directory is called <code>any_version</code>.</p>
+
+<p>Of course, a module won&#39;t run with Perl 4 and probably not even with 5.001. Whether a module works with <i>any version</i> of perl is something you need to decide when injecting modules into the repository and depends on the scope of the repository.</p>
+
+<p>These inner directories contain the PAR archives. The directories exist mostly because large repositories with a lot of modules for a lot of architectures would otherwise have too large directory lists.</p>
+
+<dt><a name='PAR'></a><a name="PAR_archives"
+>PAR archives</a></dt>
+
+<dd>
+<p>Within the <i>arch/perl-version</i> directories come the actual PAR archives. The name of each such file is of the following form:</p>
+
+<p><i>Distribution-Name</i>-<i>Distribution-Version</i>-<i>Architecture</i>-<i>Perl-Version</i>.par</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Following is a list of class and instance methods. (Instance methods until otherwise mentioned.)</p>
+
+<p>Other methods callable on <code>PAR::Repository</code> objects are inherited from classes listed in the <i>SEE ALSO</i> section.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+>new</a></h2>
+
+<p>Creates a new PAR::Repository object. Takes named arguments.</p>
+
+<p>Mandatory paramater:</p>
+
+<p><code>path</code> should be the path to the PAR repository. If the repository does not exist yet, it is created empty. If the repository exists, it is <i>opened</i>. That means any modifications you apply to the repository object are applied to the <i>opened</i> repository on disk.</p>
+
+<p>Optional parameters:</p>
+
+<p>Additionally, you may supply the <code>fake_symlinks =&#62; 1</code> or <code>convert_symlinks =&#62; 1</code> parameters. Both default to false. <i>convert_symlinks</i> will convert an existing repository that uses symbolic links to using no symbolic links as if it had been created with the <i>fake_symlinks</i> option. If the repository has to be created, <i>fake_symlinks</i> flags it as using no symbolic links. Copies will be used instead. this may result is a larger but more portable repository. <i>convert_symlinks</i> implies <i>fake_symlinks</i>. See also <i>CAVEATS</i> below.</p>
+
+<p><i>fake_symlinks</i> is the default for creating new repositories on platforms which do not support symlinks.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="inject"
+>inject</a></h2>
+
+<p>Injects a new PAR distribution into the repository. Takes named parameters.</p>
+
+<p>Mandatory parameters: <i>file</i>, the path and filename of the PAR distribution to inject. The name of the file can be used to automatically determine the <i>distname</i>, <i>distversion</i>, <i>arch</i>, and <i>perlversion</i> parameters if the form of the file name is as follows:</p>
+
+<p>Dist-Name-0.01-x86_64-linux-gnu-thread-multi-5.8.7.par</p>
+
+<p>This would set <code>distname =</code> &#39;Dist-Name&#39;, distversion =&#62; &#39;0.01&#39;, arch =&#62; &#39;linux-gnu-thread-multi&#39;, perlversion =&#62; &#39;5.8.7&#39;&#62;. You can override this automatic detection using the corresponding parameters.</p>
+
+<p>If the file exists in the repository, inject returns false. If the file was added successfully, inject returns true. See the <code>overwrite</code> parameter for details.</p>
+
+<p><code>inject()</code> scans the distribution for modules and indexes these in the modules-dists dbm. Additionally, it scans the distribution for scripts in the <code>script</code> and <code>bin</code> subdirectories of the distribution. (All files in these folders are considered executables. <code>main.pl</code> is skipped.) You can turn the indexing of scripts off with the <code>no_scripts</code> parameter.</p>
+
+<p>Optional parameters:</p>
+
+<dl>
+<dt><a name="distname"
+><i>distname</i></a></dt>
+
+<dd>
+<p>The distribution name.</p>
+
+<dt><a name="distversion"
+><i>distversion</i></a></dt>
+
+<dd>
+<p>The distribution version.</p>
+
+<dt><a name="arch"
+><i>arch</i></a></dt>
+
+<dd>
+<p>The architecture string. It can be <code>any_arch</code> in order to inject this distribution as an architecture independent distribution. You can use the <code>any_arch</code> parameter for this as well (recommended).</p>
+
+<p>Setting this to <code>any_arch</code> is slightly different from using the parameter of the same name. Setting <code>arch=</code>&#39;any_arch&#39;&#62; actually puts the file into the <code>any_arch</code> directory. Setting only the parameter <code>any_arch</code> creates a symlink there.</p>
+
+<dt><a name="perlversion"
+><i>perlversion</i></a></dt>
+
+<dd>
+<p>The version of perl. Note that it has to be in the <code>5.8.7</code> and not in the <code>5.008007</code> form!</p>
+
+<p>There is a special case of setting this to <code>any_version</code> meaning that the distribution can run on any version of perl. The distribution will then be injected into the <code>any_version</code> tree of the repository. You can also achieve this by using the <code>any_version</code> parameter which is recommended.</p>
+
+<p>Setting this to <code>any_version</code> is slightly different from using the parameter of the same name. Setting <code>perlversion=</code>&#39;any_version&#39;&#62; actually puts the file into the <code>any_version</code> directory. Setting only the parameter <code>any_version</code> creates a symlink there.</p>
+
+<dt><a name="any_arch"
+><i>any_arch</i></a></dt>
+
+<dd>
+<p>Specifies that this distribution is suitable for any architecture. (Default: no.)</p>
+
+<p>If set, a symlink to the distribution file is created in the <code>any_arch</code> directory.</p>
+
+<dt><a name="any_version"
+><i>any_version</i></a></dt>
+
+<dd>
+<p>Specifies that this distribution is suitable for any version of perl. (Default: no.)</p>
+
+<p>If set, a symlink to the distribution file is created in the <code>any_version</code> directory.</p>
+
+<dt><a name="overwrite"
+><i>overwrite</i></a></dt>
+
+<dd>
+<p>If this is set to a true value, if the file exists in the repository, it will be overwritten.</p>
+
+<dt><a name="no_scripts"
+><i>no_scripts</i></a></dt>
+
+<dd>
+<p>By default, PAR::Repository indexes all modules found in a distribution as well as all scripts. Set this parameter to a true value to skip indexing scripts.</p>
+
+<dt><a name="ignore_provides"
+><i>ignore_provides</i></a></dt>
+
+<dd>
+<p>Set this to true if you want to ignore the META.yml <code>provides</code> section which should normally list all modules in the distribution. In that case, a manual scan for packages is performed.</p>
+
+<dt><a name="no_dependencies"
+><i>no_dependencies</i></a></dt>
+
+<dd>
+<p>Set this to true if you want to skip inserting dependency information into the database. You&#39;d better have a good idea why you want this.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="remove"
+>remove</a></h2>
+
+<p>Removes a distribution from the repository.</p>
+
+<p>The information needed for this consists of four pieces: The distribution name, the distribution version, the architecture name and the perl version.</p>
+
+<p>This information can be gathered from either a file name (see the <i>file</i> parameter) or from individual parameters (see below) or from a mixture of these. The explicit parameters take precedence before the file name parsing.</p>
+
+<p>If the specified distribution isn&#39;t in the repository, the method returns false. If the specified distribution is a symlink to another distribution, the symlink will be removed, but not the linked distribution. If the specified distribution is an actual distribution in the repository that has other symlinks, the distribution as well as any symlinks are removed.</p>
+
+<p>Returns true on success.</p>
+
+<p>Parameters:</p>
+
+<dl>
+<dt><a name="file"
+><i>file</i></a></dt>
+
+<dd>
+<p>The file name of the distribution to remove. The file name should not include any path information. That means you must not worry about the way it is stored in the repository.</p>
+
+<p>Any paths are stripped and the .par extension is appended if it&#39;s not explicitly specified. The format must be as with the inject() method.</p>
+
+<dt><a name="distname"
+><i>distname</i></a></dt>
+
+<dd>
+<p>The distribution name.</p>
+
+<dt><a name="distversion"
+><i>distversion</i></a></dt>
+
+<dd>
+<p>The distribution version.</p>
+
+<dt><a name="arch"
+><i>arch</i></a></dt>
+
+<dd>
+<p>The architecture string. It can be <code>any_arch</code> or an actual architecture name. For details, see the discussion in the manual entry for the <code>inject</code> method.</p>
+
+<dt><a name="perlversion"
+><i>perlversion</i></a></dt>
+
+<dd>
+<p>The version of perl. Note that it has to be in the <code>5.8.7</code> and not in the <code>5.008007</code> form!</p>
+
+<p>It can be <code>any_version</code> instead of an actual perl version. For details, see the discussion in the manual entry for the <code>inject</code> method.</p>
+</dd>
+</dl>
+
+<p>You may omit the <code>file</code> parameter if the full file name can be constructed from the individual pieces of information.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="verbose"
+>verbose</a></h2>
+
+<p>Print a verbose status message. First argument should be an integer, second argument should be the message. If the global variable <code>$PAR::Repository::VERBOSE</code> is set to a value equal to or higher than the integer passed as first argument, the verbose message will be sent to STDOUT.</p>
+
+<p>The global verbose variable defaults to 0. Setting it to a negative value should suppress <b>any</b> output except fatal errors.</p>
+
+<p>Valid values are:</p>
+
+<pre class="sh_perl">  0 =&#62; Non-fatal errors.
+  1 =&#62; Short status messages.
+  2 =&#62; Method entry messages.-
+  3 =&#62; Full debug output.</pre>
+
+<p>A newline is attached to all output. If the verbosity global variable is set to a &#34;4&#34;, all status messages are sent to STDERR instead via warn. That means the source line of the status message is attached.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_cmp_dist_versions"
+>_cmp_dist_versions</a></h2>
+
+<p>Compares the versions of two files. Takes two file names as arguments. Parses the distribution version from those file names and compares those versions.</p>
+
+<p>Returns -1 if the version of the first file is less than that of the second file.</p>
+
+<p>Returns 0 if the versions are equal.</p>
+
+<p>Returns 1 if the version of the first file is greater than that of the second file.</p>
+
+<p>For internal use only.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_add_packages"
+>_add_packages</a></h2>
+
+<p>Adds a number of package &#60;-&#62; file associations to the modules&#60;-&#62;dists DBM file.</p>
+
+<p>Parameters: <code>packages =</code> \%pkg_hash&#62; a hash of package names as keys and their versions (optionally) as values. <code>file =</code> $target_file&#62; the file in the repository to associate these packages with.</p>
+
+<p>For internal use only!</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_add_scripts"
+>_add_scripts</a></h2>
+
+<p>Adds a number of script &#60;-&#62; file associations to the scripts&#60;-&#62;dists DBM file.</p>
+
+<p>Parameters: <code>scripts =</code> \%script_hash&#62; a hash of script names as keys and their versions (optionally) as values. <code>file =</code> $target_file&#62; the file in the repository to associate these scripts with.</p>
+
+<p>For internal use only!</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_add_symlink"
+>_add_symlink</a></h2>
+
+<p>Adds a symlink to the repository. Parameters: <code>file =</code> &#34;file&#34;&#62; and <code>sym =</code> &#34;symlink&#34;&#62;.</p>
+
+<p><i>file</i> and <i>symlink</i> <b>must not include any path</b>. The path in the repository is generated from the file name! (Paths in the repository do not carry any additional information. They are for grouping only and reduce the number of files in a single directory.)</p>
+
+<p>Optional parameter: <code>overwrite =</code> bool&#62;. If true, overwrites old symlinks. Never overwrites files.</p>
+
+<p>This is a private method.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_add_dependencies"
+>_add_dependencies</a></h2>
+
+<p>Adds a number of distribution &#60;-&#62; module associations to the dependencies DBM file.</p>
+
+<p>Parameters: <code>file =&#62; &#39;DistName-0.01-.....par&#39;, dependencies =&#62; \%deps_hash</code> where <code>\%deps_hash</code> the returned structure from <code>PAR::Indexer::dependencies_from_meta_yml</code>: module names associated to their minimal required versions.</p>
+
+<p>For internal use only!</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_update_info_version"
+>_update_info_version</a></h2>
+
+<p>Writes the YAML repository info file and upgrades the repository version to the current version.</p>
+
+<p>Should be used with care and considered a private method.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_remove_files_from_db"
+>_remove_files_from_db</a></h2>
+
+<p>First argument is the reference to the modules or scripts DBM hash. Second argument is an array reference to an array of file names. Removes all mention of those distribution files (symlinks or actual files) from the DBM hash. This is a slow operation because the hash associates in the opposite direction.</p>
+
+<p>If any occurrances have been deleted, this method cleans up the DBM file.</p>
+
+<p>Returns 1 on success.</p>
+
+<p>This is a private method.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_remove_symlink"
+>_remove_symlink</a></h2>
+
+<p>Removes a symlink from the repository. Parameters: <code>sym =</code> &#34;full/path/in/repo&#34;&#62;. Or: <code>sym =</code> &#34;foo.par&#34;&#62; (omitting the path).</p>
+
+<p>This is a private method.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEATS"
+>CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>By default, PAR::Repository uses symlinks to save space. However, on some systems, there are no symlinks. Thus, you can use the option <code>fake_symlinks =&#62; 1</code> to the constructor to disable the use of symlinks.</p>
+
+<p>Converting existing repositories with the <code>convert_symlinks =&#62; 1</code> option is believed but not proven to be somewhat fragile, so back up your repository first.</p>
+
+<p>At some point in the future, <code>fake_symlinks</code> may become the default. Principle of least surprise. But this isn&#39;t clear yet.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module inherits from <a href="/~smueller/PAR-Repository-0.20/lib/PAR/Repository/DBM.pm" class="podlinkpod"
+>PAR::Repository::DBM</a>, <a href="/~smueller/PAR-Repository-0.20/lib/PAR/Repository/Zip.pm" class="podlinkpod"
+>PAR::Repository::Zip</a>, <a href="/perldoc?PAR%3A%3ARepository%3A%3AQuery" class="podlinkpod"
+>PAR::Repository::Query</a>,</p>
+
+<p>This module is directly related to the <code>PAR</code> project. You need to have basic familiarity with it.</p>
+
+<p>See <a href="/perldoc?PAR" class="podlinkpod"
+>PAR</a>, <a href="/perldoc?PAR%3A%3ADist" class="podlinkpod"
+>PAR::Dist</a>, etc.</p>
+
+<p><a href="/perldoc?PAR%3A%3AIndexer" class="podlinkpod"
+>PAR::Indexer</a> does the indexing of the contents of a <em>.par</em> file. The code used to be part of this distribution as <code><a href="/perldoc?PAR%3A%3ARepository%3A%3AScanPAR" class="podlinkpod"
+>PAR::Repository::ScanPAR</a></code>.</p>
+
+<p><a href="/perldoc?PAR%3A%3AWebStart" class="podlinkpod"
+>PAR::WebStart</a> is doing something similar but is otherwise unrelated.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Steffen Mueller, &#60;smueller@cpan.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2006-2009 by Steffen Mueller</p>
+
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself, either Perl version 5.6 or, at your option, any later version of Perl 5 you may have available.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78163 Uploads, 24704 Distributions
+105968 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 20:57:54 2012 GMT (0.229840040206909) @cpansearch1 -->
+ </body>
+</html>

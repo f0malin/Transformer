@@ -1,0 +1,666 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>PAR::FAQ - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","PAR",3]);
+    _gaq.push(["_setCustomVar",5,"Release","PAR-1.005",3]);
+    _gaq.push(["_setCustomVar",4,"Document","PAR::FAQ",3]);
+    _gaq.push(["_setCustomVar",1,"Author","RSCHUPP",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?PAR::FAQ">permalink</a></div>
+  <a href="/~rschupp/">Roderich Schupp</a> &gt;
+  <a href="/~rschupp/PAR-1.005/">PAR-1.005</a> &gt;
+  PAR::FAQ
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/12f1ea5df52a78cb3a11495a66e92444?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/R/RS/RSCHUPP/PAR-1.005.tar.gz">PAR-1.005.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~RSCHUPP/PAR-1.005/lib/PAR/FAQ.pod">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 6</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 16</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 3</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=PAR">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/RSCHUPP/PAR-1.005/lib/PAR/FAQ.pod">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Where_is_the_Windows_binary_version?'>Where is the Windows binary version?</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#cpan'>cpan</a>
+      <li class='indexItem indexItem3'><a href='#ppm'>ppm</a>
+      <li class='indexItem indexItem3'><a href='#manual'>manual</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Can_PAR_bundle_all_its_prerequisites?'>Can PAR bundle all its prerequisites?</a>
+    <li class='indexItem indexItem2'><a href='#If_I_try_to_compile_my_wxGlade_generated_script,_it_doesn&#39;t_run._What&#39;s_wrong?'>If I try to compile my wxGlade generated script, it doesn&#39;t run. What&#39;s wrong?</a>
+    <li class='indexItem indexItem2'><a href='#I_get_a_link_error_&#39;/usr/bin/ld:_cannot_find_-lperl&#39;_during_the_&#39;make&#39;_step_of_the_installation_on_Debian._What&#39;s_wrong?'>I get a link error &#39;/usr/bin/ld: cannot find -lperl&#39; during the &#39;make&#39; step of the installation on Debian. What&#39;s wrong?</a>
+    <li class='indexItem indexItem2'><a href='#I_specify_a_.ico_file_with_--icon_for_Win32,_but_the_icon_is_still_the_black_and_white_camel._What&#39;s_wrong?'>I specify a .ico file with --icon for Win32, but the icon is still the black and white camel. What&#39;s wrong?</a>
+    <li class='indexItem indexItem2'><a href='#On_what_platforms_can_I_run_PAR?_On_what_platforms_will_the_resulting_executable_run?'>On what platforms can I run PAR? On what platforms will the resulting executable run?</a>
+    <li class='indexItem indexItem2'><a href='#How_do_I_extract_my_script_out_of_packed_executable?'>How do I extract my script out of packed executable?</a>
+    <li class='indexItem indexItem2'><a href='#Can_PAR_completely_hide_my_source_code?'>Can PAR completely hide my source code?</a>
+    <li class='indexItem indexItem2'><a href='#On_Windows_XP,_pp_crashes_saying_that_&#34;par.exe_has_encountered_a_problem&#34;'>On Windows XP, pp crashes saying that &#34;par.exe has encountered a problem&#34;</a>
+    <li class='indexItem indexItem2'><a href='#Perl_Tk_tips'>Perl Tk tips</a>
+    <li class='indexItem indexItem2'><a href='#Problem_with_Win32::Perms_and_Perms.DLL'>Problem with Win32::Perms and Perms.DLL</a>
+    <li class='indexItem indexItem2'><a href='#Under_Win32,_a_pp_packed_executable_has_trouble_executing_other_perl_scripts_or_pp_packed_executable'>Under Win32, a pp packed executable has trouble executing other perl scripts or pp packed executable</a>
+    <li class='indexItem indexItem2'><a href='#How_can_I_make_a_.exe_that_runs_with_no_console_window_under_Windows?'>How can I make a .exe that runs with no console window under Windows?</a>
+    <li class='indexItem indexItem2'><a href='#How_can_I_change_the_icon_of_the_generated_.exe_file_under_Windows?'>How can I change the icon of the generated .exe file under Windows?</a>
+    <li class='indexItem indexItem2'><a href='#I_want_to_include_a_pp-ed_binary_in_an_RPM_package._How_can_I_make_this_work?'>I want to include a pp-ed binary in an RPM package. How can I make this work?</a>
+    <li class='indexItem indexItem2'><a href='#How_can_I_package_Wx_applications?'>How can I package Wx applications?</a>
+    <li class='indexItem indexItem2'><a href='#How_can_I_package_Catalyst_web_applications?'>How can I package Catalyst web applications?</a>
+    <li class='indexItem indexItem2'><a href='#The_resulting_files_are_huge!_How_can_I_reduce_the_size_of_the_output_file?'>The resulting files are huge! How can I reduce the size of the output file?</a>
+    <li class='indexItem indexItem2'><a href='#How_do_I_use_Win32::GUI::SplashScreen_with_PAR?'>How do I use Win32::GUI::SplashScreen with PAR?</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>PAR::FAQ - Frequently Asked Questions about PAR</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This is the Frequently Asked Questions list for the Perl Archive Toolkit.
+You can edit this document at <a href="http://par.perl.org/wiki/FAQ" class="podlinkurl"
+>http://par.perl.org/wiki/FAQ</a> online.
+This (included) FAQ list might be outdated.
+The Wiki version at the above URL is guaranteed to be up to date.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Where_is_the_Windows_binary_version?"
+>Where is the Windows binary version?</a></h2>
+
+<p>You can find windows binaries here:</p>
+
+<p><a href="http://www.cpan.org/authors/id/S/SM/SMUELLER/" class="podlinkurl"
+>http://www.cpan.org/authors/id/S/SM/SMUELLER/</a></p>
+
+<p>There are three ways to install them.
+Sorted in order of preference:</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="cpan"
+>cpan</a></h3>
+
+<p>Run the <i>cpan</i> command line tool that comes with Perl.
+In the <i>cpan</i> shell,
+type</p>
+
+<pre class="sh_perl">  install PAR</pre>
+
+<p>and wait for the script to download and extract PAR and its dependencies. If you have a C compiler installed, PAR will be built on your computer for your specific version of Perl. If you do not have a C compiler, the installer will look at the site referenced above for a compatible binary release and ask you whether you would like to install it.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="ppm"
+>ppm</a></h3>
+
+<p>If you are using ActivePerl from ActiveState, you can use the &#39;ppm&#39; program that comes with the ActiveState Perl. Instructions can be found below. PAR is availlable from various PPM repositories and some packages are compatible with some versions of ActivePerl and not with others. There is an incomplete PAR-Win32 Binary Compatibility List at <a href="http://par.wikia.com/wiki/PAR_PPM_Compatibility_List" class="podlinkurl"
+>http://par.wikia.com/wiki/PAR_PPM_Compatibility_List</a> There are at least three relevant PPM repositories: The default ActiveState one, the bribes repository which is used in the example below and Randy Kobes&#39; repository at <a href="http://theoryx5.uwinnipeg.ca/ppms/" class="podlinkurl"
+>http://theoryx5.uwinnipeg.ca/ppms/</a>.</p>
+
+<pre class="sh_perl">    C:\&#62; ppm3
+    # activestate was out of date compared to this one
+    % rep add bribes <a href="http://www.bribes.org/perl/ppm" class="podlinkurl"
+>http://www.bribes.org/perl/ppm</a>
+    # move it to first place on list of repositories
+    % rep up bribes
+    CPAN&#62;upgrade -install PAR</pre>
+
+<p>And finally, &#39;q&#39; to quit and that&#39;s all :-) You have access to pp and so on...</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="manual"
+>manual</a></h3>
+
+<p>For reference, here&#39;s the old explanation of how to install it by hand: The file you need will be called PAR-X.XX-MSWin32-x86-multi-thread-Y.Y.Y.par where X.XX is the version of PAR you will use and Y.Y.Y is the version of Perl you have. Unzip this file (you may need to rename it to end with .zip instead of .par first) and copy all the files in the script directory into a directory in your PATH. Now you should be able to use PAR.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Can_PAR_bundle_all_its_prerequisites?"
+>Can PAR bundle all its prerequisites?</a></h2>
+
+<p><i>Note:</i> This entry needs serious attention.</p>
+
+<p>Yes and no.</p>
+
+<p>It would be possible to do this but it would also introduce a maintenance nightmare. A new version of PAR would have to be released whenever a new version of any of the dependencies came out. This is already painful with the included <a href="/perldoc?Module%3A%3AInstall" class="podlinkpod"
+>Module::Install</a>.</p>
+
+<p>The original proposal which led to this FAQ entry considered the case where you want to install PAR without a working CPAN.pm/CPAN shell installation or without internet connectivity. By default, PAR will try to install its dependencies from CPAN using the CPAN.pm module.</p>
+
+<p>Given that you have a development machine with PAR installed and with a working CPAN.pm, it is reasonably simple to create one or more .par distributions of PAR&#39;s dependencies. Install <a href="/perldoc?PAR%3A%3ADist%3A%3AFromCPAN" class="podlinkpod"
+>PAR::Dist::FromCPAN</a>. Then you can create .par distributions (read: binaries installable with the pure-perl PAR::Dist on the same architecture) for the PAR dependencies as follows:</p>
+
+<pre class="sh_perl">  mkdir par_files
+  cpan2par --pattern PAR --follow --out par_files/ --merge --skip File::.*
+           --skip Getopt::Std --skip Carp --skip Data::Dumper --skip Time::Local
+           --skip &#39;Test\b.*&#39; --skip Text::ParseWords --skip ExtUtils::.*
+           --skip Getopt::Long --skip Text::Abbrev --skip DirHandle --skip Pod::.*</pre>
+
+<p>(Line breaks inserted for readability.) What happens here? cpan2par uses the API of the CPAN.pm module to fetch the PAR distribution from CPAN, unpacks it, builds it, creates a .par archive from its compiled state and then does the same for any of its dependencies. And then for its dependencies dependencies and... You get the idea. This is what the --follow option does. We add a couple of --skip options to skip core modules which we need not include and any Test::* modules. The --merge option merges all of the .par distributions into the original PAR one. Voila! (Future versions of PAR::Dist::FromCPAN might include an option --skip-core which would skip any modules contained in the core distribution.)</p>
+
+<p>After this command worked its magic, you should have a single file PAR-VERSION-ARCHNAME-PERLVERSION.par in the subdirectory &#39;par_files/&#39;. You can now install PAR and its non-core dependencies on any machine that has the architecture of your development system (and a binary compatible perl version) using <a href="/perldoc?PAR%3A%3ADist" class="podlinkpod"
+>PAR::Dist</a> as follows:</p>
+
+<pre class="sh_perl">  perl -MPAR::Dist -einstall_par</pre>
+
+<p>Provided that you run the command from within the directory containing the aforementioned .par file (and no other .par file).</p>
+
+<p>Since you might not even have PAR::Dist on the target machine, you can do this simple hack to get a basic installer:</p>
+
+<pre class="sh_perl">  perl -MPAR::Dist -e&#39;open my $fh, &#34;&#60;&#34;, $INC{&#34;PAR/Dist.pm&#34;}; print &#60;$fh&#62;;
+       print &#34;\npackage main;\nPAR::Dist::install_par(\@ARGV ? shift(\@ARGV)
+       : ());\n\n&#34;&#39;
+       &#62; installer.pl</pre>
+
+<p>(Again: Line breaks inserted for readability.) This looks for your installed copy of PAR::Dist, reads it, writes it to STDOUT and appends two lines of code: &#34;package main;&#34; and a call to PAR::Dist::install_par. By default, it will install any (single) .par file in the current directory. If supplied with a file name as first argument, it will install the specified file. It should have no non-core dependencies! So shipping the generated PAR-....par file and the installer.pl file to the target machine and running &#34;perl installer.pl&#34; should just magically install PAR and its dependencies for you.</p>
+
+<p>Now, this whole trick works equally well for any other modules. In fact, if you have PAR on the target machine, you needn&#39;t even install the modules in the .par file in order to use them! You can just add &#34;use PAR &#39;foo-bar.par&#39;;&#34; to your code and any modules will be loaded from the .par file as necessary. (&#34;perl -MPAR=foo-bar.par your_script.pl&#34; works, too.) The documentation of the PAR module has details on this.</p>
+
+<p>Finally, note that you can install <a href="/perldoc?PAR%3A%3ARepository%3A%3AClient" class="podlinkpod"
+>PAR::Repository::Client</a> on the target machines and subsequently use PAR 0.951 and later to automatically fetch any unfulfilled dependencies from a (remote or local) repository:</p>
+
+<pre class="sh_perl">  use PAR { repository =&#62; &#39;<a href="http://my_local_secure_host/repository" class="podlinkurl"
+>http://my_local_secure_host/repository</a>&#39; };</pre>
+
+<p>or:</p>
+
+<pre class="sh_perl">  use PAR { repository =&#62; &#39;<a href="file:///path/to/repository" class="podlinkurl"
+>file:///path/to/repository</a>&#39; };</pre>
+
+<p>Details, again, in the <a href="/~rschupp/PAR-1.005/lib/PAR.pm" class="podlinkpod"
+>PAR</a> documentation and in the <a href="/perldoc?PAR%3A%3ARepository%3A%3AClient" class="podlinkpod"
+>PAR::Repository::Client</a> documentation.</p>
+
+<p>Answer from: Steffen Mueller, 16 August 2006</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="If_I_try_to_compile_my_wxGlade_generated_script,_it_doesn&#39;t_run._What&#39;s_wrong?"
+>If I try to compile my wxGlade generated script, it doesn&#39;t run. What&#39;s wrong?</a></h2>
+
+<p><i>Note:</i> Is this still a problem?</p>
+
+<p>Comment out the line that starts with &#34; unless (caller) &#34;, and compile it again. Note that this is considered a bug; clearing the caller stack is a development in progress. See: <a href="http://par.perl.org/wiki/Development_in_progress" class="podlinkurl"
+>http://par.perl.org/wiki/Development_in_progress</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="I_get_a_link_error_&#39;/usr/bin/ld:_cannot_find_-lperl&#39;_during_the_&#39;make&#39;_step_of_the_installation_on_Debian._What&#39;s_wrong?"
+>I get a link error &#39;/usr/bin/ld: cannot find -lperl&#39; during the &#39;make&#39; step of the installation on Debian. What&#39;s wrong?</a></h2>
+
+<p>This is a common problem when building compiled libraries on Debian distribution installations with the default perl package. To fix this problem, create a symbolic link from libperl.so.5.6.1 to libperl.so in /usr/lib (cd /usr/lib; ln -s libperl.so.5.6.1 libperl.so) and re-run the &#39;make&#39; step of the installation. Or install libperl-dev</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="I_specify_a_.ico_file_with_--icon_for_Win32,_but_the_icon_is_still_the_black_and_white_camel._What&#39;s_wrong?"
+>I specify a .ico file with --icon for Win32, but the icon is still the black and white camel. What&#39;s wrong?</a></h2>
+
+<p>Unlike Perl2EXE, which can use a standard 16-color bitmap as an application icon, PAR requires a true Windows icon file. Download a trial version of Microangelo and use that to create your .ico file. The latest Netpbm tools at <a href="http://netpbm.sourceforge.net/" class="podlinkurl"
+>http://netpbm.sourceforge.net/</a> has ppmtowinicon, which can tack a pbm and convert it to a windows icon. It is open source and has win32 ports.</p>
+
+<p>Gimp for Windows can also create Windows icon files <a href="http://gimp-win.sourceforge.net/" class="podlinkurl"
+>http://gimp-win.sourceforge.net/</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+
+>I added a directory to my PAR file using &#34;zip -r&#34; or winzip, and then generated an executable from this PAR file, and the executable failed to run (IO error: reading header signature :..). What&#39;s wrong?</a></h2>
+
+<p>As pointed out by Alan Stewart, zip adds a directory entry for the new directory, and it causes the PAR executable to fail. Just use :</p>
+
+<pre class="sh_perl">  zip -r -D hello.par my_dir/ </pre>
+
+<p>or the Archive::Zip::addTree as follows :</p>
+
+<pre class="sh_perl">  $zip-&#62;addTree( $root, $dest, sub { -f } )</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="On_what_platforms_can_I_run_PAR?_On_what_platforms_will_the_resulting_executable_run?"
+>On what platforms can I run PAR? On what platforms will the resulting executable run?</a></h2>
+
+<p>Win32 (95/98/ME/NT4/2K/XP), FreeBSD, Linux, AIX, Solaris, Darwin and Cygwin.</p>
+
+<p>The resulting executable will run on any platforms that supports the binary format of the generating platform.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="How_do_I_extract_my_script_out_of_packed_executable?"
+>How do I extract my script out of packed executable?</a></h2>
+
+<p>In other words, &#34;I did a `pp foo.pl&#39; and I lost foo.pl, how do I get it back?&#34;.</p>
+
+<p>The answer is to just use unzip/winzip/winrar/whatever to decompress the executable, treating it like a normal Zip file. You may need to rename the executable into a .zip extension first.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Can_PAR_completely_hide_my_source_code?"
+>Can PAR completely hide my source code?</a></h2>
+
+<p>Not completely, but possible to a degree. Starting from version 0.76, PAR supports an input filter mechanism, which can be used to implement source obfuscators (or even product activation schemes).</p>
+
+<p>But if you are looking for 100% bulletproof way of hiding source code, it is not possible with any language. Learning Perl, 3rd Edition has this answer to offer (quoted with permission from Randal Schwartz):</p>
+
+<p>If you&#39;re wishing for an opaque binary, though, we have to tell you that they don&#39;t exist. If someone can install and run your program, they can turn it back into source code. Granted, this won&#39;t necessarily be the same source that you started with, but it will be some kind of source code. The real way to keep your secret algorithm a secret is, alas, to apply the proper number of attorneys; they can write a license that says &#34;you can do this with the code, but you can&#39;t do that. And if you break our rules, we&#39;ve got the proper number of attorneys to ensure that you&#39;ll regret it.&#34;</p>
+
+<p>Other than that, I would point you at <a href="/perldoc?PAR%3A%3AFilter%3A%3ACrypto" class="podlinkpod"
+>PAR::Filter::Crypto</a>. Be sure to read the CAVEATS and WARNINGS sections of the documentation.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="On_Windows_XP,_pp_crashes_saying_that_&#34;par.exe_has_encountered_a_problem&#34;"
+>On Windows XP, pp crashes saying that &#34;par.exe has encountered a problem&#34;</a></h2>
+
+<p>This is believed to be fixed by PAR 0.76_99. The following answer applies to PAR 0.76 and earlier:</p>
+
+<p>You may be able to escape this problem by setting some executables to Windows 95 compatibility mode. Specifically, find &#34;parl.exe&#34; (probably in &#34;C:\perl\5.8.0\bin&#34;) using Windows Explorer, and right-click on it and choose &#34;Properties&#34;. Choose the &#34;Compatibility&#34; tab and tick the box for &#34;Run this program with compatibility mode for&#34; and check that the dropdown shows &#34;Windows 95&#34;. Then click OK.</p>
+
+<p>Now you can hopefully run pp as normal to generate an EXE. Before you can run the generated EXE, you&#39;ll need to set its compatibility mode too, in the same way as you did for parl.exe.</p>
+
+<p>This workaround is known not to work in all cases, and the developers are working on a solution to the problem. See these posts for more info:</p>
+
+<p><a href="http://www.mail-archive.com/par@perl.org/msg00423.html" class="podlinkurl"
+>http://www.mail-archive.com/par@perl.org/msg00423.html</a>, <a href="http://www.mail-archive.com/par@perl.org/msg00435.html" class="podlinkurl"
+>http://www.mail-archive.com/par@perl.org/msg00435.html</a>, <a href="http://www.mail-archive.com/par@perl.org/msg00573.html" class="podlinkurl"
+>http://www.mail-archive.com/par@perl.org/msg00573.html</a>, <a href="http://www.mail-archive.com/par@perl.org/msg00670.html" class="podlinkurl"
+>http://www.mail-archive.com/par@perl.org/msg00670.html</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Perl_Tk_tips"
+>Perl Tk tips</a></h2>
+
+<p>On Windows XP start your script with</p>
+
+<pre class="sh_perl">  use strict; use Encode::Unicode; use Tk;</pre>
+
+<p>Some widgets use xbm bitmaps which don&#39;t get picked up by PAR. The error is:</p>
+
+<pre class="sh_perl">  couldn&#39;t read bitmap file &#34;&#34;: No such file or directory
+  error reading bitmap file &#34;&#34; at Tk/Widget.pm line 205.
+  at Tk/Widget.pm line 203</pre>
+
+<p>Fix is to find the missing xbm files (perl -V tells you where to start looking) and add them to the executable eg</p>
+
+<p>copy missing xbm files to script directory then:</p>
+
+<pre class="sh_perl">    % pp --add cbxarrow.xbm --add arrowdownwin.xbm -o test test.pl</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Problem_with_Win32::Perms_and_Perms.DLL"
+>Problem with Win32::Perms and Perms.DLL</a></h2>
+
+<p>With a script my.pl using Win32::Perms, pp -o my.exe my.pl you may have:</p>
+
+<pre class="sh_perl">  Can&#39;t locate loadable object for module Win32::Perms in @INC
+  (@INC contains: CODE(0xb97eec) CODE(0xc8a99c) .)
+  at ../blib/lib/PAR/Heavy.pm line 78</pre>
+
+<p>In fact the dll is Perms.DLL wit DLL in capital letters. That&#39;s the problem. The bootstrap function of PAR in the Dynaloader module fails looking for Perms.dll in the table of dlls which contains only Perms.DLL. And so the solution is just rename Perms.DLL in Perms.dll and do pp -o my.exe my.pl ... and everything goes right.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Under_Win32,_a_pp_packed_executable_has_trouble_executing_other_perl_scripts_or_pp_packed_executable"
+>Under Win32, a pp packed executable has trouble executing other perl scripts or pp packed executable</a></h2>
+
+<p><i>Note:</i> Is this still current?</p>
+
+<p>When running on a Win32 system, if a perl script is packed with pp and invokes another Perl script or pp packed executable, either with system() or backticks, the invoked program runs with the copy of perl5x.dll already loaded into memory. If the calling executable was packed with &#34;pp -d&#34;, the perl5x.dll is the one from the installed perl bin directory. Otherwise, it is the one packed with the executable. The perl5x.dll from the bin dir knows the @INC paths for the installed libraries; the one in the executable does not. Because of this, a program packed without &#34;-d&#34; calling a program with packed with &#34;-d&#34; or calling perl.exe to run a plain Perl script may fail. This is a Win32 limitation.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="How_can_I_make_a_.exe_that_runs_with_no_console_window_under_Windows?"
+>How can I make a .exe that runs with no console window under Windows?</a></h2>
+
+<p>Use the --gui switch, ie</p>
+
+<pre class="sh_perl">    % pp --gui -o file.exe file.pl</pre>
+
+<p>I found that this is not documented on all versions of pp ... Some versions have a more complete doc than others when you type &#34;pp -h&#34; etc. (This should be reasonably documented now.)</p>
+
+<p>When searching for an answer to this myself, I found many references to using &#34;exetype&#34; ... it comes as a .bat with ActivePerl, or you can find an exetype.pl from several places. You run &#34;exetype file.exe [WINDOWS|CONSOLE]&#34;. This worked, I think, but still did not achieve the desired result on my PAR executable. While the exe itself did not generate a console window, par.exe (which was invoked in my exe somewhere) DID generate a console window, with a titlebar saying &#34;par.exe &#60;strange-looking path to file in temp dir&#62;&#34;, whereas before changing the console window title bar just displayed the path to my .exe.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="How_can_I_change_the_icon_of_the_generated_.exe_file_under_Windows?"
+>How can I change the icon of the generated .exe file under Windows?</a></h2>
+
+<p>There is another not-completely-documented switch that only works on windows, &#226;&#128;&#147;icon MyIcon.ico. So just use this:</p>
+
+<pre class="sh_perl">    % pp --icon &#34;c:\path to\MyIcon.ico&#34; -o file.exe file.pl.</pre>
+
+<p>(This should also be documented now?)</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+
+>The command line parameters (@ARGV) of a pp-ed binary called from another pp-ed binary are missing or broken. What the...?</a></h2>
+
+<p>This was a bug in releases up to and incuding PAR-0.90. Please upgrade to PAR 0.91 or later and the problem will go away.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="I_want_to_include_a_pp-ed_binary_in_an_RPM_package._How_can_I_make_this_work?"
+>I want to include a pp-ed binary in an RPM package. How can I make this work?</a></h2>
+
+<p>The binary executables outputted by pp (on Linux) are not valid ELF binaries because it basically attaches a zip archive to the binary loader and does not modify the ELF headers to reflect that. When building an RPM archive, the validity of the ELF headers is checked by default. This can result in problems when packaging pp-ed binaries in RPM archives.</p>
+
+<p>Scott McBrien helped track down what can be done to get this to work:</p>
+
+<pre class="sh_perl">  [I]t appears that the RPM archive that is generated gets a list of
+  the MD5 sums for components of the executable file calculated by
+  prelink.  By disabling prelink, it fixed the problem; in my RPM .spec
+  file:
+  %define         __prelink_undo_cmd     %{nil}</pre>
+
+<p>After quite some time, it seems like the smart folks at Redhat found the culprit. I&#39;m glad *they* did, because I wouldn&#39;t have:</p>
+
+<pre class="sh_perl">  It appears that we found a solution that works. It like the pp
+  executables are already stripped, so we don&#39;t want rpm stripping them
+  again, which, of course, renders them useless.
+  
+  In this case, we added the following lines to the spec file to keep rpm
+  from running the strip process and not produce debuginfo packages:
+  
+  %define __spec_install_post :
+  %define debug_package %{nil}
+  
+  Don&#39;t forget to add the &#34;:&#34; character to __spec_install_post as above or
+  this won&#39;t work.</pre>
+
+<p>Much praise to all who helped track this down! The discussion can be found in the following RT tickets: <a href="/perldoc?http%3A#/rt.cpan.org/Public/Bug/Display.html?id=18536_#18536" class="podlinkpod"
+>&#34;/rt.cpan.org/Public/Bug/Display.html?id=18536 #18536&#34; in http:</a> and <a href="/perldoc?http%3A#/rt.cpan.org/Public/Bug/Display.html?id=19609_#19609" class="podlinkpod"
+>&#34;/rt.cpan.org/Public/Bug/Display.html?id=19609 #19609&#34; in http:</a>.</p>
+
+<p>-- Steffen Mueller, 22 July 2006</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="How_can_I_package_Wx_applications?"
+>How can I package Wx applications?</a></h2>
+
+<p>Have a look at the separately maintained <a href="/perldoc?Wx%3A%3APerl%3A%3APackager" class="podlinkpod"
+>Wx::Perl::Packager</a> module.</p>
+
+<p>-- Steffen Mueller, 3 July 2006</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="How_can_I_package_Catalyst_web_applications?"
+>How can I package Catalyst web applications?</a></h2>
+
+<p>Catalyst has some builtin PAR support. I found the following URL to be very helpful:</p>
+
+<p><a href="http://catalyst.infogami.com/cookbook/par" class="podlinkurl"
+>http://catalyst.infogami.com/cookbook/par</a>.</p>
+
+<p>-- Steffen Mueller, 21 July 2006</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_resulting_files_are_huge!_How_can_I_reduce_the_size_of_the_output_file?"
+>The resulting files are huge! How can I reduce the size of the output file?</a></h2>
+
+<p>The executables generated by pp generally contain a copy of your Perl shared libraries, the Perl core modules and any module dependencies your packaged application may have. That is a lot. Sometimes, PAR packages too much. It adheres to the philosophy of rather making the application work than generating a streamlined executable. If you want to optimize this, you will have to do so by excluding specific modules.</p>
+
+<p>Chris Dolan&#39;s recent post to the PAR mailing list explains this well. Quoting Chris: (<a href="http://www.nntp.perl.org/group/perl.par/2490" class="podlinkurl"
+>http://www.nntp.perl.org/group/perl.par/2490</a>)</p>
+
+<pre class="sh_perl">  [...]
+  I&#39;ve found a few tricks that can help a lot:
+
+  * If you know the target platform has Perl pre-installed (e.g. Mac OS X)
+    then use the &#34;--dependent&#34; flag. This skips all of the core modules,
+    yielding a much smaller executable.
+    
+    One significant caveat is moving to older systems.  For example,
+    Mac OS X 10.2 had Perl 5.6.0 which has 146 fewer core modules than
+    Perl 5.8.6 which shipped with Mac OS X 10.4, and (even more significantly)
+    is binary-incompatible with any extra XS modules added from CPAN.
+    Other platforms can be even harder to predict.
+  
+  * Watch for modules that pull in lots of dependencies
+    
+    A good example is DBI.  If your program uses DBI, then Module::ScanDeps
+    pulls in ALL of the DBD::* modules (some of which are large) installed on
+    your system, because it cannot realistically parse the DBI-&#62;connect()
+    arguments which specify which database drivers are actually needed.
+    In one of my MySQL-based applications, I use this invocation of PAR:
+    
+      pp -X DBD::SQLite -X DBD::CSV -X DBD::File -X DBD::Excel
+    
+    which saves quite a few bytes, because both DBD::SQLite and DBD::Excel
+    have lots of CPAN dependencies.  The actual list if DBD::* modules you
+    need to exclude depends on your system.  Here&#39;s a short command that will
+    reveal all DBD::* modules on a unix-like system:
+    
+      perl -MModule::ScanDeps -le&#39;print for map {&#34;DBD/&#34;.$_-&#62;{name}} Module::ScanDeps::_glob_in_inc(&#34;DBD&#34;)&#39;
+    
+    Another smaller example is SOAP::Transport::* where most installations
+    only need SOAP::Transport::HTTP.
+    [...]</pre>
+
+<p>Similar techniques can be applied when a module makes use of <a href="/perldoc?Module%3A%3APluggable" class="podlinkpod"
+>Module::Pluggable</a> for plugins.</p>
+
+<p>Finally, there is a PAR filter available as a separate distribution on CPAN which compresses the source code as much as possible by first parsing it using PPI and then spitting out a reduced functional equivalent: <a href="/perldoc?PAR%3A%3AFilter%3A%3ASquish" class="podlinkpod"
+>PAR::Filter::Squish</a>.</p>
+
+<p>-- Steffen Mueller, August 2006</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="How_do_I_use_Win32::GUI::SplashScreen_with_PAR?"
+>How do I use Win32::GUI::SplashScreen with PAR?</a></h2>
+
+<p>When using pp to package an application that uses Win32::GUI::SplashScreen, try adding the splashscreen bitmap manually as suggested in the Win32::GUI::SplashScreen docs:</p>
+
+<pre class="sh_perl">  pp -a SPLASHFILE.bmp -o xxx.exe xxx.pl</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+
+>The Perl Packager scripts says that it can create executable that runs in same OS. Can I use it to create Win32 binary with linux machine? Or what should I use to create Win32 executable binary on linux from my script?</a></h2>
+
+<p>It is not possible to create stand-alone binaries for different platform than what you are currently running on. This is a generally hard problem since you would have to cross-compile all XS modules and perl itself. Not nice.</p>
+
+<p>For example, if you would like to develop an application on Linux and ship it for both Linux/x86 and Win32/x86, it works well to set up a Virtual Machine with a Windows (XP or 2000 or whatever) and a Perl installation. On that machine, use PAR/pp to package your application for Win32.</p>
+
+<p>See also the question &#34;On what platforms can I run PAR? On what platforms will the resulting executable run?&#34;.</p>
+
+<p>-- Steffen Mueller, 2 November 2006</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~rschupp/PAR-1.005/lib/PAR.pm" class="podlinkpod"
+>PAR</a>, <a href="/~rschupp/PAR-1.005/lib/PAR/Tutorial.pod" class="podlinkpod"
+>PAR::Tutorial</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Audrey Tang &#60;cpan@audreyt.org&#62;, Steffen Mueller &#60;smueller@cpan.org&#62;</p>
+
+<p><a href="http://par.perl.org/" class="podlinkurl"
+>http://par.perl.org/</a> is the official PAR website. You can write to the mailing list at &#60;par@perl.org&#62;, or send an empty mail to &#60;par-subscribe@perl.org&#62; to participate in the discussion.</p>
+
+<p>Please submit bug reports to &#60;bug-par@rt.cpan.org&#62;.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2003-2008 by Audrey Tang &#60;cpan@audreyt.org&#62;.</p>
+
+<p>This document is free documentation; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>See <a href="http://www.perl.com/perl/misc/Artistic.html" class="podlinkurl"
+>http://www.perl.com/perl/misc/Artistic.html</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78116 Uploads, 24696 Distributions
+105942 Modules, 9641 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Mon Apr 23 22:40:13 2012 GMT (0.0827500820159912) @cpansearch1 -->
+ </body>
+</html>

@@ -1,0 +1,158 @@
+Revision history for Perl extension Getopt::Declare.
+
+1.03	Thu Apr 30 19:51:27 1998
+
+	- first semi-public release
+
+
+1.04	Wed Jun 17 14:37:22 1998
+
+	- Extended -AWK grammar to recognize <var>=''
+
+	- Fixed code generator so that actions actually do
+	  execute in the caller's package, as documented.
+
+	- Changed 1st arg type of finish and reject to 
+	  simple scalar. Made arg optional (omitted -> true)
+
+	- Fixed handling of defer, reject and finish so that
+	  they work as expected
+
+
+1.05	Thu Aug 27 16:35:26 1998
+
+	- Added code to reset $_VAL_ each time a parameter matches
+
+	- Added a test.pl
+
+
+1.06	Mon Nov  2 06:21:38 1998
+
+	- Made detection of strictness more robust (in line with
+	  change (bug?) in list construction behaviour in 5.005_02)
+
+	- Added workarounds for weird behaviour of pod2man
+
+
+1.07	Tue Mar 23 16:25:20 1999
+
+	- Changed behaviour of [ditto] when ditto'ing multiline
+	  descriptions (now prints: "Same as <prevflag>" instead)
+
+	- Fixed bug in handling of version flag (which made every
+	  argument beginning with -v... into a version flag)
+
+	- Shifted all internal entries of the Getopt::Declare hash
+	  into an anonymous hash in the entry "_internal".
+
+	- Patched the Makefile.PL to note dependencies (thanks Roland)
+
+	- Altered parsing of [strict] so that it's ignored when 
+	  commented out.
+
+
+1.08	Fri May 21 06:17:04 1999
+
+	- Now only generates .CODE file if $::Declare_debug is true
+
+	- Added Text::Balanced as PREREQ to Makefile.PL
+
+	- Moved mutex test earlier in parameter parsing to
+	  correct an error that caused mutexing to be ignored
+	  (thanks Eric)
+
+	- Fixed hanging when last line was non-NL-terminated
+	  (thanks David)
+
+
+1.09	Fri Sep 14 16:35:08 2001
+
+	- Fixed bug with reject and finish -- was incorrectly rejecting
+	  :of on non-existent files (thanks Andrew and Deneb).
+
+	- Added used() and unused() method to retrieve used and unused args 
+	  (thanks Phil)
+
+	- Consolidated POD with .pm file
+
+	- Fixed bug where args with value 0 were ignored (thanks Dave)
+
+	- Fixed overriding of version flags (thanks everyone)
+
+	- Cleaned up acceptance tests on typed params. No longer 
+	  complain if value omitted (thanks Duncan)
+
+	- Improved error messages when an arg is rejected (thanks Duncan)
+
+
+1.10	Sun Feb  1 23:41:30 2004
+
+	- Documented the gotcha of using tabs within a parameter specification
+	  (thanks Dave)
+
+	- Fixed subtle bug with multi-argument parameters (thanks Tim)
+
+	- Documented built-in :id and :qs parameter variable types (thanks Tim)
+
+	- Allowed directives to take whitespace between opening [ and keyword
+
+	- Fixed bug with /.../ patterns within [pvtype:...] directives
+	  (Thanks Tim)
+
+	- Documented need to avoid capturing parens in [pvtype:...] directives
+	  (Thanks Tim)
+
+	- Added \G to -v flag checker to solve nasty problem with embedded
+	  args containing -v
+
+	- Added ability to specify interface directly in use statement
+
+	- Changed matching of initial flags so that -p[rompt] and -p[rompt]2
+	  are seen as distinct
+
+	- Fixed doc nits (thanks Steven and Paul)
+
+	- Added AUTOLOAD to delegate embedded sub calls back to main 
+
+
+1.11	Tue Feb  3 20:44:26 2004
+
+	- Fixed bug in multi-argument parameters
+
+
+1.12	Tue Sep  2 14:15:01 2009
+
+	- Fixed bug #18084: Misparsing of numbers in exponential notation.
+
+	- Fixed bug in which only the first part of an number (:i or :n) needed
+	  to be a number (e.g. '123asdf' was parsed as '123').
+
+	- Fixed bug #41043: Misparsing of lists of files (:if or :of).
+
+	- Fixed bug causing misparsing of lists of quoted strings (:qs).
+
+	- Added emphasis in the documentation on the need for tabs in the
+	  specification
+
+
+1.13	Sun Mar 28 16:35:18 2010
+
+	- Fixed the support for IO::Pager
+
+	- Improved unit testing with Test::More
+
+1.14	Tue Mar 09 2011
+
+	- Fixed bug #66220 (reported by Dominic Hargreaves): now using ref()
+	  instead of the deprecated function UNIVERSAL::isa()
+
+	- Fixed bug #65510 (reported by Suresh Govindachar): optional whitespaces
+          in arguments specifications like '-e <f:i> .. <t:i>' are optional again
+
+	- Fixed infinite loop occurring with very particular command-line specs
+
+	- Updated demo scripts
+
+	- Misc maintenance of the POD, unit tests and main code
+
+

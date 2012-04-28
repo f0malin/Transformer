@@ -1,0 +1,510 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Safe - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Safe",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Safe-2.33",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Safe",3]);
+    _gaq.push(["_setCustomVar",1,"Author","RGARCIA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Safe">permalink</a></div>
+  <a href="/~rgarcia/">Rafa&euml;l Garcia-Suarez</a> &gt;
+  <a href="/~rgarcia/Safe-2.33/">Safe-2.33</a> &gt;
+  Safe
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/55b94d3334da7dbb05f3269d97b42fe4?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/R/RG/RGARCIA/Safe-2.33.tar.gz">Safe-2.33.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Safe;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~RGARCIA/Safe-2.33/Safe.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 8</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 5</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Safe">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.33 &nbsp;
+<span class="noprint">
+  <a href="/src/RGARCIA/Safe-2.33/Safe.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#WARNING'>WARNING</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#permit_(OP,_...)'>permit (OP, ...)</a>
+    <li class='indexItem indexItem2'><a href='#permit_only_(OP,_...)'>permit_only (OP, ...)</a>
+    <li class='indexItem indexItem2'><a href='#deny_(OP,_...)'>deny (OP, ...)</a>
+    <li class='indexItem indexItem2'><a href='#deny_only_(OP,_...)'>deny_only (OP, ...)</a>
+    <li class='indexItem indexItem2'><a href='#trap_(OP,_...)'>trap (OP, ...)</a>
+    <li class='indexItem indexItem2'><a href='#untrap_(OP,_...)'>untrap (OP, ...)</a>
+    <li class='indexItem indexItem2'><a href='#share_(NAME,_...)'>share (NAME, ...)</a>
+    <li class='indexItem indexItem2'><a href='#share_from_(PACKAGE,_ARRAYREF)'>share_from (PACKAGE, ARRAYREF)</a>
+    <li class='indexItem indexItem2'><a href='#varglob_(VARNAME)'>varglob (VARNAME)</a>
+    <li class='indexItem indexItem2'><a href='#reval_(STRING,_STRICT)'>reval (STRING, STRICT)</a>
+    <li class='indexItem indexItem2'><a href='#rdo_(FILENAME)'>rdo (FILENAME)</a>
+    <li class='indexItem indexItem2'><a href='#root_(NAMESPACE)'>root (NAMESPACE)</a>
+    <li class='indexItem indexItem2'><a href='#mask_(MASK)'>mask (MASK)</a>
+    <li class='indexItem indexItem2'><a href='#wrap_code_ref_(CODEREF)'>wrap_code_ref (CODEREF)</a>
+    <li class='indexItem indexItem2'><a href='#wrap_code_refs_within_(...)'>wrap_code_refs_within (...)</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#RISKS'>RISKS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Safe - Compile and execute code in restricted compartments</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use Safe;
+
+  $compartment = new Safe;
+
+  $compartment-&#62;permit(qw(time sort :browse));
+
+  $result = $compartment-&#62;reval($unsafe_code);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The Safe extension module allows the creation of compartments in which perl code can be evaluated. Each compartment has</p>
+
+<dl>
+<dt><a name='a'></a><a name="a_new_namespace"
+>a new namespace</a></dt>
+
+<dd>
+<p>The &#34;root&#34; of the namespace (i.e. &#34;main::&#34;) is changed to a different package and code evaluated in the compartment cannot refer to variables outside this namespace, even with run-time glob lookups and other tricks.</p>
+
+<p>Code which is compiled outside the compartment can choose to place variables into (or <i>share</i> variables with) the compartment&#39;s namespace and only that data will be visible to code evaluated in the compartment.</p>
+
+<p>By default, the only variables shared with compartments are the &#34;underscore&#34; variables $_ and @_ (and, technically, the less frequently used %_, the _ filehandle and so on). This is because otherwise perl operators which default to $_ will not work and neither will the assignment of arguments to @_ on subroutine entry.</p>
+
+<dt><a name='an'></a><a name="an_operator_mask"
+>an operator mask</a></dt>
+
+<dd>
+<p>Each compartment has an associated &#34;operator mask&#34;. Recall that perl code is compiled into an internal format before execution. Evaluating perl code (e.g. via &#34;eval&#34; or &#34;do &#39;file&#39;&#34;) causes the code to be compiled into an internal format and then, provided there was no error in the compilation, executed. Code evaluated in a compartment compiles subject to the compartment&#39;s operator mask. Attempting to evaluate code in a compartment which contains a masked operator will cause the compilation to fail with an error. The code will not be executed.</p>
+
+<p>The default operator mask for a newly created compartment is the &#39;:default&#39; optag.</p>
+
+<p>It is important that you read the <a href="/perldoc?Opcode" class="podlinkpod"
+>Opcode</a> module documentation for more information, especially for detailed definitions of opnames, optags and opsets.</p>
+
+<p>Since it is only at the compilation stage that the operator mask applies, controlled access to potentially unsafe operations can be achieved by having a handle to a wrapper subroutine (written outside the compartment) placed into the compartment. For example,</p>
+
+<pre class="sh_perl">    $cpt = new Safe;
+    sub wrapper {
+        # vet arguments and perform potentially unsafe operations
+    }
+    $cpt-&#62;share(&#39;&#38;wrapper&#39;);</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="WARNING"
+>WARNING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The authors make <b>no warranty</b>, implied or otherwise, about the suitability of this software for safety or security purposes.</p>
+
+<p>The authors shall not in any case be liable for special, incidental, consequential, indirect or other similar damages arising from the use of this software.</p>
+
+<p>Your mileage will vary. If in any doubt <b>do not use it</b>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>To create a new compartment, use</p>
+
+<pre class="sh_perl">    $cpt = new Safe;</pre>
+
+<p>Optional argument is (NAMESPACE), where NAMESPACE is the root namespace to use for the compartment (defaults to &#34;Safe::Root0&#34;, incremented for each new compartment).</p>
+
+<p>Note that version 1.00 of the Safe module supported a second optional parameter, MASK. That functionality has been withdrawn pending deeper consideration. Use the permit and deny methods described below.</p>
+
+<p>The following methods can then be used on the compartment object returned by the above constructor. The object argument is implicit in each case.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="permit_(OP,_...)"
+>permit (OP, ...)</a></h2>
+
+<p>Permit the listed operators to be used when compiling code in the compartment (in <i>addition</i> to any operators already permitted).</p>
+
+<p>You can list opcodes by names, or use a tag name; see <a href="/perldoc?Opcode#Predefined_Opcode_Tags" class="podlinkpod"
+>&#34;Predefined Opcode Tags&#34; in Opcode</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="permit_only_(OP,_...)"
+>permit_only (OP, ...)</a></h2>
+
+<p>Permit <i>only</i> the listed operators to be used when compiling code in the compartment (<i>no</i> other operators are permitted).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="deny_(OP,_...)"
+>deny (OP, ...)</a></h2>
+
+<p>Deny the listed operators from being used when compiling code in the compartment (other operators may still be permitted).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="deny_only_(OP,_...)"
+>deny_only (OP, ...)</a></h2>
+
+<p>Deny <i>only</i> the listed operators from being used when compiling code in the compartment (<i>all</i> other operators will be permitted, so you probably don&#39;t want to use this method).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="trap_(OP,_...)"
+>trap (OP, ...)</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="untrap_(OP,_...)"
+>untrap (OP, ...)</a></h2>
+
+<p>The trap and untrap methods are synonyms for deny and permit respectfully.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="share_(NAME,_...)"
+>share (NAME, ...)</a></h2>
+
+<p>This shares the variable(s) in the argument list with the compartment. This is almost identical to exporting variables using the <a href="/perldoc?Exporter" class="podlinkpod"
+>Exporter</a> module.</p>
+
+<p>Each NAME must be the <b>name</b> of a non-lexical variable, typically with the leading type identifier included. A bareword is treated as a function name.</p>
+
+<p>Examples of legal names are &#39;$foo&#39; for a scalar, &#39;@foo&#39; for an array, &#39;%foo&#39; for a hash, &#39;&#38;foo&#39; or &#39;foo&#39; for a subroutine and &#39;*foo&#39; for a glob (i.e. all symbol table entries associated with &#34;foo&#34;, including scalar, array, hash, sub and filehandle).</p>
+
+<p>Each NAME is assumed to be in the calling package. See share_from for an alternative method (which <code>share</code> uses).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="share_from_(PACKAGE,_ARRAYREF)"
+>share_from (PACKAGE, ARRAYREF)</a></h2>
+
+<p>This method is similar to share() but allows you to explicitly name the package that symbols should be shared from. The symbol names (including type characters) are supplied as an array reference.</p>
+
+<pre class="sh_perl">    $safe-&#62;share_from(&#39;main&#39;, [ &#39;$foo&#39;, &#39;%bar&#39;, &#39;func&#39; ]);</pre>
+
+<p>Names can include package names, which are relative to the specified PACKAGE. So these two calls have the same effect:</p>
+
+<pre class="sh_perl">    $safe-&#62;share_from(&#39;Scalar::Util&#39;, [ &#39;reftype&#39; ]);
+    $safe-&#62;share_from(&#39;main&#39;, [ &#39;Scalar::Util::reftype&#39; ]);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="varglob_(VARNAME)"
+>varglob (VARNAME)</a></h2>
+
+<p>This returns a glob reference for the symbol table entry of VARNAME in the package of the compartment. VARNAME must be the <b>name</b> of a variable without any leading type marker. For example:</p>
+
+<pre class="sh_perl">    ${$cpt-&#62;varglob(&#39;foo&#39;)} = &#34;Hello world&#34;;</pre>
+
+<p>has the same effect as:</p>
+
+<pre class="sh_perl">    $cpt = new Safe &#39;Root&#39;;
+    $Root::foo = &#34;Hello world&#34;;</pre>
+
+<p>but avoids the need to know $cpt&#39;s package name.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="reval_(STRING,_STRICT)"
+>reval (STRING, STRICT)</a></h2>
+
+<p>This evaluates STRING as perl code inside the compartment.</p>
+
+<p>The code can only see the compartment&#39;s namespace (as returned by the <b>root</b> method). The compartment&#39;s root package appears to be the <code>main::</code> package to the code inside the compartment.</p>
+
+<p>Any attempt by the code in STRING to use an operator which is not permitted by the compartment will cause an error (at run-time of the main program but at compile-time for the code in STRING). The error is of the form &#34;&#39;%s&#39; trapped by operation mask...&#34;.</p>
+
+<p>If an operation is trapped in this way, then the code in STRING will not be executed. If such a trapped operation occurs or any other compile-time or return error, then $@ is set to the error message, just as with an eval().</p>
+
+<p>If there is no error, then the method returns the value of the last expression evaluated, or a return statement may be used, just as with subroutines and <b>eval()</b>. The context (list or scalar) is determined by the caller as usual.</p>
+
+<p>If the return value of reval() is (or contains) any code reference, those code references are wrapped to be themselves executed always in the compartment. See <a href="#wrap_code_refs_within" class="podlinkpod"
+>&#34;wrap_code_refs_within&#34;</a>.</p>
+
+<p>The formerly undocumented STRICT argument sets strictness: if true &#39;use strict;&#39; is used, otherwise it uses &#39;no strict;&#39;. <b>Note</b>: if STRICT is omitted &#39;no strict;&#39; is the default.</p>
+
+<p>Some points to note:</p>
+
+<p>If the entereval op is permitted then the code can use eval &#34;...&#34; to &#39;hide&#39; code which might use denied ops. This is not a major problem since when the code tries to execute the eval it will fail because the opmask is still in effect. However this technique would allow clever, and possibly harmful, code to &#39;probe&#39; the boundaries of what is possible.</p>
+
+<p>Any string eval which is executed by code executing in a compartment, or by code called from code executing in a compartment, will be eval&#39;d in the namespace of the compartment. This is potentially a serious problem.</p>
+
+<p>Consider a function foo() in package pkg compiled outside a compartment but shared with it. Assume the compartment has a root package called &#39;Root&#39;. If foo() contains an eval statement like eval &#39;$foo = 1&#39; then, normally, $pkg::foo will be set to 1. If foo() is called from the compartment (by whatever means) then instead of setting $pkg::foo, the eval will actually set $Root::pkg::foo.</p>
+
+<p>This can easily be demonstrated by using a module, such as the Socket module, which uses eval &#34;...&#34; as part of an AUTOLOAD function. You can &#39;use&#39; the module outside the compartment and share an (autoloaded) function with the compartment. If an autoload is triggered by code in the compartment, or by any code anywhere that is called by any means from the compartment, then the eval in the Socket module&#39;s AUTOLOAD function happens in the namespace of the compartment. Any variables created or used by the eval&#39;d code are now under the control of the code in the compartment.</p>
+
+<p>A similar effect applies to <i>all</i> runtime symbol lookups in code called from a compartment but not compiled within it.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="rdo_(FILENAME)"
+>rdo (FILENAME)</a></h2>
+
+<p>This evaluates the contents of file FILENAME inside the compartment. See above documentation on the <b>reval</b> method for further details.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="root_(NAMESPACE)"
+>root (NAMESPACE)</a></h2>
+
+<p>This method returns the name of the package that is the root of the compartment&#39;s namespace.</p>
+
+<p>Note that this behaviour differs from version 1.00 of the Safe module where the root module could be used to change the namespace. That functionality has been withdrawn pending deeper consideration.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="mask_(MASK)"
+>mask (MASK)</a></h2>
+
+<p>This is a get-or-set method for the compartment&#39;s operator mask.</p>
+
+<p>With no MASK argument present, it returns the current operator mask of the compartment.</p>
+
+<p>With the MASK argument present, it sets the operator mask for the compartment (equivalent to calling the deny_only method).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="wrap_code_ref_(CODEREF)"
+>wrap_code_ref (CODEREF)</a></h2>
+
+<p>Returns a reference to an anonymous subroutine that, when executed, will call CODEREF with the Safe compartment &#39;in effect&#39;. In other words, with the package namespace adjusted and the opmask enabled.</p>
+
+<p>Note that the opmask doesn&#39;t affect the already compiled code, it only affects any <i>further</i> compilation that the already compiled code may try to perform.</p>
+
+<p>This is particularly useful when applied to code references returned from reval().</p>
+
+<p>(It also provides a kind of workaround for RT#60374: &#34;Safe.pm sort {} bug with -Dusethreads&#34;. See <a href="http://rt.perl.org/rt3//Public/Bug/Display.html?id=60374" class="podlinkurl"
+>http://rt.perl.org/rt3//Public/Bug/Display.html?id=60374</a> for <i>much</i> more detail.)</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="wrap_code_refs_within_(...)"
+>wrap_code_refs_within (...)</a></h2>
+
+<p>Wraps any CODE references found within the arguments by replacing each with the result of calling <a href="#wrap_code_ref" class="podlinkpod"
+>&#34;wrap_code_ref&#34;</a> on the CODE reference. Any ARRAY or HASH references in the arguments are inspected recursively.</p>
+
+<p>Returns nothing.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="RISKS"
+>RISKS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This section is just an outline of some of the things code in a compartment might do (intentionally or unintentionally) which can have an effect outside the compartment.</p>
+
+<dl>
+<dt><a name="Memory"
+>Memory</a></dt>
+
+<dd>
+<p>Consuming all (or nearly all) available memory.</p>
+
+<dt><a name="CPU"
+>CPU</a></dt>
+
+<dd>
+<p>Causing infinite loops etc.</p>
+
+<dt><a name="Snooping"
+>Snooping</a></dt>
+
+<dd>
+<p>Copying private information out of your system. Even something as simple as your user name is of value to others. Much useful information could be gleaned from your environment variables for example.</p>
+
+<dt><a name="Signals"
+>Signals</a></dt>
+
+<dd>
+<p>Causing signals (especially SIGFPE and SIGALARM) to affect your process.</p>
+
+<p>Setting up a signal handler will need to be carefully considered and controlled. What mask is in effect when a signal handler gets called? If a user can get an imported function to get an exception and call the user&#39;s signal handler, does that user&#39;s restricted mask get re-instated before the handler is called? Does an imported handler get called with its original mask or the user&#39;s one?</p>
+
+<dt><a name='State'></a><a name="State_Changes"
+>State Changes</a></dt>
+
+<dd>
+<p>Ops such as chdir obviously effect the process as a whole and not just the code in the compartment. Ops such as rand and srand have a similar but more subtle effect.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Originally designed and implemented by Malcolm Beattie.</p>
+
+<p>Reworked to use the Opcode module and other changes added by Tim Bunce.</p>
+
+<p>Currently maintained by the Perl 5 Porters, &#60;perl5-porters@perl.org&#62;.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78067 Uploads, 24686 Distributions
+105893 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sun Apr 22 03:24:58 2012 GMT (0.0476951599121094) @cpansearch1 -->
+ </body>
+</html>

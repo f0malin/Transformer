@@ -1,0 +1,409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>constant - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","constant",3]);
+    _gaq.push(["_setCustomVar",5,"Release","constant-1.21",3]);
+    _gaq.push(["_setCustomVar",3,"Module","constant",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SAPER",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?constant">permalink</a></div>
+  <a href="/~saper/">S&eacute;bastien Aperghis-Tramoni</a> &gt;
+  <a href="/~saper/constant-1.21/">constant-1.21</a> &gt;
+  constant
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/cad36eb4c5da1a39158c9c58b45590bd?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SA/SAPER/constant-1.21.tar.gz">constant-1.21.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=constant;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SAPER/constant-1.21/lib/constant.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=constant">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.21 &nbsp;
+<span class="noprint">
+  <a href="/src/SAPER/constant-1.21/lib/constant.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#NOTES'>NOTES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#List_constants'>List constants</a>
+    <li class='indexItem indexItem2'><a href='#Defining_multiple_constants_at_once'>Defining multiple constants at once</a>
+    <li class='indexItem indexItem2'><a href='#Magic_constants'>Magic constants</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#TECHNICAL_NOTES'>TECHNICAL NOTES</a>
+  <li class='indexItem indexItem1'><a href='#CAVEATS'>CAVEATS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_&#38;_LICENSE'>COPYRIGHT &#38; LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>constant - Perl pragma to declare constants</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use constant PI    =&#62; 4 * atan2(1, 1);
+    use constant DEBUG =&#62; 0;
+
+    print &#34;Pi equals &#34;, PI, &#34;...\n&#34; if DEBUG;
+
+    use constant {
+        SEC   =&#62; 0,
+        MIN   =&#62; 1,
+        HOUR  =&#62; 2,
+        MDAY  =&#62; 3,
+        MON   =&#62; 4,
+        YEAR  =&#62; 5,
+        WDAY  =&#62; 6,
+        YDAY  =&#62; 7,
+        ISDST =&#62; 8,
+    };
+
+    use constant WEEKDAYS =&#62; qw(
+        Sunday Monday Tuesday Wednesday Thursday Friday Saturday
+    );
+
+    print &#34;Today is &#34;, (WEEKDAYS)[ (localtime)[WDAY] ], &#34;.\n&#34;;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This pragma allows you to declare constants at compile-time.</p>
+
+<p>When you declare a constant such as <code>PI</code> using the method shown above, each machine your script runs upon can have as many digits of accuracy as it can use. Also, your program will be easier to read, more likely to be maintained (and maintained correctly), and far less likely to send a space probe to the wrong planet because nobody noticed the one equation in which you wrote <code>3.14195</code>.</p>
+
+<p>When a constant is used in an expression, Perl replaces it with its value at compile time, and may then optimize the expression further. In particular, any code in an <code>if (CONSTANT)</code> block will be optimized away if the constant is false.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTES"
+>NOTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>As with all <code>use</code> directives, defining a constant happens at compile time. Thus, it&#39;s probably not correct to put a constant declaration inside of a conditional statement (like <code>if ($foo) { use constant ... }</code>).</p>
+
+<p>Constants defined using this module cannot be interpolated into strings like variables. However, concatenation works just fine:</p>
+
+<pre class="sh_perl">    print &#34;Pi equals PI...\n&#34;;        # WRONG: does not expand &#34;PI&#34;
+    print &#34;Pi equals &#34;.PI.&#34;...\n&#34;;    # right</pre>
+
+<p>Even though a reference may be declared as a constant, the reference may point to data which may be changed, as this code shows.</p>
+
+<pre class="sh_perl">    use constant ARRAY =&#62; [ 1,2,3,4 ];
+    print ARRAY-&#62;[1];
+    ARRAY-&#62;[1] = &#34; be changed&#34;;
+    print ARRAY-&#62;[1];</pre>
+
+<p>Dereferencing constant references incorrectly (such as using an array subscript on a constant hash reference, or vice versa) will be trapped at compile time.</p>
+
+<p>Constants belong to the package they are defined in. To refer to a constant defined in another package, specify the full package name, as in <code>Some::Package::CONSTANT</code>. Constants may be exported by modules, and may also be called as either class or instance methods, that is, as <code>Some::Package-&#62;CONSTANT</code> or as <code>$obj-&#62;CONSTANT</code> where <code>$obj</code> is an instance of <code>Some::Package</code>. Subclasses may define their own constants to override those in their base class.</p>
+
+<p>The use of all caps for constant names is merely a convention, although it is recommended in order to make constants stand out and to help avoid collisions with other barewords, keywords, and subroutine names. Constant names must begin with a letter or underscore. Names beginning with a double underscore are reserved. Some poor choices for names will generate warnings, if warnings are enabled at compile time.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="List_constants"
+>List constants</a></h2>
+
+<p>Constants may be lists of more (or less) than one value. A constant with no values evaluates to <code>undef</code> in scalar context. Note that constants with more than one value do <i>not</i> return their last value in scalar context as one might expect. They currently return the number of values, but <b>this may change in the future</b>. Do not use constants with multiple values in scalar context.</p>
+
+<p><b>NOTE:</b> This implies that the expression defining the value of a constant is evaluated in list context. This may produce surprises:</p>
+
+<pre class="sh_perl">    use constant TIMESTAMP =&#62; localtime;                # WRONG!
+    use constant TIMESTAMP =&#62; scalar localtime;         # right</pre>
+
+<p>The first line above defines <code>TIMESTAMP</code> as a 9-element list, as returned by <code>localtime()</code> in list context. To set it to the string returned by <code>localtime()</code> in scalar context, an explicit <code>scalar</code> keyword is required.</p>
+
+<p>List constants are lists, not arrays. To index or slice them, they must be placed in parentheses.</p>
+
+<pre class="sh_perl">    my @workdays = WEEKDAYS[1 .. 5];            # WRONG!
+    my @workdays = (WEEKDAYS)[1 .. 5];          # right</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Defining_multiple_constants_at_once"
+>Defining multiple constants at once</a></h2>
+
+<p>Instead of writing multiple <code>use constant</code> statements, you may define multiple constants in a single statement by giving, instead of the constant name, a reference to a hash where the keys are the names of the constants to be defined. Obviously, all constants defined using this method must have a single value.</p>
+
+<pre class="sh_perl">    use constant {
+        FOO =&#62; &#34;A single value&#34;,
+        BAR =&#62; &#34;This&#34;, &#34;won&#39;t&#34;, &#34;work!&#34;,        # Error!
+    };</pre>
+
+<p>This is a fundamental limitation of the way hashes are constructed in Perl. The error messages produced when this happens will often be quite cryptic -- in the worst case there may be none at all, and you&#39;ll only later find that something is broken.</p>
+
+<p>When defining multiple constants, you cannot use the values of other constants defined in the same declaration. This is because the calling package doesn&#39;t know about any constant within that group until <i>after</i> the <code>use</code> statement is finished.</p>
+
+<pre class="sh_perl">    use constant {
+        BITMASK =&#62; 0xAFBAEBA8,
+        NEGMASK =&#62; ~BITMASK,                    # Error!
+    };</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Magic_constants"
+>Magic constants</a></h2>
+
+<p>Magical values and references can be made into constants at compile time, allowing for way cool stuff like this. (These error numbers aren&#39;t totally portable, alas.)</p>
+
+<pre class="sh_perl">    use constant E2BIG =&#62; ($! = 7);
+    print   E2BIG, &#34;\n&#34;;        # something like &#34;Arg list too long&#34;
+    print 0+E2BIG, &#34;\n&#34;;        # &#34;7&#34;</pre>
+
+<p>You can&#39;t produce a tied constant by giving a tied scalar as the value. References to tied variables, however, can be used as constants without any problems.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TECHNICAL_NOTES"
+>TECHNICAL NOTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>In the current implementation, scalar constants are actually inlinable subroutines. As of version 5.004 of Perl, the appropriate scalar constant is inserted directly in place of some subroutine calls, thereby saving the overhead of a subroutine call. See <a href="/perldoc?perlsub#Constant_Functions" class="podlinkpod"
+>&#34;Constant Functions&#34; in perlsub</a> for details about how and when this happens.</p>
+
+<p>In the rare case in which you need to discover at run time whether a particular constant has been declared via this module, you may use this function to examine the hash <code>%constant::declared</code>. If the given constant name does not include a package name, the current package is used.</p>
+
+<pre class="sh_perl">    sub declared ($) {
+        use constant 1.01;              # don&#39;t omit this!
+        my $name = shift;
+        $name =~ s/^::/main::/;
+        my $pkg = caller;
+        my $full_name = $name =~ /::/ ? $name : &#34;${pkg}::$name&#34;;
+        $constant::declared{$full_name};
+    }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEATS"
+>CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>In the current version of Perl, list constants are not inlined and some symbols may be redefined without generating a warning.</p>
+
+<p>It is not possible to have a subroutine or a keyword with the same name as a constant in the same package. This is probably a Good Thing.</p>
+
+<p>A constant with a name in the list <code>STDIN STDOUT STDERR ARGV ARGVOUT ENV INC SIG</code> is not allowed anywhere but in package <code>main::</code>, for technical reasons.</p>
+
+<p>Unlike constants in some languages, these cannot be overridden on the command line or via environment variables.</p>
+
+<p>You can get into trouble if you use constants in a context which automatically quotes barewords (as is true for any subroutine call). For example, you can&#39;t say <code>$hash{CONSTANT}</code> because <code>CONSTANT</code> will be interpreted as a string. Use <code>$hash{CONSTANT()}</code> or <code>$hash{+CONSTANT}</code> to prevent the bareword quoting mechanism from kicking in. Similarly, since the <code>=&#62;</code> operator quotes a bareword immediately to its left, you have to say <code>CONSTANT() =&#62; &#39;value&#39;</code> (or simply use a comma in place of the big arrow) instead of <code>CONSTANT =&#62; &#39;value&#39;</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Readonly" class="podlinkpod"
+>Readonly</a> - Facility for creating read-only scalars, arrays, hashes.</p>
+
+<p><a href="/perldoc?Const" class="podlinkpod"
+>Const</a> - Facility for creating read-only variables. Similar to <code>Readonly</code>, but uses <code>SvREADONLY</code> instead of <code>tie</code>.</p>
+
+<p><a href="/perldoc?Attribute%3A%3AConstant" class="podlinkpod"
+>Attribute::Constant</a> - Make read-only variables via attribute</p>
+
+<p><a href="/perldoc?Scalar%3A%3AReadonly" class="podlinkpod"
+>Scalar::Readonly</a> - Perl extension to the <code>SvREADONLY</code> scalar flag</p>
+
+<p><a href="/perldoc?Hash%3A%3AUtil" class="podlinkpod"
+>Hash::Util</a> - A selection of general-utility hash subroutines (mostly to lock/unlock keys and values)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Please report any bugs or feature requests via the perlbug(1) utility.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Tom Phoenix, &#60;<em>rootbeer@redcat.com</em>&#62;, with help from many other folks.</p>
+
+<p>Multiple constant declarations at once added by Casey West, &#60;<em>casey@geeknest.com</em>&#62;.</p>
+
+<p>Documentation mostly rewritten by Ilmari Karonen, &#60;<em>perl@itz.pp.sci.fi</em>&#62;.</p>
+
+<p>This program is maintained by the Perl 5 Porters. The CPAN distribution is maintained by S&#233;bastien Aperghis-Tramoni &#60;<em>sebastien@aperghis.net</em>&#62;.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_&#38;_LICENSE"
+>COPYRIGHT &#38; LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (C) 1997, 1999 Tom Phoenix</p>
+
+<p>This module is free software; you can redistribute it or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78071 Uploads, 24685 Distributions
+105889 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 16:17:21 2012 GMT (0.0613608360290527) @cpansearch1 -->
+ </body>
+</html>

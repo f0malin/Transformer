@@ -1,0 +1,15 @@
+README for IPC-Run3
+
+IPC::Run3 - run a subprocess in batch mode (a la system) on Unix, Win32, etc.
+
+SYNOPSIS
+
+    use IPC::Run3;    # Exports run3() by default
+
+    run3 \@cmd, \$in, \$out, \$err;
+    run3 \@cmd, \@in, \&out, \$err;
+
+This module allows you to run a subprocess and redirect stdin, stdout, and/or
+stderr to files and perl data structures.  It aims to satisfy 99% of the need
+for using system, qx, and open3 with a simple, extremely Perlish API and none
+of the bloat and rarely used features of IPC::Run.

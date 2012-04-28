@@ -1,0 +1,131 @@
+Set::Infinite TODO 
+
+- include "backtrack_callback" in the parameter list for _function() 
+
+- document the "separators" method - use example from t/infinite.t
+  Find out how to make it more user friendly.
+
+- quantize() should use "iterate"
+  (unless this breaks _quantize_span)
+  Find out how to unify "quantize" and the "_recurrence" module (DT::Set)
+
+- spaceship should return "undef" if the sets can't be compared.
+- "contains" should test the result of "==" for undef.
+- count() should return "undef" if the set can't be counted.
+
+- test new methods
+
+- methods:
+  is_infinite
+  exists( sub ) / any / ...
+
+- Deprecate min_a()
+  min() should check "wantarray", instead.
+  This can generate confusion in some cases - verify this.
+
+- New methods: map / grep
+  From a discussion with Andrew Pimlott and Dave Rolsky
+  Find out how to implement "block" syntax 
+  (" {} " instead of " sub{} ") -- use '&' prototype
+  - test under 5.005_03
+  
+  update: It looks like this is not possible:
+  http://www.perlmonks.org/index.pl?node_id=312978
+  from perlsub:
+  "Pretty much the exclusive domain of prototypes is to 
+  make a perl sub act like a builtin. Once you call it 
+  via $subref-> or &subname, you are no longer treating 
+  it as a builtin and prototypes are ignored."
+
+- Redo POD
+- difference between "size" and "count"
+
+- Change syntax: from Class::method to Class->method
+
+Old TODO:
+
+    - parser (another module)
+
+    - _quantize_span should only be used inside backtrack()
+      Implementing quantize() using iterator() should make 
+      _quantize_span() unnecessary.
+
+    - provide a constructor that allow for un-ordered and overlapping spans
+
+    - verify and fix unbalanced trace_open/trace_close 
+
+    - move (offset, quantize), or most of Arithmetic.pm, to Date::Set 
+    - refactor "widgets" out of the main code. Maybe create
+      a Set::Infinite::Widgets directory (offset, quantize).
+    - give more standard names to Arithmetic.pm variables
+    - implement "last of quantize"
+
+    - remove _quantize_span()
+
+    - a set with first == inf or last = -inf is an error!
+
+    - tests for "iterate" min/max/first/last
+      These may fail if "iterate" returns >= 2 elements
+    - more tests for min/max/span/size on too_complex sets
+
+    - find out how to compare "<=>" unbounded sets
+    - try using first() in intersects() and "<=>"
+    - test finding out min/max of integer open sets (see backtrack.t tests 2,3)
+
+    - fix _todo/bigfloat, _todo/bigint
+
+BACKTRACK
+
+    backtrack.t:
+
+	test backtrack on:
+		iterate -- returning more than 1 element
+		compact
+                tolerance
+                complement
+
+	backtracking: implement remaining tests in backtrack.t
+	verify results in backtrack.t
+
+    backtracking: document backtracking resolution
+
+SYNTAX
+
+	extra: Make a 'strict' option for "quantize" and other filters, 
+	that will intersect
+	each unit back to the object, that is:
+	Interval:                     [************************]
+	Quantized:                [*********)[*********)[*********)
+	Quantized->Stricted:          [*****)[*********)[******]
+
+	think about: "push-pop", "dup", "drop" mechanism
+
+	think about: some "if-else" mechanism
+
+DOCUMENTATION
+
+	check: POD formatting and contents 
+
+	verify, document parameter syntax everywhere
+
+	document:
+		??? offset option 'mode=>circle'
+		new method 'list'
+		iterate
+
+        document as "internal":
+                min_a
+                max_a
+                backtrack
+	        trace
+
+	??? document: quantize extensibility through hash-subs
+
+CACHEING
+
+	cache quantize by month/day/...
+	-- doesn't work if 'quant' is changed
+	-- doesn't check 'intersects'
+	make a 'flush'-cache method. Make a 'cache-registry'.
+	think about: caching for union, etc  
+

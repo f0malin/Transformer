@@ -1,0 +1,403 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Tie::Hash - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Tie::Hash",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Tie::Hash">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  Tie::Hash
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Tie%3A%3AHash;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/lib/Tie/Hash.pm">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Tie%3A%3AIxHash">Tie::IxHash</a><br>
+<a href="/perldoc?Tie%3A%3AArray">Tie::Array</a><br>
+<a href="/perldoc?Tie%3A%3AHash%3A%3ASorted">Tie::Hash::Sorted</a><br>
+<a href="/perldoc?Tie%3A%3AScalar">Tie::Scalar</a><br>
+<a href="/perldoc?Apache%3A%3ASession">Apache::Session</a><br>
+<a href="/perldoc?Tie%3A%3AFile">Tie::File</a><br>
+<a href="/perldoc?Test%3A%3AMore">Test::More</a><br>
+<a href="/perldoc?Hash%3A%3ACase">Hash::Case</a><br>
+<a href="/perldoc?Scalar%3A%3AUtil">Scalar::Util</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Tie%3A%3AHash">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+
+</div>
+</div>
+  Module Version:  1.04 &nbsp;
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/lib/Tie/Hash.pm">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~abigail/perl/lib/Tie/Hash.pm">perl-5.15.9</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#Inheriting_from_Tie::StdHash'>Inheriting from Tie::StdHash</a>
+  <li class='indexItem indexItem1'><a href='#Inheriting_from_Tie::ExtraHash'>Inheriting from Tie::ExtraHash</a>
+  <li class='indexItem indexItem1'><a href='#SCALAR,_UNTIE_and_DESTROY'>SCALAR, UNTIE and DESTROY</a>
+  <li class='indexItem indexItem1'><a href='#MORE_INFORMATION'>MORE INFORMATION</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Tie::Hash,
+Tie::StdHash,
+Tie::ExtraHash - base class definitions for tied hashes</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    package NewHash;
+    require Tie::Hash;
+
+    @ISA = qw(Tie::Hash);
+
+    sub DELETE { ... }          # Provides needed method
+    sub CLEAR { ... }           # Overrides inherited method
+
+
+    package NewStdHash;
+    require Tie::Hash;
+
+    @ISA = qw(Tie::StdHash);
+
+    # All methods provided by default, define only those needing overrides
+    # Accessors access the storage in %{$_[0]};
+    # TIEHASH should return a reference to the actual storage
+    sub DELETE { ... }
+
+    package NewExtraHash;
+    require Tie::Hash;
+
+    @ISA = qw(Tie::ExtraHash);
+
+    # All methods provided by default, define only those needing overrides
+    # Accessors access the storage in %{$_[0][0]};
+    # TIEHASH should return an array reference with the first element being
+    # the reference to the actual storage 
+    sub DELETE { 
+      $_[0][1]-&#62;(&#39;del&#39;, $_[0][0], $_[1]); # Call the report writer
+      delete $_[0][0]-&#62;{$_[1]};           #  $_[0]-&#62;SUPER::DELETE($_[1])
+    }
+
+
+    package main;
+
+    tie %new_hash, &#39;NewHash&#39;;
+    tie %new_std_hash, &#39;NewStdHash&#39;;
+    tie %new_extra_hash, &#39;NewExtraHash&#39;,
+        sub {warn &#34;Doing \U$_[1]\E of $_[2].\n&#34;};</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module provides some skeletal methods for hash-tying classes. See <a href="/~flora/perl-5.14.2/pod/perltie.pod" class="podlinkpod"
+>perltie</a> for a list of the functions required in order to tie a hash to a package. The basic <b>Tie::Hash</b> package provides a <code>new</code> method, as well as methods <code>TIEHASH</code>, <code>EXISTS</code> and <code>CLEAR</code>. The <b>Tie::StdHash</b> and <b>Tie::ExtraHash</b> packages provide most methods for hashes described in <a href="/~flora/perl-5.14.2/pod/perltie.pod" class="podlinkpod"
+>perltie</a> (the exceptions are <code>UNTIE</code> and <code>DESTROY</code>). They cause tied hashes to behave exactly like standard hashes, and allow for selective overwriting of methods. <b>Tie::Hash</b> grandfathers the <code>new</code> method: it is used if <code>TIEHASH</code> is not defined in the case a class forgets to include a <code>TIEHASH</code> method.</p>
+
+<p>For developers wishing to write their own tied hashes, the required methods are briefly defined below. See the <a href="/~flora/perl-5.14.2/pod/perltie.pod" class="podlinkpod"
+>perltie</a> section for more detailed descriptive, as well as example code:</p>
+
+<dl>
+<dt><a name='TIEHASH'></a><a name="TIEHASH_classname,_LIST"
+>TIEHASH classname, LIST</a></dt>
+
+<dd>
+<p>The method invoked by the command <code>tie %hash, classname</code>. Associates a new hash instance with the specified class. <code>LIST</code> would represent additional arguments (along the lines of <a href="/~flora/perl-5.14.2/lib/AnyDBM_File.pm" class="podlinkpod"
+>AnyDBM_File</a> and compatriots) needed to complete the association.</p>
+
+<dt><a name='STORE'></a><a name="STORE_this,_key,_value"
+>STORE this, key, value</a></dt>
+
+<dd>
+<p>Store datum <i>value</i> into <i>key</i> for the tied hash <i>this</i>.</p>
+
+<dt><a name='FETCH'></a><a name="FETCH_this,_key"
+>FETCH this, key</a></dt>
+
+<dd>
+<p>Retrieve the datum in <i>key</i> for the tied hash <i>this</i>.</p>
+
+<dt><a name='FIRSTKEY'></a><a name="FIRSTKEY_this"
+>FIRSTKEY this</a></dt>
+
+<dd>
+<p>Return the first key in the hash.</p>
+
+<dt><a name='NEXTKEY'></a><a name="NEXTKEY_this,_lastkey"
+>NEXTKEY this, lastkey</a></dt>
+
+<dd>
+<p>Return the next key in the hash.</p>
+
+<dt><a name='EXISTS'></a><a name="EXISTS_this,_key"
+>EXISTS this, key</a></dt>
+
+<dd>
+<p>Verify that <i>key</i> exists with the tied hash <i>this</i>.</p>
+
+<p>The <b>Tie::Hash</b> implementation is a stub that simply croaks.</p>
+
+<dt><a name='DELETE'></a><a name="DELETE_this,_key"
+>DELETE this, key</a></dt>
+
+<dd>
+<p>Delete the key <i>key</i> from the tied hash <i>this</i>.</p>
+
+<dt><a name='CLEAR'></a><a name="CLEAR_this"
+>CLEAR this</a></dt>
+
+<dd>
+<p>Clear all values from the tied hash <i>this</i>.</p>
+
+<dt><a name='SCALAR'></a><a name="SCALAR_this"
+>SCALAR this</a></dt>
+
+<dd>
+<p>Returns what evaluating the hash in scalar context yields.</p>
+
+<p><b>Tie::Hash</b> does not implement this method (but <b>Tie::StdHash</b> and <b>Tie::ExtraHash</b> do).</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Inheriting_from_Tie::StdHash"
+>Inheriting from <b>Tie::StdHash</b> <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The accessor methods assume that the actual storage for the data in the tied hash is in the hash referenced by <code>tied(%tiedhash)</code>. Thus overwritten <code>TIEHASH</code> method should return a hash reference, and the remaining methods should operate on the hash referenced by the first argument:</p>
+
+<pre class="sh_perl">  package ReportHash;
+  our @ISA = &#39;Tie::StdHash&#39;;
+
+  sub TIEHASH  {
+    my $storage = bless {}, shift;
+    warn &#34;New ReportHash created, stored in $storage.\n&#34;;
+    $storage
+  }
+  sub STORE    {
+    warn &#34;Storing data with key $_[1] at $_[0].\n&#34;;
+    $_[0]{$_[1]} = $_[2]
+  }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Inheriting_from_Tie::ExtraHash"
+>Inheriting from <b>Tie::ExtraHash</b> <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The accessor methods assume that the actual storage for the data in the tied hash is in the hash referenced by <code>(tied(%tiedhash))-&#62;[0]</code>. Thus overwritten <code>TIEHASH</code> method should return an array reference with the first element being a hash reference, and the remaining methods should operate on the hash <code>%{ $_[0]-&#62;[0] }</code>:</p>
+
+<pre class="sh_perl">  package ReportHash;
+  our @ISA = &#39;Tie::ExtraHash&#39;;
+
+  sub TIEHASH  {
+    my $class = shift;
+    my $storage = bless [{}, @_], $class;
+    warn &#34;New ReportHash created, stored in $storage.\n&#34;;
+    $storage;
+  }
+  sub STORE    {
+    warn &#34;Storing data with key $_[1] at $_[0].\n&#34;;
+    $_[0][0]{$_[1]} = $_[2]
+  }</pre>
+
+<p>The default <code>TIEHASH</code> method stores &#34;extra&#34; arguments to tie() starting from offset 1 in the array referenced by <code>tied(%tiedhash)</code>; this is the same storage algorithm as in TIEHASH subroutine above. Hence, a typical package inheriting from <b>Tie::ExtraHash</b> does not need to overwrite this method.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SCALAR,_UNTIE_and_DESTROY"
+><code>SCALAR</code>, <code>UNTIE</code> and <code>DESTROY</code> <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The methods <code>UNTIE</code> and <code>DESTROY</code> are not defined in <b>Tie::Hash</b>, <b>Tie::StdHash</b>, or <b>Tie::ExtraHash</b>. Tied hashes do not require presence of these methods, but if defined, the methods will be called in proper time, see <a href="/~flora/perl-5.14.2/pod/perltie.pod" class="podlinkpod"
+>perltie</a>.</p>
+
+<p><code>SCALAR</code> is only defined in <b>Tie::StdHash</b> and <b>Tie::ExtraHash</b>.</p>
+
+<p>If needed, these methods should be defined by the package inheriting from <b>Tie::Hash</b>, <b>Tie::StdHash</b>, or <b>Tie::ExtraHash</b>. See <a href="/~flora/perl-5.14.2/pod/perltie.pod#SCALAR" class="podlinkpod"
+>&#34;SCALAR&#34; in perltie</a> to find out what happens when <code>SCALAR</code> does not exist.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MORE_INFORMATION"
+>MORE INFORMATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The packages relating to various DBM-related implementations (<em>DB_File</em>, <em>NDBM_File</em>, etc.) show examples of general tied hashes, as does the <a href="/~flora/perl-5.14.2/configpm" class="podlinkpod"
+>Config</a> module. While these do not utilize <b>Tie::Hash</b>, they serve as good working examples.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78269 Uploads, 24722 Distributions
+105999 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 18:04:49 2012 GMT (0.0696461200714111) @cpansearch1 -->
+ </body>
+</html>

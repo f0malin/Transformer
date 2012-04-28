@@ -1,0 +1,885 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>YAML - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","YAML",3]);
+    _gaq.push(["_setCustomVar",5,"Release","YAML-0.81",3]);
+    _gaq.push(["_setCustomVar",3,"Module","YAML",3]);
+    _gaq.push(["_setCustomVar",1,"Author","INGY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?YAML">permalink</a></div>
+  <a href="/~ingy/">Ingy d&ouml;t Net</a> &gt;
+  <a href="/~ingy/YAML-0.81/">YAML-0.81</a> &gt;
+  YAML
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/5c3afdcbdfe9c2aeed790b9b15d4bcef?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/I/IN/INGY/YAML-0.81.tar.gz">YAML-0.81.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=YAML;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~INGY/YAML-0.81/lib/YAML.pm">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="https://github.com/ingydotnet/yaml-pm/tree">Website</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 57</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 38</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=YAML">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.81 &nbsp;
+<span class="noprint">
+  <a href="/src/INGY/YAML-0.81/lib/YAML.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#NOTE'>NOTE</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#WHY_YAML_IS_COOL'>WHY YAML IS COOL</a>
+  <li class='indexItem indexItem1'><a href='#YAML_IMPLEMENTATIONS_IN_PERL'>YAML IMPLEMENTATIONS IN PERL</a>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONAL_USAGE'>FUNCTIONAL USAGE</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Exported_Functions'>Exported Functions</a>
+    <li class='indexItem indexItem2'><a href='#Exportable_Functions'>Exportable Functions</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#GLOBAL_OPTIONS'>GLOBAL OPTIONS</a>
+  <li class='indexItem indexItem1'><a href='#YAML_TERMINOLOGY'>YAML TERMINOLOGY</a>
+  <li class='indexItem indexItem1'><a href='#ysh_-_The_YAML_Shell'>ysh - The YAML Shell</a>
+  <li class='indexItem indexItem1'><a href='#BUGS_&#38;_DEFICIENCIES'>BUGS &#38; DEFICIENCIES</a>
+  <li class='indexItem indexItem1'><a href='#RESOURCES'>RESOURCES</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>YAML - YAML Ain&#39;t Markup Language (tm)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTE"
+>NOTE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module has been released to CPAN as YAML::Old,
+and soon YAML.pm will be changed to just be a frontend interface module for all the various Perl YAML implementation modules,
+including YAML::Old.</p>
+
+<p>If you want robust and fast YAML processing using the normal Dump/Load API,
+please consider switching to YAML::XS.
+It is by far the best Perl module for YAML at this time.
+It requires that you have a C compiler,
+since it is written in C.</p>
+
+<p>If you really need to use this version of YAML.pm it will always be available as YAML::Old.</p>
+
+<p>If you don&#39;t care which YAML module use,
+as long as it&#39;s the best one installed on your system,
+use YAML::Any.</p>
+
+<p>The rest of this documentation is left unchanged,
+until YAML.pm is switched over to the new UI-only version.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use YAML;
+    
+    # Load a YAML stream of 3 YAML documents into Perl data structures.
+    my ($hashref, $arrayref, $string) = Load(&#60;&#60;&#39;...&#39;);
+    ---
+    name: ingy
+    age: old
+    weight: heavy
+    # I should comment that I also like pink, but don&#39;t tell anybody.
+    favorite colors:
+        - red
+        - green
+        - blue
+    ---
+    - Clark Evans
+    - Oren Ben-Kiki
+    - Ingy d&#246;t Net
+    --- &#62;
+    You probably think YAML stands for &#34;Yet Another Markup Language&#34;. It
+    ain&#39;t! YAML is really a data serialization language. But if you want
+    to think of it as a markup, that&#39;s OK with me. A lot of people try
+    to use XML as a serialization format.
+    
+    &#34;YAML&#34; is catchy and fun to say. Try it. &#34;YAML, YAML, YAML!!!&#34;
+    ...
+    
+    # Dump the Perl data structures back into YAML.
+    print Dump($string, $arrayref, $hashref);
+    
+    # YAML::Dump is used the same way you&#39;d use Data::Dumper::Dumper
+    use Data::Dumper;
+    print Dumper($string, $arrayref, $hashref);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The YAML.pm module implements a YAML Loader and Dumper based on the YAML 1.0 specification. <a href="http://www.yaml.org/spec/" class="podlinkurl"
+>http://www.yaml.org/spec/</a></p>
+
+<p>YAML is a generic data serialization language that is optimized for human readability. It can be used to express the data structures of most modern programming languages. (Including Perl!!!)</p>
+
+<p>For information on the YAML syntax, please refer to the YAML specification.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="WHY_YAML_IS_COOL"
+>WHY YAML IS COOL <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='YAML'></a><a name="YAML_is_readable_for_people."
+>YAML is readable for people.</a></dt>
+
+<dd>
+<p>It makes clear sense out of complex data structures. You should find that YAML is an exceptional data dumping tool. Structure is shown through indentation, YAML supports recursive data, and hash keys are sorted by default. In addition, YAML supports several styles of scalar formatting for different types of data.</p>
+
+<dt><a name='YAML'></a><a name="YAML_is_editable."
+>YAML is editable.</a></dt>
+
+<dd>
+<p>YAML was designed from the ground up to be an excellent syntax for configuration files. Almost all programs need configuration files, so why invent a new syntax for each one? And why subject users to the complexities of XML or native Perl code?</p>
+
+<dt><a name='YAML'></a><a name="YAML_is_multilingual."
+>YAML is multilingual.</a></dt>
+
+<dd>
+<p>Yes, YAML supports Unicode. But I&#39;m actually referring to programming languages. YAML was designed to meet the serialization needs of Perl, Python, Ruby, Tcl, PHP, Javascript and Java. It was also designed to be interoperable between those languages. That means YAML serializations produced by Perl can be processed by Python.</p>
+
+<dt><a name='YAML'></a><a name="YAML_is_taint_safe."
+>YAML is taint safe.</a></dt>
+
+<dd>
+<p>Using modules like Data::Dumper for serialization is fine as long as you can be sure that nobody can tamper with your data files or transmissions. That&#39;s because you need to use Perl&#39;s <code>eval()</code> built-in to deserialize the data. Somebody could add a snippet of Perl to erase your files.</p>
+
+<p>YAML&#39;s parser does not need to eval anything.</p>
+
+<dt><a name='YAML'></a><a name="YAML_is_full_featured."
+>YAML is full featured.</a></dt>
+
+<dd>
+<p>YAML can accurately serialize all of the common Perl data structures and deserialize them again without losing data relationships. Although it is not 100% perfect (no serializer is or can be perfect), it fares as well as the popular current modules: Data::Dumper, Storable, XML::Dumper and Data::Denter.</p>
+
+<p>YAML.pm also has the ability to handle code (subroutine) references and typeglobs. (Still experimental) These features are not found in Perl&#39;s other serialization modules.</p>
+
+<dt><a name='YAML'></a><a name="YAML_is_extensible."
+>YAML is extensible.</a></dt>
+
+<dd>
+<p>The YAML language has been designed to be flexible enough to solve it&#39;s own problems. The markup itself has 3 basic construct which resemble Perl&#39;s hash, array and scalar. By default, these map to their Perl equivalents. But each YAML node also supports a tagging mechanism (type system) which can cause that node to be interpreted in a completely different manner. That&#39;s how YAML can support object serialization and oddball structures like Perl&#39;s typeglob.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="YAML_IMPLEMENTATIONS_IN_PERL"
+>YAML IMPLEMENTATIONS IN PERL <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module, YAML.pm, is really just the interface module for YAML modules written in Perl. The basic interface for YAML consists of two functions: <code>Dump</code> and <code>Load</code>. The real work is done by the modules YAML::Dumper and YAML::Loader.</p>
+
+<p>Different YAML module distributions can be created by subclassing YAML.pm and YAML::Loader and YAML::Dumper. For example, YAML-Simple consists of YAML::Simple YAML::Dumper::Simple and YAML::Loader::Simple.</p>
+
+<p>Why would there be more than one implementation of YAML? Well, despite YAML&#39;s offering of being a simple data format, YAML is actually very deep and complex. Implementing the entirety of the YAML specification is a daunting task.</p>
+
+<p>For this reason I am currently working on 3 different YAML implementations.</p>
+
+<dl>
+<dt><a name="YAML"
+>YAML</a></dt>
+
+<dd>
+<p>The main YAML distribution will keeping evolving to support the entire YAML specification in pure Perl. This may not be the fastest or most stable module though. Currently, YAML.pm has lots of known bugs. It is mostly a great tool for dumping Perl data structures to a readable form.</p>
+
+<dt><a name='YAML'></a><a name="YAML::Tiny"
+>YAML::Tiny</a></dt>
+
+<dd>
+<p>The point of YAML::Tiny is to strip YAML down to the 90% that people use most and offer that in a small, fast, stable, pure Perl form. YAML::Tiny will simply die when it is asked to do something it can&#39;t.</p>
+
+<dt><a name='YAML'></a><a name="YAML::Syck"
+>YAML::Syck</a></dt>
+
+<dd>
+<p><code>libsyck</code> is the C based YAML processing library used by the Ruby programming language (and also Python, PHP and Pugs). YAML::Syck is the Perl binding to <code>libsyck</code>. It should be very fast, but may have problems of its own. It will also require C compilation.</p>
+
+<p>NOTE: Audrey Tang has actually completed this module and it works great and is 10 times faster than YAML.pm.</p>
+</dd>
+</dl>
+
+<p>In the future, there will likely be even more YAML modules. Remember, people other than Ingy are allowed to write YAML modules!</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONAL_USAGE"
+>FUNCTIONAL USAGE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>YAML is completely OO under the hood. Still it exports a few useful top level functions so that it is dead simple to use. These functions just do the OO stuff for you. If you want direct access to the OO API see the documentation for YAML::Dumper and YAML::Loader.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Exported_Functions"
+>Exported Functions</a></h2>
+
+<p>The following functions are exported by YAML.pm by default. The reason they are exported is so that YAML works much like Data::Dumper. If you don&#39;t want functions to be imported, just use YAML with an empty import list:</p>
+
+<pre class="sh_perl">    use YAML ();</pre>
+
+<dl>
+<dt><a name='Dump'></a><a name="Dump(list-of-Perl-data-structures)"
+>Dump(list-of-Perl-data-structures)</a></dt>
+
+<dd>
+<p>Turn Perl data into YAML. This function works very much like Data::Dumper::Dumper(). It takes a list of Perl data strucures and dumps them into a serialized form. It returns a string containing the YAML stream. The structures can be references or plain scalars.</p>
+
+<dt><a name='Load'></a><a name="Load(string-containing-a-YAML-stream)"
+>Load(string-containing-a-YAML-stream)</a></dt>
+
+<dd>
+<p>Turn YAML into Perl data. This is the opposite of Dump. Just like Storable&#39;s thaw() function or the eval() function in relation to Data::Dumper. It parses a string containing a valid YAML stream into a list of Perl data structures.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Exportable_Functions"
+>Exportable Functions</a></h2>
+
+<p>These functions are not exported by default but you can request them in an import list like this:</p>
+
+<pre class="sh_perl">    use YAML qw&#39;freeze thaw Bless&#39;;</pre>
+
+<dl>
+<dt><a name='freeze'></a><a name="freeze()_and_thaw()"
+>freeze() and thaw()</a></dt>
+
+<dd>
+<p>Aliases to Dump() and Load() for Storable fans. This will also allow YAML.pm to be plugged directly into modules like POE.pm, that use the freeze/thaw API for internal serialization.</p>
+
+<dt><a name='DumpFile'></a><a name="DumpFile(filepath,_list)"
+>DumpFile(filepath, list)</a></dt>
+
+<dd>
+<p>Writes the YAML stream to a file instead of just returning a string.</p>
+
+<dt><a name='LoadFile'></a><a name="LoadFile(filepath)"
+>LoadFile(filepath)</a></dt>
+
+<dd>
+<p>Reads the YAML stream from a file instead of a string.</p>
+
+<dt><a name='Bless'></a><a name="Bless(perl-node,_[yaml-node_|_class-name])"
+>Bless(perl-node, [yaml-node | class-name])</a></dt>
+
+<dd>
+<p>Associate a normal Perl node, with a yaml node. A yaml node is an object tied to the YAML::Node class. The second argument is either a yaml node that you&#39;ve already created or a class (package) name that supports a yaml_dump() function. A yaml_dump() function should take a perl node and return a yaml node. If no second argument is provided, Bless will create a yaml node. This node is not returned, but can be retrieved with the Blessed() function.</p>
+
+<p>Here&#39;s an example of how to use Bless. Say you have a hash containing three keys, but you only want to dump two of them. Furthermore the keys must be dumped in a certain order. Here&#39;s how you do that:</p>
+
+<pre class="sh_perl">    use YAML qw(Dump Bless);
+    $hash = {apple =&#62; &#39;good&#39;, banana =&#62; &#39;bad&#39;, cauliflower =&#62; &#39;ugly&#39;};
+    print Dump $hash;
+    Bless($hash)-&#62;keys([&#39;banana&#39;, &#39;apple&#39;]);
+    print Dump $hash;</pre>
+
+<p>produces:</p>
+
+<pre class="sh_perl">    ---
+    apple: good
+    banana: bad
+    cauliflower: ugly
+    ---
+    banana: bad
+    apple: good</pre>
+
+<p>Bless returns the tied part of a yaml-node, so that you can call the YAML::Node methods. This is the same thing that YAML::Node::ynode() returns. So another way to do the above example is:</p>
+
+<pre class="sh_perl">    use YAML qw(Dump Bless);
+    use YAML::Node;
+    $hash = {apple =&#62; &#39;good&#39;, banana =&#62; &#39;bad&#39;, cauliflower =&#62; &#39;ugly&#39;};
+    print Dump $hash;
+    Bless($hash);
+    $ynode = ynode(Blessed($hash));
+    $ynode-&#62;keys([&#39;banana&#39;, &#39;apple&#39;]);
+    print Dump $hash;</pre>
+
+<p>Note that Blessing a Perl data structure does not change it anyway. The extra information is stored separately and looked up by the Blessed node&#39;s memory address.</p>
+
+<dt><a name='Blessed'></a><a name="Blessed(perl-node)"
+>Blessed(perl-node)</a></dt>
+
+<dd>
+<p>Returns the yaml node that a particular perl node is associated with (see above). Returns undef if the node is not (YAML) Blessed.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="GLOBAL_OPTIONS"
+>GLOBAL OPTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>YAML options are set using a group of global variables in the YAML namespace. This is similar to how Data::Dumper works.</p>
+
+<p>For example, to change the indentation width, do something like:</p>
+
+<pre class="sh_perl">    local $YAML::Indent = 3;</pre>
+
+<p>The current options are:</p>
+
+<dl>
+<dt><a name="DumperClass"
+>DumperClass</a></dt>
+
+<dd>
+<p>You can override which module/class YAML uses for Dumping data.</p>
+
+<dt><a name="LoaderClass"
+>LoaderClass</a></dt>
+
+<dd>
+<p>You can override which module/class YAML uses for Loading data.</p>
+
+<dt><a name="Indent"
+>Indent</a></dt>
+
+<dd>
+<p>This is the number of space characters to use for each indentation level when doing a Dump(). The default is 2.</p>
+
+<p>By the way, YAML can use any number of characters for indentation at any level. So if you are editing YAML by hand feel free to do it anyway that looks pleasing to you; just be consistent for a given level.</p>
+
+<dt><a name="SortKeys"
+>SortKeys</a></dt>
+
+<dd>
+<p>Default is 1. (true)</p>
+
+<p>Tells YAML.pm whether or not to sort hash keys when storing a document.</p>
+
+<p>YAML::Node objects can have their own sort order, which is usually what you want. To override the YAML::Node order and sort the keys anyway, set SortKeys to 2.</p>
+
+<dt><a name="Stringify"
+>Stringify</a></dt>
+
+<dd>
+<p>Default is 0. (false)</p>
+
+<p>Objects with string overloading should honor the overloading and dump the stringification of themselves, rather than the actual object&#39;s guts.</p>
+
+<dt><a name="UseHeader"
+>UseHeader</a></dt>
+
+<dd>
+<p>Default is 1. (true)</p>
+
+<p>This tells YAML.pm whether to use a separator string for a Dump operation. This only applies to the first document in a stream. Subsequent documents must have a YAML header by definition.</p>
+
+<dt><a name="UseVersion"
+>UseVersion</a></dt>
+
+<dd>
+<p>Default is 0. (false)</p>
+
+<p>Tells YAML.pm whether to include the YAML version on the separator/header.</p>
+
+<pre class="sh_perl">    --- %YAML:1.0</pre>
+
+<dt><a name="AnchorPrefix"
+>AnchorPrefix</a></dt>
+
+<dd>
+<p>Default is &#39;&#39;.</p>
+
+<p>Anchor names are normally numeric. YAML.pm simply starts with &#39;1&#39; and increases by one for each new anchor. This option allows you to specify a string to be prepended to each anchor number.</p>
+
+<dt><a name="UseCode"
+>UseCode</a></dt>
+
+<dd>
+<p>Setting the UseCode option is a shortcut to set both the DumpCode and LoadCode options at once. Setting UseCode to &#39;1&#39; tells YAML.pm to dump Perl code references as Perl (using B::Deparse) and to load them back into memory using eval(). The reason this has to be an option is that using eval() to parse untrusted code is, well, untrustworthy.</p>
+
+<dt><a name="DumpCode"
+>DumpCode</a></dt>
+
+<dd>
+<p>Determines if and how YAML.pm should serialize Perl code references. By default YAML.pm will dump code references as dummy placeholders (much like Data::Dumper). If DumpCode is set to &#39;1&#39; or &#39;deparse&#39;, code references will be dumped as actual Perl code.</p>
+
+<p>DumpCode can also be set to a subroutine reference so that you can write your own serializing routine. YAML.pm passes you the code ref. You pass back the serialization (as a string) and a format indicator. The format indicator is a simple string like: &#39;deparse&#39; or &#39;bytecode&#39;.</p>
+
+<dt><a name="LoadCode"
+>LoadCode</a></dt>
+
+<dd>
+<p>LoadCode is the opposite of DumpCode. It tells YAML if and how to deserialize code references. When set to &#39;1&#39; or &#39;deparse&#39; it will use <code>eval()</code>. Since this is potentially risky, only use this option if you know where your YAML has been.</p>
+
+<p>LoadCode can also be set to a subroutine reference so that you can write your own deserializing routine. YAML.pm passes the serialization (as a string) and a format indicator. You pass back the code reference.</p>
+
+<dt><a name="UseBlock"
+>UseBlock</a></dt>
+
+<dd>
+<p>YAML.pm uses heuristics to guess which scalar style is best for a given node. Sometimes you&#39;ll want all multiline scalars to use the &#39;block&#39; style. If so, set this option to 1.</p>
+
+<p>NOTE: YAML&#39;s block style is akin to Perl&#39;s here-document.</p>
+
+<dt><a name="UseFold"
+>UseFold</a></dt>
+
+<dd>
+<p>If you want to force YAML to use the &#39;folded&#39; style for all multiline scalars, then set $UseFold to 1.</p>
+
+<p>NOTE: YAML&#39;s folded style is akin to the way HTML folds text, except smarter.</p>
+
+<dt><a name="UseAliases"
+>UseAliases</a></dt>
+
+<dd>
+<p>YAML has an alias mechanism such that any given structure in memory gets serialized once. Any other references to that structure are serialized only as alias markers. This is how YAML can serialize duplicate and recursive structures.</p>
+
+<p>Sometimes, when you KNOW that your data is nonrecursive in nature, you may want to serialize such that every node is expressed in full. (ie as a copy of the original). Setting $YAML::UseAliases to 0 will allow you to do this. This also may result in faster processing because the lookup overhead is by bypassed.</p>
+
+<p>THIS OPTION CAN BE DANGEROUS. *If* your data is recursive, this option *will* cause Dump() to run in an endless loop, chewing up your computers memory. You have been warned.</p>
+
+<dt><a name="CompressSeries"
+>CompressSeries</a></dt>
+
+<dd>
+<p>Default is 1.</p>
+
+<p>Compresses the formatting of arrays of hashes:</p>
+
+<pre class="sh_perl">    -
+      foo: bar
+    - 
+      bar: foo</pre>
+
+<p>becomes:</p>
+
+<pre class="sh_perl">    - foo: bar
+    - bar: foo</pre>
+
+<p>Since this output is usually more desirable, this option is turned on by default.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="YAML_TERMINOLOGY"
+>YAML TERMINOLOGY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>YAML is a full featured data serialization language, and thus has its own terminology.</p>
+
+<p>It is important to remember that although YAML is heavily influenced by Perl and Python, it is a language in its own right, not merely just a representation of Perl structures.</p>
+
+<p>YAML has three constructs that are conspicuously similar to Perl&#39;s hash, array, and scalar. They are called mapping, sequence, and string respectively. By default, they do what you would expect. But each instance may have an explicit or implicit tag (type) that makes it behave differently. In this manner, YAML can be extended to represent Perl&#39;s Glob or Python&#39;s tuple, or Ruby&#39;s Bigint.</p>
+
+<dl>
+<dt><a name="stream"
+>stream</a></dt>
+
+<dd>
+<p>A YAML stream is the full sequence of unicode characters that a YAML parser would read or a YAML emitter would write. A stream may contain one or more YAML documents separated by YAML headers.</p>
+
+<pre class="sh_perl">    ---
+    a: mapping
+    foo: bar
+    ---
+    - a
+    - sequence</pre>
+
+<dt><a name="document"
+>document</a></dt>
+
+<dd>
+<p>A YAML document is an independent data structure representation within a stream. It is a top level node. Each document in a YAML stream must begin with a YAML header line. Actually the header is optional on the first document.</p>
+
+<pre class="sh_perl">    ---
+    This: top level mapping
+    is:
+        - a
+        - YAML
+        - document</pre>
+
+<dt><a name="header"
+>header</a></dt>
+
+<dd>
+<p>A YAML header is a line that begins a YAML document. It consists of three dashes, possibly followed by more info. Another purpose of the header line is that it serves as a place to put top level tag and anchor information.</p>
+
+<pre class="sh_perl">    --- !recursive-sequence &#38;001
+    - * 001
+    - * 001</pre>
+
+<dt><a name="node"
+>node</a></dt>
+
+<dd>
+<p>A YAML node is the representation of a particular data stucture. Nodes may contain other nodes. (In Perl terms, nodes are like scalars. Strings, arrayrefs and hashrefs. But this refers to the serialized format, not the in-memory structure.)</p>
+
+<dt><a name="tag"
+>tag</a></dt>
+
+<dd>
+<p>This is similar to a type. It indicates how a particular YAML node serialization should be transferred into or out of memory. For instance a Foo::Bar object would use the tag &#39;perl/Foo::Bar&#39;:</p>
+
+<pre class="sh_perl">    - !perl/Foo::Bar
+        foo: 42
+        bar: stool</pre>
+
+<dt><a name="collection"
+>collection</a></dt>
+
+<dd>
+<p>A collection is the generic term for a YAML data grouping. YAML has two types of collections: mappings and sequences. (Similar to hashes and arrays)</p>
+
+<dt><a name="mapping"
+>mapping</a></dt>
+
+<dd>
+<p>A mapping is a YAML collection defined by unordered key/value pairs with unique keys. By default YAML mappings are loaded into Perl hashes.</p>
+
+<pre class="sh_perl">    a mapping:
+        foo: bar
+        two: times two is 4</pre>
+
+<dt><a name="sequence"
+>sequence</a></dt>
+
+<dd>
+<p>A sequence is a YAML collection defined by an ordered list of elements. By default YAML sequences are loaded into Perl arrays.</p>
+
+<pre class="sh_perl">    a sequence:
+        - one bourbon
+        - one scotch
+        - one beer</pre>
+
+<dt><a name="scalar"
+>scalar</a></dt>
+
+<dd>
+<p>A scalar is a YAML node that is a single value. By default YAML scalars are loaded into Perl scalars.</p>
+
+<pre class="sh_perl">    a scalar key: a scalar value</pre>
+
+<p>YAML has many styles for representing scalars. This is important because varying data will have varying formatting requirements to retain the optimum human readability.</p>
+
+<dt><a name='plain'></a><a name="plain_scalar"
+>plain scalar</a></dt>
+
+<dd>
+<p>A plain scalar is unquoted. All plain scalars are automatic candidates for &#34;implicit tagging&#34;. This means that their tag may be determined automatically by examination. The typical uses for this are plain alpha strings, integers, real numbers, dates, times and currency.</p>
+
+<pre class="sh_perl">    - a plain string
+    - -42
+    - 3.1415
+    - 12:34
+    - 123 this is an error</pre>
+
+<dt><a name='single'></a><a name="single_quoted_scalar"
+>single quoted scalar</a></dt>
+
+<dd>
+<p>This is similar to Perl&#39;s use of single quotes. It means no escaping except for single quotes which are escaped by using two adjacent single quotes.</p>
+
+<pre class="sh_perl">    - &#39;When I say &#39;&#39;\n&#39;&#39; I mean &#34;backslash en&#34;&#39;</pre>
+
+<dt><a name='double'></a><a name="double_quoted_scalar"
+>double quoted scalar</a></dt>
+
+<dd>
+<p>This is similar to Perl&#39;s use of double quotes. Character escaping can be used.</p>
+
+<pre class="sh_perl">    - &#34;This scalar\nhas two lines, and a bell --&#62;\a&#34;</pre>
+
+<dt><a name='folded'></a><a name="folded_scalar"
+>folded scalar</a></dt>
+
+<dd>
+<p>This is a multiline scalar which begins on the next line. It is indicated by a single right angle bracket. It is unescaped like the single quoted scalar. Line folding is also performed.</p>
+
+<pre class="sh_perl">    - &#62; 
+     This is a multiline scalar which begins on
+     the next line. It is indicated by a single
+     carat. It is unescaped like the single
+     quoted scalar. Line folding is also
+     performed.</pre>
+
+<dt><a name='block'></a><a name="block_scalar"
+>block scalar</a></dt>
+
+<dd>
+<p>This final multiline form is akin to Perl&#39;s here-document except that (as in all YAML data) scope is indicated by indentation. Therefore, no ending marker is required. The data is verbatim. No line folding.</p>
+
+<pre class="sh_perl">    - |
+        QTY  DESC          PRICE  TOTAL
+        ---  ----          -----  -----
+          1  Foo Fighters  $19.95 $19.95
+          2  Bar Belles    $29.95 $59.90</pre>
+
+<dt><a name="parser"
+>parser</a></dt>
+
+<dd>
+<p>A YAML processor has four stages: parse, load, dump, emit.</p>
+
+<p>A parser parses a YAML stream. YAML.pm&#39;s Load() function contains a parser.</p>
+
+<dt><a name="loader"
+>loader</a></dt>
+
+<dd>
+<p>The other half of the Load() function is a loader. This takes the information from the parser and loads it into a Perl data structure.</p>
+
+<dt><a name="dumper"
+>dumper</a></dt>
+
+<dd>
+<p>The Dump() function consists of a dumper and an emitter. The dumper walks through each Perl data structure and gives info to the emitter.</p>
+
+<dt><a name="emitter"
+>emitter</a></dt>
+
+<dd>
+<p>The emitter takes info from the dumper and turns it into a YAML stream.</p>
+
+<p>NOTE: In YAML.pm the parser/loader and the dumper/emitter code are currently very closely tied together. In the future they may be broken into separate stages.</p>
+</dd>
+</dl>
+
+<p>For more information please refer to the immensely helpful YAML specification available at <a href="http://www.yaml.org/spec/" class="podlinkurl"
+>http://www.yaml.org/spec/</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ysh_-_The_YAML_Shell"
+>ysh - The YAML Shell <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The YAML distribution ships with a script called &#39;ysh&#39;, the YAML shell. ysh provides a simple, interactive way to play with YAML. If you type in Perl code, it displays the result in YAML. If you type in YAML it turns it into Perl code.</p>
+
+<p>To run ysh, (assuming you installed it along with YAML.pm) simply type:</p>
+
+<pre class="sh_perl">    ysh [options]</pre>
+
+<p>Please read the <code>ysh</code> documentation for the full details. There are lots of options.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS_&#38;_DEFICIENCIES"
+>BUGS &#38; DEFICIENCIES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you find a bug in YAML, please try to recreate it in the YAML Shell with logging turned on (&#39;ysh -L&#39;). When you have successfully reproduced the bug, please mail the LOG file to the author (ingy@cpan.org).</p>
+
+<p>WARNING: This is still *ALPHA* code. Well, most of this code has been around for years...</p>
+
+<p>BIGGER WARNING: YAML.pm has been slow in the making, but I am committed to having top notch YAML tools in the Perl world. The YAML team is close to finalizing the YAML 1.1 spec. This version of YAML.pm is based off of a very old pre 1.0 spec. In actuality there isn&#39;t a ton of difference, and this YAML.pm is still fairly useful. Things will get much better in the future.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="RESOURCES"
+>RESOURCES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="http://lists.sourceforge.net/lists/listinfo/yaml-core" class="podlinkurl"
+>http://lists.sourceforge.net/lists/listinfo/yaml-core</a> is the mailing list. This is where the language is discussed and designed.</p>
+
+<p><a href="http://www.yaml.org" class="podlinkurl"
+>http://www.yaml.org</a> is the official YAML website.</p>
+
+<p><a href="http://www.yaml.org/spec/" class="podlinkurl"
+>http://www.yaml.org/spec/</a> is the YAML 1.0 specification.</p>
+
+<p><a href="http://yaml.kwiki.org" class="podlinkurl"
+>http://yaml.kwiki.org</a> is the official YAML wiki.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>See <a href="/perldoc?YAML%3A%3AXS" class="podlinkpod"
+>YAML::XS</a>. Fast!</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Ingy d&#246;t Net &#60;ingy@cpan.org&#62;</p>
+
+<p>is resonsible for YAML.pm.</p>
+
+<p>The YAML serialization language is the result of years of collaboration between Oren Ben-Kiki, Clark Evans and Ingy d&#246;t Net. Several others have added help along the way.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2005, 2006, 2008, 2011-2012. Ingy d&#246;t Net.</p>
+
+<p>Copyright (c) 2001, 2002, 2005. Brian Ingerson.</p>
+
+<p>Some parts copyright (c) 2009 - 2010 Adam Kennedy</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>See <a href="http://www.perl.com/perl/misc/Artistic.html" class="podlinkurl"
+>http://www.perl.com/perl/misc/Artistic.html</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78059 Uploads, 24684 Distributions
+105888 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 10:08:17 2012 GMT (0.151934146881104) @cpansearch1 -->
+ </body>
+</html>

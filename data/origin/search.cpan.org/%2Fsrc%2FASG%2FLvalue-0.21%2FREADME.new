@@ -1,0 +1,71 @@
+Lvalue
+
+
+Lvalue - wrap objects with lvalue getters and setters
+
+version 0.1
+
+SYNOPSIS
+
+Assuming an object with standard getter / setter functionality (that is, any arguments
+is a setter, no arguments is a getter):
+
+    my $obj = SomePackage->new();
+
+    $obj->value(5);
+
+    print $obj->value(); # prints 5
+
+    use Lvalue;
+
+    Lvalue->wrap( $obj );
+
+    $obj->value = 10;
+
+    print $obj->value; # prints 10
+
+    $_ += 2 for $obj->value;
+
+    print $obj->value; # prints 12
+
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Build.PL
+	./Build
+	./Build test
+	./Build install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Lvalue
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Lvalue
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/Lvalue
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/Lvalue
+
+    Search CPAN
+        http://search.cpan.org/dist/Lvalue/
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2010 Eric Strom
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.

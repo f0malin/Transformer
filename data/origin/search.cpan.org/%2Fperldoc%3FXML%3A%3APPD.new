@@ -1,0 +1,605 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>XML::PPD - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","PPM",3]);
+    _gaq.push(["_setCustomVar",5,"Release","PPM-2.1.3",3]);
+    _gaq.push(["_setCustomVar",3,"Module","XML::PPD",3]);
+    _gaq.push(["_setCustomVar",1,"Author","MURRAY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?XML::PPD">permalink</a></div>
+  <a href="/~murray/">Murray Nesbitt</a> &gt;
+  <a href="/~murray/PPM-2.1.3/">PPM-2.1.3</a> &gt;
+  XML::PPD
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/1b9e0756495a1fbc8695a9be58bd7040?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/M/MU/MURRAY/PPM-2.1.3.tar.gz">PPM-2.1.3.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=XML%3A%3APPD;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~MURRAY/PPM-2.1.3/lib/XML/PPD.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 9</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 3</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=PPM">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.01 &nbsp;
+<span class="noprint">
+  <a href="/src/MURRAY/PPM-2.1.3/lib/XML/PPD.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#MAJOR_ELEMENTS'>MAJOR ELEMENTS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#SOFTPKG'>SOFTPKG</a>
+    <li class='indexItem indexItem2'><a href='#IMPLEMENTATION'>IMPLEMENTATION</a>
+    <li class='indexItem indexItem2'><a href='#DEPENDENCY'>DEPENDENCY</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#MINOR_ELEMENTS'>MINOR ELEMENTS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#TITLE'>TITLE</a>
+    <li class='indexItem indexItem2'><a href='#ABSTRACT'>ABSTRACT</a>
+    <li class='indexItem indexItem2'><a href='#AUTHOR'>AUTHOR</a>
+    <li class='indexItem indexItem2'><a href='#LANGUAGE'>LANGUAGE</a>
+    <li class='indexItem indexItem2'><a href='#LICENSE'>LICENSE</a>
+    <li class='indexItem indexItem2'><a href='#OS'>OS</a>
+    <li class='indexItem indexItem2'><a href='#OSVERSION'>OSVERSION</a>
+    <li class='indexItem indexItem2'><a href='#PERLCORE'>PERLCORE</a>
+    <li class='indexItem indexItem2'><a href='#PROCESSOR'>PROCESSOR</a>
+    <li class='indexItem indexItem2'><a href='#CODEBASE'>CODEBASE</a>
+    <li class='indexItem indexItem2'><a href='#INSTALL'>INSTALL</a>
+    <li class='indexItem indexItem2'><a href='#UNINSTALL'>UNINSTALL</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DOCUMENT_TYPE_DEFINITION'>DOCUMENT TYPE DEFINITION</a>
+  <li class='indexItem indexItem1'><a href='#SAMPLE_PPD_FILE'>SAMPLE PPD FILE</a>
+  <li class='indexItem indexItem1'><a href='#KNOWN_BUGS/ISSUES'>KNOWN BUGS/ISSUES</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#HISTORY'>HISTORY</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>XML::PPD - PPD file format and XML parsing elements</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> use XML::Parser;
+ use XML::PPD;
+
+ $p = new XML::Parser( Style =&#62; &#39;Objects&#39;, Pkg =&#62; &#39;XML::PPD&#39; );
+ ...</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module provides a set of classes for parsing PPD files using the <code>XML::Parser</code> module. Each of the classes is derived from <code>XML::ValidatingElement</code>, with optional/required attributes/children enforced.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MAJOR_ELEMENTS"
+>MAJOR ELEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SOFTPKG"
+>SOFTPKG</a></h2>
+
+<p>Defines a Perl Package. The root of a PPD document is <b>always</b> a SOFTPKG element. The SOFTPKG element allows for the following attributes:</p>
+
+<dl>
+<dt><a name="NAME"
+>NAME</a></dt>
+
+<dd>
+<p>Required attribute. Name of the package (e.g. &#34;Foobar&#34;).</p>
+
+<dt><a name="VERSION"
+>VERSION</a></dt>
+
+<dd>
+<p>Version number of the package, in comma-delimited format (e.g. &#34;1,0,0,0&#34;).</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="IMPLEMENTATION"
+>IMPLEMENTATION</a></h2>
+
+<p>Child of SOFTPKG, used to describe a particular implementation of the Perl Package. Multiple instances are valid, and should be used to describe different implementations/ports for different operating systems or architectures.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="DEPENDENCY"
+>DEPENDENCY</a></h2>
+
+<p>Child of SOFTPKG or IMPLEMENTATION, used to indicate a dependency this Perl Package has on another Perl Package. Multiple instances are valid. The DEPENDENCY element allows for the following attributes:</p>
+
+<dl>
+<dt><a name="NAME"
+>NAME</a></dt>
+
+<dd>
+<p>Name of the package that this implementation is dependant upon.</p>
+
+<dt><a name="VERSION"
+>VERSION</a></dt>
+
+<dd>
+<p>Version number of the dependency, in comma-delimited format (e.g. &#34;1,0,0,0&#34;).</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MINOR_ELEMENTS"
+>MINOR ELEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="TITLE"
+>TITLE</a></h2>
+
+<p>Child of SOFTPKG, used to state the title of the Perl Package. Only one instance should be present.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="ABSTRACT"
+>ABSTRACT</a></h2>
+
+<p>Child of SOFTPKG, used to provide a short description outlining the nature and purpose of the Perl Package. Only one instance should be present.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR</a></h2>
+
+<p>Child of SOFTPKG, used to provide information about the author(s) of the Perl Package. Multiple instances are valid.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="LANGUAGE"
+>LANGUAGE</a></h2>
+
+<p>Child of IMPLEMENTATION, used to specify the language used within the given implementation of the Perl Package. Only one instance should be present.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE</a></h2>
+
+<p>Child of SOFTPKG, indicating the location of the appropriate license agreement or copyright notice for the Perl Package. Only one instance should be present. The LICENSE element allows for the following attributes:</p>
+
+<dl>
+<dt><a name="HREF"
+>HREF</a></dt>
+
+<dd>
+<p>Required attribute. A reference to the location of the license agreement or copyright notice for this package.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OS"
+>OS</a></h2>
+
+<p>Child of IMPLEMENTATION, used to outline the operating system required for this implementation of the Perl Package. Multiple instances are valid. Valid values can be taken from the OSD Specification and it&#39;s OS element. The OS element allows for the following attributes:</p>
+
+<dl>
+<dt><a name="VALUE"
+>VALUE</a></dt>
+
+<dd>
+<p>The name of the operating system required for this implementation of the Perl Package. This value should be obtained from Config.pm as &#39;osname&#39;.</p>
+</dd>
+</dl>
+
+<p>Note that previous versions of the PPD format used a &#39;NAME&#39; attribute. It&#39;s use has been deprecated in preference of the &#39;VALUE&#39; attribute. Also note that during validation, this element will automatically convert any existing &#39;NAME&#39; attribute to be a &#39;VALUE&#39; attribute.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OSVERSION"
+>OSVERSION</a></h2>
+
+<p>Child of IMPLEMENTATION, used to outline the required version of the operating system required for this implementation of the Perl Package. Only one instance should be present. The OSVERSION element allows for the following attributes:</p>
+
+<dl>
+<dt><a name="VALUE"
+>VALUE</a></dt>
+
+<dd>
+<p>The version of the operating system required for installation of this implementation of the package, in a comma-delimited format (e.g. &#34;3,1,0,0&#34;).</p>
+</dd>
+</dl>
+
+<p>Note that previous versions of the PPD format used a &#39;NAME&#39; attribute. It&#39;s use has been deprecated in preference of the &#39;VALUE&#39; attribute. Also note that during validation, this element will automatically convert any existing &#39;NAME&#39; attribute to be a &#39;VALUE&#39; attribute.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PERLCORE"
+>PERLCORE</a></h2>
+
+<p>Child of IMPLEMENTATION, used to specify the minimum version of the Perl core distribution that this Perl Package is to be used with. Only one instance should be present. The PERLCORE element allows for the following attributes:</p>
+
+<dl>
+<dt><a name="VERSION"
+>VERSION</a></dt>
+
+<dd>
+<p>Version of the Perl core that is required for this implementation of the Perl Package.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PROCESSOR"
+>PROCESSOR</a></h2>
+
+<p>Child of IMPLEMENTATION, outlining the cpu required for this implementation of the Perl Package. Only one instance should be present. The PROCESSOR element allows for the following attributes:</p>
+
+<dl>
+<dt><a name="VALUE"
+>VALUE</a></dt>
+
+<dd>
+<p>CPU required for the installation of this implementation of the Perl Package. The following values are all valid according to the OSD Specification:</p>
+
+<pre class="sh_perl"> x86 alpha mips sparc 680x0</pre>
+</dd>
+</dl>
+
+<p>Note that previous versions of the PPD format used a &#39;NAME&#39; attribute. It&#39;s use has been deprecated in preference of the &#39;VALUE&#39; attribute. Also note that during validation, this element will automatically convert any existing &#39;NAME&#39; attribute to be a &#39;VALUE&#39; attribute.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="CODEBASE"
+>CODEBASE</a></h2>
+
+<p>Child of IMPLEMENTATION, indicating a location where an archive of the Perl Package can be retrieved. Multiple instances are valid, and can be used to indicate multiple possible locations where the same version of the Perl Package can be retrieved. The CODEBASE element allows for the following attributes:</p>
+
+<dl>
+<dt><a name="FILENAME"
+>FILENAME</a></dt>
+
+<dd>
+<p>???</p>
+
+<dt><a name="HREF"
+>HREF</a></dt>
+
+<dd>
+<p>Required attribute. A reference to the location of the Perl Package distribution.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="INSTALL"
+>INSTALL</a></h2>
+
+<p>Child of IMPLEMENTATION, used to provide either a reference to an installation script or a series of commands which can be used to install the Perl Package once it has been retrieved. If the EXEC attribute is not specified, the value is assumed to be one or more commands, separated by `;;&#39;. Each such command will be executed by the Perl `system()&#39; function. Only one instance should be present. The INSTALL element allows for the following attributes:</p>
+
+<dl>
+<dt><a name="HREF"
+>HREF</a></dt>
+
+<dd>
+<p>Reference to an external script which should be retrieved and run as part of the installation process. Both filenames and URLs should be considered valid.</p>
+
+<dt><a name="EXEC"
+>EXEC</a></dt>
+
+<dd>
+<p>Name of interpreter/shell used to execute the installation script. If the value of EXEC is `PPM_PERL&#39;, the copy of Perl that is executing PPM itself ($^X) is used to execute the install script.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="UNINSTALL"
+>UNINSTALL</a></h2>
+
+<p>Child of IMPLEMENTATION, used to provide either a reference to an uninstallation script or a raw Perl script which can be used to uninstall the Perl Package at a later point. Only one instance should be present. The UNINSTALL element allows for the following attributs:</p>
+
+<dl>
+<dt><a name="HREF"
+>HREF</a></dt>
+
+<dd>
+<p>Reference to an external script which should be retrieved and run as part of the removal process. Both filenames and URLs should be considered valid.</p>
+
+<dt><a name="EXEC"
+>EXEC</a></dt>
+
+<dd>
+<p>Name of interpreter/shell used to execute the uninstallation script. If the value of EXEC is `PPM_PERL&#39;, the copy of Perl that is executing PPM itself ($^X) is used to execute the install script.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DOCUMENT_TYPE_DEFINITION"
+>DOCUMENT TYPE DEFINITION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The DTD for PPD documents is available from the ActiveState website and the latest version can be found at <a href="http://www.ActiveState.com/PPM/DTD/ppd.dtd" class="podlinkurl"
+>http://www.ActiveState.com/PPM/DTD/ppd.dtd</a></p>
+
+<p>This revision of the <code>XML::PPD</code> module implements the following DTD:</p>
+
+<pre class="sh_perl"> &#60;!ELEMENT SOFTPKG   (ABSTRACT | AUTHOR | IMPLEMENTATION | LICENSE | TITLE)*&#62;
+ &#60;!ATTLIST SOFTPKG   NAME    CDATA #REQUIRED
+                     VERSION CDATA #IMPLIED&#62;
+
+ &#60;!ELEMENT TITLE     (#PCDATA)&#62;
+
+ &#60;!ELEMENT ABSTRACT  (#PCDATA)&#62;
+
+ &#60;!ELEMENT AUTHOR    (#PCDATA)&#62;
+
+ &#60;!ELEMENT LICENSE   EMPTY&#62;
+ &#60;!ATTLIST LICENSE   HREF     CDATA #REQUIRED&#62;
+
+ &#60;!ELEMENT IMPLEMENTATION    (CODEBASE | DEPENDENCY | LANGUAGE | OS |
+                              OSVERSION | PERLCORE | PROCESSOR | INSTALL |
+                              UNINSTALL) *&#62;
+
+ &#60;!ELEMENT CODEBASE  EMPTY&#62;
+ &#60;!ATTLIST CODEBASE  FILENAME CDATA #IMPLIED
+                     HREF     CDATA #REQUIRED&#62;
+
+ &#60;!ELEMENT DEPENDENCY EMPTY&#62;
+ &#60;!ATTLIST DEPENDENCY VERSION CDATA #IMPLIED
+                      NAME CDATA #REQUIRED&#62;
+
+ &#60;!ELEMENT LANGUAGE  EMPTY&#62;
+ &#60;!ATTLIST LANGUAGE  VALUE CDATA #REQUIRED&#62;
+
+ &#60;!ELEMENT OS        EMPTY&#62;
+ &#60;!ATTLIST OS        VALUE CDATA #REQUIRED&#62;
+
+ &#60;!ELEMENT OSVERSION EMPTY&#62;
+ &#60;!ATTLIST OSVERSION VALUE CDATA #REQUIRED&#62;
+
+ &#60;!ELEMENT PERLCORE  EMPTY&#62;
+ &#60;!ATTLIST PERLCORE  VERSION CDATA #REQUIRED&#62;
+
+ &#60;!ELEMENT PROCESSOR EMPTY&#62;
+ &#60;!ATTLIST PROCESSOR VALUE CDATA #REQUIRED&#62;
+
+ &#60;!ELEMENT INSTALL   (#PCDATA)&#62;
+ &#60;!ATTLIST INSTALL   HREF  CDATA #IMPLIED
+                     EXEC  CDATA #IMPLIED&#62;
+
+ &#60;!ELEMENT UNINSTALL (#PCDATA)&#62;
+ &#60;!ATTLIST UNINSTALL HREF  CDATA #IMPLIED
+                     EXEC  CDATA #IMPLIED&#62;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SAMPLE_PPD_FILE"
+>SAMPLE PPD FILE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following is a sample PPD file describing the <code>Math-MatrixBool</code> module. Note that this may <b>not</b> be a current/proper description of this module and is for sample purposes only.</p>
+
+<pre class="sh_perl"> &#60;SOFTPKG NAME=&#34;Math-MatrixBool&#34; VERSION=&#34;4,2,0,0&#34;&#62;
+     &#60;TITLE&#62;Math-MatrixBool&#60;/TITLE&#62;
+     &#60;ABSTRACT&#62;Easy manipulation of matrices of booleans (Boolean Algebra)&#60;/ABSTRACT&#62;
+     &#60;AUTHOR&#62;Steffen Beyer (sb@sdm.de)&#60;/AUTHOR&#62;
+     &#60;LICENSE HREF=&#34;<a href="http://www.ActiveState.com/packages/Math-MatrixBool/license.html" class="podlinkurl"
+>http://www.ActiveState.com/packages/Math-MatrixBool/license.html</a>&#34; /&#62;
+     &#60;IMPLEMENTATION&#62;
+         &#60;OS VALUE=&#34;WinNT&#34; /&#62;
+         &#60;OS VALUE=&#34;Win95&#34; /&#62;
+         &#60;PROCESSOR VALUE=&#34;x86&#34; /&#62;
+         &#60;CODEBASE HREF=&#34;<a href="http://www.ActiveState.com/packages/Math-MatrixBool/Math-MatrixBool-4.2-bin-1-Win32.tar.gz" class="podlinkurl"
+>http://www.ActiveState.com/packages/Math-MatrixBool/Math-MatrixBool-4.2-bin-1-Win32.tar.gz</a>&#34; /&#62;
+         &#60;DEPENDENCY NAME=&#34;Bit-Vector&#34; /&#62;
+         &#60;INSTALL&#62;
+         &#60;/INSTALL&#62;
+         &#60;UNINSTALL&#62;
+         &#60;/UNINSTALL&#62;
+     &#60;/IMPLEMENTATION&#62;
+
+     &#60;IMPLEMENTATION&#62;
+         &#60;DEPENDENCY NAME=&#34;Bit-Vector&#34; /&#62;
+         &#60;CODEBASE HREF=&#34;&#38;CPAN;/CPAN/modules/by-module/Math/Math-MatrixBool-4.2.tar.gz&#34; /&#62;
+         &#60;INSTALL&#62;
+             system(&#34;make&#34;); ;;
+             system(&#34;make test&#34;); ;;
+             system(&#34;make install&#34;); ;;
+         &#60;/INSTALL&#62;
+     &#60;/IMPLEMENTATION&#62;
+ &#60;/SOFTPKG&#62;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="KNOWN_BUGS/ISSUES"
+>KNOWN BUGS/ISSUES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Elements which are required to be empty (e.g. LICENSE) are not enforced as such.</p>
+
+<p>Notations above about elements for which &#34;only one instance&#34; or &#34;multiple instances&#34; are valid are not enforced; this primarily a guideline for generating your own PPD files.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Graham TerMarsch &#60;grahamt@ActiveState.com&#62;</p>
+
+<p>Murray Nesbitt &#60;murrayn@ActiveState.com&#62;</p>
+
+<p>Dick Hardt &#60;dick_hardt@ActiveState.com&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="HISTORY"
+>HISTORY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>v0.1 - Initial release</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?XML%3A%3AValidatingElement" class="podlinkpod"
+>XML::ValidatingElement</a>, <a href="/perldoc?XML%3A%3AElement" class="podlinkpod"
+>XML::Element</a>, <a href="/perldoc?XML%3A%3AParser" class="podlinkpod"
+>XML::Parser</a>, OSD Specification (<a href="http://www.microsoft.com/standards/osd/" class="podlinkurl"
+>http://www.microsoft.com/standards/osd/</a>)</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78255 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 11:37:55 2012 GMT (0.0583441257476807) @cpansearch1 -->
+ </body>
+</html>

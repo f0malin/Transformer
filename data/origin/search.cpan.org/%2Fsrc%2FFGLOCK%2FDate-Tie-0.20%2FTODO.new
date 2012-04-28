@@ -1,0 +1,50 @@
+Date::Tie TODO
+
+    implement "floor", such that it doesn't require POSIX
+
+    document how to write extensions
+
+    use hash instead of if/if/if
+
+    leap seconds
+
+    memoize fractional values
+
+    include fractional days and weeks (?)
+
+    more testing for fractional values
+
+    choose comma or dot on fractional output (?)
+
+    make recurrences and durations (?)
+
+    make implied_century (2-digit year) and implied_decade (1-digit year),
+    and century (2-digit) and decade (3-digit)
+
+    dates outside 1970-2038: autoload Date::ICal or DateTime (?)
+    optionally use DateTime timezone names
+    implement 'expanded representation'
+
+    access environment for timezone initialization
+
+    accept 'Z' as tz=0000
+
+    make a 'print' or 'string' method; make "" work.
+    make a {template} key for print format (?)
+    example: 
+        '{implied_century}:{month}:{day}'
+        '{frac_second%02,3f}'
+        '{tz%Z}'
+
+    accept 'ordinal_day' as synonym for yearday (?)
+
+    check if it actually needs $Infinity, %Mult, %Max, %Min
+
+    make hash accept other values (behave like a normal hash)
+
+    benchmark and optimize for speed
+
+    make a 'copy' method
+
+    make '+' accept comma as fractional separator
+

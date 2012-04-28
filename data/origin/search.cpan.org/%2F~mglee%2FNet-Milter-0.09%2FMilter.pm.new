@@ -1,0 +1,610 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Net::Milter - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Net-Milter",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Net-Milter-0.09",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Net::Milter",3]);
+    _gaq.push(["_setCustomVar",1,"Author","MGLEE",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Net::Milter">permalink</a></div>
+  <a href="/~mglee/">Martin Lee</a> &gt;
+  <a href="/~mglee/Net-Milter-0.09/">Net-Milter-0.09</a> &gt;
+  Net::Milter
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/ff50d72baf461328ded71be9c6732da2?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/M/MG/MGLEE/Net-Milter-0.09.tar.gz">Net-Milter-0.09.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Net%3A%3AMilter;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~MGLEE/Net-Milter-0.09/Milter.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 2</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Net-Milter">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.09 &nbsp;
+<span class="noprint">
+  <a href="/src/MGLEE/Net-Milter-0.09/Milter.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Attributes'>Attributes</a>
+    <li class='indexItem indexItem2'><a href='#Methods'>Methods</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#RETURN_CODES'>RETURN CODES</a>
+  <li class='indexItem indexItem1'><a href='#TIPS'>TIPS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#NAMING'>NAMING</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Net::Milter - Masquerade as the MTA to communicate with email filters through a milter interface.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Net::Milter;
+    my $milter = new Net::Milter;
+    $milter-&#62;open(&#39;127.0.0.1&#39;,5513,&#39;tcp&#39;);
+
+    my ($milter_version,$returned_actions_ref,$returned_protocol_ref) = 
+    $milter-&#62;protocol_negotiation();
+
+    my (@results) = $milter-&#62;send_header(&#39;From&#39;,&#39;martin@localhost&#39;);
+    foreach (@results) {
+      if ($$_{action} eq &#39;reject&#39;)  {exit;}
+    }</pre>
+
+<p>Also see example in scripts directory.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Perl module to provide a pure Perl implementation of the MTA part the milter interface. The goal of this module is to allow other email systems to easily integrate with the various email filters that accept content via milter.</p>
+
+<p>This implementation of milter is developed from the description provided by Todd Vierling, cvs.sourceforge.net/viewcvs.py/pmilter/pmilter/doc/milter-protocol.txt?rev=1.2 and from examining the tcp output from Sendmail.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Attributes"
+>Attributes</a></h2>
+
+<dl>
+<dt><a name="action_types"
+>action_types</a></dt>
+
+<dd>
+<p>Reference to an array of the set of actions defined within Sendmail&#39;s milter code.</p>
+
+<dt><a name="content_types"
+>content_types</a></dt>
+
+<dd>
+<p>Reference to an array of the set of content types which may be witheld.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Methods"
+>Methods</a></h2>
+
+<dl>
+<dt><a name="new"
+>new</a></dt>
+
+<dd>
+<p>Constructor, creates a new blank Net::Milter object.</p>
+
+<dt><a name="open"
+>open</a></dt>
+
+<dd>
+<p>Open a socket to a milter filter. Takes three arguments, the last argument, can be &#39;tcp&#39; or &#39;unix&#39; depending if the connection is to be made to a TCP socket or through a UNIX file system socket. For TCP sockets, the first two argument are the IP address and the port number; for UNIX sockets the first argument is the file path, the second the timeout value. Accepted synonyms for tcp and unix are inet and local respecively.</p>
+
+<p>e.g.</p>
+
+<pre class="sh_perl">    $milter-&#62;open(&#39;127.0.0.1&#39;,5513,&#39;tcp&#39;);</pre>
+
+<p>to open a connection to port 5513 on address 127.0.0.1, or</p>
+
+<pre class="sh_perl">    $milter-&#62;open(&#39;/tmp/file.sck&#39;,10,&#39;unix&#39;); </pre>
+
+<p>to open a connection to /tmp/file.sck with a timeout of 10 seconds.</p>
+
+<p>The method creates the attribute, &#39;socket&#39; containing an IO::Handle object.</p>
+
+<dt><a name="protocol_negotiation"
+>protocol_negotiation</a></dt>
+
+<dd>
+<p>Talk to the milter filter, describing the list of actions it may perform, and any email content that wont be sent. Accepts as argument the hash of allowable actions and withheld content. The hash keys are : Allowable actions by the filter :</p>
+
+<dl>
+<dt><a name='SMFIF_ADDHDRS'></a><a name="SMFIF_ADDHDRS_-_Add_message_headers."
+>SMFIF_ADDHDRS - Add message headers.</a></dt>
+
+<dd>
+<dt><a name='SMFIF_CHGBODY'></a><a name="SMFIF_CHGBODY_-_Alter_the_message_body."
+>SMFIF_CHGBODY - Alter the message body.</a></dt>
+
+<dd>
+<dt><a name='SMFIF_ADDRCPT'></a><a name="SMFIF_ADDRCPT_-_Add_recipients_to_the_message."
+>SMFIF_ADDRCPT - Add recipients to the message.</a></dt>
+
+<dd>
+<dt><a name='SMFIF_DELRCPT'></a><a name="SMFIF_DELRCPT_-_Delete_recipients_from_the_message."
+>SMFIF_DELRCPT - Delete recipients from the message.</a></dt>
+
+<dd>
+<dt><a name='SMFIF_CHGHDRS'></a><a name="SMFIF_CHGHDRS_-_Change_or_delete_message_headers."
+>SMFIF_CHGHDRS - Change or delete message headers.</a></dt>
+</dl>
+
+<p>The default is to allow all actions, setting the value to be &#39;0&#39; of any of these keys in the argument hash informs the filter not perform the action.</p>
+
+<p>e.g.</p>
+
+<pre class="sh_perl">    $milter-&#62;protocol_negotiation(
+        SMFIF_ADDHDRS =&#62; 0,
+        SMFIF_CHGBODY =&#62; 1
+        );</pre>
+
+<p>informs the filter it is able to change the contents of the message body, but it may not add message headers.</p>
+
+<p>Withheld content :</p>
+
+<dl>
+<dt><a name='SMFIP_NOCONNECT'></a><a name="SMFIP_NOCONNECT_-_Do_not_expect_the_connection_details."
+>SMFIP_NOCONNECT - Do not expect the connection details.</a></dt>
+
+<dd>
+<dt><a name='SMFIP_NOHELO'></a><a name="SMFIP_NOHELO_-_Do_not_expect_the_HELO_string."
+>SMFIP_NOHELO - Do not expect the HELO string.</a></dt>
+
+<dd>
+<dt><a name='SMFIP_NOMAIL'></a><a name="SMFIP_NOMAIL_-_Do_not_expect_the_MAIL_FROM_string."
+>SMFIP_NOMAIL - Do not expect the MAIL FROM string.</a></dt>
+
+<dd>
+<dt><a name='SMFIP_NORCPT'></a><a name="SMFIP_NORCPT_-_Do_not_expect_the_RCPT_TO_string."
+>SMFIP_NORCPT - Do not expect the RCPT TO string.</a></dt>
+
+<dd>
+<dt><a name='SMFIP_NOBODY'></a><a name="SMFIP_NOBODY_-_Do_not_expect_the_email_body."
+>SMFIP_NOBODY - Do not expect the email body.</a></dt>
+
+<dd>
+<dt><a name='SMFIP_NOHDRS'></a><a name="SMFIP_NOHDRS_-_Do_not_expect_any_email_headers."
+>SMFIP_NOHDRS - Do not expect any email headers.</a></dt>
+
+<dd>
+<dt><a name='SMFIP_NOEOH'></a><a name="SMFIP_NOEOH_-_Do_not_expect_an_end_of_headers_signal."
+>SMFIP_NOEOH - Do not expect an end of headers signal.</a></dt>
+</dl>
+
+<p>The default is to inform the filter to expect everything, setting the value of the key to &#39;1&#39; informs the filter to not expect the content.</p>
+
+<p>e.g.</p>
+
+<pre class="sh_perl">    $milter-&#62;protocol_negotiation(
+        SMFIF_ADDHDRS =&#62; 0,
+        SMFIF_CHGBODY =&#62; 1,
+        SMFIP_NOEHO =&#62; 1,
+        SMFIP_NOCONNECT =&#62; 1
+    );</pre>
+
+<p>informs the filter it is able to change the contents of the message body, but it may not add message headers, it will not receive an end of headers signal, nor will it receive the conection details.</p>
+
+<p>The method returns three parameters, the protocol version, an array reference containing all the names of the actions the filter understands it is able to perform, and an array reference containing the names of the content it understands it wont be sent.</p>
+
+<dt><a name="send_abort"
+>send_abort</a></dt>
+
+<dd>
+<p>Send an abort signal to the mail filter. Accepts nothing, returns nothing.</p>
+
+<dt><a name="send_body"
+>send_body</a></dt>
+
+<dd>
+<p>Send the body of the email to the mail filter. NOTE the filter will only accept upto 65535 bytes of body at a time. Feed the body to the filter piece by piece by repeat calls to send_body with each body chunk until all the body is sent. Accepts the message body, returns reference to an array of return codes (see RETURN CODE section).</p>
+
+<dt><a name="send_end_body"
+>send_end_body</a></dt>
+
+<dd>
+<p>Send an end of body signal, i.e. no more body information will follow. Returns a reference to an array of return codes (see RETURN CODE section).</p>
+
+<dt><a name="send_connect"
+>send_connect</a></dt>
+
+<dd>
+<p>Send the SMTP connect information to the mail filter. Accepts the hostname, the family (&#39;unix&#39; for file sockets, &#39;tcp4&#39; for tcp connections (v4), &#39;tcp6&#39; for version 6 tcp connections), the sending connection port, the IP address of the sender. Returns a reference to an array of return codes (see RETURN CODE section).</p>
+
+<p>e.g.</p>
+
+<pre class="sh_perl">    $milter-&#62;send_connect(
+                          &#39;host.domain&#39;,
+                          &#39;tcp4&#39;,
+                          &#39;12345&#39;,
+                          &#39;127.0.0.1&#39;
+                          );</pre>
+
+<p>The machine host.domain with IP address 127.0.0.1 connected to us from port 12345 using TCP version 4.</p>
+
+<dt><a name="send_helo"
+>send_helo</a></dt>
+
+<dd>
+<p>Send the HELO (or EHLO) string provided by the connecting computer. Accepts the HELO string as an argument. Returns a reference to an array of return codes (see RETURN CODE section).</p>
+
+<dt><a name="send_header"
+>send_header</a></dt>
+
+<dd>
+<p>Send a single header name and contents to the filter, accepts two arguments, the header name and the header contents. Returns a reference to an array of return codes (see RETURN CODE section).</p>
+
+<dt><a name="send_mail_from"
+>send_mail_from</a></dt>
+
+<dd>
+<p>Send the MAIL FROM string to the filter, accepts the MAIL FROM data as an argument. Returns a reference to an array of return codes (see RETURN CODE section).</p>
+
+<dt><a name="send_end_headers"
+>send_end_headers</a></dt>
+
+<dd>
+<p>Send an end of headers signal, i.e. no more header information will follow. Returns a reference to an array of return codes (see RETURN CODE section).</p>
+
+<dt><a name="send_rcpt_to"
+>send_rcpt_to</a></dt>
+
+<dd>
+<p>Send the RCPT TO string to the filter, accepts an array of RCPT TO recipients as argument. Returns a reference to an array of return codes (see RETURN CODE section).</p>
+
+<dt><a name="send_quit"
+>send_quit</a></dt>
+
+<dd>
+<p>Quit the milter communication, accepts nothing, returns nothing.</p>
+
+<dt><a name="send_macros"
+>send_macros</a></dt>
+
+<dd>
+<p>Send Sendmail macro information to the filter. The method accepts a hash of the Sendmail macro names, returns a reference to an array of return codes (see RETURN CODE section).</p>
+
+<p>The potential macro names (hash keys) are :</p>
+
+<dl>
+<dt><a name='_'></a><a name="__-_email_address_of_the_Sendmail_user."
+>_ - email address of the Sendmail user.</a></dt>
+
+<dd>
+<dt><a name='j'></a><a name="j_-_canonical_hostname_of_the_recipeint_machine."
+>j - canonical hostname of the recipeint machine.</a></dt>
+
+<dd>
+<dt><a name='daemon_name'></a><a name="{daemon_name}_-_name_of_the_daemon_from_DaemonPortOptions."
+>{daemon_name} - name of the daemon from DaemonPortOptions.</a></dt>
+
+<dd>
+<dt><a name='if_name'></a><a name="{if_name}_-_hostname_of_the_incoming_connection."
+>{if_name} - hostname of the incoming connection.</a></dt>
+
+<dd>
+<dt><a name='if_addr'></a><a name="{if_addr}_-_IP_address_of_the_incoming_connection."
+>{if_addr} - IP address of the incoming connection.</a></dt>
+
+<dd>
+<dt><a name='tls_version'></a><a name="{tls_version}_-_TLS/SSL_version_used_for_connection."
+>{tls_version} - TLS/SSL version used for connection.</a></dt>
+
+<dd>
+<dt><a name='cipher'></a><a name="{cipher}_-_cipher_suite_used_for_the_connection."
+>{cipher} - cipher suite used for the connection.</a></dt>
+
+<dd>
+<dt><a name='cipher_bits'></a><a name="{cipher_bits}_-_keylength_of_the_encryption_algorith."
+>{cipher_bits} - keylength of the encryption algorith.</a></dt>
+
+<dd>
+<dt><a name='cert_subject'></a><a name="{cert_subject}_-_distinguished_name_of_the_presented_certificate."
+>{cert_subject} - distinguished name of the presented certificate.</a></dt>
+
+<dd>
+<dt><a name='cert_issuer'></a><a name="{cert_issuer}_-_name_of_the_certificate_authority."
+>{cert_issuer} - name of the certificate authority.</a></dt>
+
+<dd>
+<dt><a name='i'></a><a name="i_-_queue_ID."
+>i - queue ID.</a></dt>
+
+<dd>
+<dt><a name='auth_type'></a><a name="{auth_type}_-_SMTP_authentication_mechanism."
+>{auth_type} - SMTP authentication mechanism.</a></dt>
+
+<dd>
+<dt><a name='auth_authen'></a><a name="{auth_authen}_-_client&#39;s_authenticated_username."
+>{auth_authen} - client&#39;s authenticated username.</a></dt>
+
+<dd>
+<dt><a name='auth_ssf'></a><a name="{auth_ssf}_-_keylength_of_encryption_algorithm."
+>{auth_ssf} - keylength of encryption algorithm.</a></dt>
+
+<dd>
+<dt><a name='auth_author'></a><a name="{auth_author}_-_authorization_identity."
+>{auth_author} - authorization identity.</a></dt>
+
+<dd>
+<dt><a name='mail_mailer'></a><a name="{mail_mailer}_-_mailer_from_SMTP_MAIL_command."
+>{mail_mailer} - mailer from SMTP MAIL command.</a></dt>
+
+<dd>
+<dt><a name='mail_host'></a><a name="{mail_host}_-_host_from_SMTP_MAIL_command."
+>{mail_host} - host from SMTP MAIL command.</a></dt>
+
+<dd>
+<dt><a name='mail_addr'></a><a name="{mail_addr}_-_address_from_SMTP_MAIL_command."
+>{mail_addr} - address from SMTP MAIL command.</a></dt>
+
+<dd>
+<dt><a name='rcpt_mailer'></a><a name="{rcpt_mailer}_-_mailer_from_SMTP_RCPT_command."
+>{rcpt_mailer} - mailer from SMTP RCPT command.</a></dt>
+
+<dd>
+<dt><a name='rcpt_host'></a><a name="{rcpt_host}_-_host_from_SMTP_RCPT_command."
+>{rcpt_host} - host from SMTP RCPT command.</a></dt>
+
+<dd>
+<dt><a name='rcpt_addr'></a><a name="{rcpt_addr}_-_address_from_SMTP_RCPT_command."
+>{rcpt_addr} - address from SMTP RCPT command.</a></dt>
+</dl>
+
+<p>Yes I know most of this is redundant, since other methods repeat this information, but this is what the spec says.</p>
+
+<p>e.g. $milter-&#62;send_macros( mail_addr =&#62; &#39;127.0.0.1&#39;, mail_host =&#62; &#39;localhost&#39;, rcpt_addr =&#62; &#39;127.0.0.1&#39;, rcpt_addr =&#62; &#39;postmaster@localhost.localdomain&#39; );</p>
+
+<p>For further explanation of macros see :</p>
+
+<p><a href="http://people.freenet.de/slgig/op_en/macros.html" class="podlinkurl"
+>http://people.freenet.de/slgig/op_en/macros.html</a> and <a href="http://www.sendmail.com/idemo/prod_guide/switch/switchdemo/helplets/en/Macros.html" class="podlinkurl"
+>http://www.sendmail.com/idemo/prod_guide/switch/switchdemo/helplets/en/Macros.html</a></p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="RETURN_CODES"
+>RETURN CODES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Many methods return an array of hash references. Each hash describes one response from the filter, a filter may return more than one response to any sent data, such as &#39;add a header&#39;,&#39;modify body&#39;, &#39;continue&#39;. The hash keys are :</p>
+
+<dl>
+<dt><a name='command'></a><a name="command_-_the_response_from_the_filter"
+>command - the response from the filter</a></dt>
+
+<dd>
+<dt><a name='explanation'></a><a name="explanation_-_verbose_explanation_of_the_required_action"
+>explanation - verbose explanation of the required action</a></dt>
+
+<dd>
+<dt><a name='action'></a><a name="action_-_action_to_perform,_may_be_add,_delete,_accept,_replace,_continue_or_reject"
+>action - action to perform, may be <i>add</i>, <i>delete</i>, <i>accept</i>, <i>replace</i>, <i>continue</i> or <i>reject</i></a></dt>
+
+<dd>
+<dt><a name='header'></a><a name="header_-_the_name_of_header_the_action_refers_to_(may_be_equal_to_&#39;body&#39;_to_refer_to_the_message_body)"
+>header - the name of header the action refers to (may be equal to &#39;body&#39; to refer to the message body)</a></dt>
+
+<dd>
+<dt><a name='value'></a><a name="value_-_the_value_relating_to_the_action"
+>value - the value relating to the action</a></dt>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TIPS"
+>TIPS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Call the various methods in the order that they would be called if accepting a SMTP stream, ie send_connect(), send_helo(), send_mail_from(), send_rcpt_to(), send_header(), send_end_headers(), send_body(). Some milter filters expect this and refuse to return values when expected. Equally continuing to send data when a filter has rejected or accepted a message may confuse it, and refuse to return values for subsequent data, so always check the codes returned.</p>
+
+<p>In some circumstantes &#39;read&#39; has not worked, now replaced by &#39;sysread&#39; which is reported to fix the problem. If this doesn&#39;t work, change &#39;sysread&#39; to &#39;read&#39; and email me please.</p>
+
+<p>Some filters appear to expect a bitwise negation of the protocol field. This is now disabled as default. If you wish to enable this, please set PROTOCOL_NEGATION =&#62; 1</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module is the Yang to Ying&#39;s <a href="/perldoc?Sendmail%3A%3AMilter" class="podlinkpod"
+>Sendmail::Milter</a>, which can act as the other end of the communication.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAMING"
+>NAMING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>I choose not to put this module in the Sendmail namespace, as it has nothing to do with Sendmail itself, neither is it anything to do with SMTP, its a net protocol, hence the Net namespace.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Martin Lee, MessageLabs Ltd. (mlee@messagelabs.com)</p>
+
+<p>Copyright (c) 2003 Star Technology Group Ltd / 2004 MessageLabs Ltd.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78063 Uploads, 24686 Distributions
+105893 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sun Apr 22 07:38:40 2012 GMT (0.165585994720459) @cpansearch1 -->
+ </body>
+</html>

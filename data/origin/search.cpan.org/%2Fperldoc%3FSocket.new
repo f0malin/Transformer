@@ -1,0 +1,857 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Socket - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Socket",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Socket-2.001",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Socket",3]);
+    _gaq.push(["_setCustomVar",1,"Author","PEVANS",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Socket">permalink</a></div>
+  <a href="/~pevans/">Paul Evans</a> &gt;
+  <a href="/~pevans/Socket-2.001/">Socket-2.001</a> &gt;
+  Socket
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/d3332a7af5c5157eb8549ffaa1c8f5fb?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/P/PE/PEVANS/Socket-2.001.tar.gz">Socket-2.001.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Socket;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~PEVANS/Socket-2.001/Socket.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 2</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Socket">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.001 &nbsp;
+<span class="noprint">
+  <a href="/src/PEVANS/Socket-2.001/Socket.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#CONSTANTS'>CONSTANTS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#PF_INET,_PF_INET6,_PF_UNIX,_...'>PF_INET, PF_INET6, PF_UNIX, ...</a>
+    <li class='indexItem indexItem2'><a href='#AF_INET,_AF_INET6,_AF_UNIX,_...'>AF_INET, AF_INET6, AF_UNIX, ...</a>
+    <li class='indexItem indexItem2'><a href='#SOCK_STREAM,_SOCK_DGRAM,_SOCK_RAW,_...'>SOCK_STREAM, SOCK_DGRAM, SOCK_RAW, ...</a>
+    <li class='indexItem indexItem2'><a href='#SOL_SOCKET'>SOL_SOCKET</a>
+    <li class='indexItem indexItem2'><a href='#SO_ACCEPTCONN,_SO_BROADCAST,_SO_ERROR,_...'>SO_ACCEPTCONN, SO_BROADCAST, SO_ERROR, ...</a>
+    <li class='indexItem indexItem2'><a href='#IP_OPTIONS,_IP_TOS,_IP_TTL,_...'>IP_OPTIONS, IP_TOS, IP_TTL, ...</a>
+    <li class='indexItem indexItem2'><a href='#MSG_BCAST,_MSG_OOB,_MSG_TRUNC,_...'>MSG_BCAST, MSG_OOB, MSG_TRUNC, ...</a>
+    <li class='indexItem indexItem2'><a href='#SHUT_RD,_SHUT_RDWR,_SHUT_WR'>SHUT_RD, SHUT_RDWR, SHUT_WR</a>
+    <li class='indexItem indexItem2'><a href='#INADDR_ANY,_INADDR_BROADCAST,_INADDR_LOOPBACK,_INADDR_NONE'>INADDR_ANY, INADDR_BROADCAST, INADDR_LOOPBACK, INADDR_NONE</a>
+    <li class='indexItem indexItem2'><a href='#IPPROTO_IP,_IPPROTO_IPV6,_IPPROTO_TCP,_...'>IPPROTO_IP, IPPROTO_IPV6, IPPROTO_TCP, ...</a>
+    <li class='indexItem indexItem2'><a href='#TCP_CORK,_TCP_KEEPALIVE,_TCP_NODELAY,_...'>TCP_CORK, TCP_KEEPALIVE, TCP_NODELAY, ...</a>
+    <li class='indexItem indexItem2'><a href='#IN6ADDR_ANY,_IN6ADDR_LOOPBACK'>IN6ADDR_ANY, IN6ADDR_LOOPBACK</a>
+    <li class='indexItem indexItem2'><a href='#IPV6_ADD_MEMBERSHIP,_IPV6_MTU,_IPV6_V6ONLY,_...'>IPV6_ADD_MEMBERSHIP, IPV6_MTU, IPV6_V6ONLY, ...</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#STRUCTURE_MANIPULATORS'>STRUCTURE MANIPULATORS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#$family_=_sockaddr_family_$sockaddr'>$family = sockaddr_family $sockaddr</a>
+    <li class='indexItem indexItem2'><a href='#$sockaddr_=_pack_sockaddr_in_$port,_$ip_address'>$sockaddr = pack_sockaddr_in $port, $ip_address</a>
+    <li class='indexItem indexItem2'><a href='#($port,_$ip_address)_=_unpack_sockaddr_in_$sockaddr'>($port, $ip_address) = unpack_sockaddr_in $sockaddr</a>
+    <li class='indexItem indexItem2'><a href='#$sockaddr_=_sockaddr_in_$port,_$ip_address'>$sockaddr = sockaddr_in $port, $ip_address</a>
+    <li class='indexItem indexItem2'><a href='#($port,_$ip_address)_=_sockaddr_in_$sockaddr'>($port, $ip_address) = sockaddr_in $sockaddr</a>
+    <li class='indexItem indexItem2'><a href='#$sockaddr_=_pack_sockaddr_in6_$port,_$ip6_address,_[$scope_id,_[$flowinfo]]'>$sockaddr = pack_sockaddr_in6 $port, $ip6_address, [$scope_id, [$flowinfo]]</a>
+    <li class='indexItem indexItem2'><a href='#($port,_$ip6_address,_$scope_id,_$flowinfo)_=_unpack_sockaddr_in6_$sockaddr'>($port, $ip6_address, $scope_id, $flowinfo) = unpack_sockaddr_in6 $sockaddr</a>
+    <li class='indexItem indexItem2'><a href='#$sockaddr_=_sockaddr_in6_$port,_$ip6_address,_[$scope_id,_[$flowinfo]]'>$sockaddr = sockaddr_in6 $port, $ip6_address, [$scope_id, [$flowinfo]]</a>
+    <li class='indexItem indexItem2'><a href='#($port,_$ip6_address,_$scope_id,_$flowinfo)_=_sockaddr_in6_$sockaddr'>($port, $ip6_address, $scope_id, $flowinfo) = sockaddr_in6 $sockaddr</a>
+    <li class='indexItem indexItem2'><a href='#$sockaddr_=_pack_sockaddr_un_$path'>$sockaddr = pack_sockaddr_un $path</a>
+    <li class='indexItem indexItem2'><a href='#($path)_=_unpack_sockaddr_un_$sockaddr'>($path) = unpack_sockaddr_un $sockaddr</a>
+    <li class='indexItem indexItem2'><a href='#$sockaddr_=_sockaddr_un_$path'>$sockaddr = sockaddr_un $path</a>
+    <li class='indexItem indexItem2'><a href='#($path)_=_sockaddr_un_$sockaddr'>($path) = sockaddr_un $sockaddr</a>
+    <li class='indexItem indexItem2'><a href='#$ipv6_mreq_=_pack_ipv6_mreq_$ip6_address,_$ifindex'>$ipv6_mreq = pack_ipv6_mreq $ip6_address, $ifindex</a>
+    <li class='indexItem indexItem2'><a href='#($ip6_address,_$ifindex)_=_unpack_ipv6_mreq_$ipv6_mreq'>($ip6_address, $ifindex) = unpack_ipv6_mreq $ipv6_mreq</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#$ip_address_=_inet_aton_$string'>$ip_address = inet_aton $string</a>
+    <li class='indexItem indexItem2'><a href='#$string_=_inet_ntoa_$ip_address'>$string = inet_ntoa $ip_address</a>
+    <li class='indexItem indexItem2'><a href='#$address_=_inet_pton_$family,_$string'>$address = inet_pton $family, $string</a>
+    <li class='indexItem indexItem2'><a href='#$string_=_inet_ntop_$family,_$address'>$string = inet_ntop $family, $address</a>
+    <li class='indexItem indexItem2'><a href='#($err,_@result)_=_getaddrinfo_$host,_$service,_[$hints]'>($err, @result) = getaddrinfo $host, $service, [$hints]</a>
+    <li class='indexItem indexItem2'><a href='#($err,_$hostname,_$servicename)_=_getnameinfo_$sockaddr,_[$flags,_[$xflags]]'>($err, $hostname, $servicename) = getnameinfo $sockaddr, [$flags, [$xflags]]</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#getaddrinfo()_/_getnameinfo()_ERROR_CONSTANTS'>getaddrinfo() / getnameinfo() ERROR CONSTANTS</a>
+  <li class='indexItem indexItem1'><a href='#EXAMPLES'>EXAMPLES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Lookup_for_connect()'>Lookup for connect()</a>
+    <li class='indexItem indexItem2'><a href='#Making_a_human-readable_string_out_of_an_address'>Making a human-readable string out of an address</a>
+    <li class='indexItem indexItem2'><a href='#Resolving_hostnames_into_IP_addresses'>Resolving hostnames into IP addresses</a>
+    <li class='indexItem indexItem2'><a href='#Accessing_socket_options'>Accessing socket options</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Socket</code> - networking constants and support functions</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Socket</code> a low-level module used by,
+among other things,
+the <a href="/perldoc?IO%3A%3ASocket" class="podlinkpod"
+>IO::Socket</a> family of modules.
+The following examples demonstrate some low-level uses but a practical program would likely use the higher-level API provided by <code>IO::Socket</code> or similar instead.</p>
+
+<pre class="sh_perl"> use Socket qw(PF_INET SOCK_STREAM pack_sockaddr_in inet_aton);
+
+ socket(my $socket, PF_INET, SOCK_STREAM, 0)
+     or die &#34;socket: $!&#34;;
+
+ my $port = getservbyname &#34;echo&#34;, &#34;tcp&#34;;
+ connect($socket, pack_sockaddr_in($port, inet_aton(&#34;localhost&#34;)))
+     or die &#34;connect: $!&#34;;
+
+ print $socket &#34;Hello, world!\n&#34;;
+ print &#60;$socket&#62;;</pre>
+
+<p>See also the <a href="#EXAMPLES" class="podlinkpod"
+>&#34;EXAMPLES&#34;</a> section.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module provides a variety of constants, structure manipulators and other functions related to socket-based networking. The values and functions provided are useful when used in conjunction with Perl core functions such as socket(), setsockopt() and bind(). It also provides several other support functions, mostly for dealing with conversions of network addresses between human-readable and native binary forms, and for hostname resolver operations.</p>
+
+<p>Some constants and functions are exported by default by this module; but for backward-compatibility any recently-added symbols are not exported by default and must be requested explicitly. When an import list is provided to the <code>use Socket</code> line, the default exports are not automatically imported. It is therefore best practice to always to explicitly list all the symbols required.</p>
+
+<p>Also, some common socket &#34;newline&#34; constants are provided: the constants <code>CR</code>, <code>LF</code>, and <code>CRLF</code>, as well as <code>$CR</code>, <code>$LF</code>, and <code>$CRLF</code>, which map to <code>\015</code>, <code>\012</code>, and <code>\015\012</code>. If you do not want to use the literal characters in your programs, then use the constants provided here. They are not exported by default, but can be imported individually, and with the <code>:crlf</code> export tag:</p>
+
+<pre class="sh_perl"> use Socket qw(:DEFAULT :crlf);
+
+ $sock-&#62;print(&#34;GET / HTTP/1.0$CRLF&#34;);</pre>
+
+<p>The entire getaddrinfo() subsystem can be exported using the tag <code>:addrinfo</code>; this exports the getaddrinfo() and getnameinfo() functions, and all the <code>AI_*</code>, <code>NI_*</code>, <code>NIx_*</code> and <code>EAI_*</code> constants.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONSTANTS"
+>CONSTANTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>In each of the following groups, there may be many more constants provided than just the ones given as examples in the section heading. If the heading ends <code>...</code> then this means there are likely more; the exact constants provided will depend on the OS and headers found at compile-time.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PF_INET,_PF_INET6,_PF_UNIX,_..."
+>PF_INET, PF_INET6, PF_UNIX, ...</a></h2>
+
+<p>Protocol family constants to use as the first argument to socket() or the value of the <code>SO_DOMAIN</code> or <code>SO_FAMILY</code> socket option.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="AF_INET,_AF_INET6,_AF_UNIX,_..."
+>AF_INET, AF_INET6, AF_UNIX, ...</a></h2>
+
+<p>Address family constants used by the socket address structures, to pass to such functions as inet_pton() or getaddrinfo(), or are returned by such functions as sockaddr_family().</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SOCK_STREAM,_SOCK_DGRAM,_SOCK_RAW,_..."
+>SOCK_STREAM, SOCK_DGRAM, SOCK_RAW, ...</a></h2>
+
+<p>Socket type constants to use as the second argument to socket(), or the value of the <code>SO_TYPE</code> socket option.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SOL_SOCKET"
+>SOL_SOCKET</a></h2>
+
+<p>Socket option level constant for setsockopt() and getsockopt().</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SO_ACCEPTCONN,_SO_BROADCAST,_SO_ERROR,_..."
+>SO_ACCEPTCONN, SO_BROADCAST, SO_ERROR, ...</a></h2>
+
+<p>Socket option name constants for setsockopt() and getsockopt() at the <code>SOL_SOCKET</code> level.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="IP_OPTIONS,_IP_TOS,_IP_TTL,_..."
+>IP_OPTIONS, IP_TOS, IP_TTL, ...</a></h2>
+
+<p>Socket option name constants for IPv4 socket options at the <code>IPPROTO_IP</code> level.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="MSG_BCAST,_MSG_OOB,_MSG_TRUNC,_..."
+>MSG_BCAST, MSG_OOB, MSG_TRUNC, ...</a></h2>
+
+<p>Message flag constants for send() and recv().</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SHUT_RD,_SHUT_RDWR,_SHUT_WR"
+>SHUT_RD, SHUT_RDWR, SHUT_WR</a></h2>
+
+<p>Direction constants for shutdown().</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="INADDR_ANY,_INADDR_BROADCAST,_INADDR_LOOPBACK,_INADDR_NONE"
+>INADDR_ANY, INADDR_BROADCAST, INADDR_LOOPBACK, INADDR_NONE</a></h2>
+
+<p>Constants giving the special <code>AF_INET</code> addresses for wildcard, broadcast, local loopback, and invalid addresses.</p>
+
+<p>Normally equivalent to inet_aton(&#39;0.0.0.0&#39;), inet_aton(&#39;255.255.255.255&#39;), inet_aton(&#39;localhost&#39;) and inet_aton(&#39;255.255.255.255&#39;) respectively.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="IPPROTO_IP,_IPPROTO_IPV6,_IPPROTO_TCP,_..."
+>IPPROTO_IP, IPPROTO_IPV6, IPPROTO_TCP, ...</a></h2>
+
+<p>IP protocol constants to use as the third argument to socket(), the level argument to getsockopt() or setsockopt(), or the value of the <code>SO_PROTOCOL</code> socket option.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="TCP_CORK,_TCP_KEEPALIVE,_TCP_NODELAY,_..."
+>TCP_CORK, TCP_KEEPALIVE, TCP_NODELAY, ...</a></h2>
+
+<p>Socket option name constants for TCP socket options at the <code>IPPROTO_TCP</code> level.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="IN6ADDR_ANY,_IN6ADDR_LOOPBACK"
+>IN6ADDR_ANY, IN6ADDR_LOOPBACK</a></h2>
+
+<p>Constants giving the special <code>AF_INET6</code> addresses for wildcard and local loopback.</p>
+
+<p>Normally equivalent to inet_pton(AF_INET6, &#34;::&#34;) and inet_pton(AF_INET6, &#34;::1&#34;) respectively.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="IPV6_ADD_MEMBERSHIP,_IPV6_MTU,_IPV6_V6ONLY,_..."
+>IPV6_ADD_MEMBERSHIP, IPV6_MTU, IPV6_V6ONLY, ...</a></h2>
+
+<p>Socket option name constants for IPv6 socket options at the <code>IPPROTO_IPV6</code> level.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="STRUCTURE_MANIPULATORS"
+>STRUCTURE MANIPULATORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following functions convert between lists of Perl values and packed binary strings representing structures.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$family_=_sockaddr_family_$sockaddr"
+>$family = sockaddr_family $sockaddr</a></h2>
+
+<p>Takes a packed socket address (as returned by pack_sockaddr_in(), pack_sockaddr_un() or the perl builtin functions getsockname() and getpeername()). Returns the address family tag. This will be one of the <code>AF_*</code> constants, such as <code>AF_INET</code> for a <code>sockaddr_in</code> addresses or <code>AF_UNIX</code> for a <code>sockaddr_un</code>. It can be used to figure out what unpack to use for a sockaddr of unknown type.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$sockaddr_=_pack_sockaddr_in_$port,_$ip_address"
+>$sockaddr = pack_sockaddr_in $port, $ip_address</a></h2>
+
+<p>Takes two arguments, a port number and an opaque string (as returned by inet_aton(), or a v-string). Returns the <code>sockaddr_in</code> structure with those arguments packed in and <code>AF_INET</code> filled in. For Internet domain sockets, this structure is normally what you need for the arguments in bind(), connect(), and send().</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="($port,_$ip_address)_=_unpack_sockaddr_in_$sockaddr"
+>($port, $ip_address) = unpack_sockaddr_in $sockaddr</a></h2>
+
+<p>Takes a <code>sockaddr_in</code> structure (as returned by pack_sockaddr_in(), getpeername() or recv()). Returns a list of two elements: the port and an opaque string representing the IP address (you can use inet_ntoa() to convert the address to the four-dotted numeric format). Will croak if the structure does not represent an <code>AF_INET</code> address.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$sockaddr_=_sockaddr_in_$port,_$ip_address"
+>$sockaddr = sockaddr_in $port, $ip_address</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="($port,_$ip_address)_=_sockaddr_in_$sockaddr"
+>($port, $ip_address) = sockaddr_in $sockaddr</a></h2>
+
+<p>A wrapper of pack_sockaddr_in() or unpack_sockaddr_in(). In list context, unpacks its argument and returns a list consisting of the port and IP address. In scalar context, packs its port and IP address arguments as a <code>sockaddr_in</code> and returns it.</p>
+
+<p>Provided largely for legacy compatibility; it is better to use pack_sockaddr_in() or unpack_sockaddr_in() explicitly.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$sockaddr_=_pack_sockaddr_in6_$port,_$ip6_address,_[$scope_id,_[$flowinfo]]"
+>$sockaddr = pack_sockaddr_in6 $port, $ip6_address, [$scope_id, [$flowinfo]]</a></h2>
+
+<p>Takes two to four arguments, a port number, an opaque string (as returned by inet_pton()), optionally a scope ID number, and optionally a flow label number. Returns the <code>sockaddr_in6</code> structure with those arguments packed in and <code>AF_INET6</code> filled in. IPv6 equivalent of pack_sockaddr_in().</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="($port,_$ip6_address,_$scope_id,_$flowinfo)_=_unpack_sockaddr_in6_$sockaddr"
+>($port, $ip6_address, $scope_id, $flowinfo) = unpack_sockaddr_in6 $sockaddr</a></h2>
+
+<p>Takes a <code>sockaddr_in6</code> structure. Returns a list of four elements: the port number, an opaque string representing the IPv6 address, the scope ID, and the flow label. (You can use inet_ntop() to convert the address to the usual string format). Will croak if the structure does not represent an <code>AF_INET6</code> address.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$sockaddr_=_sockaddr_in6_$port,_$ip6_address,_[$scope_id,_[$flowinfo]]"
+>$sockaddr = sockaddr_in6 $port, $ip6_address, [$scope_id, [$flowinfo]]</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="($port,_$ip6_address,_$scope_id,_$flowinfo)_=_sockaddr_in6_$sockaddr"
+>($port, $ip6_address, $scope_id, $flowinfo) = sockaddr_in6 $sockaddr</a></h2>
+
+<p>A wrapper of pack_sockaddr_in6() or unpack_sockaddr_in6(). In list context, unpacks its argument according to unpack_sockaddr_in6(). In scalar context, packs its arguments according to pack_sockaddr_in6().</p>
+
+<p>Provided largely for legacy compatibility; it is better to use pack_sockaddr_in6() or unpack_sockaddr_in6() explicitly.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$sockaddr_=_pack_sockaddr_un_$path"
+>$sockaddr = pack_sockaddr_un $path</a></h2>
+
+<p>Takes one argument, a pathname. Returns the <code>sockaddr_un</code> structure with that path packed in with <code>AF_UNIX</code> filled in. For <code>PF_UNIX</code> sockets, this structure is normally what you need for the arguments in bind(), connect(), and send().</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="($path)_=_unpack_sockaddr_un_$sockaddr"
+>($path) = unpack_sockaddr_un $sockaddr</a></h2>
+
+<p>Takes a <code>sockaddr_un</code> structure (as returned by pack_sockaddr_un(), getpeername() or recv()). Returns a list of one element: the pathname. Will croak if the structure does not represent an <code>AF_UNIX</code> address.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$sockaddr_=_sockaddr_un_$path"
+>$sockaddr = sockaddr_un $path</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="($path)_=_sockaddr_un_$sockaddr"
+>($path) = sockaddr_un $sockaddr</a></h2>
+
+<p>A wrapper of pack_sockaddr_un() or unpack_sockaddr_un(). In a list context, unpacks its argument and returns a list consisting of the pathname. In a scalar context, packs its pathname as a <code>sockaddr_un</code> and returns it.</p>
+
+<p>Provided largely for legacy compatibility; it is better to use pack_sockaddr_un() or unpack_sockaddr_un() explicitly.</p>
+
+<p>These are only supported if your system has &#60;<em>sys/un.h</em>&#62;.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$ipv6_mreq_=_pack_ipv6_mreq_$ip6_address,_$ifindex"
+>$ipv6_mreq = pack_ipv6_mreq $ip6_address, $ifindex</a></h2>
+
+<p>Takes an IPv6 address and an interface number. Returns the <code>ipv6_mreq</code> structure with those arguments packed in. Suitable for use with the <code>IPV6_ADD_MEMBERSHIP</code> and <code>IPV6_DROP_MEMBERSHIP</code> sockopts.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="($ip6_address,_$ifindex)_=_unpack_ipv6_mreq_$ipv6_mreq"
+>($ip6_address, $ifindex) = unpack_ipv6_mreq $ipv6_mreq</a></h2>
+
+<p>Takes an <code>ipv6_mreq</code> structure. Returns a list of two elements; the IPv6 address and an interface number.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$ip_address_=_inet_aton_$string"
+>$ip_address = inet_aton $string</a></h2>
+
+<p>Takes a string giving the name of a host, or a textual representation of an IP address and translates that to an packed binary address structure suitable to pass to pack_sockaddr_in(). If passed a hostname that cannot be resolved, returns <code>undef</code>. For multi-homed hosts (hosts with more than one address), the first address found is returned.</p>
+
+<p>For portability do not assume that the result of inet_aton() is 32 bits wide, in other words, that it would contain only the IPv4 address in network order.</p>
+
+<p>This IPv4-only function is provided largely for legacy reasons. Newly-written code should use getaddrinfo() or inet_pton() instead for IPv6 support.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$string_=_inet_ntoa_$ip_address"
+>$string = inet_ntoa $ip_address</a></h2>
+
+<p>Takes a packed binary address structure such as returned by unpack_sockaddr_in() (or a v-string representing the four octets of the IPv4 address in network order) and translates it into a string of the form <code>d.d.d.d</code> where the <code>d</code>s are numbers less than 256 (the normal human-readable four dotted number notation for Internet addresses).</p>
+
+<p>This IPv4-only function is provided largely for legacy reasons. Newly-written code should use getnameinfo() or inet_ntop() instead for IPv6 support.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$address_=_inet_pton_$family,_$string"
+>$address = inet_pton $family, $string</a></h2>
+
+<p>Takes an address family (such as <code>AF_INET</code> or <code>AF_INET6</code>) and a string containing a textual representation of an address in that family and translates that to an packed binary address structure.</p>
+
+<p>See also getaddrinfo() for a more powerful and flexible function to look up socket addresses given hostnames or textual addresses.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="$string_=_inet_ntop_$family,_$address"
+>$string = inet_ntop $family, $address</a></h2>
+
+<p>Takes an address family and a packed binary address structure and translates it into a human-readable textual representation of the address; typically in <code>d.d.d.d</code> form for <code>AF_INET</code> or <code>hhhh:hhhh::hhhh</code> form for <code>AF_INET6</code>.</p>
+
+<p>See also getnameinfo() for a more powerful and flexible function to turn socket addresses into human-readable textual representations.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="($err,_@result)_=_getaddrinfo_$host,_$service,_[$hints]"
+>($err, @result) = getaddrinfo $host, $service, [$hints]</a></h2>
+
+<p>Given both a hostname and service name, this function attempts to resolve the host name into a list of network addresses, and the service name into a protocol and port number, and then returns a list of address structures suitable to connect() to it.</p>
+
+<p>Given just a host name, this function attempts to resolve it to a list of network addresses, and then returns a list of address structures giving these addresses.</p>
+
+<p>Given just a service name, this function attempts to resolve it to a protocol and port number, and then returns a list of address structures that represent it suitable to bind() to. This use should be combined with the <code>AI_PASSIVE</code> flag; see below.</p>
+
+<p>Given neither name, it generates an error.</p>
+
+<p>If present, $hints should be a reference to a hash, where the following keys are recognised:</p>
+
+<dl>
+<dt><a name='flags'></a><a name="flags_=&#62;_INT"
+>flags =&#62; INT</a></dt>
+
+<dd>
+<p>A bitfield containing <code>AI_*</code> constants; see below.</p>
+
+<dt><a name='family'></a><a name="family_=&#62;_INT"
+>family =&#62; INT</a></dt>
+
+<dd>
+<p>Restrict to only generating addresses in this address family</p>
+
+<dt><a name='socktype'></a><a name="socktype_=&#62;_INT"
+>socktype =&#62; INT</a></dt>
+
+<dd>
+<p>Restrict to only generating addresses of this socket type</p>
+
+<dt><a name='protocol'></a><a name="protocol_=&#62;_INT"
+>protocol =&#62; INT</a></dt>
+
+<dd>
+<p>Restrict to only generating addresses for this protocol</p>
+</dd>
+</dl>
+
+<p>The return value will be a list; the first value being an error indication, followed by a list of address structures (if no error occurred).</p>
+
+<p>The error value will be a dualvar; comparable to the <code>EI_*</code> error constants, or printable as a human-readable error message string. If no error occurred it will be zero numerically and an empty string.</p>
+
+<p>Each value in the results list will be a hash reference containing the following fields:</p>
+
+<dl>
+<dt><a name='family'></a><a name="family_=&#62;_INT"
+>family =&#62; INT</a></dt>
+
+<dd>
+<p>The address family (e.g. <code>AF_INET</code>)</p>
+
+<dt><a name='socktype'></a><a name="socktype_=&#62;_INT"
+>socktype =&#62; INT</a></dt>
+
+<dd>
+<p>The socket type (e.g. <code>SOCK_STREAM</code>)</p>
+
+<dt><a name='protocol'></a><a name="protocol_=&#62;_INT"
+>protocol =&#62; INT</a></dt>
+
+<dd>
+<p>The protocol (e.g. <code>IPPROTO_TCP</code>)</p>
+
+<dt><a name='addr'></a><a name="addr_=&#62;_STRING"
+>addr =&#62; STRING</a></dt>
+
+<dd>
+<p>The address in a packed string (such as would be returned by pack_sockaddr_in())</p>
+
+<dt><a name='canonname'></a><a name="canonname_=&#62;_STRING"
+>canonname =&#62; STRING</a></dt>
+
+<dd>
+<p>The canonical name for the host if the <code>AI_CANONNAME</code> flag was provided, or <code>undef</code> otherwise. This field will only be present on the first returned address.</p>
+</dd>
+</dl>
+
+<p>The following flag constants are recognised in the $hints hash. Other flag constants may exist as provided by the OS.</p>
+
+<dl>
+<dt><a name="AI_PASSIVE"
+>AI_PASSIVE</a></dt>
+
+<dd>
+<p>Indicates that this resolution is for a local bind() for a passive (i.e. listening) socket, rather than an active (i.e. connecting) socket.</p>
+
+<dt><a name="AI_CANONNAME"
+>AI_CANONNAME</a></dt>
+
+<dd>
+<p>Indicates that the caller wishes the canonical hostname (<code>canonname</code>) field of the result to be filled in.</p>
+
+<dt><a name="AI_NUMERICHOST"
+>AI_NUMERICHOST</a></dt>
+
+<dd>
+<p>Indicates that the caller will pass a numeric address, rather than a hostname, and that getaddrinfo() must not perform a resolve operation on this name. This flag will prevent a possibly-slow network lookup operation, and instead return an error if a hostname is passed.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="($err,_$hostname,_$servicename)_=_getnameinfo_$sockaddr,_[$flags,_[$xflags]]"
+>($err, $hostname, $servicename) = getnameinfo $sockaddr, [$flags, [$xflags]]</a></h2>
+
+<p>Given a packed socket address (such as from getsockname(), getpeername(), or returned by getaddrinfo() in a <code>addr</code> field), returns the hostname and symbolic service name it represents. $flags may be a bitmask of <code>NI_*</code> constants, or defaults to 0 if unspecified.</p>
+
+<p>The return value will be a list; the first value being an error condition, followed by the hostname and service name.</p>
+
+<p>The error value will be a dualvar; comparable to the <code>EI_*</code> error constants, or printable as a human-readable error message string. The host and service names will be plain strings.</p>
+
+<p>The following flag constants are recognised as $flags. Other flag constants may exist as provided by the OS.</p>
+
+<dl>
+<dt><a name="NI_NUMERICHOST"
+>NI_NUMERICHOST</a></dt>
+
+<dd>
+<p>Requests that a human-readable string representation of the numeric address be returned directly, rather than performing a name resolve operation that may convert it into a hostname. This will also avoid potentially-blocking network IO.</p>
+
+<dt><a name="NI_NUMERICSERV"
+>NI_NUMERICSERV</a></dt>
+
+<dd>
+<p>Requests that the port number be returned directly as a number representation rather than performing a name resolve operation that may convert it into a service name.</p>
+
+<dt><a name="NI_NAMEREQD"
+>NI_NAMEREQD</a></dt>
+
+<dd>
+<p>If a name resolve operation fails to provide a name, then this flag will cause getnameinfo() to indicate an error, rather than returning the numeric representation as a human-readable string.</p>
+
+<dt><a name="NI_DGRAM"
+>NI_DGRAM</a></dt>
+
+<dd>
+<p>Indicates that the socket address relates to a <code>SOCK_DGRAM</code> socket, for the services whose name differs between TCP and UDP protocols.</p>
+</dd>
+</dl>
+
+<p>The following constants may be supplied as $xflags.</p>
+
+<dl>
+<dt><a name="NIx_NOHOST"
+>NIx_NOHOST</a></dt>
+
+<dd>
+<p>Indicates that the caller is not interested in the hostname of the result, so it does not have to be converted. <code>undef</code> will be returned as the hostname.</p>
+
+<dt><a name="NIx_NOSERV"
+>NIx_NOSERV</a></dt>
+
+<dd>
+<p>Indicates that the caller is not interested in the service name of the result, so it does not have to be converted. <code>undef</code> will be returned as the service name.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="getaddrinfo()_/_getnameinfo()_ERROR_CONSTANTS"
+>getaddrinfo() / getnameinfo() ERROR CONSTANTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following constants may be returned by getaddrinfo() or getnameinfo(). Others may be provided by the OS.</p>
+
+<dl>
+<dt><a name="EAI_AGAIN"
+>EAI_AGAIN</a></dt>
+
+<dd>
+<p>A temporary failure occurred during name resolution. The operation may be successful if it is retried later.</p>
+
+<dt><a name="EAI_BADFLAGS"
+>EAI_BADFLAGS</a></dt>
+
+<dd>
+<p>The value of the <code>flags</code> hint to getaddrinfo(), or the $flags parameter to getnameinfo() contains unrecognised flags.</p>
+
+<dt><a name="EAI_FAMILY"
+>EAI_FAMILY</a></dt>
+
+<dd>
+<p>The <code>family</code> hint to getaddrinfo(), or the family of the socket address passed to getnameinfo() is not supported.</p>
+
+<dt><a name="EAI_NODATA"
+>EAI_NODATA</a></dt>
+
+<dd>
+<p>The host name supplied to getaddrinfo() did not provide any usable address data.</p>
+
+<dt><a name="EAI_NONAME"
+>EAI_NONAME</a></dt>
+
+<dd>
+<p>The host name supplied to getaddrinfo() does not exist, or the address supplied to getnameinfo() is not associated with a host name and the <code>NI_NAMEREQD</code> flag was supplied.</p>
+
+<dt><a name="EAI_SERVICE"
+>EAI_SERVICE</a></dt>
+
+<dd>
+<p>The service name supplied to getaddrinfo() is not available for the socket type given in the $hints.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Lookup_for_connect()"
+>Lookup for connect()</a></h2>
+
+<p>The getaddrinfo() function converts a hostname and a service name into a list of structures, each containing a potential way to connect() to the named service on the named host.</p>
+
+<pre class="sh_perl"> use IO::Socket;
+ use Socket qw(SOCK_STREAM getaddrinfo);
+
+ my %hints = (socktype =&#62; SOCK_STREAM);
+ my ($err, @res) = getaddrinfo(&#34;localhost&#34;, &#34;echo&#34;, \%hints);
+ die &#34;Cannot getaddrinfo - $err&#34; if $err;
+
+ my $sock;
+
+ foreach my $ai (@res) {
+     my $candidate = IO::Socket-&#62;new();
+
+     $candidate-&#62;socket($ai-&#62;{family}, $ai-&#62;{socktype}, $ai-&#62;{protocol})
+         or next;
+
+     $candidate-&#62;connect($ai-&#62;{addr})
+         or next;
+
+     $sock = $candidate;
+     last;
+ }
+
+ die &#34;Cannot connect to localhost:echo&#34; unless $sock;
+
+ $sock-&#62;print(&#34;Hello, world!\n&#34;);
+ print &#60;$sock&#62;;</pre>
+
+<p>Because a list of potential candidates is returned, the <code>while</code> loop tries each in turn until it it finds one that succeeds both the socket() and connect() calls.</p>
+
+<p>This function performs the work of the legacy functions gethostbyname(), getservbyname(), inet_aton() and pack_sockaddr_in().</p>
+
+<p>In practice this logic is better performed by <a href="/perldoc?IO%3A%3ASocket%3A%3AIP" class="podlinkpod"
+>IO::Socket::IP</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Making_a_human-readable_string_out_of_an_address"
+>Making a human-readable string out of an address</a></h2>
+
+<p>The getnameinfo() function converts a socket address, such as returned by getsockname() or getpeername(), into a pair of human-readable strings representing the address and service name.</p>
+
+<pre class="sh_perl"> use IO::Socket::IP;
+ use Socket qw(getnameinfo);
+
+ my $server = IO::Socket::IP-&#62;new(LocalPort =&#62; 12345, Listen =&#62; 1) or
+     die &#34;Cannot listen - $@&#34;;
+
+ my $socket = $server-&#62;accept or die &#34;accept: $!&#34;;
+
+ my ($err, $hostname, $servicename) = getnameinfo($socket-&#62;peername);
+ die &#34;Cannot getnameinfo - $err&#34; if $err;
+
+ print &#34;The peer is connected from $hostname\n&#34;;</pre>
+
+<p>Since in this example only the hostname was used, the redundant conversion of the port number into a service name may be omitted by passing the <code>NIx_NOSERV</code> flag.</p>
+
+<pre class="sh_perl"> use Socket qw(getnameinfo NIx_NOSERV);
+
+ my ($err, $hostname) = getnameinfo($socket-&#62;peername, 0, NIx_NOSERV);</pre>
+
+<p>This function performs the work of the legacy functions unpack_sockaddr_in(), inet_ntoa(), gethostbyaddr() and getservbyport().</p>
+
+<p>In practice this logic is better performed by <a href="/perldoc?IO%3A%3ASocket%3A%3AIP" class="podlinkpod"
+>IO::Socket::IP</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Resolving_hostnames_into_IP_addresses"
+>Resolving hostnames into IP addresses</a></h2>
+
+<p>To turn a hostname into a human-readable plain IP address use getaddrinfo() to turn the hostname into a list of socket structures, then getnameinfo() on each one to make it a readable IP address again.</p>
+
+<pre class="sh_perl"> use Socket qw(:addrinfo SOCK_RAW);
+
+ my ($err, @res) = getaddrinfo($hostname, &#34;&#34;, {socktype =&#62; SOCK_RAW});
+ die &#34;Cannot getaddrinfo - $err&#34; if $err;
+
+ while( my $ai = shift @res ) {
+     my ($err, $ipaddr) = getnameinfo($ai-&#62;{addr}, NI_NUMERICHOST, NIx_NOSERV);
+     die &#34;Cannot getnameinfo - $err&#34; if $err;
+
+     print &#34;$ipaddr\n&#34;;
+ }</pre>
+
+<p>The <code>socktype</code> hint to getaddrinfo() filters the results to only include one socket type and protocol. Without this most OSes return three combinations, for <code>SOCK_STREAM</code>, <code>SOCK_DGRAM</code> and <code>SOCK_RAW</code>, resulting in triplicate output of addresses. The <code>NI_NUMERICHOST</code> flag to getnameinfo() causes it to return a string-formatted plain IP address, rather than reverse resolving it back into a hostname.</p>
+
+<p>This combination performs the work of the legacy functions gethostbyname() and inet_ntoa().</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Accessing_socket_options"
+>Accessing socket options</a></h2>
+
+<p>The many <code>SO_*</code> and other constants provide the socket option names for getsockopt() and setsockopt().</p>
+
+<pre class="sh_perl"> use IO::Socket::INET;
+ use Socket qw(SOL_SOCKET SO_RCVBUF IPPROTO_IP IP_TTL);
+
+ my $socket = IO::Socket::INET-&#62;new(LocalPort =&#62; 0, Proto =&#62; &#39;udp&#39;)
+     or die &#34;Cannot create socket: $@&#34;;
+
+ $socket-&#62;setsockopt(SOL_SOCKET, SO_RCVBUF, 64*1024) or
+     die &#34;setsockopt: $!&#34;;
+
+ print &#34;Receive buffer is &#34;, $socket-&#62;getsockopt(SOL_SOCKET, SO_RCVBUF),
+     &#34; bytes\n&#34;;
+
+ print &#34;IP TTL is &#34;, $socket-&#62;getsockopt(IPPROTO_IP, IP_TTL), &#34;\n&#34;;</pre>
+
+<p>As a convenience, <a href="/perldoc?IO%3A%3ASocket" class="podlinkpod"
+>IO::Socket</a>&#39;s setsockopt() method will convert a number into a packed byte buffer, and getsockopt() will unpack a byte buffer of the correct size back into a number.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module was originally maintained in Perl core by the Perl 5 Porters.</p>
+
+<p>It was extracted to dual-life on CPAN at version 1.95 by Paul Evans &#60;leonerd@leonerd.org.uk&#62;</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78231 Uploads, 24723 Distributions
+106029 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Thu Apr 26 21:04:59 2012 GMT (0.0988178253173828) @cpansearch1 -->
+ </body>
+</html>

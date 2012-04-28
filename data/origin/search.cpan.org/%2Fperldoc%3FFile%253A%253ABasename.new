@@ -1,0 +1,365 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>File::Basename - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",3,"Module","File::Basename",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?File::Basename">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  File::Basename
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=File%3A%3ABasename;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/lib/File/Basename.pm">Annotate this POD
+(1)
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?File%3A%3ASpec">File::Spec</a><br>
+<a href="/perldoc?File%3A%3AFind">File::Find</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?File%3A%3ACopy">File::Copy</a><br>
+<a href="/perldoc?Getopt%3A%3ALong">Getopt::Long</a><br>
+<a href="/perldoc?CGI%3A%3AApplication">CGI::Application</a><br>
+<a href="/perldoc?HTML%3A%3ATemplate">HTML::Template</a><br>
+<a href="/perldoc?CGI%3A%3ACarp">CGI::Carp</a><br>
+<a href="/perldoc?File%3A%3APath">File::Path</a><br>
+<a href="/perldoc?WWW%3A%3AMechanize">WWW::Mechanize</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=File%3A%3ABasename">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+
+</div>
+</div>
+  Module Version:  2.82 &nbsp;
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/lib/File/Basename.pm">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~abigail/perl/lib/File/Basename.pm">perl-5.15.9</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>File::Basename - Parse file paths into directory,
+filename and suffix.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use File::Basename;
+
+    ($name,$path,$suffix) = fileparse($fullname,@suffixlist);
+    $name = fileparse($fullname,@suffixlist);
+
+    $basename = basename($fullname,@suffixlist);
+    $dirname  = dirname($fullname);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>These routines allow you to parse file paths into their directory, filename and suffix.</p>
+
+<p><b>NOTE</b>: <code>dirname()</code> and <code>basename()</code> emulate the behaviours, and quirks, of the shell and C functions of the same name. See each function&#39;s documentation for details. If your concern is just parsing paths it is safer to use <a href="/perldoc?File%3A%3ASpec" class="podlinkpod"
+>File::Spec</a>&#39;s <code>splitpath()</code> and <code>splitdir()</code> methods.</p>
+
+<p>It is guaranteed that</p>
+
+<pre class="sh_perl">    # Where $path_separator is / for Unix, \ for Windows, etc...
+    dirname($path) . $path_separator . basename($path);</pre>
+
+<p>is equivalent to the original path for all systems but VMS.</p>
+
+<dl>
+<dt><a name='fileparse'></a><a name="fileparse"
+><code>fileparse</code> <!--
+	INDEX: fileparse
+--></a></dt>
+
+<dd>
+<pre class="sh_perl">    my($filename, $directories, $suffix) = fileparse($path);
+    my($filename, $directories, $suffix) = fileparse($path, @suffixes);
+    my $filename                         = fileparse($path, @suffixes);</pre>
+
+<p>The <code>fileparse()</code> routine divides a file path into its $directories, $filename and (optionally) the filename $suffix.</p>
+
+<p>$directories contains everything up to and including the last directory separator in the $path including the volume (if applicable). The remainder of the $path is the $filename.</p>
+
+<pre class="sh_perl">     # On Unix returns (&#34;baz&#34;, &#34;/foo/bar/&#34;, &#34;&#34;)
+     fileparse(&#34;/foo/bar/baz&#34;);
+
+     # On Windows returns (&#34;baz&#34;, &#39;C:\foo\bar\&#39;, &#34;&#34;)
+     fileparse(&#39;C:\foo\bar\baz&#39;);
+
+     # On Unix returns (&#34;&#34;, &#34;/foo/bar/baz/&#34;, &#34;&#34;)
+     fileparse(&#34;/foo/bar/baz/&#34;);</pre>
+
+<p>If @suffixes are given each element is a pattern (either a string or a <code>qr//</code>) matched against the end of the $filename. The matching portion is removed and becomes the $suffix.</p>
+
+<pre class="sh_perl">     # On Unix returns (&#34;baz&#34;, &#34;/foo/bar/&#34;, &#34;.txt&#34;)
+     fileparse(&#34;/foo/bar/baz.txt&#34;, qr/\.[^.]*/);</pre>
+
+<p>If type is non-Unix (see <code>fileparse_set_fstype()</code>) then the pattern matching for suffix removal is performed case-insensitively, since those systems are not case-sensitive when opening existing files.</p>
+
+<p>You are guaranteed that <code>$directories . $filename . $suffix</code> will denote the same location as the original $path.</p>
+
+<dt><a name='basename'></a><a name="basename"
+><code>basename</code> <!--
+	INDEX: basename
+--> <!--
+	INDEX: filename
+--></a></dt>
+
+<dd>
+<pre class="sh_perl">    my $filename = basename($path);
+    my $filename = basename($path, @suffixes);</pre>
+
+<p>This function is provided for compatibility with the Unix shell command <code>basename(1)</code>. It does <b>NOT</b> always return the file name portion of a path as you might expect. To be safe, if you want the file name portion of a path use <code>fileparse()</code>.</p>
+
+<p><code>basename()</code> returns the last level of a filepath even if the last level is clearly directory. In effect, it is acting like <code>pop()</code> for paths. This differs from <code>fileparse()</code>&#39;s behaviour.</p>
+
+<pre class="sh_perl">    # Both return &#34;bar&#34;
+    basename(&#34;/foo/bar&#34;);
+    basename(&#34;/foo/bar/&#34;);</pre>
+
+<p>@suffixes work as in <code>fileparse()</code> except all regex metacharacters are quoted.</p>
+
+<pre class="sh_perl">    # These two function calls are equivalent.
+    my $filename = basename(&#34;/foo/bar/baz.txt&#34;,  &#34;.txt&#34;);
+    my $filename = fileparse(&#34;/foo/bar/baz.txt&#34;, qr/\Q.txt\E/);</pre>
+
+<p>Also note that in order to be compatible with the shell command, <code>basename()</code> does not strip off a suffix if it is identical to the remaining characters in the filename.</p>
+
+<dt><a name='dirname'></a><a name="dirname"
+><code>dirname</code> <!--
+	INDEX: dirname
+--></a></dt>
+
+<dd>
+<p>This function is provided for compatibility with the Unix shell command <code>dirname(1)</code> and has inherited some of its quirks. In spite of its name it does <b>NOT</b> always return the directory name as you might expect. To be safe, if you want the directory name of a path use <code>fileparse()</code>.</p>
+
+<p>Only on VMS (where there is no ambiguity between the file and directory portions of a path) and AmigaOS (possibly due to an implementation quirk in this module) does <code>dirname()</code> work like <code>fileparse($path)</code>, returning just the $directories.</p>
+
+<pre class="sh_perl">    # On VMS and AmigaOS
+    my $directories = dirname($path);</pre>
+
+<p>When using Unix or MSDOS syntax this emulates the <code>dirname(1)</code> shell function which is subtly different from how <code>fileparse()</code> works. It returns all but the last level of a file path even if the last level is clearly a directory. In effect, it is not returning the directory portion but simply the path one level up acting like <code>chop()</code> for file paths.</p>
+
+<p>Also unlike <code>fileparse()</code>, <code>dirname()</code> does not include a trailing slash on its returned path.</p>
+
+<pre class="sh_perl">    # returns /foo/bar.  fileparse() would return /foo/bar/
+    dirname(&#34;/foo/bar/baz&#34;);
+
+    # also returns /foo/bar despite the fact that baz is clearly a 
+    # directory.  fileparse() would return /foo/bar/baz/
+    dirname(&#34;/foo/bar/baz/&#34;);
+
+    # returns &#39;.&#39;.  fileparse() would return &#39;foo/&#39;
+    dirname(&#34;foo/&#34;);</pre>
+
+<p>Under VMS, if there is no directory information in the $path, then the current default device and directory is used.</p>
+
+<dt><a name='fileparse_set_fstype'></a><a name="fileparse_set_fstype"
+><code>fileparse_set_fstype</code> <!--
+	INDEX: filesystem
+--></a></dt>
+
+<dd>
+<pre class="sh_perl">  my $type = fileparse_set_fstype();
+  my $previous_type = fileparse_set_fstype($type);</pre>
+
+<p>Normally File::Basename will assume a file path type native to your current operating system (ie. /foo/bar style on Unix, \foo\bar on Windows, etc...). With this function you can override that assumption.</p>
+
+<p>Valid $types are &#34;MacOS&#34;, &#34;VMS&#34;, &#34;AmigaOS&#34;, &#34;OS2&#34;, &#34;RISCOS&#34;, &#34;MSWin32&#34;, &#34;DOS&#34; (also &#34;MSDOS&#34; for backwards bug compatibility), &#34;Epoc&#34; and &#34;Unix&#34; (all case-insensitive). If an unrecognized $type is given &#34;Unix&#34; will be assumed.</p>
+
+<p>If you&#39;ve selected VMS syntax, and the file specification you pass to one of these routines contains a &#34;/&#34;, they assume you are using Unix emulation and apply the Unix syntax rules instead, for that function call only.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="http://man.he.net/man1/dirname" class="podlinkman"
+>dirname(1)</a>, <a href="http://man.he.net/man1/basename" class="podlinkman"
+>basename(1)</a>, <a href="/perldoc?File%3A%3ASpec" class="podlinkpod"
+>File::Spec</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78058 Uploads, 24685 Distributions
+105890 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 23:36:24 2012 GMT (0.102187871932983) @cpansearch1 -->
+ </body>
+</html>

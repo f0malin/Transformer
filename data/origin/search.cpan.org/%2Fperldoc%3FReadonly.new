@@ -1,0 +1,575 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Readonly - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Readonly",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Readonly-1.03",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Readonly",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ROODE",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Readonly">permalink</a></div>
+  <a href="/~roode/">Eric J. Roode</a> &gt;
+  <a href="/~roode/Readonly-1.03/">Readonly-1.03</a> &gt;
+  Readonly
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/681ebced6a4ffb6581863ee536f47a79?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/R/RO/ROODE/Readonly-1.03.tar.gz">Readonly-1.03.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Readonly;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ROODE/Readonly-1.03/Readonly.pm">Annotate this POD
+(4)
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 15</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 3</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Readonly">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.03 &nbsp;
+<span class="noprint">
+  <a href="/src/ROODE/Readonly-1.03/Readonly.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#COMPARISON_WITH_&#34;use_constant&#34;'>COMPARISON WITH &#34;use constant&#34;</a>
+  <li class='indexItem indexItem1'><a href='#COMPARISON_WITH_TYPEGLOB_CONSTANTS'>COMPARISON WITH TYPEGLOB CONSTANTS</a>
+  <li class='indexItem indexItem1'><a href='#PROS'>PROS</a>
+  <li class='indexItem indexItem1'><a href='#CONS'>CONS</a>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <li class='indexItem indexItem1'><a href='#EXAMPLES'>EXAMPLES</a>
+  <li class='indexItem indexItem1'><a href='#EXPORTS'>EXPORTS</a>
+  <li class='indexItem indexItem1'><a href='#REQUIREMENTS'>REQUIREMENTS</a>
+  <li class='indexItem indexItem1'><a href='#ACKNOWLEDGEMENTS'>ACKNOWLEDGEMENTS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR_/_COPYRIGHT'>AUTHOR / COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<p>- -----BEGIN PGP SIGNED MESSAGE----- Hash: SHA1</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Readonly - Facility for creating read-only scalars,
+arrays,
+hashes.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This documentation describes version 1.03 of Readonly.pm,
+April 20,
+2004.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> use Readonly;
+
+ # Read-only scalar
+ Readonly::Scalar     $sca =&#62; $initial_value;
+ Readonly::Scalar  my $sca =&#62; $initial_value;
+
+ # Read-only array
+ Readonly::Array      @arr =&#62; @values;
+ Readonly::Array   my @arr =&#62; @values;
+
+ # Read-only hash
+ Readonly::Hash       %has =&#62; (key =&#62; value, key =&#62; value, ...);
+ Readonly::Hash    my %has =&#62; (key =&#62; value, key =&#62; value, ...);
+ # or:
+ Readonly::Hash       %has =&#62; {key =&#62; value, key =&#62; value, ...};
+
+ # You can use the read-only variables like any regular variables:
+ print $sca;
+ $something = $sca + $arr[2];
+ next if $has{$some_key};
+
+ # But if you try to modify a value, your program will die:
+ $sca = 7;
+ push @arr, &#39;seven&#39;;
+ delete $has{key};
+ # The error message is &#34;Modification of a read-only value
+attempted&#34;
+
+ # Alternate form (Perl 5.8 and later)
+ Readonly    $sca =&#62; $initial_value;
+ Readonly my $sca =&#62; $initial_value;
+ Readonly    @arr =&#62; @values;
+ Readonly my @arr =&#62; @values;
+ Readonly    %has =&#62; (key =&#62; value, key =&#62; value, ...);
+ Readonly my %has =&#62; (key =&#62; value, key =&#62; value, ...);
+ # Alternate form (for Perls earlier than v5.8)
+ Readonly    \$sca =&#62; $initial_value;
+ Readonly \my $sca =&#62; $initial_value;
+ Readonly    \@arr =&#62; @values;
+ Readonly \my @arr =&#62; @values;
+ Readonly    \%has =&#62; (key =&#62; value, key =&#62; value, ...);
+ Readonly \my %has =&#62; (key =&#62; value, key =&#62; value, ...);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This is a facility for creating non-modifiable variables. This is useful for configuration files, headers, etc. It can also be useful as a development and debugging tool, for catching updates to variables that should not be changed.</p>
+
+<p>If any of the values you pass to <code>Scalar</code>, <code>Array</code>, or <code>Hash</code> are references, then those functions recurse over the data structures, marking everything as Readonly. Usually, this is what you want: the entire structure nonmodifiable. If you want only the top level to be Readonly, use the alternate <code>Scalar1</code>, <code>Array1</code> and <code>Hash1</code> functions.</p>
+
+<p>Please note that most users of Readonly will also want to install a companion module Readonly::XS. See the <a href="#CONS" class="podlinkpod"
+>&#34;CONS&#34;</a> section below for more details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COMPARISON_WITH_&#34;use_constant&#34;"
+>COMPARISON WITH &#34;use constant&#34; <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Perl provides a facility for creating constant values, via the &#34;use constant&#34; pragma. There are several problems with this pragma.</p>
+
+<ul>
+<li>The constants created have no leading $ or @ character.</li>
+
+<li>These constants cannot be interpolated into strings.</li>
+
+<li>Syntax can get dicey sometimes. For example:
+<pre class="sh_perl"> use constant CARRAY =&#62; (2, 3, 5, 7, 11, 13);
+ $a_prime = CARRAY[2];        # wrong!
+ $a_prime = (CARRAY)[2];      # right -- MUST use parentheses</pre>
+</li>
+
+<li>You have to be very careful in places where barewords are allowed. For example:
+<pre class="sh_perl"> use constant SOME_KEY =&#62; &#39;key&#39;;
+ %hash = (key =&#62; &#39;value&#39;, other_key =&#62; &#39;other_value&#39;);
+ $some_value = $hash{SOME_KEY};        # wrong!
+ $some_value = $hash{+SOME_KEY};       # right</pre>
+
+<p>(who thinks to use a unary plus when using a hash?)</p>
+</li>
+
+<li><code>use constant</code> works for scalars and arrays, not hashes.</li>
+
+<li>These constants are global ot the package in which they&#39;re declared; cannot be lexically scoped.</li>
+
+<li>Works only at compile time.</li>
+
+<li>Can be overridden:
+<pre class="sh_perl"> use constant PI =&#62; 3.14159;
+ ...
+ use constant PI =&#62; 2.71828;</pre>
+
+<p>(this does generate a warning, however, if you have warnings enabled).</p>
+</li>
+
+<li>It is very difficult to make and use deep structures (complex data structures) with <code>use constant</code>.</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COMPARISON_WITH_TYPEGLOB_CONSTANTS"
+>COMPARISON WITH TYPEGLOB CONSTANTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Another popular way to create read-only scalars is to modify the symbol table entry for the variable by using a typeglob:</p>
+
+<pre class="sh_perl"> *a = \&#39;value&#39;;</pre>
+
+<p>This works fine, but it only works for global variables (&#34;my&#34; variables have no symbol table entry). Also, the following similar constructs do <b>not</b> work:</p>
+
+<pre class="sh_perl"> *a = [1, 2, 3];      # Does NOT create a read-only array
+ *a = { a =&#62; &#39;A&#39;};    # Does NOT create a read-only hash</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PROS"
+>PROS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Readonly.pm, on the other hand, will work with global variables and with lexical (&#34;my&#34;) variables. It will create scalars, arrays, or hashes, all of which look and work like normal, read-write Perl variables. You can use them in scalar context, in list context; you can take references to them, pass them to functions, anything.</p>
+
+<p>Readonly.pm also works well with complex data structures, allowing you to tag the whole structure as nonmodifiable, or just the top level.</p>
+
+<p>Also, Readonly variables may not be reassigned. The following code will die:</p>
+
+<pre class="sh_perl"> Readonly::Scalar $pi =&#62; 3.14159;
+ ...
+ Readonly::Scalar $pi =&#62; 2.71828;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONS"
+>CONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Readonly.pm does impose a performance penalty. It&#39;s pretty slow. How slow? Run the <code>benchmark.pl</code> script that comes with Readonly. On my test system, &#34;use constant&#34;, typeglob constants, and regular read/write Perl variables were all about the same speed, and Readonly.pm constants were about 1/20 the speed.</p>
+
+<p>However, there is relief. There is a companion module available, Readonly::XS. If it is installed on your system, Readonly.pm uses it to make read-only scalars much faster. With Readonly::XS, Readonly scalars are as fast as the other types of variables. Readonly arrays and hashes will still be relatively slow. But it&#39;s likely that most of your Readonly variables will be scalars.</p>
+
+<p>If you can&#39;t use Readonly::XS (for example, if you don&#39;t have a C compiler, or your perl is statically linked and you don&#39;t want to re-link it), you have to decide whether the benefits of Readonly variables outweigh the speed issue. For most configuration variables (and other things that Readonly is likely to be useful for), the speed issue is probably not really a big problem. But benchmark your program if it might be. If it turns out to be a problem, you may still want to use Readonly.pm during development, to catch changes to variables that should not be changed, and then remove it for production:</p>
+
+<pre class="sh_perl"> # For testing:
+ Readonly::Scalar  $Foo_Directory =&#62; &#39;/usr/local/foo&#39;;
+ Readonly::Scalar  $Bar_Directory =&#62; &#39;/usr/local/bar&#39;;
+ # $Foo_Directory = &#39;/usr/local/foo&#39;;
+ # $Bar_Directory = &#39;/usr/local/bar&#39;;
+
+ # For production:
+ # Readonly::Scalar  $Foo_Directory =&#62; &#39;/usr/local/foo&#39;;
+ # Readonly::Scalar  $Bar_Directory =&#62; &#39;/usr/local/bar&#39;;
+ $Foo_Directory = &#39;/usr/local/foo&#39;;
+ $Bar_Directory = &#39;/usr/local/bar&#39;;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='Readonly'></a><a name="Readonly::Scalar_$var_=&#62;_$value;"
+>Readonly::Scalar $var =&#62; $value;</a></dt>
+
+<dd>
+<p>Creates a nonmodifiable scalar, <code>$var</code>, and assigns a value of <code>$value</code> to it. Thereafter, its value may not be changed. Any attempt to modify the value will cause your program to die.</p>
+
+<p>A value <i>must</i> be supplied. If you want the variable to have <code>undef</code> as its value, you must specify <code>undef</code>.</p>
+
+<p>If <code>$value</code> is a reference to a scalar, array, or hash, then this function will mark the scalar, array, or hash it points to as being Readonly as well, and it will recursively traverse the structure, marking the whole thing as Readonly. Usually, this is what you want. However, if you want only the <code>$value</code> marked as Readonly, use <code>Scalar1</code>.</p>
+
+<p>If $var is already a Readonly variable, the program will die with an error about reassigning Readonly variables.</p>
+
+<dt><a name='Readonly'></a><a name="Readonly::Array_@arr_=&#62;_(value,_value,_...);"
+>Readonly::Array @arr =&#62; (value, value, ...);</a></dt>
+
+<dd>
+<p>Creates a nonmodifiable array, <code>@arr</code>, and assigns the specified list of values to it. Thereafter, none of its values may be changed; the array may not be lengthened or shortened or spliced. Any attempt to do so will cause your program to die.</p>
+
+<p>If any of the values passed is a reference to a scalar, array, or hash, then this function will mark the scalar, array, or hash it points to as being Readonly as well, and it will recursively traverse the structure, marking the whole thing as Readonly. Usually, this is what you want. However, if you want only the hash <code>%@arr</code> itself marked as Readonly, use <code>Array1</code>.</p>
+
+<p>If @arr is already a Readonly variable, the program will die with an error about reassigning Readonly variables.</p>
+
+<dt><a name='Readonly'></a><a name="Readonly::Hash_%h_=&#62;_(key_=&#62;_value,_key_=&#62;_value,_...);"
+>Readonly::Hash %h =&#62; (key =&#62; value, key =&#62; value, ...);</a></dt>
+
+<dd>
+<dt><a name='Readonly'></a><a name="Readonly::Hash_%h_=&#62;_{key_=&#62;_value,_key_=&#62;_value,_...};"
+>Readonly::Hash %h =&#62; {key =&#62; value, key =&#62; value, ...};</a></dt>
+
+<dd>
+<p>Creates a nonmodifiable hash, <code>%h</code>, and assigns the specified keys and values to it. Thereafter, its keys or values may not be changed. Any attempt to do so will cause your program to die.</p>
+
+<p>A list of keys and values may be specified (with parentheses in the synopsis above), or a hash reference may be specified (curly braces in the synopsis above). If a list is specified, it must have an even number of elements, or the function will die.</p>
+
+<p>If any of the values is a reference to a scalar, array, or hash, then this function will mark the scalar, array, or hash it points to as being Readonly as well, and it will recursively traverse the structure, marking the whole thing as Readonly. Usually, this is what you want. However, if you want only the hash <code>%h</code> itself marked as Readonly, use <code>Hash1</code>.</p>
+
+<p>If %h is already a Readonly variable, the program will die with an error about reassigning Readonly variables.</p>
+
+<dt><a name='Readonly'></a><a name="Readonly_$var_=&#62;_$value;"
+>Readonly $var =&#62; $value;</a></dt>
+
+<dd>
+<dt><a name='Readonly'></a><a name="Readonly_@arr_=&#62;_(value,_value,_...);"
+>Readonly @arr =&#62; (value, value, ...);</a></dt>
+
+<dd>
+<dt><a name='Readonly'></a><a name="Readonly_%h_=&#62;_(key_=&#62;_value,_...);"
+>Readonly %h =&#62; (key =&#62; value, ...);</a></dt>
+
+<dd>
+<dt><a name='Readonly'></a><a name="Readonly_%h_=&#62;_{key_=&#62;_value,_...};"
+>Readonly %h =&#62; {key =&#62; value, ...};</a></dt>
+
+<dd>
+<p>The <code>Readonly</code> function is an alternate to the <code>Scalar</code>, <code>Array</code>, and <code>Hash</code> functions. It has the advantage (if you consider it an advantage) of being one function. That may make your program look neater, if you&#39;re initializing a whole bunch of constants at once. You may or may not prefer this uniform style.</p>
+
+<p>It has the disadvantage of having a slightly different syntax for versions of Perl prior to 5.8. For earlier versions, you must supply a backslash, because it requires a reference as the first parameter.</p>
+
+<pre class="sh_perl">  Readonly \$var =&#62; $value;
+  Readonly \@arr =&#62; (value, value, ...);
+  Readonly \%h =&#62; (key =&#62; value, ...);
+  Readonly \%h =&#62; {key =&#62; value, ...};</pre>
+
+<p>You may or may not consider this ugly.</p>
+
+<dt><a name='Readonly'></a><a name="Readonly::Scalar1_$var_=&#62;_$value;"
+>Readonly::Scalar1 $var =&#62; $value;</a></dt>
+
+<dd>
+<dt><a name='Readonly'></a><a name="Readonly::Array1_@arr_=&#62;_(value,_value,_...);"
+>Readonly::Array1 @arr =&#62; (value, value, ...);</a></dt>
+
+<dd>
+<dt><a name='Readonly'></a><a name="Readonly::Hash1_%h_=&#62;_(key_=&#62;_value,_key_=&#62;_value,_...);"
+>Readonly::Hash1 %h =&#62; (key =&#62; value, key =&#62; value, ...);</a></dt>
+
+<dd>
+<dt><a name='Readonly'></a><a name="Readonly::Hash1_%h_=&#62;_{key_=&#62;_value,_key_=&#62;_value,_...};"
+>Readonly::Hash1 %h =&#62; {key =&#62; value, key =&#62; value, ...};</a></dt>
+
+<dd>
+<p>These alternate functions create shallow Readonly variables, instead of deep ones. For example:</p>
+
+<pre class="sh_perl"> Readonly::Array1 @shal =&#62; (1, 2, {perl=&#62;&#39;Rules&#39;, java=&#62;&#39;Bites&#39;}, 4, 5);
+ Readonly::Array  @deep =&#62; (1, 2, {perl=&#62;&#39;Rules&#39;, java=&#62;&#39;Bites&#39;}, 4, 5);
+
+ $shal[1] = 7;           # error
+ $shal[2]{APL}=&#39;Weird&#39;;  # Allowed! since the hash isn&#39;t Readonly
+ $deep[1] = 7;           # error
+ $deep[2]{APL}=&#39;Weird&#39;;  # error, since the hash is Readonly</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLES"
+>EXAMPLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> # SCALARS:
+
+ # A plain old read-only value
+ Readonly::Scalar $a =&#62; &#34;A string value&#34;;
+
+ # The value need not be a compile-time constant:
+ Readonly::Scalar $a =&#62; $computed_value;
+
+
+ # ARRAYS:
+
+ # A read-only array:
+ Readonly::Array @a =&#62; (1, 2, 3, 4);
+
+ # The parentheses are optional:
+ Readonly::Array @a =&#62; 1, 2, 3, 4;
+
+ # You can use Perl&#39;s built-in array quoting syntax:
+ Readonly::Array @a =&#62; qw/1 2 3 4/;
+
+ # You can initialize a read-only array from a variable one:
+ Readonly::Array @a =&#62; @computed_values;
+
+ # A read-only array can be empty, too:
+ Readonly::Array @a =&#62; ();
+ Readonly::Array @a;        # equivalent
+
+
+ # HASHES
+
+ # Typical usage:
+ Readonly::Hash %a =&#62; (key1 =&#62; &#39;value1&#39;, key2 =&#62; &#39;value2&#39;);
+
+ # A read-only hash can be initialized from a variable one:
+ Readonly::Hash %a =&#62; %computed_values;
+
+ # A read-only hash can be empty:
+ Readonly::Hash %a =&#62; ();
+ Readonly::Hash %a;        # equivalent
+
+ # If you pass an odd number of values, the program will die:
+ Readonly::Hash %a =&#62; (key1 =&#62; &#39;value1&#39;, &#34;value2&#34;);
+     --&#62; dies with &#34;May not store an odd number of values in a hash&#34;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORTS"
+>EXPORTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>By default, this module exports the following symbol into the calling program&#39;s namespace:</p>
+
+<pre class="sh_perl"> Readonly</pre>
+
+<p>The following symbols are available for import into your program, if you like:</p>
+
+<pre class="sh_perl"> Scalar  Scalar1
+ Array   Array1
+ Hash    Hash1</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="REQUIREMENTS"
+>REQUIREMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> Perl 5.000
+ Carp.pm (included with Perl)
+ Exporter.pm (included with Perl)
+
+ Readonly::XS is recommended but not required.</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ACKNOWLEDGEMENTS"
+>ACKNOWLEDGEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Thanks to Slaven Rezic for the idea of one common function (Readonly) for all three types of variables (13 April 2002).</p>
+
+<p>Thanks to Ernest Lergon for the idea (and initial code) for deeply-Readonly data structures (21 May 2002).</p>
+
+<p>Thanks to Damian Conway for the idea (and code) for making the Readonly function work a lot smoother under perl 5.8+.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR_/_COPYRIGHT"
+>AUTHOR / COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Eric J. Roode, roode@cpan.org</p>
+
+<p>Copyright (c) 2001-2004 by Eric J. Roode. All Rights Reserved. This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>If you have suggestions for improvement, please drop me a line. If you make improvements to this software, I ask that you please send me a copy of your changes. Thanks.</p>
+
+<p>Readonly.pm is made from 100% recycled electrons. No animals were harmed during the development and testing of this module. Not sold in stores! Readonly::XS sold separately. Void where prohibited.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78234 Uploads, 24724 Distributions
+106030 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Thu Apr 26 23:44:29 2012 GMT (0.0519919395446777) @cpansearch1 -->
+ </body>
+</html>

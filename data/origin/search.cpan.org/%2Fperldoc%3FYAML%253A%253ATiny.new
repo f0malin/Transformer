@@ -1,0 +1,738 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>YAML::Tiny - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","YAML-Tiny",3]);
+    _gaq.push(["_setCustomVar",5,"Release","YAML-Tiny-1.51",3]);
+    _gaq.push(["_setCustomVar",3,"Module","YAML::Tiny",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ADAMK",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?YAML::Tiny">permalink</a></div>
+  <a href="/~adamk/">Adam Kennedy</a> &gt;
+  <a href="/~adamk/YAML-Tiny-1.51/">YAML-Tiny-1.51</a> &gt;
+  YAML::Tiny
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/884124d0169f41668fb3f948b2ba8b0a?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/A/AD/ADAMK/YAML-Tiny-1.51.tar.gz">YAML-Tiny-1.51.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=YAML%3A%3ATiny;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ADAMK/YAML-Tiny-1.51/lib/YAML/Tiny.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 14</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 9</td></tr>
+</table>
+<a href="http://rt.cpan.org/NoAuth/ReportBug.html?Queue=YAML-Tiny">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.51 &nbsp;
+<span class="noprint">
+  <a href="/src/ADAMK/YAML-Tiny-1.51/lib/YAML/Tiny.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#PREAMBLE'>PREAMBLE</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#YAML_TINY_SPECIFICATION'>YAML TINY SPECIFICATION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#1._Introduction_and_Goals'>1. Introduction and Goals</a>
+    <li class='indexItem indexItem2'><a href='#2._Introduction'>2. Introduction</a>
+    <li class='indexItem indexItem2'><a href='#3._Processing_YAML_Tiny_Information'>3. Processing YAML Tiny Information</a>
+    <li class='indexItem indexItem2'><a href='#4._Syntax'>4. Syntax</a>
+    <li class='indexItem indexItem2'><a href='#Additional_Perl-Specific_Notes'>Additional Perl-Specific Notes</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#read_$filename'>read $filename</a>
+    <li class='indexItem indexItem2'><a href='#read_string_$string;'>read_string $string;</a>
+    <li class='indexItem indexItem2'><a href='#write_$filename'>write $filename</a>
+    <li class='indexItem indexItem2'><a href='#write_string'>write_string</a>
+    <li class='indexItem indexItem2'><a href='#errstr'>errstr</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Dump'>Dump</a>
+    <li class='indexItem indexItem2'><a href='#Load'>Load</a>
+    <li class='indexItem indexItem2'><a href='#freeze()_and_thaw()'>freeze() and thaw()</a>
+    <li class='indexItem indexItem2'><a href='#DumpFile(filepath,_list)'>DumpFile(filepath, list)</a>
+    <li class='indexItem indexItem2'><a href='#LoadFile(filepath)'>LoadFile(filepath)</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SUPPORT'>SUPPORT</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>YAML::Tiny - Read/Write YAML files with as little code as possible</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PREAMBLE"
+>PREAMBLE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The YAML specification is huge.
+Really,
+<b>really</b> huge.
+It contains all the functionality of XML,
+except with flexibility and choice,
+which makes it easier to read,
+but with a formal specification that is more complex than XML.</p>
+
+<p>The original pure-Perl implementation <a href="/perldoc?YAML" class="podlinkpod"
+>YAML</a> costs just over 4 megabytes of memory to load.
+Just like with Windows .ini files (3 meg to load) and CSS (3.5 meg to load) the situation is just asking for a <b>YAML::Tiny</b> module,
+an incomplete but correct and usable subset of the functionality,
+in as little code as possible.</p>
+
+<p>Like the other <code>::Tiny</code> modules,
+YAML::Tiny has no non-core dependencies,
+does not require a compiler to install,
+is back-compatible to Perl 5.004,
+and can be inlined into other modules if needed.</p>
+
+<p>In exchange for this adding this extreme flexibility,
+it provides support for only a limited subset of YAML.
+But the subset supported contains most of the features for the more common usese of YAML.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    #############################################
+    # In your file
+    
+    ---
+    rootproperty: blah
+    section:
+      one: two
+      three: four
+      Foo: Bar
+      empty: ~
+    
+    
+    
+    #############################################
+    # In your program
+    
+    use YAML::Tiny;
+    
+    # Create a YAML file
+    my $yaml = YAML::Tiny-&#62;new;
+    
+    # Open the config
+    $yaml = YAML::Tiny-&#62;read( &#39;file.yml&#39; );
+    
+    # Reading properties
+    my $root = $yaml-&#62;[0]-&#62;{rootproperty};
+    my $one  = $yaml-&#62;[0]-&#62;{section}-&#62;{one};
+    my $Foo  = $yaml-&#62;[0]-&#62;{section}-&#62;{Foo};
+    
+    # Changing data
+    $yaml-&#62;[0]-&#62;{newsection} = { this =&#62; &#39;that&#39; }; # Add a section
+    $yaml-&#62;[0]-&#62;{section}-&#62;{Foo} = &#39;Not Bar!&#39;;     # Change a value
+    delete $yaml-&#62;[0]-&#62;{section};                  # Delete a value
+    
+    # Add an entire document
+    $yaml-&#62;[1] = [ &#39;foo&#39;, &#39;bar&#39;, &#39;baz&#39; ];
+    
+    # Save the file
+    $yaml-&#62;write( &#39;file.conf&#39; );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><b>YAML::Tiny</b> is a perl class for reading and writing YAML-style files, written with as little code as possible, reducing load time and memory overhead.</p>
+
+<p>Most of the time it is accepted that Perl applications use a lot of memory and modules. The <b>::Tiny</b> family of modules is specifically intended to provide an ultralight and zero-dependency alternative to many more-thorough standard modules.</p>
+
+<p>This module is primarily for reading human-written files (like simple config files) and generating very simple human-readable files. Note that I said <b>human-readable</b> and not <b>geek-readable</b>. The sort of files that your average manager or secretary should be able to look at and make sense of.</p>
+
+<p><a href="/~adamk/YAML-Tiny-1.51/lib/YAML/Tiny.pm" class="podlinkpod"
+>YAML::Tiny</a> does not generate comments, it won&#39;t necesarily preserve the order of your hashes, and it will normalise if reading in and writing out again.</p>
+
+<p>It only supports a very basic subset of the full YAML specification.</p>
+
+<p>Usage is targetted at files like Perl&#39;s META.yml, for which a small and easily-embeddable module is extremely attractive.</p>
+
+<p>Features will only be added if they are human readable, and can be written in a few lines of code. Please don&#39;t be offended if your request is refused. Someone has to draw the line, and for YAML::Tiny that someone is me.</p>
+
+<p>If you need something with more power move up to <a href="/perldoc?YAML" class="podlinkpod"
+>YAML</a> (4 megabytes of memory overhead) or <a href="/perldoc?YAML%3A%3ASyck" class="podlinkpod"
+>YAML::Syck</a> (275k, but requires libsyck and a C compiler).</p>
+
+<p>To restate, <a href="/~adamk/YAML-Tiny-1.51/lib/YAML/Tiny.pm" class="podlinkpod"
+>YAML::Tiny</a> does <b>not</b> preserve your comments, whitespace, or the order of your YAML data. But it should round-trip from Perl structure to file and back again just fine.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="YAML_TINY_SPECIFICATION"
+>YAML TINY SPECIFICATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This section of the documentation provides a specification for &#34;YAML Tiny&#34;, a subset of the YAML specification.</p>
+
+<p>It is based on and described comparatively to the YAML 1.1 Working Draft 2004-12-28 specification, located at <a href="http://yaml.org/spec/current.html" class="podlinkurl"
+>http://yaml.org/spec/current.html</a>.</p>
+
+<p>Terminology and chapter numbers are based on that specification.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="1._Introduction_and_Goals"
+>1. Introduction and Goals</a></h2>
+
+<p>The purpose of the YAML Tiny specification is to describe a useful subset of the YAML specification that can be used for typical document-oriented use cases such as configuration files and simple data structure dumps.</p>
+
+<p>Many specification elements that add flexibility or extensibility are intentionally removed, as is support for complex datastructures, class and object-orientation.</p>
+
+<p>In general, the YAML Tiny language targets only those data structures available in JSON, with the additional limitation that only simple keys are supported.</p>
+
+<p>As a result, all possible YAML Tiny documents should be able to be transformed into an equivalent JSON document, although the reverse is not necesarily true (but will be true in simple cases).</p>
+
+<p>As a result of these simplifications the YAML Tiny specification should be implementable in a (relatively) small amount of code in any language that supports Perl Compatible Regular Expressions (PCRE).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="2._Introduction"
+>2. Introduction</a></h2>
+
+<p>YAML Tiny supports three data structures. These are scalars (in a variety of forms), block-form sequences and block-form mappings. Flow-style sequences and mappings are not supported, with some minor exceptions detailed later.</p>
+
+<p>The use of three dashes &#34;---&#34; to indicate the start of a new document is supported, and multiple documents per file/stream is allowed.</p>
+
+<p>Both line and inline comments are supported.</p>
+
+<p>Scalars are supported via the plain style, single quote and double quote, as well as literal-style and folded-style multi-line scalars.</p>
+
+<p>The use of explicit tags is not supported.</p>
+
+<p>The use of &#34;null&#34; type scalars is supported via the ~ character.</p>
+
+<p>The use of &#34;bool&#34; type scalars is not supported.</p>
+
+<p>However, serializer implementations should take care to explicitly escape strings that match a &#34;bool&#34; keyword in the following set to prevent other implementations that do support &#34;bool&#34; accidentally reading a string as a boolean</p>
+
+<pre class="sh_perl">  y|Y|yes|Yes|YES|n|N|no|No|NO
+  |true|True|TRUE|false|False|FALSE
+  |on|On|ON|off|Off|OFF</pre>
+
+<p>The use of anchors and aliases is not supported.</p>
+
+<p>The use of directives is supported only for the %YAML directive.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="3._Processing_YAML_Tiny_Information"
+>3. Processing YAML Tiny Information</a></h2>
+
+<p><b>Processes</b></p>
+
+<p>The YAML specification dictates three-phase serialization and three-phase deserialization.</p>
+
+<p>The YAML Tiny specification does not mandate any particular methodology or mechanism for parsing.</p>
+
+<p>Any compliant parser is only required to parse a single document at a time. The ability to support streaming documents is optional and most likely non-typical.</p>
+
+<p>Because anchors and aliases are not supported, the resulting representation graph is thus directed but (unlike the main YAML specification) <b>acyclic</b>.</p>
+
+<p>Circular references/pointers are not possible, and any YAML Tiny serializer detecting a circular reference should error with an appropriate message.</p>
+
+<p><b>Presentation Stream</b></p>
+
+<p>YAML Tiny is notionally unicode, but support for unicode is required if the underlying language or system being used to implement a parser does not support Unicode. If unicode is encountered in this case an error should be returned.</p>
+
+<p><b>Loading Failure Points</b></p>
+
+<p>YAML Tiny parsers and emitters are not expected to recover from adapt to errors. The specific error modality of any implementation is not dictated (return codes, exceptions, etc) but is expected to be consistant.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="4._Syntax"
+>4. Syntax</a></h2>
+
+<p><b>Character Set</b></p>
+
+<p>YAML Tiny streams are implemented primarily using the ASCII character set, although the use of Unicode inside strings is allowed if support by the implementation.</p>
+
+<p>Specific YAML Tiny encoded document types aiming for maximum compatibility should restrict themselves to ASCII.</p>
+
+<p>The escaping and unescaping of the 8-bit YAML escapes is required.</p>
+
+<p>The escaping and unescaping of 16-bit and 32-bit YAML escapes is not required.</p>
+
+<p><b>Indicator Characters</b></p>
+
+<p>Support for the &#34;~&#34; null/undefined indicator is required.</p>
+
+<p>Implementations may represent this as appropriate for the underlying language.</p>
+
+<p>Support for the &#34;-&#34; block sequence indicator is required.</p>
+
+<p>Support for the &#34;?&#34; mapping key indicator is <b>not</b> required.</p>
+
+<p>Support for the &#34;:&#34; mapping value indicator is required.</p>
+
+<p>Support for the &#34;,&#34; flow collection indicator is <b>not</b> required.</p>
+
+<p>Support for the &#34;[&#34; flow sequence indicator is <b>not</b> required, with one exception (detailed below).</p>
+
+<p>Support for the &#34;]&#34; flow sequence indicator is <b>not</b> required, with one exception (detailed below).</p>
+
+<p>Support for the &#34;{&#34; flow mapping indicator is <b>not</b> required, with one exception (detailed below).</p>
+
+<p>Support for the &#34;}&#34; flow mapping indicator is <b>not</b> required, with one exception (detailed below).</p>
+
+<p>Support for the &#34;#&#34; comment indicator is required.</p>
+
+<p>Support for the &#34;&#38;&#34; anchor indicator is <b>not</b> required.</p>
+
+<p>Support for the &#34;*&#34; alias indicator is <b>not</b> required.</p>
+
+<p>Support for the &#34;!&#34; tag indicator is <b>not</b> required.</p>
+
+<p>Support for the &#34;|&#34; literal block indicator is required.</p>
+
+<p>Support for the &#34;&#62;&#34; folded block indicator is required.</p>
+
+<p>Support for the &#34;&#39;&#34; single quote indicator is required.</p>
+
+<p>Support for the &#34;&#34;&#34; double quote indicator is required.</p>
+
+<p>Support for the &#34;%&#34; directive indicator is required, but only for the special case of a %YAML version directive before the &#34;---&#34; document header, or on the same line as the document header.</p>
+
+<p>For example:</p>
+
+<pre class="sh_perl">  %YAML 1.1
+  ---
+  - A sequence with a single element</pre>
+
+<p>Special Exception:</p>
+
+<p>To provide the ability to support empty sequences and mappings, support for the constructs [] (empty sequence) and {} (empty mapping) are required.</p>
+
+<p>For example,</p>
+
+<pre class="sh_perl">  %YAML 1.1
+  # A document consisting of only an empty mapping
+  --- {}
+  # A document consisting of only an empty sequence
+  --- []
+  # A document consisting of an empty mapping within a sequence
+  - foo
+  - {}
+  - bar</pre>
+
+<p><b>Syntax Primitives</b></p>
+
+<p>Other than the empty sequence and mapping cases described above, YAML Tiny supports only the indentation-based block-style group of contexts.</p>
+
+<p>All five scalar contexts are supported.</p>
+
+<p>Indentation spaces work as per the YAML specification in all cases.</p>
+
+<p>Comments work as per the YAML specification in all simple cases. Support for indented multi-line comments is <b>not</b> required.</p>
+
+<p>Seperation spaces work as per the YAML specification in all cases.</p>
+
+<p><b>YAML Tiny Character Stream</b></p>
+
+<p>The only directive supported by the YAML Tiny specification is the %YAML language/version identifier. Although detected, this directive will have no control over the parsing itself.</p>
+
+<p>The parser must recognise both the YAML 1.0 and YAML 1.1+ formatting of this directive (as well as the commented form, although no explicit code should be needed to deal with this case, being a comment anyway)</p>
+
+<p>That is, all of the following should be supported.</p>
+
+<pre class="sh_perl">  --- #YAML:1.0
+  - foo
+
+  %YAML:1.0
+  ---
+  - foo
+
+  % YAML 1.1
+  ---
+  - foo</pre>
+
+<p>Support for the %TAG directive is <b>not</b> required.</p>
+
+<p>Support for additional directives is <b>not</b> required.</p>
+
+<p>Support for the document boundary marker &#34;---&#34; is required.</p>
+
+<p>Support for the document boundary market &#34;...&#34; is <b>not</b> required.</p>
+
+<p>If necesary, a document boundary should simply by indicated with a &#34;---&#34; marker, with not preceding &#34;...&#34; marker.</p>
+
+<p>Support for empty streams (containing no documents) is required.</p>
+
+<p>Support for implicit document starts is required.</p>
+
+<p>That is, the following must be equivalent.</p>
+
+<pre class="sh_perl"> # Full form
+ %YAML 1.1
+ ---
+ foo: bar
+
+ # Implicit form
+ foo: bar</pre>
+
+<p><b>Nodes</b></p>
+
+<p>Support for nodes optional anchor and tag properties are <b>not</b> required.</p>
+
+<p>Support for node anchors is <b>not</b> required.</p>
+
+<p>Support for node tags is <b>not</b> required.</p>
+
+<p>Support for alias nodes is <b>not</b> required.</p>
+
+<p>Support for flow nodes is <b>not</b> required.</p>
+
+<p>Support for block nodes is required.</p>
+
+<p><b>Scalar Styles</b></p>
+
+<p>Support for all five scalar styles are required as per the YAML specification, although support for quoted scalars spanning more than one line is <b>not</b> required.</p>
+
+<p>Support for the chomping indicators on multi-line scalar styles is required.</p>
+
+<p><b>Collection Styles</b></p>
+
+<p>Support for block-style sequences is required.</p>
+
+<p>Support for flow-style sequences is <b>not</b> required.</p>
+
+<p>Support for block-style mappings is required.</p>
+
+<p>Support for flow-style mappings is <b>not</b> required.</p>
+
+<p>Both sequences and mappings should be able to be arbitrarily nested.</p>
+
+<p>Support for plain-style mapping keys is required.</p>
+
+<p>Support for quoted keys in mappings is <b>not</b> required.</p>
+
+<p>Support for &#34;?&#34;-indicated explicit keys is <b>not</b> required.</p>
+
+<p>Here endeth the specification.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Additional_Perl-Specific_Notes"
+>Additional Perl-Specific Notes</a></h2>
+
+<p>For some Perl applications, it&#39;s important to know if you really have a number and not a string.</p>
+
+<p>That is, in some contexts is important that 3 the number is distinctive from &#34;3&#34; the string.</p>
+
+<p>Because even Perl itself is not trivially able to understand the difference (certainly without XS-based modules) Perl implementations of the YAML Tiny specification are not required to retain the distinctiveness of 3 vs &#34;3&#34;.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+>new</a></h2>
+
+<p>The constructor <code>new</code> creates and returns an empty <code>YAML::Tiny</code> object.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="read_$filename"
+>read $filename</a></h2>
+
+<p>The <code>read</code> constructor reads a YAML file from a file name, and returns a new <code>YAML::Tiny</code> object containing the parsed content.</p>
+
+<p>Returns the object on success, or <code>undef</code> on error.</p>
+
+<p>When <code>read</code> fails, <code>YAML::Tiny</code> sets an error message internally you can recover via <code>YAML::Tiny-&#62;errstr</code>. Although in <b>some</b> cases a failed <code>read</code> will also set the operating system error variable <code>$!</code>, not all errors do and you should not rely on using the <code>$!</code> variable.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="read_string_$string;"
+>read_string $string;</a></h2>
+
+<p>The <code>read</code> constructor reads a YAML file from a file name, and returns a new <code>YAML::Tiny</code> object containing the parsed content.</p>
+
+<p>Returns the object on success, or <code>undef</code> on error.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="write_$filename"
+>write $filename</a></h2>
+
+<p>The <code>write</code> method generates the file content for the properties, and writes it to disk to the filename specified.</p>
+
+<p>Returns true on success or <code>undef</code> on error.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="write_string"
+>write_string</a></h2>
+
+<p>Generates the file content for the object and returns it as a string.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="errstr"
+>errstr</a></h2>
+
+<p>When an error occurs, you can retrieve the error message either from the <code>$YAML::Tiny::errstr</code> variable, or using the <code>errstr()</code> method.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>YAML::Tiny implements a number of functions to add compatibility with the <a href="/perldoc?YAML" class="podlinkpod"
+>YAML</a> API. These should be a drop-in replacement, except that YAML::Tiny will <b>not</b> export functions by default, and so you will need to explicitly import the functions.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Dump"
+>Dump</a></h2>
+
+<pre class="sh_perl">  my $string = Dump(list-of-Perl-data-structures);</pre>
+
+<p>Turn Perl data into YAML. This function works very much like Data::Dumper::Dumper().</p>
+
+<p>It takes a list of Perl data strucures and dumps them into a serialized form.</p>
+
+<p>It returns a string containing the YAML stream.</p>
+
+<p>The structures can be references or plain scalars.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Load"
+>Load</a></h2>
+
+<pre class="sh_perl">  my @documents = Load(string-containing-a-YAML-stream);</pre>
+
+<p>Turn YAML into Perl data. This is the opposite of Dump.</p>
+
+<p>Just like <a href="/perldoc?Storable" class="podlinkpod"
+>Storable</a>&#39;s thaw() function or the eval() function in relation to <a href="/perldoc?Data%3A%3ADumper" class="podlinkpod"
+>Data::Dumper</a>.</p>
+
+<p>It parses a string containing a valid YAML stream into a list of Perl data structures.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="freeze()_and_thaw()"
+>freeze() and thaw()</a></h2>
+
+<p>Aliases to Dump() and Load() for <a href="/perldoc?Storable" class="podlinkpod"
+>Storable</a> fans. This will also allow YAML::Tiny to be plugged directly into modules like POE.pm, that use the freeze/thaw API for internal serialization.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="DumpFile(filepath,_list)"
+>DumpFile(filepath, list)</a></h2>
+
+<p>Writes the YAML stream to a file instead of just returning a string.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="LoadFile(filepath)"
+>LoadFile(filepath)</a></h2>
+
+<p>Reads the YAML stream from a file instead of a string.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUPPORT"
+>SUPPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Bugs should be reported via the CPAN bug tracker at</p>
+
+<p><a href="http://rt.cpan.org/NoAuth/ReportBug.html?Queue=YAML-Tiny" class="podlinkurl"
+>http://rt.cpan.org/NoAuth/ReportBug.html?Queue=YAML-Tiny</a></p>
+
+For other issues, or commercial enhancement or support, please contact
+<a href="http://ali.as/">Adam Kennedy</a> directly.
+
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Adam Kennedy &#60;adamk@cpan.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?YAML" class="podlinkpod"
+>YAML</a>, <a href="/perldoc?YAML%3A%3ASyck" class="podlinkpod"
+>YAML::Syck</a>, <a href="/perldoc?Config%3A%3ATiny" class="podlinkpod"
+>Config::Tiny</a>, <a href="/perldoc?CSS%3A%3ATiny" class="podlinkpod"
+>CSS::Tiny</a>, <a href="http://use.perl.org/~Alias/journal/29427" class="podlinkurl"
+>http://use.perl.org/~Alias/journal/29427</a>, <a href="http://ali.as/" class="podlinkurl"
+>http://ali.as/</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2006 - 2012 Adam Kennedy.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>The full text of the license can be found in the LICENSE file included with this module.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78272 Uploads, 24723 Distributions
+106001 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 20:03:38 2012 GMT (0.0713460445404053) @cpansearch1 -->
+ </body>
+</html>

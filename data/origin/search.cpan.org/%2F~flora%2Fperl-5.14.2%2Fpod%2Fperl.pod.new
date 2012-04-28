@@ -1,0 +1,839 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>perl - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",4,"Document","perl",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?perl">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  perl
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/pod/perl.pod">Annotate this POD
+(1)
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/pod/perl.pod">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~abigail/perl/pod/perl.pod">perl-5.15.9</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>perl - The Perl 5 language interpreter</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><b>perl</b> [&#160;<b>-sTtuUWX</b>&#160;] [&#160;<b>-hv</b>&#160;]&#160;[&#160;<b>-V</b>[:<i>configvar</i>]&#160;] [&#160;<b>-cw</b>&#160;]&#160;[&#160;<b>-d</b>[<b>t</b>][:<i>debugger</i>]&#160;]&#160;[&#160;<b>-D</b>[<i>number/list</i>]&#160;] [&#160;<b>-pna</b>&#160;]&#160;[&#160;<b>-F</b><i>pattern</i>&#160;]&#160;[&#160;<b>-l</b>[<i>octal</i>]&#160;]&#160;[&#160;<b>-0</b>[<i>octal/hexadecimal</i>]&#160;] [&#160;<b>-I</b><i>dir</i>&#160;]&#160;[&#160;<b>-m</b>[<b>-</b>]<i>module</i>&#160;]&#160;[&#160;<b>-M</b>[<b>-</b>]<i>&#39;module...&#39;</i>&#160;]&#160;[&#160;<b>-f</b>&#160;] [&#160;<b>-C&#160;[<i>number/list</i>]&#160;</b>] [&#160;<b>-S</b>&#160;] [&#160;<b>-x</b>[<i>dir</i>]&#160;] [&#160;<b>-i</b>[<i>extension</i>]&#160;] [&#160;[<b>-e</b>|<b>-E</b>]&#160;<i>&#39;command&#39;</i>&#160;]&#160;[&#160;<b>--</b>&#160;]&#160;[&#160;<i>programfile</i>&#160;]&#160;[&#160;<i>argument</i>&#160;]...</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="GETTING_HELP"
+>GETTING HELP <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The <em>perldoc</em> program gives you access to all the documentation that comes with Perl.
+You can get more documentation,
+tutorials and community support online at <a href="http://www.perl.org/" class="podlinkurl"
+>http://www.perl.org/</a>.</p>
+
+<p>If you&#39;re new to Perl,
+you should start by running <code>perldoc perlintro</code>,
+which is a general intro for beginners and provides some background to help you navigate the rest of Perl&#39;s extensive documentation.
+Run <code>perldoc perldoc</code> to learn more things you can do with <em>perldoc</em>.</p>
+
+<p>For ease of access,
+the Perl manual has been split up into several sections.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Overview"
+>Overview</a></h2>
+
+<pre class="sh_perl">    <a href="/~flora/perl-5.14.2/pod/perl.pod" class="podlinkpod"
+>perl</a>                Perl overview (this section)
+    <a href="/~flora/perl-5.14.2/pod/perlintro.pod" class="podlinkpod"
+>perlintro</a>           Perl introduction for beginners
+    <a href="/perldoc?perltoc" class="podlinkpod"
+>perltoc</a>             Perl documentation table of contents</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Tutorials"
+>Tutorials</a></h2>
+
+<pre class="sh_perl">    <a href="/~flora/perl-5.14.2/pod/perlreftut.pod" class="podlinkpod"
+>perlreftut</a>          Perl references short introduction
+    <a href="/~flora/perl-5.14.2/pod/perldsc.pod" class="podlinkpod"
+>perldsc</a>             Perl data structures intro
+    <a href="/~flora/perl-5.14.2/pod/perllol.pod" class="podlinkpod"
+>perllol</a>             Perl data structures: arrays of arrays
+
+    <a href="/~flora/perl-5.14.2/pod/perlrequick.pod" class="podlinkpod"
+>perlrequick</a>         Perl regular expressions quick start
+    <a href="/~flora/perl-5.14.2/pod/perlretut.pod" class="podlinkpod"
+>perlretut</a>           Perl regular expressions tutorial
+
+    <a href="/~flora/perl-5.14.2/pod/perlboot.pod" class="podlinkpod"
+>perlboot</a>            Perl OO tutorial for beginners
+    <a href="/~flora/perl-5.14.2/pod/perltoot.pod" class="podlinkpod"
+>perltoot</a>            Perl OO tutorial, part 1
+    <a href="/~flora/perl-5.14.2/pod/perltooc.pod" class="podlinkpod"
+>perltooc</a>            Perl OO tutorial, part 2
+    <a href="/~flora/perl-5.14.2/pod/perlbot.pod" class="podlinkpod"
+>perlbot</a>             Perl OO tricks and examples
+
+    <a href="/~flora/perl-5.14.2/pod/perlperf.pod" class="podlinkpod"
+>perlperf</a>            Perl Performance and Optimization Techniques
+
+    <a href="/~flora/perl-5.14.2/pod/perlstyle.pod" class="podlinkpod"
+>perlstyle</a>           Perl style guide
+
+    <a href="/~flora/perl-5.14.2/pod/perlcheat.pod" class="podlinkpod"
+>perlcheat</a>           Perl cheat sheet
+    <a href="/~flora/perl-5.14.2/pod/perltrap.pod" class="podlinkpod"
+>perltrap</a>            Perl traps for the unwary
+    <a href="/~flora/perl-5.14.2/pod/perldebtut.pod" class="podlinkpod"
+>perldebtut</a>          Perl debugging tutorial
+
+    <a href="/~flora/perl-5.14.2/pod/perlfaq.pod" class="podlinkpod"
+>perlfaq</a>             Perl frequently asked questions
+      <a href="/~flora/perl-5.14.2/pod/perlfaq1.pod" class="podlinkpod"
+>perlfaq1</a>          General Questions About Perl
+      <a href="/~flora/perl-5.14.2/pod/perlfaq2.pod" class="podlinkpod"
+>perlfaq2</a>          Obtaining and Learning about Perl
+      <a href="/~flora/perl-5.14.2/pod/perlfaq3.pod" class="podlinkpod"
+>perlfaq3</a>          Programming Tools
+      <a href="/~flora/perl-5.14.2/pod/perlfaq4.pod" class="podlinkpod"
+>perlfaq4</a>          Data Manipulation
+      <a href="/~flora/perl-5.14.2/pod/perlfaq5.pod" class="podlinkpod"
+>perlfaq5</a>          Files and Formats
+      <a href="/~flora/perl-5.14.2/pod/perlfaq6.pod" class="podlinkpod"
+>perlfaq6</a>          Regexes
+      <a href="/~flora/perl-5.14.2/pod/perlfaq7.pod" class="podlinkpod"
+>perlfaq7</a>          Perl Language Issues
+      <a href="/~flora/perl-5.14.2/pod/perlfaq8.pod" class="podlinkpod"
+>perlfaq8</a>          System Interaction
+      <a href="/~flora/perl-5.14.2/pod/perlfaq9.pod" class="podlinkpod"
+>perlfaq9</a>          Networking</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Reference_Manual"
+>Reference Manual</a></h2>
+
+<pre class="sh_perl">    <a href="/~flora/perl-5.14.2/pod/perlsyn.pod" class="podlinkpod"
+>perlsyn</a>             Perl syntax
+    <a href="/~flora/perl-5.14.2/pod/perldata.pod" class="podlinkpod"
+>perldata</a>            Perl data structures
+    <a href="/~flora/perl-5.14.2/pod/perlop.pod" class="podlinkpod"
+>perlop</a>              Perl operators and precedence
+    <a href="/~flora/perl-5.14.2/pod/perlsub.pod" class="podlinkpod"
+>perlsub</a>             Perl subroutines
+    <a href="/~flora/perl-5.14.2/pod/perlfunc.pod" class="podlinkpod"
+>perlfunc</a>            Perl built-in functions
+      <a href="/~flora/perl-5.14.2/pod/perlopentut.pod" class="podlinkpod"
+>perlopentut</a>       Perl open() tutorial
+      <a href="/~flora/perl-5.14.2/pod/perlpacktut.pod" class="podlinkpod"
+>perlpacktut</a>       Perl pack() and unpack() tutorial
+    <a href="/~flora/perl-5.14.2/pod/perlpod.pod" class="podlinkpod"
+>perlpod</a>             Perl plain old documentation
+    <a href="/~flora/perl-5.14.2/pod/perlpodspec.pod" class="podlinkpod"
+>perlpodspec</a>         Perl plain old documentation format specification
+    <a href="/~flora/perl-5.14.2/pod/perlpodstyle.pod" class="podlinkpod"
+>perlpodstyle</a>        Perl POD style guide
+    <a href="/~flora/perl-5.14.2/pod/perlrun.pod" class="podlinkpod"
+>perlrun</a>             Perl execution and options
+    <a href="/~flora/perl-5.14.2/pod/perldiag.pod" class="podlinkpod"
+>perldiag</a>            Perl diagnostic messages
+    <a href="/~flora/perl-5.14.2/pod/perllexwarn.pod" class="podlinkpod"
+>perllexwarn</a>         Perl warnings and their control
+    <a href="/~flora/perl-5.14.2/pod/perldebug.pod" class="podlinkpod"
+>perldebug</a>           Perl debugging
+    <a href="/~flora/perl-5.14.2/pod/perlvar.pod" class="podlinkpod"
+>perlvar</a>             Perl predefined variables
+    <a href="/~flora/perl-5.14.2/pod/perlre.pod" class="podlinkpod"
+>perlre</a>              Perl regular expressions, the rest of the story
+    <a href="/~flora/perl-5.14.2/pod/perlrebackslash.pod" class="podlinkpod"
+>perlrebackslash</a>     Perl regular expression backslash sequences
+    <a href="/~flora/perl-5.14.2/pod/perlrecharclass.pod" class="podlinkpod"
+>perlrecharclass</a>     Perl regular expression character classes
+    <a href="/~flora/perl-5.14.2/pod/perlreref.pod" class="podlinkpod"
+>perlreref</a>           Perl regular expressions quick reference
+    <a href="/~flora/perl-5.14.2/pod/perlref.pod" class="podlinkpod"
+>perlref</a>             Perl references, the rest of the story
+    <a href="/~flora/perl-5.14.2/pod/perlform.pod" class="podlinkpod"
+>perlform</a>            Perl formats
+    <a href="/~flora/perl-5.14.2/pod/perlobj.pod" class="podlinkpod"
+>perlobj</a>             Perl objects
+    <a href="/~flora/perl-5.14.2/pod/perltie.pod" class="podlinkpod"
+>perltie</a>             Perl objects hidden behind simple variables
+      <a href="/~flora/perl-5.14.2/pod/perldbmfilter.pod" class="podlinkpod"
+>perldbmfilter</a>     Perl DBM filters
+
+    <a href="/~flora/perl-5.14.2/pod/perlipc.pod" class="podlinkpod"
+>perlipc</a>             Perl interprocess communication
+    <a href="/~flora/perl-5.14.2/pod/perlfork.pod" class="podlinkpod"
+>perlfork</a>            Perl fork() information
+    <a href="/~flora/perl-5.14.2/pod/perlnumber.pod" class="podlinkpod"
+>perlnumber</a>          Perl number semantics
+
+    <a href="/~flora/perl-5.14.2/pod/perlthrtut.pod" class="podlinkpod"
+>perlthrtut</a>          Perl threads tutorial
+
+    <a href="/~flora/perl-5.14.2/pod/perlport.pod" class="podlinkpod"
+>perlport</a>            Perl portability guide
+    <a href="/~flora/perl-5.14.2/pod/perllocale.pod" class="podlinkpod"
+>perllocale</a>          Perl locale support
+    <a href="/~flora/perl-5.14.2/pod/perluniintro.pod" class="podlinkpod"
+>perluniintro</a>        Perl Unicode introduction
+    <a href="/~flora/perl-5.14.2/pod/perlunicode.pod" class="podlinkpod"
+>perlunicode</a>         Perl Unicode support
+    <a href="/~flora/perl-5.14.2/pod/perlunifaq.pod" class="podlinkpod"
+>perlunifaq</a>          Perl Unicode FAQ
+    <a href="/perldoc?perluniprops" class="podlinkpod"
+>perluniprops</a>        Index of Unicode Version 6.0.0 properties in Perl
+    <a href="/~flora/perl-5.14.2/pod/perlunitut.pod" class="podlinkpod"
+>perlunitut</a>          Perl Unicode tutorial
+    <a href="/~flora/perl-5.14.2/pod/perlebcdic.pod" class="podlinkpod"
+>perlebcdic</a>          Considerations for running Perl on EBCDIC platforms
+
+    <a href="/~flora/perl-5.14.2/pod/perlsec.pod" class="podlinkpod"
+>perlsec</a>             Perl security
+
+    <a href="/~flora/perl-5.14.2/pod/perlmod.pod" class="podlinkpod"
+>perlmod</a>             Perl modules: how they work
+    <a href="/~flora/perl-5.14.2/pod/perlmodlib.PL" class="podlinkpod"
+>perlmodlib</a>          Perl modules: how to write and use
+    <a href="/~flora/perl-5.14.2/pod/perlmodstyle.pod" class="podlinkpod"
+>perlmodstyle</a>        Perl modules: how to write modules with style
+    <a href="/~flora/perl-5.14.2/pod/perlmodinstall.pod" class="podlinkpod"
+>perlmodinstall</a>      Perl modules: how to install from CPAN
+    <a href="/~flora/perl-5.14.2/pod/perlnewmod.pod" class="podlinkpod"
+>perlnewmod</a>          Perl modules: preparing a new module for distribution
+    <a href="/~flora/perl-5.14.2/pod/perlpragma.pod" class="podlinkpod"
+>perlpragma</a>          Perl modules: writing a user pragma
+
+    <a href="/~flora/perl-5.14.2/pod/perlutil.pod" class="podlinkpod"
+>perlutil</a>            utilities packaged with the Perl distribution
+
+    <a href="/~flora/perl-5.14.2/pod/perlcompile.pod" class="podlinkpod"
+>perlcompile</a>         Perl compiler suite intro
+
+    <a href="/perldoc?perlfilter" class="podlinkpod"
+>perlfilter</a>          Perl source filters
+
+    <a href="/~flora/perl-5.14.2/pod/perlglossary.pod" class="podlinkpod"
+>perlglossary</a>        Perl Glossary</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Internals_and_C_Language_Interface"
+>Internals and C Language Interface</a></h2>
+
+<pre class="sh_perl">    <a href="/~flora/perl-5.14.2/pod/perlembed.pod" class="podlinkpod"
+>perlembed</a>           Perl ways to embed perl in your C or C++ application
+    <a href="/~flora/perl-5.14.2/pod/perldebguts.pod" class="podlinkpod"
+>perldebguts</a>         Perl debugging guts and tips
+    <a href="/~flora/perl-5.14.2/pod/perlxstut.pod" class="podlinkpod"
+>perlxstut</a>           Perl XS tutorial
+    <a href="/~flora/perl-5.14.2/pod/perlxs.pod" class="podlinkpod"
+>perlxs</a>              Perl XS application programming interface
+    <a href="/~flora/perl-5.14.2/pod/perlclib.pod" class="podlinkpod"
+>perlclib</a>            Internal replacements for standard C library functions
+    <a href="/~flora/perl-5.14.2/pod/perlguts.pod" class="podlinkpod"
+>perlguts</a>            Perl internal functions for those doing extensions
+    <a href="/~flora/perl-5.14.2/pod/perlcall.pod" class="podlinkpod"
+>perlcall</a>            Perl calling conventions from C
+    <a href="/~flora/perl-5.14.2/pod/perlmroapi.pod" class="podlinkpod"
+>perlmroapi</a>          Perl method resolution plugin interface
+    <a href="/~flora/perl-5.14.2/pod/perlreapi.pod" class="podlinkpod"
+>perlreapi</a>           Perl regular expression plugin interface
+    <a href="/~flora/perl-5.14.2/pod/perlreguts.pod" class="podlinkpod"
+>perlreguts</a>          Perl regular expression engine internals
+
+    <a href="/~flora/perl-5.14.2/autodoc.pl" class="podlinkpod"
+>perlapi</a>             Perl API listing (autogenerated)
+    <a href="/perldoc?perlintern" class="podlinkpod"
+>perlintern</a>          Perl internal functions (autogenerated)
+    <a href="/~flora/perl-5.14.2/pod/perliol.pod" class="podlinkpod"
+>perliol</a>             C API for Perl&#39;s implementation of IO in Layers
+    <a href="/~flora/perl-5.14.2/pod/perlapio.pod" class="podlinkpod"
+>perlapio</a>            Perl internal IO abstraction interface
+
+    <a href="/~flora/perl-5.14.2/pod/perlhack.pod" class="podlinkpod"
+>perlhack</a>            Perl hackers guide
+    <a href="/~flora/perl-5.14.2/pod/perlsource.pod" class="podlinkpod"
+>perlsource</a>          Guide to the Perl source tree
+    <a href="/~flora/perl-5.14.2/pod/perlinterp.pod" class="podlinkpod"
+>perlinterp</a>          Overview of the Perl intepreter source and how it works
+    <a href="/~flora/perl-5.14.2/pod/perlhacktut.pod" class="podlinkpod"
+>perlhacktut</a>         Walk through the creation of a simple C code patch
+    <a href="/~flora/perl-5.14.2/pod/perlhacktips.pod" class="podlinkpod"
+>perlhacktips</a>        Tips for Perl core C code hacking
+    <a href="/~flora/perl-5.14.2/pod/perlpolicy.pod" class="podlinkpod"
+>perlpolicy</a>          Perl development policies
+    <a href="/~flora/perl-5.14.2/pod/perlgit.pod" class="podlinkpod"
+>perlgit</a>             Using git with the Perl repository</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Miscellaneous"
+>Miscellaneous</a></h2>
+
+<pre class="sh_perl">    <a href="/~flora/perl-5.14.2/pod/perlbook.pod" class="podlinkpod"
+>perlbook</a>            Perl book information
+    <a href="/~flora/perl-5.14.2/pod/perlcommunity.pod" class="podlinkpod"
+>perlcommunity</a>       Perl community information
+    <a href="/~flora/perl-5.14.2/pod/perltodo.pod" class="podlinkpod"
+>perltodo</a>            Perl things to do
+
+    <a href="/~flora/perl-5.14.2/pod/perldoc.pod" class="podlinkpod"
+>perldoc</a>             Look up Perl documentation in Pod format
+
+    <a href="/~flora/perl-5.14.2/pod/perlhist.pod" class="podlinkpod"
+>perlhist</a>            Perl history records
+    <a href="/~flora/perl-5.14.2/pod/perldelta.pod" class="podlinkpod"
+>perldelta</a>           Perl changes since previous version
+    <a href="/~flora/perl-5.14.2/pod/perl5141delta.pod" class="podlinkpod"
+>perl5141delta</a>       Perl changes in version 5.14.1
+    <a href="/~flora/perl-5.14.2/pod/perl5140delta.pod" class="podlinkpod"
+>perl5140delta</a>       Perl changes in version 5.14.0
+    <a href="/~flora/perl-5.14.2/pod/perl51311delta.pod" class="podlinkpod"
+>perl51311delta</a>      Perl changes in version 5.13.11
+    <a href="/~flora/perl-5.14.2/pod/perl51310delta.pod" class="podlinkpod"
+>perl51310delta</a>      Perl changes in version 5.13.10
+    <a href="/~flora/perl-5.14.2/pod/perl5139delta.pod" class="podlinkpod"
+>perl5139delta</a>       Perl changes in version 5.13.9
+    <a href="/~flora/perl-5.14.2/pod/perl5138delta.pod" class="podlinkpod"
+>perl5138delta</a>       Perl changes in version 5.13.8
+    <a href="/~flora/perl-5.14.2/pod/perl5137delta.pod" class="podlinkpod"
+>perl5137delta</a>       Perl changes in version 5.13.7
+    <a href="/~flora/perl-5.14.2/pod/perl5136delta.pod" class="podlinkpod"
+>perl5136delta</a>       Perl changes in version 5.13.6
+    <a href="/~flora/perl-5.14.2/pod/perl5135delta.pod" class="podlinkpod"
+>perl5135delta</a>       Perl changes in version 5.13.5
+    <a href="/~flora/perl-5.14.2/pod/perl5134delta.pod" class="podlinkpod"
+>perl5134delta</a>       Perl changes in version 5.13.4
+    <a href="/~flora/perl-5.14.2/pod/perl5133delta.pod" class="podlinkpod"
+>perl5133delta</a>       Perl changes in version 5.13.3
+    <a href="/~flora/perl-5.14.2/pod/perl5132delta.pod" class="podlinkpod"
+>perl5132delta</a>       Perl changes in version 5.13.2
+    <a href="/~flora/perl-5.14.2/pod/perl5131delta.pod" class="podlinkpod"
+>perl5131delta</a>       Perl changes in version 5.13.1
+    <a href="/~flora/perl-5.14.2/pod/perl5130delta.pod" class="podlinkpod"
+>perl5130delta</a>       Perl changes in version 5.13.0
+    <a href="/~flora/perl-5.14.2/pod/perl5123delta.pod" class="podlinkpod"
+>perl5123delta</a>       Perl changes in version 5.12.3
+    <a href="/~flora/perl-5.14.2/pod/perl5122delta.pod" class="podlinkpod"
+>perl5122delta</a>       Perl changes in version 5.12.2
+    <a href="/~flora/perl-5.14.2/pod/perl5121delta.pod" class="podlinkpod"
+>perl5121delta</a>       Perl changes in version 5.12.1
+    <a href="/~flora/perl-5.14.2/pod/perl5120delta.pod" class="podlinkpod"
+>perl5120delta</a>       Perl changes in version 5.12.0
+    <a href="/~flora/perl-5.14.2/pod/perl5115delta.pod" class="podlinkpod"
+>perl5115delta</a>       Perl changes in version 5.11.5
+    <a href="/~flora/perl-5.14.2/pod/perl5114delta.pod" class="podlinkpod"
+>perl5114delta</a>       Perl changes in version 5.11.4
+    <a href="/~flora/perl-5.14.2/pod/perl5113delta.pod" class="podlinkpod"
+>perl5113delta</a>       Perl changes in version 5.11.3
+    <a href="/~flora/perl-5.14.2/pod/perl5112delta.pod" class="podlinkpod"
+>perl5112delta</a>       Perl changes in version 5.11.2
+    <a href="/~flora/perl-5.14.2/pod/perl5111delta.pod" class="podlinkpod"
+>perl5111delta</a>       Perl changes in version 5.11.1
+    <a href="/~flora/perl-5.14.2/pod/perl5110delta.pod" class="podlinkpod"
+>perl5110delta</a>       Perl changes in version 5.11.0
+    <a href="/~flora/perl-5.14.2/pod/perl5101delta.pod" class="podlinkpod"
+>perl5101delta</a>       Perl changes in version 5.10.1
+    <a href="/~flora/perl-5.14.2/pod/perl5100delta.pod" class="podlinkpod"
+>perl5100delta</a>       Perl changes in version 5.10.0
+    <a href="/~flora/perl-5.14.2/pod/perl595delta.pod" class="podlinkpod"
+>perl595delta</a>        Perl changes in version 5.9.5
+    <a href="/~flora/perl-5.14.2/pod/perl594delta.pod" class="podlinkpod"
+>perl594delta</a>        Perl changes in version 5.9.4
+    <a href="/~flora/perl-5.14.2/pod/perl593delta.pod" class="podlinkpod"
+>perl593delta</a>        Perl changes in version 5.9.3
+    <a href="/~flora/perl-5.14.2/pod/perl592delta.pod" class="podlinkpod"
+>perl592delta</a>        Perl changes in version 5.9.2
+    <a href="/~flora/perl-5.14.2/pod/perl591delta.pod" class="podlinkpod"
+>perl591delta</a>        Perl changes in version 5.9.1
+    <a href="/~flora/perl-5.14.2/pod/perl590delta.pod" class="podlinkpod"
+>perl590delta</a>        Perl changes in version 5.9.0
+    <a href="/~flora/perl-5.14.2/pod/perl589delta.pod" class="podlinkpod"
+>perl589delta</a>        Perl changes in version 5.8.9
+    <a href="/~flora/perl-5.14.2/pod/perl588delta.pod" class="podlinkpod"
+>perl588delta</a>        Perl changes in version 5.8.8
+    <a href="/~flora/perl-5.14.2/pod/perl587delta.pod" class="podlinkpod"
+>perl587delta</a>        Perl changes in version 5.8.7
+    <a href="/~flora/perl-5.14.2/pod/perl586delta.pod" class="podlinkpod"
+>perl586delta</a>        Perl changes in version 5.8.6
+    <a href="/~flora/perl-5.14.2/pod/perl585delta.pod" class="podlinkpod"
+>perl585delta</a>        Perl changes in version 5.8.5
+    <a href="/~flora/perl-5.14.2/pod/perl584delta.pod" class="podlinkpod"
+>perl584delta</a>        Perl changes in version 5.8.4
+    <a href="/~flora/perl-5.14.2/pod/perl583delta.pod" class="podlinkpod"
+>perl583delta</a>        Perl changes in version 5.8.3
+    <a href="/~flora/perl-5.14.2/pod/perl582delta.pod" class="podlinkpod"
+>perl582delta</a>        Perl changes in version 5.8.2
+    <a href="/~flora/perl-5.14.2/pod/perl581delta.pod" class="podlinkpod"
+>perl581delta</a>        Perl changes in version 5.8.1
+    <a href="/~flora/perl-5.14.2/pod/perl58delta.pod" class="podlinkpod"
+>perl58delta</a>         Perl changes in version 5.8.0
+    <a href="/~flora/perl-5.14.2/pod/perl573delta.pod" class="podlinkpod"
+>perl573delta</a>        Perl changes in version 5.7.3
+    <a href="/~flora/perl-5.14.2/pod/perl572delta.pod" class="podlinkpod"
+>perl572delta</a>        Perl changes in version 5.7.2
+    <a href="/~flora/perl-5.14.2/pod/perl571delta.pod" class="podlinkpod"
+>perl571delta</a>        Perl changes in version 5.7.1
+    <a href="/~flora/perl-5.14.2/pod/perl570delta.pod" class="podlinkpod"
+>perl570delta</a>        Perl changes in version 5.7.0
+    <a href="/~flora/perl-5.14.2/pod/perl561delta.pod" class="podlinkpod"
+>perl561delta</a>        Perl changes in version 5.6.1
+    <a href="/~flora/perl-5.14.2/pod/perl56delta.pod" class="podlinkpod"
+>perl56delta</a>         Perl changes in version 5.6
+    <a href="/~flora/perl-5.14.2/pod/perl5005delta.pod" class="podlinkpod"
+>perl5005delta</a>       Perl changes in version 5.005
+    <a href="/~flora/perl-5.14.2/pod/perl5004delta.pod" class="podlinkpod"
+>perl5004delta</a>       Perl changes in version 5.004
+
+    <a href="/~flora/perl-5.14.2/pod/perlartistic.pod" class="podlinkpod"
+>perlartistic</a>        Perl Artistic License
+    <a href="/~flora/perl-5.14.2/pod/perlgpl.pod" class="podlinkpod"
+>perlgpl</a>             GNU General Public License</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Language-Specific"
+>Language-Specific</a></h2>
+
+<pre class="sh_perl">    <a href="/~flora/perl-5.14.2/README.cn" class="podlinkpod"
+>perlcn</a>              Perl for Simplified Chinese (in EUC-CN)
+    <a href="/~flora/perl-5.14.2/README.jp" class="podlinkpod"
+>perljp</a>              Perl for Japanese (in EUC-JP)
+    <a href="/~flora/perl-5.14.2/README.ko" class="podlinkpod"
+>perlko</a>              Perl for Korean (in EUC-KR)
+    <a href="/~flora/perl-5.14.2/README.tw" class="podlinkpod"
+>perltw</a>              Perl for Traditional Chinese (in Big5)</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Platform-Specific"
+>Platform-Specific</a></h2>
+
+<pre class="sh_perl">    <a href="/~flora/perl-5.14.2/README.aix" class="podlinkpod"
+>perlaix</a>             Perl notes for AIX
+    <a href="/~flora/perl-5.14.2/README.amiga" class="podlinkpod"
+>perlamiga</a>           Perl notes for AmigaOS
+    <a href="/~flora/perl-5.14.2/README.beos" class="podlinkpod"
+>perlbeos</a>            Perl notes for BeOS
+    <a href="/~flora/perl-5.14.2/README.bs2000" class="podlinkpod"
+>perlbs2000</a>          Perl notes for POSIX-BC BS2000
+    <a href="/~flora/perl-5.14.2/README.ce" class="podlinkpod"
+>perlce</a>              Perl notes for WinCE
+    <a href="/~flora/perl-5.14.2/README.cygwin" class="podlinkpod"
+>perlcygwin</a>          Perl notes for Cygwin
+    <a href="/~flora/perl-5.14.2/README.dgux" class="podlinkpod"
+>perldgux</a>            Perl notes for DG/UX
+    <a href="/~flora/perl-5.14.2/README.dos" class="podlinkpod"
+>perldos</a>             Perl notes for DOS
+    <a href="/~flora/perl-5.14.2/README.epoc" class="podlinkpod"
+>perlepoc</a>            Perl notes for EPOC
+    <a href="/~flora/perl-5.14.2/README.freebsd" class="podlinkpod"
+>perlfreebsd</a>         Perl notes for FreeBSD
+    <a href="/~flora/perl-5.14.2/README.haiku" class="podlinkpod"
+>perlhaiku</a>           Perl notes for Haiku
+    <a href="/~flora/perl-5.14.2/README.hpux" class="podlinkpod"
+>perlhpux</a>            Perl notes for HP-UX
+    <a href="/~flora/perl-5.14.2/README.hurd" class="podlinkpod"
+>perlhurd</a>            Perl notes for Hurd
+    <a href="/~flora/perl-5.14.2/README.irix" class="podlinkpod"
+>perlirix</a>            Perl notes for Irix
+    <a href="/~flora/perl-5.14.2/README.linux" class="podlinkpod"
+>perllinux</a>           Perl notes for Linux
+    <a href="/~flora/perl-5.14.2/README.macos" class="podlinkpod"
+>perlmacos</a>           Perl notes for Mac OS (Classic)
+    <a href="/~flora/perl-5.14.2/README.macosx" class="podlinkpod"
+>perlmacosx</a>          Perl notes for Mac OS X
+    <a href="/~flora/perl-5.14.2/README.mpeix" class="podlinkpod"
+>perlmpeix</a>           Perl notes for MPE/iX
+    <a href="/~flora/perl-5.14.2/README.netware" class="podlinkpod"
+>perlnetware</a>         Perl notes for NetWare
+    <a href="/~flora/perl-5.14.2/README.openbsd" class="podlinkpod"
+>perlopenbsd</a>         Perl notes for OpenBSD
+    <a href="/~flora/perl-5.14.2/README.os2" class="podlinkpod"
+>perlos2</a>             Perl notes for OS/2
+    <a href="/~flora/perl-5.14.2/README.os390" class="podlinkpod"
+>perlos390</a>           Perl notes for OS/390
+    <a href="/~flora/perl-5.14.2/README.os400" class="podlinkpod"
+>perlos400</a>           Perl notes for OS/400
+    <a href="/~flora/perl-5.14.2/README.plan9" class="podlinkpod"
+>perlplan9</a>           Perl notes for Plan 9
+    <a href="/~flora/perl-5.14.2/README.qnx" class="podlinkpod"
+>perlqnx</a>             Perl notes for QNX
+    <a href="/~flora/perl-5.14.2/README.riscos" class="podlinkpod"
+>perlriscos</a>          Perl notes for RISC OS
+    <a href="/~flora/perl-5.14.2/README.solaris" class="podlinkpod"
+>perlsolaris</a>         Perl notes for Solaris
+    <a href="/~flora/perl-5.14.2/README.symbian" class="podlinkpod"
+>perlsymbian</a>         Perl notes for Symbian
+    <a href="/~flora/perl-5.14.2/README.tru64" class="podlinkpod"
+>perltru64</a>           Perl notes for Tru64
+    <a href="/~flora/perl-5.14.2/README.uts" class="podlinkpod"
+>perluts</a>             Perl notes for UTS
+    <a href="/~flora/perl-5.14.2/README.vmesa" class="podlinkpod"
+>perlvmesa</a>           Perl notes for VM/ESA
+    <a href="/~flora/perl-5.14.2/pod/perlvms.pod" class="podlinkpod"
+>perlvms</a>             Perl notes for VMS
+    <a href="/~flora/perl-5.14.2/README.vos" class="podlinkpod"
+>perlvos</a>             Perl notes for Stratus VOS
+    <a href="/~flora/perl-5.14.2/README.win32" class="podlinkpod"
+>perlwin32</a>           Perl notes for Windows</pre>
+
+<p>On a Unix-like system, these documentation files will usually also be available as manpages for use with the <em>man</em> program.</p>
+
+<p>In general, if something strange has gone wrong with your program and you&#39;re not sure where you should look for help, try the <b>-w</b> switch first. It will often point out exactly where the trouble is.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Perl officially stands for Practical Extraction and Report Language, except when it doesn&#39;t.</p>
+
+<p>Perl was originally a language optimized for scanning arbitrary text files, extracting information from those text files, and printing reports based on that information. It quickly became a good language for many system management tasks. Over the years, Perl has grown into a general-purpose programming language. It&#39;s widely used for everything from quick &#34;one-liners&#34; to full-scale application development.</p>
+
+<p>The language is intended to be practical (easy to use, efficient, complete) rather than beautiful (tiny, elegant, minimal).</p>
+
+<p>Perl combines (in the author&#39;s opinion, anyway) some of the best features of C, <b>sed</b>, <b>awk</b>, and <b>sh</b>, so people familiar with those languages should have little difficulty with it. (Language historians will also note some vestiges of <b>csh</b>, Pascal, and even BASIC-PLUS.) Expression syntax corresponds closely to C expression syntax. Unlike most Unix utilities, Perl does not arbitrarily limit the size of your data--if you&#39;ve got the memory, Perl can slurp in your whole file as a single string. Recursion is of unlimited depth. And the tables used by hashes (sometimes called &#34;associative arrays&#34;) grow as necessary to prevent degraded performance. Perl can use sophisticated pattern matching techniques to scan large amounts of data quickly. Although optimized for scanning text, Perl also has many excellent tools for slicing and dicing binary data.</p>
+
+<p>But wait, there&#39;s more...</p>
+
+<p>Begun in 1993 (see <a href="/~flora/perl-5.14.2/pod/perlhist.pod" class="podlinkpod"
+>perlhist</a>), Perl version 5 is nearly a complete rewrite that provides the following additional benefits:</p>
+
+<ul>
+<li>modularity and reusability using innumerable modules
+<p>Described in <a href="/~flora/perl-5.14.2/pod/perlmod.pod" class="podlinkpod"
+>perlmod</a>, <a href="/~flora/perl-5.14.2/pod/perlmodlib.PL" class="podlinkpod"
+>perlmodlib</a>, and <a href="/~flora/perl-5.14.2/pod/perlmodinstall.pod" class="podlinkpod"
+>perlmodinstall</a>.</p>
+</li>
+
+<li>embeddable and extensible
+<p>Described in <a href="/~flora/perl-5.14.2/pod/perlembed.pod" class="podlinkpod"
+>perlembed</a>, <a href="/~flora/perl-5.14.2/pod/perlxstut.pod" class="podlinkpod"
+>perlxstut</a>, <a href="/~flora/perl-5.14.2/pod/perlxs.pod" class="podlinkpod"
+>perlxs</a>, <a href="/~flora/perl-5.14.2/pod/perlcall.pod" class="podlinkpod"
+>perlcall</a>, <a href="/~flora/perl-5.14.2/pod/perlguts.pod" class="podlinkpod"
+>perlguts</a>, and <a href="/perldoc?xsubpp" class="podlinkpod"
+>xsubpp</a>.</p>
+</li>
+
+<li>roll-your-own magic variables (including multiple simultaneous DBM implementations)
+<p>Described in <a href="/~flora/perl-5.14.2/pod/perltie.pod" class="podlinkpod"
+>perltie</a> and <a href="/~flora/perl-5.14.2/lib/AnyDBM_File.pm" class="podlinkpod"
+>AnyDBM_File</a>.</p>
+</li>
+
+<li>subroutines can now be overridden, autoloaded, and prototyped
+<p>Described in <a href="/~flora/perl-5.14.2/pod/perlsub.pod" class="podlinkpod"
+>perlsub</a>.</p>
+</li>
+
+<li>arbitrarily nested data structures and anonymous functions
+<p>Described in <a href="/~flora/perl-5.14.2/pod/perlreftut.pod" class="podlinkpod"
+>perlreftut</a>, <a href="/~flora/perl-5.14.2/pod/perlref.pod" class="podlinkpod"
+>perlref</a>, <a href="/~flora/perl-5.14.2/pod/perldsc.pod" class="podlinkpod"
+>perldsc</a>, and <a href="/~flora/perl-5.14.2/pod/perllol.pod" class="podlinkpod"
+>perllol</a>.</p>
+</li>
+
+<li>object-oriented programming
+<p>Described in <a href="/~flora/perl-5.14.2/pod/perlobj.pod" class="podlinkpod"
+>perlobj</a>, <a href="/~flora/perl-5.14.2/pod/perlboot.pod" class="podlinkpod"
+>perlboot</a>, <a href="/~flora/perl-5.14.2/pod/perltoot.pod" class="podlinkpod"
+>perltoot</a>, <a href="/~flora/perl-5.14.2/pod/perltooc.pod" class="podlinkpod"
+>perltooc</a>, and <a href="/~flora/perl-5.14.2/pod/perlbot.pod" class="podlinkpod"
+>perlbot</a>.</p>
+</li>
+
+<li>support for light-weight processes (threads)
+<p>Described in <a href="/~flora/perl-5.14.2/pod/perlthrtut.pod" class="podlinkpod"
+>perlthrtut</a> and <a href="/perldoc?threads" class="podlinkpod"
+>threads</a>.</p>
+</li>
+
+<li>support for Unicode, internationalization, and localization
+<p>Described in <a href="/~flora/perl-5.14.2/pod/perluniintro.pod" class="podlinkpod"
+>perluniintro</a>, <a href="/~flora/perl-5.14.2/pod/perllocale.pod" class="podlinkpod"
+>perllocale</a> and <a href="/perldoc?Locale%3A%3AMaketext" class="podlinkpod"
+>Locale::Maketext</a>.</p>
+</li>
+
+<li>lexical scoping
+<p>Described in <a href="/~flora/perl-5.14.2/pod/perlsub.pod" class="podlinkpod"
+>perlsub</a>.</p>
+</li>
+
+<li>regular expression enhancements
+<p>Described in <a href="/~flora/perl-5.14.2/pod/perlre.pod" class="podlinkpod"
+>perlre</a>, with additional examples in <a href="/~flora/perl-5.14.2/pod/perlop.pod" class="podlinkpod"
+>perlop</a>.</p>
+</li>
+
+<li>enhanced debugger and interactive Perl environment, with integrated editor support
+<p>Described in <a href="/~flora/perl-5.14.2/pod/perldebtut.pod" class="podlinkpod"
+>perldebtut</a>, <a href="/~flora/perl-5.14.2/pod/perldebug.pod" class="podlinkpod"
+>perldebug</a> and <a href="/~flora/perl-5.14.2/pod/perldebguts.pod" class="podlinkpod"
+>perldebguts</a>.</p>
+</li>
+
+<li>POSIX 1003.1 compliant library
+<p>Described in <a href="/~flora/perl-5.14.2/ext/POSIX/lib/POSIX.pod" class="podlinkpod"
+>POSIX</a>.</p>
+</li>
+</ul>
+
+<p>Okay, that&#39;s <i>definitely</i> enough hype.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AVAILABILITY"
+>AVAILABILITY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Perl is available for most operating systems, including virtually all Unix-like platforms. See <a href="/~flora/perl-5.14.2/pod/perlport.pod#Supported_Platforms" class="podlinkpod"
+>&#34;Supported Platforms&#34; in perlport</a> for a listing.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ENVIRONMENT"
+>ENVIRONMENT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>See <a href="/~flora/perl-5.14.2/pod/perlrun.pod" class="podlinkpod"
+>perlrun</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Larry Wall &#60;larry@wall.org&#62;, with the help of oodles of other folks.</p>
+
+<p>If your Perl success stories and testimonials may be of help to others who wish to advocate the use of Perl in their applications, or if you wish to simply express your gratitude to Larry and the Perl developers, please write to perl-thanks@perl.org .</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FILES"
+>FILES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> &#34;@INC&#34;                 locations of perl libraries</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> <a href="http://www.perl.org/" class="podlinkurl"
+>http://www.perl.org/</a>       the Perl homepage
+ <a href="http://www.perl.com/" class="podlinkurl"
+>http://www.perl.com/</a>       Perl articles (O&#39;Reilly)
+ <a href="http://www.cpan.org/" class="podlinkurl"
+>http://www.cpan.org/</a>       the Comprehensive Perl Archive
+ <a href="http://www.pm.org/" class="podlinkurl"
+>http://www.pm.org/</a>         the Perl Mongers</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIAGNOSTICS"
+>DIAGNOSTICS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The <code>use warnings</code> pragma (and the <b>-w</b> switch) produces some lovely diagnostics.</p>
+
+<p>See <a href="/~flora/perl-5.14.2/pod/perldiag.pod" class="podlinkpod"
+>perldiag</a> for explanations of all Perl&#39;s diagnostics. The <code>use diagnostics</code> pragma automatically turns Perl&#39;s normally terse warnings and errors into these longer forms.</p>
+
+<p>Compilation errors will tell you the line number of the error, with an indication of the next token or token type that was to be examined. (In a script passed to Perl via <b>-e</b> switches, each <b>-e</b> is counted as one line.)</p>
+
+<p>Setuid scripts have additional constraints that can produce error messages such as &#34;Insecure dependency&#34;. See <a href="/~flora/perl-5.14.2/pod/perlsec.pod" class="podlinkpod"
+>perlsec</a>.</p>
+
+<p>Did we mention that you should definitely consider using the <b>-w</b> switch?</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The <b>-w</b> switch is not mandatory.</p>
+
+<p>Perl is at the mercy of your machine&#39;s definitions of various operations such as type casting, atof(), and floating-point output with sprintf().</p>
+
+<p>If your stdio requires a seek or eof between reads and writes on a particular stream, so does Perl. (This doesn&#39;t apply to sysread() and syswrite().)</p>
+
+<p>While none of the built-in data types have any arbitrary size limits (apart from memory size), there are still a few arbitrary limits: a given variable name may not be longer than 251 characters. Line numbers displayed by diagnostics are internally stored as short integers, so they are limited to a maximum of 65535 (higher numbers usually being affected by wraparound).</p>
+
+<p>You may mail your bug reports (be sure to include full configuration information as output by the myconfig program in the perl source tree, or by <code>perl -V</code>) to perlbug@perl.org . If you&#39;ve succeeded in compiling perl, the <a href="/~flora/perl-5.14.2/utils/perlbug.PL" class="podlinkpod"
+>perlbug</a> script in the <em>utils/</em> subdirectory can be used to help mail in a bug report.</p>
+
+<p>Perl actually stands for Pathologically Eclectic Rubbish Lister, but don&#39;t tell anyone I said that.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTES"
+>NOTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The Perl motto is &#34;There&#39;s more than one way to do it.&#34; Divining how many more is left as an exercise to the reader.</p>
+
+<p>The three principal virtues of a programmer are Laziness, Impatience, and Hubris. See the Camel Book for why.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">77959 Uploads, 24665 Distributions
+105773 Modules, 9632 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Wed Apr 18 18:43:36 2012 GMT (0.119832038879395) @cpansearch1 -->
+ </body>
+</html>

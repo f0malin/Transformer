@@ -1,0 +1,67 @@
+NAME
+    SVN::Notify::Mirror - Keep a mirrored working copy of a repository path
+
+DESCRIPTION
+    Keep a directory in sync with a portion of a Subversion repository.
+    Typically used to keep a development web server in sync with the changes
+    made to the repository. This directory can either be on the same box as
+    the repository itself, or it can be remote.
+
+    NEW in version 0.038
+    Bugfix for Module::Build and Perl 5.10.0
+
+    NEW in version 0.037
+    - Support generic ssh_options parameter (for trickier settings).
+    - Require YAML explicitly
+    - Depends on latest SVN::Notify
+
+    NOTE: Please use SVN::Notify::Mirror::SSH directly for all new
+    installs.  The compatibility feature to pass through ssh-* options
+    will be removed in version 0.050.  See the POD for more details.
+
+INSTALLATION
+    Install Module::Build and then run:
+
+    $ perl Build.PL
+    $ ./Build
+    $ su
+    # ./Build install
+
+PREREQUISITES (Optional and otherwise)
+    The only mandatory prerequisite is SVN::Notify (obviously), but the
+    presence of several other modules will enable other features:
+
+    SVN::Notify::Config
+        Permits a YAML config file to be used as the entire postcommit
+        script, like the second example in the SYNOPSIS.
+
+    Net::SSH
+        Required to use SSH to update a remote working copy.  See
+        SVN::Notify::Mirror::SSH for usage of that transport method.
+
+    File::Rsync
+        Required to use rsync to update a remote working copy  See
+        SVN::Notify::Mirror::RSync for usage of that transport method..
+
+        If you install any of these modules after installing
+        SVN::Notify::Mirror, those features will be available immediately
+        (though you can rerun the install in order to see the tests).
+
+TESTING
+    If you have the optional Net::SSH module installed, you can test the
+    SVN::Notify::Mirror::SSH subclass if you have the following configured:
+
+    1) a personal ssh key (located in the default ~/.ssh location);
+    2) your key does not have a password;
+    3) you have already used that key to connect successfully to localhost.
+
+    Normally, once you have a personal ssh key, you can simply do
+
+        $ ssh localhost
+
+    and respond to the prompt to add locahost to the list of known_hosts.
+    If this is not true, answer 'N' to the prompt during ./Build.
+
+AUTHOR
+    John Peacock <jpeacock@cpan.org>
+

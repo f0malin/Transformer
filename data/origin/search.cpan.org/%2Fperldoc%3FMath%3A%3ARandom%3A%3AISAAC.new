@@ -1,0 +1,437 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Math::Random::ISAAC - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Math-Random-ISAAC",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Math-Random-ISAAC-1.004",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Math::Random::ISAAC",3]);
+    _gaq.push(["_setCustomVar",1,"Author","JAWNSY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Math::Random::ISAAC">permalink</a></div>
+  <a href="/~jawnsy/">Jonathan Yu</a> &gt;
+  <a href="/~jawnsy/Math-Random-ISAAC-1.004/">Math-Random-ISAAC-1.004</a> &gt;
+  Math::Random::ISAAC
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/cad8904d605f42dca72dc214e249dd12?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/J/JA/JAWNSY/Math-Random-ISAAC-1.004.tar.gz">Math-Random-ISAAC-1.004.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Math%3A%3ARandom%3A%3AISAAC;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~JAWNSY/Math-Random-ISAAC-1.004/lib/Math/Random/ISAAC.pm">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://search.cpan.org/dist/Math-Random-ISAAC">Website</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Math-Random-ISAAC">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.004 &nbsp;
+<span class="noprint">
+  <a href="/src/JAWNSY/Math-Random-ISAAC-1.004/lib/Math/Random/ISAAC.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#USAGE_WARNING'>USAGE WARNING</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#rand'>rand</a>
+    <li class='indexItem indexItem2'><a href='#irand'>irand</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#PURPOSE'>PURPOSE</a>
+  <li class='indexItem indexItem1'><a href='#ACKNOWLEDGEMENTS'>ACKNOWLEDGEMENTS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#CAVEATS'>CAVEATS</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Math::Random::ISAAC - Perl interface to the ISAAC PRNG algorithm</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 1.004</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use Math::Random::ISAAC;
+
+  my $rng = Math::Random::ISAAC-&#62;new(@seeds);
+
+  for (0..30) {
+    print &#39;Result: &#39; . $rng-&#62;irand() . &#34;\n&#34;;
+  }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>As with other Pseudo-Random Number Generator (PRNG) algorithms like the Mersenne Twister (see <a href="/perldoc?Math%3A%3ARandom%3A%3AMT" class="podlinkpod"
+>Math::Random::MT</a>), this algorithm is designed to take some seed information and produce seemingly random results as output.</p>
+
+<p>However, ISAAC (Indirection, Shift, Accumulate, Add, and Count) has different goals than these commonly used algorithms. In particular, it&#39;s really fast - on average, it requires only 18.75 machine cycles to generate a 32-bit value. This makes it suitable for applications where a significant amount of random data needs to be produced quickly, such solving using the Monte Carlo method or for games.</p>
+
+<p>The results are uniformly distributed, unbiased, and unpredictable unless you know the seed. The algorithm was published by Bob Jenkins in the late 90s and despite the best efforts of many security researchers, no feasible attacks have been found to date.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="USAGE_WARNING"
+>USAGE WARNING</a></h2>
+
+<p>There was no method supplied to provide the initial seed data by the author. On his web site, Bob Jenkins writes:</p>
+
+<pre class="sh_perl">  Seeding a random number generator is essentially the same problem as
+  encrypting the seed with a block cipher.</pre>
+
+<p>In the same spirit, by default, this module does not seed the algorithm at all -- it simply fills the state with zeroes -- if no seed is provided. The idea is to remind users that selecting good seed data for their purpose is important, and for the module to conveniently set it to something like <code>localtime</code> behind-the-scenes hurts users in the long run, since they don&#39;t understand the limitations of doing so.</p>
+
+<p>The type of seed you might want to use depends entirely on the purpose of using this algorithm in your program in the first place. Here are some possible seeding methods:</p>
+
+<dl>
+<dt><a name='1'></a><a name="1_Math::TrulyRandom"
+>1 Math::TrulyRandom</a></dt>
+
+<dd>
+<p>The <a href="/perldoc?Math%3A%3ATrulyRandom" class="podlinkpod"
+>Math::TrulyRandom</a> module provides a way of obtaining truly random data by using timing interrupts. This is probably one of the better ways to seed the algorithm.</p>
+
+<dt><a name='2'></a><a name="2_/dev/random"
+>2 /dev/random</a></dt>
+
+<dd>
+<p>Using the system random device is, in principle, the best idea, since it gathers entropy from various sources including interrupt timing, other device interrupts, etc. However, it&#39;s not portable to anything other than Unix-like platforms, and might not produce good data on some systems.</p>
+
+<dt><a name='3'></a><a name="3_localtime()"
+>3 localtime()</a></dt>
+
+<dd>
+<p>This works for basic things like simulations, but results in not-so-random output, especially if you create new instances quickly (as the seeds would be the same within per-second resolution).</p>
+
+<dt><a name='4'></a><a name="4_Time::HiRes"
+>4 Time::HiRes</a></dt>
+
+<dd>
+<p>In theory, using <a href="/perldoc?Time%3A%3AHiRes" class="podlinkpod"
+>Time::HiRes</a> is the same as option (2), but you get a higher resolution time so you&#39;re less likely to have the same seed twice. Note that you need to transform the output into an integer somehow, perhaps by taking the least significant bits or using a hash function. This would be less prone to duplicate instances, but it&#39;s still not ideal.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+>new</a></h2>
+
+<pre class="sh_perl">  Math::Random::ISAAC-&#62;new( @seeds )</pre>
+
+<p>Creates a <code>Math::Random::ISAAC</code> object, based upon either the optimized C/XS version of the algorithm, <a href="/perldoc?Math%3A%3ARandom%3A%3AISAAC%3A%3AXS" class="podlinkpod"
+>Math::Random::ISAAC::XS</a>, or falls back to the included Pure Perl module, <a href="/~jawnsy/Math-Random-ISAAC-1.004/lib/Math/Random/ISAAC/PP.pm" class="podlinkpod"
+>Math::Random::ISAAC::PP</a>.</p>
+
+<p>Example code:</p>
+
+<pre class="sh_perl">  my $rng = Math::Random::ISAAC-&#62;new(time);</pre>
+
+<p>This method will return an appropriate <b>Math::Random::ISAAC</b> object or throw an exception on error.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="rand"
+>rand</a></h2>
+
+<pre class="sh_perl">  $rng-&#62;rand()</pre>
+
+<p>Returns a random double-precision floating point number which is normalized between 0 and 1 (inclusive; it&#39;s a closed interval).</p>
+
+<p>Internally, this simply takes the uniformly distributed unsigned integer from <code>$rng-&#62;irand()</code> and divides it by <code>2**32-1</code> (maximum unsigned integer size)</p>
+
+<p>Example code:</p>
+
+<pre class="sh_perl">  my $next = $rng-&#62;rand();</pre>
+
+<p>This method will return a double-precision floating point number or throw an exception on error.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="irand"
+>irand</a></h2>
+
+<pre class="sh_perl">  $rng-&#62;irand()</pre>
+
+<p>Returns the next unsigned 32-bit random integer. It will return a value with a value such that: <b>0 &#60;= x &#60;= 2**32-1</b>.</p>
+
+<p>Example code:</p>
+
+<pre class="sh_perl">  my $next = $rng-&#62;irand();</pre>
+
+<p>This method will return a 32-bit unsigned integer or throw an exception on error.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PURPOSE"
+>PURPOSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The intent of this module is to provide single simple interface to the two compatible implementations of this module, namely, <a href="/perldoc?Math%3A%3ARandom%3A%3AISAAC%3A%3AXS" class="podlinkpod"
+>Math::Random::ISAAC::XS</a> and <a href="/~jawnsy/Math-Random-ISAAC-1.004/lib/Math/Random/ISAAC/PP.pm" class="podlinkpod"
+>Math::Random::ISAAC::PP</a>.</p>
+
+<p>If, for some reason, you need to determine what version of the module is actually being included by <code>Math::Random::ISAAC</code>, then:</p>
+
+<pre class="sh_perl">  print &#39;Backend type: &#39;, $Math::Random::ISAAC::DRIVER, &#34;\n&#34;;</pre>
+
+<p>In order to force use of one or the other, simply load the appropriate module:</p>
+
+<pre class="sh_perl">  use Math::Random::ISAAC::XS;
+  my $rng = Math::Random::ISAAC::XS-&#62;new();
+  # or
+  use Math::Random::ISAAC::PP;
+  my $rng = Math::Random::ISAAC::PP-&#62;new();</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ACKNOWLEDGEMENTS"
+>ACKNOWLEDGEMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li>Special thanks to Bob Jenkins &#60;bob_jenkins@burtleburtle.net&#62; for devising this very clever algorithm and releasing it into the public domain.</li>
+
+<li>Thanks to John L. Allen (contact unknown) for providing a Perl port of the original ISAAC code, upon which <code>Math::Random::ISAAC::PP</code> is heavily based. His version is available on Bob&#39;s web site, in the SEE ALSO section.</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Math%3A%3ARandom%3A%3AISAAC%3A%3AXS" class="podlinkpod"
+>Math::Random::ISAAC::XS</a>, the C/XS optimized version of this module, which will be used automatically if available.</p>
+
+<p><a href="http://burtleburtle.net/bob/rand/isaacafa.html" class="podlinkurl"
+>http://burtleburtle.net/bob/rand/isaacafa.html</a>, Bob Jenkins&#39; page about ISAAC, which explains the algorithm as well as potential attacks.</p>
+
+<p><a href="http://eprint.iacr.org/2006/438.pdf" class="podlinkurl"
+>http://eprint.iacr.org/2006/438.pdf</a>, a paper entitled &#34;On the pseudo-random generator ISAAC,&#34; which claims there are many seeds which will produce non-uniform results. The author, Jean-Philippe Aumasson, argues ISAAC should be using rotations (circular shifts) instead of normal shifts to increase diffusion of the state, among other things.</p>
+
+<p><a href="http://eprint.iacr.org/2001/049.pdf" class="podlinkurl"
+>http://eprint.iacr.org/2001/049.pdf</a>, a paper by Marina Pudovkina discussing plaintext attacks on the ISAAC keystream generator. Among other things, it notes that the time complexity is <b>Tmet = 4.67*10^1240</b>, so it remains a secure cipher for practical applications.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEATS"
+>CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li>There is no method that allows re-seeding of algorithms. This is not really necessary because one can simply call <code>new</code> again with the new seed data periodically.
+<p>But he also provides a simple workaround:</p>
+
+<pre class="sh_perl">  As ISAAC is intended to be a secure cipher, if you want to reseed it,
+  one way is to use some other cipher to seed some initial version of ISAAC,
+  then use ISAAC&#39;s output as a seed for other instances of ISAAC whenever
+  they need to be reseeded.</pre>
+</li>
+
+<li>There is no way to clone a PRNG instance. I&#39;m not sure why this is might even be necessary or useful. File a bug report with an explanation why and I&#39;ll consider adding it to the next release.</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Please report any bugs or feature requests on the bugtracker website <a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Math-Random-ISAAC" class="podlinkurl"
+>http://rt.cpan.org/NoAuth/Bugs.html?Dist=Math-Random-ISAAC</a></p>
+
+<p>When submitting a bug or request, please include a test-file or a patch to an existing test-file that illustrates the bug or desired feature.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Jonathan Yu &#60;jawnsy@cpan.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Legally speaking, this package and its contents are:</p>
+
+<pre class="sh_perl">  Copyright (c) 2011 by Jonathan Yu &#60;jawnsy@cpan.org&#62;.</pre>
+
+<p>But this is really just a legal technicality that allows the author to offer this package under the public domain and also a variety of licensing options. For all intents and purposes, this is public domain software, which means you can do whatever you want with it.</p>
+
+<p>The software is provided &#34;AS IS&#34;, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78067 Uploads, 24685 Distributions
+105889 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 15:52:47 2012 GMT (0.158854007720947) @cpansearch1 -->
+ </body>
+</html>

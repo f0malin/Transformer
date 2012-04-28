@@ -1,0 +1,833 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Data::Float - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Data-Float",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Data-Float-0.012",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Data::Float",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ZEFRAM",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Data::Float">permalink</a></div>
+  <a href="/~zefram/">Andrew Main (Zefram)</a> &gt;
+  <a href="/~zefram/Data-Float-0.012/">Data-Float-0.012</a> &gt;
+  Data::Float
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/aab343bc3a4424dcb7f913920242f051?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/Z/ZE/ZEFRAM/Data-Float-0.012.tar.gz">Data-Float-0.012.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Data%3A%3AFloat;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ZEFRAM/Data-Float-0.012/lib/Data/Float.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Float">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.012 &nbsp;
+<span class="noprint">
+  <a href="/src/ZEFRAM/Data-Float-0.012/lib/Data/Float.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#FLOATING_POINT'>FLOATING POINT</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Classification'>Classification</a>
+    <li class='indexItem indexItem2'><a href='#Mixing_floating_point_and_integer_values'>Mixing floating point and integer values</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CONSTANTS'>CONSTANTS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Features'>Features</a>
+    <li class='indexItem indexItem2'><a href='#Extrema'>Extrema</a>
+    <li class='indexItem indexItem2'><a href='#Special_Values'>Special Values</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Classification'>Classification</a>
+    <li class='indexItem indexItem2'><a href='#Examination'>Examination</a>
+    <li class='indexItem indexItem2'><a href='#String_conversion'>String conversion</a>
+    <li class='indexItem indexItem2'><a href='#Comparison'>Comparison</a>
+    <li class='indexItem indexItem2'><a href='#Manipulation'>Manipulation</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Data::Float - details of the floating point data type</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">        use Data::Float qw(have_signed_zero);
+
+        if(have_signed_zero) { ...
+
+        # and many other constants; see text
+
+        use Data::Float qw(
+                float_class float_is_normal float_is_subnormal
+                float_is_nzfinite float_is_zero float_is_finite
+                float_is_infinite float_is_nan
+        );
+
+        $class = float_class($value);
+
+        if(float_is_normal($value)) { ...
+        if(float_is_subnormal($value)) { ...
+        if(float_is_nzfinite($value)) { ...
+        if(float_is_zero($value)) { ...
+        if(float_is_finite($value)) { ...
+        if(float_is_infinite($value)) { ...
+        if(float_is_nan($value)) { ...
+
+        use Data::Float qw(float_sign signbit float_parts);
+
+        $sign = float_sign($value);
+        $sign_bit = signbit($value);
+        ($sign, $exponent, $significand) = float_parts($value);
+
+        use Data::Float qw(float_hex hex_float);
+
+        print float_hex($value);
+        $value = hex_float($string);
+
+        use Data::Float qw(float_id_cmp totalorder);
+
+        @sorted_floats = sort { float_id_cmp($a, $b) } @floats;
+        if(totalorder($a, $b)) { ...
+
+        use Data::Float qw(
+                pow2 mult_pow2 copysign
+                nextup nextdown nextafter
+        );
+
+        $x = pow2($exp);
+        $x = mult_pow2($value, $exp);
+        $x = copysign($magnitude, $sign_from);
+        $x = nextup($x);
+        $x = nextdown($x);
+        $x = nextafter($x, $direction);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module is about the native floating point numerical data type. A floating point number is one of the types of datum that can appear in the numeric part of a Perl scalar. This module supplies constants describing the native floating point type, classification functions, and functions to manipulate floating point values at a low level.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FLOATING_POINT"
+>FLOATING POINT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Classification"
+>Classification</a></h2>
+
+<p>Floating point values are divided into five subtypes:</p>
+
+<dl>
+<dt><a name="normalised"
+>normalised</a></dt>
+
+<dd>
+<p>The value is made up of a sign bit (making the value positive or negative), a significand, and exponent. The significand is a number in the range [1, 2), expressed as a binary fraction of a certain fixed length. (Significands requiring a longer binary fraction, or lacking a terminating binary representation, cannot be obtained.) The exponent is an integer in a certain fixed range. The magnitude of the value represented is the product of the significand and two to the power of the exponent.</p>
+
+<dt><a name="subnormal"
+>subnormal</a></dt>
+
+<dd>
+<p>The value is made up of a sign bit, significand, and exponent, as for normalised values. However, the exponent is fixed at the minimum possible for a normalised value, and the significand is in the range (0, 1). The length of the significand is the same as for normalised values. This is essentially a fixed-point format, used to provide gradual underflow. Not all floating point formats support this subtype. Where it is not supported, underflow is sudden, and the difference between two minimum-exponent normalised values cannot be exactly represented.</p>
+
+<dt><a name="zero"
+>zero</a></dt>
+
+<dd>
+<p>Depending on the floating point type, there may be either one or two zero values: zeroes may carry a sign bit. Where zeroes are signed, it is primarily in order to indicate the direction from which a value underflowed (was rounded) to zero. Positive and negative zero compare as numerically equal, and they give identical results in most arithmetic operations. They are on opposite sides of some branch cuts in complex arithmetic.</p>
+
+<dt><a name="infinite"
+>infinite</a></dt>
+
+<dd>
+<p>Some floating point formats include special infinite values. These are generated by overflow, and by some arithmetic cases that mathematically generate infinities. There are two infinite values: positive infinity and negative infinity.</p>
+
+<p>Perl does not always generate infinite values when normal floating point behaviour calls for it. For example, the division <code>1.0/0.0</code> causes an exception rather than returning an infinity.</p>
+
+<dt><a name='not'></a><a name="not-a-number_(NaN)"
+>not-a-number (NaN)</a></dt>
+
+<dd>
+<p>This type of value exists in some floating point formats to indicate error conditions. Mathematically undefined operations may generate NaNs, and NaNs propagate through all arithmetic operations. A NaN has the distinctive property of comparing numerically unequal to all floating point values, including itself.</p>
+
+<p>Perl does not always generate NaNs when normal floating point behaviour calls for it. For example, the division <code>0.0/0.0</code> causes an exception rather than returning a NaN.</p>
+
+<p>Perl has only (at most) one NaN value, even if the underlying system supports different NaNs. (IEEE 754 arithmetic has NaNs which carry a quiet/signal bit, a sign bit (yes, a sign on a not-number), and many bits of implementation-defined data.)</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Mixing_floating_point_and_integer_values"
+>Mixing floating point and integer values</a></h2>
+
+<p>Perl does not draw a strong type distinction between native integer (see <a href="/perldoc?Data%3A%3AInteger" class="podlinkpod"
+>Data::Integer</a>) and native floating point values. Both types of value can be stored in the numeric part of a plain (string) scalar. No distinction is made between the integer representation and the floating point representation where they encode identical values. Thus, for floating point arithmetic, native integer values that can be represented exactly in floating point may be freely used as floating point values.</p>
+
+<p>Native integer arithmetic has exactly one zero value, which has no sign. If the floating point type does not have signed zeroes then the floating point and integer zeroes are exactly equivalent. If the floating point type does have signed zeroes then the integer zero can still be used in floating point arithmetic, and it behaves as an unsigned floating point zero. On such systems there are therefore three types of zero available. There is a bug in Perl which sometimes causes floating point zeroes to change into integer zeroes; see <a href="#BUGS" class="podlinkpod"
+>&#34;BUGS&#34;</a> for details.</p>
+
+<p>Where a native integer value is used that is too large to exactly represent in floating point, it will be rounded as necessary to a floating point value. This rounding will occur whenever an operation has to be performed in floating point because the result could not be exactly represented as an integer. This may be confusing to functions that expect a floating point argument.</p>
+
+<p>Similarly, some operations on floating point numbers will actually be performed in integer arithmetic, and may result in values that cannot be exactly represented in floating point. This happens whenever the arguments have integer values that fit into the native integer type and the mathematical result can be exactly represented as a native integer. This may be confusing in cases where floating point semantics are expected.</p>
+
+<p>See <a href="http://man.he.net/man1/perlnumber" class="podlinkman"
+>perlnumber(1)</a> for discussion of Perl&#39;s numeric semantics.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONSTANTS"
+>CONSTANTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Features"
+>Features</a></h2>
+
+<dl>
+<dt><a name="have_signed_zero"
+>have_signed_zero</a></dt>
+
+<dd>
+<p>Truth value indicating whether floating point zeroes carry a sign. If yes, then there are two floating point zero values: +0.0 and -0.0. (Perl scalars can nevertheless also hold an integer zero, which is unsigned.) If no, then there is only one zero value, which is unsigned.</p>
+
+<dt><a name="have_subnormal"
+>have_subnormal</a></dt>
+
+<dd>
+<p>Truth value indicating whether there are subnormal floating point values.</p>
+
+<dt><a name="have_infinite"
+>have_infinite</a></dt>
+
+<dd>
+<p>Truth value indicating whether there are infinite floating point values.</p>
+
+<dt><a name="have_nan"
+>have_nan</a></dt>
+
+<dd>
+<p>Truth value indicating whether there are NaN floating point values.</p>
+
+<p>It is difficult to reliably generate a NaN in Perl, so in some unlikely circumstances it is possible that there might be NaNs that this module failed to detect. In that case this constant would be false but a NaN might still turn up somewhere. What this constant reliably indicates is the availability of the <code>nan</code> constant below.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Extrema"
+>Extrema</a></h2>
+
+<dl>
+<dt><a name="significand_bits"
+>significand_bits</a></dt>
+
+<dd>
+<p>The number of fractional bits in the significand of finite floating point values. The significand also has an implicit integer bit, not counted in this constant; the integer bit is always 1 for normalised values and always 0 for subnormal values.</p>
+
+<dt><a name="significand_step"
+>significand_step</a></dt>
+
+<dd>
+<p>The difference between adjacent representable values in the range [1, 2] (where the exponent is zero). This is equal to 2^-significand_bits.</p>
+
+<dt><a name="max_finite_exp"
+>max_finite_exp</a></dt>
+
+<dd>
+<p>The maximum exponent permitted for finite floating point values.</p>
+
+<dt><a name="max_finite_pow2"
+>max_finite_pow2</a></dt>
+
+<dd>
+<p>The maximum representable power of two. This is 2^max_finite_exp.</p>
+
+<dt><a name="max_finite"
+>max_finite</a></dt>
+
+<dd>
+<p>The maximum representable finite value. This is 2^(max_finite_exp+1) - 2^(max_finite_exp-significand_bits).</p>
+
+<dt><a name="max_number"
+>max_number</a></dt>
+
+<dd>
+<p>The maximum representable number. This is positive infinity if there are infinite values, or max_finite if there are not.</p>
+
+<dt><a name="max_integer"
+>max_integer</a></dt>
+
+<dd>
+<p>The maximum integral value for which all integers from zero to that value inclusive are representable. Equivalently: the minimum positive integral value N for which the value N+1 is not representable. This is 2^(significand_bits+1). The name is somewhat misleading.</p>
+
+<dt><a name="min_normal_exp"
+>min_normal_exp</a></dt>
+
+<dd>
+<p>The minimum exponent permitted for normalised floating point values.</p>
+
+<dt><a name="min_normal"
+>min_normal</a></dt>
+
+<dd>
+<p>The minimum positive value representable as a normalised floating point value. This is 2^min_normal_exp.</p>
+
+<dt><a name="min_finite_exp"
+>min_finite_exp</a></dt>
+
+<dd>
+<p>The base two logarithm of the minimum representable positive finite value. If there are subnormals then this is min_normal_exp - significand_bits. If there are no subnormals then this is min_normal_exp.</p>
+
+<dt><a name="min_finite"
+>min_finite</a></dt>
+
+<dd>
+<p>The minimum representable positive finite value. This is 2^min_finite_exp.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Special_Values"
+>Special Values</a></h2>
+
+<dl>
+<dt><a name="pos_zero"
+>pos_zero</a></dt>
+
+<dd>
+<p>The positive zero value. (Exists only if zeroes are signed, as indicated by the <code>have_signed_zero</code> constant.)</p>
+
+<p>If Perl is at risk of transforming floating point zeroes into integer zeroes (see <a href="#BUGS" class="podlinkpod"
+>&#34;BUGS&#34;</a>), then this is actually a non-constant function that always returns a fresh floating point zero. Thus the return value is always a true floating point zero, regardless of what happened to zeroes previously returned.</p>
+
+<dt><a name="neg_zero"
+>neg_zero</a></dt>
+
+<dd>
+<p>The negative zero value. (Exists only if zeroes are signed, as indicated by the <code>have_signed_zero</code> constant.)</p>
+
+<p>If Perl is at risk of transforming floating point zeroes into integer zeroes (see <a href="#BUGS" class="podlinkpod"
+>&#34;BUGS&#34;</a>), then this is actually a non-constant function that always returns a fresh floating point zero. Thus the return value is always a true floating point zero, regardless of what happened to zeroes previously returned.</p>
+
+<dt><a name="pos_infinity"
+>pos_infinity</a></dt>
+
+<dd>
+<p>The positive infinite value. (Exists only if there are infinite values, as indicated by the <code>have_infinite</code> constant.)</p>
+
+<dt><a name="neg_infinity"
+>neg_infinity</a></dt>
+
+<dd>
+<p>The negative infinite value. (Exists only if there are infinite values, as indicated by the <code>have_infinite</code> constant.)</p>
+
+<dt><a name="nan"
+>nan</a></dt>
+
+<dd>
+<p>Not-a-number. (Exists only if NaN values were detected, as indicated by the <code>have_nan</code> constant.)</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Each &#34;float_&#34; function takes a floating point argument to operate on. The argument must be a native floating point value, or a native integer with a value that can be represented in floating point. Giving a non-numeric argument will cause mayhem. See <a href="/perldoc?Params%3A%3AClassify#is_number" class="podlinkpod"
+>&#34;is_number&#34; in Params::Classify</a> for a way to check for numericness. Only the numeric value of the scalar is used; the string value is completely ignored, so dualvars are not a problem.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Classification"
+>Classification</a></h2>
+
+<p>Each &#34;float_is_&#34; function returns a simple truth value result.</p>
+
+<dl>
+<dt><a name='float_class'></a><a name="float_class(VALUE)"
+>float_class(VALUE)</a></dt>
+
+<dd>
+<p>Determines which of the five classes described above VALUE falls into. Returns &#34;NORMAL&#34;, &#34;SUBNORMAL&#34;, &#34;ZERO&#34;, &#34;INFINITE&#34;, or &#34;NAN&#34; accordingly.</p>
+
+<dt><a name='float_is_normal'></a><a name="float_is_normal(VALUE)"
+>float_is_normal(VALUE)</a></dt>
+
+<dd>
+<p>Returns true iff VALUE is a normalised floating point value.</p>
+
+<dt><a name='float_is_subnormal'></a><a name="float_is_subnormal(VALUE)"
+>float_is_subnormal(VALUE)</a></dt>
+
+<dd>
+<p>Returns true iff VALUE is a subnormal floating point value.</p>
+
+<dt><a name='float_is_nzfinite'></a><a name="float_is_nzfinite(VALUE)"
+>float_is_nzfinite(VALUE)</a></dt>
+
+<dd>
+<p>Returns true iff VALUE is a non-zero finite value (either normal or subnormal; not zero, infinite, or NaN).</p>
+
+<dt><a name='float_is_zero'></a><a name="float_is_zero(VALUE)"
+>float_is_zero(VALUE)</a></dt>
+
+<dd>
+<p>Returns true iff VALUE is a zero. If zeroes are signed then the sign is irrelevant.</p>
+
+<dt><a name='float_is_finite'></a><a name="float_is_finite(VALUE)"
+>float_is_finite(VALUE)</a></dt>
+
+<dd>
+<p>Returns true iff VALUE is a finite value (either normal, subnormal, or zero; not infinite or NaN).</p>
+
+<dt><a name='float_is_infinite'></a><a name="float_is_infinite(VALUE)"
+>float_is_infinite(VALUE)</a></dt>
+
+<dd>
+<p>Returns true iff VALUE is an infinity (either positive infinity or negative infinity).</p>
+
+<dt><a name='float_is_nan'></a><a name="float_is_nan(VALUE)"
+>float_is_nan(VALUE)</a></dt>
+
+<dd>
+<p>Returns true iff VALUE is a NaN.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Examination"
+>Examination</a></h2>
+
+<dl>
+<dt><a name='float_sign'></a><a name="float_sign(VALUE)"
+>float_sign(VALUE)</a></dt>
+
+<dd>
+<p>Returns &#34;<b>+</b>&#34; or &#34;<b>-</b>&#34; to indicate the sign of VALUE. An unsigned zero returns the sign &#34;<b>+</b>&#34;. <code>die</code>s if VALUE is a NaN.</p>
+
+<dt><a name='signbit'></a><a name="signbit(VALUE)"
+>signbit(VALUE)</a></dt>
+
+<dd>
+<p>VALUE must be a floating point value. Returns the sign bit of VALUE: 0 if VALUE is positive or a positive or unsigned zero, or 1 if VALUE is negative or a negative zero. Returns an unpredictable value if VALUE is a NaN.</p>
+
+<p>This is an IEEE 754 standard function. According to the standard NaNs have a well-behaved sign bit, but Perl can&#39;t see that bit.</p>
+
+<dt><a name='float_parts'></a><a name="float_parts(VALUE)"
+>float_parts(VALUE)</a></dt>
+
+<dd>
+<p>Divides up a non-zero finite floating point value into sign, exponent, and significand, returning these as a three-element list in that order. The significand is returned as a floating point value, in the range [1, 2) for normalised values, and in the range (0, 1) for subnormals. <code>die</code>s if VALUE is not finite and non-zero.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="String_conversion"
+>String conversion</a></h2>
+
+<dl>
+<dt><a name='float_hex'></a><a name="float_hex(VALUE[,_OPTIONS])"
+>float_hex(VALUE[, OPTIONS])</a></dt>
+
+<dd>
+<p>Encodes the exact value of VALUE as a hexadecimal fraction, returning the fraction as a string. Specifically, for finite values the output is of the form &#34;<i>s</i><b>0x</b><i>m</i><b>.</b><i>mmmmm</i><b>p</b><i>eee</i>&#34;, where &#34;<i>s</i>&#34; is the sign, &#34;<i>m</i><b>.</b><i>mmmm</i>&#34; is the significand in hexadecimal, and &#34;<i>eee</i>&#34; is the exponent in decimal with a sign.</p>
+
+<p>The details of the output format are very configurable. If OPTIONS is supplied, it must be a reference to a hash, in which these keys may be present:</p>
+
+<dl>
+<dt><a name="exp_digits"
+><b>exp_digits</b></a></dt>
+
+<dd>
+<p>The number of digits of exponent to show, unless this is modified by <b>exp_digits_range_mod</b> or more are required to show the exponent exactly. (The exponent is always shown in full.) Default 0, so the minimum possible number of digits is used.</p>
+
+<dt><a name="exp_digits_range_mod"
+><b>exp_digits_range_mod</b></a></dt>
+
+<dd>
+<p>Modifies the number of exponent digits to show, based on the number of digits required to show the full range of exponents for normalised and subnormal values. If &#34;<b>IGNORE</b>&#34; then nothing is done. If &#34;<b>ATLEAST</b>&#34; then at least this many digits are shown. Default &#34;<b>IGNORE</b>&#34;.</p>
+
+<dt><a name="exp_neg_sign"
+><b>exp_neg_sign</b></a></dt>
+
+<dd>
+<p>The string that is prepended to a negative exponent. Default &#34;<b>-</b>&#34;.</p>
+
+<dt><a name="exp_pos_sign"
+><b>exp_pos_sign</b></a></dt>
+
+<dd>
+<p>The string that is prepended to a non-negative exponent. Default &#34;<b>+</b>&#34;. Make it the empty string to suppress the positive sign.</p>
+
+<dt><a name="frac_digits"
+><b>frac_digits</b></a></dt>
+
+<dd>
+<p>The number of fractional digits to show, unless this is modified by <b>frac_digits_bits_mod</b> or <b>frac_digits_value_mod</b>. Default 0, but by default this gets modified.</p>
+
+<dt><a name="frac_digits_bits_mod"
+><b>frac_digits_bits_mod</b></a></dt>
+
+<dd>
+<p>Modifies the number of fractional digits to show, based on the length of the significand. There is a certain number of digits that is the minimum required to explicitly state every bit that is stored, and the number of digits to show might get set to that number depending on this option. If &#34;<b>IGNORE</b>&#34; then nothing is done. If &#34;<b>ATLEAST</b>&#34; then at least this many digits are shown. If &#34;<b>ATMOST</b>&#34; then at most this many digits are shown. If &#34;<b>EXACTLY</b>&#34; then exactly this many digits are shown. Default &#34;<b>ATLEAST</b>&#34;.</p>
+
+<dt><a name="frac_digits_value_mod"
+><b>frac_digits_value_mod</b></a></dt>
+
+<dd>
+<p>Modifies the number of fractional digits to show, based on the number of digits required to show the actual value exactly. Works the same way as <b>frac_digits_bits_mod</b>. Default &#34;<b>ATLEAST</b>&#34;.</p>
+
+<dt><a name="hex_prefix_string"
+><b>hex_prefix_string</b></a></dt>
+
+<dd>
+<p>The string that is prefixed to hexadecimal digits. Default &#34;<b>0x</b>&#34;. Make it the empty string to suppress the prefix.</p>
+
+<dt><a name="infinite_string"
+><b>infinite_string</b></a></dt>
+
+<dd>
+<p>The string that is returned for an infinite magnitude. Default &#34;<b>inf</b>&#34;.</p>
+
+<dt><a name="nan_string"
+><b>nan_string</b></a></dt>
+
+<dd>
+<p>The string that is returned for a NaN value. Default &#34;<b>nan</b>&#34;.</p>
+
+<dt><a name="neg_sign"
+><b>neg_sign</b></a></dt>
+
+<dd>
+<p>The string that is prepended to a negative value (including negative zero). Default &#34;<b>-</b>&#34;.</p>
+
+<dt><a name="pos_sign"
+><b>pos_sign</b></a></dt>
+
+<dd>
+<p>The string that is prepended to a positive value (including positive or unsigned zero). Default &#34;<b>+</b>&#34;. Make it the empty string to suppress the positive sign.</p>
+
+<dt><a name="subnormal_strategy"
+><b>subnormal_strategy</b></a></dt>
+
+<dd>
+<p>The manner in which subnormal values are displayed. If &#34;<b>SUBNORMAL</b>&#34;, they are shown with the minimum exponent for normalised values and a significand in the range (0, 1). This matches how they are stored internally. If &#34;<b>NORMAL</b>&#34;, they are shown with a significand in the range [1, 2) and a lower exponent, as if they were normalised. This gives a consistent appearance for magnitudes regardless of normalisation. Default &#34;<b>SUBNORMAL</b>&#34;.</p>
+
+<dt><a name="zero_strategy"
+><b>zero_strategy</b></a></dt>
+
+<dd>
+<p>The manner in which zero values are displayed. If &#34;<b>STRING=</b><i>str</i>&#34;, the string <i>str</i> is used, preceded by a sign. If &#34;<b>SUBNORMAL</b>&#34;, it is shown with significand zero and the minimum normalised exponent. If &#34;<b>EXPONENT=</b><i>exp</i>&#34;, it is shown with significand zero and exponent <i>exp</i>. Default &#34;<b>STRING=0.0</b>&#34;. An unsigned zero is treated as having a positive sign.</p>
+</dd>
+</dl>
+
+<dt><a name='hex_float'></a><a name="hex_float(STRING)"
+>hex_float(STRING)</a></dt>
+
+<dd>
+<p>Generates and returns a floating point value from a string encoding it in hexadecimal. The standard input form is &#34;[<i>s</i>][<b>0x</b>]<i>m</i>[<b>.</b><i>mmmmm</i>][<b>p</b><i>eee</i>]&#34;, where &#34;<i>s</i>&#34; is the sign, &#34;<i>m</i>[<b>.</b><i>mmmm</i>]&#34; is a (fractional) hexadecimal number, and &#34;<i>eee</i>&#34; an optionally-signed exponent in decimal. If present, the exponent identifies a power of two (not sixteen) by which the given fraction will be multiplied.</p>
+
+<p>If the value given in the string cannot be exactly represented in the floating point type because it has too many fraction bits, the nearest representable value is returned, with ties broken in favour of the value with a zero low-order bit. If the value given is too large to exactly represent then an infinity is returned, or the largest finite value if there are no infinities.</p>
+
+<p>Additional input formats are accepted for special values. &#34;[<i>s</i>]<b>inf</b>[<b>inity</b>]&#34; returns an infinity, or <code>die</code>s if there are no infinities. &#34;[<i>s</i>][<b>s</b>]<b>nan</b>&#34; returns a NaN, or <code>die</code>s if there are no NaNs available.</p>
+
+<p>All input formats are understood case insensitively. The function correctly interprets all possible outputs from <code>float_hex</code> with default settings.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Comparison"
+>Comparison</a></h2>
+
+<dl>
+<dt><a name='float_id_cmp'></a><a name="float_id_cmp(A,_B)"
+>float_id_cmp(A, B)</a></dt>
+
+<dd>
+<p>This is a comparison function supplying a total ordering of floating point values. A and B must both be floating point values. Returns -1, 0, or +1, indicating whether A is to be sorted before, the same as, or after B.</p>
+
+<p>The ordering is of the identities of floating point values, not their numerical values. If zeroes are signed, then the two types are considered to be distinct. NaNs compare equal to each other, but different from all numeric values. The exact ordering provided is mostly numerical order: NaNs come first, followed by negative infinity, then negative finite values, then negative zero, then positive (or unsigned) zero, then positive finite values, then positive infinity.</p>
+
+<p>In addition to sorting, this function can be useful to check for a zero of a particular sign.</p>
+
+<dt><a name='totalorder'></a><a name="totalorder(A,_B)"
+>totalorder(A, B)</a></dt>
+
+<dd>
+<p>This is a comparison function supplying a total ordering of floating point values. A and B must both be floating point values. Returns a truth value indicating whether A is to be sorted before-or-the-same-as B. That is, it is a &#60;= predicate on the total ordering. The ordering is the same as that provided by <code>float_id_cmp</code>: NaNs come first, followed by negative infinity, then negative finite values, then negative zero, then positive (or unsigned) zero, then positive finite values, then positive infinity.</p>
+
+<p>This is an IEEE 754r standard function. According to the standard it is meant to distinguish different kinds of NaNs, based on their sign bit, quietness, and payload, but this function (like the rest of Perl) perceives only one NaN.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Manipulation"
+>Manipulation</a></h2>
+
+<dl>
+<dt><a name='pow2'></a><a name="pow2(EXP)"
+>pow2(EXP)</a></dt>
+
+<dd>
+<p>EXP must be an integer. Returns the value two the the power EXP. <code>die</code>s if that value cannot be represented exactly as a floating point value. The return value may be either normalised or subnormal.</p>
+
+<dt><a name='mult_pow2'></a><a name="mult_pow2(VALUE,_EXP)"
+>mult_pow2(VALUE, EXP)</a></dt>
+
+<dd>
+<p>EXP must be an integer, and VALUE a floating point value. Multiplies VALUE by two to the power EXP. This gives exact results, except in cases of underflow and overflow. The range of EXP is not constrained. All normal floating point multiplication behaviour applies.</p>
+
+<dt><a name='copysign'></a><a name="copysign(VALUE,_SIGN_FROM)"
+>copysign(VALUE, SIGN_FROM)</a></dt>
+
+<dd>
+<p>VALUE and SIGN_FROM must both be floating point values. Returns a floating point value with the magnitude of VALUE and the sign of SIGN_FROM. If SIGN_FROM is an unsigned zero then it is treated as positive. If VALUE is an unsigned zero then it is returned unchanged. If VALUE is a NaN then it is returned unchanged. If SIGN_FROM is a NaN then the sign copied to VALUE is unpredictable.</p>
+
+<p>This is an IEEE 754 standard function. According to the standard NaNs have a well-behaved sign bit, which can be read and modified by this function, but Perl only perceives one NaN and can&#39;t see its sign bit, so behaviour on NaNs is not standard-conforming.</p>
+
+<dt><a name='nextup'></a><a name="nextup(VALUE)"
+>nextup(VALUE)</a></dt>
+
+<dd>
+<p>VALUE must be a floating point value. Returns the next representable floating point value adjacent to VALUE with a numerical value that is strictly greater than VALUE, or returns VALUE unchanged if there is no such value. Infinite values are regarded as being adjacent to the largest representable finite values. Zero counts as one value, even if it is signed, and it is adjacent to the smallest representable positive and negative finite values. If a zero is returned, because VALUE is the smallest representable negative value, and zeroes are signed, it is a negative zero that is returned. Returns NaN if VALUE is a NaN.</p>
+
+<p>This is an IEEE 754r standard function.</p>
+
+<dt><a name='nextdown'></a><a name="nextdown(VALUE)"
+>nextdown(VALUE)</a></dt>
+
+<dd>
+<p>VALUE must be a floating point value. Returns the next representable floating point value adjacent to VALUE with a numerical value that is strictly less than VALUE, or returns VALUE unchanged if there is no such value. Infinite values are regarded as being adjacent to the largest representable finite values. Zero counts as one value, even if it is signed, and it is adjacent to the smallest representable positive and negative finite values. If a zero is returned, because VALUE is the smallest representable positive value, and zeroes are signed, it is a positive zero that is returned. Returns NaN if VALUE is a NaN.</p>
+
+<p>This is an IEEE 754r standard function.</p>
+
+<dt><a name='nextafter'></a><a name="nextafter(VALUE,_DIRECTION)"
+>nextafter(VALUE, DIRECTION)</a></dt>
+
+<dd>
+<p>VALUE and DIRECTION must both be floating point values. Returns the next representable floating point value adjacent to VALUE in the direction of DIRECTION, or returns DIRECTION if it is numerically equal to VALUE. Infinite values are regarded as being adjacent to the largest representable finite values. Zero counts as one value, even if it is signed, and it is adjacent to the positive and negative smallest representable finite values. If a zero is returned and zeroes are signed then it has the same sign as VALUE. Returns NaN if either argument is a NaN.</p>
+
+<p>This is an IEEE 754 standard function.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>As of Perl 5.8.7 floating point zeroes will be partially transformed into integer zeroes if used in almost any arithmetic, including numerical comparisons. Such a transformed zero appears as a floating point zero (with its original sign) for some purposes, but behaves as an integer zero for other purposes. Where this happens to a positive zero the result is indistinguishable from a true integer zero. Where it happens to a negative zero the result is a fourth type of zero, the existence of which is a bug in Perl. This fourth type of zero will give confusing results, and in particular will elicit inconsistent behaviour from the functions in this module.</p>
+
+<p>Because of this transforming behaviour, it is best to avoid relying on the sign of zeroes. If you require signed-zero semantics then take special care to maintain signedness. Avoid using a zero directly in arithmetic and handle it as a special case. Any flavour of zero can be accurately copied from one scalar to another without affecting the original. The functions in this module all avoid modifying their arguments, and where they are meant to return signed zeroes they always return a pristine one.</p>
+
+<p>As of Perl 5.8.7 stringification of a floating point zero does not preserve its signedness. The number-to-string-to-number round trip turns a positive floating point zero into an integer zero, but accurately maintains negative and integer zeroes. If a negative zero gets partially transformed into an integer zero, as described above, the stringification that it gets is based on its state at the first occasion on which the scalar was stringified.</p>
+
+<p>NaN handling is generally not well defined in Perl. Arithmetic with a mathematically undefined result may either <code>die</code> or generate a NaN. Avoid relying on any particular behaviour for such operations, even if your hardware&#39;s behaviour is known.</p>
+
+<p>As of Perl 5.8.7 the <b>%</b> operator truncates its arguments to integers, if the divisor is within the range of the native integer type. It therefore operates correctly on non-integer values only when the divisor is very large.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Data%3A%3AInteger" class="podlinkpod"
+>Data::Integer</a>, <a href="/perldoc?Scalar%3A%3ANumber" class="podlinkpod"
+>Scalar::Number</a>, <a href="http://man.he.net/man1/perlnumber" class="podlinkman"
+>perlnumber(1)</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Andrew Main (Zefram) &#60;zefram@fysh.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (C) 2006, 2007, 2008, 2010, 2012 Andrew Main (Zefram) &#60;zefram@fysh.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78254 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 08:47:21 2012 GMT (0.174522161483765) @cpansearch1 -->
+ </body>
+</html>

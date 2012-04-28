@@ -1,0 +1,479 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Test::LectroTest::Property - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Test-LectroTest",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Test-LectroTest-0.3600",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Test::LectroTest::Property",3]);
+    _gaq.push(["_setCustomVar",1,"Author","TMOERTEL",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Test::LectroTest::Property">permalink</a></div>
+  <a href="/~tmoertel/">Tom Moertel</a> &gt;
+  <a href="/~tmoertel/Test-LectroTest-0.3600/">Test-LectroTest-0.3600</a> &gt;
+  Test::LectroTest::Property
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/35a0e86eab9069913e72efac020c77b1?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/T/TM/TMOERTEL/Test-LectroTest-0.3600.tar.gz">Test-LectroTest-0.3600.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Test%3A%3ALectroTest%3A%3AProperty;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~TMOERTEL/Test-LectroTest-0.3600/lib/Test/LectroTest/Property.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Test-LectroTest">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/TMOERTEL/Test-LectroTest-0.3600/lib/Test/LectroTest/Property.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Two_ways_to_create_Properties'>Two ways to create Properties</a>
+    <li class='indexItem indexItem2'><a href='#Generator-binding_specification'>Generator-binding specification</a>
+    <li class='indexItem indexItem2'><a href='#Specifying_multiple_sets_of_generator_bindings'>Specifying multiple sets of generator bindings</a>
+    <li class='indexItem indexItem2'><a href='#Behavior_test'>Behavior test</a>
+    <li class='indexItem indexItem2'><a href='#Control_logic,_retries,_and_labeling'>Control logic, retries, and labeling</a>
+    <li class='indexItem indexItem2'><a href='#Trivial_cases'>Trivial cases</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#HERE_BE_SOURCE_FILTERS'>HERE BE SOURCE FILTERS</a>
+  <li class='indexItem indexItem1'><a href='#LECTROTEST_HOME'>LECTROTEST HOME</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#INSPIRATION'>INSPIRATION</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_and_LICENSE'>COPYRIGHT and LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Test::LectroTest::Property - Properties that make testable claims about your software</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> use MyModule;  # provides my_function_to_test
+
+ use Test::LectroTest::Generator qw( :common );
+ use Test::LectroTest::Property qw( Test );
+ use Test::LectroTest::TestRunner;
+
+ my $prop_non_neg = Property {
+     ##[ x &#60;- Int, y &#60;- Int ]##
+     $tcon-&#62;label(&#34;negative&#34;) if $x &#60; 0;
+     $tcon-&#62;label(&#34;odd&#34;)      if $x % 2;
+     $tcon-&#62;retry             if $y == 0;  # 0 can&#39;t be used in test
+     my_function_to_test( $x, $y ) &#62;= 0;
+ }, name =&#62; &#34;my_function_to_test output is non-negative&#34;;
+
+ my $runner = Test::LectroTest::TestRunner-&#62;new();
+ $runner-&#62;run_suite(
+     $prop_non_neg,
+     # ... more properties here ...
+ );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><b>STOP!</b> If you&#39;re just looking for an easy way to write and run unit tests, see <a href="/~tmoertel/Test-LectroTest-0.3600/lib/Test/LectroTest.pm" class="podlinkpod"
+>Test::LectroTest</a> first. Once you&#39;re comfortable with what is presented there and ready to delve into the full offerings of properties, this is the document for you.</p>
+
+<p>This module allows you to define Properties that can be checked automatically by <a href="/~tmoertel/Test-LectroTest-0.3600/lib/Test/LectroTest.pm" class="podlinkpod"
+>Test::LectroTest</a>. A Property is a specification of your software&#39;s required behavior over a given set of conditions. The set of conditions is given by a generator-binding specification. The required behavior is defined implicitly by a block of code that tests your software for a given set of generated conditions; if your software matches the expected behavor, the block of code returns true; otherwise, false.</p>
+
+<p>This documentation serves as reference documentation for LectroTest Properties. If you don&#39;t understand the basics of Properties yet, see <a href="/~tmoertel/Test-LectroTest-0.3600/lib/Test/LectroTest/Tutorial.pod#OVERVIEW" class="podlinkpod"
+>&#34;OVERVIEW&#34; in Test::LectroTest::Tutorial</a> before continuing.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Two_ways_to_create_Properties"
+>Two ways to create Properties</a></h2>
+
+<p>There are two ways to create a property:</p>
+
+<ol>
+<li>Use the <code>Property</code> function to promote a block of code that contains both a generator-binding specification and a behavior test into a Test::LectroTest::Property object. <b>This is the preferred method.</b> Example:
+<pre class="sh_perl">  my $prop1 = Property {
+      ##[ x &#60;- Int ]##
+      thing_to_test($x) &#62;= 0;
+  }, name =&#62; &#34;thing_to_test is non-negative&#34;;</pre>
+</li>
+
+<li>Use the <code>new</code> method of Test::LectroTest::Property and provide it with the necessary ingredients via named parameters:
+<pre class="sh_perl">  my $prop2 = Test::LectroTest::Property-&#62;new(
+      inputs =&#62; [ x =&#62; Int ],
+      test   =&#62; sub { my ($tcon,$x) = @_;
+                      thing_to_test($x) &#62;= 0 },
+      name   =&#62; &#34;thing_to_test is non-negative&#34;
+  );</pre>
+</li>
+</ol>
+
+<p>Both are equivalent, but the first is concise, easier to read, and lets LectroTest do some of the heavy lifting for you. The second is probably better, however, if you are constructing property specifications programmatically.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Generator-binding_specification"
+>Generator-binding specification</a></h2>
+
+<p>The generator-binding specification declares that certain variables are to be bound to certain kinds of random-value generators during the tests of your software&#39;s behavior. The number and kind of generators define the &#34;condition space&#34; that is examined during property checks.</p>
+
+<p>If you use the <code>Property</code> function to create your properties, your generator-binding specification must come first in your code block, and you must use the following syntax:</p>
+
+<pre class="sh_perl">  ##[ var1 &#60;- gen1, var2 &#60;- gen2, ... ]##</pre>
+
+<p>Comments are not allowed within the specification, but you may break it across multiple lines:</p>
+
+<pre class="sh_perl">  ##[ var1 &#60;- gen1,
+      var2 &#60;- gen2, ...
+  ]##</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">  ##[
+      var1 &#60;- gen1,
+      var2 &#60;- gen2, ...
+  ]##</pre>
+
+<p>Further, for better integration with syntax-highlighting IDEs, the terminating <code>]##</code> delimiter may be preceded by a hash symbol <code>#</code> and optional whitespace to make it appear like a comment:</p>
+
+<pre class="sh_perl">  ##[
+      var1 &#60;- gen1,
+      var2 &#60;- gen2, ...
+  # ]##</pre>
+
+<p>On the other hand, if you use <code>Test::LectroTest::Property-&#62;new()</code> to create your objects, the generator-binding specification takes the form of an array reference containing variable-generator pairs that is passed to <code>new()</code> via the parameter named <code>inputs</code>:</p>
+
+<pre class="sh_perl">  inputs =&#62; [ var1 =&#62; gen1, var2 =&#62; gen2, ... ]</pre>
+
+<p>Normal Perl syntax applies here.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Specifying_multiple_sets_of_generator_bindings"
+>Specifying multiple sets of generator bindings</a></h2>
+
+<p>Sometimes you may want to repeat a property check with multiple sets of generator bindings. This can happen, for instance, when your condition space is vast and you want to ensure that a particular portion of it receives focused coverage while still sampling the overall space. For times like this, you can list multiple sets of bindings within the <code>##[</code> and <code>]##</code> delimiters, like so:</p>
+
+<pre class="sh_perl">  ##[ var1 &#60;- gen1A, ... ],
+    [ var1 &#60;- gen1B, ... ],
+    ... more sets of bindings ...
+    [ var1 &#60;- gen1N, ... ]##</pre>
+
+<p>Note that only the first and last set need the special delimiters.</p>
+
+<p>The equivalent when using <code>new()</code> is as follows:</p>
+
+<pre class="sh_perl">  inputs =&#62; [ [ var1 =&#62; gen1A, ... ],
+              [ var1 =&#62; gen1B, ... ],
+              ...
+              [ var1 =&#62; gen1N, ... ] ]</pre>
+
+<p>Regardless of how you declare the sets of bindings, each set must provide bindings for the exact same set of variables. (The generators, of course, can be different.) For example, this kind of thing is illegal:</p>
+
+<pre class="sh_perl">  ##[ x &#60;- Int ], [ y &#60;- Int ]##</pre>
+
+<p>The above is illegal because both sets of bindings must use <i>x</i> or both must use <i>y</i>; they can&#39;t each use a different variable.</p>
+
+<pre class="sh_perl">  ##[ x &#60;- Int             ],
+    [ x &#60;- Int, y &#60;- Float ]##</pre>
+
+<p>The above is illegal because the second set has an extra variable that isn&#39;t present in the first. Both sets must use exactly the same variables. None of the variables may be extra, none may be missing, and all must be named identically across the sets of bindings.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Behavior_test"
+>Behavior test</a></h2>
+
+<p>The behavior test is a subroutine that accepts a test-controller object and a given set of input conditions, tests your software&#39;s observed behavior against the required behavior with respect to the input conditions, and returns true or false to indicate acceptance or rejection. If you are using the <code>Property</code> function to create your property objects, lexically bound variables are created and loaded with values automatically, per your input-generator specification, so you can just go ahead and use the variables immediately:</p>
+
+<pre class="sh_perl">  my $prop = Property {
+    ##[ i &#60;- Int, delta &#60;- Float(range=&#62;[0,1]) ]##
+    my $lo_val = my_thing_to_test($i);
+    my $hi_val = my_thing_to_test($i + $delta);
+    $lo_val == $hi_val;
+  }, name =&#62; &#34;my_thing_to_test ignores fractions&#34; ;</pre>
+
+<p>On the other hand, if you are using <code>Test::LectroTest::Property-&#62;new()</code>, you must declare and initialize these variables manually from Perl&#39;s <code>@_</code> variable <i>in lexicographically increasing order</i> after receiving <code>$tcon</code>, the test controller object. (This inconvenience, by the way, is why the former method is preferred.) The hard way:</p>
+
+<pre class="sh_perl">  my $prop = Test::LectroTest::Property-&#62;new(
+    inputs =&#62; [ i =&#62; Int, delta =&#62; Float(range=&#62;[0,1]) ],
+    test =&#62; sub {
+        my ($tcon, $delta, $i) = @_;
+        my $lo_val = my_thing_to_test($i);
+        my $hi_val = my_thing_to_test($i + $delta);
+        $lo_val == $hi_val
+    },
+    name =&#62; &#34;my_thing_to_test ignores fractions&#34;
+  ) ;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Control_logic,_retries,_and_labeling"
+>Control logic, retries, and labeling</a></h2>
+
+<p>Inside the behavior test, you have access to a special variable <code>$tcon</code> that allows you to interact with the test controller. Through <code>$tcon</code> you can do the following:</p>
+
+<ul>
+<li>retry the current trial with different inputs (if you don&#39;t like the inputs you were given at first)</li>
+
+<li>add labels to the current trial for reporting purposes</li>
+
+<li>attach notes and variable dumps to the current trial for diagnostic purposes, should the trial fail</li>
+</ul>
+
+<p>(For the full details of what you can do with <code>$tcon</code> see the &#34;testcontroller&#34; section of <a href="/~tmoertel/Test-LectroTest-0.3600/lib/Test/LectroTest/TestRunner.pm" class="podlinkpod"
+>Test::LectroTest::TestRunner</a>.)</p>
+
+<p>For example, let&#39;s say that we have written a function <code>my_sqrt</code> that returns the square root of its input. In order to check whether our implementation fulfills the mathematical definition of square root, we might specify the following property:</p>
+
+<pre class="sh_perl">  my $epsilon = 0.000_001;
+
+  Property {
+      ##[ x &#60;- Float ]##
+      return $tcon-&#62;retry if $x &#60; 0;
+      $tcon-&#62;label(&#34;less than one&#34;) if $x &#60; 1;
+      my $sx = my_sqrt( $x );
+      abs($sx * $sx - $x) &#60; $epsilon;
+  }, name =&#62; &#34;my_sqrt satisfies defn of square root&#34;;</pre>
+
+<p>Because we don&#39;t want to deal with imaginary numbers, our square-root function is defined only over non-negative numbers. To make sure we don&#39;t accidentally check our property &#34;at&#34; a negative number, we use the following line to re-start the trial with a different input should the input we are given at first be negative:</p>
+
+<pre class="sh_perl">      return $tcon-&#62;retry if $x &#60; 0;</pre>
+
+<p>An interesting fact is that for all values <i>x</i> between zero and one, the square root of <i>x</i> is larger than <i>x</i> itself. Perhaps our implementation treats such values as a special case. In order to be confident that we are checking this case, we added the following line:</p>
+
+<pre class="sh_perl">      $tcon-&#62;label(&#34;less than one&#34;) if $x &#60; 1;</pre>
+
+<p>In the property-check output, we can see what percentage of the trials checked this case:</p>
+
+<pre class="sh_perl">  1..1
+  ok 1 - &#39;my_sqrt satisfies defn of square root&#39; (1000 attempts)
+  #   1% less than one</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Trivial_cases"
+>Trivial cases</a></h2>
+
+<p>Random-input generators may create some inputs that are trivial and don&#39;t provide much testing value. To make it easy to label such cases, you can use the following from within your behavior tests:</p>
+
+<pre class="sh_perl">    $tcon-&#62;trivial if ... ;</pre>
+
+<p>The above is exactly equivalent to the following:</p>
+
+<pre class="sh_perl">    $tcon-&#62;label(&#34;trivial&#34;) if ... ;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~tmoertel/Test-LectroTest-0.3600/lib/Test/LectroTest/Generator.pm" class="podlinkpod"
+>Test::LectroTest::Generator</a> describes the many generators and generator combinators that you can use to define the test or condition spaces that you want LectroTest to search for bugs.</p>
+
+<p><a href="/~tmoertel/Test-LectroTest-0.3600/lib/Test/LectroTest/TestRunner.pm" class="podlinkpod"
+>Test::LectroTest::TestRunner</a> describes the objects that check your properties and tells you how to turn their control knobs. You&#39;ll want to look here if you&#39;re interested in customizing the testing procedure.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="HERE_BE_SOURCE_FILTERS"
+>HERE BE SOURCE FILTERS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The special syntax used to specify generator bindings relies upon a source filter (see <a href="/perldoc?Filter%3A%3AUtil%3A%3ACall" class="podlinkpod"
+>Filter::Util::Call</a>). If you don&#39;t want to use the syntax, you can disable the filter like so:</p>
+
+<pre class="sh_perl">    use Test::LectroTest::Property qw( NO_FILTER );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LECTROTEST_HOME"
+>LECTROTEST HOME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The LectroTest home is <a href="http://community.moertel.com/LectroTest" class="podlinkurl"
+>http://community.moertel.com/LectroTest</a>. There you will find more documentation, presentations, mailing-list archives, a wiki, and other helpful LectroTest-related resources. It&#39;s also the best place to ask questions.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Tom Moertel (tom@moertel.com)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INSPIRATION"
+>INSPIRATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The LectroTest project was inspired by Haskell&#39;s QuickCheck module by Koen Claessen and John Hughes: <a href="http://www.cs.chalmers.se/~rjmh/QuickCheck/" class="podlinkurl"
+>http://www.cs.chalmers.se/~rjmh/QuickCheck/</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_and_LICENSE"
+>COPYRIGHT and LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2004-05 by Thomas G Moertel. All rights reserved.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78184 Uploads, 24708 Distributions
+105990 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 05:51:18 2012 GMT (0.0810389518737793) @cpansearch1 -->
+ </body>
+</html>

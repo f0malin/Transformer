@@ -1,0 +1,2370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Bit::Vector - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Bit-Vector",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Bit-Vector-7.2",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Bit::Vector",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ANDK",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Bit::Vector">permalink</a></div>
+  <a href="/~andk/">Andreas J. K&ouml;nig</a> &gt;
+  <a href="/~andk/Bit-Vector-7.2/">Bit-Vector-7.2</a> &gt;
+  Bit::Vector
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/c123e8a7a4e6b2de27017a03349d89ea?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/A/AN/ANDK/Bit-Vector-7.2.tar.gz">Bit-Vector-7.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Bit%3A%3AVector;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ANDK/Bit-Vector-7.2/Vector.pod">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Math%3A%3ABigInt">Math::BigInt</a><br>
+<a href="/perldoc?Date%3A%3ACalc">Date::Calc</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Test%3A%3AMore">Test::More</a><br>
+<a href="/perldoc?Math%3A%3ABigFloat">Math::BigFloat</a><br>
+<a href="/perldoc?Inline%3A%3AC">Inline::C</a><br>
+<a href="/perldoc?Date%3A%3AManip">Date::Manip</a><br>
+<a href="/perldoc?Rose%3A%3ADB">Rose::DB</a><br>
+<a href="/perldoc?Math%3A%3ABigInt%3A%3AGMP">Math::BigInt::GMP</a><br>
+<a href="/perldoc?XML%3A%3AParser">XML::Parser</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Bit%3A%3AVector">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 3</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 3</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Bit-Vector">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  7.2 &nbsp;
+<span class="noprint">
+  <a href="/src/ANDK/Bit-Vector-7.2/Vector.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#OVERLOADED_OPERATORS'>OVERLOADED OPERATORS</a>
+    <li class='indexItem indexItem2'><a href='#MORE_STRING_IMPORT/EXPORT'>MORE STRING IMPORT/EXPORT</a>
+    <li class='indexItem indexItem2'><a href='#CLASS_METHODS'>CLASS METHODS</a>
+    <li class='indexItem indexItem2'><a href='#OBJECT_METHODS'>OBJECT METHODS</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#IMPORTANT_NOTES'>IMPORTANT NOTES</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#OVERLOADED_OPERATORS'>OVERLOADED OPERATORS</a>
+    <li class='indexItem indexItem2'><a href='#MORE_STRING_IMPORT/EXPORT'>MORE STRING IMPORT/EXPORT</a>
+    <li class='indexItem indexItem2'><a href='#CLASS_METHODS'>CLASS METHODS</a>
+    <li class='indexItem indexItem2'><a href='#OBJECT_METHODS'>OBJECT METHODS</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+  <li class='indexItem indexItem1'><a href='#DISCLAIMER'>DISCLAIMER</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Bit::Vector - Efficient bit vector,
+set of integers and &#34;big int&#34; math library</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OVERLOADED_OPERATORS"
+>OVERLOADED OPERATORS</a></h2>
+
+<p>See <a href="/~andk/Bit-Vector-7.2/lib/Bit/Vector/Overload.pod" class="podlinkpod"
+>Bit::Vector::Overload(3)</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="MORE_STRING_IMPORT/EXPORT"
+>MORE STRING IMPORT/EXPORT</a></h2>
+
+<p>See <a href="/~andk/Bit-Vector-7.2/lib/Bit/Vector/String.pod" class="podlinkpod"
+>Bit::Vector::String(3)</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="CLASS_METHODS"
+>CLASS METHODS</a></h2>
+
+<pre class="sh_perl">  Version
+      $version = Bit::Vector-&#62;Version();
+
+  Word_Bits
+      $bits = Bit::Vector-&#62;Word_Bits();  #  bits in a machine word
+
+  Long_Bits
+      $bits = Bit::Vector-&#62;Long_Bits();  #  bits in an unsigned long
+
+  new
+      $vector = Bit::Vector-&#62;new($bits);  #  bit vector constructor
+
+      @veclist = Bit::Vector-&#62;new($bits,$count);
+
+  new_Hex
+      $vector = Bit::Vector-&#62;new_Hex($bits,$string);
+
+  new_Bin
+      $vector = Bit::Vector-&#62;new_Bin($bits,$string);
+
+  new_Dec
+      $vector = Bit::Vector-&#62;new_Dec($bits,$string);
+
+  new_Enum
+      $vector = Bit::Vector-&#62;new_Enum($bits,$string);
+
+  Concat_List
+      $vector = Bit::Vector-&#62;Concat_List(@vectors);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OBJECT_METHODS"
+>OBJECT METHODS</a></h2>
+
+<pre class="sh_perl">  new
+      $vec2 = $vec1-&#62;new($bits);  #  alternative call of constructor
+
+      @veclist = $vec-&#62;new($bits,$count);
+
+  Shadow
+      $vec2 = $vec1-&#62;Shadow();  #  new vector, same size but empty
+
+  Clone
+      $vec2 = $vec1-&#62;Clone();  #  new vector, exact duplicate
+
+  Concat
+      $vector = $vec1-&#62;Concat($vec2);
+
+  Concat_List
+      $vector = $vec1-&#62;Concat_List($vec2,$vec3,...);
+
+  Size
+      $bits = $vector-&#62;Size();
+
+  Resize
+      $vector-&#62;Resize($bits);
+      $vector-&#62;Resize($vector-&#62;Size()+5);
+      $vector-&#62;Resize($vector-&#62;Size()-5);
+
+  Copy
+      $vec2-&#62;Copy($vec1);
+
+  Empty
+      $vector-&#62;Empty();
+
+  Fill
+      $vector-&#62;Fill();
+
+  Flip
+      $vector-&#62;Flip();
+
+  Primes
+      $vector-&#62;Primes();  #  Sieve of Erathostenes
+
+  Reverse
+      $vec2-&#62;Reverse($vec1);
+
+  Interval_Empty
+      $vector-&#62;Interval_Empty($min,$max);
+
+  Interval_Fill
+      $vector-&#62;Interval_Fill($min,$max);
+
+  Interval_Flip
+      $vector-&#62;Interval_Flip($min,$max);
+
+  Interval_Reverse
+      $vector-&#62;Interval_Reverse($min,$max);
+
+  Interval_Scan_inc
+      if (($min,$max) = $vector-&#62;Interval_Scan_inc($start))
+
+  Interval_Scan_dec
+      if (($min,$max) = $vector-&#62;Interval_Scan_dec($start))
+
+  Interval_Copy
+      $vec2-&#62;Interval_Copy($vec1,$offset2,$offset1,$length);
+
+  Interval_Substitute
+      $vec2-&#62;Interval_Substitute($vec1,$off2,$len2,$off1,$len1);
+
+  is_empty
+      if ($vector-&#62;is_empty())
+
+  is_full
+      if ($vector-&#62;is_full())
+
+  equal
+      if ($vec1-&#62;equal($vec2))
+
+  Lexicompare (unsigned)
+      if ($vec1-&#62;Lexicompare($vec2) == 0)
+      if ($vec1-&#62;Lexicompare($vec2) != 0)
+      if ($vec1-&#62;Lexicompare($vec2) &#60;  0)
+      if ($vec1-&#62;Lexicompare($vec2) &#60;= 0)
+      if ($vec1-&#62;Lexicompare($vec2) &#62;  0)
+      if ($vec1-&#62;Lexicompare($vec2) &#62;= 0)
+
+  Compare (signed)
+      if ($vec1-&#62;Compare($vec2) == 0)
+      if ($vec1-&#62;Compare($vec2) != 0)
+      if ($vec1-&#62;Compare($vec2) &#60;  0)
+      if ($vec1-&#62;Compare($vec2) &#60;= 0)
+      if ($vec1-&#62;Compare($vec2) &#62;  0)
+      if ($vec1-&#62;Compare($vec2) &#62;= 0)
+
+  to_Hex
+      $string = $vector-&#62;to_Hex();
+
+  from_Hex
+      $vector-&#62;from_Hex($string);
+
+  to_Bin
+      $string = $vector-&#62;to_Bin();
+
+  from_Bin
+      $vector-&#62;from_Bin($string);
+
+  to_Dec
+      $string = $vector-&#62;to_Dec();
+
+  from_Dec
+      $vector-&#62;from_Dec($string);
+
+  to_Enum
+      $string = $vector-&#62;to_Enum();  #  e.g. &#34;2,3,5-7,11,13-19&#34;
+
+  from_Enum
+      $vector-&#62;from_Enum($string);
+
+  Bit_Off
+      $vector-&#62;Bit_Off($index);
+
+  Bit_On
+      $vector-&#62;Bit_On($index);
+
+  bit_flip
+      $bit = $vector-&#62;bit_flip($index);
+
+  bit_test
+  contains
+      $bit = $vector-&#62;bit_test($index);
+      $bit = $vector-&#62;contains($index);
+      if ($vector-&#62;bit_test($index))
+      if ($vector-&#62;contains($index))
+
+  Bit_Copy
+      $vector-&#62;Bit_Copy($index,$bit);
+
+  LSB (least significant bit)
+      $vector-&#62;LSB($bit);
+
+  MSB (most significant bit)
+      $vector-&#62;MSB($bit);
+
+  lsb (least significant bit)
+      $bit = $vector-&#62;lsb();
+
+  msb (most significant bit)
+      $bit = $vector-&#62;msb();
+
+  rotate_left
+      $carry = $vector-&#62;rotate_left();
+
+  rotate_right
+      $carry = $vector-&#62;rotate_right();
+
+  shift_left
+      $carry = $vector-&#62;shift_left($carry);
+
+  shift_right
+      $carry = $vector-&#62;shift_right($carry);
+
+  Move_Left
+      $vector-&#62;Move_Left($bits);  #  shift left &#34;$bits&#34; positions
+
+  Move_Right
+      $vector-&#62;Move_Right($bits);  #  shift right &#34;$bits&#34; positions
+
+  Insert
+      $vector-&#62;Insert($offset,$bits);
+
+  Delete
+      $vector-&#62;Delete($offset,$bits);
+
+  increment
+      $carry = $vector-&#62;increment();
+
+  decrement
+      $carry = $vector-&#62;decrement();
+
+  inc
+      $overflow = $vec2-&#62;inc($vec1);
+
+  dec
+      $overflow = $vec2-&#62;dec($vec1);
+
+  add
+      $carry = $vec3-&#62;add($vec1,$vec2,$carry);
+      ($carry,$overflow) = $vec3-&#62;add($vec1,$vec2,$carry);
+
+  subtract
+      $carry = $vec3-&#62;subtract($vec1,$vec2,$carry);
+      ($carry,$overflow) = $vec3-&#62;subtract($vec1,$vec2,$carry);
+
+  Neg
+  Negate
+      $vec2-&#62;Neg($vec1);
+      $vec2-&#62;Negate($vec1);
+
+  Abs
+  Absolute
+      $vec2-&#62;Abs($vec1);
+      $vec2-&#62;Absolute($vec1);
+
+  Sign
+      if ($vector-&#62;Sign() == 0)
+      if ($vector-&#62;Sign() != 0)
+      if ($vector-&#62;Sign() &#60;  0)
+      if ($vector-&#62;Sign() &#60;= 0)
+      if ($vector-&#62;Sign() &#62;  0)
+      if ($vector-&#62;Sign() &#62;= 0)
+
+  Multiply
+      $vec3-&#62;Multiply($vec1,$vec2);
+
+  Divide
+      $quot-&#62;Divide($vec1,$vec2,$rest);
+
+  GCD (Greatest Common Divisor)
+      $vecgcd-&#62;GCD($veca,$vecb);
+      $vecgcd-&#62;GCD($vecx,$vecy,$veca,$vecb);
+
+  Power
+      $vec3-&#62;Power($vec1,$vec2);
+
+  Block_Store
+      $vector-&#62;Block_Store($buffer);
+
+  Block_Read
+      $buffer = $vector-&#62;Block_Read();
+
+  Word_Size
+      $size = $vector-&#62;Word_Size();  #  number of words in &#34;$vector&#34;
+
+  Word_Store
+      $vector-&#62;Word_Store($offset,$word);
+
+  Word_Read
+      $word = $vector-&#62;Word_Read($offset);
+
+  Word_List_Store
+      $vector-&#62;Word_List_Store(@words);
+
+  Word_List_Read
+      @words = $vector-&#62;Word_List_Read();
+
+  Word_Insert
+      $vector-&#62;Word_Insert($offset,$count);
+
+  Word_Delete
+      $vector-&#62;Word_Delete($offset,$count);
+
+  Chunk_Store
+      $vector-&#62;Chunk_Store($chunksize,$offset,$chunk);
+
+  Chunk_Read
+      $chunk = $vector-&#62;Chunk_Read($chunksize,$offset);
+
+  Chunk_List_Store
+      $vector-&#62;Chunk_List_Store($chunksize,@chunks);
+
+  Chunk_List_Read
+      @chunks = $vector-&#62;Chunk_List_Read($chunksize);
+
+  Index_List_Remove
+      $vector-&#62;Index_List_Remove(@indices);
+
+  Index_List_Store
+      $vector-&#62;Index_List_Store(@indices);
+
+  Index_List_Read
+      @indices = $vector-&#62;Index_List_Read();
+
+  Or
+  Union
+      $vec3-&#62;Or($vec1,$vec2);
+      $set3-&#62;Union($set1,$set2);
+
+  And
+  Intersection
+      $vec3-&#62;And($vec1,$vec2);
+      $set3-&#62;Intersection($set1,$set2);
+
+  AndNot
+  Difference
+      $vec3-&#62;AndNot($vec1,$vec2);
+      $set3-&#62;Difference($set1,$set2);
+
+  Xor
+  ExclusiveOr
+      $vec3-&#62;Xor($vec1,$vec2);
+      $set3-&#62;ExclusiveOr($set1,$set2);
+
+  Not
+  Complement
+      $vec2-&#62;Not($vec1);
+      $set2-&#62;Complement($set1);
+
+  subset
+      if ($set1-&#62;subset($set2))  #  true if $set1 is subset of $set2
+
+  Norm
+      $norm = $set-&#62;Norm();
+      $norm = $set-&#62;Norm2();
+      $norm = $set-&#62;Norm3();
+
+  Min
+      $min = $set-&#62;Min();
+
+  Max
+      $max = $set-&#62;Max();
+
+  Multiplication
+      $matrix3-&#62;Multiplication($rows3,$cols3,
+                      $matrix1,$rows1,$cols1,
+                      $matrix2,$rows2,$cols2);
+
+  Product
+      $matrix3-&#62;Product($rows3,$cols3,
+               $matrix1,$rows1,$cols1,
+               $matrix2,$rows2,$cols2);
+
+  Closure
+      $matrix-&#62;Closure($rows,$cols);
+
+  Transpose
+      $matrix2-&#62;Transpose($rows2,$cols2,$matrix1,$rows1,$cols1);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="IMPORTANT_NOTES"
+>IMPORTANT NOTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li>Method naming conventions
+<p>Method names completely in lower case indicate a boolean return value.</p>
+
+<p>(Except for the bit vector constructor method &#34;<code>new()</code>&#34;, of course.)</p>
+</li>
+
+<li>Boolean values
+<p>Boolean values in this module are always a numeric zero (&#34;<code>0</code>&#34;) for &#34;false&#34; and a numeric one (&#34;<code>1</code>&#34;) for &#34;true&#34;.</p>
+</li>
+
+<li>Negative numbers
+<p>All numeric input parameters passed to any of the methods in this module are regarded as being <b>UNSIGNED</b> (as opposed to the contents of the bit vectors themselves, which are usually considered to be <b>SIGNED</b>).</p>
+
+<p>As a consequence, whenever you pass a negative number as an argument to some method of this module, it will be treated as a (usually very large) positive number due to its internal two&#39;s complement binary representation, usually resulting in an &#34;index out of range&#34; error message and program abortion.</p>
+</li>
+
+<li>Bit order
+<p>Note that bit vectors are stored least order bit and least order word first internally.</p>
+
+<p>I.e., bit #0 of any given bit vector corresponds to bit #0 of word #0 in the array of machine words representing the bit vector.</p>
+
+<p>(Where word #0 comes first in memory, i.e., it is stored at the least memory address in the allocated block of memory holding the given bit vector.)</p>
+
+<p>Note however that machine words can be stored least order byte first or last, depending on your system&#39;s implementation.</p>
+
+<p>When you are exporting or importing a whole bit vector at once using the methods &#34;<code>Block_Read()</code>&#34; and &#34;<code>Block_Store()</code>&#34; (the only time in this module where this could make any difference), however, a conversion to and from &#34;least order byte first&#34; order is automatically supplied.</p>
+
+<p>In other words, what &#34;<code>Block_Read()</code>&#34; provides and what &#34;<code>Block_Store()</code>&#34; expects is always in &#34;least order byte first&#34; order, regardless of the order in which words are stored internally on your machine.</p>
+
+<p>This is to make sure that what you export on one machine using &#34;<code>Block_Read()</code>&#34; can always be read in correctly with &#34;<code>Block_Store()</code>&#34; on a different machine.</p>
+
+<p>Note further that whenever bit vectors are converted to and from (binary or hexadecimal) strings, the <b>RIGHTMOST</b> bit is always the <b>LEAST SIGNIFICANT</b> one, and the <b>LEFTMOST</b> bit is always the <b>MOST SIGNIFICANT</b> bit.</p>
+
+<p>This is because in our western culture, numbers are always represented in this way (least significant to most significant digits go from right to left).</p>
+
+<p>Of course this requires an internal reversion of order, which the corresponding conversion methods perform automatically (without any additional overhead, it&#39;s just a matter of starting the internal loop at the bottom or the top end).</p>
+</li>
+
+<li>&#34;Word&#34; related methods
+<p>Note that all methods whose names begin with &#34;<code>Word_</code>&#34; are <b>MACHINE-DEPENDENT</b>!</p>
+
+<p>They depend on the size (number of bits) of an &#34;unsigned int&#34; (C type) on your machine.</p>
+
+<p>Therefore, you should only use these methods if you are <b>ABSOLUTELY CERTAIN</b> that portability of your code is not an issue!</p>
+
+<p>Note that you can use arbitrarily large chunks (i.e., fragments of bit vectors) of up to 32 bits <b>IN A PORTABLE WAY</b> using the methods whose names begin with &#34;<code>Chunk_</code>&#34;.</p>
+</li>
+
+<li>Chunk sizes
+<p>Note that legal chunk sizes for all methods whose names begin with &#34;<code>Chunk_</code>&#34; range from &#34;<code>1</code>&#34; to &#34;<code>Bit::Vector-&#62;Long_Bits();</code>&#34; bits (&#34;<code>0</code>&#34; is <b>NOT</b> allowed!).</p>
+
+<p>In order to make your programs portable, however, you shouldn&#39;t use chunk sizes larger than 32 bits, since this is the minimum size of an &#34;unsigned long&#34; (C type) on all systems, as prescribed by ANSI&#160;C.</p>
+</li>
+
+<li>Matching sizes
+<p>In general, for methods involving several bit vectors at the same time, all bit vector arguments must have identical sizes (number of bits), or a fatal &#34;size mismatch&#34; error will occur.</p>
+
+<p>Exceptions from this rule are the methods &#34;<code>Concat()</code>&#34;, &#34;<code>Concat_List()</code>&#34;, &#34;<code>Copy()</code>&#34;, &#34;<code>Interval_Copy()</code>&#34; and &#34;<code>Interval_Substitute()</code>&#34;, where no conditions at all are imposed on the size of their bit vector arguments.</p>
+
+<p>In method &#34;<code>Multiply()</code>&#34;, all three bit vector arguments must in principle obey the rule of matching sizes, but the bit vector in which the result of the multiplication is to be stored may be larger than the two bit vector arguments containing the factors for the multiplication.</p>
+
+<p>In method &#34;<code>Power()</code>&#34;, the bit vector for the result must be the same size or greater than the base of the exponentiation term. The exponent can be any size.</p>
+</li>
+
+<li>Index ranges
+<p>All indices for any given bits must lie between &#34;<code>0</code>&#34; and &#34;<code>$vector-&#62;Size()-1</code>&#34;, or a fatal &#34;index out of range&#34; error will occur.</p>
+</li>
+
+<li>Object persistence
+<p>Since version 6.5, &#34;Bit::Vector&#34; objects can be serialized and de-serialized automatically with &#34;Storable&#34;, out-of-the-box, without requiring any further user action for this to work.</p>
+
+<p>This is also true for nested data structures (since version 6.8).</p>
+
+<p>See the <a href="http://man.he.net/man3/Storable" class="podlinkman"
+>Storable(3)</a> documentation for more details.</p>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OVERLOADED_OPERATORS"
+>OVERLOADED OPERATORS</a></h2>
+
+<p>See <a href="/~andk/Bit-Vector-7.2/lib/Bit/Vector/Overload.pod" class="podlinkpod"
+>Bit::Vector::Overload(3)</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="MORE_STRING_IMPORT/EXPORT"
+>MORE STRING IMPORT/EXPORT</a></h2>
+
+<p>See <a href="/~andk/Bit-Vector-7.2/lib/Bit/Vector/String.pod" class="podlinkpod"
+>Bit::Vector::String(3)</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="CLASS_METHODS"
+>CLASS METHODS</a></h2>
+
+<ul>
+<li><code>$version = Bit::Vector-&#62;Version();</code>
+<p>Returns the current version number of this module.</p>
+</li>
+
+<li><code>$bits = Bit::Vector-&#62;Word_Bits();</code>
+<p>Returns the number of bits of an &#34;unsigned int&#34; (C type) on your machine.</p>
+
+<p>(An &#34;unsigned int&#34; is also called a &#34;machine word&#34;, hence the name of this method.)</p>
+</li>
+
+<li><code>$bits = Bit::Vector-&#62;Long_Bits();</code>
+<p>Returns the number of bits of an &#34;unsigned long&#34; (C type) on your machine.</p>
+</li>
+
+<li><code>$vector = Bit::Vector-&#62;new($bits);</code>
+<p>This is the bit vector constructor method.</p>
+
+<p>Call this method to create a new bit vector containing &#34;<code>$bits</code>&#34; bits (with indices ranging from &#34;<code>0</code>&#34; to &#34;<code>$bits-1</code>&#34;).</p>
+
+<p>Note that - in contrast to previous versions - bit vectors of length zero (i.e., with <code>$bits = 0</code>) are permitted now.</p>
+
+<p>The method returns a reference to the newly created bit vector.</p>
+
+<p>A new bit vector is always initialized so that all bits are cleared (turned off).</p>
+
+<p>An exception will be raised if the method is unable to allocate the necessary memory.</p>
+
+<p>Note that if you specify a negative number for &#34;<code>$bits</code>&#34; it will be interpreted as a large positive number due to its internal two&#39;s complement binary representation.</p>
+
+<p>In such a case, the bit vector constructor method will obediently attempt to create a bit vector of that size, probably resulting in an exception, as explained above.</p>
+</li>
+
+<li><code>@veclist = Bit::Vector-&#62;new($bits,$count);</code>
+<p>You can also create more than one bit vector at a time if you specify the optional second parameter &#34;<code>$count</code>&#34;.</p>
+
+<p>The method returns a list of &#34;<code>$count</code>&#34; bit vectors which all have the same number of bits &#34;<code>$bits</code>&#34; (and which are all initialized, i.e., all bits are cleared).</p>
+
+<p>If &#34;<code>$count</code>&#34; is zero, an empty list is returned.</p>
+
+<p>If &#34;<code>$bits</code>&#34; is zero, a list of null-sized bit vectors is returned.</p>
+
+<p>Note again that if you specify a negative number for &#34;<code>$count</code>&#34; it will be interpreted as a large positive number due to its internal two&#39;s complement binary representation.</p>
+
+<p>In such a case, the bit vector constructor method will obediently attempt to create that many bit vectors, probably resulting in an exception (&#34;out of memory&#34;).</p>
+</li>
+
+<li><code>$vector = Bit::Vector-&#62;new_Hex($bits,$string);</code>
+<p>This method is an alternative constructor which allows you to create a new bit vector object (with &#34;<code>$bits</code>&#34; bits) and to initialize it all in one go.</p>
+
+<p>The method internally first calls the bit vector constructor method &#34;<code>new()</code>&#34; and then passes the given string to the method &#34;<code>from_Hex()</code>&#34;.</p>
+
+<p>However, this method is more efficient than performing these two steps separately: First because in this method, the memory area occupied by the new bit vector is not initialized to zeros (which is pointless in this case), and second because it saves you from the associated overhead of one additional method invocation.</p>
+
+<p>An exception will be raised if the necessary memory cannot be allocated (see the description of the method &#34;<code>new()</code>&#34; immediately above for possible causes) or if the given string cannot be converted successfully (see the description of the method &#34;<code>from_Hex()</code>&#34; further below for details).</p>
+
+<p>In the latter case, the memory occupied by the new bit vector is released first (i.e., &#34;free&#34;d) before the exception is actually raised.</p>
+</li>
+
+<li><code>$vector = Bit::Vector-&#62;new_Bin($bits,$string);</code>
+<p>This method is an alternative constructor which allows you to create a new bit vector object (with &#34;<code>$bits</code>&#34; bits) and to initialize it all in one go.</p>
+
+<p>The method internally first calls the bit vector constructor method &#34;<code>new()</code>&#34; and then passes the given string to the method &#34;<code>from_Bin()</code>&#34;.</p>
+
+<p>However, this method is more efficient than performing these two steps separately: First because in this method, the memory area occupied by the new bit vector is not initialized to zeros (which is pointless in this case), and second because it saves you from the associated overhead of one additional method invocation.</p>
+
+<p>An exception will be raised if the necessary memory cannot be allocated (see the description of the method &#34;<code>new()</code>&#34; above for possible causes) or if the given string cannot be converted successfully (see the description of the method &#34;<code>from_Bin()</code>&#34; further below for details).</p>
+
+<p>In the latter case, the memory occupied by the new bit vector is released first (i.e., &#34;free&#34;d) before the exception is actually raised.</p>
+</li>
+
+<li><code>$vector = Bit::Vector-&#62;new_Dec($bits,$string);</code>
+<p>This method is an alternative constructor which allows you to create a new bit vector object (with &#34;<code>$bits</code>&#34; bits) and to initialize it all in one go.</p>
+
+<p>The method internally first calls the bit vector constructor method &#34;<code>new()</code>&#34; and then passes the given string to the method &#34;<code>from_Dec()</code>&#34;.</p>
+
+<p>However, this method is more efficient than performing these two steps separately: First because in this method, &#34;<code>new()</code>&#34; does not initialize the memory area occupied by the new bit vector with zeros (which is pointless in this case, because &#34;<code>from_Dec()</code>&#34; will do it anyway), and second because it saves you from the associated overhead of one additional method invocation.</p>
+
+<p>An exception will be raised if the necessary memory cannot be allocated (see the description of the method &#34;<code>new()</code>&#34; above for possible causes) or if the given string cannot be converted successfully (see the description of the method &#34;<code>from_Dec()</code>&#34; further below for details).</p>
+
+<p>In the latter case, the memory occupied by the new bit vector is released first (i.e., &#34;free&#34;d) before the exception is actually raised.</p>
+</li>
+
+<li><code>$vector = Bit::Vector-&#62;new_Enum($bits,$string);</code>
+<p>This method is an alternative constructor which allows you to create a new bit vector object (with &#34;<code>$bits</code>&#34; bits) and to initialize it all in one go.</p>
+
+<p>The method internally first calls the bit vector constructor method &#34;<code>new()</code>&#34; and then passes the given string to the method &#34;<code>from_Enum()</code>&#34;.</p>
+
+<p>However, this method is more efficient than performing these two steps separately: First because in this method, &#34;<code>new()</code>&#34; does not initialize the memory area occupied by the new bit vector with zeros (which is pointless in this case, because &#34;<code>from_Enum()</code>&#34; will do it anyway), and second because it saves you from the associated overhead of one additional method invocation.</p>
+
+<p>An exception will be raised if the necessary memory cannot be allocated (see the description of the method &#34;<code>new()</code>&#34; above for possible causes) or if the given string cannot be converted successfully (see the description of the method &#34;<code>from_Enum()</code>&#34; further below for details).</p>
+
+<p>In the latter case, the memory occupied by the new bit vector is released first (i.e., &#34;free&#34;d) before the exception is actually raised.</p>
+</li>
+
+<li><code>$vector = Bit::Vector-&#62;Concat_List(@vectors);</code>
+<p>This method creates a new vector containing all bit vectors from the argument list in concatenated form.</p>
+
+<p>The argument list may contain any number of arguments (including zero); the only condition is that all arguments must be bit vectors.</p>
+
+<p>There is no condition concerning the length (in number of bits) of these arguments.</p>
+
+<p>The vectors from the argument list are not changed in any way.</p>
+
+<p>If the argument list is empty or if all arguments have length zero, the resulting bit vector will also have length zero.</p>
+
+<p>Note that the <b>RIGHTMOST</b> bit vector from the argument list will become the <b>LEAST</b> significant part of the resulting bit vector, and the <b>LEFTMOST</b> bit vector from the argument list will become the <b>MOST</b> significant part of the resulting bit vector.</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="OBJECT_METHODS"
+>OBJECT METHODS</a></h2>
+
+<ul>
+<li><code>$vec2 = $vec1-&#62;new($bits);</code>
+<p><code>@veclist = $vec-&#62;new($bits);</code></p>
+
+<p>This is an alternative way of calling the bit vector constructor method.</p>
+
+<p>Vector &#34;<code>$vec1</code>&#34; (or &#34;<code>$vec</code>&#34;) is not affected by this, it just serves as an anchor for the method invocation mechanism.</p>
+
+<p>In fact <b>ALL</b> class methods in this module can be called this way, even though this is probably considered to be &#34;politically incorrect&#34; by OO (&#34;object-orientation&#34;) aficionados. ;-)</p>
+
+<p>So even if you are too lazy to type &#34;<code>Bit::Vector-&#62;</code>&#34; instead of &#34;<code>$vec1-&#62;</code>&#34; (and even though laziness is - allegedly - a programmer&#39;s virtue <code>:-)</code>), maybe it is better not to use this feature if you don&#39;t want to get booed at. ;-)</p>
+</li>
+
+<li><code>$vec2 = $vec1-&#62;Shadow();</code>
+<p>Creates a <b>NEW</b> bit vector &#34;<code>$vec2</code>&#34; of the <b>SAME SIZE</b> as &#34;<code>$vec1</code>&#34; but which is <b>EMPTY</b>.</p>
+
+<p>Just like a shadow that has the same shape as the object it originates from, but is flat and has no volume, i.e., contains nothing.</p>
+</li>
+
+<li><code>$vec2 = $vec1-&#62;Clone();</code>
+<p>Creates a <b>NEW</b> bit vector &#34;<code>$vec2</code>&#34; of the <b>SAME SIZE</b> as &#34;<code>$vec1</code>&#34; which is an <b>EXACT COPY</b> of &#34;<code>$vec1</code>&#34;.</p>
+</li>
+
+<li><code>$vector = $vec1-&#62;Concat($vec2);</code>
+<p>This method returns a new bit vector object which is the result of the concatenation of the contents of &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34;.</p>
+
+<p>Note that the contents of &#34;<code>$vec1</code>&#34; become the <b>MOST</b> significant part of the resulting bit vector, and &#34;<code>$vec2</code>&#34; the <b>LEAST</b> significant part.</p>
+
+<p>If both bit vector arguments have length zero, the resulting bit vector will also have length zero.</p>
+</li>
+
+<li><code>$vector = $vec1-&#62;Concat_List($vec2,$vec3,...);</code>
+<p>This is an alternative way of calling this (class) method as an object method.</p>
+
+<p>The method returns a new bit vector object which is the result of the concatenation of the contents of <code>$vec1 . $vec2 . $vec3 . ...</code></p>
+
+<p>See the section &#34;class methods&#34; above for a detailed description of this method.</p>
+
+<p>Note that the argument list may be empty and that all arguments must be bit vectors if it isn&#39;t.</p>
+</li>
+
+<li><code>$bits = $vector-&#62;Size();</code>
+<p>Returns the size (number of bits) the given vector was created with (or &#34;<code>Resize()</code>&#34;d to).</p>
+</li>
+
+<li><code>$vector-&#62;Resize($bits);</code>
+<p>Changes the size of the given vector to the specified number of bits.</p>
+
+<p>This method allows you to change the size of an existing bit vector, preserving as many bits from the old vector as will fit into the new one (i.e., all bits with indices smaller than the minimum of the sizes of both vectors, old and new).</p>
+
+<p>If the number of machine words needed to store the new vector is smaller than or equal to the number of words needed to store the old vector, the memory allocated for the old vector is reused for the new one, and only the relevant book-keeping information is adjusted accordingly.</p>
+
+<p>This means that even if the number of bits increases, new memory is not necessarily being allocated (i.e., if the old and the new number of bits fit into the same number of machine words).</p>
+
+<p>If the number of machine words needed to store the new vector is greater than the number of words needed to store the old vector, new memory is allocated for the new vector, the old vector is copied to the new one, the remaining bits in the new vector are cleared (turned off) and the old vector is deleted, i.e., the memory that was allocated for it is released.</p>
+
+<p>(An exception will be raised if the method is unable to allocate the necessary memory for the new vector.)</p>
+
+<p>As a consequence, if you decrease the size of a given vector so that it will use fewer machine words, and increase it again later so that it will use more words than immediately before but still less than the original vector, new memory will be allocated anyway because the information about the size of the original vector is lost whenever you resize it.</p>
+
+<p>Note also that if you specify a negative number for &#34;<code>$bits</code>&#34; it will be interpreted as a large positive number due to its internal two&#39;s complement binary representation.</p>
+
+<p>In such a case, &#34;Resize()&#34; will obediently attempt to create a bit vector of that size, probably resulting in an exception, as explained above.</p>
+
+<p>Finally, note that - in contrast to previous versions - resizing a bit vector to a size of zero bits (length zero) is now permitted.</p>
+</li>
+
+<li><code>$vec2-&#62;Copy($vec1);</code>
+<p>Copies the contents of bit vector &#34;<code>$vec1</code>&#34; to bit vector &#34;<code>$vec2</code>&#34;.</p>
+
+<p>The previous contents of bit vector &#34;<code>$vec2</code>&#34; get overwritten, i.e., are lost.</p>
+
+<p>Both vectors must exist beforehand, i.e., this method does not <b>CREATE</b> any new bit vector object.</p>
+
+<p>The two vectors may be of any size.</p>
+
+<p>If the source bit vector is larger than the target, this method will copy as much of the least significant bits of the source vector as will fit into the target vector, thereby discarding any extraneous most significant bits.</p>
+
+<p>BEWARE that this causes a brutal cutoff in the middle of your data, and it will also leave you with an almost unpredictable sign if subsequently the number in the target vector is going to be interpreted as a number! (You have been warned!)</p>
+
+<p>If the target bit vector is larger than the source, this method fills up the remaining most significant bits in the target bit vector with either 0&#39;s or 1&#39;s, depending on the sign (= the most significant bit) of the source bit vector. This is also known as &#34;sign extension&#34;.</p>
+
+<p>This makes it possible to copy numbers from a smaller bit vector into a larger one while preserving the number&#39;s absolute value as well as its sign (due to the two&#39;s complement binary representation of numbers).</p>
+</li>
+
+<li><code>$vector-&#62;Empty();</code>
+<p>Clears all bits in the given vector.</p>
+</li>
+
+<li><code>$vector-&#62;Fill();</code>
+<p>Sets all bits in the given vector.</p>
+</li>
+
+<li><code>$vector-&#62;Flip();</code>
+<p>Flips (i.e., complements) all bits in the given vector.</p>
+</li>
+
+<li><code>$vector-&#62;Primes();</code>
+<p>Clears the given bit vector and sets all bits whose indices are prime numbers.</p>
+
+<p>This method uses the algorithm known as the &#34;Sieve of Erathostenes&#34; internally.</p>
+</li>
+
+<li><code>$vec2-&#62;Reverse($vec1);</code>
+<p>This method copies the given vector &#34;<code>$vec1</code>&#34; to the vector &#34;<code>$vec2</code>&#34;, thereby reversing the order of all bits.</p>
+
+<p>I.e., the least significant bit of &#34;<code>$vec1</code>&#34; becomes the most significant bit of &#34;<code>$vec2</code>&#34;, whereas the most significant bit of &#34;<code>$vec1</code>&#34; becomes the least significant bit of &#34;<code>$vec2</code>&#34;, and so forth for all bits in between.</p>
+
+<p>Note that in-place processing is also possible, i.e., &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; may be identical.</p>
+
+<p>(Internally, this is the same as <code>$vec1-&#62;Interval_Reverse(0,$vec1-&#62;Size()-1);</code>.)</p>
+</li>
+
+<li><code>$vector-&#62;Interval_Empty($min,$max);</code>
+<p>Clears all bits in the interval <code>[$min..$max]</code> (including both limits) in the given vector.</p>
+
+<p>&#34;<code>$min</code>&#34; and &#34;<code>$max</code>&#34; may have the same value; this is the same as clearing a single bit with &#34;<code>Bit_Off()</code>&#34; (but less efficient).</p>
+
+<p>Note that <code>$vector-&#62;Interval_Empty(0,$vector-&#62;Size()-1);</code> is the same as <code>$vector-&#62;Empty();</code> (but less efficient).</p>
+</li>
+
+<li><code>$vector-&#62;Interval_Fill($min,$max);</code>
+<p>Sets all bits in the interval <code>[$min..$max]</code> (including both limits) in the given vector.</p>
+
+<p>&#34;<code>$min</code>&#34; and &#34;<code>$max</code>&#34; may have the same value; this is the same as setting a single bit with &#34;<code>Bit_On()</code>&#34; (but less efficient).</p>
+
+<p>Note that <code>$vector-&#62;Interval_Fill(0,$vector-&#62;Size()-1);</code> is the same as <code>$vector-&#62;Fill();</code> (but less efficient).</p>
+</li>
+
+<li><code>$vector-&#62;Interval_Flip($min,$max);</code>
+<p>Flips (i.e., complements) all bits in the interval <code>[$min..$max]</code> (including both limits) in the given vector.</p>
+
+<p>&#34;<code>$min</code>&#34; and &#34;<code>$max</code>&#34; may have the same value; this is the same as flipping a single bit with &#34;<code>bit_flip()</code>&#34; (but less efficient).</p>
+
+<p>Note that <code>$vector-&#62;Interval_Flip(0,$vector-&#62;Size()-1);</code> is the same as <code>$vector-&#62;Flip();</code> and <code>$vector-&#62;Complement($vector);</code> (but less efficient).</p>
+</li>
+
+<li><code>$vector-&#62;Interval_Reverse($min,$max);</code>
+<p>Reverses the order of all bits in the interval <code>[$min..$max]</code> (including both limits) in the given vector.</p>
+
+<p>I.e., bits &#34;<code>$min</code>&#34; and &#34;<code>$max</code>&#34; swap places, and so forth for all bits in between.</p>
+
+<p>&#34;<code>$min</code>&#34; and &#34;<code>$max</code>&#34; may have the same value; this has no effect whatsoever, though.</p>
+</li>
+
+<li><code>if (($min,$max) = $vector-&#62;Interval_Scan_inc($start))</code>
+<p>Returns the minimum and maximum indices of the next contiguous block of set bits (i.e., bits in the &#34;on&#34; state).</p>
+
+<p>The search starts at index &#34;<code>$start</code>&#34; (i.e., <code>&#34;$min&#34; &#62;= &#34;$start&#34;</code>) and proceeds upwards (i.e., <code>&#34;$max&#34; &#62;= &#34;$min&#34;</code>), thus repeatedly increments the search pointer &#34;<code>$start</code>&#34; (internally).</p>
+
+<p>Note though that the contents of the variable (or scalar literal value) &#34;<code>$start</code>&#34; is <b>NOT</b> altered. I.e., you have to set it to the desired value yourself prior to each call to &#34;<code>Interval_Scan_inc()</code>&#34; (see also the example given below).</p>
+
+<p>Actually, the bit vector is not searched bit by bit, but one machine word at a time, in order to speed up execution (which means that this method is quite efficient).</p>
+
+<p>An empty list is returned if no such block can be found.</p>
+
+<p>Note that a single set bit (surrounded by cleared bits) is a valid block by this definition. In that case the return values for &#34;<code>$min</code>&#34; and &#34;<code>$max</code>&#34; are the same.</p>
+
+<p>Typical use:</p>
+
+<pre class="sh_perl">    $start = 0;
+    while (($start &#60; $vector-&#62;Size()) &#38;&#38;
+        (($min,$max) = $vector-&#62;Interval_Scan_inc($start)))
+    {
+        $start = $max + 2;
+
+        # do something with $min and $max
+    }</pre>
+</li>
+
+<li><code>if (($min,$max) = $vector-&#62;Interval_Scan_dec($start))</code>
+<p>Returns the minimum and maximum indices of the next contiguous block of set bits (i.e., bits in the &#34;on&#34; state).</p>
+
+<p>The search starts at index &#34;<code>$start</code>&#34; (i.e., <code>&#34;$max&#34; &#60;= &#34;$start&#34;</code>) and proceeds downwards (i.e., <code>&#34;$min&#34; &#60;= &#34;$max&#34;</code>), thus repeatedly decrements the search pointer &#34;<code>$start</code>&#34; (internally).</p>
+
+<p>Note though that the contents of the variable (or scalar literal value) &#34;<code>$start</code>&#34; is <b>NOT</b> altered. I.e., you have to set it to the desired value yourself prior to each call to &#34;<code>Interval_Scan_dec()</code>&#34; (see also the example given below).</p>
+
+<p>Actually, the bit vector is not searched bit by bit, but one machine word at a time, in order to speed up execution (which means that this method is quite efficient).</p>
+
+<p>An empty list is returned if no such block can be found.</p>
+
+<p>Note that a single set bit (surrounded by cleared bits) is a valid block by this definition. In that case the return values for &#34;<code>$min</code>&#34; and &#34;<code>$max</code>&#34; are the same.</p>
+
+<p>Typical use:</p>
+
+<pre class="sh_perl">    $start = $vector-&#62;Size() - 1;
+    while (($start &#62;= 0) &#38;&#38;
+        (($min,$max) = $vector-&#62;Interval_Scan_dec($start)))
+    {
+        $start = $min - 2;
+
+        # do something with $min and $max
+    }</pre>
+</li>
+
+<li><code>$vec2-&#62;Interval_Copy($vec1,$offset2,$offset1,$length);</code>
+<p>This method allows you to copy a stretch of contiguous bits (starting at any position &#34;<code>$offset1</code>&#34; you choose, with a length of &#34;<code>$length</code>&#34; bits) from a given &#34;source&#34; bit vector &#34;<code>$vec1</code>&#34; to another position &#34;<code>$offset2</code>&#34; in a &#34;target&#34; bit vector &#34;<code>$vec2</code>&#34;.</p>
+
+<p>Note that the two bit vectors &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; do <b>NOT</b> need to have the same (matching) size!</p>
+
+<p>Consequently, any of the two terms &#34;<code>$offset1 + $length</code>&#34; and &#34;<code>$offset2 + $length</code>&#34; (or both) may exceed the actual length of its corresponding bit vector (&#34;<code>$vec1-&#62;Size()</code>&#34; and &#34;<code>$vec2-&#62;Size()</code>&#34;, respectively).</p>
+
+<p>In such a case, the &#34;<code>$length</code>&#34; parameter is automatically reduced internally so that both terms above are bounded by the number of bits of their corresponding bit vector.</p>
+
+<p>This may even result in a length of zero, in which case nothing is copied at all.</p>
+
+<p>(Of course the value of the &#34;<code>$length</code>&#34; parameter, supplied by you in the initial method call, may also be zero right from the start!)</p>
+
+<p>Note also that &#34;<code>$offset1</code>&#34; and &#34;<code>$offset2</code>&#34; must lie within the range &#34;<code>0</code>&#34; and, respectively, &#34;<code>$vec1-&#62;Size()-1</code>&#34; or &#34;<code>$vec2-&#62;Size()-1</code>&#34;, or a fatal &#34;offset out of range&#34; error will occur.</p>
+
+<p>Note further that &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; may be identical, i.e., you may copy a stretch of contiguous bits from one part of a given bit vector to another part.</p>
+
+<p>The source and the target interval may even overlap, in which case the copying is automatically performed in ascending or descending order (depending on the direction of the copy - downwards or upwards in the bit vector, respectively) to handle this situation correctly, i.e., so that no bits are being overwritten before they have been copied themselves.</p>
+</li>
+
+<li><code>$vec2-&#62;Interval_Substitute($vec1,$off2,$len2,$off1,$len1);</code>
+<p>This method is (roughly) the same for bit vectors (i.e., arrays of booleans) as what the &#34;splice&#34; function in Perl is for lists (i.e., arrays of scalars).</p>
+
+<p>(See <a href="/perldoc?perlfunc#splice" class="podlinkpod"
+>&#34;splice&#34; in perlfunc</a> for more details about this function.)</p>
+
+<p>The method allows you to substitute a stretch of contiguous bits (defined by a position (offset) &#34;<code>$off1</code>&#34; and a length of &#34;<code>$len1</code>&#34; bits) from a given &#34;source&#34; bit vector &#34;<code>$vec1</code>&#34; for a different stretch of contiguous bits (defined by a position (offset) &#34;<code>$off2</code>&#34; and a length of &#34;<code>$len2</code>&#34; bits) in another, &#34;target&#34; bit vector &#34;<code>$vec2</code>&#34;.</p>
+
+<p>Note that the two bit vectors &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; do <b>NOT</b> need to have the same (matching) size!</p>
+
+<p>Note further that &#34;<code>$off1</code>&#34; and &#34;<code>$off2</code>&#34; must lie within the range &#34;<code>0</code>&#34; and, respectively, &#34;<code>$vec1-&#62;Size()</code>&#34; or &#34;<code>$vec2-&#62;Size()</code>&#34;, or a fatal &#34;offset out of range&#34; error will occur.</p>
+
+<p>Alert readers will have noticed that these upper limits are <b>NOT</b> &#34;<code>$vec1-&#62;Size()-1</code>&#34; and &#34;<code>$vec2-&#62;Size()-1</code>&#34;, as they would be for any other method in this module, but that these offsets may actually point to one position <b>PAST THE END</b> of the corresponding bit vector.</p>
+
+<p>This is necessary in order to make it possible to <b>APPEND</b> a given stretch of bits to the target bit vector instead of <b>REPLACING</b> something in it.</p>
+
+<p>For reasons of symmetry and generality, the same applies to the offset in the source bit vector, even though such an offset (one position past the end of the bit vector) does not serve any practical purpose there (but does not cause any harm either).</p>
+
+<p>(Actually this saves you from the need of testing for this special case, in certain circumstances.)</p>
+
+<p>Note that whenever the term &#34;<code>$off1 + $len1</code>&#34; exceeds the size &#34;<code>$vec1-&#62;Size()</code>&#34; of bit vector &#34;<code>$vec1</code>&#34; (or if &#34;<code>$off2 + $len2</code>&#34; exceeds &#34;<code>$vec2-&#62;Size()</code>&#34;), the corresponding length (&#34;<code>$len1</code>&#34; or &#34;<code>$len2</code>&#34;, respectively) is automatically reduced internally so that &#34;<code>$off1 + $len1 &#60;= $vec1-&#62;Size()</code>&#34; (and &#34;<code>$off2 + $len2 &#60;= $vec2-&#62;Size()</code>&#34;) holds.</p>
+
+<p>(Note that this does <b>NOT</b> alter the intended result, even though this may seem counter-intuitive at first!)</p>
+
+<p>This may even result in a length (&#34;<code>$len1</code>&#34; or &#34;<code>$len2</code>&#34;) of zero.</p>
+
+<p>A length of zero for the interval in the <b>SOURCE</b> bit vector (&#34;<code>$len1 == 0</code>&#34;) means that the indicated stretch of bits in the target bit vector (starting at position &#34;<code>$off2</code>&#34;) is to be replaced by <b>NOTHING</b>, i.e., is to be <b>DELETED</b>.</p>
+
+<p>A length of zero for the interval in the <b>TARGET</b> bit vector (&#34;<code>$len2</code> == 0&#34;) means that <b>NOTHING</b> is replaced, and that the stretch of bits from the source bit vector is simply <b>INSERTED</b> into the target bit vector at the indicated position (&#34;<code>$off2</code>&#34;).</p>
+
+<p>If both length parameters are zero, nothing is done at all.</p>
+
+<p>Note that in contrast to any other method in this module (especially &#34;<code>Interval_Copy()</code>&#34;, &#34;<code>Insert()</code>&#34; and &#34;<code>Delete()</code>&#34;), this method <b>IMPLICITLY</b> and <b>AUTOMATICALLY</b> adapts the length of the resulting bit vector as needed, as given by</p>
+
+<pre class="sh_perl">        $size = $vec2-&#62;Size();   #  before
+        $size += $len1 - $len2;  #  after</pre>
+
+<p>(The only other method in this module that changes the size of a bit vector is the method &#34;<code>Resize()</code>&#34;.)</p>
+
+<p>In other words, replacing a given interval of bits in the target bit vector with a longer or shorter stretch of bits from the source bit vector, or simply inserting (&#34;<code>$len2 == 0</code>&#34;) a stretch of bits into or deleting (&#34;<code>$len1 == 0</code>&#34;) an interval of bits from the target bit vector will automatically increase or decrease, respectively, the size of the target bit vector accordingly.</p>
+
+<p>For the sake of generality, this may even result in a bit vector with a size of zero (containing no bits at all).</p>
+
+<p>This is also the reason why bit vectors of length zero are permitted in this module in the first place, starting with version 5.0.</p>
+
+<p>Finally, note that &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; may be identical, i.e., in-place processing is possible.</p>
+
+<p>(If you think about that for a while or if you look at the code, you will see that this is far from trivial!)</p>
+</li>
+
+<li><code>if ($vector-&#62;is_empty())</code>
+<p>Tests whether the given bit vector is empty, i.e., whether <b>ALL</b> of its bits are cleared (in the &#34;off&#34; state).</p>
+
+<p>In &#34;big integer&#34; arithmetic, this is equivalent to testing whether the number stored in the bit vector is zero (&#34;<code>0</code>&#34;).</p>
+
+<p>Returns &#34;true&#34; (&#34;<code>1</code>&#34;) if the bit vector is empty and &#34;false&#34; (&#34;<code>0</code>&#34;) otherwise.</p>
+
+<p>Note that this method also returns &#34;true&#34; (&#34;<code>1</code>&#34;) if the given bit vector has a length of zero, i.e., if it contains no bits at all.</p>
+</li>
+
+<li><code>if ($vector-&#62;is_full())</code>
+<p>Tests whether the given bit vector is full, i.e., whether <b>ALL</b> of its bits are set (in the &#34;on&#34; state).</p>
+
+<p>In &#34;big integer&#34; arithmetic, this is equivalent to testing whether the number stored in the bit vector is minus one (&#34;-1&#34;).</p>
+
+<p>Returns &#34;true&#34; (&#34;<code>1</code>&#34;) if the bit vector is full and &#34;false&#34; (&#34;<code>0</code>&#34;) otherwise.</p>
+
+<p>If the given bit vector has a length of zero (i.e., if it contains no bits at all), this method returns &#34;false&#34; (&#34;<code>0</code>&#34;).</p>
+</li>
+
+<li><code>if ($vec1-&#62;equal($vec2))</code>
+<p>Tests the two given bit vectors for equality.</p>
+
+<p>Returns &#34;true&#34; (&#34;<code>1</code>&#34;) if the two bit vectors are exact copies of one another and &#34;false&#34; (&#34;<code>0</code>&#34;) otherwise.</p>
+</li>
+
+<li><code>$cmp = $vec1-&#62;Lexicompare($vec2);</code>
+<p>Compares the two given bit vectors, which are regarded as <b>UNSIGNED</b> numbers in binary representation.</p>
+
+<p>The method returns &#34;<code>-1</code>&#34; if the first bit vector is smaller than the second bit vector, &#34;<code>0</code>&#34; if the two bit vectors are exact copies of one another and &#34;<code>1</code>&#34; if the first bit vector is greater than the second bit vector.</p>
+</li>
+
+<li><code>$cmp = $vec1-&#62;Compare($vec2);</code>
+<p>Compares the two given bit vectors, which are regarded as <b>SIGNED</b> numbers in binary representation.</p>
+
+<p>The method returns &#34;<code>-1</code>&#34; if the first bit vector is smaller than the second bit vector, &#34;<code>0</code>&#34; if the two bit vectors are exact copies of one another and &#34;<code>1</code>&#34; if the first bit vector is greater than the second bit vector.</p>
+</li>
+
+<li><code>$string = $vector-&#62;to_Hex();</code>
+<p>Returns a hexadecimal string representing the given bit vector.</p>
+
+<p>Note that this representation is quite compact, in that it only needs at most twice the number of bytes needed to store the bit vector itself, internally.</p>
+
+<p>Note also that since a hexadecimal digit is always worth four bits, the length of the resulting string is always a multiple of four bits, regardless of the true length (in bits) of the given bit vector.</p>
+
+<p>Finally, note that the <b>LEAST</b> significant hexadecimal digit is located at the <b>RIGHT</b> end of the resulting string, and the <b>MOST</b> significant digit at the <b>LEFT</b> end.</p>
+</li>
+
+<li><code>$vector-&#62;from_Hex($string);</code>
+<p>Allows to read in the contents of a bit vector from a hexadecimal string, such as returned by the method &#34;<code>to_Hex()</code>&#34; (see above).</p>
+
+<p>Remember that the least significant bits are always to the right of a hexadecimal string, and the most significant bits to the left. Therefore, the string is actually read in from right to left while the bit vector is filled accordingly, 4 bits at a time, starting with the least significant bits and going upward to the most significant bits.</p>
+
+<p>If the given string contains less hexadecimal digits than are needed to completely fill the given bit vector, the remaining (most significant) bits are all cleared.</p>
+
+<p>This also means that, even if the given string does not contain enough digits to completely fill the given bit vector, the previous contents of the bit vector are erased completely.</p>
+
+<p>If the given string is longer than it needs to fill the given bit vector, the superfluous characters are simply ignored.</p>
+
+<p>(In fact they are ignored completely - they are not even checked for proper syntax. See also below for more about that.)</p>
+
+<p>This behaviour is intentional so that you may read in the string representing one bit vector into another bit vector of different size, i.e., as much of it as will fit.</p>
+
+<p>If during the process of reading the given string any character is encountered which is not a hexadecimal digit, a fatal syntax error ensues (&#34;input string syntax error&#34;).</p>
+</li>
+
+<li><code>$string = $vector-&#62;to_Bin();</code>
+<p>Returns a binary string representing the given bit vector.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  $vector = Bit::Vector-&#62;new(8);
+  $vector-&#62;Primes();
+  $string = $vector-&#62;to_Bin();
+  print &#34;&#39;$string&#39;\n&#34;;</pre>
+
+<p>This prints:</p>
+
+<pre class="sh_perl">  &#39;10101100&#39;</pre>
+
+<p>(Bits #7, #5, #3 and #2 are set.)</p>
+
+<p>Note that the <b>LEAST</b> significant bit is located at the <b>RIGHT</b> end of the resulting string, and the <b>MOST</b> significant bit at the <b>LEFT</b> end.</p>
+</li>
+
+<li><code>$vector-&#62;from_Bin($string);</code>
+<p>This method allows you to read in the contents of a bit vector from a binary string, such as returned by the method &#34;<code>to_Bin()</code>&#34; (see above).</p>
+
+<p>Note that this method assumes that the <b>LEAST</b> significant bit is located at the <b>RIGHT</b> end of the binary string, and the <b>MOST</b> significant bit at the <b>LEFT</b> end. Therefore, the string is actually read in from right to left while the bit vector is filled accordingly, one bit at a time, starting with the least significant bit and going upward to the most significant bit.</p>
+
+<p>If the given string contains less binary digits (&#34;<code>0</code>&#34; and &#34;<code>1</code>&#34;) than are needed to completely fill the given bit vector, the remaining (most significant) bits are all cleared.</p>
+
+<p>This also means that, even if the given string does not contain enough digits to completely fill the given bit vector, the previous contents of the bit vector are erased completely.</p>
+
+<p>If the given string is longer than it needs to fill the given bit vector, the superfluous characters are simply ignored.</p>
+
+<p>(In fact they are ignored completely - they are not even checked for proper syntax. See also below for more about that.)</p>
+
+<p>This behaviour is intentional so that you may read in the string representing one bit vector into another bit vector of different size, i.e., as much of it as will fit.</p>
+
+<p>If during the process of reading the given string any character is encountered which is not either &#34;<code>0</code>&#34; or &#34;<code>1</code>&#34;, a fatal syntax error ensues (&#34;input string syntax error&#34;).</p>
+</li>
+
+<li><code>$string = $vector-&#62;to_Dec();</code>
+<p>This method returns a string representing the contents of the given bit vector converted to decimal (base <code>10</code>).</p>
+
+<p>Note that this method assumes the given bit vector to be <b>SIGNED</b> (and to contain a number in two&#39;s complement binary representation).</p>
+
+<p>Consequently, whenever the most significant bit of the given bit vector is set, the number stored in it is regarded as being <b>NEGATIVE</b>.</p>
+
+<p>The resulting string can be fed into &#34;<code>from_Dec()</code>&#34; (see below) in order to copy the contents of this bit vector to another one (or to restore the contents of this one). This is not advisable, though, since this would be very inefficient (there are much more efficient methods for storing and copying bit vectors in this module).</p>
+
+<p>Note that such conversion from binary to decimal is inherently slow since the bit vector has to be repeatedly divided by <code>10</code> with remainder until the quotient becomes <code>0</code> (each remainder in turn represents a single decimal digit of the resulting string).</p>
+
+<p>This is also true for the implementation of this method in this module, even though a considerable effort has been made to speed it up: instead of repeatedly dividing by <code>10</code>, the bit vector is repeatedly divided by the largest power of <code>10</code> that will fit into a machine word. The remainder is then repeatedly divided by <code>10</code> using only machine word arithmetics, which is much faster than dividing the whole bit vector (&#34;divide and rule&#34; principle).</p>
+
+<p>According to my own measurements, this resulted in an 8-fold speed increase over the straightforward approach.</p>
+
+<p>Still, conversion to decimal should be used only where absolutely necessary.</p>
+
+<p>Keep the resulting string stored in some variable if you need it again, instead of converting the bit vector all over again.</p>
+
+<p>Beware that if you set the configuration for overloaded operators to &#34;output=decimal&#34;, this method will be called for every bit vector enclosed in double quotes!</p>
+</li>
+
+<li><code>$vector-&#62;from_Dec($string);</code>
+<p>This method allows you to convert a given decimal number, which may be positive or negative, into two&#39;s complement binary representation, which is then stored in the given bit vector.</p>
+
+<p>The decimal number should always be provided as a string, to avoid possible truncation (due to the limited precision of integers in Perl) or formatting (due to Perl&#39;s use of scientific notation for large numbers), which would lead to errors.</p>
+
+<p>If the binary representation of the given decimal number is too big to fit into the given bit vector (if the given bit vector does not contain enough bits to hold it), a fatal &#34;numeric overflow error&#34; occurs.</p>
+
+<p>If the input string contains other characters than decimal digits (<code>0-9</code>) and an optional leading sign (&#34;<code>+</code>&#34; or &#34;<code>-</code>&#34;), a fatal &#34;input string syntax error&#34; occurs.</p>
+
+<p>Beware that large positive numbers which cause the most significant bit to be set (e.g. &#34;255&#34; in a bit vector with 8 bits) will be printed as negative numbers when converted back to decimal using the method &#34;to_Dec()&#34; (e.g. &#34;-1&#34;, in our example), because numbers with the most significant bit set are considered to be negative in two&#39;s complement binary representation.</p>
+
+<p>Note also that while it is possible to thusly enter negative numbers as large positive numbers (e.g. &#34;255&#34; for &#34;-1&#34; in a bit vector with 8 bits), the contrary isn&#39;t, i.e., you cannot enter &#34;-255&#34; for &#34;+1&#34;, in our example. A fatal &#34;numeric overflow error&#34; will occur if you try to do so.</p>
+
+<p>If possible program abortion is unwanted or intolerable, use &#34;<code>eval</code>&#34;, like this:</p>
+
+<pre class="sh_perl">  eval { $vector-&#62;from_Dec(&#34;1152921504606846976&#34;); };
+  if ($@)
+  {
+      # an error occurred
+  }</pre>
+
+<p>There are four possible error messages:</p>
+
+<pre class="sh_perl">  if ($@ =~ /item is not a string/)
+
+  if ($@ =~ /input string syntax error/)
+
+  if ($@ =~ /numeric overflow error/)
+
+  if ($@ =~ /unable to allocate memory/)</pre>
+
+<p>Note that the conversion from decimal to binary is costly in terms of processing time, since a lot of multiplications have to be carried out (in principle, each decimal digit must be multiplied with the binary representation of the power of <code>10</code> corresponding to its position in the decimal number, i.e., 1, 10, 100, 1000, 10000 and so on).</p>
+
+<p>This is not as time consuming as the opposite conversion, from binary to decimal (where successive divisions have to be carried out, which are even more expensive than multiplications), but still noticeable.</p>
+
+<p>Again (as in the case of &#34;<code>to_Dec()</code>&#34;), the implementation of this method in this module uses the principle of &#34;divide and rule&#34; in order to speed up the conversion, i.e., as many decimal digits as possible are first accumulated (converted) in a machine word and only then stored in the given bit vector.</p>
+
+<p>Even so, use this method only where absolutely necessary if speed is an important consideration in your application.</p>
+
+<p>Beware that if you set the configuration for overloaded operators to &#34;input=decimal&#34;, this method will be called for every scalar operand you use!</p>
+</li>
+
+<li><code>$string = $vector-&#62;to_Enum();</code>
+<p>Converts the given bit vector or set into an enumeration of single indices and ranges of indices (&#34;.newsrc&#34; style), representing the bits that are set (&#34;<code>1</code>&#34;) in the bit vector.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  $vector = Bit::Vector-&#62;new(20);
+  $vector-&#62;Bit_On(2);
+  $vector-&#62;Bit_On(3);
+  $vector-&#62;Bit_On(11);
+  $vector-&#62;Interval_Fill(5,7);
+  $vector-&#62;Interval_Fill(13,19);
+  print &#34;&#39;&#34;, $vector-&#62;to_Enum(), &#34;&#39;\n&#34;;</pre>
+
+<p>which prints</p>
+
+<pre class="sh_perl">  &#39;2,3,5-7,11,13-19&#39;</pre>
+
+<p>If the given bit vector is empty, the resulting string will also be empty.</p>
+
+<p>Note, by the way, that the above example can also be written a little handier, perhaps, as follows:</p>
+
+<pre class="sh_perl">  Bit::Vector-&#62;Configuration(&#34;out=enum&#34;);
+  $vector = Bit::Vector-&#62;new(20);
+  $vector-&#62;Index_List_Store(2,3,5,6,7,11,13,14,15,16,17,18,19);
+  print &#34;&#39;$vector&#39;\n&#34;;</pre>
+</li>
+
+<li><code>$vector-&#62;from_Enum($string);</code>
+<p>This method first empties the given bit vector and then tries to set the bits and ranges of bits specified in the given string.</p>
+
+<p>The string &#34;<code>$string</code>&#34; must only contain unsigned integers or ranges of integers (two unsigned integers separated by a dash &#34;-&#34;), separated by commas (&#34;,&#34;).</p>
+
+<p>All other characters are disallowed (including white space!) and will lead to a fatal &#34;input string syntax error&#34;.</p>
+
+<p>In each range, the first integer (the lower limit of the range) must always be less than or equal to the second integer (the upper limit), or a fatal &#34;minimum &#62; maximum index&#34; error occurs.</p>
+
+<p>All integers must lie in the permitted range for the given bit vector, i.e., they must lie between &#34;<code>0</code>&#34; and &#34;<code>$vector-&#62;Size()-1</code>&#34;.</p>
+
+<p>If this condition is not met, a fatal &#34;index out of range&#34; error occurs.</p>
+
+<p>If possible program abortion is unwanted or intolerable, use &#34;<code>eval</code>&#34;, like this:</p>
+
+<pre class="sh_perl">  eval { $vector-&#62;from_Enum(&#34;2,3,5-7,11,13-19&#34;); };
+  if ($@)
+  {
+      # an error occurred
+  }</pre>
+
+<p>There are four possible error messages:</p>
+
+<pre class="sh_perl">  if ($@ =~ /item is not a string/)
+
+  if ($@ =~ /input string syntax error/)
+
+  if ($@ =~ /index out of range/)
+
+  if ($@ =~ /minimum &#62; maximum index/)</pre>
+
+<p>Note that the order of the indices and ranges is irrelevant, i.e.,</p>
+
+<pre class="sh_perl">  eval { $vector-&#62;from_Enum(&#34;11,5-7,3,13-19,2&#34;); };</pre>
+
+<p>results in the same vector as in the example above.</p>
+
+<p>Ranges and indices may also overlap.</p>
+
+<p>This is because each (single) index in the string is passed to the method &#34;<code>Bit_On()</code>&#34;, internally, and each range to the method &#34;<code>Interval_Fill()</code>&#34;.</p>
+
+<p>This means that the resulting bit vector is just the union of all the indices and ranges specified in the given string.</p>
+</li>
+
+<li><code>$vector-&#62;Bit_Off($index);</code>
+<p>Clears the bit with index &#34;<code>$index</code>&#34; in the given vector.</p>
+</li>
+
+<li><code>$vector-&#62;Bit_On($index);</code>
+<p>Sets the bit with index &#34;<code>$index</code>&#34; in the given vector.</p>
+</li>
+
+<li><code>$vector-&#62;bit_flip($index)</code>
+<p>Flips (i.e., complements) the bit with index &#34;<code>$index</code>&#34; in the given vector.</p>
+
+<p>Moreover, this method returns the <b>NEW</b> state of the bit in question, i.e., it returns &#34;<code>0</code>&#34; if the bit is cleared or &#34;<code>1</code>&#34; if the bit is set (<b>AFTER</b> flipping it).</p>
+</li>
+
+<li><code>if ($vector-&#62;bit_test($index))</code>
+<p><code>if ($vector-&#62;contains($index))</code></p>
+
+<p>Returns the current state of the bit with index &#34;<code>$index</code>&#34; in the given vector, i.e., returns &#34;<code>0</code>&#34; if it is cleared (in the &#34;off&#34; state) or &#34;<code>1</code>&#34; if it is set (in the &#34;on&#34; state).</p>
+</li>
+
+<li><code>$vector-&#62;Bit_Copy($index,$bit);</code>
+<p>Sets the bit with index &#34;<code>$index</code>&#34; in the given vector either to &#34;<code>0</code>&#34; or &#34;<code>1</code>&#34; depending on the boolean value &#34;<code>$bit</code>&#34;.</p>
+</li>
+
+<li><code>$vector-&#62;LSB($bit);</code>
+<p>Allows you to set the least significant bit in the given bit vector to the value given by the boolean parameter &#34;<code>$bit</code>&#34;.</p>
+
+<p>This is a (faster) shortcut for &#34;<code>$vector-&#62;Bit_Copy(0,$bit);</code>&#34;.</p>
+</li>
+
+<li><code>$vector-&#62;MSB($bit);</code>
+<p>Allows you to set the most significant bit in the given bit vector to the value given by the boolean parameter &#34;<code>$bit</code>&#34;.</p>
+
+<p>This is a (faster) shortcut for &#34;<code>$vector-&#62;Bit_Copy($vector-&#62;Size()-1,$bit);</code>&#34;.</p>
+</li>
+
+<li><code>$bit = $vector-&#62;lsb();</code>
+<p>Returns the least significant bit of the given bit vector.</p>
+
+<p>This is a (faster) shortcut for &#34;<code>$bit = $vector-&#62;bit_test(0);</code>&#34;.</p>
+</li>
+
+<li><code>$bit = $vector-&#62;msb();</code>
+<p>Returns the most significant bit of the given bit vector.</p>
+
+<p>This is a (faster) shortcut for &#34;<code>$bit = $vector-&#62;bit_test($vector-&#62;Size()-1);</code>&#34;.</p>
+</li>
+
+<li><code>$carry_out = $vector-&#62;rotate_left();</code>
+<pre class="sh_perl">  carry             MSB           vector:           LSB
+   out:
+  +---+            +---+---+---+---     ---+---+---+---+
+  |   |  &#60;---+---  |   |   |   |    ...    |   |   |   |  &#60;---+
+  +---+      |     +---+---+---+---     ---+---+---+---+      |
+             |                                                |
+             +------------------------------------------------+</pre>
+
+<p>The least significant bit (LSB) is the bit with index &#34;<code>0</code>&#34;, the most significant bit (MSB) is the bit with index &#34;<code>$vector-&#62;Size()-1</code>&#34;.</p>
+</li>
+
+<li><code>$carry_out = $vector-&#62;rotate_right();</code>
+<pre class="sh_perl">          MSB           vector:           LSB            carry
+                                                          out:
+         +---+---+---+---     ---+---+---+---+           +---+
+  +---&#62;  |   |   |   |    ...    |   |   |   |  ---+---&#62; |   |
+  |      +---+---+---+---     ---+---+---+---+     |     +---+
+  |                                                |
+  +------------------------------------------------+</pre>
+
+<p>The least significant bit (LSB) is the bit with index &#34;<code>0</code>&#34;, the most significant bit (MSB) is the bit with index &#34;<code>$vector-&#62;Size()-1</code>&#34;.</p>
+</li>
+
+<li><code>$carry_out = $vector-&#62;shift_left($carry_in);</code>
+<pre class="sh_perl">  carry         MSB           vector:           LSB         carry
+   out:                                                      in:
+  +---+        +---+---+---+---     ---+---+---+---+        +---+
+  |   |  &#60;---  |   |   |   |    ...    |   |   |   |  &#60;---  |   |
+  +---+        +---+---+---+---     ---+---+---+---+        +---+</pre>
+
+<p>The least significant bit (LSB) is the bit with index &#34;<code>0</code>&#34;, the most significant bit (MSB) is the bit with index &#34;<code>$vector-&#62;Size()-1</code>&#34;.</p>
+</li>
+
+<li><code>$carry_out = $vector-&#62;shift_right($carry_in);</code>
+<pre class="sh_perl">  carry         MSB           vector:           LSB         carry
+   in:                                                       out:
+  +---+        +---+---+---+---     ---+---+---+---+        +---+
+  |   |  ---&#62;  |   |   |   |    ...    |   |   |   |  ---&#62;  |   |
+  +---+        +---+---+---+---     ---+---+---+---+        +---+</pre>
+
+<p>The least significant bit (LSB) is the bit with index &#34;<code>0</code>&#34;, the most significant bit (MSB) is the bit with index &#34;<code>$vector-&#62;Size()-1</code>&#34;.</p>
+</li>
+
+<li><code>$vector-&#62;Move_Left($bits);</code>
+<p>Shifts the given bit vector left by &#34;<code>$bits</code>&#34; bits, i.e., inserts &#34;<code>$bits</code>&#34; new bits at the lower end (least significant bit) of the bit vector, moving all other bits up by &#34;<code>$bits</code>&#34; places, thereby losing the &#34;<code>$bits</code>&#34; most significant bits.</p>
+
+<p>The inserted new bits are all cleared (set to the &#34;off&#34; state).</p>
+
+<p>This method does nothing if &#34;<code>$bits</code>&#34; is equal to zero.</p>
+
+<p>Beware that the whole bit vector is cleared <b>WITHOUT WARNING</b> if &#34;<code>$bits</code>&#34; is greater than or equal to the size of the given bit vector!</p>
+
+<p>In fact this method is equivalent to</p>
+
+<pre class="sh_perl">  for ( $i = 0; $i &#60; $bits; $i++ ) { $vector-&#62;shift_left(0); }</pre>
+
+<p>except that it is much more efficient (for &#34;<code>$bits</code>&#34; greater than or equal to the number of bits in a machine word on your system) than this straightforward approach.</p>
+</li>
+
+<li><code>$vector-&#62;Move_Right($bits);</code>
+<p>Shifts the given bit vector right by &#34;<code>$bits</code>&#34; bits, i.e., deletes the &#34;<code>$bits</code>&#34; least significant bits of the bit vector, moving all other bits down by &#34;<code>$bits</code>&#34; places, thereby creating &#34;<code>$bits</code>&#34; new bits at the upper end (most significant bit) of the bit vector.</p>
+
+<p>These new bits are all cleared (set to the &#34;off&#34; state).</p>
+
+<p>This method does nothing if &#34;<code>$bits</code>&#34; is equal to zero.</p>
+
+<p>Beware that the whole bit vector is cleared <b>WITHOUT WARNING</b> if &#34;<code>$bits</code>&#34; is greater than or equal to the size of the given bit vector!</p>
+
+<p>In fact this method is equivalent to</p>
+
+<pre class="sh_perl">  for ( $i = 0; $i &#60; $bits; $i++ ) { $vector-&#62;shift_right(0); }</pre>
+
+<p>except that it is much more efficient (for &#34;<code>$bits</code>&#34; greater than or equal to the number of bits in a machine word on your system) than this straightforward approach.</p>
+</li>
+
+<li><code>$vector-&#62;Insert($offset,$bits);</code>
+<p>This method inserts &#34;<code>$bits</code>&#34; fresh new bits at position &#34;<code>$offset</code>&#34; in the given bit vector.</p>
+
+<p>The &#34;<code>$bits</code>&#34; most significant bits are lost, and all bits starting with bit number &#34;<code>$offset</code>&#34; up to and including bit number &#34;<code>$vector-&#62;Size()-$bits-1</code>&#34; are moved up by &#34;<code>$bits</code>&#34; places.</p>
+
+<p>The now vacant &#34;<code>$bits</code>&#34; bits starting at bit number &#34;<code>$offset</code>&#34; (up to and including bit number &#34;<code>$offset+$bits-1</code>&#34;) are then set to zero (cleared).</p>
+
+<p>Note that this method does <b>NOT</b> increase the size of the given bit vector, i.e., the bit vector is <b>NOT</b> extended at its upper end to &#34;rescue&#34; the &#34;<code>$bits</code>&#34; uppermost (most significant) bits - instead, these bits are lost forever.</p>
+
+<p>If you don&#39;t want this to happen, you have to increase the size of the given bit vector <b>EXPLICITLY</b> and <b>BEFORE</b> you perform the &#34;Insert&#34; operation, with a statement such as the following:</p>
+
+<pre class="sh_perl">  $vector-&#62;Resize($vector-&#62;Size() + $bits);</pre>
+
+<p>Or use the method &#34;<code>Interval_Substitute()</code>&#34; instead of &#34;<code>Insert()</code>&#34;, which performs automatic growing and shrinking of its target bit vector.</p>
+
+<p>Note also that &#34;<code>$offset</code>&#34; must lie in the permitted range between &#34;<code>0</code>&#34; and &#34;<code>$vector-&#62;Size()-1</code>&#34;, or a fatal &#34;offset out of range&#34; error will occur.</p>
+
+<p>If the term &#34;<code>$offset + $bits</code>&#34; exceeds &#34;<code>$vector-&#62;Size()-1</code>&#34;, all the bits starting with bit number &#34;<code>$offset</code>&#34; up to bit number &#34;<code>$vector-&#62;Size()-1</code>&#34; are simply cleared.</p>
+</li>
+
+<li><code>$vector-&#62;Delete($offset,$bits);</code>
+<p>This method deletes, i.e., removes the bits starting at position &#34;<code>$offset</code>&#34; up to and including bit number &#34;<code>$offset+$bits-1</code>&#34; from the given bit vector.</p>
+
+<p>The remaining uppermost bits (starting at position &#34;<code>$offset+$bits</code>&#34; up to and including bit number &#34;<code>$vector-&#62;Size()-1</code>&#34;) are moved down by &#34;<code>$bits</code>&#34; places.</p>
+
+<p>The now vacant uppermost (most significant) &#34;<code>$bits</code>&#34; bits are then set to zero (cleared).</p>
+
+<p>Note that this method does <b>NOT</b> decrease the size of the given bit vector, i.e., the bit vector is <b>NOT</b> clipped at its upper end to &#34;get rid of&#34; the vacant &#34;<code>$bits</code>&#34; uppermost bits.</p>
+
+<p>If you don&#39;t want this, i.e., if you want the bit vector to shrink accordingly, you have to do so <b>EXPLICITLY</b> and <b>AFTER</b> the &#34;Delete&#34; operation, with a couple of statements such as these:</p>
+
+<pre class="sh_perl">  $size = $vector-&#62;Size();
+  if ($bits &#62; $size) { $bits = $size; }
+  $vector-&#62;Resize($size - $bits);</pre>
+
+<p>Or use the method &#34;<code>Interval_Substitute()</code>&#34; instead of &#34;<code>Delete()</code>&#34;, which performs automatic growing and shrinking of its target bit vector.</p>
+
+<p>Note also that &#34;<code>$offset</code>&#34; must lie in the permitted range between &#34;<code>0</code>&#34; and &#34;<code>$vector-&#62;Size()-1</code>&#34;, or a fatal &#34;offset out of range&#34; error will occur.</p>
+
+<p>If the term &#34;<code>$offset + $bits</code>&#34; exceeds &#34;<code>$vector-&#62;Size()-1</code>&#34;, all the bits starting with bit number &#34;<code>$offset</code>&#34; up to bit number &#34;<code>$vector-&#62;Size()-1</code>&#34; are simply cleared.</p>
+</li>
+
+<li><code>$carry = $vector-&#62;increment();</code>
+<p>This method increments the given bit vector.</p>
+
+<p>Note that this method regards bit vectors as being unsigned, i.e., the largest possible positive number is directly followed by the smallest possible (or greatest possible, speaking in absolute terms) negative number:</p>
+
+<pre class="sh_perl">  before:  2 ^ (b-1) - 1    (= &#34;0111...1111&#34;)
+  after:   2 ^ (b-1)        (= &#34;1000...0000&#34;)</pre>
+
+<p>where &#34;<code>b</code>&#34; is the number of bits of the given bit vector.</p>
+
+<p>The method returns &#34;false&#34; (&#34;<code>0</code>&#34;) in all cases except when a carry over occurs (in which case it returns &#34;true&#34;, i.e., &#34;<code>1</code>&#34;), which happens when the number &#34;1111...1111&#34; is incremented, which gives &#34;0000...0000&#34; plus a carry over to the next higher (binary) digit.</p>
+
+<p>This can be used for the terminating condition of a &#34;while&#34; loop, for instance, in order to cycle through all possible values the bit vector can assume.</p>
+</li>
+
+<li><code>$carry = $vector-&#62;decrement();</code>
+<p>This method decrements the given bit vector.</p>
+
+<p>Note that this method regards bit vectors as being unsigned, i.e., the smallest possible (or greatest possible, speaking in absolute terms) negative number is directly followed by the largest possible positive number:</p>
+
+<pre class="sh_perl">  before:  2 ^ (b-1)        (= &#34;1000...0000&#34;)
+  after:   2 ^ (b-1) - 1    (= &#34;0111...1111&#34;)</pre>
+
+<p>where &#34;<code>b</code>&#34; is the number of bits of the given bit vector.</p>
+
+<p>The method returns &#34;false&#34; (&#34;<code>0</code>&#34;) in all cases except when a carry over occurs (in which case it returns &#34;true&#34;, i.e., &#34;<code>1</code>&#34;), which happens when the number &#34;0000...0000&#34; is decremented, which gives &#34;1111...1111&#34; minus a carry over to the next higher (binary) digit.</p>
+
+<p>This can be used for the terminating condition of a &#34;while&#34; loop, for instance, in order to cycle through all possible values the bit vector can assume.</p>
+</li>
+
+<li><code>$overflow = $vec2-&#62;inc($vec1);</code>
+<p>This method copies the contents of bit vector &#34;<code>$vec1</code>&#34; to bit vector &#34;<code>$vec2</code>&#34; and increments the copy (not the original).</p>
+
+<p>If by incrementing the number its sign becomes invalid, the return value (&#34;overflow&#34; flag) will be true (&#34;<code>1</code>&#34;), or false (&#34;<code>0</code>&#34;) if not. (See the description of the method &#34;add()&#34; below for a more in-depth explanation of what &#34;overflow&#34; means).</p>
+
+<p>Note that in-place operation is also possible, i.e., &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; may be identical.</p>
+</li>
+
+<li><code>$overflow = $vec2-&#62;dec($vec1);</code>
+<p>This method copies the contents of bit vector &#34;<code>$vec1</code>&#34; to bit vector &#34;<code>$vec2</code>&#34; and decrements the copy (not the original).</p>
+
+<p>If by decrementing the number its sign becomes invalid, the return value (&#34;overflow&#34; flag) will be true (&#34;<code>1</code>&#34;), or false (&#34;<code>0</code>&#34;) if not. (See the description of the method &#34;subtract()&#34; below for a more in-depth explanation of what &#34;overflow&#34; means).</p>
+
+<p>Note that in-place operation is also possible, i.e., &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; may be identical.</p>
+</li>
+
+<li><code>$carry = $vec3-&#62;add($vec1,$vec2,$carry);</code>
+<p><code>($carry,$overflow) = $vec3-&#62;add($vec1,$vec2,$carry);</code></p>
+
+<p>This method adds the two numbers contained in bit vector &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; with carry &#34;<code>$carry</code>&#34; and stores the result in bit vector &#34;<code>$vec3</code>&#34;.</p>
+
+<p>I.e., $vec3 = $vec1 + $vec2 + $carry</p>
+
+<p>Note that the &#34;<code>$carry</code>&#34; parameter is a boolean value, i.e., only its least significant bit is taken into account. (Think of it as though &#34;<code>$carry &#38;= 1;</code>&#34; was always executed internally.)</p>
+
+<p>In scalar context, the method returns a boolean value which indicates if a carry over (to the next higher bit position) has occured. In list context, the method returns the carry and the overflow flag (in this order).</p>
+
+<p>The overflow flag is true (&#34;<code>1</code>&#34;) if the sign (i.e., the most significant bit) of the result is wrong. This can happen when adding two very large positive numbers or when adding two (by their absolute value) very large negative numbers. See also further below.</p>
+
+<p>The carry in- and output is needed mainly for cascading, i.e., to add numbers that are fragmented into several pieces.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  # initialize
+
+  for ( $i = 0; $i &#60; $n; $i++ )
+  {
+      $a[$i] = Bit::Vector-&#62;new($bits);
+      $b[$i] = Bit::Vector-&#62;new($bits);
+      $c[$i] = Bit::Vector-&#62;new($bits);
+  }
+
+  # fill @a and @b
+
+  # $a[  0 ] is low order part,
+  # $a[$n-1] is high order part,
+  # and same for @b
+
+  # add
+
+  $carry = 0;
+  for ( $i = 0; $i &#60; $n; $i++ )
+  {
+      $carry = $c[$i]-&#62;add($a[$i],$b[$i],$carry);
+  }</pre>
+
+<p>Note that it makes no difference to this method whether the numbers in &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; are unsigned or signed (i.e., in two&#39;s complement binary representation).</p>
+
+<p>Note however that the return value (carry flag) is not meaningful when the numbers are <b>SIGNED</b>.</p>
+
+<p>Moreover, when the numbers are signed, a special type of error can occur which is commonly called an &#34;overflow error&#34;.</p>
+
+<p>An overflow error occurs when the sign of the result (its most significant bit) is flipped (i.e., falsified) by a carry over from the next-lower bit position (&#34;MSB-1&#34;).</p>
+
+<p>In fact matters are a bit more complicated than that: the overflow flag is set to &#34;true&#34; whenever there is a carry over from bit position MSB-1 to the most significant bit (MSB) but no carry over from the MSB to the output carry flag, or vice-versa, i.e., when there is no carry over from bit position MSB-1 to the most significant bit (MSB) but a carry over to the output carry flag.</p>
+
+<p>Thus the overflow flag is the result of an exclusive-or operation between incoming and outgoing carry over at the most significant bit position.</p>
+</li>
+
+<li><code>$carry = $vec3-&#62;subtract($vec1,$vec2,$carry);</code>
+<p><code>($carry,$overflow) = $vec3-&#62;subtract($vec1,$vec2,$carry);</code></p>
+
+<p>This method subtracts the two numbers contained in bit vector &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; with carry &#34;<code>$carry</code>&#34; and stores the result in bit vector &#34;<code>$vec3</code>&#34;.</p>
+
+<p>I.e., $vec3 = $vec1 - $vec2 - $carry</p>
+
+<p>Note that the &#34;<code>$carry</code>&#34; parameter is a boolean value, i.e., only its least significant bit is taken into account. (Think of it as though &#34;<code>$carry &#38;= 1;</code>&#34; was always executed internally.)</p>
+
+<p>In scalar context, the method returns a boolean value which indicates if a carry over (to the next higher bit position) has occured. In list context, the method returns the carry and the overflow flag (in this order).</p>
+
+<p>The overflow flag is true (&#34;<code>1</code>&#34;) if the sign (i.e., the most significant bit) of the result is wrong. This can happen when subtracting a very large negative number from a very large positive number or vice-versa. See also further below.</p>
+
+<p>The carry in- and output is needed mainly for cascading, i.e., to subtract numbers that are fragmented into several pieces.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  # initialize
+
+  for ( $i = 0; $i &#60; $n; $i++ )
+  {
+      $a[$i] = Bit::Vector-&#62;new($bits);
+      $b[$i] = Bit::Vector-&#62;new($bits);
+      $c[$i] = Bit::Vector-&#62;new($bits);
+  }
+
+  # fill @a and @b
+
+  # $a[  0 ] is low order part,
+  # $a[$n-1] is high order part,
+  # and same for @b
+
+  # subtract
+
+  $carry = 0;
+  for ( $i = 0; $i &#60; $n; $i++ )
+  {
+      $carry = $c[$i]-&#62;subtract($a[$i],$b[$i],$carry);
+  }</pre>
+
+<p>Note that it makes no difference to this method whether the numbers in &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; are unsigned or signed (i.e., in two&#39;s complement binary representation).</p>
+
+<p>Note however that the return value (carry flag) is not meaningful when the numbers are <b>SIGNED</b>.</p>
+
+<p>Moreover, when the numbers are signed, a special type of error can occur which is commonly called an &#34;overflow error&#34;.</p>
+
+<p>An overflow error occurs when the sign of the result (its most significant bit) is flipped (i.e., falsified) by a carry over from the next-lower bit position (&#34;MSB-1&#34;).</p>
+
+<p>In fact matters are a bit more complicated than that: the overflow flag is set to &#34;true&#34; whenever there is a carry over from bit position MSB-1 to the most significant bit (MSB) but no carry over from the MSB to the output carry flag, or vice-versa, i.e., when there is no carry over from bit position MSB-1 to the most significant bit (MSB) but a carry over to the output carry flag.</p>
+
+<p>Thus the overflow flag is the result of an exclusive-or operation between incoming and outgoing carry over at the most significant bit position.</p>
+</li>
+
+<li><code>$vec2-&#62;Neg($vec1);</code>
+<p><code>$vec2-&#62;Negate($vec1);</code></p>
+
+<p>This method calculates the two&#39;s complement of the number in bit vector &#34;<code>$vec1</code>&#34; and stores the result in bit vector &#34;<code>$vec2</code>&#34;.</p>
+
+<p>Calculating the two&#39;s complement of a given number in binary representation consists of inverting all bits and incrementing the result by one.</p>
+
+<p>This is the same as changing the sign of the given number from &#34;<code>+</code>&#34; to &#34;<code>-</code>&#34; or vice-versa. In other words, applying this method twice on a given number yields the original number again.</p>
+
+<p>Note that in-place processing is also possible, i.e., &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; may be identical.</p>
+
+<p>Most importantly, beware that this method produces a counter-intuitive result if the number contained in bit vector &#34;<code>$vec1</code>&#34; is <code>2 ^ (n-1)</code> (i.e., &#34;1000...0000&#34;), where &#34;<code>n</code>&#34; is the number of bits the given bit vector contains: The negated value of this number is the number itself!</p>
+</li>
+
+<li><code>$vec2-&#62;Abs($vec1);</code>
+<p><code>$vec2-&#62;Absolute($vec1);</code></p>
+
+<p>Depending on the sign (i.e., the most significant bit) of the number in bit vector &#34;<code>$vec1</code>&#34;, the contents of bit vector &#34;<code>$vec1</code>&#34; are copied to bit vector &#34;<code>$vec2</code>&#34; either with the method &#34;<code>Copy()</code>&#34; (if the number in bit vector &#34;<code>$vec1</code>&#34; is positive), or with &#34;<code>Negate()</code>&#34; (if the number in bit vector &#34;<code>$vec1</code>&#34; is negative).</p>
+
+<p>In other words, this method calculates the absolute value of the number in bit vector &#34;<code>$vec1</code>&#34; and stores the result in bit vector &#34;<code>$vec2</code>&#34;.</p>
+
+<p>Note that in-place processing is also possible, i.e., &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; may be identical.</p>
+
+<p>Most importantly, beware that this method produces a counter-intuitive result if the number contained in bit vector &#34;<code>$vec1</code>&#34; is <code>2 ^ (n-1)</code> (i.e., &#34;1000...0000&#34;), where &#34;<code>n</code>&#34; is the number of bits the given bit vector contains: The absolute value of this number is the number itself, even though this number is still negative by definition (the most significant bit is still set)!</p>
+</li>
+
+<li><code>$sign = $vector-&#62;Sign();</code>
+<p>This method returns &#34;<code>0</code>&#34; if all bits in the given bit vector are cleared, i.e., if the given bit vector contains the number &#34;<code>0</code>&#34;, or if the given bit vector has a length of zero (contains no bits at all).</p>
+
+<p>If not all bits are cleared, this method returns &#34;<code>-1</code>&#34; if the most significant bit is set (i.e., if the bit vector contains a negative number), or &#34;<code>1</code>&#34; otherwise (i.e., if the bit vector contains a positive number).</p>
+</li>
+
+<li><code>$vec3-&#62;Multiply($vec1,$vec2);</code>
+<p>This method multiplies the two numbers contained in bit vector &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; and stores the result in bit vector &#34;<code>$vec3</code>&#34;.</p>
+
+<p>Note that this method regards its arguments as <b>SIGNED</b>.</p>
+
+<p>If you want to make sure that a large number can never be treated as being negative by mistake, make your bit vectors at least one bit longer than the largest number you wish to represent, right from the start, or proceed as follows:</p>
+
+<pre class="sh_perl">    $msb1 = $vec1-&#62;msb();
+    $msb2 = $vec2-&#62;msb();
+    $vec1-&#62;Resize($vec1-&#62;Size()+1);
+    $vec2-&#62;Resize($vec2-&#62;Size()+1);
+    $vec3-&#62;Resize($vec3-&#62;Size()+1);
+    $vec1-&#62;MSB($msb1);
+    $vec2-&#62;MSB($msb2);
+    $vec3-&#62;Multiply($vec1,$vec2);</pre>
+
+<p>Note also that all three bit vector arguments must in principle obey the rule of matching sizes, but that the bit vector &#34;<code>$vec3</code>&#34; may be larger than the two factors &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34;.</p>
+
+<p>In fact multiplying two binary numbers with &#34;<code>n</code>&#34; bits may yield a result which is at most &#34;<code>2n</code>&#34; bits long.</p>
+
+<p>Therefore, it is usually a good idea to let bit vector &#34;<code>$vec3</code>&#34; have twice the size of bit vector &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34;, unless you are absolutely sure that the result will fit into a bit vector of the same size as the two factors.</p>
+
+<p>If you are wrong, a fatal &#34;numeric overflow error&#34; will occur.</p>
+
+<p>Finally, note that in-place processing is possible, i.e., &#34;<code>$vec3</code>&#34; may be identical with &#34;<code>$vec1</code>&#34; or &#34;<code>$vec2</code>&#34;, or both.</p>
+</li>
+
+<li><code>$quot-&#62;Divide($vec1,$vec2,$rest);</code>
+<p>This method divides the two numbers contained in bit vector &#34;<code>$vec1</code>&#34; and &#34;<code>$vec2</code>&#34; and stores the quotient in bit vector &#34;<code>$quot</code>&#34; and the remainder in bit vector &#34;<code>$rest</code>&#34;.</p>
+
+<p>I.e., $quot = $vec1 / $vec2; # div $rest = $vec1 % $vec2; # mod</p>
+
+<p>Therefore, &#34;<code>$quot</code>&#34; and &#34;<code>$rest</code>&#34; must be two <b>DISTINCT</b> bit vectors, or a fatal &#34;result vector(s) must be distinct&#34; error will occur.</p>
+
+<p>Note also that a fatal &#34;division by zero error&#34; will occur if &#34;<code>$vec2</code>&#34; is equal to zero.</p>
+
+<p>Note further that this method regards its arguments as <b>SIGNED</b>.</p>
+
+<p>If you want to make sure that a large number can never be treated as being negative by mistake, make your bit vectors at least one bit longer than the largest number you wish to represent, right from the start, or proceed as follows:</p>
+
+<pre class="sh_perl">    $msb1 = $vec1-&#62;msb();
+    $msb2 = $vec2-&#62;msb();
+    $vec1-&#62;Resize($vec1-&#62;Size()+1);
+    $vec2-&#62;Resize($vec2-&#62;Size()+1);
+    $quot-&#62;Resize($quot-&#62;Size()+1);
+    $rest-&#62;Resize($rest-&#62;Size()+1);
+    $vec1-&#62;MSB($msb1);
+    $vec2-&#62;MSB($msb2);
+    $quot-&#62;Divide($vec1,$vec2,$rest);</pre>
+
+<p>Finally, note that in-place processing is possible, i.e., &#34;<code>$quot</code>&#34; may be identical with &#34;<code>$vec1</code>&#34; or &#34;<code>$vec2</code>&#34; or both, and &#34;<code>$rest</code>&#34; may also be identical with &#34;<code>$vec1</code>&#34; or &#34;<code>$vec2</code>&#34; or both, as long as &#34;<code>$quot</code>&#34; and &#34;<code>$rest</code>&#34; are distinct. (!)</p>
+</li>
+
+<li><code>$vecgcd-&#62;GCD($veca,$vecb);</code>
+<p>This method calculates the &#34;Greatest Common Divisor&#34; of the two numbers contained in bit vector &#34;<code>$veca</code>&#34; and &#34;<code>$vecb</code>&#34; and stores the result in bit vector &#34;<code>$vecgcd</code>&#34;.</p>
+
+<p>The method uses Euklid&#39;s algorithm internally:</p>
+
+<pre class="sh_perl">    int GCD(int a, int b)
+    {
+        int t;
+
+        while (b != 0)
+        {
+            t = a % b; /* = remainder of (a div b) */
+            a = b;
+            b = t;
+        }
+        return(a);
+    }</pre>
+
+<p>Note that <code>GCD(z,0) == GCD(0,z) == z</code>.</p>
+</li>
+
+<li><code>$vecgcd-&#62;GCD($vecx,$vecy,$veca,$vecb);</code>
+<p>This variant of the &#34;GCD&#34; method calculates the &#34;Greatest Common Divisor&#34; of the two numbers contained in bit vector &#34;<code>$veca</code>&#34; and &#34;<code>$vecb</code>&#34; and stores the result in bit vector &#34;<code>$vecgcd</code>&#34;.</p>
+
+<p>Moreover, it determines the two factors which are necessary in order to represent the greatest common divisor as a linear combination of its two arguments, i.e., the two factors <code>&#34;x&#34;</code> and <code>&#34;y&#34;</code> so that <code>GCD(a,b) == x * a + y * b</code>, and stores them in bit vector &#34;<code>$vecx</code>&#34; and &#34;<code>$vecy</code>&#34;, respectively.</p>
+
+<p>For example:</p>
+
+<pre class="sh_perl">  a = 2322
+  b =  654
+
+  GCD( 2322, 654 ) == 6
+
+  x =  20
+  y = -71
+
+  20 * 2322 - 71 * 654 == 6</pre>
+
+<p>Please see <a href="http://www.cut-the-knot.org/blue/extension.shtml" class="podlinkurl"
+>http://www.cut-the-knot.org/blue/extension.shtml</a> for an explanation of how this extension of Euklid&#39;s algorithm works.</p>
+</li>
+
+<li><code>$vec3-&#62;Power($vec1,$vec2);</code>
+<p>This method calculates the exponentiation of base &#34;<code>$vec1</code>&#34; elevated to the &#34;<code>$vec2</code>&#34; power, i.e., &#34;<code>$vec1 ** $vec2</code>&#34;, and stores the result in bit vector &#34;<code>$vec3</code>&#34;.</p>
+
+<p>The method uses an efficient divide-and-conquer algorithm:</p>
+
+<p>Suppose the exponent is (decimal) 13, for example. The binary representation of this exponent is &#34;1101&#34;.</p>
+
+<p>This means we want to calculate</p>
+
+<pre class="sh_perl">  $vec1 * $vec1 * $vec1 * $vec1 * $vec1 * $vec1 * $vec1 * $vec1 *
+  $vec1 * $vec1 * $vec1 * $vec1 *
+  $vec1</pre>
+
+<p>That is, &#34;<code>$vec1</code>&#34; multiplied with itself 13 times. The grouping into lines above is no coincidence. The first line comprises 8 factors, the second contains 4, and the last line just one. This just happens to be the binary representation of 13. <code>;-)</code></p>
+
+<p>We then calculate a series of squares (of squares of squares...) of the base, i.e.,</p>
+
+<pre class="sh_perl">  $power[0] = $vec1;
+  $power[1] = $vec1 * $vec1;
+  $power[2] = $power[1] * $power[1];
+  $power[3] = $power[2] * $power[2];
+  etc.</pre>
+
+<p>To calculate the power of our example, we simply initialize our result with 1 and consecutively multiply it with the items of the series of powers we just calculated, if the corresponding bit of the binary representation of the exponent is set:</p>
+
+<pre class="sh_perl">  $result = 1;
+  $result *= $power[0] if ($vec2 &#38; 1);
+  $result *= $power[1] if ($vec2 &#38; 2);
+  $result *= $power[2] if ($vec2 &#38; 4);
+  $result *= $power[3] if ($vec2 &#38; 8);
+  etc.</pre>
+
+<p>The bit vector &#34;<code>$vec3</code>&#34; must be of the same size as the base &#34;<code>$vec1</code>&#34; or greater. &#34;<code>$vec3</code>&#34; and &#34;<code>$vec1</code>&#34; may be the same vector (i.e., in-place calculation as in &#34;<code>$vec1 **= $vec2;</code>&#34; is possible), but &#34;<code>$vec3</code>&#34; and &#34;<code>$vec2</code>&#34; must be distinct. Finally, the exponent &#34;<code>$vec2</code>&#34; must be positive. A fatal error occurs if any of these conditions is not met.</p>
+</li>
+
+<li><code>$vector-&#62;Block_Store($buffer);</code>
+<p>This method allows you to load the contents of a given bit vector in one go.</p>
+
+<p>This is useful when you store the contents of a bit vector in a file, for instance (using method &#34;<code>Block_Read()</code>&#34;), and when you want to restore the previously saved bit vector.</p>
+
+<p>For this, &#34;<code>$buffer</code>&#34; <b>MUST</b> be a string (<b>NO</b> automatic conversion from numeric to string is provided here as would normally in Perl!) containing the bit vector in &#34;low order byte first&#34; order.</p>
+
+<p>If the given string is shorter than what is needed to completely fill the given bit vector, the remaining (most significant) bytes of the bit vector are filled with zeros, i.e., the previous contents of the bit vector are always erased completely.</p>
+
+<p>If the given string is longer than what is needed to completely fill the given bit vector, the superfluous bytes are simply ignored.</p>
+
+<p>See <a href="/perldoc?perlfunc#sysread" class="podlinkpod"
+>&#34;sysread&#34; in perlfunc</a> for how to read in the contents of &#34;<code>$buffer</code>&#34; from a file prior to passing it to this method.</p>
+</li>
+
+<li><code>$buffer = $vector-&#62;Block_Read();</code>
+<p>This method allows you to export the contents of a given bit vector in one block.</p>
+
+<p>This is useful when you want to save the contents of a bit vector for later, for instance in a file.</p>
+
+<p>The advantage of this method is that it allows you to do so in the compactest possible format, in binary.</p>
+
+<p>The method returns a Perl string which contains an exact copy of the contents of the given bit vector in &#34;low order byte first&#34; order.</p>
+
+<p>See <a href="/perldoc?perlfunc#syswrite" class="podlinkpod"
+>&#34;syswrite&#34; in perlfunc</a> for how to write the data from this string to a file.</p>
+</li>
+
+<li><code>$size = $vector-&#62;Word_Size();</code>
+<p>Each bit vector is internally organized as an array of machine words.</p>
+
+<p>The methods whose names begin with &#34;Word_&#34; allow you to access this internal array of machine words.</p>
+
+<p>Note that because the size of a machine word may vary from system to system, these methods are inherently <b>MACHINE-DEPENDENT</b>!</p>
+
+<p>Therefore, <b>DO NOT USE</b> these methods unless you are absolutely certain that portability of your code is not an issue!</p>
+
+<p>You have been warned!</p>
+
+<p>To be machine-independent, use the methods whose names begin with &#34;<code>Chunk_</code>&#34; instead, with chunk sizes no greater than 32 bits.</p>
+
+<p>The method &#34;<code>Word_Size()</code>&#34; returns the number of machine words that the internal array of words of the given bit vector contains.</p>
+
+<p>This is similar in function to the term &#34;<code>scalar(@array)</code>&#34; for a Perl array.</p>
+</li>
+
+<li><code>$vector-&#62;Word_Store($offset,$word);</code>
+<p>This method allows you to store a given value &#34;<code>$word</code>&#34; at a given position &#34;<code>$offset</code>&#34; in the internal array of words of the given bit vector.</p>
+
+<p>Note that &#34;<code>$offset</code>&#34; must lie in the permitted range between &#34;<code>0</code>&#34; and &#34;<code>$vector-&#62;Word_Size()-1</code>&#34;, or a fatal &#34;offset out of range&#34; error will occur.</p>
+
+<p>This method is similar in function to the expression &#34;<code>$array[$offset] = $word;</code>&#34; for a Perl array.</p>
+</li>
+
+<li><code>$word = $vector-&#62;Word_Read($offset);</code>
+<p>This method allows you to access the value of a given machine word at position &#34;<code>$offset</code>&#34; in the internal array of words of the given bit vector.</p>
+
+<p>Note that &#34;<code>$offset</code>&#34; must lie in the permitted range between &#34;<code>0</code>&#34; and &#34;<code>$vector-&#62;Word_Size()-1</code>&#34;, or a fatal &#34;offset out of range&#34; error will occur.</p>
+
+<p>This method is similar in function to the expression &#34;<code>$word = $array[$offset];</code>&#34; for a Perl array.</p>
+</li>
+
+<li><code>$vector-&#62;Word_List_Store(@words);</code>
+<p>This method allows you to store a list of values &#34;<code>@words</code>&#34; in the internal array of machine words of the given bit vector.</p>
+
+<p>Thereby the <b>LEFTMOST</b> value in the list (&#34;<code>$words[0]</code>&#34;) is stored in the <b>LEAST</b> significant word of the internal array of words (the one with offset &#34;<code>0</code>&#34;), the next value from the list (&#34;<code>$words[1]</code>&#34;) is stored in the word with offset &#34;<code>1</code>&#34;, and so on, as intuitively expected.</p>
+
+<p>If the list &#34;<code>@words</code>&#34; contains fewer elements than the internal array of words of the given bit vector contains machine words, the remaining (most significant) words are filled with zeros.</p>
+
+<p>If the list &#34;<code>@words</code>&#34; contains more elements than the internal array of words of the given bit vector contains machine words, the superfluous values are simply ignored.</p>
+
+<p>This method is comparable in function to the expression &#34;<code>@array = @words;</code>&#34; for a Perl array.</p>
+</li>
+
+<li><code>@words = $vector-&#62;Word_List_Read();</code>
+<p>This method allows you to retrieve the internal array of machine words of the given bit vector all at once.</p>
+
+<p>Thereby the <b>LEFTMOST</b> value in the returned list (&#34;<code>$words[0]</code>&#34;) is the <b>LEAST</b> significant word from the given bit vector, and the <b>RIGHTMOST</b> value in the returned list (&#34;<code>$words[$#words]</code>&#34;) is the <b>MOST</b> significant word of the given bit vector.</p>
+
+<p>This method is similar in function to the expression &#34;<code>@words = @array;</code>&#34; for a Perl array.</p>
+</li>
+
+<li><code>$vector-&#62;Word_Insert($offset,$count);</code>
+<p>This method inserts &#34;<code>$count</code>&#34; empty new machine words at position &#34;<code>$offset</code>&#34; in the internal array of words of the given bit vector.</p>
+
+<p>The &#34;<code>$count</code>&#34; most significant words are lost, and all words starting with word number &#34;<code>$offset</code>&#34; up to and including word number &#34;<code>$vector-&#62;Word_Size()-$count-1</code>&#34; are moved up by &#34;<code>$count</code>&#34; places.</p>
+
+<p>The now vacant &#34;<code>$count</code>&#34; words starting at word number &#34;<code>$offset</code>&#34; (up to and including word number &#34;<code>$offset+$count-1</code>&#34;) are then set to zero (cleared).</p>
+
+<p>Note that this method does <b>NOT</b> increase the size of the given bit vector, i.e., the bit vector is <b>NOT</b> extended at its upper end to &#34;rescue&#34; the &#34;<code>$count</code>&#34; uppermost (most significant) words - instead, these words are lost forever.</p>
+
+<p>If you don&#39;t want this to happen, you have to increase the size of the given bit vector <b>EXPLICITLY</b> and <b>BEFORE</b> you perform the &#34;Insert&#34; operation, with a statement such as the following:</p>
+
+<pre class="sh_perl">  $vector-&#62;Resize($vector-&#62;Size() + $count * Bit::Vector-&#62;Word_Bits());</pre>
+
+<p>Note also that &#34;<code>$offset</code>&#34; must lie in the permitted range between &#34;<code>0</code>&#34; and &#34;<code>$vector-&#62;Word_Size()-1</code>&#34;, or a fatal &#34;offset out of range&#34; error will occur.</p>
+
+<p>If the term &#34;<code>$offset + $count</code>&#34; exceeds &#34;<code>$vector-&#62;Word_Size()-1</code>&#34;, all the words starting with word number &#34;<code>$offset</code>&#34; up to word number &#34;<code>$vector-&#62;Word_Size()-1</code>&#34; are simply cleared.</p>
+</li>
+
+<li><code>$vector-&#62;Word_Delete($offset,$count);</code>
+<p>This method deletes, i.e., removes the words starting at position &#34;<code>$offset</code>&#34; up to and including word number &#34;<code>$offset+$count-1</code>&#34; from the internal array of machine words of the given bit vector.</p>
+
+<p>The remaining uppermost words (starting at position &#34;<code>$offset+$count</code>&#34; up to and including word number &#34;<code>$vector-&#62;Word_Size()-1</code>&#34;) are moved down by &#34;<code>$count</code>&#34; places.</p>
+
+<p>The now vacant uppermost (most significant) &#34;<code>$count</code>&#34; words are then set to zero (cleared).</p>
+
+<p>Note that this method does <b>NOT</b> decrease the size of the given bit vector, i.e., the bit vector is <b>NOT</b> clipped at its upper end to &#34;get rid of&#34; the vacant &#34;<code>$count</code>&#34; uppermost words.</p>
+
+<p>If you don&#39;t want this, i.e., if you want the bit vector to shrink accordingly, you have to do so <b>EXPLICITLY</b> and <b>AFTER</b> the &#34;Delete&#34; operation, with a couple of statements such as these:</p>
+
+<pre class="sh_perl">  $bits = $vector-&#62;Size();
+  $count *= Bit::Vector-&#62;Word_Bits();
+  if ($count &#62; $bits) { $count = $bits; }
+  $vector-&#62;Resize($bits - $count);</pre>
+
+<p>Note also that &#34;<code>$offset</code>&#34; must lie in the permitted range between &#34;<code>0</code>&#34; and &#34;<code>$vector-&#62;Word_Size()-1</code>&#34;, or a fatal &#34;offset out of range&#34; error will occur.</p>
+
+<p>If the term &#34;<code>$offset + $count</code>&#34; exceeds &#34;<code>$vector-&#62;Word_Size()-1</code>&#34;, all the words starting with word number &#34;<code>$offset</code>&#34; up to word number &#34;<code>$vector-&#62;Word_Size()-1</code>&#34; are simply cleared.</p>
+</li>
+
+<li><code>$vector-&#62;Chunk_Store($chunksize,$offset,$chunk);</code>
+<p>This method allows you to set more than one bit at a time with different values.</p>
+
+<p>You can access chunks (i.e., ranges of contiguous bits) between one and at most &#34;<code>Bit::Vector-&#62;Long_Bits()</code>&#34; bits wide.</p>
+
+<p>In order to be portable, though, you should never use chunk sizes larger than 32 bits.</p>
+
+<p>If the given &#34;<code>$chunksize</code>&#34; does not lie between &#34;<code>1</code>&#34; and &#34;<code>Bit::Vector-&#62;Long_Bits()</code>&#34;, a fatal &#34;chunk size out of range&#34; error will occur.</p>
+
+<p>The method copies the &#34;<code>$chunksize</code>&#34; least significant bits from the value &#34;<code>$chunk</code>&#34; to the given bit vector, starting at bit position &#34;<code>$offset</code>&#34; and proceeding upwards until bit number &#34;<code>$offset+$chunksize-1</code>&#34;.</p>
+
+<p>(I.e., bit number &#34;<code>0</code>&#34; of &#34;<code>$chunk</code>&#34; becomes bit number &#34;<code>$offset</code>&#34; in the given bit vector, and bit number &#34;<code>$chunksize-1</code>&#34; becomes bit number &#34;<code>$offset+$chunksize-1</code>&#34;.)</p>
+
+<p>If the term &#34;<code>$offset+$chunksize-1</code>&#34; exceeds &#34;<code>$vector-&#62;Size()-1</code>&#34;, the corresponding superfluous (most significant) bits from &#34;<code>$chunk</code>&#34; are simply ignored.</p>
+
+<p>Note that &#34;<code>$offset</code>&#34; itself must lie in the permitted range between &#34;<code>0</code>&#34; and &#34;<code>$vector-&#62;Size()-1</code>&#34;, or a fatal &#34;offset out of range&#34; error will occur.</p>
+
+<p>This method (as well as the other &#34;<code>Chunk_</code>&#34; methods) is useful, for example, when you are reading in data in chunks of, say, 8 bits, which you need to access later, say, using 16 bits at a time (like audio CD wave files, for instance).</p>
+</li>
+
+<li><code>$chunk = $vector-&#62;Chunk_Read($chunksize,$offset);</code>
+<p>This method allows you to read the values of more than one bit at a time.</p>
+
+<p>You can read chunks (i.e., ranges of contiguous bits) between one and at most &#34;<code>Bit::Vector-&#62;Long_Bits()</code>&#34; bits wide.</p>
+
+<p>In order to be portable, though, you should never use chunk sizes larger than 32 bits.</p>
+
+<p>If the given &#34;<code>$chunksize</code>&#34; does not lie between &#34;<code>1</code>&#34; and &#34;<code>Bit::Vector-&#62;Long_Bits()</code>&#34;, a fatal &#34;chunk size out of range&#34; error will occur.</p>
+
+<p>The method returns the &#34;<code>$chunksize</code>&#34; bits from the given bit vector starting at bit position &#34;<code>$offset</code>&#34; and proceeding upwards until bit number &#34;<code>$offset+$chunksize-1</code>&#34;.</p>
+
+<p>(I.e., bit number &#34;<code>$offset</code>&#34; of the given bit vector becomes bit number &#34;<code>0</code>&#34; of the returned value, and bit number &#34;<code>$offset+$chunksize-1</code>&#34; becomes bit number &#34;<code>$chunksize-1</code>&#34;.)</p>
+
+<p>If the term &#34;<code>$offset+$chunksize-1</code>&#34; exceeds &#34;<code>$vector-&#62;Size()-1</code>&#34;, the non-existent bits are simply not returned.</p>
+
+<p>Note that &#34;<code>$offset</code>&#34; itself must lie in the permitted range between &#34;<code>0</code>&#34; and &#34;<code>$vector-&#62;Size()-1</code>&#34;, or a fatal &#34;offset out of range&#34; error will occur.</p>
+</li>
+
+<li><code>$vector-&#62;Chunk_List_Store($chunksize,@chunks);</code>
+<p>This method allows you to fill the given bit vector with a list of data packets (&#34;chunks&#34;) of any size (&#34;<code>$chunksize</code>&#34;) you like (within certain limits).</p>
+
+<p>In fact the given &#34;<code>$chunksize</code>&#34; must lie in the range between &#34;<code>1</code>&#34; and &#34;<code>Bit::Vector-&#62;Long_Bits()</code>&#34;, or a fatal &#34;chunk size out of range&#34; error will occur.</p>
+
+<p>In order to be portable, though, you should never use chunk sizes larger than 32 bits.</p>
+
+<p>The given bit vector is thereby filled in ascending order: The first chunk from the list (i.e., &#34;<code>$chunks[0]</code>&#34;) fills the &#34;<code>$chunksize</code>&#34; least significant bits, the next chunk from the list (&#34;<code>$chunks[1]</code>&#34;) fills the bits number &#34;<code>$chunksize</code>&#34; to number &#34;<code>2*$chunksize-1</code>&#34;, the third chunk (&#34;<code>$chunks[2]</code>&#34;) fills the bits number &#34;<code>2*$chunksize</code>&#34;, to number &#34;<code>3*$chunksize-1</code>&#34;, and so on.</p>
+
+<p>If there a less chunks in the list than are needed to fill the entire bit vector, the remaining (most significant) bits are cleared, i.e., the previous contents of the given bit vector are always erased completely.</p>
+
+<p>If there are more chunks in the list than are needed to fill the entire bit vector, and/or if a chunk extends beyond &#34;<code>$vector-&#62;Size()-1</code>&#34; (which happens whenever &#34;<code>$vector-&#62;Size()</code>&#34; is not a multiple of &#34;<code>$chunksize</code>&#34;), the superfluous chunks and/or bits are simply ignored.</p>
+
+<p>The method is useful, for example (and among many other applications), for the conversion of packet sizes in a data stream.</p>
+
+<p>This method can also be used to store an octal string in a given bit vector:</p>
+
+<pre class="sh_perl">  $vector-&#62;Chunk_List_Store(3, split(//, reverse $string));</pre>
+
+<p>Note however that unlike the conversion methods &#34;<code>from_Hex()</code>&#34;, &#34;<code>from_Bin()</code>&#34;, &#34;<code>from_Dec()</code>&#34; and &#34;<code>from_Enum()</code>&#34;, this statement does not include any syntax checking, i.e., it may fail silently, without warning.</p>
+
+<p>To perform syntax checking, add the following statements:</p>
+
+<pre class="sh_perl">  if ($string =~ /^[0-7]+$/)
+  {
+      # okay, go ahead with conversion as shown above
+  }
+  else
+  {
+      # error, string contains other than octal characters
+  }</pre>
+
+<p>Another application is to store a repetitive pattern in a given bit vector:</p>
+
+<pre class="sh_perl">  $pattern = 0xDEADBEEF;
+  $length = 32;            # = length of $pattern in bits
+  $size = $vector-&#62;Size();
+  $factor = int($size / $length);
+  if ($size % $length) { $factor++; }
+  $vector-&#62;Chunk_List_Store($length, ($pattern) x $factor);</pre>
+</li>
+
+<li><code>@chunks = $vector-&#62;Chunk_List_Read($chunksize);</code>
+<p>This method allows you to access the contents of the given bit vector in form of a list of data packets (&#34;chunks&#34;) of a size (&#34;<code>$chunksize</code>&#34;) of your choosing (within certain limits).</p>
+
+<p>In fact the given &#34;<code>$chunksize</code>&#34; must lie in the range between &#34;<code>1</code>&#34; and &#34;<code>Bit::Vector-&#62;Long_Bits()</code>&#34;, or a fatal &#34;chunk size out of range&#34; error will occur.</p>
+
+<p>In order to be portable, though, you should never use chunk sizes larger than 32 bits.</p>
+
+<p>The given bit vector is thereby read in ascending order: The &#34;<code>$chunksize</code>&#34; least significant bits (bits number &#34;<code>0</code>&#34; to &#34;<code>$chunksize-1</code>&#34;) become the first chunk in the returned list (i.e., &#34;<code>$chunks[0]</code>&#34;). The bits number &#34;<code>$chunksize</code>&#34; to &#34;<code>2*$chunksize-1</code>&#34; become the next chunk in the list (&#34;<code>$chunks[1]</code>&#34;), and so on.</p>
+
+<p>If &#34;<code>$vector-&#62;Size()</code>&#34; is not a multiple of &#34;<code>$chunksize</code>&#34;, the last chunk in the list will contain fewer bits than &#34;<code>$chunksize</code>&#34;.</p>
+
+<p><b>BEWARE</b> that for large bit vectors and/or small values of &#34;<code>$chunksize</code>&#34;, the number of returned list elements can be extremely large! <b>BE CAREFUL!</b></p>
+
+<p>You could blow up your application with lack of memory (each list element is a full-grown Perl scalar, internally, with an associated memory overhead for its administration!) or at least cause a noticeable, more or less long-lasting &#34;freeze&#34; of your application!</p>
+
+<p>Possible applications:</p>
+
+<p>The method is especially useful in the conversion of packet sizes in a data stream.</p>
+
+<p>This method can also be used to convert a given bit vector to a string of octal numbers:</p>
+
+<pre class="sh_perl">  $string = reverse join(&#39;&#39;, $vector-&#62;Chunk_List_Read(3));</pre>
+</li>
+
+<li><code>$vector-&#62;Index_List_Remove(@indices);</code>
+<p>This method allows you to specify a list of indices of bits which should be turned off in the given bit vector.</p>
+
+<p>In fact this method is a shortcut for</p>
+
+<pre class="sh_perl">    foreach $index (@indices)
+    {
+        $vector-&#62;Bit_Off($index);
+    }</pre>
+
+<p>In contrast to all other import methods in this module, this method does <b>NOT</b> clear the given bit vector before processing its list of arguments.</p>
+
+<p>Instead, this method allows you to accumulate the results of various consecutive calls.</p>
+
+<p>(The same holds for the method &#34;<code>Index_List_Store()</code>&#34;. As a consequence, you can &#34;wipe out&#34; what you did using the method &#34;<code>Index_List_Remove()</code>&#34; by passing the identical argument list to the method &#34;<code>Index_List_Store()</code>&#34;.)</p>
+</li>
+
+<li><code>$vector-&#62;Index_List_Store(@indices);</code>
+<p>This method allows you to specify a list of indices of bits which should be turned on in the given bit vector.</p>
+
+<p>In fact this method is a shortcut for</p>
+
+<pre class="sh_perl">    foreach $index (@indices)
+    {
+        $vector-&#62;Bit_On($index);
+    }</pre>
+
+<p>In contrast to all other import methods in this module, this method does <b>NOT</b> clear the given bit vector before processing its list of arguments.</p>
+
+<p>Instead, this method allows you to accumulate the results of various consecutive calls.</p>
+
+<p>(The same holds for the method &#34;<code>Index_List_Remove()</code>&#34;. As a consequence, you can &#34;wipe out&#34; what you did using the method &#34;<code>Index_List_Store()</code>&#34; by passing the identical argument list to the method &#34;<code>Index_List_Remove()</code>&#34;.)</p>
+</li>
+
+<li><code>@indices = $vector-&#62;Index_List_Read();</code>
+<p>This method returns a list of Perl scalars.</p>
+
+<p>The list contains one scalar for each set bit in the given bit vector.</p>
+
+<p><b>BEWARE</b> that for large bit vectors, this can result in a literally overwhelming number of list elements! <b>BE CAREFUL!</b> You could run out of memory or slow down your application considerably!</p>
+
+<p>Each scalar contains the number of the index corresponding to the bit in question.</p>
+
+<p>These indices are always returned in ascending order.</p>
+
+<p>If the given bit vector is empty (contains only cleared bits) or if it has a length of zero (if it contains no bits at all), the method returns an empty list.</p>
+
+<p>This method can be useful, for instance, to obtain a list of prime numbers:</p>
+
+<pre class="sh_perl">    $limit = 1000; # or whatever
+    $vector = Bit::Vector-&#62;new($limit+1);
+    $vector-&#62;Primes();
+    @primes = $vector-&#62;Index_List_Read();</pre>
+</li>
+
+<li><code>$vec3-&#62;Or($vec1,$vec2);</code>
+<p><code>$set3-&#62;Union($set1,$set2);</code></p>
+
+<p>This method calculates the union of &#34;<code>$set1</code>&#34; and &#34;<code>$set2</code>&#34; and stores the result in &#34;<code>$set3</code>&#34;.</p>
+
+<p>This is usually written as &#34;<code>$set3 = $set1 u $set2</code>&#34; in set theory (where &#34;u&#34; is the &#34;cup&#34; operator).</p>
+
+<p>(On systems where the &#34;cup&#34; character is unavailable this operator is often denoted by a plus sign &#34;+&#34;.)</p>
+
+<p>In-place calculation is also possible, i.e., &#34;<code>$set3</code>&#34; may be identical with &#34;<code>$set1</code>&#34; or &#34;<code>$set2</code>&#34; or both.</p>
+</li>
+
+<li><code>$vec3-&#62;And($vec1,$vec2);</code>
+<p><code>$set3-&#62;Intersection($set1,$set2);</code></p>
+
+<p>This method calculates the intersection of &#34;<code>$set1</code>&#34; and &#34;<code>$set2</code>&#34; and stores the result in &#34;<code>$set3</code>&#34;.</p>
+
+<p>This is usually written as &#34;<code>$set3 = $set1 n $set2</code>&#34; in set theory (where &#34;n&#34; is the &#34;cap&#34; operator).</p>
+
+<p>(On systems where the &#34;cap&#34; character is unavailable this operator is often denoted by an asterisk &#34;*&#34;.)</p>
+
+<p>In-place calculation is also possible, i.e., &#34;<code>$set3</code>&#34; may be identical with &#34;<code>$set1</code>&#34; or &#34;<code>$set2</code>&#34; or both.</p>
+</li>
+
+<li><code>$vec3-&#62;AndNot($vec1,$vec2);</code>
+<p><code>$set3-&#62;Difference($set1,$set2);</code></p>
+
+<p>This method calculates the difference of &#34;<code>$set1</code>&#34; less &#34;<code>$set2</code>&#34; and stores the result in &#34;<code>$set3</code>&#34;.</p>
+
+<p>This is usually written as &#34;<code>$set3 = $set1 \ $set2</code>&#34; in set theory (where &#34;\&#34; is the &#34;less&#34; operator).</p>
+
+<p>In-place calculation is also possible, i.e., &#34;<code>$set3</code>&#34; may be identical with &#34;<code>$set1</code>&#34; or &#34;<code>$set2</code>&#34; or both.</p>
+</li>
+
+<li><code>$vec3-&#62;Xor($vec1,$vec2);</code>
+<p><code>$set3-&#62;ExclusiveOr($set1,$set2);</code></p>
+
+<p>This method calculates the symmetric difference of &#34;<code>$set1</code>&#34; and &#34;<code>$set2</code>&#34; and stores the result in &#34;<code>$set3</code>&#34;.</p>
+
+<p>This can be written as &#34;<code>$set3 = ($set1 u $set2) \ ($set1 n $set2)</code>&#34; in set theory (the union of the two sets less their intersection).</p>
+
+<p>When sets are implemented as bit vectors then the above formula is equivalent to the exclusive-or between corresponding bits of the two bit vectors (hence the name of this method).</p>
+
+<p>Note that this method is also much more efficient than evaluating the above formula explicitly since it uses a built-in machine language instruction internally.</p>
+
+<p>In-place calculation is also possible, i.e., &#34;<code>$set3</code>&#34; may be identical with &#34;<code>$set1</code>&#34; or &#34;<code>$set2</code>&#34; or both.</p>
+</li>
+
+<li><code>$vec2-&#62;Not($vec1);</code>
+<p><code>$set2-&#62;Complement($set1);</code></p>
+
+<p>This method calculates the complement of &#34;<code>$set1</code>&#34; and stores the result in &#34;<code>$set2</code>&#34;.</p>
+
+<p>In &#34;big integer&#34; arithmetic, this is equivalent to calculating the one&#39;s complement of the number stored in the bit vector &#34;<code>$set1</code>&#34; in binary representation.</p>
+
+<p>In-place calculation is also possible, i.e., &#34;<code>$set2</code>&#34; may be identical with &#34;<code>$set1</code>&#34;.</p>
+</li>
+
+<li><code>if ($set1-&#62;subset($set2))</code>
+<p>Returns &#34;true&#34; (&#34;<code>1</code>&#34;) if &#34;<code>$set1</code>&#34; is a subset of &#34;<code>$set2</code>&#34; (i.e., completely contained in &#34;<code>$set2</code>&#34;) and &#34;false&#34; (&#34;<code>0</code>&#34;) otherwise.</p>
+
+<p>This means that any bit which is set (&#34;<code>1</code>&#34;) in &#34;<code>$set1</code>&#34; must also be set in &#34;<code>$set2</code>&#34;, but &#34;<code>$set2</code>&#34; may contain set bits which are not set in &#34;<code>$set1</code>&#34;, in order for the condition of subset relationship to be true between these two sets.</p>
+
+<p>Note that by definition, if two sets are identical, they are also subsets (and also supersets) of each other.</p>
+</li>
+
+<li><code>$norm = $set-&#62;Norm();</code>
+<p>Returns the norm (number of bits which are set) of the given vector.</p>
+
+<p>This is equivalent to the number of elements contained in the given set.</p>
+
+<p>Uses a byte lookup table for calculating the number of set bits per byte, and thus needs a time for evaluation (and a number of loops) linearly proportional to the length of the given bit vector (in bytes).</p>
+
+<p>This should be the fastest algorithm on average.</p>
+</li>
+
+<li><code>$norm = $set-&#62;Norm2();</code>
+<p>Returns the norm (number of bits which are set) of the given vector.</p>
+
+<p>This is equivalent to the number of elements contained in the given set.</p>
+
+<p>This does the same as the method &#34;<code>Norm()</code>&#34; above, only with a different algorithm:</p>
+
+<p>This method counts the number of set and cleared bits at the same time and will stop when either of them has been exhausted, thus needing at most half as many loops per machine word as the total number of bits in a machine word - in fact it will need a number of loops equal to the minimum of the number of set bits and the number of cleared bits.</p>
+
+<p>This might be a faster algorithm than of the method &#34;<code>Norm()</code>&#34; above on some systems, depending on the system&#39;s architecture and the compiler and optimisation used, for bit vectors with sparse set bits and for bit vectors with sparse cleared bits (i.e., predominantly set bits).</p>
+</li>
+
+<li><code>$norm = $set-&#62;Norm3();</code>
+<p>Returns the norm (number of bits which are set) of the given vector.</p>
+
+<p>This is equivalent to the number of elements contained in the given set.</p>
+
+<p>This does the same as the two methods &#34;<code>Norm()</code>&#34; and &#34;<code>Norm2()</code>&#34; above, however with a different algorithm.</p>
+
+<p>In fact this is the implementation of the method &#34;<code>Norm()</code>&#34; used in previous versions of this module.</p>
+
+<p>The method needs a number of loops per machine word equal to the number of set bits in that machine word.</p>
+
+<p>Only for bit vectors with sparse set bits will this method be fast; it will depend on a system&#39;s architecture and compiler whether the method will be faster than any of the two methods above in such cases.</p>
+
+<p>On average however, this is probably the slowest method of the three.</p>
+</li>
+
+<li><code>$min = $set-&#62;Min();</code>
+<p>Returns the minimum of the given set, i.e., the minimum of all indices of all set bits in the given bit vector &#34;<code>$set</code>&#34;.</p>
+
+<p>If the set is empty (no set bits), plus infinity (represented by the constant &#34;MAX_LONG&#34; on your system) is returned.</p>
+
+<p>(This constant is usually 2&#160;^&#160;(n-1)&#160;-&#160;1, where &#34;<code>n</code>&#34; is the number of bits of an unsigned long on your machine.)</p>
+</li>
+
+<li><code>$max = $set-&#62;Max();</code>
+<p>Returns the maximum of the given set, i.e., the maximum of all indices of all set bits in the given bit vector &#34;<code>$set</code>&#34;.</p>
+
+<p>If the set is empty (no set bits), minus infinity (represented by the constant &#34;MIN_LONG&#34; on your system) is returned.</p>
+
+<p>(This constant is usually -(2&#160;^&#160;(n-1)&#160;-&#160;1) or -(2&#160;^&#160;(n-1)), where &#34;<code>n</code>&#34; is the number of bits of an unsigned long on your machine.)</p>
+</li>
+
+<li><code>$m3-&#62;Multiplication($r3,$c3,$m1,$r1,$c1,$m2,$r2,$c2);</code>
+<p>This method multiplies two boolean matrices (stored as bit vectors) &#34;<code>$m1</code>&#34; and &#34;<code>$m2</code>&#34; and stores the result in matrix &#34;<code>$m3</code>&#34;.</p>
+
+<p>The method uses the binary &#34;xor&#34; operation (&#34;<code>^</code>&#34;) as the boolean addition operator (&#34;<code>+</code>&#34;).</p>
+
+<p>An exception is raised if the product of the number of rows and columns of any of the three matrices differs from the actual size of their underlying bit vector.</p>
+
+<p>An exception is also raised if the numbers of rows and columns of the three matrices do not harmonize in the required manner:</p>
+
+<pre class="sh_perl">  rows3 == rows1
+  cols3 == cols2
+  cols1 == rows2</pre>
+
+<p>This method is used by the module &#34;Math::MatrixBool&#34;.</p>
+
+<p>See <a href="/perldoc?Math%3A%3AMatrixBool" class="podlinkpod"
+>Math::MatrixBool(3)</a> for details.</p>
+</li>
+
+<li><code>$m3-&#62;Product($r3,$c3,$m1,$r1,$c1,$m2,$r2,$c2);</code>
+<p>This method multiplies two boolean matrices (stored as bit vectors) &#34;<code>$m1</code>&#34; and &#34;<code>$m2</code>&#34; and stores the result in matrix &#34;<code>$m3</code>&#34;.</p>
+
+<p>This special method uses the binary &#34;or&#34; operation (&#34;<code>|</code>&#34;) as the boolean addition operator (&#34;<code>+</code>&#34;).</p>
+
+<p>An exception is raised if the product of the number of rows and columns of any of the three matrices differs from the actual size of their underlying bit vector.</p>
+
+<p>An exception is also raised if the numbers of rows and columns of the three matrices do not harmonize in the required manner:</p>
+
+<pre class="sh_perl">  rows3 == rows1
+  cols3 == cols2
+  cols1 == rows2</pre>
+
+<p>This method is used by the module &#34;Math::MatrixBool&#34;.</p>
+
+<p>See <a href="/perldoc?Math%3A%3AMatrixBool" class="podlinkpod"
+>Math::MatrixBool(3)</a> for details.</p>
+</li>
+
+<li><code>$matrix-&#62;Closure($rows,$cols);</code>
+<p>This method calculates the reflexive transitive closure of the given boolean matrix (stored as a bit vector) using Kleene&#39;s algoritm.</p>
+
+<p>(See <a href="/perldoc?Math%3A%3AKleene" class="podlinkpod"
+>Math::Kleene(3)</a> for a brief introduction into the theory behind Kleene&#39;s algorithm.)</p>
+
+<p>The reflexive transitive closure answers the question whether a path exists between any two vertices of a graph whose edges are given as a matrix:</p>
+
+<p>If a (directed) edge exists going from vertex &#34;i&#34; to vertex &#34;j&#34;, then the element in the matrix with coordinates (i,j) is set to &#34;<code>1</code>&#34; (otherwise it remains set to &#34;<code>0</code>&#34;).</p>
+
+<p>If the edges are undirected, the resulting matrix is symmetric, i.e., elements (i,j) and (j,i) always contain the same value.</p>
+
+<p>The matrix representing the edges of the graph only answers the question whether an <b>EDGE</b> exists between any two vertices of the graph or not, whereas the reflexive transitive closure answers the question whether a <b>PATH</b> (a series of adjacent edges) exists between any two vertices of the graph!</p>
+
+<p>Note that the contents of the given matrix are modified by this method, so make a copy of the initial matrix in time if you are going to need it again later.</p>
+
+<p>An exception is raised if the given matrix is not quadratic, i.e., if the number of rows and columns of the given matrix is not identical.</p>
+
+<p>An exception is also raised if the product of the number of rows and columns of the given matrix differs from the actual size of its underlying bit vector.</p>
+
+<p>This method is used by the module &#34;Math::MatrixBool&#34;.</p>
+
+<p>See <a href="/perldoc?Math%3A%3AMatrixBool" class="podlinkpod"
+>Math::MatrixBool(3)</a> for details.</p>
+</li>
+
+<li><code>$matrix2-&#62;Transpose($rows2,$cols2,$matrix1,$rows1,$cols1);</code>
+<p>This method calculates the transpose of a boolean matrix &#34;<code>$matrix1</code>&#34; (stored as a bit vector) and stores the result in matrix &#34;<code>$matrix2</code>&#34;.</p>
+
+<p>The transpose of a boolean matrix, representing the edges of a graph, can be used for finding the strongly connected components of that graph.</p>
+
+<p>An exception is raised if the product of the number of rows and columns of any of the two matrices differs from the actual size of its underlying bit vector.</p>
+
+<p>An exception is also raised if the following conditions are not met:</p>
+
+<pre class="sh_perl">  rows2 == cols1
+  cols2 == rows1</pre>
+
+<p>Note that in-place processing (&#34;<code>$matrix1</code>&#34; and &#34;<code>$matrix2</code>&#34; are identical) is only possible if the matrix is quadratic. Otherwise, a fatal &#34;matrix is not quadratic&#34; error will occur.</p>
+
+<p>This method is used by the module &#34;Math::MatrixBool&#34;.</p>
+
+<p>See <a href="/perldoc?Math%3A%3AMatrixBool" class="podlinkpod"
+>Math::MatrixBool(3)</a> for details.</p>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~andk/Bit-Vector-7.2/lib/Bit/Vector/Overload.pod" class="podlinkpod"
+>Bit::Vector::Overload</a>(3), <a href="/~andk/Bit-Vector-7.2/lib/Bit/Vector/String.pod" class="podlinkpod"
+>Bit::Vector::String</a>(3), Storable(3).</p>
+
+<p><a href="/perldoc?Set%3A%3AIntRange" class="podlinkpod"
+>Set::IntRange</a>(3), <a href="/perldoc?Math%3A%3AMatrixBool" class="podlinkpod"
+>Math::MatrixBool</a>(3), <a href="/perldoc?Math%3A%3AMatrixReal" class="podlinkpod"
+>Math::MatrixReal</a>(3), <a href="/perldoc?DFA%3A%3AKleene" class="podlinkpod"
+>DFA::Kleene</a>(3), <a href="/perldoc?Math%3A%3AKleene" class="podlinkpod"
+>Math::Kleene</a>(3), <a href="/perldoc?Graph%3A%3AKruskal" class="podlinkpod"
+>Graph::Kruskal</a>(3).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This man page documents &#34;Bit::Vector&#34; version 7.2.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  Steffen Beyer
+  mailto:STBEY@cpan.org
+  <a href="http://www.engelschall.com/u/sb/download/" class="podlinkurl"
+>http://www.engelschall.com/u/sb/download/</a></pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 1995 - 2009 by Steffen Beyer. All rights reserved.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This package is free software; you can redistribute it and/or modify it under the same terms as Perl itself, i.e., under the terms of the &#34;Artistic License&#34; or the &#34;GNU General Public License&#34;.</p>
+
+<p>The C library at the core of this Perl module can additionally be redistributed and/or modified under the terms of the &#34;GNU Library General Public License&#34;.</p>
+
+<p>Please refer to the files &#34;Artistic.txt&#34;, &#34;GNU_GPL.txt&#34; and &#34;GNU_LGPL.txt&#34; in this distribution for details!</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DISCLAIMER"
+>DISCLAIMER <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This package is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+
+<p>See the &#34;GNU General Public License&#34; for more details.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78276 Uploads, 24724 Distributions
+106002 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 28 04:16:07 2012 GMT (0.357010126113892) @cpansearch1 -->
+ </body>
+</html>

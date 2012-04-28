@@ -1,0 +1,888 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Palm::PDB - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","p5-Palm",3]);
+    _gaq.push(["_setCustomVar",5,"Release","p5-Palm-1.012",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Palm::PDB",3]);
+    _gaq.push(["_setCustomVar",1,"Author","BDFOY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Palm::PDB">permalink</a></div>
+  <a href="/~bdfoy/">brian d foy</a> &gt;
+  <a href="/~bdfoy/p5-Palm-1.012/">p5-Palm-1.012</a> &gt;
+  Palm::PDB
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/168427dea0a034607ee7850f3de98ea2?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/B/BD/BDFOY/p5-Palm-1.012.tar.gz">p5-Palm-1.012.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Palm%3A%3APDB;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~BDFOY/p5-Palm-1.012/lib/PDB.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=p5-Palm">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.012 &nbsp;
+<span class="noprint">
+  <a href="/src/BDFOY/p5-Palm-1.012/lib/PDB.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#RegisterPDBHandlers'>RegisterPDBHandlers</a>
+    <li class='indexItem indexItem2'><a href='#RegisterPRCHandlers'>RegisterPRCHandlers</a>
+    <li class='indexItem indexItem2'><a href='#Load'>Load</a>
+    <li class='indexItem indexItem2'><a href='#Write'>Write</a>
+    <li class='indexItem indexItem2'><a href='#new_Record'>new_Record</a>
+    <li class='indexItem indexItem2'><a href='#is_Dirty'>is_Dirty</a>
+    <li class='indexItem indexItem2'><a href='#append_Record'>append_Record</a>
+    <li class='indexItem indexItem2'><a href='#new_Resource'>new_Resource</a>
+    <li class='indexItem indexItem2'><a href='#append_Resource'>append_Resource</a>
+    <li class='indexItem indexItem2'><a href='#findRecordByID'>findRecordByID</a>
+    <li class='indexItem indexItem2'><a href='#delete_Record'>delete_Record</a>
+    <li class='indexItem indexItem2'><a href='#remove_Record'>remove_Record</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#HELPER_CLASSES'>HELPER CLASSES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#ParseAppInfoBlock'>ParseAppInfoBlock</a>
+    <li class='indexItem indexItem2'><a href='#PackAppInfoBlock'>PackAppInfoBlock</a>
+    <li class='indexItem indexItem2'><a href='#ParseSortBlock'>ParseSortBlock</a>
+    <li class='indexItem indexItem2'><a href='#PackSortBlock'>PackSortBlock</a>
+    <li class='indexItem indexItem2'><a href='#ParseRecord'>ParseRecord</a>
+    <li class='indexItem indexItem2'><a href='#PackRecord'>PackRecord</a>
+    <li class='indexItem indexItem2'><a href='#ParseResource'>ParseResource</a>
+    <li class='indexItem indexItem2'><a href='#PackResource'>PackResource</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#SOURCE_CONTROL'>SOURCE CONTROL</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Palm::PDB - Parse Palm database files.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Palm::PDB;
+    use SomeHelperClass;
+
+    $pdb = new Palm::PDB;
+    $pdb-&#62;Load(&#34;myfile.pdb&#34;);
+
+    # Manipulate records in $pdb
+
+    $pdb-&#62;Write(&#34;myotherfile.pdb&#34;);</pre>
+
+<p>(Note: yes, you do want to use <code>Palm::PDB</code>, even if you&#39;re dealing with some other type of database. $pdb will be reblessed to the appropriate type by <code>$pdb-&#62;Load</code>.)</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The Palm::PDB module provides a framework for reading and writing database files for use on PalmOS devices such as the PalmPilot. It can read and write both Palm Database (<code>.pdb</code>) and Palm Resource (<code>.prc</code>) files.</p>
+
+<p>By itself, the PDB module is not terribly useful; it is intended to be used in conjunction with supplemental modules for specific types of databases, such as Palm::Raw or Palm::Memo.</p>
+
+<p>The Palm::PDB module encapsulates the common work of parsing the structure of a Palm database. The <a href="#Load" class="podlinkpod"
+>Load()</a> function reads the file, then passes the individual chunks (header, records, etc.) to application-specific functions for processing. Similarly, the <a href="#Write" class="podlinkpod"
+>Write()</a> function calls application-specific functions to get the individual chunks, then writes them to a file.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+>new</a></h2>
+
+<pre class="sh_perl">  $new = new Palm::PDB();</pre>
+
+<p>Creates a new PDB. $new is a reference to an anonymous hash. Some of its elements have special significance. See <a href="#Load" class="podlinkpod"
+>Load()</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="RegisterPDBHandlers"
+>RegisterPDBHandlers</a></h2>
+
+<pre class="sh_perl">  &#38;Palm::PDB::RegisterPDBHandlers(&#34;classname&#34;, typespec...);</pre>
+
+<p>Typically:</p>
+
+<pre class="sh_perl">  &#38;Palm::PDB::RegisterPDBHandlers(__PACKAGE__,
+        [ &#34;FooB&#34;, &#34;DATA&#34; ],
+        );</pre>
+
+<p>The $pdb-&#62;<a href="#Load" class="podlinkpod"
+>Load()</a> method acts as a virtual constructor. When it reads the header of a <code>.pdb</code> file, it looks up the file&#39;s creator and type in a set of tables, and reblesses $pdb into a class capable of parsing the application-specific parts of the file (AppInfo block, records, etc.)</p>
+
+<p>RegisterPDBHandlers() adds entries to these tables; it says that any file whose creator and/or type match any of the <i>typespec</i>s (there may be several) should be reblessed into the class <i>classname</i>.</p>
+
+<p>Note that RegisterPDBHandlers() applies only to record databases (<code>.pdb</code> files). For resource databases, see <a href="#RegisterPRCHandlers" class="podlinkpod"
+>RegisterPRCHandlers()</a>.</p>
+
+<p>RegisterPDBHandlers() is typically called in the import() function of a helper class. In this case, the class is registering itself, and it is simplest just to use <code>__PACKAGE__</code> for the package name:</p>
+
+<pre class="sh_perl">    package PalmFoo;
+    use Palm::PDB;
+
+    sub import
+    {
+        &#38;Palm::PDB::RegisterPDBHandlers(__PACKAGE__,
+            [ &#34;FooZ&#34;, &#34;DATA&#34; ]
+            );
+    }</pre>
+
+<p>A <i>typespec</i> can be either a string, or an anonymous array with two elements. If it is an anonymous array, then the first element is the file&#39;s creator; the second element is its type. If a <i>typespec</i> is a string, it is equivalent to specifying that string as the database&#39;s creator, and a wildcard as its type.</p>
+
+<p>The creator and type should be either four-character strings, or the empty string. An empty string represents a wildcard. Thus:</p>
+
+<pre class="sh_perl">    &#38;Palm::PDB::RegisterPDBHandlers(&#34;MyClass&#34;,
+        [ &#34;fOOf&#34;, &#34;DATA&#34; ],
+        [ &#34;BarB&#34;, &#34;&#34; ],
+        [ &#34;&#34;, &#34;BazQ&#34; ],
+        &#34;Fred&#34;
+        );</pre>
+
+<p>Class MyClass will handle:</p>
+
+<dl>
+<dt><a name="_"
+></a></dt>
+
+<dd>
+<p>Databases whose creator is <code>fOOf</code> and whose type is <code>DATA</code>.</p>
+
+<dt><a name="_"
+></a></dt>
+
+<dd>
+<p>Databases whose creator is <code>BarB</code>, of any type.</p>
+
+<dt><a name="_"
+></a></dt>
+
+<dd>
+<p>Databases with any creator whose type is <code>BazQ</code>.</p>
+
+<dt><a name="_"
+></a></dt>
+
+<dd>
+<p>Databases whose creator is <code>Fred</code>, of any type.</p>
+</dd>
+</dl>
+
+</DL>
+<!-- Grrr... pod2html is broken, and doesn't terminate the list correctly -->
+
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="RegisterPRCHandlers"
+>RegisterPRCHandlers</a></h2>
+
+<pre class="sh_perl">  &#38;Palm::PDB::RegisterPRCHandlers(&#34;classname&#34;, typespec...);</pre>
+
+<p>Typically:</p>
+
+<pre class="sh_perl">  &#38;Palm::PDB::RegisterPRCHandlers(__PACKAGE__,
+        [ &#34;FooZ&#34;, &#34;CODE&#34; ],
+        );</pre>
+
+<p>RegisterPRCHandlers() is similar to <a href="#RegisterPDBHandlers" class="podlinkpod"
+>RegisterPDBHandlers()</a>, but specifies a class to handle resource database (<code>.prc</code>) files.</p>
+
+<p>A class for parsing applications should begin with:</p>
+
+<pre class="sh_perl">    package PalmApps;
+    use Palm::PDB;
+
+    sub import
+    {
+        &#38;Palm::PDB::RegisterPRCHandlers(__PACKAGE__,
+            [ &#34;&#34;, &#34;appl&#34; ]
+            );
+    }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Load"
+>Load</a></h2>
+
+<pre class="sh_perl">  $pdb-&#62;Load($filename);</pre>
+
+<p>Reads the file <code>$filename</code>, parses it, reblesses $pdb to the appropriate class, and invokes appropriate methods to parse the application-specific parts of the database (see <a href="#HELPER_CLASSES" class="podlinkpod"
+>&#34;HELPER CLASSES&#34;</a>).</p>
+
+<p><code>$filename</code> may also be an open file handle (as long as it&#39;s seekable). This allows for manipulating databases in memory structures.</p>
+
+<p>Load() uses the <i>typespec</i>s given to RegisterPDBHandlers() and RegisterPRCHandlers() when deciding how to rebless $pdb. For record databases, it uses the <i>typespec</i>s passed to RegisterPDBHandlers(), and for resource databases, it uses the <i>typespec</i>s passed to RegisterPRCHandlers().</p>
+
+<p>Load() looks for matching <i>typespec</i>s in the following order, from most to least specific:</p>
+
+<ol>
+<li>A <i>typespec</i> that specifies both the database&#39;s creator and its type exactly.</li>
+
+<li>A <i>typespec</i> that specifies the database&#39;s type and has a wildcard for the creator (this is rarely used).</li>
+
+<li>A <i>typespec</i> that specifies the database&#39;s creator and has a wildcard for the type.</li>
+
+<li>A <i>typespec</i> that has wildcards for both the creator and type.</li>
+</ol>
+
+</OL>
+<!-- Grrr... pod2html is broken, and doesn't terminate the list correctly -->
+
+
+<p>Thus, if the database has creator &#34;FooZ&#34; and type &#34;DATA&#34;, Load() will first look for &#34;FooZ&#34;/&#34;DATA&#34;, then &#34;&#34;/&#34;DATA&#34;, then &#34;FooZ&#34;/&#34;&#34;, and finally will fall back on &#34;&#34;/&#34;&#34; (the universal default).</p>
+
+<p>After Load() returns, $pdb may contain the following fields:</p>
+
+<dl>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;name&#34;}"
+>$pdb-&#62;{&#34;name&#34;}</a></dt>
+
+<dd>
+<p>The name of the database.</p>
+
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;attributes&#34;}{&#34;ResDB&#34;}"
+>$pdb-&#62;{&#34;attributes&#34;}{&#34;ResDB&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;attributes&#34;}{&#34;ReadOnly&#34;}"
+>$pdb-&#62;{&#34;attributes&#34;}{&#34;ReadOnly&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;attributes&#34;}{&#34;AppInfoDirty&#34;}"
+>$pdb-&#62;{&#34;attributes&#34;}{&#34;AppInfoDirty&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;attributes&#34;}{&#34;Backup&#34;}"
+>$pdb-&#62;{&#34;attributes&#34;}{&#34;Backup&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;attributes&#34;}{&#34;OKToInstallNewer&#34;}"
+>$pdb-&#62;{&#34;attributes&#34;}{&#34;OKToInstallNewer&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;attributes&#34;}{&#34;ResetAfterInstall&#34;}"
+>$pdb-&#62;{&#34;attributes&#34;}{&#34;ResetAfterInstall&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;attributes&#34;}{&#34;CopyPrevention&#34;}"
+>$pdb-&#62;{&#34;attributes&#34;}{&#34;CopyPrevention&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;attributes&#34;}{&#34;Stream&#34;}"
+>$pdb-&#62;{&#34;attributes&#34;}{&#34;Stream&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;attributes&#34;}{&#34;Hidden&#34;}"
+>$pdb-&#62;{&#34;attributes&#34;}{&#34;Hidden&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;attributes&#34;}{&#34;LaunchableData&#34;}"
+>$pdb-&#62;{&#34;attributes&#34;}{&#34;LaunchableData&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;attributes&#34;}{&#34;Recyclable&#34;}"
+>$pdb-&#62;{&#34;attributes&#34;}{&#34;Recyclable&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;attributes&#34;}{&#34;Bundle&#34;}"
+>$pdb-&#62;{&#34;attributes&#34;}{&#34;Bundle&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;attributes&#34;}{&#34;Open&#34;}"
+>$pdb-&#62;{&#34;attributes&#34;}{&#34;Open&#34;}</a></dt>
+
+<dd>
+<p>These are the attribute flags from the database header. Each is true iff the corresponding flag is set.</p>
+
+<p>The &#34;LaunchableData&#34; attribute is set on PQAs.</p>
+
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;version&#34;}"
+>$pdb-&#62;{&#34;version&#34;}</a></dt>
+
+<dd>
+<p>The database&#39;s version number. An integer.</p>
+
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;ctime&#34;}"
+>$pdb-&#62;{&#34;ctime&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;mtime&#34;}"
+>$pdb-&#62;{&#34;mtime&#34;}</a></dt>
+
+<dd>
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;baktime&#34;}"
+>$pdb-&#62;{&#34;baktime&#34;}</a></dt>
+
+<dd>
+<p>The database&#39;s creation time, last modification time, and time of last backup, in Unix <code>time_t</code> format (seconds since Jan. 1, 1970).</p>
+
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;modnum&#34;}"
+>$pdb-&#62;{&#34;modnum&#34;}</a></dt>
+
+<dd>
+<p>The database&#39;s modification number. An integer.</p>
+
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;type&#34;}"
+>$pdb-&#62;{&#34;type&#34;}</a></dt>
+
+<dd>
+<p>The database&#39;s type. A four-character string.</p>
+
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;creator&#34;}"
+>$pdb-&#62;{&#34;creator&#34;}</a></dt>
+
+<dd>
+<p>The database&#39;s creator. A four-character string.</p>
+
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;uniqueIDseed&#34;}"
+>$pdb-&#62;{&#34;uniqueIDseed&#34;}</a></dt>
+
+<dd>
+<p>The database&#39;s unique ID seed. An integer.</p>
+
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;2NULs&#34;}"
+>$pdb-&#62;{&#34;2NULs&#34;}</a></dt>
+
+<dd>
+<p>The two NUL bytes that appear after the record index and the AppInfo block. Included here because every once in a long while, they are not NULs, for some reason.</p>
+
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;appinfo&#34;}"
+>$pdb-&#62;{&#34;appinfo&#34;}</a></dt>
+
+<dd>
+<p>The AppInfo block, as returned by the $pdb-&#62;ParseAppInfoBlock() helper method.</p>
+
+<dt><a name='pdb'></a><a name="$pdb-&#62;{&#34;sort&#34;}"
+>$pdb-&#62;{&#34;sort&#34;}</a></dt>
+
+<dd>
+<p>The sort block, as returned by the $pdb-&#62;ParseSortBlock() helper method.</p>
+
+<dt><a name='pdb'></a><a name="@{$pdb-&#62;{&#34;records&#34;}}"
+>@{$pdb-&#62;{&#34;records&#34;}}</a></dt>
+
+<dd>
+<p>The list of records in the database, as returned by the $pdb-&#62;ParseRecord() helper method. Resource databases do not have this.</p>
+
+<dt><a name='pdb'></a><a name="@{$pdb-&#62;{&#34;resources&#34;}}"
+>@{$pdb-&#62;{&#34;resources&#34;}}</a></dt>
+
+<dd>
+<p>The list of resources in the database, as returned by the $pdb-&#62;ParseResource() helper method. Record databases do not have this.</p>
+</dd>
+</dl>
+
+<p>All of these fields may be set by hand, but should conform to the format given above.</p>
+
+</DL>
+<!-- Grrr... pod2html is broken, and doesn't terminate the list correctly -->
+
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Write"
+>Write</a></h2>
+
+<pre class="sh_perl">  $pdb-&#62;Write($filename);</pre>
+
+<p>Invokes methods in helper classes to get the application-specific parts of the database, then writes the database to the file <code>$filename</code>.</p>
+
+<p><code>$filename</code> may also be an open file handle (as long as it&#39;s seekable). This allows for manipulating databases in memory structures.</p>
+
+<p>Write() uses the following helper methods:</p>
+
+<dl>
+<dt><a name="_"
+></a></dt>
+
+<dd>
+<p>PackAppInfoBlock()</p>
+
+<dt><a name="_"
+></a></dt>
+
+<dd>
+<p>PackSortBlock()</p>
+
+<dt><a name="_"
+></a></dt>
+
+<dd>
+<p>PackResource() or PackRecord()</p>
+</dd>
+</dl>
+
+</DL>
+<!-- Grrr... pod2html is broken, and doesn't terminate the list correctly -->
+
+
+<p>See also <a href="#HELPER_CLASSES" class="podlinkpod"
+>&#34;HELPER CLASSES&#34;</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new_Record"
+>new_Record</a></h2>
+
+<pre class="sh_perl">  $record = Palm::PDB-&#62;new_Record();
+  $record = new_Record Palm::PDB;</pre>
+
+<p>Creates a new record, with the bare minimum needed:</p>
+
+<pre class="sh_perl">        $record-&#62;{&#39;category&#39;}
+        $record-&#62;{&#39;attributes&#39;}{&#39;Dirty&#39;}
+        $record-&#62;{&#39;id&#39;}</pre>
+
+<p>The ``Dirty&#39;&#39; attribute is originally set, since this function will usually be called to create records to be added to a database.</p>
+
+<p><code>new_Record</code> does <b>not</b> add the new record to a PDB. For that, you want <code>append_Record</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_Dirty"
+>is_Dirty</a></h2>
+
+<pre class="sh_perl">  $pdb-&#62;Write( $fname ) if $pdb-&#62;is_Dirty();</pre>
+
+<p>Returns non-zero if any of the in-memory elements of the database have been changed. This includes changes via function calls (any call that changes the <code>$pdb</code>&#39;s &#34;last modification&#34; time) as well as testing the &#34;dirty&#34; status of attributes where possible (i.e. AppInfo, records, but not resource entries).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="append_Record"
+>append_Record</a></h2>
+
+<pre class="sh_perl">  $record  = $pdb-&#62;append_Record;
+  $record2 = $pdb-&#62;append_Record($record1);</pre>
+
+<p>If called without any arguments, creates a new record with <a href="#new_Record" class="podlinkpod"
+>new_Record()</a>, and appends it to $pdb.</p>
+
+<p>If given a reference to a record, appends that record to @{$pdb-&#62;{records}}.</p>
+
+<p>Returns a reference to the newly-appended record.</p>
+
+<p>This method updates $pdb&#39;s &#34;last modification&#34; time.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new_Resource"
+>new_Resource</a></h2>
+
+<pre class="sh_perl">  $resource = Palm::PDB-&#62;new_Resource();
+  $resource = new_Resource Palm::PDB;</pre>
+
+<p>Creates a new resource and initializes</p>
+
+<pre class="sh_perl">        $resource-&#62;{type}
+        $resource-&#62;{id}</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="append_Resource"
+>append_Resource</a></h2>
+
+<pre class="sh_perl">  $resource  = $pdb-&#62;append_Resource;
+  $resource2 = $pdb-&#62;append_Resource($resource1);</pre>
+
+<p>If called without any arguments, creates a new resource with <a href="#new_Resource" class="podlinkpod"
+>new_Resource()</a>, and appends it to $pdb.</p>
+
+<p>If given a reference to a resource, appends that resource to @{$pdb-&#62;{resources}}.</p>
+
+<p>Returns a reference to the newly-appended resource.</p>
+
+<p>This method updates $pdb&#39;s &#34;last modification&#34; time.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="findRecordByID"
+>findRecordByID</a></h2>
+
+<pre class="sh_perl">  $record = $pdb-&#62;findRecordByID($id);</pre>
+
+<p>Looks through the list of records in $pdb, and returns a reference to the record with ID $id, or the undefined value if no such record was found.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="delete_Record"
+>delete_Record</a></h2>
+
+<pre class="sh_perl">  $pdb-&#62;delete_Record($record, $expunge);</pre>
+
+<p>Marks $record for deletion, so that it will be deleted from the database at the next sync.</p>
+
+<p>If $expunge is false or omitted, the record will be marked for deletion with archival. If $expunge is true, the record will be marked for deletion without archival.</p>
+
+<p>This method updates $pdb&#39;s &#34;last modification&#34; time.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="remove_Record"
+>remove_Record</a></h2>
+
+<pre class="sh_perl">        for (@{$pdb-&#62;{&#39;records&#39;}})
+        {
+                $pdb-&#62;remove_Record( $_ ) if $_-&#62;{attributes}{deleted};
+        }</pre>
+
+<p>Removes <code>$record</code> from the database. This differs from <code>delete_Record</code> in that it&#39;s an actual deletion rather than just setting a flag.</p>
+
+<p>This method updates $pdb&#39;s &#34;last modification&#34; time.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="HELPER_CLASSES"
+>HELPER CLASSES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>$pdb-&#62;Load() reblesses $pdb into a new class. This helper class is expected to convert raw data from the database into parsed representations of it, and vice-versa.</p>
+
+<p>A helper class must have all of the methods listed below. The Palm::Raw class is useful if you don&#39;t want to define all of the required methods.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="ParseAppInfoBlock"
+>ParseAppInfoBlock</a></h2>
+
+<pre class="sh_perl">  $appinfo = $pdb-&#62;ParseAppInfoBlock($buf);</pre>
+
+<p>$buf is a string of raw data. ParseAppInfoBlock() should parse this data and return it, typically in the form of a reference to an object or to an anonymous hash.</p>
+
+<p>This method will not be called if the database does not have an AppInfo block.</p>
+
+<p>The return value from ParseAppInfoBlock() will be accessible as $pdb-&#62;{appinfo}.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PackAppInfoBlock"
+>PackAppInfoBlock</a></h2>
+
+<pre class="sh_perl">  $buf = $pdb-&#62;PackAppInfoBlock();</pre>
+
+<p>This is the converse of ParseAppInfoBlock(). It takes $pdb&#39;s AppInfo block, $pdb-&#62;{appinfo}, and returns a string of binary data that can be written to the database file.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="ParseSortBlock"
+>ParseSortBlock</a></h2>
+
+<pre class="sh_perl">  $sort = $pdb-&#62;ParseSortBlock($buf);</pre>
+
+<p>$buf is a string of raw data. ParseSortBlock() should parse this data and return it, typically in the form of a reference to an object or to an anonymous hash.</p>
+
+<p>This method will not be called if the database does not have a sort block.</p>
+
+<p>The return value from ParseSortBlock() will be accessible as $pdb-&#62;{sort}.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PackSortBlock"
+>PackSortBlock</a></h2>
+
+<pre class="sh_perl">  $buf = $pdb-&#62;PackSortBlock();</pre>
+
+<p>This is the converse of ParseSortBlock(). It takes $pdb&#39;s sort block, $pdb-&#62;{sort}, and returns a string of raw data that can be written to the database file.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="ParseRecord"
+>ParseRecord</a></h2>
+
+<pre class="sh_perl">  $record = $pdb-&#62;ParseRecord(
+          offset         =&#62; $offset,    # Record&#39;s offset in file
+          attributes     =&#62;             # Record attributes
+              {
+                expunged =&#62; bool,       # True iff expunged
+                dirty    =&#62; bool,       # True iff dirty
+                deleted  =&#62; bool,       # True iff deleted
+                private  =&#62; bool,       # True iff private
+                archive  =&#62; bool,       # True iff to be archived
+              },
+          category       =&#62; $category,  # Record&#39;s category number
+          id             =&#62; $id,        # Record&#39;s unique ID
+          data           =&#62; $buf,       # Raw record data
+        );</pre>
+
+<p>ParseRecord() takes the arguments listed above and returns a parsed representation of the record, typically as a reference to a record object or anonymous hash.</p>
+
+<p>The output from ParseRecord() will be appended to @{$pdb-&#62;{records}}. The records appear in this list in the same order as they appear in the file.</p>
+
+<p>$offset argument is not normally useful, but is included for completeness.</p>
+
+<p>The fields in %$attributes are boolean values. They are true iff the record has the corresponding flag set.</p>
+
+<p>$category is an integer in the range 0-15, which indicates which category the record belongs to. This is normally an index into a table given at the beginning of the AppInfo block.</p>
+
+<p>A typical ParseRecord() method has this general form:</p>
+
+<pre class="sh_perl">    sub ParseRecord
+    {
+        my $self = shift
+        my %record = @_;
+
+        # Parse $self-&#62;{data} and put the fields into new fields in
+        # $self.
+
+        delete $record{data};           # No longer useful
+        return \%record;
+    }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PackRecord"
+>PackRecord</a></h2>
+
+<pre class="sh_perl">  $buf = $pdb-&#62;PackRecord($record);</pre>
+
+<p>The converse of ParseRecord(). PackRecord() takes a record as returned by ParseRecord() and returns a string of raw data that can be written to the database file.</p>
+
+<p>PackRecord() is never called when writing a resource database.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="ParseResource"
+>ParseResource</a></h2>
+
+<pre class="sh_perl">  $record = $pdb-&#62;ParseResource(
+          type   =&#62; $type,              # Resource type
+          id     =&#62; $id,                # Resource ID
+          offset =&#62; $offset,            # Resource&#39;s offset in file
+          data   =&#62; $buf,               # Raw resource data
+        );</pre>
+
+<p>ParseResource() takes the arguments listed above and returns a parsed representation of the resource, typically as a reference to a resource object or anonymous hash.</p>
+
+<p>The output from ParseResource() will be appended to @{$pdb-&#62;{resources}}. The resources appear in this list in the same order as they appear in the file.</p>
+
+<p>$type is a four-character string giving the resource&#39;s type.</p>
+
+<p>$id is an integer that uniquely identifies the resource amongst others of its type.</p>
+
+<p>$offset is not normally useful, but is included for completeness.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PackResource"
+>PackResource</a></h2>
+
+<pre class="sh_perl">  $buf = $pdb-&#62;PackResource($resource);</pre>
+
+<p>The converse of ParseResource(). PackResource() takes a resource as returned by PackResource() and returns a string of raw data that can be written to the database file.</p>
+
+<p>PackResource() is never called when writing a record database.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>These functions die too easily. They should return an error code.</p>
+
+<p>Database manipulation is still an arcane art.</p>
+
+<p>It may be possible to parse sort blocks further.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SOURCE_CONTROL"
+>SOURCE CONTROL <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The source is in Github:</p>
+
+<pre class="sh_perl">        <a href="http://github.com/briandfoy/p5-Palm/tree/master" class="podlinkurl"
+>http://github.com/briandfoy/p5-Palm/tree/master</a></pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Alessandro Zummo, <code>&#60;a.zummo@towertech.it&#62;</code></p>
+
+<p>Currently maintained by brian d foy, <code>&#60;bdfoy@cpan.org&#62;</code></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~bdfoy/p5-Palm-1.012/lib/Raw.pm" class="podlinkpod"
+>Palm::Raw</a>(3)</p>
+
+<p><a href="/~bdfoy/p5-Palm-1.012/lib/Address.pm" class="podlinkpod"
+>Palm::Address</a>(3)</p>
+
+<p><a href="/~bdfoy/p5-Palm-1.012/lib/Datebook.pm" class="podlinkpod"
+>Palm::Datebook</a>(3)</p>
+
+<p><a href="/~bdfoy/p5-Palm-1.012/lib/Mail.pm" class="podlinkpod"
+>Palm::Mail</a>(3)</p>
+
+<p><a href="/~bdfoy/p5-Palm-1.012/lib/Memo.pm" class="podlinkpod"
+>Palm::Memo</a>(3)</p>
+
+<p><a href="/~bdfoy/p5-Palm-1.012/lib/ToDo.pm" class="podlinkpod"
+>Palm::ToDo</a>(3)</p>
+
+<p><em>Palm Database Files</em>, in the ColdSync distribution.</p>
+
+<p>The Virtual Constructor (aka Factory Method) pattern is described in <em>Design Patterns</em>, by Erich Gamma <i>et al.</i>, Addison-Wesley.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78124 Uploads, 24699 Distributions
+105950 Modules, 9642 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 07:44:09 2012 GMT (0.15328311920166) @cpansearch1 -->
+ </body>
+</html>

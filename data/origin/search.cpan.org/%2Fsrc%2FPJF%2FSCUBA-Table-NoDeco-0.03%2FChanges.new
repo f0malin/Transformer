@@ -1,0 +1,45 @@
+Revision history for Perl extension Sport::Dive::Tables.
+
+0.01  Mon Dec  6 00:09:10 2004
+	- original version; created by h2xs 1.23 with options
+		-X Sport::Dive::Tables
+
+	- Released as SCUBA::Table::NoDeco.
+
+0.02  Sat Dec 11 12:00:00 2004
+	- Expanded test suite to ensure correct behaviour when
+	  working with truncated or incomplete dive tabes.
+
+	- Updated test suite to be kinder to older Perls.
+
+	- INCOMPATIBLE: The old max_depth method has been renamed
+	  to max_table_depth to better reflect its purpose.  The
+	  new max_depth function returns the maximum safe depth
+	  given the diver's current group.
+
+	- INCOMPATIBLE: max_time now returns '0' when provided with
+	  a depth that is 'too deep'.  Previously, this would throw
+	  an exception.
+
+	- Added PADI tables.  These need more testing.
+
+0.03  Sat Dec 18 15:30:00 2004
+	- Expanded test suite to include more PADI specific tests.
+
+	- CRITICAL: Discovered and fixed a programming error in PADI surface
+	  tables.  At best these resulted in an error being thrown when used,
+	  and at worst the incorrect results may be returned.
+
+	- Corrected an off-by-one error in surface interval calculations.
+
+	- PADI surface tables have been tweaked.  These tables are
+	  generated from an algorithm which does not exactly match the
+	  printed tables.  The reasons for these inconsistancies is
+	  open to speculation.
+
+	- Module is even more friendly to older Perls.
+
+	- Slightly expanded test suite on exceptional input.
+
+	- Updated module to deal with different minimum and maximum
+	  surface intervals per table.

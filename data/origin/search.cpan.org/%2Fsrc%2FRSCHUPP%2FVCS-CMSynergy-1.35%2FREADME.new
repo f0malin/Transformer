@@ -1,0 +1,93 @@
+VCS::CMSynergy -- Perl interface to Telelogic Synergy
+
+This module is a Perl interface to Telelogic Synergy (at various
+times also known as Continuus/CM, CM Synergy or SYNERGY/CM),
+a change and configuration management system from Telelogic AB
+(http://www.telelogic.com).  It is implemented on top of the Synergy CLI,
+hence you must have the command line client ("ccm") installed to use it.
+
+VCS::CMSynergy.pm has been tested in the following environments:
+
+Client (where the Perl script runs)	Synergy server
+OS, Perl version			OS, Synergy version
+-----------------------------------	---------------------------
+
+Linux 2.6, Perl 5.8.8			Linux 2.6, CM Synergy 6.4 SP1
+
+Linux 2.6, Perl 5.10.0			Linux 2.6, CM Synergy 6.5 SP1
+
+Linux 2.6, Perl 5.8.8			Linux 2.6, Synergy 7.1 
+
+Windows XP SP2, ActiveState Perl 5.8.8	Linux 2.6, CM Synergy 6.4 SP1
+
+Windows XP SP2, ActiveState Perl 5.10.0	Linux 2.6, CM Synergy 6.5 SP1
+
+Windows XP SP2, Cygwin Perl 5.10.0      Linux 2.6, CM Synergy 6.5 SP1
+
+Windows XP SP2, ActiveState Perl 5.10.0	Linux 2.6, Synergy 7.1
+
+NOTE: `make test' currently fails for Synergy 6.4 SP1 and higher if you
+run it against the tutorial database that comes with these releases
+(this is due to the total makeover of the tutorial database in 6.4
+SP1). It succeeds when run it against a pre-6.4-SP1 tutorial database
+(of course upgraded to your actual Synergy version).
+
+
+
+BUILDING
+
+Unpack the distribution, change to its top level directory, and then
+
+    perl Makefile.PL
+    make
+
+On Win32 systems, replace "make" in the commands with "nmake". 
+The nmake utility is included in Microsoft Visual Studio products.
+An older version can be downloaded from 
+http://download.microsoft.com/download/vc15/Patch/1.52/W95/EN-US/Nmake15.exe
+
+TESTING
+
+Make sure that the CM Synergy command client is installed and working:
+
+  - check your setting of the CCM_HOME environment variable
+  - test the installation with
+
+    $CCM_HOME/bin/ccm version
+
+You will need a pristine copy of the "tutorial" database to test the
+module. The pack file for the "tutorial" database is distributed with
+the CM Synergy product and is located in $CCM_HOME/packfiles/tutorial.cpk. 
+Have your friendly CM Synergy administrator create a test database,
+say /ccmdb/test_module, by executing
+
+    $CCM_HOME/bin/ccmdb_unpack $CCM_HOME/packfiles/tutorial.cpk /ccmdb/test_module
+
+and have her add you as a user to this database, currently the "developer"
+role is sufficient to run the tests. Set the environemnt variable
+CCM_TEST_DB to the name of the test database, e.g. (in Bourne shell syntax)
+
+    CCM_TEST_DB=/ccmdb/test_module; export CCM_TEST_DB
+
+If you are testing on Windows, you must also set the environment
+variable CCM_TEST_USER to "user/password@host" which correspond
+to the "ccm" options "-n", "-pw", and "-h", resp.
+Run the tests with
+
+    make test
+
+If everything looks OK, install the module with
+
+    make install
+
+
+COPYRIGHT AND LICENSE
+
+The VCS::CMSynergy module was written by Roderich Schupp, <schupp@argumentum.de>
+Copyright (c) 2001-2010 argumentum GmbH, 
+<http://www.argumentum.de>.  All rights reserved.
+
+You may distribute it under the terms of either the GNU General Public
+License or the Artistic License, as specified in the Perl README file.
+
+

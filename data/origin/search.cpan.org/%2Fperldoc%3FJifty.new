@@ -1,0 +1,524 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Jifty - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Jifty",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Jifty-1.10518",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Jifty",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SARTAK",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Jifty">permalink</a></div>
+  <a href="/~sartak/">Shawn M Moore</a> &gt;
+  <a href="/~sartak/Jifty-1.10518/">Jifty-1.10518</a> &gt;
+  Jifty
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/b0805b622209805fd673107d0fb3c707?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SA/SARTAK/Jifty-1.10518.tar.gz">Jifty-1.10518.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Jifty;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SARTAK/Jifty-1.10518/lib/Jifty.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 13</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 3</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Jifty">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.10518 &nbsp;
+<span class="noprint">
+  <a href="/src/SARTAK/Jifty-1.10518/lib/Jifty.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#What&#39;s_cool_about_Jifty?_(Buzzwords)'>What&#39;s cool about Jifty? (Buzzwords)</a>
+    <li class='indexItem indexItem2'><a href='#Introduction'>Introduction</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new_PARAMHASH'>new PARAMHASH</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Arguments'>Arguments</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#config'>config</a>
+    <li class='indexItem indexItem2'><a href='#logger'>logger</a>
+    <li class='indexItem indexItem2'><a href='#handler'>handler</a>
+    <li class='indexItem indexItem2'><a href='#handle'>handle</a>
+    <li class='indexItem indexItem2'><a href='#api'>api</a>
+    <li class='indexItem indexItem2'><a href='#app_class(@names)'>app_class(@names)</a>
+    <li class='indexItem indexItem2'><a href='#web'>web</a>
+    <li class='indexItem indexItem2'><a href='#subs'>subs</a>
+    <li class='indexItem indexItem2'><a href='#bus'>bus</a>
+    <li class='indexItem indexItem2'><a href='#plugins'>plugins</a>
+    <li class='indexItem indexItem2'><a href='#find_plugin'>find_plugin</a>
+    <li class='indexItem indexItem2'><a href='#class_loader'>class_loader</a>
+    <li class='indexItem indexItem2'><a href='#setup_database_connection'>setup_database_connection</a>
+    <li class='indexItem indexItem2'><a href='#app_instance_id'>app_instance_id</a>
+    <li class='indexItem indexItem2'><a href='#background_SUB'>background SUB</a>
+    <li class='indexItem indexItem2'><a href='#admin_mode'>admin_mode</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHORS'>AUTHORS</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Jifty - an application framework</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> # Object containing lots of web related goodies...
+ my $web      = Jifty-&#62;web;
+ my $request  = Jifty-&#62;web-&#62;request;
+ my $response = Jifty-&#62;web-&#62;response;
+ my $link     = Jifty-&#62;web-&#62;link( label =&#62; _(&#39;W00t&#39;), url =&#62; &#39;/whatsit&#39; );
+
+ # Retrieve information from your application&#39;s etc/config.yml file.
+ my $config   = Jifty-&#62;config;
+
+ # Retrieve the Jifty::DBI handle
+ my $handle   = Jifty-&#62;handle;
+
+ # Load an application class, very handy in plugins
+ my $class    = Jifty-&#62;app_class(&#39;Model&#39;, &#39;Foo&#39;);
+ my $foo      = $class-&#62;new;
+ $foo-&#62;create( frobnicate =&#62; 42 );
+
+ # Configure information related to your application&#39;s actions
+ my $api      = Jifty-&#62;api;
+
+ # Make parts of your page &#34;subscribe&#34; to information in a fragment
+ my $subs     = Jifty-&#62;subs;
+
+ # Share information via IPC::PubSub in your application
+ my $bus      = Jifty-&#62;bus;
+
+ # Retrieve general information about Mason
+ my $handler  = Jifty-&#62;handler;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Yet another web framework.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="What&#39;s_cool_about_Jifty?_(Buzzwords)"
+>What&#39;s cool about Jifty? (Buzzwords)</a></h2>
+
+<dl>
+<dt><a name='DRY'></a><a name="DRY_(Don&#39;t_Repeat_Yourself)"
+>DRY (Don&#39;t Repeat Yourself)</a></dt>
+
+<dd>
+<p>Jifty tries not to make you say things more than once.</p>
+
+<dt><a name='Full'></a><a name="Full-stack"
+>Full-stack</a></dt>
+
+<dd>
+<p>Out of the proverbial box, Jifty comes with one way to do everything you should need to do: One database mapper, one templating system, one web services layer, one AJAX toolkit, one set of handlers for standalone or FastCGI servers. We work hard to make all the bits play well together, so you don&#39;t have to.</p>
+
+<dt><a name="Continuations"
+>Continuations</a></dt>
+
+<dd>
+<p>With Jifty, it&#39;s easy to let the user go off and do something else, like fill out a wizard, look something up in the help system or go twiddle their preferences and come right back to where they were.</p>
+
+<dt><a name='Form'></a><a name="Form-based_dispatch"
+>Form-based dispatch</a></dt>
+
+<dd>
+<p>This is one of the things that Jifty does that we&#39;ve not seen anywhere else. Jifty owns your form rendering and processing. This means you never need to write form handling logic. All you say is &#34;I want an input for this argument here&#34; and Jifty takes care of the rest. (Even autocomplete and validation)</p>
+
+<dt><a name='A'></a><a name="A_Pony"
+>A Pony</a></dt>
+
+<dd>
+<p>Jifty is the only web application framework that comes with a pony.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Introduction"
+>Introduction</a></h2>
+
+<p>If this is your first time using Jifty, <a href="/~sartak/Jifty-1.10518/lib/Jifty/Manual/Tutorial.pod" class="podlinkpod"
+>Jifty::Manual::Tutorial</a> is probably a better place to start.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new_PARAMHASH"
+>new PARAMHASH</a></h2>
+
+<p>This class method instantiates a new <code>Jifty</code> object. This object deals with configuration files, logging and database handles for the system. Before this method returns, it calls the application&#39;s <code>start</code> method (i.e. <code>MyApp-&#62;start</code>) to handle any application-specific startup.</p>
+
+<p>Most of the time, the server will call this for you to set up your <code>Jifty</code> object. If you are writing command-line programs that want to use your libraries (as opposed to web services) you will need to call this yourself.</p>
+
+<p>See <a href="/~sartak/Jifty-1.10518/lib/Jifty/Config.pm" class="podlinkpod"
+>Jifty::Config</a> for details on how to configure your Jifty application.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Arguments"
+>Arguments</a></h3>
+
+<dl>
+<dt><a name="no_handle"
+>no_handle</a></dt>
+
+<dd>
+<p>If this is set to true, Jifty will not create a <a href="/~sartak/Jifty-1.10518/lib/Jifty/Handle.pm" class="podlinkpod"
+>Jifty::Handle</a> and connect to a database. Only use this if you&#39;re about to drop the database or do something extreme like that; most of Jifty expects the handle to exist. Defaults to false.</p>
+
+<dt><a name="logger_component"
+>logger_component</a></dt>
+
+<dd>
+<p>The name that Jifty::Logger will log under. If you don&#39;t specify anything Jifty::Logger will log under the empty string. See <a href="/~sartak/Jifty-1.10518/lib/Jifty/Logger.pm" class="podlinkpod"
+>Jifty::Logger</a> for more information.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="config"
+>config</a></h2>
+
+<p>An accessor for the <a href="/~sartak/Jifty-1.10518/lib/Jifty/Config.pm" class="podlinkpod"
+>Jifty::Config</a> object that stores the configuration for the Jifty application.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="logger"
+>logger</a></h2>
+
+<p>An accessor for our <a href="/~sartak/Jifty-1.10518/lib/Jifty/Logger.pm" class="podlinkpod"
+>Jifty::Logger</a> object for the application.</p>
+
+<p>You probably aren&#39;t interested in this. See <a href="#log" class="podlinkpod"
+>&#34;log&#34;</a> for information on how to make log messages.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="handler"
+>handler</a></h2>
+
+<p>An accessor for our <a href="/~sartak/Jifty-1.10518/lib/Jifty/Handler.pm" class="podlinkpod"
+>Jifty::Handler</a> object.</p>
+
+<p>This is another method that you usually don&#39;t want to mess with too much. Most of the interesting web bits are handled by <a href="#web" class="podlinkpod"
+>&#34;web&#34;</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="handle"
+>handle</a></h2>
+
+<p>An accessor for the <a href="/~sartak/Jifty-1.10518/lib/Jifty/Handle.pm" class="podlinkpod"
+>Jifty::Handle</a> object that stores the database handle for the application.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="api"
+>api</a></h2>
+
+<p>An accessor for the <a href="/~sartak/Jifty-1.10518/lib/Jifty/API.pm" class="podlinkpod"
+>Jifty::API</a> object that publishes and controls information about the application&#39;s <a href="/~sartak/Jifty-1.10518/lib/Jifty/Action.pm" class="podlinkpod"
+>Jifty::Action</a>s.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="app_class(@names)"
+>app_class(@names)</a></h2>
+
+<p>Return Class in application space. For example <code>app_class(&#39;Model&#39;, &#39;Foo&#39;)</code> returns YourApp::Model::Foo.</p>
+
+<p>By the time you get it back, the class will have already been required</p>
+
+<p>Is you pass a hashref as the first argument, it will be treated as configuration parameters. The only existing parameter is <code>require</code>, which defaults to true.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="web"
+>web</a></h2>
+
+<p>An accessor for the <a href="/~sartak/Jifty-1.10518/lib/Jifty/Web.pm" class="podlinkpod"
+>Jifty::Web</a> object that the web interface uses.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="subs"
+>subs</a></h2>
+
+<p>An accessor for the <a href="/~sartak/Jifty-1.10518/lib/Jifty/Subs.pm" class="podlinkpod"
+>Jifty::Subs</a> object that the subscription uses.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="bus"
+>bus</a></h2>
+
+<p>Returns an IPC::PubSub object for the current application.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="plugins"
+>plugins</a></h2>
+
+<p>Returns a list of <a href="/~sartak/Jifty-1.10518/lib/Jifty/Plugin.pm" class="podlinkpod"
+>Jifty::Plugin</a> objects for this Jifty application.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="find_plugin"
+>find_plugin</a></h2>
+
+<p>Find plugins by name.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="class_loader"
+>class_loader</a></h2>
+
+<p>An accessor for the <a href="/~sartak/Jifty-1.10518/lib/Jifty/ClassLoader.pm" class="podlinkpod"
+>Jifty::ClassLoader</a> object that stores the loaded classes for the application.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="setup_database_connection"
+>setup_database_connection</a></h2>
+
+<p>Set up our database connection. Optionally takes a paramhash with a single argument. This method is automatically called by <a href="#new" class="podlinkpod"
+>&#34;new&#34;</a>.</p>
+
+<dl>
+<dt><a name="no_handle"
+>no_handle</a></dt>
+
+<dd>
+<p>Defaults to false. If true, Jifty won&#39;t try to set up a database handle</p>
+
+<dt><a name="pre_init"
+>pre_init</a></dt>
+
+<dd>
+<p>Defaults to false. If true, plugins are notified that this is a pre-init, any trigger registration in <code>init()</code> should not happen during this stage. Note that model mixins&#39; <code>register_triggers</code> is unrelated to this.</p>
+</dd>
+</dl>
+
+<p>If <code>no_handle</code> is set or our application&#39;s config file is missing a <code>Database</code> configuration section or <i>has</i> a <code>SkipDatabase: 1</code> directive in its framework configuration, does nothing.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="app_instance_id"
+>app_instance_id</a></h2>
+
+<p>Returns a globally unique id for this instance of this jifty application. This value is generated the first time it&#39;s accessed</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="background_SUB"
+>background SUB</a></h2>
+
+<p>Forks a background process, and ensures that database connections and sockets are not shared with the parent process.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="admin_mode"
+>admin_mode</a></h2>
+
+<p>Returns true if the application is in admin mode. This should be used instead of <code>Jifty-&#62;config-&#62;framework(&#39;AdminMode&#39;)</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="http://jifty.org" class="podlinkurl"
+>http://jifty.org</a>, <a href="/~sartak/Jifty-1.10518/lib/Jifty/Manual/Tutorial.pod" class="podlinkpod"
+>Jifty::Manual::Tutorial</a>, <a href="/~sartak/Jifty-1.10518/lib/Jifty/Everything.pm" class="podlinkpod"
+>Jifty::Everything</a>, <a href="/~sartak/Jifty-1.10518/lib/Jifty/Config.pm" class="podlinkpod"
+>Jifty::Config</a>, <a href="/~sartak/Jifty-1.10518/lib/Jifty/Handle.pm" class="podlinkpod"
+>Jifty::Handle</a>, <a href="/~sartak/Jifty-1.10518/lib/Jifty/Logger.pm" class="podlinkpod"
+>Jifty::Logger</a>, <a href="/~sartak/Jifty-1.10518/lib/Jifty/Handler.pm" class="podlinkpod"
+>Jifty::Handler</a>, <a href="/~sartak/Jifty-1.10518/lib/Jifty/Web.pm" class="podlinkpod"
+>Jifty::Web</a>, <a href="/~sartak/Jifty-1.10518/lib/Jifty/API.pm" class="podlinkpod"
+>Jifty::API</a>, <a href="/~sartak/Jifty-1.10518/lib/Jifty/Subs.pm" class="podlinkpod"
+>Jifty::Subs</a>, <a href="/perldoc?IPC%3A%3APubSub" class="podlinkpod"
+>IPC::PubSub</a>, <a href="/~sartak/Jifty-1.10518/lib/Jifty/Plugin.pm" class="podlinkpod"
+>Jifty::Plugin</a>, <a href="/~sartak/Jifty-1.10518/lib/Jifty/ClassLoader.pm" class="podlinkpod"
+>Jifty::ClassLoader</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS"
+>AUTHORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Jesse Vincent, Alex Vandiver and David Glasser.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Jifty is Copyright 2005-2010 Best Practical Solutions, LLC. Jifty is distributed under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78252 Uploads, 24722 Distributions
+106026 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Thu Apr 26 16:17:24 2012 GMT (0.271347999572754) @cpansearch1 -->
+ </body>
+</html>

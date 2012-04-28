@@ -1,0 +1,63 @@
+0.11
+		- add missing thaw_tamper_proof_string method
+
+0.10
+		- %Digest::MMAP contains scalars from version 1.16
+		- switch to Moose
+
+0.09
+		- Forgot to Moosify Class::Accessor::Fast
+
+0.08
+		- Use Squirrel instead of Moose for better startup time when Moose is
+		  not loaded
+		- Fix unpack/pack usage under 5.8
+		- Missing dependency fixed (namespace::clean)
+
+0.07
+		- Digest::CMAC support
+		- Crypt::EAX support
+		- nonce generation using L<Data::GUID>
+		- Moosified
+		- MIME::Base64::URLSafe support
+		- Skip certain tests when nonrequired modules are not available
+
+0.06
+		- Tamper resistence is now based on the authenticating crypto modes
+
+0.05
+		- Ugh, forgot to regen .pmc *again*
+
+0.04
+		- Missing dep
+
+0.03
+		- refactor data packing
+		- prepare for EAX/OCB block cipher modes wrt tamper resistent strings
+
+0.02
+		- Rerelease with non-broken .pmc file =(
+
+0.01
+		- Documentation improvements
+		- Rename tamper_protect* to tamper_proof
+
+0.01_04
+		- Rerelease with the TT processed .pmc
+
+0.01_03
+		- MAC based digests
+		- MAC based tamper protected strings
+		- stub for OCB based tamper protected strings
+
+0.01_02
+		- Make Digest::MultiHash more predictable, so that varying installs
+		  will generate the same hashes.
+		- Use SHA-512 to hash passphrases into variable width keys
+		- Refactor Digest::MoreFallbacks out of Crypt::Util
+		- Introduce a SHA* dependency (Digest::SHA, Digest::SHA2, or
+		  Digest::SHA::PurePerl will satisfy it)
+		- Doc improvements
+
+0.01_01
+		- Initial release

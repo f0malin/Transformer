@@ -1,0 +1,457 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>perldoc - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",4,"Document","perldoc",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?perldoc">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  perldoc
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/pod/perldoc.pod">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/pod/perldoc.pod">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#OPTIONS'>OPTIONS</a>
+  <li class='indexItem indexItem1'><a href='#SECURITY'>SECURITY</a>
+  <li class='indexItem indexItem1'><a href='#ENVIRONMENT'>ENVIRONMENT</a>
+  <li class='indexItem indexItem1'><a href='#CHANGES'>CHANGES</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>perldoc - Look up Perl documentation in Pod format.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><b>perldoc</b> [<b>-h</b>] [<b>-D</b>] [<b>-t</b>] [<b>-u</b>] [<b>-m</b>] [<b>-l</b>] [<b>-F</b>] [<b>-i</b>] [<b>-V</b>] [<b>-T</b>] [<b>-r</b>] [<b>-d<i>destination_file</i></b>] [<b>-o<i>formatname</i></b>] [<b>-M<i>FormatterClassName</i></b>] [<b>-w<i>formatteroption:value</i></b>] [<b>-n</b><i>nroff-replacement</i>] [<b>-X</b>] [<b>-L</b> <i>language_code</i>] PageName|ModuleName|ProgramName</p>
+
+<p><b>perldoc</b> <b>-f</b> BuiltinFunction</p>
+
+<p><b>perldoc</b> <b>-L</b> it <b>-f</b> BuiltinFunction</p>
+
+<p><b>perldoc</b> <b>-q</b> FAQ Keyword</p>
+
+<p><b>perldoc</b> <b>-L</b> fr <b>-q</b> FAQ Keyword</p>
+
+<p><b>perldoc</b> <b>-v</b> PerlVariable</p>
+
+<p>See below for more description of the switches.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><i>perldoc</i> looks up a piece of documentation in .pod format that is embedded in the perl installation tree or in a perl script,
+and displays it via <code>pod2man | nroff -man | $PAGER</code>.
+(In addition,
+if running under HP-UX,
+<code>col -x</code> will be used.) This is primarily used for the documentation for the perl library modules.</p>
+
+<p>Your system may also have man pages installed for those modules,
+in which case you can probably just use the man(1) command.</p>
+
+<p>If you are looking for a table of contents to the Perl library modules documentation,
+see the <a href="/perldoc?perltoc" class="podlinkpod"
+>perltoc</a> page.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OPTIONS"
+>OPTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='h'></a><a name="-h"
+><b>-h</b></a></dt>
+
+<dd>
+<p>Prints out a brief <b>h</b>elp message.</p>
+
+<dt><a name='D'></a><a name="-D"
+><b>-D</b></a></dt>
+
+<dd>
+<p><b>D</b>escribes search for the item in <b>d</b>etail.</p>
+
+<dt><a name='t'></a><a name="-t"
+><b>-t</b></a></dt>
+
+<dd>
+<p>Display docs using plain <b>t</b>ext converter,
+instead of nroff.
+This may be faster,
+but it probably won&#39;t look as nice.</p>
+
+<dt><a name='u'></a><a name="-u"
+><b>-u</b></a></dt>
+
+<dd>
+<p>Skip the real Pod formatting,
+and just show the raw Pod source (<b>U</b>nformatted)</p>
+
+<dt><a name='m'></a><a name="-m_module"
+><b>-m</b> <i>module</i></a></dt>
+
+<dd>
+<p>Display the entire module: both code and unformatted pod documentation.
+This may be useful if the docs don&#39;t explain a function in the detail you need,
+and you&#39;d like to inspect the code directly; perldoc will find the file for you and simply hand it off for display.</p>
+
+<dt><a name='l'></a><a name="-l"
+><b>-l</b></a></dt>
+
+<dd>
+<p>Display on<b>l</b>y the file name of the module found.</p>
+
+<dt><a name='F'></a><a name="-F"
+><b>-F</b></a></dt>
+
+<dd>
+<p>Consider arguments as file names; no search in directories will be performed.</p>
+
+<dt><a name='f'></a><a name="-f_perlfunc"
+><b>-f</b> <i>perlfunc</i></a></dt>
+
+<dd>
+<p>The <b>-f</b> option followed by the name of a perl built-in function will extract the documentation of this function from <a href="/~flora/perl-5.14.2/pod/perlfunc.pod" class="podlinkpod"
+>perlfunc</a>.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">      perldoc -f sprintf</pre>
+
+<dt><a name='q'></a><a name="-q_perlfaq-search-regexp"
+><b>-q</b> <i>perlfaq-search-regexp</i></a></dt>
+
+<dd>
+<p>The <b>-q</b> option takes a regular expression as an argument. It will search the <b>q</b>uestion headings in perlfaq[1-9] and print the entries matching the regular expression.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">     perldoc -q shuffle</pre>
+
+<dt><a name='v'></a><a name="-v_perlvar"
+><b>-v</b> <i>perlvar</i></a></dt>
+
+<dd>
+<p>The <b>-v</b> option followed by the name of a Perl predefined variable will extract the documentation of this variable from <a href="/~flora/perl-5.14.2/pod/perlvar.pod" class="podlinkpod"
+>perlvar</a>.</p>
+
+<p>Examples:</p>
+
+<pre class="sh_perl">     perldoc -v &#39;$&#34;&#39;
+     perldoc -v @+
+     perldoc -v DATA</pre>
+
+<dt><a name='T'></a><a name="-T"
+><b>-T</b></a></dt>
+
+<dd>
+<p>This specifies that the output is not to be sent to a pager, but is to be sent right to STDOUT.</p>
+
+<dt><a name='d'></a><a name="-d_destination-filename"
+><b>-d</b> <i>destination-filename</i></a></dt>
+
+<dd>
+<p>This specifies that the output is to be sent neither to a pager nor to STDOUT, but is to be saved to the specified filename. Example: <code>perldoc -oLaTeX -dtextwrapdocs.tex Text::Wrap</code></p>
+
+<dt><a name='o'></a><a name="-o_output-formatname"
+><b>-o</b> <i>output-formatname</i></a></dt>
+
+<dd>
+<p>This specifies that you want Perldoc to try using a Pod-formatting class for the output format that you specify. For example: <code>-oman</code>. This is actually just a wrapper around the <code>-M</code> switch; using <code>-o<i>formatname</i></code> just looks for a loadable class by adding that format name (with different capitalizations) to the end of different classname prefixes.</p>
+
+<p>For example, <code>-oLaTeX</code> currently tries all of the following classes: Pod::Perldoc::ToLaTeX Pod::Perldoc::Tolatex Pod::Perldoc::ToLatex Pod::Perldoc::ToLATEX Pod::Simple::LaTeX Pod::Simple::latex Pod::Simple::Latex Pod::Simple::LATEX Pod::LaTeX Pod::latex Pod::Latex Pod::LATEX.</p>
+
+<dt><a name='M'></a><a name="-M_module-name"
+><b>-M</b> <i>module-name</i></a></dt>
+
+<dd>
+<p>This specifies the module that you want to try using for formatting the pod. The class must at least provide a <code>parse_from_file</code> method. For example: <code>perldoc -MPod::Perldoc::ToChecker</code>.</p>
+
+<p>You can specify several classes to try by joining them with commas or semicolons, as in <code>-MTk::SuperPod;Tk::Pod</code>.</p>
+
+<dt><a name='w'></a><a name="-w_option:value_or_-w_option"
+><b>-w</b> <i>option:value</i> or <b>-w</b> <i>option</i></a></dt>
+
+<dd>
+<p>This specifies an option to call the formatter <b>w</b>ith. For example, <code>-w textsize:15</code> will call <code>$formatter-&#62;textsize(15)</code> on the formatter object before it is used to format the object. For this to be valid, the formatter class must provide such a method, and the value you pass should be valid. (So if <code>textsize</code> expects an integer, and you do <code>-w textsize:big</code>, expect trouble.)</p>
+
+<p>You can use <code>-w optionname</code> (without a value) as shorthand for <code>-w optionname:<i>TRUE</i></code>. This is presumably useful in cases of on/off features like: <code>-w page_numbering</code>.</p>
+
+<p>You can use an &#34;=&#34; instead of the &#34;:&#34;, as in: <code>-w textsize=15</code>. This might be more (or less) convenient, depending on what shell you use.</p>
+
+<dt><a name='X'></a><a name="-X"
+><b>-X</b></a></dt>
+
+<dd>
+<p>Use an index if it is present. The <b>-X</b> option looks for an entry whose basename matches the name given on the command line in the file <code>$Config{archlib}/pod.idx</code>. The <em>pod.idx</em> file should contain fully qualified filenames, one per line.</p>
+
+<dt><a name='L'></a><a name="-L_language_code"
+><b>-L</b> <i>language_code</i></a></dt>
+
+<dd>
+<p>This allows one to specify the <i>language code</i> for the desired language translation. If the <code>POD2::&#60;language_code&#62;</code> package isn&#39;t installed in your system, the switch is ignored. All available translation packages are to be found under the <code>POD2::</code> namespace. See <a href="/perldoc?POD2%3A%3AIT" class="podlinkpod"
+>POD2::IT</a> (or <a href="/perldoc?POD2%3A%3AFR" class="podlinkpod"
+>POD2::FR</a>) to see how to create new localized <code>POD2::*</code> documentation packages and integrate them into <a href="/perldoc?Pod%3A%3APerldoc" class="podlinkpod"
+>Pod::Perldoc</a>.</p>
+
+<dt><a name='PageName'></a><a name="PageName|ModuleName|ProgramName"
+><b>PageName|ModuleName|ProgramName</b></a></dt>
+
+<dd>
+<p>The item you want to look up. Nested modules (such as <code>File::Basename</code>) are specified either as <code>File::Basename</code> or <code>File/Basename</code>. You may also give a descriptive name of a page, such as <code>perlfunc</code>.</p>
+
+<p>For simple names like &#39;foo&#39;, when the normal search fails to find a matching page, a search with the &#34;perl&#34; prefix is tried as well. So &#34;perldoc intro&#34; is enough to find/render &#34;perlintro.pod&#34;.</p>
+
+<dt><a name='n'></a><a name="-n_some-formatter"
+><b>-n</b> <i>some-formatter</i></a></dt>
+
+<dd>
+<p>Specify replacement for nroff</p>
+
+<dt><a name='r'></a><a name="-r"
+><b>-r</b></a></dt>
+
+<dd>
+<p>Recursive search.</p>
+
+<dt><a name='i'></a><a name="-i"
+><b>-i</b></a></dt>
+
+<dd>
+<p>Ignore case.</p>
+
+<dt><a name='V'></a><a name="-V"
+><b>-V</b></a></dt>
+
+<dd>
+<p>Displays the version of perldoc you&#39;re running.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SECURITY"
+>SECURITY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Because <b>perldoc</b> does not run properly tainted, and is known to have security issues, when run as the superuser it will attempt to drop privileges by setting the effective and real IDs to nobody&#39;s or nouser&#39;s account, or -2 if unavailable. If it cannot relinquish its privileges, it will not run.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ENVIRONMENT"
+>ENVIRONMENT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Any switches in the <code>PERLDOC</code> environment variable will be used before the command line arguments.</p>
+
+<p>Useful values for <code>PERLDOC</code> include <code>-oman</code>, <code>-otext</code>, <code>-otk</code>, <code>-ortf</code>, <code>-oxml</code>, and so on, depending on what modules you have on hand; or the formatter class may be specified exactly with <code>-MPod::Perldoc::ToMan</code> or the like.</p>
+
+<p><code>perldoc</code> also searches directories specified by the <code>PERL5LIB</code> (or <code>PERLLIB</code> if <code>PERL5LIB</code> is not defined) and <code>PATH</code> environment variables. (The latter is so that embedded pods for executables, such as <code>perldoc</code> itself, are available.)</p>
+
+<p><code>perldoc</code> will use, in order of preference, the pager defined in <code>PERLDOC_PAGER</code>, <code>MANPAGER</code>, or <code>PAGER</code> before trying to find a pager on its own. (<code>MANPAGER</code> is not used if <code>perldoc</code> was told to display plain text or unformatted pod.)</p>
+
+<p>One useful value for <code>PERLDOC_PAGER</code> is <code>less -+C -E</code>.</p>
+
+<p>Having PERLDOCDEBUG set to a positive integer will make perldoc emit even more descriptive output than the <code>-v</code> switch does; the higher the number, the more it emits.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CHANGES"
+>CHANGES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Up to 3.14_05, the switch <b>-v</b> was used to produce verbose messages of <b>perldoc</b> operation, which is now enabled by <b>-D</b>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~flora/perl-5.14.2/pod/perlpod.pod" class="podlinkpod"
+>perlpod</a>, <a href="/perldoc?Pod%3A%3APerldoc" class="podlinkpod"
+>Pod::Perldoc</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Current maintainer: Adriano R. Ferreira &#60;ferreira@cpan.org&#62;</p>
+
+<p>Past contributors are: Sean M. Burke &#60;sburke@cpan.org&#62;, Kenneth Albanowski &#60;kjahds@kjahds.com&#62;, Andy Dougherty &#60;doughera@lafcol.lafayette.edu&#62;, and many others.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78231 Uploads, 24723 Distributions
+106029 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Thu Apr 26 21:33:13 2012 GMT (0.179499864578247) @cpansearch1 -->
+ </body>
+</html>

@@ -1,0 +1,439 @@
+2010-08-17  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay.pm (_parse_tree): fixed regex for item number
+
+2010-08-01  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay.pm (_result_count_pattern): fixed regexen for result count, price, date
+
+2010-05-20  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay.pm (_parse_enddate): fixed the time-remaining regex
+
+2009-08-30  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay/BuyItNow.pm (_columns): updated for new eBay output
+
+	* lib/WWW/Search/Ebay.pm (_parse_enddate): fixed for Buy-It-Now auctions
+
+2009-08-10  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay.pm (_parse_price): fixed for "Free Shipping" in the bid column
+
+2009-08-08  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay/Stores.pm: fixed for new HTML format
+
+	* lib/WWW/Search/Ebay.pm (_columns): fixed for new HTML format
+
+	* lib/WWW/Search/Ebay/BySellerID.pm (_columns): fixed for new HTML format
+
+2009-02-22  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay.pm (_parse_tree): fixed undef warning
+	(_get_result_count_elements): added element for ::Category search
+
+2009-01-21  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay/Completed/Category.pm: new module
+
+2009-01-19  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay/Category.pm: new backend
+
+2009-01-18  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay.pm (_parse_tree): mark item as "sold" if ended and bidded (fix for Ebay::Completed)
+
+2008-11-10  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay.pm (_parse_tree): fixed patterns for detecting spell-checked query
+
+2008-11-09  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay.pm (_parse_tree): fixed "infinite" looping of page requests
+
+2008-09-06  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay.pm (_get_result_count_elements): added pattern for new motors layout
+	(_result_count_pattern): match commas in result count!
+	(_parse_tree): delete commas from result_count
+
+2008-08-10  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay/Stores.pm (_columns): fixed for new page layout?
+
+2008-06-28  Kingpin  <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay.pm (preprocess_results_page): use our own UserAgent to fetch the official eBay time (not a generic LWP::UserAgent)
+
+2008-04-05    <Martin@BLUEMAX>
+
+	* lib/WWW/Search/Ebay/ES.pm (result_count_pattern): fixed
+
+2008-02-25    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (user_agent_delay): new method
+
+2008-02-24    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay/Motors.pm (result_count_pattern): new methods
+
+	* lib/WWW/Search/Ebay/FR.pm (title_pattern): new method
+
+	* lib/WWW/Search/Ebay.pm (title_pattern): new method
+	(result_count_regex): renamed method and made public
+
+2007-12-05    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (_result_count_regex): allow one hit to match!
+
+	* lib/WWW/Search/Ebay/IT.pm (_result_count_regex): fixed pattern
+
+2007-12-02    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): ignore auctions from other countries
+
+2007-08-20    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm: FIXED page title regex
+
+2007-05-20    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay/ES.pm (_result_count_regex): fixed result-count parsing
+
+	* lib/WWW/Search/Ebay/DE.pm (_process_date_abbrevs): fixed date parsing
+
+2007-01-29    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (result_as_HTML): now takes an optional date format argument
+
+2007-01-26    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (result_as_HTML): added end-time to "ended" items
+
+2006-12-24    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (result_as_HTML): added "add to myEbay" link
+
+2006-09-03    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (whitespace_pattern): new method
+
+	* lib/WWW/Search/Ebay/ES.pm: new backend
+
+	* lib/WWW/Search/Ebay/FR.pm: new backend
+
+	* lib/WWW/Search/Ebay/IT.pm: new backend
+
+2006-08-25    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay/DE.pm: new backend
+
+	* lib/WWW/Search/Ebay.pm (_process_date_abbrevs): new method
+	(_result_count_regex): new method
+	(_next_text): new method
+
+2006-06-14    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (parse_shipping): replace stub method with actual code! (as suggested by John Baleshiski 8-)
+
+2006-04-22    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (_bidamount_as_text): new private method
+	(_bidcount_as_text): new private method
+	(result_as_HTML): new method
+	(parse_price): set sold() on results (as suggested by Nick Lokkju)
+	(_parse_category_list): new private method
+
+2006-04-21    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (_bid_as_text): new method
+	(result_as_HTML): new method
+
+2006-03-22    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): don't use the Switch module
+
+2006-03-11    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (parse_enddate): now can take a string argument
+
+2006-02-18    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): enhanced to parse Completed listings
+
+2005-12-27    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay/ByBidderID.pm: new backend!
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): use new item_number (et al.) attributes in SearchResult
+
+2005-12-25    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): now returns the item's category number
+
+2005-08-29    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay/Stores.pm (native_setup_search): fixed the CGI options
+
+2005-08-27    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): determine order of columns dynamically
+
+2005-08-18    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay/Stores.pm (columns): damn ebay.com changed the column order again
+
+	* lib/WWW/Search/Ebay.pm (columns): damn ebay.com changed the column order again
+	(parse_price): watch for running off the end of the Stores list
+
+	* lib/WWW/Search/Ebay/BuyItNow.pm (columns): damn ebay.com changed the column order again
+
+2005-08-16    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm: new flexible way of parsing table cells in a backend-specific order!
+
+	* lib/WWW/Search/Ebay/BuyItNow.pm (columns): new method
+
+	* lib/WWW/Search/Ebay/Motors.pm (columns): new method
+
+	* lib/WWW/Search/Ebay/Stores.pm (columns): new method
+
+	* lib/WWW/Search/Ebay/UK.pm (columns): new method
+
+2005-08-14    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay/BySellerID.pm: NEW BACKEND
+	* t/bysellerid.t: new tests for the above
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): do not return results from auto-spell-checked query term
+	* t/basic.t: added tests for the above
+
+2005-08-07    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): return URLs as simple old cgi arguments
+
+2005-07-30    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay/UK.pm (_result_count_td_specs_OLD): use parent class' value for this method
+
+	* lib/WWW/Search/Ebay.pm (preprocess_results_page): fix title pattern
+
+2005-07-29    <Daddy@C-3PO>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): two fixes for new eBay page format
+
+2005-06-11  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay/UK.pm (preprocess_results_page): new method
+	(_title_td_specs): new specs
+	(_result_count_td_specs): new specs
+
+	* lib/WWW/Search/Ebay/Stores.pm (preprocess_results_page): new method
+
+2005-06-10  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): added a hack to detect when a Stores search runs off the bottom of the list
+
+2005-05-18  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay.pm (_result_count_td_specs): new method
+	(_title_td_specs): new method
+	(parse_tree): fixed parser for new webpage contents
+
+	* lib/WWW/Search/Ebay/UK.pm (_result_count_td_specs): new method
+	(_title_td_specs): new method
+
+2005-02-28  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay/UK.pm (currency_pattern): clean up pattern
+
+2005-01-25  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): call _create_description as a method
+
+2005-01-23  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay.pm (_format_date): now a method, not just a function
+	(_create_description): now a method, not just a function
+	(_cleanup_url): new method
+
+2004-11-29  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay/UK.pm: new file
+
+	* t/uk.t: new file
+
+	* lib/WWW/Search/Ebay.pm (native_setup_search): fix column order parsing for Ebay::UK
+
+2004-11-27  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay.pm (_format_date): new function
+	(_create_description): new function
+	(parse_tree): detect redirection to single-auction page
+
+2004-11-24  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): fetch eBay official time, and fix timezone conversion
+
+2004-11-23  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): omit seconds from change_date value;
+	do not set TZ if it's already in the environment
+
+2004-11-05  Kingpin  <mthurn@verizon.net>
+
+	* t/motors.t: fix 1-page query
+
+2004-10-25  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): handle default page format
+
+	* lib/WWW/Search/Ebay/Stores.pm (native_setup_search): let parent object control the HTML page formatting params
+
+2004-10-21  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): handle new HTML page format
+
+	* lib/WWW/Search/Ebay/Stores.pm (native_setup_search): new CGI parameters
+	parsing now handled by parent class
+
+2004-09-25  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): now sets bid_count and bid_amount in the Result objects
+
+	* lib/WWW/Search/Ebay/Motors.pm (native_setup_search): new backend!
+
+	* t/motors.t: new test
+
+	* lib/WWW/Search/Ebay.pm: added pod for how to search one category
+
+2004-09-16  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay/ByEndDate.pm (date_to_rel): new function;
+	(parse_tree): fix date sort;
+	different date format in change_date;
+
+2004-08-20  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay/BuyItNow.pm: new file
+
+	* t/buyitnow.t (my_test): new file
+
+2004-07-23  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): fix for parsing result count
+
+2004-06-05  Kingpin  <mthurn@verizon.net>
+
+	* t/stores.t: new file
+
+	* lib/WWW/Search/Ebay/Stores.pm: new file
+
+	* lib/WWW/Search/Ebay.pm (currency_pattern): new function
+
+2004-04-17  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay.pm (native_setup_search): new URL / CGI options
+	(parse_tree): handle new HTML formatting
+
+2004-04-08  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay/ByEndDate.pm (parse_tree): fix undef warning
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): handle new HTML formatting
+
+2003-12-21  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay/Completed.pm: removed because searching completed auctions now requires registered user login
+	
+	* t/completed.t: removed because searching completed auctions now requires registered user login
+
+2003-12-06  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay/ByEndDate.pm: fixed so that "featured" auctions are put into the properly sorted order
+
+2003-11-13  Kingpin  <mthurn@verizon.net>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): in change_date, convert nbsp to regular space
+
+2003-10-27  Kingpin  <mthurn@verizon.net>
+
+	* t/enddate.t: beefed-up tests
+
+	* t/basic.t: separated test files
+
+	* t/completed.t: beefed-up tests
+
+	* lib/WWW/Search/Ebay.pm (native_setup_search): let the host and path be NON-generic args (thanks to Mike Schilli)
+
+2003-07-13  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search/Ebay/Completed.pm: new backend (thanks to Troy Arnold)
+
+2003-02-06  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): Fixed parsing for slightly-changed ebay.com pages
+
+	* test.pl: added some tests to actually look at the results
+
+2002-10-22  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search/Ebay/ByEndDate.pm (native_setup_search): Fixed hash vs. array bug?
+
+2002-10-21  Kingpin  <mthurn@megapipe.net>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): Fixed parsing for Buy-It-Now prices, and foreign currencies
+
+2002-07-24  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search/Ebay.pm (parse_tree): fix parsing around new images in table
+
+2001-12-20  Kingpin  <mthurn@copper.dulles.tasc.com>
+
+	* lib/WWW/Search/Ebay.pm (native_retrieve_some): handle new ebay.com output format
+	(parse_tree): rewrite using this new method
+
+2001-07-30  Kingpin  <mthurn@tasc.com>
+
+	* lib/WWW/Search/Ebay/ByEndDate.pm: new backend!
+
+2001-06-26  Kingpin  <mthurn@tasc.com>
+
+	* VERSION 2.05 RELEASED
+
+2001-06-25  Kingpin  <mthurn@tasc.com>
+
+	* Ebay.pm (native_retrieve_some): tweaks to prevent warnings / parse errors
+
+2001-05-08  Kingpin  <mthurn@tasc.com>
+
+	* VERSION 2.04 RELEASED
+
+2001-05-07  Kingpin  <mthurn@tasc.com>
+
+	* Ebay.pm (native_retrieve_some): updated for new output format
+
+2001-04-21  Kingpin  <mthurn@tasc.com>
+
+	* VERSION 2.03 RELEASED
+
+2001-04-20  Kingpin  <mthurn@tasc.com>
+
+	* Ebay.pm (native_retrieve_some): result->description now contains bid info
+
+2001-04-14  Kingpin  <mthurn@tasc.com>
+
+	* VERSION 2.02 RELEASED
+
+2001-04-13  Kingpin  <mthurn@tasc.com>
+
+	* Ebay.pm (native_setup_search): make the user_agent non-robot
+
+2001-04-02  Kingpin  <mthurn@tasc.com>
+
+	* VERSION 2.01 RELEASED
+
+Revision history for Perl extension WWW::Search::Ebay
+

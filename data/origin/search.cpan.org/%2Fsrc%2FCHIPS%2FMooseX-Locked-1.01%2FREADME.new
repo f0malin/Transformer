@@ -1,0 +1,53 @@
+MooseX::Locked is a Moose convenience metarole for making your objects safer
+against typos, assuming you ever access your attributes directly.
+
+According to Moose's authors, this is something you should never do anyway.
+But when converting legacy code, eliminating direct hash accesses may be
+inconvenient, if not impossible.  And I've found that the speed gain is
+sometimes impossible to resist.  In such circumstances, or if you simply
+want to protect against others falling into temptation, you may find this
+module helpful.
+
+Note that this module provides a metarole (i.e. a role on the metaclass),
+not a role.  Your objects will not report C<-E<gt>does('MooseX::Locked')>.
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc MooseX::Locked
+
+You can also look for information at:
+
+    RT, CPAN's request tracker (report bugs here)
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=MooseX-Locked
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/MooseX-Locked
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/MooseX-Locked
+
+    Search CPAN
+        http://search.cpan.org/dist/MooseX-Locked/
+
+
+LICENSE AND COPYRIGHT
+
+Copyright (C) 2011 Chip Salzenberg
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.

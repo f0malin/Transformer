@@ -1,0 +1,42 @@
+
+=pod 
+
+=head1 TODO
+
+=over 4
+
+=item * 
+
+Support Prototypes within Prototypes.
+
+=item * 
+
+Pass Attribute handle to trigger subs
+
+When we write a prototype, we will not know the name of the attribute. 
+So writing a trigger sub is difficult 
+
+    has 'name' => ( trigger => sub { $_->attr( 5 ) } );
+         ^^^^                            ^^^^
+          
+What we need to do is pass the reader/writer methods to the trigger 
+as well as the $self, $value, $meta.
+
+An Alternative is to use a Custom Moose::Role class that provides some
+sugar to the class that creates the trigger.
+
+
+=item *
+
+Test to check to see if we can prototype a normally installed attribute
+
+=item * 
+
+Move _parse_prototype_name from Meta.pm to Object.pm?
+
+
+=cut
+
+
+	  	
+

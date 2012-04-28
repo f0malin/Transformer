@@ -1,0 +1,556 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Net::Ident - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Net-Ident",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Net-Ident-1.23",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Net::Ident",3]);
+    _gaq.push(["_setCustomVar",1,"Author","TODDR",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Net::Ident">permalink</a></div>
+  <a href="/~toddr/">Todd Rinaldo</a> &gt;
+  <a href="/~toddr/Net-Ident-1.23/">Net-Ident-1.23</a> &gt;
+  Net::Ident
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/593351ab4ba45a73fb5de512d89432d2?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/T/TO/TODDR/Net-Ident-1.23.tar.gz">Net-Ident-1.23.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Net%3A%3AIdent;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~TODDR/Net-Ident-1.23/Ident.pm">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://wiki.github.com/toddr/Net-Ident/">Website</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?MIME%3A%3ABase64">MIME::Base64</a><br>
+<a href="/perldoc?Crypt%3A%3ADES">Crypt::DES</a><br>
+<a href="/perldoc?Digest%3A%3AMD5">Digest::MD5</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Net%3A%3AIdent">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Net-Ident">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.23 &nbsp;
+<span class="noprint">
+  <a href="/src/TODDR/Net-Ident-1.23/Ident.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#OVERVIEW'>OVERVIEW</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Simple_Interface'>Simple Interface</a>
+    <li class='indexItem indexItem2'><a href='#EXAMPLE'>EXAMPLE</a>
+    <li class='indexItem indexItem2'><a href='#Asynchronous_Interface'>Asynchronous Interface</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DISCLAIMER'>DISCLAIMER</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#REVISION_HISTORY'>REVISION HISTORY</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Net::Ident - lookup the username on the remote end of a TCP/IP connection</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl"> use Net::Ident;
+ 
+ $username = Net::Ident::lookup(SOCKET, $timeout);
+
+ $username = Net::Ident::lookupFromInAddr($localsockaddr,
+                                           $remotesockaddr, $timeout);
+ 
+ $obj = Net::Ident-&#62;new(SOCKET, $timeout);
+ $obj = Net::Ident-&#62;newFromInAddr($localsockaddr, $remotesockaddr,
+                                        $timeout);
+ $status = $obj-&#62;query;
+ $status = $obj-&#62;ready;
+ $username = $obj-&#62;username;
+ ($username, $opsys, $error) = $obj-&#62;username;
+ $fh = $obj-&#62;getfh;
+ $txt = $obj-&#62;geterror;
+ 
+ use Net::Ident &#39;ident_lookup&#39;;
+ 
+ $username = ident_lookup(SOCKET, $timeout);
+
+ use Net::Ident &#39;lookupFromInAddr&#39;;
+
+ $username = lookupFromInAddr($localsockaddr, $remotesockaddr, $timeout);
+
+ use Net::Ident &#39;:fh&#39;;
+
+ $username = SOCKET-&#62;ident_lookup($timeout);
+
+ use Net::Ident &#39;:apache&#39;;
+
+ # my Apache $r;
+ $c = $r-&#62;connection;
+ $username = $c-&#62;ident_lookup($timeout);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OVERVIEW"
+>OVERVIEW <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><b>Net::Ident</b> is a module that looks up the username on the remote side of a TCP/IP connection through the ident (auth/tap) protocol described in RFC1413 (which supersedes RFC931). Note that this requires the remote site to run a daemon (often called <b>identd</b>) to provide the requested information, so it is not always available for all TCP/IP connections.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>You can either use the simple interface, which does one ident lookup at a time, or use the asynchronous interface to perform (possibly) many simultaneous lookups, or simply continue serving other things while the lookup is proceeding.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Simple_Interface"
+>Simple Interface</a></h2>
+
+<p>The simple interface comes in four varieties. An object oriented method call of a FileHandle object, an object oriented method of an Apache::Connection object, and as one of two different simple subroutine calls. Other than the calling method, these routines behave exactly the same.</p>
+
+<dl>
+<dt><a name='Net'></a><a name="Net::Ident::lookup_(SOCKET_[,_$timeout])"
+><code>Net::Ident::lookup (SOCKET</code> [<code>, $timeout</code>]<code>)</code></a></dt>
+
+<dd>
+<p><b>Net::Ident::lookup</b> is an exportable function. However, due to the generic name of the <b>lookup</b> function, it is recommended that you instead import the alias function <b>Net::Ident::ident_lookup</b>. Both functions are exported through <code>@EXPORT_OK</code>, so you&#39;ll have to explicitly ask for it if you want the function <b>ident_lookup</b> to be callable from your program.</p>
+
+<p>You can pass the socket using either a string, which doesn&#39;t have to be qualified with a package name, or using the more modern FileHandle calling styles: as a glob or as a reference to a glob. The Socket has to be a connected TCP/IP socket, ie. something which is either <b>connect()</b>ed or <b>accept()</b>ed. The optional timeout parameter specifies a timeout in seconds. If you do not specify a timeout, or use a value of undef, there will be no timeout (apart from any default system timeouts like TCP connection timeouts).</p>
+
+<dt><a name='Net'></a><a name="Net::Ident::lookupFromInAddr_($localaddr,_$remoteaddr_[,_$timeout])"
+><code>Net::Ident::lookupFromInAddr ($localaddr, $remoteaddr</code> [<code>, $timeout</code>]<code>)</code></a></dt>
+
+<dd>
+<p><b>Net::Ident::lookupFromInAddr</b> is an exportable function (via <code>@EXPORT_OK</code>). The arguments are the local and remote address of a connection, in packed ``sockaddr&#39;&#39; format (the kind of thing that <code>getsockname</code> returns). The optional timeout value specifies a timeout in seconds, see also the description of the timeout value in the <code>Net::Ident::lookup</code> section above.</p>
+
+<p>The given localaddr <b>must</b> have the IP address of a local interface of the machine you&#39;re calling this on, otherwise an error will occur.</p>
+
+<p>You can use this function whenever you have a local and remote socket address, but no direct access to the socket itself. For example, because you are parsing the output of &#34;netstat&#34; and extracting socket address, or because you are writing a mod_perl script under apache (in that case, also see the Apache::Connection method below).</p>
+
+<dt><a name='ident_lookup'></a><a name="ident_lookup_SOCKET_[$timeout]"
+><code>ident_lookup SOCKET</code> [<code>$timeout</code>]</a></dt>
+
+<dd>
+<p>When you import the ``magic&#39;&#39; tag &#39;:fh&#39; using <code>use Net::Ident &#39;:fh&#39;;</code>, the <b>Net::Ident</b> module extends the <b>FileHandle</b> class with one extra method call, <b>ident_lookup</b>. It assumes that the object (a FileHandle) it is operating on, is a connected TCP/IP socket, ie. something which is either <b>connect()</b>ed or <b>accept()</b>ed. The optional parameter specifies the timeout in seconds, just like the timeout parameter of the function calls above.</p>
+
+<p>&#160;</p>
+
+<p>Some people do not like the way that ``proper&#39;&#39; object design is broken by letting one module add methods to another class. This is why, starting from version 1.20, you have to explicitly ask for this behaviour to occur. Personally, I this it&#39;s a compromise: if you want an object-oriented interface, then either you make a derived class, like a FileHandleThatCanPerformIdentLookups, and make sure all appropriate internal functions get wrappers that do the necessary re-blessing. Or, you simply extend the FileHandle class. And since Perl doesn&#39;t object to this (pun intended :), I find this an acceptable solution. But you might think otherwise.</p>
+
+<dt><a name='ident_lookup'></a><a name="ident_lookup_Apache::Connection_[$timeout]"
+><code>ident_lookup Apache::Connection</code> [<code>$timeout</code>]</a></dt>
+
+<dd>
+<p>When you import the ``magic&#39;&#39; tag &#39;:apache&#39; using <code>use Net::Ident &#39;:apache&#39;;</code>, the <b>Net::Ident</b> module extends the <b>Apache::Connection</b> class with one extra method call, <b>ident_lookup</b>. This method takes one optional parameter: a timeout value in seconds.</p>
+
+<p>This is a similar convenience function as the FileHandle::ident_lookup method, to be used with mod_perl scripts under Apache.</p>
+</dd>
+</dl>
+
+<p>What these functions return depends on the context:</p>
+
+<dl>
+<dt><a name='scalar'></a><a name="scalar_context"
+>scalar context</a></dt>
+
+<dd>
+<p>In scalar context, these functions return the remote username on success, or undef on error. &#34;Error&#34; is rather broad, it might mean: some network error occurred, function arguments are invalid, the remote site is not responding (in time) or is not running an ident daemon, or the remote site ident daemon says there&#39;s no user connected with that particular connection.</p>
+
+<p>More precisely, the functions return whatever the remote daemon specified as the ID that belongs to that particular connection. This is often the username, but it doesn&#39;t necessarily have to be. Some sites, out of privacy and/or security measures, return an opaque ID that is unique for each user, but is not identical to the username. See <i>RFC1413</i> for more information.</p>
+
+<dt><a name='array'></a><a name="array_context"
+>array context</a></dt>
+
+<dd>
+<p>In array context, these functions return: <code>($username, $opsys, $error)</code>. The <i>$username</i> is the remote username or ID, as returned in the scalar context, or undef on error.</p>
+
+<p>The <i>$opsys</i> is the remote operating system as reported by the remote ident daemon, or undef on a network error, or <b>&#34;ERROR&#34;</b> when the remote ident daemon reported an error. This could also contain the character set of the returned username. See RFC1413.</p>
+
+<p>The <i>$error</i> is the error message, either the error reported by the remote ident daemon (in which case <i>$opsys</i> is <b>&#34;ERROR&#34;</b>), or the internal message from the <b>Net::Ident</b> module, which includes the system errno <code>$!</code> whenever possible. A likely candidate is <b>&#34;Connection refused&#34;</b> when the remote site isn&#39;t running an ident daemon, or <b>&#34;Connection timed out&#34;</b> when the remote site isn&#39;t answering our connection request.</p>
+
+<p>When <i>$username</i> has a value, <i>$error</i> is always undef, and vice versa.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="EXAMPLE"
+>EXAMPLE</a></h2>
+
+<p>The following code is a complete example, implementing a server that waits for a connection on a port, tells you who you are and what time it is, and closes the connection again. The majority of the code will look very familiar if you just read <a href="/perldoc?perlipc" class="podlinkpod"
+>perlipc</a>.</p>
+
+<p>Excersize this server by telnetting to it, preferably from a machine that has a suitable ident daemon installed.</p>
+
+<pre class="sh_perl">    #!/usr/bin/perl -w
+
+    use Net::Ident;
+    # uncomment the below line if you want lots of debugging info
+    # $Net::Ident::DEBUG = 2;
+    use Socket;
+    use strict;
+    
+    sub logmsg { print &#34;$0 $$: @_ at &#34;, scalar localtime, &#34;\n&#34; }
+    
+    my $port = shift || 2345;
+    my $proto = getprotobyname(&#39;tcp&#39;);
+    socket(Server, PF_INET, SOCK_STREAM, $proto) or die &#34;socket: $!&#34;;
+    setsockopt(Server, SOL_SOCKET, SO_REUSEADDR, pack(&#34;l&#34;, 1)) or
+      die &#34;setsockopt: $!&#34;;
+    bind(Server, sockaddr_in($port, INADDR_ANY)) or die &#34;bind: $!&#34;;
+    listen(Server,SOMAXCONN) or die &#34;listen: $!&#34;;
+    
+    logmsg &#34;server started on port $port&#34;;
+    
+    my $paddr;
+    
+    for ( ; $paddr = accept(Client,Server); close Client) {
+        my($port,$iaddr) = sockaddr_in($paddr);
+        my $name = gethostbyaddr($iaddr,AF_INET) || inet_ntoa($iaddr);
+        logmsg &#34;connection from $name [&#34; . inet_ntoa($iaddr) .
+          &#34;] at port $port&#34;;
+       
+        my $username = Client-&#62;ident_lookup(30) || &#34;~unknown&#34;;
+        logmsg &#34;User at $name:$port is $username&#34;;
+        
+        print Client &#34;Hello there, $username\@$name, it&#39;s now &#34;,
+           scalar localtime, &#34;\n&#34;;
+    }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Asynchronous_Interface"
+>Asynchronous Interface</a></h2>
+
+<p>The asynchronous interface is meant for those who know the ins and outs of the <code>select()</code> call (the 4-argument version of <code>select()</code>, but I didn&#39;t need saying that, did I?). This interface is completely object oriented. The following methods are available:</p>
+
+<dl>
+<dt><a name='new'></a><a name="new_Net::Ident_SOCKET,_$timeout"
+><code>new Net::Ident SOCKET, $timeout</code></a></dt>
+
+<dd>
+<p>This constructs a new Net::Ident object, and initiates the connection to the remote ident daemon. The parameters are the same as described above for the <b>Net::Ident::lookup</b> subroutine. This method returns immediately, the supplied <i>$timeout</i> is only stored in the object and used in future methods.</p>
+
+<p>If you want to implement your own timeout, that&#39;s fine. Simply throw away the object when you don&#39;t want it anymore.</p>
+
+<p>The constructor will always succeed. When it detects an error, however, it returns an object that &#34;has already failed&#34; internally. In this case, all methods will return <code>undef</code> except for the <code>geterror</code> method, wich will return the error message.</p>
+
+<p>The timeout is <i>not</i> implemented using <code>alarm()</code>. In fact you can use <code>alarm()</code> completely independant of this library, they do not interfere.</p>
+
+<dt><a name='newFromInAddr'></a><a name="newFromInAddr_$localaddr,_$remoteaddr,_$timeout"
+><code>newFromInAddr $localaddr, $remoteaddr, $timeout</code></a></dt>
+
+<dd>
+<p>Alternative constructor, that takes two packed sockaddr structures. Otherwise behaves identical to the <code>new</code> constructor above.</p>
+
+<dt><a name='query'></a><a name="query_$obj"
+><code>query $obj</code></a></dt>
+
+<dd>
+<p>This object method queries the remote rfc931 deamon, and blocks until the connection to the ident daemon is writable, if necessary (but you are supposed to make sure it is, of course). Returns true on success (or rather it returns the <i>$obj</i> itself), or undef on error.</p>
+
+<dt><a name='ready'></a><a name="ready_$obj_[$blocking]"
+><code>ready $obj</code> [<code>$blocking</code>]</a></dt>
+
+<dd>
+<p>This object method returns whether the data received from the remote daemon is complete (true or false). Returns undef on error. Reads any data from the connection. If <i>$blocking</i> is true, it blocks and waits until all data is received (it never returns false when blocking is true, only true or undef). If <i>$blocking</i> is not true, it doesn&#39;t block at all (unless... see below).</p>
+
+<p>If you didn&#39;t call <code>query $obj</code> yet, this method calls it for you, which means it <i>can</i> block, regardless of the value of <i>$blocking</i>, depending on whether the connection to the ident is writable.</p>
+
+<p>Obviously, you are supposed to call this routine whenever you see that the connection to the ident daemon is readable, and act appropriately when this returns true.</p>
+
+<p>Note that once <b>ready</b> returns true, there are no longer checks on timeout (because the networking part of the lookup is over anyway). This means that even <code>ready $obj</code> can return true way after the timeout has expired, provided it returned true at least once before the timeout expired. This is to be construed as a feature.</p>
+
+<dt><a name='username'></a><a name="username_$obj"
+><code>username $obj</code></a></dt>
+
+<dd>
+<p>This object method parses the return from the remote ident daemon, and blocks until the query is complete, if necessary (it effectively calls <code>ready $obj 1</code> for you if you didn&#39;t do it yourself). Returns the parsed username on success, or undef on error. In an array context, the return values are the same as described for the <b>Net::Ident::lookup</b> subroutine.</p>
+
+<dt><a name='getfh'></a><a name="getfh_$obj"
+><code>getfh $obj</code></a></dt>
+
+<dd>
+<p>This object method returns the internal FileHandle used for the connection to the remote ident daemon. Invaluable if you want it to dance in your select() ring. Returns undef when an error has occurred.</p>
+
+<dt><a name='geterror'></a><a name="geterror_$obj"
+><code>geterror $obj</code></a></dt>
+
+<dd>
+<p>This object method returns the error message in case there was an error. undef when there was no error.</p>
+</dd>
+</dl>
+
+<p>An asynchronous example implementing the above server in a multi-threaded way via select, is left as an excersize for the interested reader.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DISCLAIMER"
+>DISCLAIMER <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>I make NO WARRANTY or representation, either express or implied, with respect to this software, its quality, accuracy, merchantability, or fitness for a particular purpose. This software is provided &#34;AS IS&#34;, and you, its user, assume the entire risk as to its quality and accuracy.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Jan-Pieter Cornet, &#60;johnpc@xs4all.nl&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 1995, 1997, 1999 Jan-Pieter Cornet. All rights reserved. You can distribute and use this program under the same terms as Perl itself.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="REVISION_HISTORY"
+>REVISION HISTORY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='V1'></a><a name="V1.20"
+>V1.20</a></dt>
+
+<dd>
+<p>August 2, 1999. Finally implemented the long-asked-for lookupFromInAddr method. Other changes:</p>
+
+<ul>
+<li>No longer imports ident_lookup into package FileHandle by default, unless you explicitly ask for it (or unless you installed it that way during compile time for compatibility reasons).</li>
+
+<li>Allow adding an ident_lookup method to the Apache::Connection class, as a convenience for mod_perl script writers.</li>
+
+<li>Rewritten tests, included test for the Apache::Connection method by actually launching apache and performing ident lookups from within mod_perl.</li>
+
+<li>Moved selection of FileHandle/IO::Handle class out of the Makefile.PL. PAUSE/CPAN didn&#39;t really like modules that weren&#39;t present in the distribution, and it didn&#39;t allow you to upgrade your perl version underneath.</li>
+</ul>
+
+<dt><a name='V1'></a><a name="V1.11"
+>V1.11</a></dt>
+
+<dd>
+<p>Jan 15th, 1997. Several bugfixes, and some slight interface changes:</p>
+
+<ul>
+<li>constructor now called <code>new</code> instead of <code>initconnect</code>, constructor now always succeeds, if something has gone wrong in the constructor, all methods return undef (like <code>getfh</code>), except for <code>geterror</code>, which returns the error message.</li>
+
+<li>The recommended exported function is now <code>ident_lookup</code> instead of <code>lookup</code></li>
+
+<li>Fixed a bug: now chooses O_NDELAY or O_NONBLOCK from %Config, instead of hardcoding O_NDELAY (argh)</li>
+
+<li>Adding a method to FileHandle would break in perl5.004, it should get added in IO::Handle. Added intelligence in Makefile.PL to detect that and choose the appropriate package.</li>
+
+<li>Miscellaneous pod fixes.</li>
+
+<li>Test script now actually tests multiple different things.</li>
+</ul>
+
+<dt><a name='V1'></a><a name="V1.10"
+>V1.10</a></dt>
+
+<dd>
+<p>Jan 11th, 1997. Complete rewrite for perl5. Requires perl5.002 or up.</p>
+
+<dt><a name='V1'></a><a name="V1.02"
+>V1.02</a></dt>
+
+<dd>
+<p>Jan 20th, 1995. Quite a big bugfix: &#34;connection refused&#34; to the ident port would kill the perl process with a SIGPIPE if the connect didn&#39;t immediately signal it (ie. almost always on remote machines). Also recognises the perl5 package separator :: now on fully qualified descriptors. This is still perl4-compatible, a perl5- only version would require a rewrite to make it neater. Fixed the constants normally found in .ph files (but you shouldn&#39;t use those anyway).</p>
+
+<p>[this release wasn&#39;t called <b>Net::Ident</b>, of course, it was called <b>rfc931.pl</b>]</p>
+
+<dt><a name='V1'></a><a name="V1.01"
+>V1.01</a></dt>
+
+<dd>
+<p>Around November 1994. Removed a spurious <b>perl5 -w</b> complaint. First public release. Has been tested against <b>perl 5.000</b> and <b>perl 4.036</b>.</p>
+
+<dt><a name='V1'></a><a name="V1.00"
+>V1.00</a></dt>
+
+<dd>
+<p>Dunno, somewhere 1994. First neat collection of dusty routines put in a package.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Socket" class="podlinkpod"
+>Socket</a> RFC1413, RFC931</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78259 Uploads, 24725 Distributions
+106040 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 07:37:06 2012 GMT (0.14472222328186) @cpansearch1 -->
+ </body>
+</html>

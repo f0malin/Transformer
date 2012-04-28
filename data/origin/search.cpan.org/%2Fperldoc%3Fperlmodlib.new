@@ -1,0 +1,1932 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>perlmodlib - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",4,"Document","perlmodlib",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?perlmodlib">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  perlmodlib
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/pod/perlmodlib.PL">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/pod/perlmodlib.PL">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~abigail/perl/pod/perlmodlib.PL">perl-5.15.9</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#THE_PERL_MODULE_LIBRARY'>THE PERL MODULE LIBRARY</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Pragmatic_Modules'>Pragmatic Modules</a>
+    <li class='indexItem indexItem2'><a href='#Standard_Modules'>Standard Modules</a>
+    <li class='indexItem indexItem2'><a href='#Extension_Modules'>Extension Modules</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CPAN'>CPAN</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Africa'>Africa</a>
+    <li class='indexItem indexItem2'><a href='#Asia'>Asia</a>
+    <li class='indexItem indexItem2'><a href='#Central_America'>Central America</a>
+    <li class='indexItem indexItem2'><a href='#Europe'>Europe</a>
+    <li class='indexItem indexItem2'><a href='#North_America'>North America</a>
+    <li class='indexItem indexItem2'><a href='#Oceania'>Oceania</a>
+    <li class='indexItem indexItem2'><a href='#South_America'>South America</a>
+    <li class='indexItem indexItem2'><a href='#RSYNC_Mirrors'>RSYNC Mirrors</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Modules:_Creation,_Use,_and_Abuse'>Modules: Creation, Use, and Abuse</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Guidelines_for_Module_Creation'>Guidelines for Module Creation</a>
+    <li class='indexItem indexItem2'><a href='#Guidelines_for_Converting_Perl_4_Library_Scripts_into_Modules'>Guidelines for Converting Perl 4 Library Scripts into Modules</a>
+    <li class='indexItem indexItem2'><a href='#Guidelines_for_Reusing_Application_Code'>Guidelines for Reusing Application Code</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#NOTE'>NOTE</a>
+</ul>
+</div>
+</div>
+
+<dl>
+<dt><a name="Config"
+>Config</a></dt>
+
+<dd>
+<p>Access Perl configuration information</p>
+
+<p>CONFIG</p>
+
+<p>print OUT &#60;&#60;&#39;EOF&#39;; =for maintainers Generated by perlmodlib.PL -- DO NOT EDIT!</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>perlmodlib - constructing new Perl modules and finding existing ones</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="THE_PERL_MODULE_LIBRARY"
+>THE PERL MODULE LIBRARY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Many modules are included in the Perl distribution.
+These are described below,
+and all end in <em>.pm</em>.
+You may discover compiled library files (usually ending in <em>.so</em>) or small pieces of modules to be autoloaded (ending in <em>.al</em>); these were automatically generated by the installation process.
+You may also discover files in the library directory that end in either <em>.pl</em> or <em>.ph</em>.
+These are old libraries supplied so that old programs that use them still run.
+The <em>.pl</em> files will all eventually be converted into standard modules,
+and the <em>.ph</em> files made by <b>h2ph</b> will probably end up as extension modules made by <b>h2xs</b>.
+(Some <em>.ph</em> values may already be available through the POSIX,
+Errno,
+or Fcntl modules.) The <b>pl2pm</b> file in the distribution may help in your conversion,
+but it&#39;s just a mechanical process and therefore far from bulletproof.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Pragmatic_Modules"
+>Pragmatic Modules</a></h2>
+
+<p>They work somewhat like compiler directives (pragmata) in that they tend to affect the compilation of your program,
+and thus will usually work well only when used within a <code>use</code>,
+or <code>no</code>.
+Most of these are lexically scoped,
+so an inner BLOCK may countermand them by saying:</p>
+
+<pre class="sh_perl">    no integer;
+    no strict &#39;refs&#39;;
+    no warnings;</pre>
+
+<p>which lasts until the end of that BLOCK.</p>
+
+<p>Some pragmas are lexically scoped--typically those that affect the <code>$^H</code> hints variable. Others affect the current package instead, like <code>use vars</code> and <code>use subs</code>, which allow you to predeclare a variables or subroutines within a particular <i>file</i> rather than just a block. Such declarations are effective for the entire file for which they were declared. You cannot rescind them with <code>no vars</code> or <code>no subs</code>.</p>
+
+<p>The following pragmas are defined (and have their own documentation).</p>
+
+<blockquote>
+<p>EOF</p>
+
+<p>print OUT $_ for (sort @pragma);</p>
+
+<p>print OUT &#60;&#60;EOF; =back</p>
+</blockquote>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Standard_Modules"
+>Standard Modules</a></h2>
+
+<p>Standard, bundled modules are all expected to behave in a well-defined manner with respect to namespace pollution because they use the Exporter module. See their own documentation for details.</p>
+
+<p>It&#39;s possible that not all modules listed below are installed on your system. For example, the GDBM_File module will not be installed if you don&#39;t have the gdbm library.</p>
+
+<blockquote>
+<p>EOF</p>
+
+<p>print OUT $_ for (sort @mod);</p>
+
+<p>print OUT &#60;&#60;&#39;EOF&#39;; =back</p>
+
+<p>To find out <i>all</i> modules installed on your system, including those without documentation or outside the standard release, just use the following command (under the default win32 shell, double quotes should be used instead of single quotes).</p>
+
+<pre class="sh_perl">    % perl -MFile::Find=find -MFile::Spec::Functions -Tlwe \
+      &#39;find { wanted =&#62; sub { print canonpath $_ if /\.pm\z/ },
+      no_chdir =&#62; 1 }, @INC&#39;</pre>
+
+<p>(The -T is here to prevent &#39;.&#39; from being listed in @INC.) They should all have their own documentation installed and accessible via your system man(1) command. If you do not have a <b>find</b> program, you can use the Perl <b>find2perl</b> program instead, which generates Perl code as output you can run through perl. If you have a <b>man</b> program but it doesn&#39;t find your modules, you&#39;ll have to fix your manpath. See <a href="/~flora/perl-5.14.2/pod/perl.pod" class="podlinkpod"
+>perl</a> for details. If you have no system <b>man</b> command, you might try the <b>perldoc</b> program.</p>
+
+<p>Note also that the command <code>perldoc perllocal</code> gives you a (possibly incomplete) list of the modules that have been further installed on your system. (The perllocal.pod file is updated by the standard MakeMaker install process.)</p>
+</blockquote>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Extension_Modules"
+>Extension Modules</a></h2>
+
+<p>Extension modules are written in C (or a mix of Perl and C). They are usually dynamically loaded into Perl if and when you need them, but may also be linked in statically. Supported extension modules include Socket, Fcntl, and POSIX.</p>
+
+<p>Many popular C extension modules do not come bundled (at least, not completely) due to their sizes, volatility, or simply lack of time for adequate testing and configuration across the multitude of platforms on which Perl was beta-tested. You are encouraged to look for them on CPAN (described below), or using web search engines like Alta Vista or Google.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CPAN"
+>CPAN <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>CPAN stands for Comprehensive Perl Archive Network; it&#39;s a globally replicated trove of Perl materials, including documentation, style guides, tricks and traps, alternate ports to non-Unix systems and occasional binary distributions for these. Search engines for CPAN can be found at <a href="http://www.cpan.org/" class="podlinkurl"
+>http://www.cpan.org/</a></p>
+
+<p>Most importantly, CPAN includes around a thousand unbundled modules, some of which require a C compiler to build. Major categories of modules are:</p>
+
+<ul>
+<li>Language Extensions and Documentation Tools</li>
+
+<li>Development Support</li>
+
+<li>Operating System Interfaces</li>
+
+<li>Networking, Device Control (modems) and InterProcess Communication</li>
+
+<li>Data Types and Data Type Utilities</li>
+
+<li>Database Interfaces</li>
+
+<li>User Interfaces</li>
+
+<li>Interfaces to / Emulations of Other Programming Languages</li>
+
+<li>File Names, File Systems and File Locking (see also File Handles)</li>
+
+<li>String Processing, Language Text Processing, Parsing, and Searching</li>
+
+<li>Option, Argument, Parameter, and Configuration File Processing</li>
+
+<li>Internationalization and Locale</li>
+
+<li>Authentication, Security, and Encryption</li>
+
+<li>World Wide Web, HTML, HTTP, CGI, MIME</li>
+
+<li>Server and Daemon Utilities</li>
+
+<li>Archiving and Compression</li>
+
+<li>Images, Pixmap and Bitmap Manipulation, Drawing, and Graphing</li>
+
+<li>Mail and Usenet News</li>
+
+<li>Control Flow Utilities (callbacks and exceptions etc)</li>
+
+<li>File Handle and Input/Output Stream Utilities</li>
+
+<li>Miscellaneous Modules</li>
+</ul>
+
+<p>The list of the registered CPAN sites follows. Please note that the sorting order is alphabetical on fields:</p>
+
+<p>Continent | |--&#62;Country | |--&#62;[state/province] | |--&#62;ftp | |--&#62;[http]</p>
+
+<p>and thus the North American servers happen to be listed between the European and the South American sites.</p>
+
+<p>Registered CPAN sites</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Africa"
+>Africa</a></h2>
+
+<dl>
+<dt><a name='South'></a><a name="South_Africa"
+>South Africa</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.mirror.ac.za/" class="podlinkurl"
+>http://cpan.mirror.ac.za/</a>
+                      <a href="ftp://cpan.mirror.ac.za/" class="podlinkurl"
+>ftp://cpan.mirror.ac.za/</a>
+                      <a href="http://mirror.is.co.za/pub/cpan/" class="podlinkurl"
+>http://mirror.is.co.za/pub/cpan/</a>
+                      <a href="ftp://ftp.is.co.za/pub/cpan/" class="podlinkurl"
+>ftp://ftp.is.co.za/pub/cpan/</a>
+                      <a href="ftp://ftp.saix.net/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.saix.net/pub/CPAN/</a></pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Asia"
+>Asia</a></h2>
+
+<dl>
+<dt><a name='Hong'></a><a name="Hong_Kong"
+>Hong Kong</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://ftp.cuhk.edu.hk/pub/packages/perl/CPAN/" class="podlinkurl"
+>http://ftp.cuhk.edu.hk/pub/packages/perl/CPAN/</a>
+                      <a href="ftp://ftp.cuhk.edu.hk/pub/packages/perl/CPAN/" class="podlinkurl"
+>ftp://ftp.cuhk.edu.hk/pub/packages/perl/CPAN/</a>
+                      <a href="http://mirrors.geoexpat.com/cpan/" class="podlinkurl"
+>http://mirrors.geoexpat.com/cpan/</a></pre>
+
+<dt><a name="India"
+>India</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://perlmirror.indialinks.com/" class="podlinkurl"
+>http://perlmirror.indialinks.com/</a></pre>
+
+<dt><a name="Indonesia"
+>Indonesia</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.biz.net.id/" class="podlinkurl"
+>http://cpan.biz.net.id/</a>
+                      <a href="http://komo.vlsm.org/CPAN/" class="podlinkurl"
+>http://komo.vlsm.org/CPAN/</a>
+                      <a href="ftp://komo.vlsm.org/CPAN/" class="podlinkurl"
+>ftp://komo.vlsm.org/CPAN/</a>
+                      <a href="http://cpan.pesat.net.id/" class="podlinkurl"
+>http://cpan.pesat.net.id/</a>
+                      <a href="http://mirror.unej.ac.id/cpan/" class="podlinkurl"
+>http://mirror.unej.ac.id/cpan/</a>
+                      <a href="ftp://mirror.unej.ac.id/cpan/" class="podlinkurl"
+>ftp://mirror.unej.ac.id/cpan/</a></pre>
+
+<dt><a name="Japan"
+>Japan</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="ftp://ftp.u-aizu.ac.jp/pub/CPAN" class="podlinkurl"
+>ftp://ftp.u-aizu.ac.jp/pub/CPAN</a>
+                      <a href="ftp://ftp.kddilabs.jp/CPAN/" class="podlinkurl"
+>ftp://ftp.kddilabs.jp/CPAN/</a>
+                      <a href="http://ftp.nara.wide.ad.jp/pub/CPAN/" class="podlinkurl"
+>http://ftp.nara.wide.ad.jp/pub/CPAN/</a>
+                      <a href="ftp://ftp.nara.wide.ad.jp/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.nara.wide.ad.jp/pub/CPAN/</a>
+                      <a href="http://ftp.jaist.ac.jp/pub/CPAN/" class="podlinkurl"
+>http://ftp.jaist.ac.jp/pub/CPAN/</a>
+                      <a href="ftp://ftp.jaist.ac.jp/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.jaist.ac.jp/pub/CPAN/</a>
+                      <a href="ftp://ftp.dti.ad.jp/pub/lang/CPAN/" class="podlinkurl"
+>ftp://ftp.dti.ad.jp/pub/lang/CPAN/</a>
+                      <a href="ftp://ftp.ring.gr.jp/pub/lang/perl/CPAN/" class="podlinkurl"
+>ftp://ftp.ring.gr.jp/pub/lang/perl/CPAN/</a>
+                      <a href="http://ftp.riken.jp/lang/CPAN/" class="podlinkurl"
+>http://ftp.riken.jp/lang/CPAN/</a>
+                      <a href="ftp://ftp.riken.jp/lang/CPAN/" class="podlinkurl"
+>ftp://ftp.riken.jp/lang/CPAN/</a>
+                      <a href="http://ftp.yz.yamagata-u.ac.jp/pub/lang/cpan/" class="podlinkurl"
+>http://ftp.yz.yamagata-u.ac.jp/pub/lang/cpan/</a>
+                      <a href="ftp://ftp.yz.yamagata-u.ac.jp/pub/lang/cpan/" class="podlinkurl"
+>ftp://ftp.yz.yamagata-u.ac.jp/pub/lang/cpan/</a></pre>
+
+<dt><a name="Kazakhstan"
+>Kazakhstan</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirror.linuxiso.kz/CPAN/" class="podlinkurl"
+>http://mirror.linuxiso.kz/CPAN/</a></pre>
+
+<dt><a name='Republic'></a><a name="Republic_of_Korea"
+>Republic of Korea</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://ftp.kaist.ac.kr/pub/CPAN" class="podlinkurl"
+>http://ftp.kaist.ac.kr/pub/CPAN</a>
+                      <a href="ftp://ftp.kaist.ac.kr/pub/CPAN" class="podlinkurl"
+>ftp://ftp.kaist.ac.kr/pub/CPAN</a>
+                      <a href="http://cpan.mirror.cdnetworks.com/" class="podlinkurl"
+>http://cpan.mirror.cdnetworks.com/</a>
+                      <a href="ftp://cpan.mirror.cdnetworks.com/CPAN/" class="podlinkurl"
+>ftp://cpan.mirror.cdnetworks.com/CPAN/</a>
+                      <a href="http://cpan.sarang.net/" class="podlinkurl"
+>http://cpan.sarang.net/</a>
+                      <a href="ftp://cpan.sarang.net/CPAN/" class="podlinkurl"
+>ftp://cpan.sarang.net/CPAN/</a></pre>
+
+<dt><a name="Russia"
+>Russia</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.tomsk.ru/" class="podlinkurl"
+>http://cpan.tomsk.ru/</a>
+                      <a href="ftp://cpan.tomsk.ru/" class="podlinkurl"
+>ftp://cpan.tomsk.ru/</a></pre>
+
+<dt><a name="Singapore"
+>Singapore</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirror.averse.net/pub/CPAN" class="podlinkurl"
+>http://mirror.averse.net/pub/CPAN</a>
+                      <a href="ftp://mirror.averse.net/pub/CPAN" class="podlinkurl"
+>ftp://mirror.averse.net/pub/CPAN</a>
+                      <a href="http://cpan.mirror.choon.net/" class="podlinkurl"
+>http://cpan.mirror.choon.net/</a>
+                      <a href="http://cpan.oss.eznetsols.org" class="podlinkurl"
+>http://cpan.oss.eznetsols.org</a>
+                      <a href="ftp://ftp.oss.eznetsols.org/cpan" class="podlinkurl"
+>ftp://ftp.oss.eznetsols.org/cpan</a></pre>
+
+<dt><a name="Taiwan"
+>Taiwan</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://ftp.cse.yzu.edu.tw/pub/CPAN/" class="podlinkurl"
+>http://ftp.cse.yzu.edu.tw/pub/CPAN/</a>
+                      <a href="ftp://ftp.cse.yzu.edu.tw/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.cse.yzu.edu.tw/pub/CPAN/</a>
+                      <a href="http://cpan.nctu.edu.tw/" class="podlinkurl"
+>http://cpan.nctu.edu.tw/</a>
+                      <a href="ftp://cpan.nctu.edu.tw/" class="podlinkurl"
+>ftp://cpan.nctu.edu.tw/</a>
+                      <a href="ftp://ftp.ncu.edu.tw/CPAN/" class="podlinkurl"
+>ftp://ftp.ncu.edu.tw/CPAN/</a>
+                      <a href="http://cpan.cdpa.nsysu.edu.tw/" class="podlinkurl"
+>http://cpan.cdpa.nsysu.edu.tw/</a>
+                      <a href="ftp://cpan.cdpa.nsysu.edu.tw/Unix/Lang/CPAN/" class="podlinkurl"
+>ftp://cpan.cdpa.nsysu.edu.tw/Unix/Lang/CPAN/</a>
+                      <a href="http://cpan.stu.edu.tw" class="podlinkurl"
+>http://cpan.stu.edu.tw</a>
+                      <a href="ftp://ftp.stu.edu.tw/CPAN" class="podlinkurl"
+>ftp://ftp.stu.edu.tw/CPAN</a>
+                      <a href="http://ftp.stu.edu.tw/CPAN" class="podlinkurl"
+>http://ftp.stu.edu.tw/CPAN</a>
+                      <a href="ftp://ftp.stu.edu.tw/pub/CPAN" class="podlinkurl"
+>ftp://ftp.stu.edu.tw/pub/CPAN</a>
+                      <a href="http://cpan.cs.pu.edu.tw/" class="podlinkurl"
+>http://cpan.cs.pu.edu.tw/</a>
+                      <a href="ftp://cpan.cs.pu.edu.tw/pub/CPAN" class="podlinkurl"
+>ftp://cpan.cs.pu.edu.tw/pub/CPAN</a></pre>
+
+<dt><a name="Thailand"
+>Thailand</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirrors.issp.co.th/cpan/" class="podlinkurl"
+>http://mirrors.issp.co.th/cpan/</a>
+                      <a href="ftp://mirrors.issp.co.th/cpan/" class="podlinkurl"
+>ftp://mirrors.issp.co.th/cpan/</a></pre>
+
+<dt><a name="Turkey"
+>Turkey</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.gazi.edu.tr/" class="podlinkurl"
+>http://cpan.gazi.edu.tr/</a>
+                      <a href="http://cpan.ulak.net.tr" class="podlinkurl"
+>http://cpan.ulak.net.tr</a>
+                      <a href="ftp://ftp.ulak.net.tr/pub/CPAN" class="podlinkurl"
+>ftp://ftp.ulak.net.tr/pub/CPAN</a></pre>
+
+<dt><a name='Viet'></a><a name="Viet_Nam"
+>Viet Nam</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirror-fpt-telecom.fpt.net/cpan/" class="podlinkurl"
+>http://mirror-fpt-telecom.fpt.net/cpan/</a>
+                      <a href="ftp://mirror-fpt-telecom.fpt.net/cpan/" class="podlinkurl"
+>ftp://mirror-fpt-telecom.fpt.net/cpan/</a></pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Central_America"
+>Central America</a></h2>
+
+<dl>
+<dt><a name='Costa'></a><a name="Costa_Rica"
+>Costa Rica</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirrors.ucr.ac.cr/CPAN/" class="podlinkurl"
+>http://mirrors.ucr.ac.cr/CPAN/</a>
+                      <a href="ftp://mirrors.ucr.ac.cr/CPAN/" class="podlinkurl"
+>ftp://mirrors.ucr.ac.cr/CPAN/</a></pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Europe"
+>Europe</a></h2>
+
+<dl>
+<dt><a name="Austria"
+>Austria</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.inode.at/" class="podlinkurl"
+>http://cpan.inode.at/</a>
+                      <a href="ftp://cpan.inode.at" class="podlinkurl"
+>ftp://cpan.inode.at</a>
+                      <a href="http://gd.tuwien.ac.at/languages/perl/CPAN/" class="podlinkurl"
+>http://gd.tuwien.ac.at/languages/perl/CPAN/</a>
+                      <a href="ftp://gd.tuwien.ac.at/pub/CPAN/" class="podlinkurl"
+>ftp://gd.tuwien.ac.at/pub/CPAN/</a></pre>
+
+<dt><a name="Belgium"
+>Belgium</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://ftp.belnet.be/mirror/ftp.cpan.org/" class="podlinkurl"
+>http://ftp.belnet.be/mirror/ftp.cpan.org/</a>
+                      <a href="ftp://ftp.belnet.be/mirror/ftp.cpan.org/" class="podlinkurl"
+>ftp://ftp.belnet.be/mirror/ftp.cpan.org/</a>
+                      <a href="http://ftp.easynet.be/pub/CPAN/" class="podlinkurl"
+>http://ftp.easynet.be/pub/CPAN/</a>
+                      <a href="http://cpan.weepee.org/" class="podlinkurl"
+>http://cpan.weepee.org/</a>
+                      <a href="http://cpan.fluoline.net/" class="podlinkurl"
+>http://cpan.fluoline.net/</a></pre>
+
+<dt><a name='Bosnia'></a><a name="Bosnia_and_Herzegovina"
+>Bosnia and Herzegovina</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.blic.net/" class="podlinkurl"
+>http://cpan.blic.net/</a></pre>
+
+<dt><a name="Bulgaria"
+>Bulgaria</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.cbox.biz/" class="podlinkurl"
+>http://cpan.cbox.biz/</a>
+                      <a href="ftp://cpan.cbox.biz/cpan/" class="podlinkurl"
+>ftp://cpan.cbox.biz/cpan/</a>
+                      <a href="http://cpan.digsys.bg/" class="podlinkurl"
+>http://cpan.digsys.bg/</a>
+                      <a href="ftp://ftp.digsys.bg/pub/CPAN" class="podlinkurl"
+>ftp://ftp.digsys.bg/pub/CPAN</a></pre>
+
+<dt><a name="Croatia"
+>Croatia</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://ftp.carnet.hr/pub/CPAN/" class="podlinkurl"
+>http://ftp.carnet.hr/pub/CPAN/</a>
+                      <a href="ftp://ftp.carnet.hr/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.carnet.hr/pub/CPAN/</a></pre>
+
+<dt><a name='Czech'></a><a name="Czech_Republic"
+>Czech Republic</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="ftp://ftp.fi.muni.cz/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.fi.muni.cz/pub/CPAN/</a>
+                      <a href="http://archive.cpan.cz/" class="podlinkurl"
+>http://archive.cpan.cz/</a></pre>
+
+<dt><a name="Denmark"
+>Denmark</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirrors.dotsrc.org/cpan" class="podlinkurl"
+>http://mirrors.dotsrc.org/cpan</a>
+                      <a href="ftp://mirrors.dotsrc.org/cpan/" class="podlinkurl"
+>ftp://mirrors.dotsrc.org/cpan/</a>
+                      <a href="http://www.cpan.dk/" class="podlinkurl"
+>http://www.cpan.dk/</a>
+                      <a href="http://mirror.uni-c.dk/pub/CPAN/" class="podlinkurl"
+>http://mirror.uni-c.dk/pub/CPAN/</a></pre>
+
+<dt><a name="Finland"
+>Finland</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="ftp://ftp.funet.fi/pub/languages/perl/CPAN/" class="podlinkurl"
+>ftp://ftp.funet.fi/pub/languages/perl/CPAN/</a>
+                      <a href="http://mirror.eunet.fi/CPAN" class="podlinkurl"
+>http://mirror.eunet.fi/CPAN</a></pre>
+
+<dt><a name="France"
+>France</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.enstimac.fr/" class="podlinkurl"
+>http://cpan.enstimac.fr/</a>
+                      <a href="ftp://ftp.inria.fr/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.inria.fr/pub/CPAN/</a>
+                      <a href="http://distrib-coffee.ipsl.jussieu.fr/pub/mirrors/cpan/" class="podlinkurl"
+>http://distrib-coffee.ipsl.jussieu.fr/pub/mirrors/cpan/</a>
+                      <a href="ftp://distrib-coffee.ipsl.jussieu.fr/pub/mirrors/cpan/" class="podlinkurl"
+>ftp://distrib-coffee.ipsl.jussieu.fr/pub/mirrors/cpan/</a>
+                      <a href="ftp://ftp.lip6.fr/pub/perl/CPAN/" class="podlinkurl"
+>ftp://ftp.lip6.fr/pub/perl/CPAN/</a>
+                      <a href="http://mir2.ovh.net/ftp.cpan.org" class="podlinkurl"
+>http://mir2.ovh.net/ftp.cpan.org</a>
+                      <a href="ftp://mir1.ovh.net/ftp.cpan.org" class="podlinkurl"
+>ftp://mir1.ovh.net/ftp.cpan.org</a>
+                      <a href="http://cpan.miroir-francais.fr/" class="podlinkurl"
+>http://cpan.miroir-francais.fr/</a>
+                      <a href="ftp://miroir-francais.fr/pub/cpan/" class="podlinkurl"
+>ftp://miroir-francais.fr/pub/cpan/</a>
+                      <a href="ftp://ftp.oleane.net/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.oleane.net/pub/CPAN/</a>
+                      <a href="http://ftp.crihan.fr/mirrors/ftp.cpan.org/" class="podlinkurl"
+>http://ftp.crihan.fr/mirrors/ftp.cpan.org/</a>
+                      <a href="ftp://ftp.crihan.fr/mirrors/ftp.cpan.org/" class="podlinkurl"
+>ftp://ftp.crihan.fr/mirrors/ftp.cpan.org/</a>
+                      <a href="http://ftp.u-strasbg.fr/CPAN" class="podlinkurl"
+>http://ftp.u-strasbg.fr/CPAN</a>
+                      <a href="ftp://ftp.u-strasbg.fr/CPAN" class="podlinkurl"
+>ftp://ftp.u-strasbg.fr/CPAN</a>
+                      <a href="http://cpan.cict.fr/" class="podlinkurl"
+>http://cpan.cict.fr/</a>
+                      <a href="ftp://cpan.cict.fr/pub/CPAN/" class="podlinkurl"
+>ftp://cpan.cict.fr/pub/CPAN/</a></pre>
+
+<dt><a name="Germany"
+>Germany</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="ftp://ftp.fu-berlin.de/unix/languages/perl/" class="podlinkurl"
+>ftp://ftp.fu-berlin.de/unix/languages/perl/</a>
+                      <a href="http://mirrors.softliste.de/cpan/" class="podlinkurl"
+>http://mirrors.softliste.de/cpan/</a>
+                      <a href="ftp://ftp.rub.de/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.rub.de/pub/CPAN/</a>
+                      <a href="http://www.planet-elektronik.de/CPAN/" class="podlinkurl"
+>http://www.planet-elektronik.de/CPAN/</a>
+                      <a href="http://ftp.hosteurope.de/pub/CPAN/" class="podlinkurl"
+>http://ftp.hosteurope.de/pub/CPAN/</a>
+                      <a href="ftp://ftp.hosteurope.de/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.hosteurope.de/pub/CPAN/</a>
+                      <a href="http://www.mirrorspace.org/cpan/" class="podlinkurl"
+>http://www.mirrorspace.org/cpan/</a>
+                      <a href="http://mirror.netcologne.de/cpan/" class="podlinkurl"
+>http://mirror.netcologne.de/cpan/</a>
+                      <a href="ftp://mirror.netcologne.de/cpan/" class="podlinkurl"
+>ftp://mirror.netcologne.de/cpan/</a>
+                      <a href="ftp://ftp.freenet.de/pub/ftp.cpan.org/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.freenet.de/pub/ftp.cpan.org/pub/CPAN/</a>
+                      <a href="http://ftp-stud.hs-esslingen.de/pub/Mirrors/CPAN/" class="podlinkurl"
+>http://ftp-stud.hs-esslingen.de/pub/Mirrors/CPAN/</a>
+                      <a href="ftp://ftp-stud.hs-esslingen.de/pub/Mirrors/CPAN/" class="podlinkurl"
+>ftp://ftp-stud.hs-esslingen.de/pub/Mirrors/CPAN/</a>
+                      <a href="http://mirrors.zerg.biz/cpan/" class="podlinkurl"
+>http://mirrors.zerg.biz/cpan/</a>
+                      <a href="http://ftp.gwdg.de/pub/languages/perl/CPAN/" class="podlinkurl"
+>http://ftp.gwdg.de/pub/languages/perl/CPAN/</a>
+                      <a href="ftp://ftp.gwdg.de/pub/languages/perl/CPAN/" class="podlinkurl"
+>ftp://ftp.gwdg.de/pub/languages/perl/CPAN/</a>
+                      <a href="http://dl.ambiweb.de/mirrors/ftp.cpan.org/" class="podlinkurl"
+>http://dl.ambiweb.de/mirrors/ftp.cpan.org/</a>
+                      <a href="http://cpan.mirror.clusters.kg/" class="podlinkurl"
+>http://cpan.mirror.clusters.kg/</a>
+                      <a href="http://cpan.mirror.iphh.net/" class="podlinkurl"
+>http://cpan.mirror.iphh.net/</a>
+                      <a href="ftp://cpan.mirror.iphh.net/pub/CPAN/" class="podlinkurl"
+>ftp://cpan.mirror.iphh.net/pub/CPAN/</a>
+                      <a href="http://cpan.mirroring.de/" class="podlinkurl"
+>http://cpan.mirroring.de/</a>
+                      <a href="http://mirror.informatik.uni-mannheim.de/pub/mirrors/CPAN/" class="podlinkurl"
+>http://mirror.informatik.uni-mannheim.de/pub/mirrors/CPAN/</a>
+                      <a href="ftp://mirror.informatik.uni-mannheim.de/pub/mirrors/CPAN/" class="podlinkurl"
+>ftp://mirror.informatik.uni-mannheim.de/pub/mirrors/CPAN/</a>
+                      <a href="http://ftp.cw.net/pub/CPAN/" class="podlinkurl"
+>http://ftp.cw.net/pub/CPAN/</a>
+                      <a href="ftp://ftp.cw.net/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.cw.net/pub/CPAN/</a>
+                      <a href="http://cpan.cpantesters.org/" class="podlinkurl"
+>http://cpan.cpantesters.org/</a>
+                      <a href="ftp://cpan.cpantesters.org/CPAN/" class="podlinkurl"
+>ftp://cpan.cpantesters.org/CPAN/</a>
+                      <a href="http://cpan.mirrored.de/" class="podlinkurl"
+>http://cpan.mirrored.de/</a>
+                      <a href="ftp://mirror.petamem.com/CPAN/" class="podlinkurl"
+>ftp://mirror.petamem.com/CPAN/</a>
+                      <a href="http://cpan.noris.de/" class="podlinkurl"
+>http://cpan.noris.de/</a>
+                      <a href="ftp://cpan.noris.de/pub/CPAN/" class="podlinkurl"
+>ftp://cpan.noris.de/pub/CPAN/</a>
+                      <a href="ftp://ftp.mpi-sb.mpg.de/pub/perl/CPAN/" class="podlinkurl"
+>ftp://ftp.mpi-sb.mpg.de/pub/perl/CPAN/</a>
+                      <a href="ftp://ftp.gmd.de/mirrors/CPAN/" class="podlinkurl"
+>ftp://ftp.gmd.de/mirrors/CPAN/</a></pre>
+
+<dt><a name="Greece"
+>Greece</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="ftp://ftp.forthnet.gr/pub/languages/perl/CPAN" class="podlinkurl"
+>ftp://ftp.forthnet.gr/pub/languages/perl/CPAN</a>
+                      <a href="ftp://ftp.ntua.gr/pub/lang/perl/" class="podlinkurl"
+>ftp://ftp.ntua.gr/pub/lang/perl/</a>
+                      <a href="http://cpan.cc.uoc.gr/" class="podlinkurl"
+>http://cpan.cc.uoc.gr/</a>
+                      <a href="ftp://ftp.cc.uoc.gr/mirrors/CPAN/" class="podlinkurl"
+>ftp://ftp.cc.uoc.gr/mirrors/CPAN/</a></pre>
+
+<dt><a name="Hungary"
+>Hungary</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.mirrors.enexis.hu/" class="podlinkurl"
+>http://cpan.mirrors.enexis.hu/</a>
+                      <a href="ftp://cpan.mirrors.enexis.hu/mirrors/cpan/" class="podlinkurl"
+>ftp://cpan.mirrors.enexis.hu/mirrors/cpan/</a>
+                      <a href="http://cpan.hu/" class="podlinkurl"
+>http://cpan.hu/</a></pre>
+
+<dt><a name="Iceland"
+>Iceland</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://ftp.rhnet.is/pub/CPAN/" class="podlinkurl"
+>http://ftp.rhnet.is/pub/CPAN/</a>
+                      <a href="ftp://ftp.rhnet.is/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.rhnet.is/pub/CPAN/</a></pre>
+
+<dt><a name="Ireland"
+>Ireland</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://ftp.esat.net/pub/languages/perl/CPAN/" class="podlinkurl"
+>http://ftp.esat.net/pub/languages/perl/CPAN/</a>
+                      <a href="ftp://ftp.esat.net/pub/languages/perl/CPAN/" class="podlinkurl"
+>ftp://ftp.esat.net/pub/languages/perl/CPAN/</a>
+                      <a href="http://ftp.heanet.ie/mirrors/ftp.perl.org/pub/CPAN" class="podlinkurl"
+>http://ftp.heanet.ie/mirrors/ftp.perl.org/pub/CPAN</a>
+                      <a href="ftp://ftp.heanet.ie/mirrors/ftp.perl.org/pub/CPAN" class="podlinkurl"
+>ftp://ftp.heanet.ie/mirrors/ftp.perl.org/pub/CPAN</a></pre>
+
+<dt><a name="Italy"
+>Italy</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://bo.mirror.garr.it/mirrors/CPAN/" class="podlinkurl"
+>http://bo.mirror.garr.it/mirrors/CPAN/</a>
+                      <a href="http://cpan.panu.it/" class="podlinkurl"
+>http://cpan.panu.it/</a>
+                      <a href="ftp://ftp.panu.it/pub/mirrors/perl/CPAN/" class="podlinkurl"
+>ftp://ftp.panu.it/pub/mirrors/perl/CPAN/</a>
+                      <a href="http://cpan.fastbull.org/" class="podlinkurl"
+>http://cpan.fastbull.org/</a></pre>
+
+<dt><a name="Latvia"
+>Latvia</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://kvin.lv/pub/CPAN/" class="podlinkurl"
+>http://kvin.lv/pub/CPAN/</a></pre>
+
+<dt><a name="Lithuania"
+>Lithuania</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://ftp.litnet.lt/pub/CPAN/" class="podlinkurl"
+>http://ftp.litnet.lt/pub/CPAN/</a>
+                      <a href="ftp://ftp.litnet.lt/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.litnet.lt/pub/CPAN/</a></pre>
+
+<dt><a name="Malta"
+>Malta</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.waldonet.net.mt/" class="podlinkurl"
+>http://cpan.waldonet.net.mt/</a></pre>
+
+<dt><a name="Netherlands"
+>Netherlands</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="ftp://ftp.quicknet.nl/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.quicknet.nl/pub/CPAN/</a>
+                      <a href="http://mirror.hostfuss.com/CPAN/" class="podlinkurl"
+>http://mirror.hostfuss.com/CPAN/</a>
+                      <a href="ftp://mirror.hostfuss.com/CPAN/" class="podlinkurl"
+>ftp://mirror.hostfuss.com/CPAN/</a>
+                      <a href="http://mirrors3.kernel.org/cpan/" class="podlinkurl"
+>http://mirrors3.kernel.org/cpan/</a>
+                      <a href="ftp://mirrors3.kernel.org/pub/CPAN/" class="podlinkurl"
+>ftp://mirrors3.kernel.org/pub/CPAN/</a>
+                      <a href="http://cpan.osmirror.nl/" class="podlinkurl"
+>http://cpan.osmirror.nl/</a>
+                      <a href="ftp://ftp.osmirror.nl/pub/cpan/" class="podlinkurl"
+>ftp://ftp.osmirror.nl/pub/cpan/</a>
+                      <a href="http://cpan.mirror.versatel.nl/" class="podlinkurl"
+>http://cpan.mirror.versatel.nl/</a>
+                      <a href="ftp://ftp.mirror.versatel.nl/cpan/" class="podlinkurl"
+>ftp://ftp.mirror.versatel.nl/cpan/</a>
+                      <a href="ftp://download.xs4all.nl/pub/mirror/CPAN/" class="podlinkurl"
+>ftp://download.xs4all.nl/pub/mirror/CPAN/</a>
+                      <a href="http://mirror.leaseweb.com/CPAN/" class="podlinkurl"
+>http://mirror.leaseweb.com/CPAN/</a>
+                      <a href="ftp://mirror.leaseweb.com/CPAN/" class="podlinkurl"
+>ftp://mirror.leaseweb.com/CPAN/</a>
+                      <a href="ftp://ftp.cpan.nl/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.cpan.nl/pub/CPAN/</a>
+                      <a href="http://archive.cs.uu.nl/mirror/CPAN/" class="podlinkurl"
+>http://archive.cs.uu.nl/mirror/CPAN/</a>
+                      <a href="ftp://ftp.cs.uu.nl/mirror/CPAN/" class="podlinkurl"
+>ftp://ftp.cs.uu.nl/mirror/CPAN/</a>
+                      <a href="http://https://luxitude.net/cpan/" class="podlinkurl"
+>http://https://luxitude.net/cpan/</a></pre>
+
+<dt><a name="Norway"
+>Norway</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="ftp://ftp.uninett.no/pub/languages/perl/CPAN" class="podlinkurl"
+>ftp://ftp.uninett.no/pub/languages/perl/CPAN</a>
+                      <a href="ftp://ftp.uit.no/pub/languages/perl/cpan/" class="podlinkurl"
+>ftp://ftp.uit.no/pub/languages/perl/cpan/</a></pre>
+
+<dt><a name="Poland"
+>Poland</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirror.icis.pcz.pl/CPAN/" class="podlinkurl"
+>http://mirror.icis.pcz.pl/CPAN/</a>
+                      <a href="ftp://mirror.icis.pcz.pl/CPAN/" class="podlinkurl"
+>ftp://mirror.icis.pcz.pl/CPAN/</a>
+                      <a href="http://piotrkosoft.net/pub/mirrors/CPAN/" class="podlinkurl"
+>http://piotrkosoft.net/pub/mirrors/CPAN/</a>
+                      <a href="ftp://ftp.piotrkosoft.net/pub/mirrors/CPAN/" class="podlinkurl"
+>ftp://ftp.piotrkosoft.net/pub/mirrors/CPAN/</a>
+                      <a href="http://ftp.man.poznan.pl/pub/CPAN" class="podlinkurl"
+>http://ftp.man.poznan.pl/pub/CPAN</a>
+                      <a href="ftp://ftp.man.poznan.pl/pub/CPAN" class="podlinkurl"
+>ftp://ftp.man.poznan.pl/pub/CPAN</a>
+                      <a href="ftp://sunsite.icm.edu.pl/pub/CPAN/" class="podlinkurl"
+>ftp://sunsite.icm.edu.pl/pub/CPAN/</a>
+                      <a href="ftp://ftp.tpnet.pl/d4/CPAN/" class="podlinkurl"
+>ftp://ftp.tpnet.pl/d4/CPAN/</a></pre>
+
+<dt><a name="Portugal"
+>Portugal</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.dei.uc.pt/" class="podlinkurl"
+>http://cpan.dei.uc.pt/</a>
+                      <a href="ftp://ftp.dei.uc.pt/pub/CPAN" class="podlinkurl"
+>ftp://ftp.dei.uc.pt/pub/CPAN</a>
+                      <a href="ftp://ftp.ist.utl.pt/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.ist.utl.pt/pub/CPAN/</a>
+                      <a href="http://cpan.perl.pt/" class="podlinkurl"
+>http://cpan.perl.pt/</a>
+                      <a href="http://cpan.ip.pt/" class="podlinkurl"
+>http://cpan.ip.pt/</a>
+                      <a href="ftp://cpan.ip.pt/pub/cpan/" class="podlinkurl"
+>ftp://cpan.ip.pt/pub/cpan/</a>
+                      <a href="http://mirrors.nfsi.pt/CPAN/" class="podlinkurl"
+>http://mirrors.nfsi.pt/CPAN/</a>
+                      <a href="ftp://mirrors.nfsi.pt/pub/CPAN/" class="podlinkurl"
+>ftp://mirrors.nfsi.pt/pub/CPAN/</a>
+                      <a href="http://cpan.dcc.fc.up.pt/" class="podlinkurl"
+>http://cpan.dcc.fc.up.pt/</a></pre>
+
+<dt><a name="Romania"
+>Romania</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://ftp.astral.ro/pub/CPAN/" class="podlinkurl"
+>http://ftp.astral.ro/pub/CPAN/</a>
+                      <a href="ftp://ftp.astral.ro/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.astral.ro/pub/CPAN/</a>
+                      <a href="ftp://ftp.lug.ro/CPAN" class="podlinkurl"
+>ftp://ftp.lug.ro/CPAN</a>
+                      <a href="http://mirrors.xservers.ro/CPAN/" class="podlinkurl"
+>http://mirrors.xservers.ro/CPAN/</a>
+                      <a href="http://mirrors.hostingromania.ro/ftp.cpan.org/" class="podlinkurl"
+>http://mirrors.hostingromania.ro/ftp.cpan.org/</a>
+                      <a href="ftp://ftp.hostingromania.ro/mirrors/ftp.cpan.org/" class="podlinkurl"
+>ftp://ftp.hostingromania.ro/mirrors/ftp.cpan.org/</a>
+                      <a href="ftp://ftp.iasi.roedu.net/pub/mirrors/ftp.cpan.org/" class="podlinkurl"
+>ftp://ftp.iasi.roedu.net/pub/mirrors/ftp.cpan.org/</a>
+                      <a href="ftp://ftp.ambra.ro/pub/CPAN" class="podlinkurl"
+>ftp://ftp.ambra.ro/pub/CPAN</a></pre>
+
+<dt><a name="Russia"
+>Russia</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="ftp://ftp.aha.ru/CPAN/" class="podlinkurl"
+>ftp://ftp.aha.ru/CPAN/</a>
+                      <a href="http://cpan.rinet.ru/" class="podlinkurl"
+>http://cpan.rinet.ru/</a>
+                      <a href="ftp://cpan.rinet.ru/pub/mirror/CPAN/" class="podlinkurl"
+>ftp://cpan.rinet.ru/pub/mirror/CPAN/</a>
+                      <a href="ftp://ftp.SpringDaemons.com/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.SpringDaemons.com/pub/CPAN/</a>
+                      <a href="http://cpan.nx1.ru/" class="podlinkurl"
+>http://cpan.nx1.ru/</a>
+                      <a href="ftp://cpan.nx1.ru/" class="podlinkurl"
+>ftp://cpan.nx1.ru/</a>
+                      <a href="http://mirror.rol.ru/CPAN/" class="podlinkurl"
+>http://mirror.rol.ru/CPAN/</a>
+                      <a href="http://ftp.silvernet.ru/CPAN/" class="podlinkurl"
+>http://ftp.silvernet.ru/CPAN/</a>
+                      <a href="http://ftp.spbu.ru/CPAN/" class="podlinkurl"
+>http://ftp.spbu.ru/CPAN/</a>
+                      <a href="ftp://ftp.spbu.ru/CPAN/" class="podlinkurl"
+>ftp://ftp.spbu.ru/CPAN/</a></pre>
+
+<dt><a name="Slovakia"
+>Slovakia</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.fyxm.net/" class="podlinkurl"
+>http://cpan.fyxm.net/</a></pre>
+
+<dt><a name="Slovenia"
+>Slovenia</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://www.klevze.si/cpan" class="podlinkurl"
+>http://www.klevze.si/cpan</a></pre>
+
+<dt><a name="Spain"
+>Spain</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://osl.ugr.es/CPAN/" class="podlinkurl"
+>http://osl.ugr.es/CPAN/</a>
+                      <a href="ftp://ftp.rediris.es/mirror/CPAN/" class="podlinkurl"
+>ftp://ftp.rediris.es/mirror/CPAN/</a>
+                      <a href="http://ftp.gui.uva.es/sites/cpan.org/" class="podlinkurl"
+>http://ftp.gui.uva.es/sites/cpan.org/</a>
+                      <a href="ftp://ftp.gui.uva.es/sites/cpan.org/" class="podlinkurl"
+>ftp://ftp.gui.uva.es/sites/cpan.org/</a></pre>
+
+<dt><a name="Sweden"
+>Sweden</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirrors4.kernel.org/cpan/" class="podlinkurl"
+>http://mirrors4.kernel.org/cpan/</a>
+                      <a href="ftp://mirrors4.kernel.org/pub/CPAN/" class="podlinkurl"
+>ftp://mirrors4.kernel.org/pub/CPAN/</a></pre>
+
+<dt><a name="Switzerland"
+>Switzerland</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.mirror.solnet.ch/" class="podlinkurl"
+>http://cpan.mirror.solnet.ch/</a>
+                      <a href="ftp://ftp.solnet.ch/mirror/CPAN/" class="podlinkurl"
+>ftp://ftp.solnet.ch/mirror/CPAN/</a>
+                      <a href="http://mirror.switch.ch/ftp/mirror/CPAN/" class="podlinkurl"
+>http://mirror.switch.ch/ftp/mirror/CPAN/</a>
+                      <a href="ftp://mirror.switch.ch/mirror/CPAN/" class="podlinkurl"
+>ftp://mirror.switch.ch/mirror/CPAN/</a></pre>
+
+<dt><a name="Ukraine"
+>Ukraine</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.makeperl.org/" class="podlinkurl"
+>http://cpan.makeperl.org/</a>
+                      <a href="ftp://cpan.makeperl.org/pub/CPAN" class="podlinkurl"
+>ftp://cpan.makeperl.org/pub/CPAN</a>
+                      <a href="http://cpan.org.ua/" class="podlinkurl"
+>http://cpan.org.ua/</a>
+                      <a href="http://no-more.kiev.ua/CPAN/" class="podlinkurl"
+>http://no-more.kiev.ua/CPAN/</a>
+                      <a href="ftp://no-more.kiev.ua/pub/CPAN/" class="podlinkurl"
+>ftp://no-more.kiev.ua/pub/CPAN/</a>
+                      <a href="http://cpan.gafol.net/" class="podlinkurl"
+>http://cpan.gafol.net/</a>
+                      <a href="ftp://ftp.gafol.net/pub/cpan/" class="podlinkurl"
+>ftp://ftp.gafol.net/pub/cpan/</a></pre>
+
+<dt><a name='United'></a><a name="United_Kingdom"
+>United Kingdom</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://www.mirrorservice.org/sites/ftp.funet.fi/pub/languages/perl/CPAN/" class="podlinkurl"
+>http://www.mirrorservice.org/sites/ftp.funet.fi/pub/languages/perl/CPAN/</a>
+                      <a href="ftp://ftp.mirrorservice.org/sites/ftp.funet.fi/pub/languages/perl/CPAN/" class="podlinkurl"
+>ftp://ftp.mirrorservice.org/sites/ftp.funet.fi/pub/languages/perl/CPAN/</a>
+                      <a href="http://mirror.tje.me.uk/pub/mirrors/ftp.cpan.org/" class="podlinkurl"
+>http://mirror.tje.me.uk/pub/mirrors/ftp.cpan.org/</a>
+                      <a href="ftp://mirror.tje.me.uk/pub/mirrors/ftp.cpan.org/" class="podlinkurl"
+>ftp://mirror.tje.me.uk/pub/mirrors/ftp.cpan.org/</a>
+                      <a href="http://www.mirror.8086.net/sites/CPAN/" class="podlinkurl"
+>http://www.mirror.8086.net/sites/CPAN/</a>
+                      <a href="ftp://ftp.mirror.8086.net/sites/CPAN/" class="podlinkurl"
+>ftp://ftp.mirror.8086.net/sites/CPAN/</a>
+                      <a href="http://cpan.mirror.anlx.net/" class="podlinkurl"
+>http://cpan.mirror.anlx.net/</a>
+                      <a href="ftp://ftp.mirror.anlx.net/CPAN/" class="podlinkurl"
+>ftp://ftp.mirror.anlx.net/CPAN/</a>
+                      <a href="http://mirror.bytemark.co.uk/CPAN/" class="podlinkurl"
+>http://mirror.bytemark.co.uk/CPAN/</a>
+                      <a href="ftp://mirror.bytemark.co.uk/CPAN/" class="podlinkurl"
+>ftp://mirror.bytemark.co.uk/CPAN/</a>
+                      <a href="http://cpan.etla.org/" class="podlinkurl"
+>http://cpan.etla.org/</a>
+                      <a href="ftp://cpan.etla.org/pub/CPAN" class="podlinkurl"
+>ftp://cpan.etla.org/pub/CPAN</a>
+                      <a href="ftp://ftp.demon.co.uk/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.demon.co.uk/pub/CPAN/</a>
+                      <a href="http://mirror.sov.uk.goscomb.net/CPAN/" class="podlinkurl"
+>http://mirror.sov.uk.goscomb.net/CPAN/</a>
+                      <a href="ftp://mirror.sov.uk.goscomb.net/pub/CPAN/" class="podlinkurl"
+>ftp://mirror.sov.uk.goscomb.net/pub/CPAN/</a>
+                      <a href="http://ftp.plig.net/pub/CPAN/" class="podlinkurl"
+>http://ftp.plig.net/pub/CPAN/</a>
+                      <a href="ftp://ftp.plig.net/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.plig.net/pub/CPAN/</a>
+                      <a href="http://ftp.ticklers.org/pub/CPAN/" class="podlinkurl"
+>http://ftp.ticklers.org/pub/CPAN/</a>
+                      <a href="ftp://ftp.ticklers.org/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.ticklers.org/pub/CPAN/</a>
+                      <a href="http://cpan.mirrors.uk2.net/" class="podlinkurl"
+>http://cpan.mirrors.uk2.net/</a>
+                      <a href="ftp://mirrors.uk2.net/pub/CPAN/" class="podlinkurl"
+>ftp://mirrors.uk2.net/pub/CPAN/</a>
+                      <a href="http://mirror.ox.ac.uk/sites/www.cpan.org/" class="podlinkurl"
+>http://mirror.ox.ac.uk/sites/www.cpan.org/</a>
+                      <a href="ftp://mirror.ox.ac.uk/sites/www.cpan.org/" class="podlinkurl"
+>ftp://mirror.ox.ac.uk/sites/www.cpan.org/</a></pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="North_America"
+>North America</a></h2>
+
+<dl>
+<dt><a name="Bahamas"
+>Bahamas</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://www.securehost.com/mirror/CPAN/" class="podlinkurl"
+>http://www.securehost.com/mirror/CPAN/</a></pre>
+
+<dt><a name="Canada"
+>Canada</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.justanotherperlhacker.com/pub/CPAN/" class="podlinkurl"
+>http://cpan.justanotherperlhacker.com/pub/CPAN/</a>
+                      <a href="ftp://cpan.justanotherperlhacker.com/pub/CPAN/" class="podlinkurl"
+>ftp://cpan.justanotherperlhacker.com/pub/CPAN/</a>
+                      <a href="http://cpan.arcticnetwork.ca" class="podlinkurl"
+>http://cpan.arcticnetwork.ca</a>
+                      <a href="ftp://mirror.arcticnetwork.ca/pub/CPAN" class="podlinkurl"
+>ftp://mirror.arcticnetwork.ca/pub/CPAN</a>
+                      <a href="http://cpan.sunsite.ualberta.ca/" class="podlinkurl"
+>http://cpan.sunsite.ualberta.ca/</a>
+                      <a href="ftp://cpan.sunsite.ualberta.ca/pub/CPAN/" class="podlinkurl"
+>ftp://cpan.sunsite.ualberta.ca/pub/CPAN/</a>
+                      <a href="http://theoryx5.uwinnipeg.ca/pub/CPAN/" class="podlinkurl"
+>http://theoryx5.uwinnipeg.ca/pub/CPAN/</a>
+                      <a href="ftp://theoryx5.uwinnipeg.ca/pub/CPAN/" class="podlinkurl"
+>ftp://theoryx5.uwinnipeg.ca/pub/CPAN/</a>
+                      <a href="http://arwen.cs.dal.ca/mirror/CPAN/" class="podlinkurl"
+>http://arwen.cs.dal.ca/mirror/CPAN/</a>
+                      <a href="ftp://arwen.cs.dal.ca/pub/mirror/CPAN/" class="podlinkurl"
+>ftp://arwen.cs.dal.ca/pub/mirror/CPAN/</a>
+                      <a href="http://CPAN.mirror.rafal.ca/" class="podlinkurl"
+>http://CPAN.mirror.rafal.ca/</a>
+                      <a href="ftp://CPAN.mirror.rafal.ca/pub/CPAN/" class="podlinkurl"
+>ftp://CPAN.mirror.rafal.ca/pub/CPAN/</a>
+                      <a href="ftp://ftp.nrc.ca/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.nrc.ca/pub/CPAN/</a>
+                      <a href="http://mirror.csclub.uwaterloo.ca/pub/CPAN/" class="podlinkurl"
+>http://mirror.csclub.uwaterloo.ca/pub/CPAN/</a>
+                      <a href="ftp://mirror.csclub.uwaterloo.ca/pub/CPAN/" class="podlinkurl"
+>ftp://mirror.csclub.uwaterloo.ca/pub/CPAN/</a></pre>
+
+<dt><a name="Mexico"
+>Mexico</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://www.msg.com.mx/CPAN/" class="podlinkurl"
+>http://www.msg.com.mx/CPAN/</a>
+                      <a href="ftp://ftp.msg.com.mx/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.msg.com.mx/pub/CPAN/</a></pre>
+
+<dt><a name='United'></a><a name="United_States"
+>United States</a></dt>
+
+<dd>
+<dl>
+<dt><a name="Alabama"
+>Alabama</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirror.hiwaay.net/CPAN/" class="podlinkurl"
+>http://mirror.hiwaay.net/CPAN/</a>
+                      <a href="ftp://mirror.hiwaay.net/CPAN/" class="podlinkurl"
+>ftp://mirror.hiwaay.net/CPAN/</a></pre>
+
+<dt><a name="California"
+>California</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.knowledgematters.net/" class="podlinkurl"
+>http://cpan.knowledgematters.net/</a>
+                      <a href="http://cpan.binkerton.com/" class="podlinkurl"
+>http://cpan.binkerton.com/</a>
+                      <a href="http://cpan.develooper.com/" class="podlinkurl"
+>http://cpan.develooper.com/</a>
+                      <a href="http://mirrors.gossamer-threads.com/CPAN" class="podlinkurl"
+>http://mirrors.gossamer-threads.com/CPAN</a>
+                      <a href="http://cpan.schatt.com/" class="podlinkurl"
+>http://cpan.schatt.com/</a>
+                      <a href="http://mirrors.kernel.org/cpan/" class="podlinkurl"
+>http://mirrors.kernel.org/cpan/</a>
+                      <a href="ftp://mirrors.kernel.org/pub/CPAN" class="podlinkurl"
+>ftp://mirrors.kernel.org/pub/CPAN</a>
+                      <a href="http://mirrors2.kernel.org/cpan/" class="podlinkurl"
+>http://mirrors2.kernel.org/cpan/</a>
+                      <a href="ftp://mirrors2.kernel.org/pub/CPAN/" class="podlinkurl"
+>ftp://mirrors2.kernel.org/pub/CPAN/</a>
+                      <a href="http://cpan.mirrors.redwire.net/" class="podlinkurl"
+>http://cpan.mirrors.redwire.net/</a>
+                      <a href="http://cpan.mirror.facebook.net/" class="podlinkurl"
+>http://cpan.mirror.facebook.net/</a>
+                      <a href="http://mirrors1.kernel.org/cpan/" class="podlinkurl"
+>http://mirrors1.kernel.org/cpan/</a>
+                      <a href="ftp://mirrors1.kernel.org/pub/CPAN/" class="podlinkurl"
+>ftp://mirrors1.kernel.org/pub/CPAN/</a>
+                      <a href="http://cpan-sj.viaverio.com/" class="podlinkurl"
+>http://cpan-sj.viaverio.com/</a>
+                      <a href="ftp://cpan-sj.viaverio.com/pub/CPAN/" class="podlinkurl"
+>ftp://cpan-sj.viaverio.com/pub/CPAN/</a>
+                      <a href="http://www.perl.com/CPAN/" class="podlinkurl"
+>http://www.perl.com/CPAN/</a>
+                      <a href="http://cpan.yahoo.com/" class="podlinkurl"
+>http://cpan.yahoo.com/</a></pre>
+
+<dt><a name="Florida"
+>Florida</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="ftp://ftp.cise.ufl.edu/pub/mirrors/CPAN/" class="podlinkurl"
+>ftp://ftp.cise.ufl.edu/pub/mirrors/CPAN/</a>
+                      <a href="http://mirror.atlantic.net/pub/CPAN/" class="podlinkurl"
+>http://mirror.atlantic.net/pub/CPAN/</a>
+                      <a href="ftp://mirror.atlantic.net/pub/CPAN/" class="podlinkurl"
+>ftp://mirror.atlantic.net/pub/CPAN/</a>
+                      <a href="http://mirror.candidhosting.com/pub/CPAN" class="podlinkurl"
+>http://mirror.candidhosting.com/pub/CPAN</a>
+                      <a href="ftp://mirror.candidhosting.com/pub/CPAN" class="podlinkurl"
+>ftp://mirror.candidhosting.com/pub/CPAN</a></pre>
+
+<dt><a name="Idaho"
+>Idaho</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirror.its.uidaho.edu/pub/cpan/" class="podlinkurl"
+>http://mirror.its.uidaho.edu/pub/cpan/</a>
+                      <a href="ftp://mirror.its.uidaho.edu/cpan/" class="podlinkurl"
+>ftp://mirror.its.uidaho.edu/cpan/</a></pre>
+
+<dt><a name="Illinois"
+>Illinois</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.mirrors.hoobly.com/" class="podlinkurl"
+>http://cpan.mirrors.hoobly.com/</a>
+                      <a href="http://cpan.uchicago.edu/pub/CPAN/" class="podlinkurl"
+>http://cpan.uchicago.edu/pub/CPAN/</a>
+                      <a href="ftp://cpan.uchicago.edu/pub/CPAN/" class="podlinkurl"
+>ftp://cpan.uchicago.edu/pub/CPAN/</a>
+                      <a href="http://mirrors.servercentral.net/CPAN/" class="podlinkurl"
+>http://mirrors.servercentral.net/CPAN/</a>
+                      <a href="http://www.stathy.com/CPAN/" class="podlinkurl"
+>http://www.stathy.com/CPAN/</a>
+                      <a href="ftp://www.stathy.com/CPAN/" class="podlinkurl"
+>ftp://www.stathy.com/CPAN/</a></pre>
+
+<dt><a name="Indiana"
+>Indiana</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="ftp://ftp.uwsg.iu.edu/pub/perl/CPAN/" class="podlinkurl"
+>ftp://ftp.uwsg.iu.edu/pub/perl/CPAN/</a>
+                      <a href="http://cpan.netnitco.net/" class="podlinkurl"
+>http://cpan.netnitco.net/</a>
+                      <a href="ftp://cpan.netnitco.net/pub/mirrors/CPAN/" class="podlinkurl"
+>ftp://cpan.netnitco.net/pub/mirrors/CPAN/</a>
+                      <a href="http://ftp.ndlug.nd.edu/pub/perl/" class="podlinkurl"
+>http://ftp.ndlug.nd.edu/pub/perl/</a>
+                      <a href="ftp://ftp.ndlug.nd.edu/pub/perl/" class="podlinkurl"
+>ftp://ftp.ndlug.nd.edu/pub/perl/</a>
+                      <a href="http://fx.saintjoe.edu/pub/CPAN" class="podlinkurl"
+>http://fx.saintjoe.edu/pub/CPAN</a></pre>
+
+<dt><a name="Massachusetts"
+>Massachusetts</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="ftp://ftp.ccs.neu.edu/net/mirrors/ftp.funet.fi/pub/languages/perl/CPAN/" class="podlinkurl"
+>ftp://ftp.ccs.neu.edu/net/mirrors/ftp.funet.fi/pub/languages/perl/CPAN/</a></pre>
+
+<dt><a name="Michigan"
+>Michigan</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://ftp.wayne.edu/cpan/" class="podlinkurl"
+>http://ftp.wayne.edu/cpan/</a>
+                      <a href="ftp://ftp.wayne.edu/cpan/" class="podlinkurl"
+>ftp://ftp.wayne.edu/cpan/</a></pre>
+
+<dt><a name="Minnesota"
+>Minnesota</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.msi.umn.edu/" class="podlinkurl"
+>http://cpan.msi.umn.edu/</a></pre>
+
+<dt><a name='New'></a><a name="New_Jersey"
+>New Jersey</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirror.datapipe.net/CPAN/" class="podlinkurl"
+>http://mirror.datapipe.net/CPAN/</a>
+                      <a href="ftp://mirror.datapipe.net/pub/CPAN/" class="podlinkurl"
+>ftp://mirror.datapipe.net/pub/CPAN/</a></pre>
+
+<dt><a name='New'></a><a name="New_York"
+>New York</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirrors.24-7-solutions.net/pub/CPAN/" class="podlinkurl"
+>http://mirrors.24-7-solutions.net/pub/CPAN/</a>
+                      <a href="ftp://mirrors.24-7-solutions.net/pub/CPAN/" class="podlinkurl"
+>ftp://mirrors.24-7-solutions.net/pub/CPAN/</a>
+                      <a href="http://mirror.cc.columbia.edu/pub/software/cpan/" class="podlinkurl"
+>http://mirror.cc.columbia.edu/pub/software/cpan/</a>
+                      <a href="ftp://mirror.cc.columbia.edu/pub/software/cpan/" class="podlinkurl"
+>ftp://mirror.cc.columbia.edu/pub/software/cpan/</a>
+                      <a href="http://cpan.belfry.net/" class="podlinkurl"
+>http://cpan.belfry.net/</a>
+                      <a href="http://cpan.erlbaum.net/" class="podlinkurl"
+>http://cpan.erlbaum.net/</a>
+                      <a href="ftp://cpan.erlbaum.net/CPAN/" class="podlinkurl"
+>ftp://cpan.erlbaum.net/CPAN/</a>
+                      <a href="http://cpan.hexten.net/" class="podlinkurl"
+>http://cpan.hexten.net/</a>
+                      <a href="ftp://cpan.hexten.net/" class="podlinkurl"
+>ftp://cpan.hexten.net/</a>
+                      <a href="http://ftp.fxcorporate.com/CPAN/" class="podlinkurl"
+>http://ftp.fxcorporate.com/CPAN/</a>
+                      <a href="ftp://ftp.fxcorporate.com/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.fxcorporate.com/pub/CPAN/</a>
+                      <a href="ftp://mirror.nyi.net/CPAN/" class="podlinkurl"
+>ftp://mirror.nyi.net/CPAN/</a>
+                      <a href="http://mirror.rit.edu/CPAN/" class="podlinkurl"
+>http://mirror.rit.edu/CPAN/</a>
+                      <a href="ftp://mirror.rit.edu/CPAN/" class="podlinkurl"
+>ftp://mirror.rit.edu/CPAN/</a></pre>
+
+<dt><a name='North'></a><a name="North_Carolina"
+>North Carolina</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://www.ibiblio.org/pub/mirrors/CPAN" class="podlinkurl"
+>http://www.ibiblio.org/pub/mirrors/CPAN</a>
+                      <a href="ftp://ftp.ncsu.edu/pub/mirror/CPAN/" class="podlinkurl"
+>ftp://ftp.ncsu.edu/pub/mirror/CPAN/</a></pre>
+
+<dt><a name="Oregon"
+>Oregon</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://ftp.osuosl.org/pub/CPAN/" class="podlinkurl"
+>http://ftp.osuosl.org/pub/CPAN/</a>
+                      <a href="ftp://ftp.osuosl.org/pub/CPAN/" class="podlinkurl"
+>ftp://ftp.osuosl.org/pub/CPAN/</a></pre>
+
+<dt><a name="Pennsylvania"
+>Pennsylvania</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://ftp.epix.net/CPAN/" class="podlinkurl"
+>http://ftp.epix.net/CPAN/</a>
+                      <a href="ftp://ftp.epix.net/pub/languages/perl/" class="podlinkurl"
+>ftp://ftp.epix.net/pub/languages/perl/</a>
+                      <a href="http://cpan.pair.com/" class="podlinkurl"
+>http://cpan.pair.com/</a>
+                      <a href="ftp://cpan.pair.com/pub/CPAN/" class="podlinkurl"
+>ftp://cpan.pair.com/pub/CPAN/</a></pre>
+
+<dt><a name='South'></a><a name="South_Carolina"
+>South Carolina</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.mirror.clemson.edu/" class="podlinkurl"
+>http://cpan.mirror.clemson.edu/</a></pre>
+
+<dt><a name="Tennessee"
+>Tennessee</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mira.sunsite.utk.edu/CPAN/" class="podlinkurl"
+>http://mira.sunsite.utk.edu/CPAN/</a></pre>
+
+<dt><a name="Texas"
+>Texas</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirror.uta.edu/CPAN" class="podlinkurl"
+>http://mirror.uta.edu/CPAN</a></pre>
+
+<dt><a name="Utah"
+>Utah</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.cs.utah.edu" class="podlinkurl"
+>http://cpan.cs.utah.edu</a>
+                      <a href="ftp://cpan.cs.utah.edu/pub/CPAN/" class="podlinkurl"
+>ftp://cpan.cs.utah.edu/pub/CPAN/</a>
+                      <a href="ftp://mirror.xmission.com/CPAN/" class="podlinkurl"
+>ftp://mirror.xmission.com/CPAN/</a></pre>
+
+<dt><a name="Virginia"
+>Virginia</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan-du.viaverio.com/" class="podlinkurl"
+>http://cpan-du.viaverio.com/</a>
+                      <a href="ftp://cpan-du.viaverio.com/pub/CPAN/" class="podlinkurl"
+>ftp://cpan-du.viaverio.com/pub/CPAN/</a>
+                      <a href="http://perl.secsup.org/" class="podlinkurl"
+>http://perl.secsup.org/</a>
+                      <a href="ftp://perl.secsup.org/pub/perl/" class="podlinkurl"
+>ftp://perl.secsup.org/pub/perl/</a>
+                      <a href="ftp://mirror.cogentco.com/pub/CPAN/" class="podlinkurl"
+>ftp://mirror.cogentco.com/pub/CPAN/</a></pre>
+
+<dt><a name="Washington"
+>Washington</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.llarian.net/" class="podlinkurl"
+>http://cpan.llarian.net/</a>
+                      <a href="ftp://cpan.llarian.net/pub/CPAN/" class="podlinkurl"
+>ftp://cpan.llarian.net/pub/CPAN/</a>
+                      <a href="ftp://ftp-mirror.internap.com/pub/CPAN/" class="podlinkurl"
+>ftp://ftp-mirror.internap.com/pub/CPAN/</a></pre>
+
+<dt><a name="Wisconsin"
+>Wisconsin</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.mirrors.tds.net" class="podlinkurl"
+>http://cpan.mirrors.tds.net</a>
+                      <a href="ftp://cpan.mirrors.tds.net/pub/CPAN" class="podlinkurl"
+>ftp://cpan.mirrors.tds.net/pub/CPAN</a>
+                      <a href="http://mirror.sit.wisc.edu/pub/CPAN/" class="podlinkurl"
+>http://mirror.sit.wisc.edu/pub/CPAN/</a>
+                      <a href="ftp://mirror.sit.wisc.edu/pub/CPAN/" class="podlinkurl"
+>ftp://mirror.sit.wisc.edu/pub/CPAN/</a></pre>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Oceania"
+>Oceania</a></h2>
+
+<dl>
+<dt><a name="Australia"
+>Australia</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://mirror.internode.on.net/pub/cpan/" class="podlinkurl"
+>http://mirror.internode.on.net/pub/cpan/</a>
+                      <a href="ftp://mirror.internode.on.net/pub/cpan/" class="podlinkurl"
+>ftp://mirror.internode.on.net/pub/cpan/</a>
+                      <a href="http://cpan.mirror.aussiehq.net.au/" class="podlinkurl"
+>http://cpan.mirror.aussiehq.net.au/</a>
+                      <a href="http://mirror.as24220.net/cpan/" class="podlinkurl"
+>http://mirror.as24220.net/cpan/</a>
+                      <a href="ftp://mirror.as24220.net/cpan/" class="podlinkurl"
+>ftp://mirror.as24220.net/cpan/</a></pre>
+
+<dt><a name='New'></a><a name="New_Zealand"
+>New Zealand</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="ftp://ftp.auckland.ac.nz/pub/perl/CPAN/" class="podlinkurl"
+>ftp://ftp.auckland.ac.nz/pub/perl/CPAN/</a>
+                      <a href="http://cpan.inspire.net.nz" class="podlinkurl"
+>http://cpan.inspire.net.nz</a>
+                      <a href="ftp://cpan.inspire.net.nz/cpan" class="podlinkurl"
+>ftp://cpan.inspire.net.nz/cpan</a>
+                      <a href="http://cpan.catalyst.net.nz/CPAN/" class="podlinkurl"
+>http://cpan.catalyst.net.nz/CPAN/</a>
+                      <a href="ftp://cpan.catalyst.net.nz/pub/CPAN/" class="podlinkurl"
+>ftp://cpan.catalyst.net.nz/pub/CPAN/</a></pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="South_America"
+>South America</a></h2>
+
+<dl>
+<dt><a name="Argentina"
+>Argentina</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.patan.com.ar/" class="podlinkurl"
+>http://cpan.patan.com.ar/</a>
+                      <a href="http://cpan.localhost.net.ar" class="podlinkurl"
+>http://cpan.localhost.net.ar</a>
+                      <a href="ftp://mirrors.localhost.net.ar/pub/mirrors/CPAN" class="podlinkurl"
+>ftp://mirrors.localhost.net.ar/pub/mirrors/CPAN</a></pre>
+
+<dt><a name="Brazil"
+>Brazil</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="ftp://cpan.pop-mg.com.br/pub/CPAN/" class="podlinkurl"
+>ftp://cpan.pop-mg.com.br/pub/CPAN/</a>
+                      <a href="http://ftp.pucpr.br/CPAN" class="podlinkurl"
+>http://ftp.pucpr.br/CPAN</a>
+                      <a href="ftp://ftp.pucpr.br/CPAN" class="podlinkurl"
+>ftp://ftp.pucpr.br/CPAN</a>
+                      <a href="http://cpan.kinghost.net/" class="podlinkurl"
+>http://cpan.kinghost.net/</a>
+                      <a href="ftp://ftp.linorg.usp.br/CPAN" class="podlinkurl"
+>ftp://ftp.linorg.usp.br/CPAN</a></pre>
+
+<dt><a name="Chile"
+>Chile</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://cpan.dcc.uchile.cl/" class="podlinkurl"
+>http://cpan.dcc.uchile.cl/</a>
+                      <a href="ftp://cpan.dcc.uchile.cl/pub/lang/cpan/" class="podlinkurl"
+>ftp://cpan.dcc.uchile.cl/pub/lang/cpan/</a></pre>
+
+<dt><a name="Colombia"
+>Colombia</a></dt>
+
+<dd>
+<pre class="sh_perl">                      <a href="http://www.laqee.unal.edu.co/CPAN/" class="podlinkurl"
+>http://www.laqee.unal.edu.co/CPAN/</a></pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="RSYNC_Mirrors"
+>RSYNC Mirrors</a></h2>
+
+<pre class="sh_perl">                      mirror.as24220.net::cpan
+                      cpan.inode.at::CPAN
+                      gd.tuwien.ac.at::CPAN
+                      ftp.belnet.be::packages/cpan
+                      rsync.linorg.usp.br::CPAN
+                      rsync.arcticnetwork.ca::CPAN
+                      CPAN.mirror.rafal.ca::CPAN
+                      mirror.csclub.uwaterloo.ca::CPAN
+                      theoryx5.uwinnipeg.ca::CPAN
+                      www.laqee.unal.edu.co::CPAN
+                      mirror.uni-c.dk::CPAN
+                      rsync.nic.funet.fi::CPAN
+                      <a href="rsync://distrib-coffee.ipsl.jussieu.fr/pub/mirrors/cpan/" class="podlinkurl"
+>rsync://distrib-coffee.ipsl.jussieu.fr/pub/mirrors/cpan/</a>
+                      mir1.ovh.net::CPAN
+                      miroir-francais.fr::cpan
+                      ftp.crihan.fr::CPAN
+                      <a href="rsync://mirror.cict.fr/cpan/" class="podlinkurl"
+>rsync://mirror.cict.fr/cpan/</a>
+                      <a href="rsync://mirror.netcologne.de/cpan/" class="podlinkurl"
+>rsync://mirror.netcologne.de/cpan/</a>
+                      ftp-stud.hs-esslingen.de::CPAN/
+                      ftp.gwdg.de::FTP/languages/perl/CPAN/
+                      cpan.mirror.iphh.net::CPAN
+                      cpan.cpantesters.org::cpan
+                      cpan.hu::CPAN
+                      komo.vlsm.org::CPAN
+                      mirror.unej.ac.id::cpan
+                      ftp.esat.net::/pub/languages/perl/CPAN
+                      ftp.heanet.ie::mirrors/ftp.perl.org/pub/CPAN
+                      rsync.panu.it::CPAN
+                      cpan.fastbull.org::CPAN
+                      ftp.kddilabs.jp::cpan
+                      ftp.nara.wide.ad.jp::cpan/
+                      <a href="rsync://ftp.jaist.ac.jp/pub/CPAN/" class="podlinkurl"
+>rsync://ftp.jaist.ac.jp/pub/CPAN/</a>
+                      <a href="rsync://ftp.riken.jp/cpan/" class="podlinkurl"
+>rsync://ftp.riken.jp/cpan/</a>
+                      mirror.linuxiso.kz::CPAN
+                      <a href="rsync://mirrors3.kernel.org/mirrors/CPAN/" class="podlinkurl"
+>rsync://mirrors3.kernel.org/mirrors/CPAN/</a>
+                      <a href="rsync://rsync.osmirror.nl/cpan/" class="podlinkurl"
+>rsync://rsync.osmirror.nl/cpan/</a>
+                      mirror.leaseweb.com::CPAN
+                      cpan.nautile.nc::CPAN
+                      mirror.icis.pcz.pl::CPAN
+                      piotrkosoft.net::mirrors/CPAN
+                      <a href="rsync://cpan.perl.pt/" class="podlinkurl"
+>rsync://cpan.perl.pt/</a>
+                      ftp.kaist.ac.kr::cpan
+                      cpan.sarang.net::CPAN
+                      mirror.averse.net::cpan
+                      rsync.oss.eznetsols.org
+                      mirror.ac.za::cpan
+                      ftp.is.co.za::IS-Mirror/ftp.cpan.org/
+                      <a href="rsync://ftp.gui.uva.es/cpan/" class="podlinkurl"
+>rsync://ftp.gui.uva.es/cpan/</a>
+                      <a href="rsync://mirrors4.kernel.org/mirrors/CPAN/" class="podlinkurl"
+>rsync://mirrors4.kernel.org/mirrors/CPAN/</a>
+                      ftp.solnet.ch::CPAN
+                      ftp.ulak.net.tr::CPAN
+                      gafol.net::cpan
+                      rsync.mirrorservice.org::ftp.funet.fi/pub/
+                      <a href="rsync://rsync.mirror.8086.net/CPAN/" class="podlinkurl"
+>rsync://rsync.mirror.8086.net/CPAN/</a>
+                      rsync.mirror.anlx.net::CPAN
+                      mirror.bytemark.co.uk::CPAN
+                      ftp.plig.net::CPAN
+                      <a href="rsync://ftp.ticklers.org:CPAN/" class="podlinkurl"
+>rsync://ftp.ticklers.org:CPAN/</a>
+                      mirrors.ibiblio.org::CPAN
+                      cpan-du.viaverio.com::CPAN
+                      mirror.hiwaay.net::CPAN
+                      <a href="rsync://mira.sunsite.utk.edu/CPAN/" class="podlinkurl"
+>rsync://mira.sunsite.utk.edu/CPAN/</a>
+                      cpan.mirrors.tds.net::CPAN
+                      mirror.its.uidaho.edu::cpan
+                      <a href="rsync://mirror.cc.columbia.edu::cpan/" class="podlinkurl"
+>rsync://mirror.cc.columbia.edu::cpan/</a>
+                      ftp.fxcorporate.com::CPAN
+                      rsync.atlantic.net::CPAN
+                      mirrors.kernel.org::mirrors/CPAN
+                      <a href="rsync://mirrors2.kernel.org/mirrors/CPAN/" class="podlinkurl"
+>rsync://mirrors2.kernel.org/mirrors/CPAN/</a>
+                      cpan.pair.com::CPAN
+                      <a href="rsync://mirror.rit.edu/CPAN/" class="podlinkurl"
+>rsync://mirror.rit.edu/CPAN/</a>
+                      <a href="rsync://mirror.facebook.net/cpan/" class="podlinkurl"
+>rsync://mirror.facebook.net/cpan/</a>
+                      <a href="rsync://mirrors1.kernel.org/mirrors/CPAN/" class="podlinkurl"
+>rsync://mirrors1.kernel.org/mirrors/CPAN/</a>
+                      cpan-sj.viaverio.com::CPAN</pre>
+
+<p>For an up-to-date listing of CPAN sites, see <a href="http://www.cpan.org/SITES" class="podlinkurl"
+>http://www.cpan.org/SITES</a> or <a href="ftp://www.cpan.org/SITES" class="podlinkurl"
+>ftp://www.cpan.org/SITES</a> .</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Modules:_Creation,_Use,_and_Abuse"
+>Modules: Creation, Use, and Abuse <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>(The following section is borrowed directly from Tim Bunce&#39;s modules file, available at your nearest CPAN site.)</p>
+
+<p>Perl implements a class using a package, but the presence of a package doesn&#39;t imply the presence of a class. A package is just a namespace. A class is a package that provides subroutines that can be used as methods. A method is just a subroutine that expects, as its first argument, either the name of a package (for &#34;static&#34; methods), or a reference to something (for &#34;virtual&#34; methods).</p>
+
+<p>A module is a file that (by convention) provides a class of the same name (sans the .pm), plus an import method in that class that can be called to fetch exported symbols. This module may implement some of its methods by loading dynamic C or C++ objects, but that should be totally transparent to the user of the module. Likewise, the module might set up an AUTOLOAD function to slurp in subroutine definitions on demand, but this is also transparent. Only the <em>.pm</em> file is required to exist. See <a href="/~flora/perl-5.14.2/pod/perlsub.pod" class="podlinkpod"
+>perlsub</a>, <a href="/~flora/perl-5.14.2/pod/perltoot.pod" class="podlinkpod"
+>perltoot</a>, and <a href="/perldoc?AutoLoader" class="podlinkpod"
+>AutoLoader</a> for details about the AUTOLOAD mechanism.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Guidelines_for_Module_Creation"
+>Guidelines for Module Creation</a></h2>
+
+<ul>
+<li>Do similar modules already exist in some form?
+<p>If so, please try to reuse the existing modules either in whole or by inheriting useful features into a new class. If this is not practical try to get together with the module authors to work on extending or enhancing the functionality of the existing modules. A perfect example is the plethora of packages in perl4 for dealing with command line options.</p>
+
+<p>If you are writing a module to expand an already existing set of modules, please coordinate with the author of the package. It helps if you follow the same naming scheme and module interaction scheme as the original author.</p>
+</li>
+
+<li>Try to design the new module to be easy to extend and reuse.
+<p>Try to <code>use warnings;</code> (or <code>use warnings qw(...);</code>). Remember that you can add <code>no warnings qw(...);</code> to individual blocks of code that need less warnings.</p>
+
+<p>Use blessed references. Use the two argument form of bless to bless into the class name given as the first parameter of the constructor, e.g.,:</p>
+
+<pre class="sh_perl"> sub new {
+     my $class = shift;
+     return bless {}, $class;
+ }</pre>
+
+<p>or even this if you&#39;d like it to be used as either a static or a virtual method.</p>
+
+<pre class="sh_perl"> sub new {
+     my $self  = shift;
+     my $class = ref($self) || $self;
+     return bless {}, $class;
+ }</pre>
+
+<p>Pass arrays as references so more parameters can be added later (it&#39;s also faster). Convert functions into methods where appropriate. Split large methods into smaller more flexible ones. Inherit methods from other modules if appropriate.</p>
+
+<p>Avoid class name tests like: <code>die &#34;Invalid&#34; unless ref $ref eq &#39;FOO&#39;</code>. Generally you can delete the <code>eq &#39;FOO&#39;</code> part with no harm at all. Let the objects look after themselves! Generally, avoid hard-wired class names as far as possible.</p>
+
+<p>Avoid <code>$r-&#62;Class::func()</code> where using <code>@ISA=qw(... Class ...)</code> and <code>$r-&#62;func()</code> would work (see <a href="/~flora/perl-5.14.2/pod/perlbot.pod" class="podlinkpod"
+>perlbot</a> for more details).</p>
+
+<p>Use autosplit so little used or newly added functions won&#39;t be a burden to programs that don&#39;t use them. Add test functions to the module after __END__ either using AutoSplit or by saying:</p>
+
+<pre class="sh_perl"> eval join(&#39;&#39;,&#60;main::DATA&#62;) || die $@ unless caller();</pre>
+
+<p>Does your module pass the &#39;empty subclass&#39; test? If you say <code>@SUBCLASS::ISA = qw(YOURCLASS);</code> your applications should be able to use SUBCLASS in exactly the same way as YOURCLASS. For example, does your application still work if you change: <code>$obj = YOURCLASS-&#62;new();</code> into: <code>$obj = SUBCLASS-&#62;new();</code> ?</p>
+
+<p>Avoid keeping any state information in your packages. It makes it difficult for multiple other packages to use yours. Keep state information in objects.</p>
+
+<p>Always use <b>-w</b>.</p>
+
+<p>Try to <code>use strict;</code> (or <code>use strict qw(...);</code>). Remember that you can add <code>no strict qw(...);</code> to individual blocks of code that need less strictness.</p>
+
+<p>Always use <b>-w</b>.</p>
+
+<p>Follow the guidelines in <a href="/~flora/perl-5.14.2/pod/perlstyle.pod" class="podlinkpod"
+>perlstyle</a>.</p>
+
+<p>Always use <b>-w</b>.</p>
+</li>
+
+<li>Some simple style guidelines
+<p>The perlstyle manual supplied with Perl has many helpful points.</p>
+
+<p>Coding style is a matter of personal taste. Many people evolve their style over several years as they learn what helps them write and maintain good code. Here&#39;s one set of assorted suggestions that seem to be widely used by experienced developers:</p>
+
+<p>Use underscores to separate words. It is generally easier to read $var_names_like_this than $VarNamesLikeThis, especially for non-native speakers of English. It&#39;s also a simple rule that works consistently with VAR_NAMES_LIKE_THIS.</p>
+
+<p>Package/Module names are an exception to this rule. Perl informally reserves lowercase module names for &#39;pragma&#39; modules like integer and strict. Other modules normally begin with a capital letter and use mixed case with no underscores (need to be short and portable).</p>
+
+<p>You may find it helpful to use letter case to indicate the scope or nature of a variable. For example:</p>
+
+<pre class="sh_perl"> $ALL_CAPS_HERE   constants only (beware clashes with Perl vars)
+ $Some_Caps_Here  package-wide global/static
+ $no_caps_here    function scope my() or local() variables</pre>
+
+<p>Function and method names seem to work best as all lowercase. e.g., <code>$obj-&#62;as_string()</code>.</p>
+
+<p>You can use a leading underscore to indicate that a variable or function should not be used outside the package that defined it.</p>
+</li>
+
+<li>Select what to export.
+<p>Do NOT export method names!</p>
+
+<p>Do NOT export anything else by default without a good reason!</p>
+
+<p>Exports pollute the namespace of the module user. If you must export try to use @EXPORT_OK in preference to @EXPORT and avoid short or common names to reduce the risk of name clashes.</p>
+
+<p>Generally anything not exported is still accessible from outside the module using the ModuleName::item_name (or <code>$blessed_ref-&#62;method</code>) syntax. By convention you can use a leading underscore on names to indicate informally that they are &#39;internal&#39; and not for public use.</p>
+
+<p>(It is actually possible to get private functions by saying: <code>my $subref = sub { ... }; &#38;$subref;</code>. But there&#39;s no way to call that directly as a method, because a method must have a name in the symbol table.)</p>
+
+<p>As a general rule, if the module is trying to be object oriented then export nothing. If it&#39;s just a collection of functions then @EXPORT_OK anything but use @EXPORT with caution.</p>
+</li>
+
+<li>Select a name for the module.
+<p>This name should be as descriptive, accurate, and complete as possible. Avoid any risk of ambiguity. Always try to use two or more whole words. Generally the name should reflect what is special about what the module does rather than how it does it. Please use nested module names to group informally or categorize a module. There should be a very good reason for a module not to have a nested name. Module names should begin with a capital letter.</p>
+
+<p>Having 57 modules all called Sort will not make life easy for anyone (though having 23 called Sort::Quick is only marginally better :-). Imagine someone trying to install your module alongside many others. If in any doubt ask for suggestions in comp.lang.perl.misc.</p>
+
+<p>If you are developing a suite of related modules/classes it&#39;s good practice to use nested classes with a common prefix as this will avoid namespace clashes. For example: Xyz::Control, Xyz::View, Xyz::Model etc. Use the modules in this list as a naming guide.</p>
+
+<p>If adding a new module to a set, follow the original author&#39;s standards for naming modules and the interface to methods in those modules.</p>
+
+<p>If developing modules for private internal or project specific use, that will never be released to the public, then you should ensure that their names will not clash with any future public module. You can do this either by using the reserved Local::* category or by using a category name that includes an underscore like Foo_Corp::*.</p>
+
+<p>To be portable each component of a module name should be limited to 11 characters. If it might be used on MS-DOS then try to ensure each is unique in the first 8 characters. Nested modules make this easier.</p>
+</li>
+
+<li>Have you got it right?
+<p>How do you know that you&#39;ve made the right decisions? Have you picked an interface design that will cause problems later? Have you picked the most appropriate name? Do you have any questions?</p>
+
+<p>The best way to know for sure, and pick up many helpful suggestions, is to ask someone who knows. Comp.lang.perl.misc is read by just about all the people who develop modules and it&#39;s the best place to ask.</p>
+
+<p>All you need to do is post a short summary of the module, its purpose and interfaces. A few lines on each of the main methods is probably enough. (If you post the whole module it might be ignored by busy people - generally the very people you want to read it!)</p>
+
+<p>Don&#39;t worry about posting if you can&#39;t say when the module will be ready - just say so in the message. It might be worth inviting others to help you, they may be able to complete it for you!</p>
+</li>
+
+<li>README and other Additional Files.
+<p>It&#39;s well known that software developers usually fully document the software they write. If, however, the world is in urgent need of your software and there is not enough time to write the full documentation please at least provide a README file containing:</p>
+
+<ul>
+<li>A description of the module/package/extension etc.</li>
+
+<li>A copyright notice - see below.</li>
+
+<li>Prerequisites - what else you may need to have.</li>
+
+<li>How to build it - possible changes to Makefile.PL etc.</li>
+
+<li>How to install it.</li>
+
+<li>Recent changes in this release, especially incompatibilities</li>
+
+<li>Changes / enhancements you plan to make in the future.</li>
+</ul>
+
+<p>If the README file seems to be getting too large you may wish to split out some of the sections into separate files: INSTALL, Copying, ToDo etc.</p>
+
+<ul>
+<li>Adding a Copyright Notice.
+<p>How you choose to license your work is a personal decision. The general mechanism is to assert your Copyright and then make a declaration of how others may copy/use/modify your work.</p>
+
+<p>Perl, for example, is supplied with two types of licence: The GNU GPL and The Artistic Licence (see the files README, Copying, and Artistic, or <a href="/~flora/perl-5.14.2/pod/perlgpl.pod" class="podlinkpod"
+>perlgpl</a> and <a href="/~flora/perl-5.14.2/pod/perlartistic.pod" class="podlinkpod"
+>perlartistic</a>). Larry has good reasons for NOT just using the GNU GPL.</p>
+
+<p>My personal recommendation, out of respect for Larry, Perl, and the Perl community at large is to state something simply like:</p>
+
+<pre class="sh_perl"> Copyright (c) 1995 Your Name. All rights reserved.
+ This program is free software; you can redistribute it and/or
+ modify it under the same terms as Perl itself.</pre>
+
+<p>This statement should at least appear in the README file. You may also wish to include it in a Copying file and your source files. Remember to include the other words in addition to the Copyright.</p>
+</li>
+
+<li>Give the module a version/issue/release number.
+<p>To be fully compatible with the Exporter and MakeMaker modules you should store your module&#39;s version number in a non-my package variable called $VERSION. This should be a floating point number with at least two digits after the decimal (i.e., hundredths, e.g, <code>$VERSION = &#34;0.01&#34;</code>). Don&#39;t use a &#34;1.3.2&#34; style version. See <a href="/perldoc?Exporter" class="podlinkpod"
+>Exporter</a> for details.</p>
+
+<p>It may be handy to add a function or method to retrieve the number. Use the number in announcements and archive file names when releasing the module (ModuleName-1.02.tar.Z). See perldoc ExtUtils::MakeMaker.pm for details.</p>
+</li>
+
+<li>How to release and distribute a module.
+<p>It&#39;s good idea to post an announcement of the availability of your module (or the module itself if small) to the comp.lang.perl.announce Usenet newsgroup. This will at least ensure very wide once-off distribution.</p>
+
+<p>If possible, register the module with CPAN. You should include details of its location in your announcement.</p>
+
+<p>Some notes about ftp archives: Please use a long descriptive file name that includes the version number. Most incoming directories will not be readable/listable, i.e., you won&#39;t be able to see your file after uploading it. Remember to send your email notification message as soon as possible after uploading else your file may get deleted automatically. Allow time for the file to be processed and/or check the file has been processed before announcing its location.</p>
+
+<p>FTP Archives for Perl Modules:</p>
+
+<p>Follow the instructions and links on:</p>
+
+<pre class="sh_perl">   <a href="http://www.cpan.org/modules/00modlist.long.html" class="podlinkurl"
+>http://www.cpan.org/modules/00modlist.long.html</a>
+   <a href="http://www.cpan.org/modules/04pause.html" class="podlinkurl"
+>http://www.cpan.org/modules/04pause.html</a></pre>
+
+<p>or upload to one of these sites:</p>
+
+<pre class="sh_perl">   <a href="https://pause.kbx.de/pause/" class="podlinkurl"
+>https://pause.kbx.de/pause/</a>
+   <a href="http://pause.perl.org/" class="podlinkurl"
+>http://pause.perl.org/</a></pre>
+
+<p>and notify &#60;modules@perl.org&#62;.</p>
+
+<p>By using the WWW interface you can ask the Upload Server to mirror your modules from your ftp or WWW site into your own directory on CPAN!</p>
+
+<p>Please remember to send me an updated entry for the Module list!</p>
+</li>
+
+<li>Take care when changing a released module.
+<p>Always strive to remain compatible with previous released versions. Otherwise try to add a mechanism to revert to the old behavior if people rely on it. Document incompatible changes.</p>
+</li>
+</ul>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Guidelines_for_Converting_Perl_4_Library_Scripts_into_Modules"
+>Guidelines for Converting Perl 4 Library Scripts into Modules</a></h2>
+
+<ul>
+<li>There is no requirement to convert anything.
+<p>If it ain&#39;t broke, don&#39;t fix it! Perl 4 library scripts should continue to work with no problems. You may need to make some minor changes (like escaping non-array @&#39;s in double quoted strings) but there is no need to convert a .pl file into a Module for just that.</p>
+</li>
+
+<li>Consider the implications.
+<p>All Perl applications that make use of the script will need to be changed (slightly) if the script is converted into a module. Is it worth it unless you plan to make other changes at the same time?</p>
+</li>
+
+<li>Make the most of the opportunity.
+<p>If you are going to convert the script to a module you can use the opportunity to redesign the interface. The guidelines for module creation above include many of the issues you should consider.</p>
+</li>
+
+<li>The pl2pm utility will get you started.
+<p>This utility will read *.pl files (given as parameters) and write corresponding *.pm files. The pl2pm utilities does the following:</p>
+
+<ul>
+<li>Adds the standard Module prologue lines</li>
+
+<li>Converts package specifiers from &#39; to ::</li>
+
+<li>Converts die(...) to croak(...)</li>
+
+<li>Several other minor changes</li>
+</ul>
+
+<p>Being a mechanical process pl2pm is not bullet proof. The converted code will need careful checking, especially any package statements. Don&#39;t delete the original .pl file till the new .pm one works!</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Guidelines_for_Reusing_Application_Code"
+>Guidelines for Reusing Application Code</a></h2>
+
+<ul>
+<li>Complete applications rarely belong in the Perl Module Library.</li>
+
+<li>Many applications contain some Perl code that could be reused.
+<p>Help save the world! Share your code in a form that makes it easy to reuse.</p>
+</li>
+
+<li>Break-out the reusable code into one or more separate module files.</li>
+
+<li>Take the opportunity to reconsider and redesign the interfaces.</li>
+
+<li>In some cases the &#39;application&#39; can then be reduced to a small
+<p>fragment of code built on top of the reusable modules. In these cases the application could invoked as:</p>
+
+<pre class="sh_perl">     % perl -e &#39;use Module::Name; method(@ARGV)&#39; ...
+or
+     % perl -mModule::Name ...    (in perl5.002 or higher)</pre>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTE"
+>NOTE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Perl does not enforce private and public parts of its modules as you may have been used to in other languages like C++, Ada, or Modula-17. Perl doesn&#39;t have an infatuation with enforced privacy. It would prefer that you stayed out of its living room because you weren&#39;t invited, not because it has a shotgun.</p>
+
+<p>The module and its user have a contract, part of which is common law, and part of which is &#34;written&#34;. Part of the common law contract is that a module doesn&#39;t pollute any namespace it wasn&#39;t asked to. The written contract for the module (A.K.A. documentation) may make other provisions. But then you know when you <code>use RedefineTheWorld</code> that you&#39;re redefining the world and willing to take the consequences. EOF</p>
+
+<p>close MANIFEST or warn &#34;$0: failed to close MANIFEST (../MANIFEST): $!&#34;; close OUT or warn &#34;$0: failed to close OUT (perlmodlib.pod): $!&#34;;</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">77975 Uploads, 24667 Distributions
+105775 Modules, 9633 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Thu Apr 19 06:57:39 2012 GMT (0.223748922348022) @cpansearch1 -->
+ </body>
+</html>

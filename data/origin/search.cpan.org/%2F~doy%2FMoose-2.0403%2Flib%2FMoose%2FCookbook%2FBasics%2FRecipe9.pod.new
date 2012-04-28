@@ -1,0 +1,498 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Moose::Cookbook::Basics::Recipe9 - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Moose",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Moose-2.0403",3]);
+    _gaq.push(["_setCustomVar",4,"Document","Moose::Cookbook::Basics::Recipe9",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DOY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Moose::Cookbook::Basics::Recipe9">permalink</a></div>
+  <a href="/~doy/">Jesse Luehrs</a> &gt;
+  <a href="/~doy/Moose-2.0403/">Moose-2.0403</a> &gt;
+  Moose::Cookbook::Basics::Recipe9
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/88766de7a058697d3d0335b8d384fd2a?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DO/DOY/Moose-2.0403.tar.gz">Moose-2.0403.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DOY/Moose-2.0403/lib/Moose/Cookbook/Basics/Recipe9.pod">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 13</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 27</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 4</td></tr>
+</table>
+<a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Moose">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/DOY/Moose-2.0403/lib/Moose/Cookbook/Basics/Recipe9.pod">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#INTRODUCTION'>INTRODUCTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#What_is_Operator_Overloading?'>What is Operator Overloading?</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#GENES'>GENES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Human::Gene::bey2'>Human::Gene::bey2</a>
+    <li class='indexItem indexItem2'><a href='#Human::Gene::gey'>Human::Gene::gey</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#EYE_COLOR'>EYE COLOR</a>
+  <li class='indexItem indexItem1'><a href='#ADDING_EYE_COLOR_TO_Humans'>ADDING EYE COLOR TO Humans</a>
+  <li class='indexItem indexItem1'><a href='#CONCLUSION'>CONCLUSION</a>
+  <li class='indexItem indexItem1'><a href='#NEXT_STEPS'>NEXT STEPS</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE'>LICENSE</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose::Cookbook::Basics::Recipe9 - Operator overloading,
+subtypes,
+and coercion</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 2.0403</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  package Human;
+
+  use Moose;
+  use Moose::Util::TypeConstraints;
+
+  subtype &#39;Sex&#39;
+      =&#62; as &#39;Str&#39;
+      =&#62; where { $_ =~ m{^[mf]$}s };
+
+  has &#39;sex&#39;    =&#62; ( is =&#62; &#39;ro&#39;, isa =&#62; &#39;Sex&#39;, required =&#62; 1 );
+
+  has &#39;mother&#39; =&#62; ( is =&#62; &#39;ro&#39;, isa =&#62; &#39;Human&#39; );
+  has &#39;father&#39; =&#62; ( is =&#62; &#39;ro&#39;, isa =&#62; &#39;Human&#39; );
+
+  use overload &#39;+&#39; =&#62; \&#38;_overload_add, fallback =&#62; 1;
+
+  sub _overload_add {
+      my ( $one, $two ) = @_;
+
+      die(&#39;Only male and female humans may create children&#39;)
+          if ( $one-&#62;sex() eq $two-&#62;sex() );
+
+      my ( $mother, $father )
+          = ( $one-&#62;sex eq &#39;f&#39; ? ( $one, $two ) : ( $two, $one ) );
+
+      my $sex = &#39;f&#39;;
+      $sex = &#39;m&#39; if ( rand() &#62;= 0.5 );
+
+      return Human-&#62;new(
+          sex    =&#62; $sex,
+          mother =&#62; $mother,
+          father =&#62; $father,
+      );
+  }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This Moose cookbook recipe shows how operator overloading, coercion, and subtypes can be used to mimic the human reproductive system (well, the selection of genes at least).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INTRODUCTION"
+>INTRODUCTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Our <code>Human</code> class uses operator overloading to allow us to &#34;add&#34; two humans together and produce a child. Our implementation does require that the two objects be of opposite sex. Remember, we&#39;re talking about biological reproduction, not marriage.</p>
+
+<p>While this example works as-is, we can take it a lot further by adding genes into the mix. We&#39;ll add the two genes that control eye color, and use overloading to combine the genes from the parent to model the biology.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="What_is_Operator_Overloading?"
+>What is Operator Overloading?</a></h2>
+
+<p>Overloading is <i>not</i> a Moose-specific feature. It&#39;s a general OO concept that is implemented in Perl with the <code>overload</code> pragma. Overloading lets objects do something sane when used with Perl&#39;s built in operators, like addition (<code>+</code>) or when used as a string.</p>
+
+<p>In this example we overload addition so we can write code like <code>$child = $mother + $father</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="GENES"
+>GENES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>There are many genes which affect eye color, but there are two which are most important, <i>gey</i> and <i>bey2</i>. We will start by making a class for each gene.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Human::Gene::bey2"
+>Human::Gene::bey2</a></h2>
+
+<pre class="sh_perl">  package Human::Gene::bey2;
+
+  use Moose;
+  use Moose::Util::TypeConstraints;
+
+  type &#39;bey2_color&#39; =&#62; where { $_ =~ m{^(?:brown|blue)$} };
+
+  has &#39;color&#39; =&#62; ( is =&#62; &#39;ro&#39;, isa =&#62; &#39;bey2_color&#39; );</pre>
+
+<p>This class is trivial. We have a type constraint for the allowed colors, and a <code>color</code> attribute.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Human::Gene::gey"
+>Human::Gene::gey</a></h2>
+
+<pre class="sh_perl">  package Human::Gene::gey;
+
+  use Moose;
+  use Moose::Util::TypeConstraints;
+
+  type &#39;gey_color&#39; =&#62; where { $_ =~ m{^(?:green|blue)$} };
+
+  has &#39;color&#39; =&#62; ( is =&#62; &#39;ro&#39;, isa =&#62; &#39;gey_color&#39; );</pre>
+
+<p>This is nearly identical to the <code>Humane::Gene::bey2</code> class, except that the <i>gey</i> gene allows for different colors.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EYE_COLOR"
+>EYE COLOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>We could just give four attributes (two of each gene) to the <code>Human</code> class, but this is a bit messy. Instead, we&#39;ll abstract the genes into a container class, <code>Human::EyeColor</code>. Then a <code>Human</code> can have a single <code>eye_color</code> attribute.</p>
+
+<pre class="sh_perl">  package Human::EyeColor;
+
+  use Moose;
+  use Moose::Util::TypeConstraints;
+
+  coerce &#39;Human::Gene::bey2&#39;
+      =&#62; from &#39;Str&#39;
+          =&#62; via { Human::Gene::bey2-&#62;new( color =&#62; $_ ) };
+
+  coerce &#39;Human::Gene::gey&#39;
+      =&#62; from &#39;Str&#39;
+          =&#62; via { Human::Gene::gey-&#62;new( color =&#62; $_ ) };
+
+  has [qw( bey2_1 bey2_2 )] =&#62;
+      ( is =&#62; &#39;ro&#39;, isa =&#62; &#39;Human::Gene::bey2&#39;, coerce =&#62; 1 );
+
+  has [qw( gey_1 gey_2 )] =&#62;
+      ( is =&#62; &#39;ro&#39;, isa =&#62; &#39;Human::Gene::gey&#39;, coerce =&#62; 1 );</pre>
+
+<p>The eye color class has two of each type of gene. We&#39;ve also created a coercion for each class that coerces a string into a new object. Note that a coercion will fail if it attempts to coerce a string like &#34;indigo&#34;, because that is not a valid color for either type of gene.</p>
+
+<p>As an aside, you can see that we can define several identical attributes at once by supplying an array reference of names as the first argument to <code>has</code>.</p>
+
+<p>We also need a method to calculate the actual eye color that results from a set of genes. The <i>bey2</i> brown gene is dominant over both blue and green. The <i>gey</i> green gene is dominant over blue.</p>
+
+<pre class="sh_perl">  sub color {
+      my ($self) = @_;
+
+      return &#39;brown&#39;
+          if ( $self-&#62;bey2_1-&#62;color() eq &#39;brown&#39;
+          or $self-&#62;bey2_2-&#62;color() eq &#39;brown&#39; );
+
+      return &#39;green&#39;
+          if ( $self-&#62;gey_1-&#62;color() eq &#39;green&#39;
+          or $self-&#62;gey_2-&#62;color() eq &#39;green&#39; );
+
+      return &#39;blue&#39;;
+  }</pre>
+
+<p>We&#39;d like to be able to treat a <code>Human::EyeColor</code> object as a string, so we define a string overloading for the class:</p>
+
+<pre class="sh_perl">  use overload &#39;&#34;&#34;&#39; =&#62; \&#38;color, fallback =&#62; 1;</pre>
+
+<p>Finally, we need to define overloading for addition. That way we can add together two <code>Human::EyeColor</code> objects and get a new one with a new (genetically correct) eye color.</p>
+
+<pre class="sh_perl">  use overload &#39;+&#39; =&#62; \&#38;_overload_add, fallback =&#62; 1;
+
+  sub _overload_add {
+      my ( $one, $two ) = @_;
+
+      my $one_bey2 = &#39;bey2_&#39; . _rand2();
+      my $two_bey2 = &#39;bey2_&#39; . _rand2();
+
+      my $one_gey = &#39;gey_&#39; . _rand2();
+      my $two_gey = &#39;gey_&#39; . _rand2();
+
+      return Human::EyeColor-&#62;new(
+          bey2_1 =&#62; $one-&#62;$one_bey2-&#62;color(),
+          bey2_2 =&#62; $two-&#62;$two_bey2-&#62;color(),
+          gey_1  =&#62; $one-&#62;$one_gey-&#62;color(),
+          gey_2  =&#62; $two-&#62;$two_gey-&#62;color(),
+      );
+  }
+
+  sub _rand2 {
+      return 1 + int( rand(2) );
+  }</pre>
+
+<p>When two eye color objects are added together, the <code>_overload_add()</code> method will be passed two <code>Human::EyeColor</code> objects. These are the left and right side operands for the <code>+</code> operator. This method returns a new <code>Human::EyeColor</code> object.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ADDING_EYE_COLOR_TO_Humans"
+>ADDING EYE COLOR TO <code>Human</code>s <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Our original <code>Human</code> class requires just a few changes to incorporate our new <code>Human::EyeColor</code> class.</p>
+
+<pre class="sh_perl">  use List::MoreUtils qw( zip );
+
+  coerce &#39;Human::EyeColor&#39;
+      =&#62; from &#39;ArrayRef&#39;
+      =&#62; via { my @genes = qw( bey2_1 bey2_2 gey_1 gey_2 );
+               return Human::EyeColor-&#62;new( zip( @genes, @{$_} ) ); };
+
+  has &#39;eye_color&#39; =&#62; (
+      is       =&#62; &#39;ro&#39;,
+      isa      =&#62; &#39;Human::EyeColor&#39;,
+      coerce   =&#62; 1,
+      required =&#62; 1,
+  );</pre>
+
+<p>We also need to modify <code>_overload_add()</code> in the <code>Human</code> class to account for eye color:</p>
+
+<pre class="sh_perl">  return Human-&#62;new(
+      sex       =&#62; $sex,
+      eye_color =&#62; ( $one-&#62;eye_color() + $two-&#62;eye_color() ),
+      mother    =&#62; $mother,
+      father    =&#62; $father,
+  );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONCLUSION"
+>CONCLUSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The three techniques we used, overloading, subtypes, and coercion, combine to provide a powerful interface.</p>
+
+<p>If you&#39;d like to learn more about overloading, please read the documentation for the <a href="/perldoc?overload" class="podlinkpod"
+>overload</a> pragma.</p>
+
+<p>To see all the code we created together, take a look at <em>t/recipes/basics_recipe9.t</em>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NEXT_STEPS"
+>NEXT STEPS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Had this been a real project we&#39;d probably want:</p>
+
+<dl>
+<dt><a name='Better'></a><a name="Better_Randomization_with_Crypt::Random"
+>Better Randomization with Crypt::Random</a></dt>
+
+<dd>
+<dt><a name='Characteristic'></a><a name="Characteristic_Base_Class"
+>Characteristic Base Class</a></dt>
+
+<dd>
+<dt><a name='Mutating'></a><a name="Mutating_Genes"
+>Mutating Genes</a></dt>
+
+<dd>
+<dt><a name='More'></a><a name="More_Characteristics"
+>More Characteristics</a></dt>
+
+<dd>
+<dt><a name='Artificial'></a><a name="Artificial_Life"
+>Artificial Life</a></dt>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE"
+>LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This work is licensed under a Creative Commons Attribution 3.0 Unported License.</p>
+
+<p>License details are at: <a href="http://creativecommons.org/licenses/by/3.0/" class="podlinkurl"
+>http://creativecommons.org/licenses/by/3.0/</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose is maintained by the Moose Cabal, along with the help of many contributors. See <a href="/~doy/Moose-2.0403/lib/Moose.pm#CABAL" class="podlinkpod"
+>&#34;CABAL&#34; in Moose</a> and <a href="/~doy/Moose-2.0403/lib/Moose.pm#CONTRIBUTORS" class="podlinkpod"
+>&#34;CONTRIBUTORS&#34; in Moose</a> for details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This software is copyright (c) 2012 by Infinity Interactive, Inc..</p>
+
+<p>This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78179 Uploads, 24710 Distributions
+106004 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 07:59:51 2012 GMT (0.114584922790527) @cpansearch1 -->
+ </body>
+</html>

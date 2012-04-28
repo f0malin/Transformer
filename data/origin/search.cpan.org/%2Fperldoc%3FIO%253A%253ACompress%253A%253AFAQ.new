@@ -1,0 +1,808 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>IO::Compress::FAQ - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","IO-Compress",3]);
+    _gaq.push(["_setCustomVar",5,"Release","IO-Compress-2.049",3]);
+    _gaq.push(["_setCustomVar",4,"Document","IO::Compress::FAQ",3]);
+    _gaq.push(["_setCustomVar",1,"Author","PMQS",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?IO::Compress::FAQ">permalink</a></div>
+  <a href="/~pmqs/">Paul Marquess</a> &gt;
+  <a href="/~pmqs/IO-Compress-2.049/">IO-Compress-2.049</a> &gt;
+  IO::Compress::FAQ
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/1bf245ac173d6991ade027315ff58683?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/P/PM/PMQS/IO-Compress-2.049.tar.gz">IO-Compress-2.049.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~PMQS/IO-Compress-2.049/lib/IO/Compress/FAQ.pod">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 7</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=IO-Compress">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/PMQS/IO-Compress-2.049/lib/IO/Compress/FAQ.pod">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#GENERAL'>GENERAL</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Compatibility_with_Unix_compress/uncompress.'>Compatibility with Unix compress/uncompress.</a>
+    <li class='indexItem indexItem2'><a href='#Accessing_.tar.Z_files'>Accessing .tar.Z files</a>
+    <li class='indexItem indexItem2'><a href='#How_do_I_recompress_using_a_different_compression?'>How do I recompress using a different compression?</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#ZIP'>ZIP</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#What_Compression_Types_do_IO::Compress::Zip_&#38;_IO::Uncompress::Unzip_support?'>What Compression Types do IO::Compress::Zip &#38; IO::Uncompress::Unzip support?</a>
+    <li class='indexItem indexItem2'><a href='#Can_I_Read/Write_Zip_files_larger_the_4_Gig?'>Can I Read/Write Zip files larger the 4 Gig?</a>
+    <li class='indexItem indexItem2'><a href='#Zip_Resources'>Zip Resources</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#GZIP'>GZIP</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Gzip_Resources'>Gzip Resources</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#ZLIB'>ZLIB</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Zlib_Resources'>Zlib Resources</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#HTTP_&#38;_NETWORK'>HTTP &#38; NETWORK</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Apache::GZip_Revisited'>Apache::GZip Revisited</a>
+    <li class='indexItem indexItem2'><a href='#Compressed_files_and_Net::FTP'>Compressed files and Net::FTP</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#MISC'>MISC</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Using_InputLength_to_uncompress_data_embedded_in_a_larger_file/buffer.'>Using InputLength to uncompress data embedded in a larger file/buffer.</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#MODIFICATION_HISTORY'>MODIFICATION HISTORY</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>IO::Compress::FAQ -- Frequently Asked Questions about IO::Compress</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Common questions answered.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="GENERAL"
+>GENERAL <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Compatibility_with_Unix_compress/uncompress."
+>Compatibility with Unix compress/uncompress.</a></h2>
+
+<p>Although <code>Compress::Zlib</code> has a pair of functions called <code>compress</code> and <code>uncompress</code>,
+they are <i>not</i> related to the Unix programs of the same name.
+The <code>Compress::Zlib</code> module is not compatible with Unix <code>compress</code>.</p>
+
+<p>If you have the <code>uncompress</code> program available,
+you can use this to read compressed files</p>
+
+<pre class="sh_perl">    open F, &#34;uncompress -c $filename |&#34;;
+    while (&#60;F&#62;)
+    {
+        ...</pre>
+
+<p>Alternatively, if you have the <code>gunzip</code> program available, you can use this to read compressed files</p>
+
+<pre class="sh_perl">    open F, &#34;gunzip -c $filename |&#34;;
+    while (&#60;F&#62;)
+    {
+        ...</pre>
+
+<p>and this to write compress files, if you have the <code>compress</code> program available</p>
+
+<pre class="sh_perl">    open F, &#34;| compress -c $filename &#34;;
+    print F &#34;data&#34;;
+    ...
+    close F ;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Accessing_.tar.Z_files"
+>Accessing .tar.Z files</a></h2>
+
+<p>The <code>Archive::Tar</code> module can optionally use <code>Compress::Zlib</code> (via the <code>IO::Zlib</code> module) to access tar files that have been compressed with <code>gzip</code>. Unfortunately tar files compressed with the Unix <code>compress</code> utility cannot be read by <code>Compress::Zlib</code> and so cannot be directly accessed by <code>Archive::Tar</code>.</p>
+
+<p>If the <code>uncompress</code> or <code>gunzip</code> programs are available, you can use one of these workarounds to read <code>.tar.Z</code> files from <code>Archive::Tar</code></p>
+
+<p>Firstly with <code>uncompress</code></p>
+
+<pre class="sh_perl">    use strict;
+    use warnings;
+    use Archive::Tar;
+
+    open F, &#34;uncompress -c $filename |&#34;;
+    my $tar = Archive::Tar-&#62;new(*F);
+    ...</pre>
+
+<p>and this with <code>gunzip</code></p>
+
+<pre class="sh_perl">    use strict;
+    use warnings;
+    use Archive::Tar;
+
+    open F, &#34;gunzip -c $filename |&#34;;
+    my $tar = Archive::Tar-&#62;new(*F);
+    ...</pre>
+
+<p>Similarly, if the <code>compress</code> program is available, you can use this to write a <code>.tar.Z</code> file</p>
+
+<pre class="sh_perl">    use strict;
+    use warnings;
+    use Archive::Tar;
+    use IO::File;
+
+    my $fh = new IO::File &#34;| compress -c &#62;$filename&#34;;
+    my $tar = Archive::Tar-&#62;new();
+    ...
+    $tar-&#62;write($fh);
+    $fh-&#62;close ;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="How_do_I_recompress_using_a_different_compression?"
+>How do I recompress using a different compression?</a></h2>
+
+<p>This is easier that you might expect if you realise that all the <code>IO::Compress::*</code> objects are derived from <code>IO::File</code> and that all the <code>IO::Uncompress::*</code> modules can read from an <code>IO::File</code> filehandle.</p>
+
+<p>So, for example, say you have a file compressed with gzip that you want to recompress with bzip2. Here is all that is needed to carry out the recompression.</p>
+
+<pre class="sh_perl">    use IO::Uncompress::Gunzip &#39;:all&#39;;
+    use IO::Compress::Bzip2 &#39;:all&#39;;
+
+    my $gzipFile = &#34;somefile.gz&#34;;
+    my $bzipFile = &#34;somefile.bz2&#34;;
+
+    my $gunzip = new IO::Uncompress::Gunzip $gzipFile
+        or die &#34;Cannot gunzip $gzipFile: $GunzipError\n&#34; ;
+
+    bzip2 $gunzip =&#62; $bzipFile 
+        or die &#34;Cannot bzip2 to $bzipFile: $Bzip2Error\n&#34; ;</pre>
+
+<p>Note, there is a limitation of this technique. Some compression file formats store extra information along with the compressed data payload. For example, gzip can optionally store the original filename and Zip stores a lot of information about the original file. If the original compressed file contains any of this extra information, it will not be transferred to the new compressed file usign the technique above.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ZIP"
+>ZIP <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="What_Compression_Types_do_IO::Compress::Zip_&#38;_IO::Uncompress::Unzip_support?"
+>What Compression Types do IO::Compress::Zip &#38; IO::Uncompress::Unzip support?</a></h2>
+
+<p>The following compression formats are supported by <code>IO::Compress::Zip</code> and <code>IO::Uncompress::Unzip</code></p>
+
+<ul>
+<li>Store (method 0)
+<p>No compression at all.</p>
+</li>
+
+<li>Deflate (method 8)
+<p>This is the default compression used when creating a zip file with <code>IO::Compress::Zip</code>.</p>
+</li>
+
+<li>Bzip2 (method 12)
+<p>Only supported if the <code>IO-Compress-Bzip2</code> module is installed.</p>
+</li>
+
+<li>Lzma (method 14)
+<p>Only supported if the <code>IO-Compress-Lzma</code> module is installed.</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Can_I_Read/Write_Zip_files_larger_the_4_Gig?"
+>Can I Read/Write Zip files larger the 4 Gig?</a></h2>
+
+<p>Yes, both the <code>IO-Compress-Zip</code> and <code>IO-Uncompress-Unzip</code> modules support the zip feature called <i>Zip64</i>. That allows them to read/write files/buffers larger than 4Gig.</p>
+
+<p>If you are creating a Zip file using the one-shot interface, and any of the input files is greater than 4Gig, a zip64 complaint zip file will be created.</p>
+
+<pre class="sh_perl">    zip &#34;really-large-file&#34; =&#62; &#34;my.zip&#34;;</pre>
+
+<p>Similarly with the one-shot interface, if the input is a buffer larger than 4 Gig, a zip64 complaint zip file will be created.</p>
+
+<pre class="sh_perl">    zip \$really_large_buffer =&#62; &#34;my.zip&#34;;</pre>
+
+<p>The one-shot interface allows you to force the creation of a zip64 zip file by including the <code>Zip64</code> option.</p>
+
+<pre class="sh_perl">    zip $filehandle =&#62; &#34;my.zip&#34;, Zip64 =&#62; 1;</pre>
+
+<p>If you want to create a zip64 zip file with the OO interface you must specify the <code>Zip64</code> option.</p>
+
+<pre class="sh_perl">    my $zip = new IO::Compress::Zip &#34;whatever&#34;, Zip64 =&#62; 1;</pre>
+
+<p>When uncompressing with <code>IO-Uncompress-Unzip</code>, it will automatically detect if the zip file is zip64.</p>
+
+<p>If you intend to manipulate the Zip64 zip files created with <code>IO-Compress-Zip</code> using an external zip/unzip, make sure that it supports Zip64.</p>
+
+<p>In particular, if you are using Info-Zip you need to have zip version 3.x or better to update a Zip64 archive and unzip version 6.x to read a zip64 archive.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Zip_Resources"
+>Zip Resources</a></h2>
+
+<p>The primary reference for zip files is the &#34;appnote&#34; document available at <a href="http://www.pkware.com/documents/casestudies/APPNOTE.TXT" class="podlinkurl"
+>http://www.pkware.com/documents/casestudies/APPNOTE.TXT</a></p>
+
+<p>An alternatively is the Info-Zip appnote. This is available from <a href="ftp://ftp.info-zip.org/pub/infozip/doc/" class="podlinkurl"
+>ftp://ftp.info-zip.org/pub/infozip/doc/</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="GZIP"
+>GZIP <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Gzip_Resources"
+>Gzip Resources</a></h2>
+
+<p>The primary reference for gzip files is RFC 1952 <a href="http://www.faqs.org/rfcs/rfc1952.html" class="podlinkurl"
+>http://www.faqs.org/rfcs/rfc1952.html</a></p>
+
+<p>The primary site for gzip is <em><a href="http://www.gzip.org" class="podlinkurl"
+>http://www.gzip.org</a></em>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ZLIB"
+>ZLIB <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Zlib_Resources"
+>Zlib Resources</a></h2>
+
+<p>The primary site for the <i>zlib</i> compression library is <em><a href="http://www.zlib.org" class="podlinkurl"
+>http://www.zlib.org</a></em>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="HTTP_&#38;_NETWORK"
+>HTTP &#38; NETWORK <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Apache::GZip_Revisited"
+>Apache::GZip Revisited</a></h2>
+
+<p>Below is a mod_perl Apache compression module, called <code>Apache::GZip</code>, taken from <em><a href="http://perl.apache.org/docs/tutorials/tips/mod_perl_tricks/mod_perl_tricks.html#On_the_Fly_Compression" class="podlinkurl"
+>http://perl.apache.org/docs/tutorials/tips/mod_perl_tricks/mod_perl_tricks.html#On_the_Fly_Compression</a></em></p>
+
+<pre class="sh_perl">  package Apache::GZip;
+  #File: Apache::GZip.pm
+  
+  use strict vars;
+  use Apache::Constants &#39;:common&#39;;
+  use Compress::Zlib;
+  use IO::File;
+  use constant GZIP_MAGIC =&#62; 0x1f8b;
+  use constant OS_MAGIC =&#62; 0x03;
+  
+  sub handler {
+      my $r = shift;
+      my ($fh,$gz);
+      my $file = $r-&#62;filename;
+      return DECLINED unless $fh=IO::File-&#62;new($file);
+      $r-&#62;header_out(&#39;Content-Encoding&#39;=&#62;&#39;gzip&#39;);
+      $r-&#62;send_http_header;
+      return OK if $r-&#62;header_only;
+  
+      tie *STDOUT,&#39;Apache::GZip&#39;,$r;
+      print($_) while &#60;$fh&#62;;
+      untie *STDOUT;
+      return OK;
+  }
+  
+  sub TIEHANDLE {
+      my($class,$r) = @_;
+      # initialize a deflation stream
+      my $d = deflateInit(-WindowBits=&#62;-MAX_WBITS()) || return undef;
+  
+      # gzip header -- don&#39;t ask how I found out
+      $r-&#62;print(pack(&#34;nccVcc&#34;,GZIP_MAGIC,Z_DEFLATED,0,time(),0,OS_MAGIC));
+  
+      return bless { r   =&#62; $r,
+                     crc =&#62;  crc32(undef),
+                     d   =&#62; $d,
+                     l   =&#62;  0 
+                   },$class;
+  }
+  
+  sub PRINT {
+      my $self = shift;
+      foreach (@_) {
+        # deflate the data
+        my $data = $self-&#62;{d}-&#62;deflate($_);
+        $self-&#62;{r}-&#62;print($data);
+        # keep track of its length and crc
+        $self-&#62;{l} += length($_);
+        $self-&#62;{crc} = crc32($_,$self-&#62;{crc});
+      }
+  }
+  
+  sub DESTROY {
+     my $self = shift;
+     
+     # flush the output buffers
+     my $data = $self-&#62;{d}-&#62;flush;
+     $self-&#62;{r}-&#62;print($data);
+     
+     # print the CRC and the total length (uncompressed)
+     $self-&#62;{r}-&#62;print(pack(&#34;LL&#34;,@{$self}{qw/crc l/}));
+  }
+   
+  1;</pre>
+
+<p>Here&#39;s the Apache configuration entry you&#39;ll need to make use of it. Once set it will result in everything in the /compressed directory will be compressed automagically.</p>
+
+<pre class="sh_perl">  &#60;Location /compressed&#62;
+     SetHandler  perl-script
+     PerlHandler Apache::GZip
+  &#60;/Location&#62;</pre>
+
+<p>Although at first sight there seems to be quite a lot going on in <code>Apache::GZip</code>, you could sum up what the code was doing as follows -- read the contents of the file in <code>$r-&#62;filename</code>, compress it and write the compressed data to standard output. That&#39;s all.</p>
+
+<p>This code has to jump through a few hoops to achieve this because</p>
+
+<ol>
+<li>The gzip support in <code>Compress::Zlib</code> version 1.x can only work with a real filesystem filehandle. The filehandles used by Apache modules are not associated with the filesystem.</li>
+
+<li>That means all the gzip support has to be done by hand - in this case by creating a tied filehandle to deal with creating the gzip header and trailer.</li>
+</ol>
+
+<p><code>IO::Compress::Gzip</code> doesn&#39;t have that filehandle limitation (this was one of the reasons for writing it in the first place). So if <code>IO::Compress::Gzip</code> is used instead of <code>Compress::Zlib</code> the whole tied filehandle code can be removed. Here is the rewritten code.</p>
+
+<pre class="sh_perl">  package Apache::GZip;
+  
+  use strict vars;
+  use Apache::Constants &#39;:common&#39;;
+  use IO::Compress::Gzip;
+  use IO::File;
+  
+  sub handler {
+      my $r = shift;
+      my ($fh,$gz);
+      my $file = $r-&#62;filename;
+      return DECLINED unless $fh=IO::File-&#62;new($file);
+      $r-&#62;header_out(&#39;Content-Encoding&#39;=&#62;&#39;gzip&#39;);
+      $r-&#62;send_http_header;
+      return OK if $r-&#62;header_only;
+
+      my $gz = new IO::Compress::Gzip &#39;-&#39;, Minimal =&#62; 1
+          or return DECLINED ;
+
+      print $gz $_ while &#60;$fh&#62;;
+  
+      return OK;
+  }</pre>
+
+<p>or even more succinctly, like this, using a one-shot gzip</p>
+
+<pre class="sh_perl">  package Apache::GZip;
+  
+  use strict vars;
+  use Apache::Constants &#39;:common&#39;;
+  use IO::Compress::Gzip qw(gzip);
+  
+  sub handler {
+      my $r = shift;
+      $r-&#62;header_out(&#39;Content-Encoding&#39;=&#62;&#39;gzip&#39;);
+      $r-&#62;send_http_header;
+      return OK if $r-&#62;header_only;
+
+      gzip $r-&#62;filename =&#62; &#39;-&#39;, Minimal =&#62; 1
+        or return DECLINED ;
+
+      return OK;
+  }
+   
+  1;</pre>
+
+<p>The use of one-shot <code>gzip</code> above just reads from <code>$r-&#62;filename</code> and writes the compressed data to standard output.</p>
+
+<p>Note the use of the <code>Minimal</code> option in the code above. When using gzip for Content-Encoding you should <i>always</i> use this option. In the example above it will prevent the filename being included in the gzip header and make the size of the gzip data stream a slight bit smaller.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Compressed_files_and_Net::FTP"
+>Compressed files and Net::FTP</a></h2>
+
+<p>The <code>Net::FTP</code> module provides two low-level methods called <code>stor</code> and <code>retr</code> that both return filehandles. These filehandles can used with the <code>IO::Compress/Uncompress</code> modules to compress or uncompress files read from or written to an FTP Server on the fly, without having to create a temporary file.</p>
+
+<p>Firstly, here is code that uses <code>retr</code> to uncompressed a file as it is read from the FTP Server.</p>
+
+<pre class="sh_perl">    use Net::FTP;
+    use IO::Uncompress::Gunzip qw(:all);
+
+    my $ftp = new Net::FTP ...
+
+    my $retr_fh = $ftp-&#62;retr($compressed_filename);
+    gunzip $retr_fh =&#62; $outFilename, AutoClose =&#62; 1
+        or die &#34;Cannot uncompress &#39;$compressed_file&#39;: $GunzipError\n&#34;;</pre>
+
+<p>and this to compress a file as it is written to the FTP Server</p>
+
+<pre class="sh_perl">    use Net::FTP;
+    use IO::Compress::Gzip qw(:all);
+
+    my $stor_fh = $ftp-&#62;stor($filename);
+    gzip &#34;filename&#34; =&#62; $stor_fh, AutoClose =&#62; 1
+        or die &#34;Cannot compress &#39;$filename&#39;: $GzipError\n&#34;;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MISC"
+>MISC <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Using_InputLength_to_uncompress_data_embedded_in_a_larger_file/buffer."
+>Using <code>InputLength</code> to uncompress data embedded in a larger file/buffer.</a></h2>
+
+<p>A fairly common use-case is where compressed data is embedded in a larger file/buffer and you want to read both.</p>
+
+<p>As an example consider the structure of a zip file. This is a well-defined file format that mixes both compressed and uncompressed sections of data in a single file.</p>
+
+<p>For the purposes of this discussion you can think of a zip file as sequence of compressed data streams, each of which is prefixed by an uncompressed local header. The local header contains information about the compressed data stream, including the name of the compressed file and, in particular, the length of the compressed data stream.</p>
+
+<p>To illustrate how to use <code>InputLength</code> here is a script that walks a zip file and prints out how many lines are in each compressed file (if you intend write code to walking through a zip file for real see <a href="/~pmqs/IO-Compress-2.049/lib/IO/Uncompress/Unzip.pm#Walking_through_a_zip_file" class="podlinkpod"
+>&#34;Walking through a zip file&#34; in IO::Uncompress::Unzip</a> ). Also, although this example uses the zlib-based compression, the technique can be used by the other <code>IO::Uncompress::*</code> modules.</p>
+
+<pre class="sh_perl">    use strict;
+    use warnings;
+
+    use IO::File;
+    use IO::Uncompress::RawInflate qw(:all);
+
+    use constant ZIP_LOCAL_HDR_SIG  =&#62; 0x04034b50;
+    use constant ZIP_LOCAL_HDR_LENGTH =&#62; 30;
+
+    my $file = $ARGV[0] ;
+
+    my $fh = new IO::File &#34;&#60;$file&#34;
+                or die &#34;Cannot open &#39;$file&#39;: $!\n&#34;;
+
+    while (1)
+    {
+        my $sig;
+        my $buffer;
+
+        my $x ;
+        ($x = $fh-&#62;read($buffer, ZIP_LOCAL_HDR_LENGTH)) == ZIP_LOCAL_HDR_LENGTH 
+            or die &#34;Truncated file: $!\n&#34;;
+
+        my $signature = unpack (&#34;V&#34;, substr($buffer, 0, 4));
+
+        last unless $signature == ZIP_LOCAL_HDR_SIG;
+
+        # Read Local Header
+        my $gpFlag             = unpack (&#34;v&#34;, substr($buffer, 6, 2));
+        my $compressedMethod   = unpack (&#34;v&#34;, substr($buffer, 8, 2));
+        my $compressedLength   = unpack (&#34;V&#34;, substr($buffer, 18, 4));
+        my $uncompressedLength = unpack (&#34;V&#34;, substr($buffer, 22, 4));
+        my $filename_length    = unpack (&#34;v&#34;, substr($buffer, 26, 2)); 
+        my $extra_length       = unpack (&#34;v&#34;, substr($buffer, 28, 2));
+
+        my $filename ;
+        $fh-&#62;read($filename, $filename_length) == $filename_length 
+            or die &#34;Truncated file\n&#34;;
+
+        $fh-&#62;read($buffer, $extra_length) == $extra_length
+            or die &#34;Truncated file\n&#34;;
+
+        if ($compressedMethod != 8 &#38;&#38; $compressedMethod != 0)
+        {
+            warn &#34;Skipping file &#39;$filename&#39; - not deflated $compressedMethod\n&#34;;
+            $fh-&#62;read($buffer, $compressedLength) == $compressedLength
+                or die &#34;Truncated file\n&#34;;
+            next;
+        }
+
+        if ($compressedMethod == 0 &#38;&#38; $gpFlag &#38; 8 == 8)
+        {
+            die &#34;Streamed Stored not supported for &#39;$filename&#39;\n&#34;;
+        }
+
+        next if $compressedLength == 0;
+
+        # Done reading the Local Header
+
+        my $inf = new IO::Uncompress::RawInflate $fh,
+                            Transparent =&#62; 1,
+                            InputLength =&#62; $compressedLength
+          or die &#34;Cannot uncompress $file [$filename]: $RawInflateError\n&#34;  ;
+
+        my $line_count = 0;
+
+        while (&#60;$inf&#62;)
+        {
+            ++ $line_count;
+        }
+
+        print &#34;$filename: $line_count\n&#34;;
+    }</pre>
+
+<p>The majority of the code above is concerned with reading the zip local header data. The code that I want to focus on is at the bottom.</p>
+
+<pre class="sh_perl">    while (1) {
+    
+        # read local zip header data
+        # get $filename
+        # get $compressedLength
+
+        my $inf = new IO::Uncompress::RawInflate $fh,
+                            Transparent =&#62; 1,
+                            InputLength =&#62; $compressedLength
+          or die &#34;Cannot uncompress $file [$filename]: $RawInflateError\n&#34;  ;
+
+        my $line_count = 0;
+
+        while (&#60;$inf&#62;)
+        {
+            ++ $line_count;
+        }
+
+        print &#34;$filename: $line_count\n&#34;;
+    }</pre>
+
+<p>The call to <code>IO::Uncompress::RawInflate</code> creates a new filehandle <code>$inf</code> that can be used to read from the parent filehandle <code>$fh</code>, uncompressing it as it goes. The use of the <code>InputLength</code> option will guarantee that <i>at most</i> <code>$compressedLength</code> bytes of compressed data will be read from the <code>$fh</code> filehandle (The only exception is for an error case like a truncated file or a corrupt data stream).</p>
+
+<p>This means that once RawInflate is finished <code>$fh</code> will be left at the byte directly after the compressed data stream.</p>
+
+<p>Now consider what the code looks like without <code>InputLength</code></p>
+
+<pre class="sh_perl">    while (1) {
+    
+        # read local zip header data
+        # get $filename
+        # get $compressedLength
+
+        # read all the compressed data into $data
+        read($fh, $data, $compressedLength);
+
+        my $inf = new IO::Uncompress::RawInflate \$data,
+                            Transparent =&#62; 1,
+          or die &#34;Cannot uncompress $file [$filename]: $RawInflateError\n&#34;  ;
+
+        my $line_count = 0;
+
+        while (&#60;$inf&#62;)
+        {
+            ++ $line_count;
+        }
+
+        print &#34;$filename: $line_count\n&#34;;
+    }</pre>
+
+<p>The difference here is the addition of the temporary variable <code>$data</code>. This is used to store a copy of the compressed data while it is being uncompressed.</p>
+
+<p>If you know that <code>$compressedLength</code> isn&#39;t that big then using temporary storage won&#39;t be a problem. But if <code>$compressedLength</code> is very large or you are writing an application that other people will use, and so have no idea how big <code>$compressedLength</code> will be, it could be an issue.</p>
+
+<p>Using <code>InputLength</code> avoids the use of temporary storage and means the application can cope with large compressed data streams.</p>
+
+<p>One final point -- obviously <code>InputLength</code> can only be used whenever you know the length of the compressed data beforehand, like here with a zip file.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~pmqs/IO-Compress-2.049/lib/Compress/Zlib.pm" class="podlinkpod"
+>Compress::Zlib</a>, <a href="/~pmqs/IO-Compress-2.049/lib/IO/Compress/Gzip.pm" class="podlinkpod"
+>IO::Compress::Gzip</a>, <a href="/~pmqs/IO-Compress-2.049/lib/IO/Uncompress/Gunzip.pm" class="podlinkpod"
+>IO::Uncompress::Gunzip</a>, <a href="/~pmqs/IO-Compress-2.049/lib/IO/Compress/Deflate.pm" class="podlinkpod"
+>IO::Compress::Deflate</a>, <a href="/~pmqs/IO-Compress-2.049/lib/IO/Uncompress/Inflate.pm" class="podlinkpod"
+>IO::Uncompress::Inflate</a>, <a href="/~pmqs/IO-Compress-2.049/lib/IO/Compress/RawDeflate.pm" class="podlinkpod"
+>IO::Compress::RawDeflate</a>, <a href="/~pmqs/IO-Compress-2.049/lib/IO/Uncompress/RawInflate.pm" class="podlinkpod"
+>IO::Uncompress::RawInflate</a>, <a href="/~pmqs/IO-Compress-2.049/lib/IO/Compress/Bzip2.pm" class="podlinkpod"
+>IO::Compress::Bzip2</a>, <a href="/~pmqs/IO-Compress-2.049/lib/IO/Uncompress/Bunzip2.pm" class="podlinkpod"
+>IO::Uncompress::Bunzip2</a>, <a href="/perldoc?IO%3A%3ACompress%3A%3ALzma" class="podlinkpod"
+>IO::Compress::Lzma</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3AUnLzma" class="podlinkpod"
+>IO::Uncompress::UnLzma</a>, <a href="/perldoc?IO%3A%3ACompress%3A%3AXz" class="podlinkpod"
+>IO::Compress::Xz</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3AUnXz" class="podlinkpod"
+>IO::Uncompress::UnXz</a>, <a href="/perldoc?IO%3A%3ACompress%3A%3ALzop" class="podlinkpod"
+>IO::Compress::Lzop</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3AUnLzop" class="podlinkpod"
+>IO::Uncompress::UnLzop</a>, <a href="/perldoc?IO%3A%3ACompress%3A%3ALzf" class="podlinkpod"
+>IO::Compress::Lzf</a>, <a href="/perldoc?IO%3A%3AUncompress%3A%3AUnLzf" class="podlinkpod"
+>IO::Uncompress::UnLzf</a>, <a href="/~pmqs/IO-Compress-2.049/lib/IO/Uncompress/AnyInflate.pm" class="podlinkpod"
+>IO::Uncompress::AnyInflate</a>, <a href="/~pmqs/IO-Compress-2.049/lib/IO/Uncompress/AnyUncompress.pm" class="podlinkpod"
+>IO::Uncompress::AnyUncompress</a></p>
+
+<p><a href="/~pmqs/IO-Compress-2.049/lib/IO/Compress/FAQ.pod" class="podlinkpod"
+>IO::Compress::FAQ</a></p>
+
+<p><a href="/~pmqs/IO-Compress-2.049/lib/File/GlobMapper.pm" class="podlinkpod"
+>File::GlobMapper</a>, <a href="/perldoc?Archive%3A%3AZip" class="podlinkpod"
+>Archive::Zip</a>, <a href="/perldoc?Archive%3A%3ATar" class="podlinkpod"
+>Archive::Tar</a>, <a href="/perldoc?IO%3A%3AZlib" class="podlinkpod"
+>IO::Zlib</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module was written by Paul Marquess, <em>pmqs@cpan.org</em>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="MODIFICATION_HISTORY"
+>MODIFICATION HISTORY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>See the Changes file.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2005-2012 Paul Marquess. All rights reserved.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78167 Uploads, 24706 Distributions
+105970 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 23:16:45 2012 GMT (0.0937349796295166) @cpansearch1 -->
+ </body>
+</html>

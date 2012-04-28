@@ -1,0 +1,914 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>perldata - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",4,"Document","perldata",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?perldata">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  perldata
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/pod/perldata.pod">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/pod/perldata.pod">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~abigail/perl/pod/perldata.pod">perl-5.15.9</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Variable_names'>Variable names    </a>
+    <li class='indexItem indexItem2'><a href='#Context'>Context   </a>
+    <li class='indexItem indexItem2'><a href='#Scalar_values'>Scalar values    </a>
+    <li class='indexItem indexItem2'><a href='#Scalar_value_constructors'>Scalar value constructors  </a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Version_Strings'>Version Strings   </a>
+      <li class='indexItem indexItem3'><a href='#Special_Literals'>Special Literals         </a>
+      <li class='indexItem indexItem3'><a href='#Barewords'>Barewords </a>
+      <li class='indexItem indexItem3'><a href='#Array_Interpolation'>Array Interpolation   </a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#List_value_constructors'>List value constructors </a>
+    <li class='indexItem indexItem2'><a href='#Subscripts'>Subscripts</a>
+    <li class='indexItem indexItem2'><a href='#Slices'>Slices   </a>
+    <li class='indexItem indexItem2'><a href='#Typeglobs_and_Filehandles'>Typeglobs and Filehandles   </a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>perldata - Perl data types</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Variable_names"
+>Variable names <!--
+	INDEX: variable, name
+--> <!--
+	INDEX: variable name
+--> <!--
+	INDEX: data type
+--> <!--
+	INDEX: type
+--></a></h2>
+
+<p>Perl has three built-in data types: scalars,
+arrays of scalars,
+and associative arrays of scalars,
+known as &#34;hashes&#34;.
+A scalar is a single string (of any size,
+limited only by the available memory),
+number,
+or a reference to something (which will be discussed in <a href="/~flora/perl-5.14.2/pod/perlref.pod" class="podlinkpod"
+>perlref</a>).
+Normal arrays are ordered lists of scalars indexed by number,
+starting with 0.
+Hashes are unordered collections of scalar values indexed by their associated string key.</p>
+
+<p>Values are usually referred to by name,
+or through a named reference.
+The first character of the name tells you to what sort of data structure it refers.
+The rest of the name tells you the particular value to which it refers.
+Usually this name is a single <i>identifier</i>,
+that is,
+a string beginning with a letter or underscore,
+and containing letters,
+underscores,
+and digits.
+In some cases,
+it may be a chain of identifiers,
+separated by <code>::</code> (or by the slightly archaic <code>&#39;</code>); all but the last are interpreted as names of packages,
+to locate the namespace in which to look up the final identifier (see <a href="/~flora/perl-5.14.2/pod/perlmod.pod#Packages" class="podlinkpod"
+>&#34;Packages&#34; in perlmod</a> for details).
+It&#39;s possible to substitute for a simple identifier,
+an expression that produces a reference to the value at runtime.
+This is described in more detail below and in <a href="/~flora/perl-5.14.2/pod/perlref.pod" class="podlinkpod"
+>perlref</a>.
+<!--
+	INDEX: identifier
+--></p>
+
+<p>Perl also has its own built-in variables whose names don&#39;t follow these rules.
+They have strange names so they don&#39;t accidentally collide with one of your normal variables.
+Strings that match parenthesized parts of a regular expression are saved under names containing only digits after the <code>$</code> (see <a href="/~flora/perl-5.14.2/pod/perlop.pod" class="podlinkpod"
+>perlop</a> and <a href="/~flora/perl-5.14.2/pod/perlre.pod" class="podlinkpod"
+>perlre</a>).
+In addition,
+several special variables that provide windows into the inner working of Perl have names containing punctuation characters and control characters.
+These are documented in <a href="/~flora/perl-5.14.2/pod/perlvar.pod" class="podlinkpod"
+>perlvar</a>.
+<!--
+	INDEX: variable, built-in
+--></p>
+
+<p>Scalar values are always named with &#39;$&#39;,
+even when referring to a scalar that is part of an array or a hash.
+The &#39;$&#39; symbol works semantically like the English word &#34;the&#34; in that it indicates a single value is expected.
+<!--
+	INDEX: scalar
+--></p>
+
+<pre class="sh_perl">    $days               # the simple scalar value &#34;days&#34;
+    $days[28]           # the 29th element of array @days
+    $days{&#39;Feb&#39;}        # the &#39;Feb&#39; value from hash %days
+    $#days              # the last index of array @days</pre>
+
+<p>Entire arrays (and slices of arrays and hashes) are denoted by &#39;@&#39;, which works much as the word &#34;these&#34; or &#34;those&#34; does in English, in that it indicates multiple values are expected. <!--
+	INDEX: array
+--></p>
+
+<pre class="sh_perl">    @days               # ($days[0], $days[1],... $days[n])
+    @days[3,4,5]        # same as ($days[3],$days[4],$days[5])
+    @days{&#39;a&#39;,&#39;c&#39;}      # same as ($days{&#39;a&#39;},$days{&#39;c&#39;})</pre>
+
+<p>Entire hashes are denoted by &#39;%&#39;: <!--
+	INDEX: hash
+--></p>
+
+<pre class="sh_perl">    %days               # (key1, val1, key2, val2 ...)</pre>
+
+<p>In addition, subroutines are named with an initial &#39;&#38;&#39;, though this is optional when unambiguous, just as the word &#34;do&#34; is often redundant in English. Symbol table entries can be named with an initial &#39;*&#39;, but you don&#39;t really care about that yet (if ever :-).</p>
+
+<p>Every variable type has its own namespace, as do several non-variable identifiers. This means that you can, without fear of conflict, use the same name for a scalar variable, an array, or a hash--or, for that matter, for a filehandle, a directory handle, a subroutine name, a format name, or a label. This means that $foo and @foo are two different variables. It also means that <code>$foo[1]</code> is a part of @foo, not a part of $foo. This may seem a bit weird, but that&#39;s okay, because it is weird. <!--
+	INDEX: namespace
+--></p>
+
+<p>Because variable references always start with &#39;$&#39;, &#39;@&#39;, or &#39;%&#39;, the &#34;reserved&#34; words aren&#39;t in fact reserved with respect to variable names. They <i>are</i> reserved with respect to labels and filehandles, however, which don&#39;t have an initial special character. You can&#39;t have a filehandle named &#34;log&#34;, for instance. Hint: you could say <code>open(LOG,&#39;logfile&#39;)</code> rather than <code>open(log,&#39;logfile&#39;)</code>. Using uppercase filehandles also improves readability and protects you from conflict with future reserved words. Case <i>is</i> significant--&#34;FOO&#34;, &#34;Foo&#34;, and &#34;foo&#34; are all different names. Names that start with a letter or underscore may also contain digits and underscores. <!--
+	INDEX: identifier, case sensitivity
+--> <!--
+	INDEX: case
+--></p>
+
+<p>It is possible to replace such an alphanumeric name with an expression that returns a reference to the appropriate type. For a description of this, see <a href="/~flora/perl-5.14.2/pod/perlref.pod" class="podlinkpod"
+>perlref</a>.</p>
+
+<p>Names that start with a digit may contain only more digits. Names that do not start with a letter, underscore, digit or a caret (i.e. a control character) are limited to one character, e.g., <code>$%</code> or <code>$$</code>. (Most of these one character names have a predefined significance to Perl. For instance, <code>$$</code> is the current process id.)</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Context"
+>Context <!--
+	INDEX: context
+--> <!--
+	INDEX: scalar context
+--> <!--
+	INDEX: list context
+--></a></h2>
+
+<p>The interpretation of operations and values in Perl sometimes depends on the requirements of the context around the operation or value. There are two major contexts: list and scalar. Certain operations return list values in contexts wanting a list, and scalar values otherwise. If this is true of an operation it will be mentioned in the documentation for that operation. In other words, Perl overloads certain operations based on whether the expected return value is singular or plural. Some words in English work this way, like &#34;fish&#34; and &#34;sheep&#34;.</p>
+
+<p>In a reciprocal fashion, an operation provides either a scalar or a list context to each of its arguments. For example, if you say</p>
+
+<pre class="sh_perl">    int( &#60;STDIN&#62; )</pre>
+
+<p>the integer operation provides scalar context for the &#60;&#62; operator, which responds by reading one line from STDIN and passing it back to the integer operation, which will then find the integer value of that line and return that. If, on the other hand, you say</p>
+
+<pre class="sh_perl">    sort( &#60;STDIN&#62; )</pre>
+
+<p>then the sort operation provides list context for &#60;&#62;, which will proceed to read every line available up to the end of file, and pass that list of lines back to the sort routine, which will then sort those lines and return them as a list to whatever the context of the sort was.</p>
+
+<p>Assignment is a little bit special in that it uses its left argument to determine the context for the right argument. Assignment to a scalar evaluates the right-hand side in scalar context, while assignment to an array or hash evaluates the righthand side in list context. Assignment to a list (or slice, which is just a list anyway) also evaluates the right-hand side in list context.</p>
+
+<p>When you use the <code>use warnings</code> pragma or Perl&#39;s <b>-w</b> command-line option, you may see warnings about useless uses of constants or functions in &#34;void context&#34;. Void context just means the value has been discarded, such as a statement containing only <code>&#34;fred&#34;;</code> or <code>getpwuid(0);</code>. It still counts as scalar context for functions that care whether or not they&#39;re being called in list context.</p>
+
+<p>User-defined subroutines may choose to care whether they are being called in a void, scalar, or list context. Most subroutines do not need to bother, though. That&#39;s because both scalars and lists are automatically interpolated into lists. See <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#wantarray" class="podlinkpod"
+>&#34;wantarray&#34; in perlfunc</a> for how you would dynamically discern your function&#39;s calling context.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Scalar_values"
+>Scalar values <!--
+	INDEX: scalar
+--> <!--
+	INDEX: number
+--> <!--
+	INDEX: string
+--> <!--
+	INDEX: reference
+--></a></h2>
+
+<p>All data in Perl is a scalar, an array of scalars, or a hash of scalars. A scalar may contain one single value in any of three different flavors: a number, a string, or a reference. In general, conversion from one form to another is transparent. Although a scalar may not directly hold multiple values, it may contain a reference to an array or hash which in turn contains multiple values.</p>
+
+<p>Scalars aren&#39;t necessarily one thing or another. There&#39;s no place to declare a scalar variable to be of type &#34;string&#34;, type &#34;number&#34;, type &#34;reference&#34;, or anything else. Because of the automatic conversion of scalars, operations that return scalars don&#39;t need to care (and in fact, cannot care) whether their caller is looking for a string, a number, or a reference. Perl is a contextually polymorphic language whose scalars can be strings, numbers, or references (which includes objects). Although strings and numbers are considered pretty much the same thing for nearly all purposes, references are strongly-typed, uncastable pointers with builtin reference-counting and destructor invocation.</p>
+
+<p>A scalar value is interpreted as TRUE in the Boolean sense if it is not the null string or the number 0 (or its string equivalent, &#34;0&#34;). The Boolean context is just a special kind of scalar context where no conversion to a string or a number is ever performed. <!--
+	INDEX: boolean
+--> <!--
+	INDEX: bool
+--> <!--
+	INDEX: true
+--> <!--
+	INDEX: false
+--> <!--
+	INDEX: truth
+--></p>
+
+<p>There are actually two varieties of null strings (sometimes referred to as &#34;empty&#34; strings), a defined one and an undefined one. The defined version is just a string of length zero, such as <code>&#34;&#34;</code>. The undefined version is the value that indicates that there is no real value for something, such as when there was an error, or at end of file, or when you refer to an uninitialized variable or element of an array or hash. Although in early versions of Perl, an undefined scalar could become defined when first used in a place expecting a defined value, this no longer happens except for rare cases of autovivification as explained in <a href="/~flora/perl-5.14.2/pod/perlref.pod" class="podlinkpod"
+>perlref</a>. You can use the defined() operator to determine whether a scalar value is defined (this has no meaning on arrays or hashes), and the undef() operator to produce an undefined value. <!--
+	INDEX: defined
+--> <!--
+	INDEX: undefined
+--> <!--
+	INDEX: undef
+--> <!--
+	INDEX: null
+--> <!--
+	INDEX: string, null
+--></p>
+
+<p>To find out whether a given string is a valid non-zero number, it&#39;s sometimes enough to test it against both numeric 0 and also lexical &#34;0&#34; (although this will cause noises if warnings are on). That&#39;s because strings that aren&#39;t numbers count as 0, just as they do in <b>awk</b>:</p>
+
+<pre class="sh_perl">    if ($str == 0 &#38;&#38; $str ne &#34;0&#34;)  {
+        warn &#34;That doesn&#39;t look like a number&#34;;
+    }</pre>
+
+<p>That method may be best because otherwise you won&#39;t treat IEEE notations like <code>NaN</code> or <code>Infinity</code> properly. At other times, you might prefer to determine whether string data can be used numerically by calling the POSIX::strtod() function or by inspecting your string with a regular expression (as documented in <a href="/~flora/perl-5.14.2/pod/perlre.pod" class="podlinkpod"
+>perlre</a>).</p>
+
+<pre class="sh_perl">    warn &#34;has nondigits&#34;        if     /\D/;
+    warn &#34;not a natural number&#34; unless /^\d+$/;             # rejects -3
+    warn &#34;not an integer&#34;       unless /^-?\d+$/;           # rejects +3
+    warn &#34;not an integer&#34;       unless /^[+-]?\d+$/;
+    warn &#34;not a decimal number&#34; unless /^-?\d+\.?\d*$/;     # rejects .2
+    warn &#34;not a decimal number&#34; unless /^-?(?:\d+(?:\.\d*)?|\.\d+)$/;
+    warn &#34;not a C float&#34;
+        unless /^([+-]?)(?=\d|\.\d)\d*(\.\d*)?([Ee]([+-]?\d+))?$/;</pre>
+
+<p>The length of an array is a scalar value. You may find the length of array @days by evaluating <code>$#days</code>, as in <b>csh</b>. However, this isn&#39;t the length of the array; it&#39;s the subscript of the last element, which is a different value since there is ordinarily a 0th element. Assigning to <code>$#days</code> actually changes the length of the array. Shortening an array this way destroys intervening values. Lengthening an array that was previously shortened does not recover values that were in those elements. (It used to do so in Perl 4, but we had to break this to make sure destructors were called when expected.) <!--
+	INDEX: $#
+--> <!--
+	INDEX: array, length
+--></p>
+
+<p>You can also gain some minuscule measure of efficiency by pre-extending an array that is going to get big. You can also extend an array by assigning to an element that is off the end of the array. You can truncate an array down to nothing by assigning the null list () to it. The following are equivalent:</p>
+
+<pre class="sh_perl">    @whatever = ();
+    $#whatever = -1;</pre>
+
+<p>If you evaluate an array in scalar context, it returns the length of the array. (Note that this is not true of lists, which return the last value, like the C comma operator, nor of built-in functions, which return whatever they feel like returning.) The following is always true: <!--
+	INDEX: array, length
+--></p>
+
+<pre class="sh_perl">    scalar(@whatever) == $#whatever - $[ + 1;</pre>
+
+<p>Version 5 of Perl changed the semantics of <code>$[</code>: files that don&#39;t set the value of <code>$[</code> no longer need to worry about whether another file changed its value. (In other words, use of <code>$[</code> is deprecated.) So in general you can assume that <!--
+	INDEX: $[
+--></p>
+
+<pre class="sh_perl">    scalar(@whatever) == $#whatever + 1;</pre>
+
+<p>Some programmers choose to use an explicit conversion so as to leave nothing to doubt:</p>
+
+<pre class="sh_perl">    $element_count = scalar(@whatever);</pre>
+
+<p>If you evaluate a hash in scalar context, it returns false if the hash is empty. If there are any key/value pairs, it returns true; more precisely, the value returned is a string consisting of the number of used buckets and the number of allocated buckets, separated by a slash. This is pretty much useful only to find out whether Perl&#39;s internal hashing algorithm is performing poorly on your data set. For example, you stick 10,000 things in a hash, but evaluating %HASH in scalar context reveals <code>&#34;1/16&#34;</code>, which means only one out of sixteen buckets has been touched, and presumably contains all 10,000 of your items. This isn&#39;t supposed to happen. If a tied hash is evaluated in scalar context, the <code>SCALAR</code> method is called (with a fallback to <code>FIRSTKEY</code>). <!--
+	INDEX: hash, scalar context
+--> <!--
+	INDEX: hash, bucket
+--> <!--
+	INDEX: bucket
+--></p>
+
+<p>You can preallocate space for a hash by assigning to the keys() function. This rounds up the allocated buckets to the next power of two:</p>
+
+<pre class="sh_perl">    keys(%users) = 1000;                # allocate 1024 buckets</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Scalar_value_constructors"
+>Scalar value constructors <!--
+	INDEX: scalar, literal
+--> <!--
+	INDEX: scalar, constant
+--></a></h2>
+
+<p>Numeric literals are specified in any of the following floating point or integer formats:</p>
+
+<pre class="sh_perl">    12345
+    12345.67
+    .23E-10             # a very small number
+    3.14_15_92          # a very important number
+    4_294_967_296       # underscore for legibility
+    0xff                # hex
+    0xdead_beef         # more hex   
+    0377                # octal (only numbers, begins with 0)
+    0b011011            # binary</pre>
+
+<p>You are allowed to use underscores (underbars) in numeric literals between digits for legibility. You could, for example, group binary digits by threes (as for a Unix-style mode argument such as 0b110_100_100) or by fours (to represent nibbles, as in 0b1010_0110) or in other groups. <!--
+	INDEX: number, literal
+--></p>
+
+<p>String literals are usually delimited by either single or double quotes. They work much like quotes in the standard Unix shells: double-quoted string literals are subject to backslash and variable substitution; single-quoted strings are not (except for <code>\&#39;</code> and <code>\\</code>). The usual C-style backslash rules apply for making characters such as newline, tab, etc., as well as some more exotic forms. See <a href="/~flora/perl-5.14.2/pod/perlop.pod#Quote_and_Quote-like_Operators" class="podlinkpod"
+>&#34;Quote and Quote-like Operators&#34; in perlop</a> for a list. <!--
+	INDEX: string, literal
+--></p>
+
+<p>Hexadecimal, octal, or binary, representations in string literals (e.g. &#39;0xff&#39;) are not automatically converted to their integer representation. The hex() and oct() functions make these conversions for you. See <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#hex" class="podlinkpod"
+>&#34;hex&#34; in perlfunc</a> and <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#oct" class="podlinkpod"
+>&#34;oct&#34; in perlfunc</a> for more details.</p>
+
+<p>You can also embed newlines directly in your strings, i.e., they can end on a different line than they begin. This is nice, but if you forget your trailing quote, the error will not be reported until Perl finds another line containing the quote character, which may be much further on in the script. Variable substitution inside strings is limited to scalar variables, arrays, and array or hash slices. (In other words, names beginning with $ or @, followed by an optional bracketed expression as a subscript.) The following code segment prints out &#34;The price is $100.&#34; <!--
+	INDEX: interpolation
+--></p>
+
+<pre class="sh_perl">    $Price = &#39;$100&#39;;    # not interpolated
+    print &#34;The price is $Price.\n&#34;;     # interpolated</pre>
+
+<p>There is no double interpolation in Perl, so the <code>$100</code> is left as is.</p>
+
+<p>By default floating point numbers substituted inside strings use the dot (&#34;.&#34;) as the decimal separator. If <code>use locale</code> is in effect, and POSIX::setlocale() has been called, the character used for the decimal separator is affected by the LC_NUMERIC locale. See <a href="/~flora/perl-5.14.2/pod/perllocale.pod" class="podlinkpod"
+>perllocale</a> and <a href="/~flora/perl-5.14.2/ext/POSIX/lib/POSIX.pod" class="podlinkpod"
+>POSIX</a>.</p>
+
+<p>As in some shells, you can enclose the variable name in braces to disambiguate it from following alphanumerics (and underscores). You must also do this when interpolating a variable into a string to separate the variable name from a following double-colon or an apostrophe, since these would be otherwise treated as a package separator: <!--
+	INDEX: interpolation
+--></p>
+
+<pre class="sh_perl">    $who = &#34;Larry&#34;;
+    print PASSWD &#34;${who}::0:0:Superuser:/:/bin/perl\n&#34;;
+    print &#34;We use ${who}speak when ${who}&#39;s here.\n&#34;;</pre>
+
+<p>Without the braces, Perl would have looked for a $whospeak, a <code>$who::0</code>, and a <code>$who&#39;s</code> variable. The last two would be the $0 and the $s variables in the (presumably) non-existent package <code>who</code>.</p>
+
+<p>In fact, an identifier within such curlies is forced to be a string, as is any simple identifier within a hash subscript. Neither need quoting. Our earlier example, <code>$days{&#39;Feb&#39;}</code> can be written as <code>$days{Feb}</code> and the quotes will be assumed automatically. But anything more complicated in the subscript will be interpreted as an expression. This means for example that <code>$version{2.0}++</code> is equivalent to <code>$version{2}++</code>, not to <code>$version{&#39;2.0&#39;}++</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Version_Strings"
+>Version Strings <!--
+	INDEX: version string
+--> <!--
+	INDEX: vstring
+--> <!--
+	INDEX: v-string
+--></a></h3>
+
+<p>A literal of the form <code>v1.20.300.4000</code> is parsed as a string composed of characters with the specified ordinals. This form, known as v-strings, provides an alternative, more readable way to construct strings, rather than use the somewhat less readable interpolation form <code>&#34;\x{1}\x{14}\x{12c}\x{fa0}&#34;</code>. This is useful for representing Unicode strings, and for comparing version &#34;numbers&#34; using the string comparison operators, <code>cmp</code>, <code>gt</code>, <code>lt</code> etc. If there are two or more dots in the literal, the leading <code>v</code> may be omitted.</p>
+
+<pre class="sh_perl">    print v9786;              # prints SMILEY, &#34;\x{263a}&#34;
+    print v102.111.111;       # prints &#34;foo&#34;
+    print 102.111.111;        # same</pre>
+
+<p>Such literals are accepted by both <code>require</code> and <code>use</code> for doing a version check. Note that using the v-strings for IPv4 addresses is not portable unless you also use the inet_aton()/inet_ntoa() routines of the Socket package.</p>
+
+<p>Note that since Perl 5.8.1 the single-number v-strings (like <code>v65</code>) are not v-strings before the <code>=&#62;</code> operator (which is usually used to separate a hash key from a hash value); instead they are interpreted as literal strings (&#39;v65&#39;). They were v-strings from Perl 5.6.0 to Perl 5.8.0, but that caused more confusion and breakage than good. Multi-number v-strings like <code>v65.66</code> and <code>65.66.67</code> continue to be v-strings always.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Special_Literals"
+>Special Literals <!--
+	INDEX: special literal
+--> <!--
+	INDEX: __END__
+--> <!--
+	INDEX: __DATA__
+--> <!--
+	INDEX: END
+--> <!--
+	INDEX: DATA
+--> <!--
+	INDEX: end
+--> <!--
+	INDEX: data
+--> <!--
+	INDEX: ^D
+--> <!--
+	INDEX: ^Z
+--></a></h3>
+
+<p>The special literals __FILE__, __LINE__, and __PACKAGE__ represent the current filename, line number, and package name at that point in your program. They may be used only as separate tokens; they will not be interpolated into strings. If there is no current package (due to an empty <code>package;</code> directive), __PACKAGE__ is the undefined value. (But the empty <code>package;</code> is no longer supported, as of version 5.10.) <!--
+	INDEX: __FILE__
+--> <!--
+	INDEX: __LINE__
+--> <!--
+	INDEX: __PACKAGE__
+--> <!--
+	INDEX: line
+--> <!--
+	INDEX: file
+--> <!--
+	INDEX: package
+--></p>
+
+<p>The two control characters ^D and ^Z, and the tokens __END__ and __DATA__ may be used to indicate the logical end of the script before the actual end of file. Any following text is ignored.</p>
+
+<p>Text after __DATA__ may be read via the filehandle <code>PACKNAME::DATA</code>, where <code>PACKNAME</code> is the package that was current when the __DATA__ token was encountered. The filehandle is left open pointing to the contents after __DATA__. It is the program&#39;s responsibility to <code>close DATA</code> when it is done reading from it. For compatibility with older scripts written before __DATA__ was introduced, __END__ behaves like __DATA__ in the top level script (but not in files loaded with <code>require</code> or <code>do</code>) and leaves the remaining contents of the file accessible via <code>main::DATA</code>.</p>
+
+<p>See <a href="/perldoc?SelfLoader" class="podlinkpod"
+>SelfLoader</a> for more description of __DATA__, and an example of its use. Note that you cannot read from the DATA filehandle in a BEGIN block: the BEGIN block is executed as soon as it is seen (during compilation), at which point the corresponding __DATA__ (or __END__) token has not yet been seen.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Barewords"
+>Barewords <!--
+	INDEX: bareword
+--></a></h3>
+
+<p>A word that has no other interpretation in the grammar will be treated as if it were a quoted string. These are known as &#34;barewords&#34;. As with filehandles and labels, a bareword that consists entirely of lowercase letters risks conflict with future reserved words, and if you use the <code>use warnings</code> pragma or the <b>-w</b> switch, Perl will warn you about any such words. Perl limits barewords (like identifiers) to about 250 characters. Future versions of Perl are likely to eliminate these arbitrary limitations.</p>
+
+<p>Some people may wish to outlaw barewords entirely. If you say</p>
+
+<pre class="sh_perl">    use strict &#39;subs&#39;;</pre>
+
+<p>then any bareword that would NOT be interpreted as a subroutine call produces a compile-time error instead. The restriction lasts to the end of the enclosing block. An inner block may countermand this by saying <code>no strict &#39;subs&#39;</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Array_Interpolation"
+>Array Interpolation <!--
+	INDEX: array, interpolation
+--> <!--
+	INDEX: interpolation, array
+--> <!--
+	INDEX: $&#34;
+--></a></h3>
+
+<p>Arrays and slices are interpolated into double-quoted strings by joining the elements with the delimiter specified in the <code>$&#34;</code> variable (<code>$LIST_SEPARATOR</code> if &#34;use English;&#34; is specified), space by default. The following are equivalent:</p>
+
+<pre class="sh_perl">    $temp = join($&#34;, @ARGV);
+    system &#34;echo $temp&#34;;
+
+    system &#34;echo @ARGV&#34;;</pre>
+
+<p>Within search patterns (which also undergo double-quotish substitution) there is an unfortunate ambiguity: Is <code>/$foo[bar]/</code> to be interpreted as <code>/${foo}[bar]/</code> (where <code>[bar]</code> is a character class for the regular expression) or as <code>/${foo[bar]}/</code> (where <code>[bar]</code> is the subscript to array @foo)? If @foo doesn&#39;t otherwise exist, then it&#39;s obviously a character class. If @foo exists, Perl takes a good guess about <code>[bar]</code>, and is almost always right. If it does guess wrong, or if you&#39;re just plain paranoid, you can force the correct interpretation with curly braces as above.</p>
+
+<p>If you&#39;re looking for the information on how to use here-documents, which used to be here, that&#39;s been moved to <a href="/~flora/perl-5.14.2/pod/perlop.pod#Quote_and_Quote-like_Operators" class="podlinkpod"
+>&#34;Quote and Quote-like Operators&#34; in perlop</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="List_value_constructors"
+>List value constructors <!--
+	INDEX: list
+--></a></h2>
+
+<p>List values are denoted by separating individual values by commas (and enclosing the list in parentheses where precedence requires it):</p>
+
+<pre class="sh_perl">    (LIST)</pre>
+
+<p>In a context not requiring a list value, the value of what appears to be a list literal is simply the value of the final element, as with the C comma operator. For example,</p>
+
+<pre class="sh_perl">    @foo = (&#39;cc&#39;, &#39;-E&#39;, $bar);</pre>
+
+<p>assigns the entire list value to array @foo, but</p>
+
+<pre class="sh_perl">    $foo = (&#39;cc&#39;, &#39;-E&#39;, $bar);</pre>
+
+<p>assigns the value of variable $bar to the scalar variable $foo. Note that the value of an actual array in scalar context is the length of the array; the following assigns the value 3 to $foo:</p>
+
+<pre class="sh_perl">    @foo = (&#39;cc&#39;, &#39;-E&#39;, $bar);
+    $foo = @foo;                # $foo gets 3</pre>
+
+<p>You may have an optional comma before the closing parenthesis of a list literal, so that you can say:</p>
+
+<pre class="sh_perl">    @foo = (
+        1,
+        2,
+        3,
+    );</pre>
+
+<p>To use a here-document to assign an array, one line per element, you might use an approach like this:</p>
+
+<pre class="sh_perl">    @sauces = &#60;&#60;End_Lines =~ m/(\S.*\S)/g;
+        normal tomato
+        spicy tomato
+        green chile
+        pesto
+        white wine
+    End_Lines</pre>
+
+<p>LISTs do automatic interpolation of sublists. That is, when a LIST is evaluated, each element of the list is evaluated in list context, and the resulting list value is interpolated into LIST just as if each individual element were a member of LIST. Thus arrays and hashes lose their identity in a LIST--the list</p>
+
+<pre class="sh_perl">    (@foo,@bar,&#38;SomeSub,%glarch)</pre>
+
+<p>contains all the elements of @foo followed by all the elements of @bar, followed by all the elements returned by the subroutine named SomeSub called in list context, followed by the key/value pairs of %glarch. To make a list reference that does <i>NOT</i> interpolate, see <a href="/~flora/perl-5.14.2/pod/perlref.pod" class="podlinkpod"
+>perlref</a>.</p>
+
+<p>The null list is represented by (). Interpolating it in a list has no effect. Thus ((),(),()) is equivalent to (). Similarly, interpolating an array with no elements is the same as if no array had been interpolated at that point.</p>
+
+<p>This interpolation combines with the facts that the opening and closing parentheses are optional (except when necessary for precedence) and lists may end with an optional comma to mean that multiple commas within lists are legal syntax. The list <code>1,,3</code> is a concatenation of two lists, <code>1,</code> and <code>3</code>, the first of which ends with that optional comma. <code>1,,3</code> is <code>(1,),(3)</code> is <code>1,3</code> (And similarly for <code>1,,,3</code> is <code>(1,),(,),3</code> is <code>1,3</code> and so on.) Not that we&#39;d advise you to use this obfuscation.</p>
+
+<p>A list value may also be subscripted like a normal array. You must put the list in parentheses to avoid ambiguity. For example:</p>
+
+<pre class="sh_perl">    # Stat returns list value.
+    $time = (stat($file))[8];
+
+    # SYNTAX ERROR HERE.
+    $time = stat($file)[8];  # OOPS, FORGOT PARENTHESES
+
+    # Find a hex digit.
+    $hexdigit = (&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;)[$digit-10];
+
+    # A &#34;reverse comma operator&#34;.
+    return (pop(@foo),pop(@foo))[0];</pre>
+
+<p>Lists may be assigned to only when each element of the list is itself legal to assign to:</p>
+
+<pre class="sh_perl">    ($a, $b, $c) = (1, 2, 3);
+
+    ($map{&#39;red&#39;}, $map{&#39;blue&#39;}, $map{&#39;green&#39;}) = (0x00f, 0x0f0, 0xf00);</pre>
+
+<p>An exception to this is that you may assign to <code>undef</code> in a list. This is useful for throwing away some of the return values of a function:</p>
+
+<pre class="sh_perl">    ($dev, $ino, undef, undef, $uid, $gid) = stat($file);</pre>
+
+<p>List assignment in scalar context returns the number of elements produced by the expression on the right side of the assignment:</p>
+
+<pre class="sh_perl">    $x = (($foo,$bar) = (3,2,1));       # set $x to 3, not 2
+    $x = (($foo,$bar) = f());           # set $x to f()&#39;s return count</pre>
+
+<p>This is handy when you want to do a list assignment in a Boolean context, because most list functions return a null list when finished, which when assigned produces a 0, which is interpreted as FALSE.</p>
+
+<p>It&#39;s also the source of a useful idiom for executing a function or performing an operation in list context and then counting the number of return values, by assigning to an empty list and then using that assignment in scalar context. For example, this code:</p>
+
+<pre class="sh_perl">    $count = () = $string =~ /\d+/g;</pre>
+
+<p>will place into $count the number of digit groups found in $string. This happens because the pattern match is in list context (since it is being assigned to the empty list), and will therefore return a list of all matching parts of the string. The list assignment in scalar context will translate that into the number of elements (here, the number of times the pattern matched) and assign that to $count. Note that simply using</p>
+
+<pre class="sh_perl">    $count = $string =~ /\d+/g;</pre>
+
+<p>would not have worked, since a pattern match in scalar context will only return true or false, rather than a count of matches.</p>
+
+<p>The final element of a list assignment may be an array or a hash:</p>
+
+<pre class="sh_perl">    ($a, $b, @rest) = split;
+    my($a, $b, %rest) = @_;</pre>
+
+<p>You can actually put an array or hash anywhere in the list, but the first one in the list will soak up all the values, and anything after it will become undefined. This may be useful in a my() or local().</p>
+
+<p>A hash can be initialized using a literal list holding pairs of items to be interpreted as a key and a value:</p>
+
+<pre class="sh_perl">    # same as map assignment above
+    %map = (&#39;red&#39;,0x00f,&#39;blue&#39;,0x0f0,&#39;green&#39;,0xf00);</pre>
+
+<p>While literal lists and named arrays are often interchangeable, that&#39;s not the case for hashes. Just because you can subscript a list value like a normal array does not mean that you can subscript a list value as a hash. Likewise, hashes included as parts of other lists (including parameters lists and return lists from functions) always flatten out into key/value pairs. That&#39;s why it&#39;s good to use references sometimes.</p>
+
+<p>It is often more readable to use the <code>=&#62;</code> operator between key/value pairs. The <code>=&#62;</code> operator is mostly just a more visually distinctive synonym for a comma, but it also arranges for its left-hand operand to be interpreted as a string if it&#39;s a bareword that would be a legal simple identifier. <code>=&#62;</code> doesn&#39;t quote compound identifiers, that contain double colons. This makes it nice for initializing hashes:</p>
+
+<pre class="sh_perl">    %map = (
+                 red   =&#62; 0x00f,
+                 blue  =&#62; 0x0f0,
+                 green =&#62; 0xf00,
+   );</pre>
+
+<p>or for initializing hash references to be used as records:</p>
+
+<pre class="sh_perl">    $rec = {
+                witch =&#62; &#39;Mable the Merciless&#39;,
+                cat   =&#62; &#39;Fluffy the Ferocious&#39;,
+                date  =&#62; &#39;10/31/1776&#39;,
+    };</pre>
+
+<p>or for using call-by-named-parameter to complicated functions:</p>
+
+<pre class="sh_perl">   $field = $query-&#62;radio_group(
+               name      =&#62; &#39;group_name&#39;,
+               values    =&#62; [&#39;eenie&#39;,&#39;meenie&#39;,&#39;minie&#39;],
+               default   =&#62; &#39;meenie&#39;,
+               linebreak =&#62; &#39;true&#39;,
+               labels    =&#62; \%labels
+   );</pre>
+
+<p>Note that just because a hash is initialized in that order doesn&#39;t mean that it comes out in that order. See <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#sort" class="podlinkpod"
+>&#34;sort&#34; in perlfunc</a> for examples of how to arrange for an output ordering.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Subscripts"
+>Subscripts</a></h2>
+
+<p>An array can be accessed one scalar at a time by specifying a dollar sign (<code>$</code>), then the name of the array (without the leading <code>@</code>), then the subscript inside square brackets. For example:</p>
+
+<pre class="sh_perl">    @myarray = (5, 50, 500, 5000);
+    print &#34;The Third Element is&#34;, $myarray[2], &#34;\n&#34;;</pre>
+
+<p>The array indices start with 0. A negative subscript retrieves its value from the end. In our example, <code>$myarray[-1]</code> would have been 5000, and <code>$myarray[-2]</code> would have been 500.</p>
+
+<p>Hash subscripts are similar, only instead of square brackets curly brackets are used. For example:</p>
+
+<pre class="sh_perl">    %scientists = 
+    (
+        &#34;Newton&#34; =&#62; &#34;Isaac&#34;,
+        &#34;Einstein&#34; =&#62; &#34;Albert&#34;,
+        &#34;Darwin&#34; =&#62; &#34;Charles&#34;,
+        &#34;Feynman&#34; =&#62; &#34;Richard&#34;,
+    );
+
+    print &#34;Darwin&#39;s First Name is &#34;, $scientists{&#34;Darwin&#34;}, &#34;\n&#34;;</pre>
+
+<p>You can also subscript a list to get a single element from it:</p>
+
+<pre class="sh_perl">    $dir = (getpwnam(&#34;daemon&#34;))[7];</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Slices"
+>Slices <!--
+	INDEX: slice
+--> <!--
+	INDEX: array, slice
+--> <!--
+	INDEX: hash, slice
+--></a></h2>
+
+<p>A slice accesses several elements of a list, an array, or a hash simultaneously using a list of subscripts. It&#39;s more convenient than writing out the individual elements as a list of separate scalar values.</p>
+
+<pre class="sh_perl">    ($him, $her)   = @folks[0,-1];              # array slice
+    @them          = @folks[0 .. 3];            # array slice
+    ($who, $home)  = @ENV{&#34;USER&#34;, &#34;HOME&#34;};      # hash slice
+    ($uid, $dir)   = (getpwnam(&#34;daemon&#34;))[2,7]; # list slice</pre>
+
+<p>Since you can assign to a list of variables, you can also assign to an array or hash slice.</p>
+
+<pre class="sh_perl">    @days[3..5]    = qw/Wed Thu Fri/;
+    @colors{&#39;red&#39;,&#39;blue&#39;,&#39;green&#39;} 
+                   = (0xff0000, 0x0000ff, 0x00ff00);
+    @folks[0, -1]  = @folks[-1, 0];</pre>
+
+<p>The previous assignments are exactly equivalent to</p>
+
+<pre class="sh_perl">    ($days[3], $days[4], $days[5]) = qw/Wed Thu Fri/;
+    ($colors{&#39;red&#39;}, $colors{&#39;blue&#39;}, $colors{&#39;green&#39;})
+                   = (0xff0000, 0x0000ff, 0x00ff00);
+    ($folks[0], $folks[-1]) = ($folks[-1], $folks[0]);</pre>
+
+<p>Since changing a slice changes the original array or hash that it&#39;s slicing, a <code>foreach</code> construct will alter some--or even all--of the values of the array or hash.</p>
+
+<pre class="sh_perl">    foreach (@array[ 4 .. 10 ]) { s/peter/paul/ } 
+
+    foreach (@hash{qw[key1 key2]}) {
+        s/^\s+//;           # trim leading whitespace
+        s/\s+$//;           # trim trailing whitespace
+        s/(\w+)/\u\L$1/g;   # &#34;titlecase&#34; words
+    }</pre>
+
+<p>A slice of an empty list is still an empty list. Thus:</p>
+
+<pre class="sh_perl">    @a = ()[1,0];           # @a has no elements
+    @b = (@a)[0,1];         # @b has no elements
+    @c = (0,1)[2,3];        # @c has no elements</pre>
+
+<p>But:</p>
+
+<pre class="sh_perl">    @a = (1)[1,0];          # @a has two elements
+    @b = (1,undef)[1,0,2];  # @b has three elements</pre>
+
+<p>This makes it easy to write loops that terminate when a null list is returned:</p>
+
+<pre class="sh_perl">    while ( ($home, $user) = (getpwent)[7,0]) {
+        printf &#34;%-8s %s\n&#34;, $user, $home;
+    }</pre>
+
+<p>As noted earlier in this document, the scalar sense of list assignment is the number of elements on the right-hand side of the assignment. The null list contains no elements, so when the password file is exhausted, the result is 0, not 2.</p>
+
+<p>Slices in scalar context return the last item of the slice.</p>
+
+<pre class="sh_perl">    @a = qw/first second third/;
+    %h = (first =&#62; &#39;A&#39;, second =&#62; &#39;B&#39;);
+    $t = @a[0, 1];                  # $t is now &#39;second&#39;
+    $u = @h{&#39;first&#39;, &#39;second&#39;};     # $u is now &#39;B&#39;</pre>
+
+<p>If you&#39;re confused about why you use an &#39;@&#39; there on a hash slice instead of a &#39;%&#39;, think of it like this. The type of bracket (square or curly) governs whether it&#39;s an array or a hash being looked at. On the other hand, the leading symbol (&#39;$&#39; or &#39;@&#39;) on the array or hash indicates whether you are getting back a singular value (a scalar) or a plural one (a list).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Typeglobs_and_Filehandles"
+>Typeglobs and Filehandles <!--
+	INDEX: typeglob
+--> <!--
+	INDEX: filehandle
+--> <!--
+	INDEX: *
+--></a></h2>
+
+<p>Perl uses an internal type called a <i>typeglob</i> to hold an entire symbol table entry. The type prefix of a typeglob is a <code>*</code>, because it represents all types. This used to be the preferred way to pass arrays and hashes by reference into a function, but now that we have real references, this is seldom needed.</p>
+
+<p>The main use of typeglobs in modern Perl is create symbol table aliases. This assignment:</p>
+
+<pre class="sh_perl">    *this = *that;</pre>
+
+<p>makes $this an alias for $that, @this an alias for @that, %this an alias for %that, &#38;this an alias for &#38;that, etc. Much safer is to use a reference. This:</p>
+
+<pre class="sh_perl">    local *Here::blue = \$There::green;</pre>
+
+<p>temporarily makes $Here::blue an alias for $There::green, but doesn&#39;t make @Here::blue an alias for @There::green, or %Here::blue an alias for %There::green, etc. See <a href="/~flora/perl-5.14.2/pod/perlmod.pod#Symbol_Tables" class="podlinkpod"
+>&#34;Symbol Tables&#34; in perlmod</a> for more examples of this. Strange though this may seem, this is the basis for the whole module import/export system.</p>
+
+<p>Another use for typeglobs is to pass filehandles into a function or to create new filehandles. If you need to use a typeglob to save away a filehandle, do it this way:</p>
+
+<pre class="sh_perl">    $fh = *STDOUT;</pre>
+
+<p>or perhaps as a real reference, like this:</p>
+
+<pre class="sh_perl">    $fh = \*STDOUT;</pre>
+
+<p>See <a href="/~flora/perl-5.14.2/pod/perlsub.pod" class="podlinkpod"
+>perlsub</a> for examples of using these as indirect filehandles in functions.</p>
+
+<p>Typeglobs are also a way to create a local filehandle using the local() operator. These last until their block is exited, but may be passed back. For example:</p>
+
+<pre class="sh_perl">    sub newopen {
+        my $path = shift;
+        local  *FH;  # not my!
+        open   (FH, $path)          or  return undef;
+        return *FH;
+    }
+    $fh = newopen(&#39;/etc/passwd&#39;);</pre>
+
+<p>Now that we have the <code>*foo{THING}</code> notation, typeglobs aren&#39;t used as much for filehandle manipulations, although they&#39;re still needed to pass brand new file and directory handles into or out of functions. That&#39;s because <code>*HANDLE{IO}</code> only works if HANDLE has already been used as a handle. In other words, <code>*FH</code> must be used to create new symbol table entries; <code>*foo{THING}</code> cannot. When in doubt, use <code>*FH</code>.</p>
+
+<p>All functions that are capable of creating filehandles (open(), opendir(), pipe(), socketpair(), sysopen(), socket(), and accept()) automatically create an anonymous filehandle if the handle passed to them is an uninitialized scalar variable. This allows the constructs such as <code>open(my $fh, ...)</code> and <code>open(local $fh,...)</code> to be used to create filehandles that will conveniently be closed automatically when the scope ends, provided there are no other references to them. This largely eliminates the need for typeglobs when opening filehandles that must be passed around, as in the following example:</p>
+
+<pre class="sh_perl">    sub myopen {
+        open my $fh, &#34;@_&#34;
+             or die &#34;Can&#39;t open &#39;@_&#39;: $!&#34;;
+        return $fh;
+    }
+
+    {
+        my $f = myopen(&#34;&#60;/etc/motd&#34;);
+        print &#60;$f&#62;;
+        # $f implicitly closed here
+    }</pre>
+
+<p>Note that if an initialized scalar variable is used instead the result is different: <code>my $fh=&#39;zzz&#39;; open($fh, ...)</code> is equivalent to <code>open( *{&#39;zzz&#39;}, ...)</code>. <code>use strict &#39;refs&#39;</code> forbids such practice.</p>
+
+<p>Another way to create anonymous filehandles is with the Symbol module or with the IO::Handle module and its ilk. These modules have the advantage of not hiding different types of the same name during the local(). See the bottom of <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#open_FILEHANDLE" class="podlinkpod"
+>&#34;open FILEHANDLE&#34; in perlfunc</a> for an example.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>See <a href="/~flora/perl-5.14.2/pod/perlvar.pod" class="podlinkpod"
+>perlvar</a> for a description of Perl&#39;s built-in variables and a discussion of legal variable names. See <a href="/~flora/perl-5.14.2/pod/perlref.pod" class="podlinkpod"
+>perlref</a>, <a href="/~flora/perl-5.14.2/pod/perlsub.pod" class="podlinkpod"
+>perlsub</a>, and <a href="/~flora/perl-5.14.2/pod/perlmod.pod#Symbol_Tables" class="podlinkpod"
+>&#34;Symbol Tables&#34; in perlmod</a> for more discussion on typeglobs and the <code>*foo{THING}</code> syntax.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78071 Uploads, 24685 Distributions
+105889 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 16:26:06 2012 GMT (0.13239312171936) @cpansearch1 -->
+ </body>
+</html>

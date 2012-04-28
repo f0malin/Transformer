@@ -1,0 +1,753 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Crypt::IDA - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Crypt-IDA",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Crypt-IDA-0.01",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Crypt::IDA",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DMALONE",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Crypt::IDA">permalink</a></div>
+  <a href="/~dmalone/">Declan Malone</a> &gt;
+  <a href="/~dmalone/Crypt-IDA-0.01/">Crypt-IDA-0.01</a> &gt;
+  Crypt::IDA
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/8845459485d4efaf139f6159d228618a?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DM/DMALONE/Crypt-IDA/Crypt-IDA-0.01.tar.gz">Crypt-IDA/Crypt-IDA-0.01.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Crypt%3A%3AIDA;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DMALONE/Crypt-IDA-0.01/lib/Crypt/IDA.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Crypt-IDA">View/Report Bugs</a><br/>
+
+</div>
+</div>
+  Module Version:  0.01 &nbsp;
+<span class="noprint">
+  <a href="/src/DMALONE/Crypt-IDA-0.01/lib/Crypt/IDA.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#EXPORT'>EXPORT</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#GENERAL_OPERATION'>GENERAL OPERATION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Naming_conventions'>Naming conventions</a>
+    <li class='indexItem indexItem2'><a href='#Stream-processing_design_pattern'>Stream-processing design pattern</a>
+    <li class='indexItem indexItem2'><a href='#Keys_and_transform_matrices'>Keys and transform matrices</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#FILL/EMPTY_CALLBACKS'>FILL/EMPTY CALLBACKS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#&#34;Fill&#34;_Callbacks'>&#34;Fill&#34; Callbacks</a>
+    <li class='indexItem indexItem2'><a href='#&#34;Empty&#34;_Callbacks'>&#34;Empty&#34; Callbacks</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SPLIT_OPERATION'>SPLIT OPERATION</a>
+  <li class='indexItem indexItem1'><a href='#COMBINE_OPERATION'>COMBINE OPERATION</a>
+  <li class='indexItem indexItem1'><a href='#ANCILLARY_ROUTINES'>ANCILLARY ROUTINES</a>
+  <li class='indexItem indexItem1'><a href='#KEY_MANAGEMENT'>KEY MANAGEMENT</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Adding_extra_shares_at_a_later_time'>Adding extra shares at a later time</a>
+    <li class='indexItem indexItem2'><a href='#In_the_event_of_lost_or_stolen_shares'>In the event of lost or stolen shares</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#TECHNICAL_DETAILS'>TECHNICAL DETAILS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Field_implementation'>Field implementation</a>
+    <li class='indexItem indexItem2'><a href='#Reed-Solomon_Encoding'>Reed-Solomon Encoding</a>
+    <li class='indexItem indexItem2'><a href='#Writing_Custom_Callbacks'>Writing Custom Callbacks</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#KNOWN_BUGS'>KNOWN BUGS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#FUTURE_VERSIONS'>FUTURE VERSIONS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+  <li class='indexItem indexItem1'><a href='#DISCLAIMER'>DISCLAIMER</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Crypt::IDA - Michael Rabin&#39;s Information Dispersal Algorithm</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use Crypt::IDA &#34;:default&#34;;
+
+  $source=fill_from_string ($string,$align);
+  $source=fill_from_fh     ($fh,$align,$offset);
+  $source=fill_from_file   ($filename,$align,$offset);
+  $sink=empty_to_string    (\$string);
+  $sink=empty_to_fh        ($fh,$offset);
+  $sink=empty_to_file      ($filename,$mode,$offset);
+  ($key,$mat,$bytes) = ida_split ( ... );
+  $bytes             = ida_combine ( ... );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module splits a secret into one or more &#34;shares&#34; which have the property that if a certain number of shares (the &#34;quorum&#34; or &#34;threshold&#34;) are presented in the combine step, the secret can be recovered. The algorithm should be cryptographically secure in the sense that if fewer shares than the quorum are presented, no information about the secret is revealed.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORT"
+>EXPORT</a></h2>
+
+<p>No methods are exported by default. All methods may be called by prefixing the method names with the module name, eg:</p>
+
+<pre class="sh_perl"> $source=Crypt::IDA::fill_from_string($string,$align)</pre>
+
+<p>Alternatively, routines can be exported by adding &#34;:default&#34; to the &#34;use&#34; line, in which case the routine names do not need to be prefixed with the module name, ie:</p>
+
+<pre class="sh_perl">  use Crypt::IDA &#34;:default&#34;;
+  
+  $source=fill_from_string ($string,$align);
+  # ...</pre>
+
+<p>Some extra ancillary routines can also be exported with the &#34;:extras&#34; (just the extras) or &#34;:all&#34; (&#34;:extras&#34; plus &#34;:default&#34;) parameters to the use line. See the section <a href="#ANCILLARY_ROUTINES" class="podlinkpod"
+>&#34;ANCILLARY ROUTINES&#34;</a> for details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="GENERAL_OPERATION"
+>GENERAL OPERATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Naming_conventions"
+>Naming conventions</a></h2>
+
+<p>The following variable names will be used throughout this documentation:</p>
+
+<pre class="sh_perl">  $n        number of shares to create
+  $k        number of shares needed to combine (ie, the &#34;quorum&#34;)
+  $w        width (treat input/output as being 1, 2 or 4-byte words)
+  $align    null-pad input up a multiple of $align bytes
+  $key      key parameter used to create transform matrix
+  $mat      transform matrix/inverse transform matrix</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Stream-processing_design_pattern"
+>Stream-processing design pattern</a></h2>
+
+<p>Rather than implement separate <code>ida_split_string</code> or <code>ida_split_file</code> methods, a more flexible design which decouples the details of the input and output streams from the actual processing is used. In terms of design patterns, the <code>ida_split</code> and <code>ida_combine</code> routines operate as stream processors, and use user-supplied callbacks to read some bytes of input or write some bytes of output. Therefore, the split and combine tasks break down into three steps:</p>
+
+<dl>
+<dt><a name='1'></a><a name="1._Set_up_fill_handler(s)"
+>1. Set up fill handler(s)</a></dt>
+
+<dd>
+<dt><a name='2'></a><a name="2._Set_up_empty_handler(s)"
+>2. Set up empty handler(s)</a></dt>
+
+<dd>
+<dt><a name='3'></a><a name="3._Call_processing_routine_(ida_split/ida_combine)"
+>3. Call processing routine (ida_split/ida_combine)</a></dt>
+</dl>
+
+<p>For the <code>ida_split</code> routine, a single &#34;fill&#34; handler is required, while one or more &#34;empty&#34; handlers are required (one for each share to be output). For the <code>ida_combine</code> routine, the opposite is true: one or more &#34;fill&#34; handlers are required (corresponding to the shares to be combined), while a single &#34;empty&#34; handler (for the recombined secret) is required.</p>
+
+<p>The <code>fill_from_*</code> and <code>empty_to_*</code> routines create callbacks which can be used by <code>ida_split</code>/<code>ida_combine</code>. Routines are provided for creating callbacks given a string, filename or open file handle. Custom callbacks (such as for reading/writing on a network socket connection or an IPC message queue) can also be written quite easily. See the section <a href="#Writing_Custom_Callbacks" class="podlinkpod"
+>&#34;Writing Custom Callbacks&#34;</a> for more details.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Keys_and_transform_matrices"
+>Keys and transform matrices</a></h2>
+
+<p>Both the split and combine algorithms operate by performing matrix multiplication over the input. In the case of the split operation, the transform matrix has n rows (n=number of shares) and k columns (k=quorum), while in the case of combine operation, the transform matrix has k rows and k columns. Either operation is described simply as the matrix multiplication:</p>
+
+<pre class="sh_perl"> transform x input = output</pre>
+
+<p>The input matrix always has k rows, while the output matrix will have n rows for the split operation, or k rows for the combine operation. Both input and output matrices will have a number of columns related to the length of the secret being split/combined. (Actually, in this implementation, the number of columns in the input/output matrix is unimportant, since the matrices are treated as circular buffers with columns being reused when necessary, but the general idea still stands).</p>
+
+<p>The transform matrix must have the property that any subset of k rows represent linearly independent basis vectors. If this is not the case then the transform cannot be reversed. This need not be a concern for most users of this module, since if the ida_split routine is not provided a transform matrix parameter, it will generate one of the appropriate form, which guarantees (in the mathematical sense) that the process is reversible. However, understanding the requirement of linear independence is important in case a user-supplied matrix is provided, and also for understanding the &#34;key&#34; parameter to the split/combine routines. A &#34;key&#34; is defined as a list of field elements (ie, 8-bit, 16-bit or 32-bit values):</p>
+
+<pre class="sh_perl"> x , x ,  ... , x , y , y , ... , y
+  1   2          n   1   2         k</pre>
+
+<p>whose values must all be distinct. If a key is supplied to the split routine, these values are used to create a Cauchy-form transform matrix:</p>
+
+<pre class="sh_perl">              k columns
+ 
+ |     1        1             1     |
+ |  -------  -------  ...  -------  |
+ |  x1 + y1  x1 + y2       x1 + yk  |
+ |                                  |
+ |     1        1             1     |
+ |  -------  -------  ...  -------  |
+ |  x2 + y1  x2 + y2       x2 + yk  |  n rows
+ |                                  |
+ |     :        :      :      :     |
+ |                                  |
+ |     1        1             1     |
+ |  -------  -------  ...  -------  |
+ |  xn + y1  xn + y2       xn + yk  |</pre>
+
+<p>This matrix has the desired property that any subset of k rows are linearly independent, which leads to the property that the transform can be reversed (via being able to create an inverse matrix from those k rows). The actual requirements for a Cauchy-form matrix are slightly more complicated than saying that all xi, yi values be distinct, but they reduce to exactly that for Galois Fields.</p>
+
+<p>If the same key is supplied to the combine routine (along with a list of rows to be created), the appropriate submatrix is generated and inverted. This inverted matrix is then used as the transform matrix for the combine algorithm.</p>
+
+<p>For more information, see the sections for <a href="#KEY_MANAGEMENT" class="podlinkpod"
+>&#34;KEY MANAGEMENT&#34;</a>, <a href="#SPLIT_OPERATION" class="podlinkpod"
+>&#34;SPLIT OPERATION&#34;</a>, <a href="#COMBINE_OPERATION" class="podlinkpod"
+>&#34;COMBINE OPERATION&#34;</a> and the <a href="#SEE_ALSO" class="podlinkpod"
+>&#34;SEE ALSO&#34;</a> section.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FILL/EMPTY_CALLBACKS"
+>FILL/EMPTY CALLBACKS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="&#34;Fill&#34;_Callbacks"
+>&#34;Fill&#34; Callbacks</a></h2>
+
+<p>Fill callbacks are created by a call to one of:</p>
+
+<pre class="sh_perl"> $source=fill_from_string ($string,$align);
+ $source=fill_from_fh     ($fh,$align,$offset);
+ $source=fill_from_file   ($filename,$align,$offset);</pre>
+
+<p>The <code>$string</code>, <code>$fh</code> and <code>$filename</code> parameters should be self-explanatory. The $offset parameter, where supplied, specifies an offset to seek to in the file/file handle <i>before</i> any reading takes place. The <code>$offset</code> parameter may be omitted, in which case it defaults to 0, i.e., the start of the file.</p>
+
+<p>The $align parameter specifies that the input is to be null-padded up to a multiple of $align bytes, should it not already be so-aligned. The <code>ida_split</code> routine requires that the input be a multiple of <code>$k * $w</code> bytes in length, so this is the usual value to pass for the <code>$align</code> parameter. If <code>$align</code> is not specified, it defaults to 1, meaning the input is byte-aligned, and no padding bytes will be placed at the end of the file/string. Also note that if an <code>$align</code> parameter is used in conjunction with the <code>$offset</code> parameter, that the input will be aligned to be a multiple of <code>$align</code> bytes starting from <i>$offset</i>, and not from the start of the file.</p>
+
+<p>Also, be aware that if the input secret needs to be padded before calling <code>ida_split</code> that you will need to have some way of removing those padding bytes after recovering the secret with <code>ida_combine</code>. This can be accomplished by removing null bytes from the end of the secret (provided trailing nulls in the original secret are prohibited), or (as is preferable for splitting/combining binary files), by recording the original (unpadded) size of the secret and truncating the reconstituted secret down to that size after calling <code>ida_combine</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="&#34;Empty&#34;_Callbacks"
+>&#34;Empty&#34; Callbacks</a></h2>
+
+<p>The following routines are available for creating &#34;empty&#34; callbacks:</p>
+
+<pre class="sh_perl">  $sink=empty_to_string    (\$string);
+  $sink=empty_to_fh        ($fh,$offset);
+  $sink=empty_to_file      ($filename,$perm,$offset);</pre>
+
+<p>All parameters with the same name are the same as in the &#34;fill&#34; callbacks. Additionally, note that:</p>
+
+<ul>
+<li>empty_to_string requires a <i>reference</i> to a string variable (to enable the callback to modify the string);</li>
+
+<li>empty handlers do not pad the output stream, so they don&#39;t need an <code>$align</code> parameter; and</li>
+
+<li>empty_to_file takes a <code>$perm</code> (file permission) parameter, which defaults to 0644 if not specified.</li>
+</ul>
+
+<p>As with the fill handler routines, these routines return a hash reference (which contains the actual callback) if successful, or undef if there was a problem (in which case file-related problems will be reported in $!).</p>
+
+<p>The empty_to_file routine will create the output file if it does not already exist.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SPLIT_OPERATION"
+>SPLIT OPERATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The template for a call to <code>ida_split</code>, showing all default values, is as follows:</p>
+
+<pre class="sh_perl"> ($key,$mat,$bytes) = ida_split (
+     quorum =&#62; undef,
+     shares =&#62; undef,
+     width =&#62; undef,      # operate on words of 1, 2 or 4 bytes
+     # supply a key, a matrix, or  neither (in
+     # which case a key will be randomly generated)
+     key =&#62; undef,
+     matrix =&#62; undef,
+     # optionally specify which shares to produce
+     sharelist =&#62; undef,  # [ $row1, $row2, ... ]
+     # source, sinks
+     filler =&#62; undef,
+     emptiers =&#62; undef,   # [ $empty1, $empty2, ... ]
+     # misc. options
+     rand =&#62; &#34;/dev/urandom&#34;,
+     bufsize =&#62; 4096,
+     bytes =&#62; 0,
+     # byte order flags
+     inorder =&#62; 0,
+     outorder =&#62; 0,
+ );</pre>
+
+<p>Many of the parameters above have already been described earlier. The new parameters introduced here are:</p>
+
+<ul>
+<li>If the key and matrix parameters are unset, then a random key/transform matrix will be generated and used to create the shares. For a discussion of cases where you might want to override this behaviour and supply your own values for these parameters, see the <a href="#Keys_and_transform_matrices" class="podlinkpod"
+>&#34;Keys and transform matrices&#34;</a> and <a href="#KEY_MANAGEMENT" class="podlinkpod"
+>&#34;KEY MANAGEMENT&#34;</a> sections.</li>
+
+<li>sharelist is a reference to a list of rows to be operated on; if specified, only shares corresponding to those rows in the transform matrix will be created.</li>
+
+<li>emptiers is a reference to a list of empty callbacks. The list should contain one empty callback for each share to be produced.</li>
+
+<li>rand can be set to &#34;rand&#34;, in which case Perl&#39;s default <code>rand()</code> function will be used for generating keys. Otherwise, the parameter is taken to be a file containing the random number to be used (<code>/dev/urandom</code> and <code>/dev/random</code> are special devices on Linux systems which generate different random numbers each time they are read; see their man pages for details).</li>
+
+<li>bufsize specifies the size of the input and output buffer matrices in terms of the number of columns. Any integer value greater than 0 is allowed. Larger buffer size should improve the performance of the algorithm, as fewer I/O calls and matrix multiply calls (on larger chunks of data) will be required.</li>
+
+<li>bytes specifies how many bytes of input to read. This may be set to zero to indicate that all bytes up to EOF should be read. This value must be a multiple of quorum x width</li>
+
+<li>inorder and outorder can be used to specify the byte order of the input and output streams, respectively. The values can be set to 0 (stream uses native byte order), 1 (stream uses little-endian byte order) or 2 (stream uses big-endian byte order). If these values are set to 1 or 2 and that byte order is different from the system&#39;s byte order then bytes within words will be swapped to the correct order before being written to the input buffer or written out from the output buffer. These options have no effect when the width is set to 1 byte.</li>
+</ul>
+
+<p>The function returns three return values, or undef if there was an error. The return values are:</p>
+
+<ul>
+<li><code>$key</code>, which will be undef if the user supplied a matrix parameter, or the value of the key used to create the transform matrix otherwise</li>
+
+<li><code>$mat</code>, which is the matrix used to create the shares. If the user specified a sharelist option, then this returned matrix will include only the rows of the transform matrix specified in the sharelist (in the order specified).</li>
+
+<li><code>$bytes</code>, which is the number of input bytes actually read from the input.</li>
+</ul>
+
+<p>Since the &#34;key&#34; parameter may not be returned in all cases, the preferred method for detecting failure of the routine is to check whether the <code>$mat</code> parameter returns undef, as in the following:</p>
+
+<pre class="sh_perl"> ($key,$mat,$bytes) = ida_split ( ... );
+ unless (defined ($mat)) {
+  # handle ida_split failure
+  # ...
+ }</pre>
+
+<p>This should work in all cases, regardless of whether a key or matrix was supplied or automatically generated.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COMBINE_OPERATION"
+>COMBINE OPERATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The template for a call to <code>ida_combine</code> is as follows:</p>
+
+<pre class="sh_perl"> $bytes_read = ida_combine (
+     quorum =&#62; undef,
+     width =&#62; undef,
+     shares =&#62; undef,     # use in conjunction with key
+     # supply either a key or a pre-inverted matrix
+     key =&#62; undef,
+     matrix =&#62; undef,
+     sharelist =&#62; undef,  # use in conjunction with key
+     # sources, sink
+     fillers =&#62; undef,    # [$filler1, $filler2, ... ]
+     emptier =&#62; undef,
+     # misc options
+     bufsize =&#62; 4096,
+     bytes =&#62; 0,
+     # byte order flags
+     inorder =&#62; 0,
+     outorder =&#62; 0,
+ );</pre>
+
+<p>Most options should be obvious, but note:</p>
+
+<ul>
+<li>fillers should be a reference to a list of k fill handlers, corresponding to the shares to be combined</li>
+
+<li>if a matrix is supplied, it must be the inverse of some submatrix (some k rows) of the original transform matrix; the <code>ida_combine</code> routine <i>does not</i> invert a supplied matrix.</li>
+
+<li>if a key parameter is supplied, both the shares parameter and sharelist parameter must be given</li>
+
+<li>shares is the total number of shares that were created when calling <code>ida_split</code>. This is required when passing a key parameter in order to facilitate error checking, since it provides a means of checking which values in the key should represent x_i values, and which should represent y_i values.</li>
+
+<li>sharelist is also required when a key is passed, as otherwise the routine does not know which k shares are being combined. The sharelist parameter should be a list of k distinct row numbers. Also, each element in the sharelist array should match up to the appropriate element in the fillers array.</li>
+
+<li>if a key parameter is supplied, the <code>ida_combine</code> routine will generate the appropriate transform matrix <i>and its inverse</i> (in contrast to the case where a matrix parameter is supplied).</li>
+</ul>
+
+<p>The return value is the number of bytes actually written to the output stream, or undef if there was an error. As noted earlier, this value may be larger than the initial size of the secret due to padding to align the input to quorum x width bytes. Strategies for dealing with this have also been discussed.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ANCILLARY_ROUTINES"
+>ANCILLARY ROUTINES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The extra routines are exported by using the &#34;:extras&#34; or &#34;:all&#34; parameter with the initial &#34;use&#34; module line. With the exception of key-generation and key-testing routines, these will probably not be needed for most applications. The extra routines are as follows:</p>
+
+<pre class="sh_perl"> $rng=ida_rng_init($bytes,$source)
+ $val=$rng-&#62;();                 # get a new random value
+ $rng-&#62;(&#34;anything&#34;);            # decommision $rng</pre>
+
+<p>This routine initialises a source of random numbers. The $bytes parameter should be 1, 2 or 4. The (optional) $source parameter has the same semantics as the &#34;random&#34; parameter to <code>ida_split</code> (ie, use &#34;rand&#34; or the name of a file to read random bytes from).</p>
+
+<pre class="sh_perl"> ida_fisher_yates_shuffle(\@list,$howmany);</pre>
+
+<p>Shuffles elements of <code>@list1</code> and (optionally) deletes all but $howmany of those elements. Shuffling (and deletion) is done in-place on the passed list.</p>
+
+<pre class="sh_perl"> $keyref=ida_generate_key($k, $n, $w, $rng);</pre>
+
+<p>Generates a new random key. All parameters are required. Result is a reference to a list of $k + $n distinct elements.</p>
+
+<pre class="sh_perl"> if (ida_check_key($keyref)) {
+   # check of key failed
+   # ...
+ }</pre>
+
+<p>Takes a reference to a list of $k + $n elements and checks that the list is a valid key. Returns 0 to indicate that the key is valid.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="KEY_MANAGEMENT"
+>KEY MANAGEMENT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The <code>ida_split</code> routine takes a secret and creates several &#34;shares&#34; from it. However, unless information about the contents of the original transform matrix (or the &#34;key&#34; from which it is derived) is available, it will be impossible to reconstruct the secret from these shares at a later time. This module does not implement any particular key management strategy. It is up to the application using the module to implement their own key management strategy by saving information about the transform matrix (or key) either passed into or returned from the call to <code>ida_split</code>. Broadly speaking, there are two approaches which may be used:</p>
+
+<dl>
+<dt><a 
+>1. Caller creates/saves the $key parameter at a secure central location, and associates each of the created shares with a row number (0 .. $n-1); or</a></dt>
+
+<dd>
+<dt><a 
+>2. Caller creates/saves the &#39;matrix&#39; parameter/$mat return value and stores an association between each share and the corresponding row of that matrix.</a></dt>
+</dl>
+
+<p>In the first approach, a central authority is required to securely store the key (in either $key or $mat forms). This will mitigate against fully exploiting the &#34;Distributed/Dispersed&#34; part of the algorithm, though, since the protocol has a single point of failure/attack and the central authority is required to reconstruct the secret.</p>
+
+<p>In the second approach, the matrix rows can be effectively associated with the shares by transmitting them to each recipient shareholder <i>along with</i> the shares themselves. Shareholders can then reconstruct the secret without the participation of the Dealer (the creator of the shares).</p>
+
+<p>An implementation of the second approach (sans any distribution mechanism) is provided in the Crypt::IDA::ShareFile module.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Adding_extra_shares_at_a_later_time"
+>Adding extra shares at a later time</a></h2>
+
+<p>Adding extra shares to an IDA system is possible, and might be desireable if the goal is to increase the level of redundancy of stored data. If the Dealer keeps a copy of the original key, then it is possible to create extra shares at a later time. It is, however, impossible to modify the quorum value without destroying all shares and recreating the threshold system with the new quorum value. In order to add new shares at a later time, it is also assumed that the Dealer continues to have access to the secret.</p>
+
+<p>The procedure for adding a share is to randomly determine a new value x_n+1 which is different from any existing x_i, y_i, and to insert it into the correct position in the key list, ie:</p>
+
+<pre class="sh_perl"> x , x ,  ... , x , x   , y , y , ... , y
+  1   2          n   n+1   1   2         k</pre>
+
+<p>The new key can be passed to <code>ida_split</code> in order to create the new share (or shares; several new x-values may be inserted). The <code>sharelist</code> option may be passed to <code>ida_split</code> to instruct the routine to create only the new shares, and avoid re-creating any existing shares.</p>
+
+<p>If the original matrix was stored, but not the key which it was created from, the situation is more complex. Creating new shares can be accomplished by creating a new matrix row, and then testing that each subset of k rows from this new matrix are linearly independent (eg, by proving that each of the submatrices can be inverted). This module does not implement such a feature, so it is up to the user to provide their own code to do this, should it be required. Alternatively, consider storing the key instead of the resulting matrix, as above.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="In_the_event_of_lost_or_stolen_shares"
+>In the event of lost or stolen shares</a></h2>
+
+<p>The security of this system relies on an attacker not being able to collect k shares. If some shares are lost or thought to have been stolen (or copied), then the security of the secret may be at risk. This is not a matter of insecurity in the algorithm. Rather, it increases the risk since an attacker (who may be a shareholder) now potentially has to find or steal fewer shares in order to reconstruct the secret. In cases like this, the pragmatic approach will be to destroy any existing shares of the secret and to recreate a new set of shares and distribute them to the shareholders. Different parameters for the quorum and number of shares may be chosen at this time, as may the distribution of shares among shareholders.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TECHNICAL_DETAILS"
+>TECHNICAL DETAILS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This section is intended mainly for the curious: mainly those wishing to extend the module or write code which can inter-operate with the implementation presented here.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Field_implementation"
+>Field implementation</a></h2>
+
+<p>All operations are carried out by treating input bytes/words as being polynomials in GF(2^8), GF(2^16) or GF(2^32). The implementation of arithmetic in these fields is handled by the Math::FastGF2 and Math::FastGF2::Matrix modules. The irreducible field polynomials used by those modules are:</p>
+
+<pre class="sh_perl">                8    4    3
+   GF(2^8)     x  + x  + x  + x + 1     (0x11b)
+ 
+                16    5    3
+   GF(2^16)    x   + x  + x  + x  + 1   (0x1002b)
+ 
+                32    7    3    2
+   GF(2^32)    x   + x  + x  + x  + 1   (0x10000008d)</pre>
+
+<p>Anyone wishing to implement compatible encoders/decoders should ensure that the polynomials used in their implementation match these.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Reed-Solomon_Encoding"
+>Reed-Solomon Encoding</a></h2>
+
+<p>Although this module was not written specifically with Reed-Solomon Erasure Codes in mind, the underlying arithmetic and matrix multiplication is the same as Rabin&#39;s IDA. The module can, with a little work, be made to work as a Reed-Solomon encoder/decoder. The basic idea (which may be implemented in a future release) is to first create either a Cauchy-form matrix as described above, or a Vandermonde matrix of the following form:</p>
+
+<pre class="sh_perl"> |     0    1    2          k-1  |
+ |    0    0    0   ...    0     |
+ |                               |
+ |     0    1    2          k-1  |
+ |    1    1    1   ...    1     |
+ |                               |
+ |    :    :    :    :     :     |
+ |                               |
+ |     0    1    2          k-1  |
+ |  n-1  n-1  n-1   ...  n-1     |</pre>
+
+<p>All arithmetic operations should, of course, be performed on Galois Field elements, rather than integers. Whichever matrix form is chosen, the next step is to use elementary column operations on the matrix until the top k rows form an identity matrix (again, all arithmetic must treat the numbers as Galois Field polynomials). The matrix can then be passed along to <code>ida_split</code>, which will generate n shares as usual, with the first k of these being unencrypted slices of the original file (ie, containing every k&#39;th character/word, starting at offset 0, 1, ... , k-1) with the remaining n - k shares being the Erasure Codes. As with Rabin&#39;s scheme, any k of the shares may be presented to <code>ida_combine</code> (along with the appropriate inverse matrix calculated from k rows of the split transform matrix) to reconstruct the original file.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Writing_Custom_Callbacks"
+>Writing Custom Callbacks</a></h2>
+
+<p>The following code can be used as a template for writing routines which create fill/empty callbacks which can be passed to <code>ida_split</code> and <code>ida_combine</code>:</p>
+
+<pre class="sh_perl"> sub create_my_ida_callback {
+   my ($arg1, $arg2, ... ) = @_;
+
+   # do some initialisation based on args, such as opening files,
+   # connecting to a database, saving details of an IPC message queue,
+   # etc.
+ 
+   # for &#34;fill&#34; callbacks:
+   return {
+           SUB =&#62; sub {
+             my $len=shift;
+             my $string;
+
+             # some code to get/produce up to $len bytes of input and
+             # place it in $string.  Since this is a closure, the
+             # callback has access to the initial $arg1, $arg2 and any
+             # other variables created in the enclosing routine.
+
+             if ($some_error_occurred) {
+               return undef;
+             } elsif ($no_more_input) {
+               return &#34;&#34;;
+             } else {
+               return $string;
+             }
+           },
+          };
+ 
+   # for &#34;empty&#34; callbacks:
+   return {
+           SUB =&#62; sub {
+             my $string=shift;
+
+             # some code to save/consume new data bytes passed in
+             # $string. The routine should return the number of bytes
+             # actually processed, or undef if there was a (write)
+             # error.
+
+             if ($some_error_occurred) {
+               # optionally set $! with error message
+               return undef;
+             } else {
+               return $number_of_bytes_actually_saved;
+             }
+           },
+          };
+ }</pre>
+
+<p>Note that callbacks are written using Perl&#39;s closure mechanism rather than by passing simple code (subroutine) references. This is done to allow the callback to be &#34;customised&#34; to use a particular file handle, string, etc., as input or output. See the <a href="#What&#39;s_a_closure?" class="podlinkpod"
+>&#34;What&#39;s a closure?&#34;</a> section in the Perl FAQ for more details on this construct. Also, a hashref is used rather than a simple coderef since the processing routines use that hash to store bookkeeping information such as buffer fill levels, read/write pointers and so on.</p>
+
+<p>The <code>ida_split</code> and <code>ida_combine</code> routines are written in such a way that they handle most of the logic involved with buffering of input and output and the details of reading/writing values in the input/output matrices. This means that callbacks can usually be kept very simple and, for the most part, stateless. Specifically, if an empty handler cannot process all bytes of input presented to it in one call, it simply returns the number of bytes it actually processed. There is no need for it to save any unprocessed part of the input, and doing so will probably result in an error. Since the calling routines know how many unprocessed bytes remain in the output buffer, it will arrange so that the next time that particular empty handler is called, it will receive those unprocessed bytes at the start of its input string.</p>
+
+<p>The one exception to this &#34;stateless&#34; operation is in the case where a fill handler must pad the input stream to be a multiple of $align bytes. This can be accomplished by either pre-padding the input stream in the callback initialisation phase (when the stream length is known in advance, such as with a string input), or by maintaining &#34;bytes read&#34; and &#34;EOF&#34; state variables, updating them after every call to the callback, and using them to return extra padding bytes after the stream&#39;s natural end-of-file, where appropriate.</p>
+
+<p>Please consult the source code for the existing <code>fill_from_*</code> and <code>empty_to_*</code> callback creation code for working examples.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="KNOWN_BUGS"
+>KNOWN BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>There may be a weakness in the current implementation of the random key generation routine when a 1-byte word size is used, in that regardless of the random-number generator parameter passed to <code>ida_split</code>, the routine will always use Perl&#39;s internal <code>rand()</code> function. The code currently includes a workaround which should at least prevent a sequence-prediction attack on the RNG. While I can see no way to effectively attack the current implementation (due to the security afforded by the simple act of dispersing shares), it is clearly desirable to use the highest-quality RNG available in all cases, and this should be implemented in a future release. For the moment, if the possibility of a weakness in this implementation is unacceptable, it can be avoided simply by using a width parameter of 2 or 4, in which cases the high-quality RNG will always be used.</p>
+
+<p>On a related note, defaulting to the use of <code>/dev/urandom</code> instead of <code>/dev/random</code> may be considered a bug by some people.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><i>&#34;Efficient dispersal of information for security, load balancing, and fault tolerance&#34;</i>, by Michael O. Rabin. JACM Volume 36, Issue 2 (1989).</p>
+
+<p>Description of the Information Dispersal Algorithm, which this module implements. This should be a faithful implementation of the original idea, although the issue of padding is not covered sufficiently in the paper, and this may be a point of divergence from the original intention.</p>
+
+<p><i><a href="http://parchive.sourceforge.net/" class="podlinkurl"
+>http://parchive.sourceforge.net/</a></i></p>
+
+<p>A similar project, in that it uses 16-bit Galois Field arithmetic to perform the same kinds of arithmetic operations on input files. The polynomial used in parchive (0x1100b) is different from the one used here (0x1002b), however. Also, parchive uses the more traditional Reed-Solomon mode of operation, with an emphasis on forward error-correction, whereas this module focuses more on the creation of distributed shares in order to achieve secure distribution of a secret.</p>
+
+<p><i><a href="http://www.cs.utk.edu/~plank/plank/papers/SPE-9-97.html" class="podlinkurl"
+>http://www.cs.utk.edu/~plank/plank/papers/SPE-9-97.html</a></i> &#34;A Tutorial on Reed-Solomon Coding for Fault-Tolerance in RAID-like Systems&#34;, by James S. Plank.</p>
+
+<p>The description of the use of a particular Vandermonde matrix to guarantee linear independence of each row in the transform matrix (as described above) is due to a later erratum to this paper. My description of Reed-Solomon coding in general also follows this paper. The use of Cauchy-form matrices for guaranteeing linear independence (in both IDA and RS modes) also seems to be widely-known as well.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUTURE_VERSIONS"
+>FUTURE VERSIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>It is likely that the following changes/additions will be made in future versions:</p>
+
+<ul>
+<li>Add support for producing Reed-Solomon Erasure Codes using the method described earlier.</li>
+
+<li>Update the matrix processing code so that it can detect when padding of input is required and handle it by itself. The changes required to implement this can be made in such a way as to preserve compatibility with any code implemented using the current semantics.</li>
+
+<li>Offer the choice of padding input with random padding rather than null padding. While it&#39;s beyond the scope of this document to present an analysis of the algorithm from a cryptographic standpoint, it may be possible that padding with predictable zero bytes may weaken the security of this implementation. Padding with random data should remove that potential weakness.</li>
+
+<li>Force or give the option of always using the highest-quality RNG available (see <a href="#KNOWN_BUGS" class="podlinkpod"
+>&#34;KNOWN BUGS&#34;</a>).</li>
+
+<li>Give the option of using other RNG sources (such as for inferior platforms which do not have an equivalent of /dev/[u]random)</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Declan Malone, &#60;idablack@sourceforge.net&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (C) 2009 by Declan Malone</p>
+
+<p>This package is free software; you can redistribute it and/or modify it under the terms of version 2 (or, at your discretion, any later version) of the &#34;GNU General Public License&#34; (&#34;GPL&#34;).</p>
+
+<p>Please refer to the file &#34;GNU_GPL.txt&#34; in this distribution for details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DISCLAIMER"
+>DISCLAIMER <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This package is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78260 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 14:44:25 2012 GMT (0.217235088348389) @cpansearch1 -->
+ </body>
+</html>

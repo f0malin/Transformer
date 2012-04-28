@@ -1,0 +1,908 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>perlpod - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",4,"Document","perlpod",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?perlpod">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  perlpod
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/pod/perlpod.pod">Annotate this POD
+(1)
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/pod/perlpod.pod">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~abigail/perl/pod/perlpod.pod">perl-5.15.9</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME  </a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Ordinary_Paragraph'>Ordinary Paragraph </a>
+    <li class='indexItem indexItem2'><a href='#Verbatim_Paragraph'>Verbatim Paragraph  </a>
+    <li class='indexItem indexItem2'><a href='#Command_Paragraph'>Command Paragraph </a>
+    <li class='indexItem indexItem2'><a href='#Formatting_Codes'>Formatting Codes    </a>
+    <li class='indexItem indexItem2'><a href='#The_Intent'>The Intent </a>
+    <li class='indexItem indexItem2'><a href='#Embedding_Pods_in_Perl_Modules'>Embedding Pods in Perl Modules </a>
+    <li class='indexItem indexItem2'><a href='#Hints_for_Writing_Pod'>Hints for Writing Pod</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <!--
+	INDEX: POD
+--> <!--
+	INDEX: plain old documentation
+--> <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>perlpod - the Plain Old Documentation format</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Pod is a simple-to-use markup language used for writing documentation for Perl,
+Perl programs,
+and Perl modules.</p>
+
+<p>Translators are available for converting Pod to various formats like plain text,
+HTML,
+man pages,
+and more.</p>
+
+<p>Pod markup consists of three basic kinds of paragraphs: <a href="#Ordinary_Paragraph" class="podlinkpod"
+>ordinary</a>,
+<a href="#Verbatim_Paragraph" class="podlinkpod"
+>verbatim</a>,
+and <a href="#Command_Paragraph" class="podlinkpod"
+>command</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Ordinary_Paragraph"
+>Ordinary Paragraph <!--
+	INDEX: POD, ordinary paragraph
+--></a></h2>
+
+<p>Most paragraphs in your documentation will be ordinary blocks of text,
+like this one.
+You can simply type in your text without any markup whatsoever,
+and with just a blank line before and after.
+When it gets formatted,
+it will undergo minimal formatting,
+like being rewrapped,
+probably put into a proportionally spaced font,
+and maybe even justified.</p>
+
+<p>You can use formatting codes in ordinary paragraphs,
+for <b>bold</b>,
+<i>italic</i>,
+<code>code-style</code>,
+<a href="/~flora/perl-5.14.2/pod/perlfaq.pod" class="podlinkpod"
+>hyperlinks</a>,
+and more.
+Such codes are explained in the &#34;<a href="#Formatting_Codes" class="podlinkpod"
+>Formatting Codes</a>&#34; section,
+below.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Verbatim_Paragraph"
+>Verbatim Paragraph <!--
+	INDEX: POD, verbatim paragraph
+--> <!--
+	INDEX: verbatim
+--></a></h2>
+
+<p>Verbatim paragraphs are usually used for presenting a codeblock or other text which does not require any special parsing or formatting,
+and which shouldn&#39;t be wrapped.</p>
+
+<p>A verbatim paragraph is distinguished by having its first character be a space or a tab.
+(And commonly,
+all its lines begin with spaces and/or tabs.) It should be reproduced exactly,
+with tabs assumed to be on 8-column boundaries.
+There are no special formatting codes,
+so you can&#39;t italicize or anything like that.
+A \ means \,
+and nothing else.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Command_Paragraph"
+>Command Paragraph <!--
+	INDEX: POD, command
+--></a></h2>
+
+<p>A command paragraph is used for special treatment of whole chunks of text,
+usually as headings or parts of lists.</p>
+
+<p>All command paragraphs (which are typically only one line long) start with &#34;=&#34;,
+followed by an identifier,
+followed by arbitrary text that the command can use however it pleases.
+Currently recognized commands are</p>
+
+<pre class="sh_perl">    =pod
+    =head1 Heading Text
+    =head2 Heading Text
+    =head3 Heading Text
+    =head4 Heading Text
+    =over indentlevel
+    =item stuff
+    =back
+    =begin format
+    =end format
+    =for format text...
+    =encoding type
+    =cut</pre>
+
+<p>To explain them each in detail:</p>
+
+<dl>
+<dt><a name='head1'></a><a name="=head1_Heading_Text"
+><code>=head1 <i>Heading Text</i></code> <!--
+	INDEX: =head1
+--> <!--
+	INDEX: =head2
+--> <!--
+	INDEX: =head3
+--> <!--
+	INDEX: =head4
+--> <!--
+	INDEX: head1
+--> <!--
+	INDEX: head2
+--> <!--
+	INDEX: head3
+--> <!--
+	INDEX: head4
+--></a></dt>
+
+<dd>
+<dt><a name='head2'></a><a name="=head2_Heading_Text"
+><code>=head2 <i>Heading Text</i></code></a></dt>
+
+<dd>
+<dt><a name='head3'></a><a name="=head3_Heading_Text"
+><code>=head3 <i>Heading Text</i></code></a></dt>
+
+<dd>
+<dt><a name='head4'></a><a name="=head4_Heading_Text"
+><code>=head4 <i>Heading Text</i></code></a></dt>
+
+<dd>
+<p>Head1 through head4 produce headings, head1 being the highest level. The text in the rest of this paragraph is the content of the heading. For example:</p>
+
+<pre class="sh_perl">  =head2 Object Attributes</pre>
+
+<p>The text &#34;Object Attributes&#34; comprises the heading there. (Note that head3 and head4 are recent additions, not supported in older Pod translators.) The text in these heading commands can use formatting codes, as seen here:</p>
+
+<pre class="sh_perl">  =head2 Possible Values for C&#60;$/&#62;</pre>
+
+<p>Such commands are explained in the &#34;<a href="#Formatting_Codes" class="podlinkpod"
+>Formatting Codes</a>&#34; section, below.</p>
+
+<dt><a name='over'></a><a name="=over_indentlevel"
+><code>=over <i>indentlevel</i></code> <!--
+	INDEX: =over
+--> <!--
+	INDEX: =item
+--> <!--
+	INDEX: =back
+--> <!--
+	INDEX: over
+--> <!--
+	INDEX: item
+--> <!--
+	INDEX: back
+--></a></dt>
+
+<dd>
+<dt><a name='item'></a><a name="=item_stuff..."
+><code>=item <i>stuff...</i></code></a></dt>
+
+<dd>
+<dt><a name='back'></a><a name="=back"
+><code>=back</code></a></dt>
+
+<dd>
+<p>Item, over, and back require a little more explanation: &#34;=over&#34; starts a region specifically for the generation of a list using &#34;=item&#34; commands, or for indenting (groups of) normal paragraphs. At the end of your list, use &#34;=back&#34; to end it. The <i>indentlevel</i> option to &#34;=over&#34; indicates how far over to indent, generally in ems (where one em is the width of an &#34;M&#34; in the document&#39;s base font) or roughly comparable units; if there is no <i>indentlevel</i> option, it defaults to four. (And some formatters may just ignore whatever <i>indentlevel</i> you provide.) In the <i>stuff</i> in <code>=item <i>stuff...</i></code>, you may use formatting codes, as seen here:</p>
+
+<pre class="sh_perl">  =item Using C&#60;$|&#62; to Control Buffering</pre>
+
+<p>Such commands are explained in the &#34;<a href="#Formatting_Codes" class="podlinkpod"
+>Formatting Codes</a>&#34; section, below.</p>
+
+<p>Note also that there are some basic rules to using &#34;=over&#34; ... &#34;=back&#34; regions:</p>
+
+<ul>
+<li>Don&#39;t use &#34;=item&#34;s outside of an &#34;=over&#34; ... &#34;=back&#34; region.</li>
+
+<li>The first thing after the &#34;=over&#34; command should be an &#34;=item&#34;, unless there aren&#39;t going to be any items at all in this &#34;=over&#34; ... &#34;=back&#34; region.</li>
+
+<li>Don&#39;t put &#34;=head<i>n</i>&#34; commands inside an &#34;=over&#34; ... &#34;=back&#34; region.</li>
+
+<li>And perhaps most importantly, keep the items consistent: either use &#34;=item *&#34; for all of them, to produce bullets; or use &#34;=item 1.&#34;, &#34;=item 2.&#34;, etc., to produce numbered lists; or use &#34;=item foo&#34;, &#34;=item bar&#34;, etc.--namely, things that look nothing like bullets or numbers.
+<p>If you start with bullets or numbers, stick with them, as formatters use the first &#34;=item&#34; type to decide how to format the list.</p>
+</li>
+</ul>
+
+<dt><a name='cut'></a><a name="=cut"
+><code>=cut</code> <!--
+	INDEX: =cut
+--> <!--
+	INDEX: cut
+--></a></dt>
+
+<dd>
+<p>To end a Pod block, use a blank line, then a line beginning with &#34;=cut&#34;, and a blank line after it. This lets Perl (and the Pod formatter) know that this is where Perl code is resuming. (The blank line before the &#34;=cut&#34; is not technically necessary, but many older Pod processors require it.)</p>
+
+<dt><a name='pod'></a><a name="=pod"
+><code>=pod</code> <!--
+	INDEX: =pod
+--> <!--
+	INDEX: pod
+--></a></dt>
+
+<dd>
+<p>The &#34;=pod&#34; command by itself doesn&#39;t do much of anything, but it signals to Perl (and Pod formatters) that a Pod block starts here. A Pod block starts with <i>any</i> command paragraph, so a &#34;=pod&#34; command is usually used just when you want to start a Pod block with an ordinary paragraph or a verbatim paragraph. For example:</p>
+
+<pre class="sh_perl">  =item stuff()
+
+  This function does stuff.
+
+  =cut
+
+  sub stuff {
+    ...
+  }
+
+  =pod
+
+  Remember to check its return value, as in:
+
+    stuff() || die &#34;Couldn&#39;t do stuff!&#34;;
+
+  =cut</pre>
+
+<dt><a name='begin'></a><a name="=begin_formatname"
+><code>=begin <i>formatname</i></code> <!--
+	INDEX: =begin
+--> <!--
+	INDEX: =end
+--> <!--
+	INDEX: =for
+--> <!--
+	INDEX: begin
+--> <!--
+	INDEX: end
+--> <!--
+	INDEX: for
+--></a></dt>
+
+<dd>
+<dt><a name='end'></a><a name="=end_formatname"
+><code>=end <i>formatname</i></code></a></dt>
+
+<dd>
+<dt><a name='for'></a><a name="=for_formatname_text..."
+><code>=for <i>formatname</i> <i>text...</i></code></a></dt>
+
+<dd>
+<p>For, begin, and end will let you have regions of text/code/data that are not generally interpreted as normal Pod text, but are passed directly to particular formatters, or are otherwise special. A formatter that can use that format will use the region, otherwise it will be completely ignored.</p>
+
+<p>A command &#34;=begin <i>formatname</i>&#34;, some paragraphs, and a command &#34;=end <i>formatname</i>&#34;, mean that the text/data in between is meant for formatters that understand the special format called <i>formatname</i>. For example,</p>
+
+<pre class="sh_perl">  =begin html
+
+  &#60;hr&#62; &#60;img src=&#34;thang.png&#34;&#62;
+  &#60;p&#62; This is a raw HTML paragraph &#60;/p&#62;
+
+  =end html</pre>
+
+<p>The command &#34;=for <i>formatname</i> <i>text...</i>&#34; specifies that the remainder of just this paragraph (starting right after <i>formatname</i>) is in that special format.</p>
+
+<pre class="sh_perl">  =for html &#60;hr&#62; &#60;img src=&#34;thang.png&#34;&#62;
+  &#60;p&#62; This is a raw HTML paragraph &#60;/p&#62;</pre>
+
+<p>This means the same thing as the above &#34;=begin html&#34; ... &#34;=end html&#34; region.</p>
+
+<p>That is, with &#34;=for&#34;, you can have only one paragraph&#39;s worth of text (i.e., the text in &#34;=foo targetname text...&#34;), but with &#34;=begin targetname&#34; ... &#34;=end targetname&#34;, you can have any amount of stuff inbetween. (Note that there still must be a blank line after the &#34;=begin&#34; command and a blank line before the &#34;=end&#34; command.</p>
+
+<p>Here are some examples of how to use these:</p>
+
+<pre class="sh_perl">  =begin html
+
+  &#60;br&#62;Figure 1.&#60;br&#62;&#60;IMG SRC=&#34;figure1.png&#34;&#62;&#60;br&#62;
+
+  =end html
+
+  =begin text
+
+    ---------------
+    |  foo        |
+    |        bar  |
+    ---------------
+
+  ^^^^ Figure 1. ^^^^
+
+  =end text</pre>
+
+<p>Some format names that formatters currently are known to accept include &#34;roff&#34;, &#34;man&#34;, &#34;latex&#34;, &#34;tex&#34;, &#34;text&#34;, and &#34;html&#34;. (Some formatters will treat some of these as synonyms.)</p>
+
+<p>A format name of &#34;comment&#34; is common for just making notes (presumably to yourself) that won&#39;t appear in any formatted version of the Pod document:</p>
+
+<pre class="sh_perl">  =for comment
+  Make sure that all the available options are documented!</pre>
+
+<p>Some <i>formatnames</i> will require a leading colon (as in <code>&#34;=for :formatname&#34;</code>, or <code>&#34;=begin :formatname&#34; ... &#34;=end :formatname&#34;</code>), to signal that the text is not raw data, but instead <i>is</i> Pod text (i.e., possibly containing formatting codes) that&#39;s just not for normal formatting (e.g., may not be a normal-use paragraph, but might be for formatting as a footnote).</p>
+
+<dt><a name='encoding'></a><a name="=encoding_encodingname"
+><code>=encoding <i>encodingname</i></code> <!--
+	INDEX: =encoding
+--> <!--
+	INDEX: encoding
+--></a></dt>
+
+<dd>
+<p>This command is used for declaring the encoding of a document. Most users won&#39;t need this; but if your encoding isn&#39;t US-ASCII or Latin-1, then put a <code>=encoding <i>encodingname</i></code> command early in the document so that pod formatters will know how to decode the document. For <i>encodingname</i>, use a name recognized by the <a href="/perldoc?Encode%3A%3ASupported" class="podlinkpod"
+>Encode::Supported</a> module. Examples:</p>
+
+<pre class="sh_perl">  =encoding utf8
+
+  =encoding koi8-r
+  
+  =encoding ShiftJIS
+  
+  =encoding big5</pre>
+</dd>
+</dl>
+
+<p><code>=encoding</code> affects the whole document, and must occur only once.</p>
+
+<p>And don&#39;t forget, when using any other command, that the command lasts up until the end of its <i>paragraph</i>, not its line. So in the examples below, you can see that every command needs the blank line after it, to end its paragraph.</p>
+
+<p>Some examples of lists include:</p>
+
+<pre class="sh_perl">  =over
+
+  =item *
+
+  First item
+
+  =item *
+
+  Second item
+
+  =back
+
+  =over
+
+  =item Foo()
+
+  Description of Foo function
+
+  =item Bar()
+
+  Description of Bar function
+
+  =back</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Formatting_Codes"
+>Formatting Codes <!--
+	INDEX: POD, formatting code
+--> <!--
+	INDEX: formatting code
+--> <!--
+	INDEX: POD, interior sequence
+--> <!--
+	INDEX: interior sequence
+--></a></h2>
+
+<p>In ordinary paragraphs and in some command paragraphs, various formatting codes (a.k.a. &#34;interior sequences&#34;) can be used:</p>
+
+<dl>
+<dt><a name='I'></a><a name="I&#60;text&#62;_--_italic_text"
+><code>I&#60;text&#62;</code> -- italic text <!--
+	INDEX: I
+--> <!--
+	INDEX: I&#60;&#62;
+--> <!--
+	INDEX: POD, formatting code, italic
+--> <!--
+	INDEX: italic
+--></a></dt>
+
+<dd>
+<p>Used for emphasis (&#34;<code>be I&#60;careful!&#62;</code>&#34;) and parameters (&#34;<code>redo I&#60;LABEL&#62;</code>&#34;)</p>
+
+<dt><a name='B'></a><a name="B&#60;text&#62;_--_bold_text"
+><code>B&#60;text&#62;</code> -- bold text <!--
+	INDEX: B
+--> <!--
+	INDEX: B&#60;&#62;
+--> <!--
+	INDEX: POD, formatting code, bold
+--> <!--
+	INDEX: bold
+--></a></dt>
+
+<dd>
+<p>Used for switches (&#34;<code>perl&#39;s B&#60;-n&#62; switch</code>&#34;), programs (&#34;<code>some systems provide a B&#60;chfn&#62; for that</code>&#34;), emphasis (&#34;<code>be B&#60;careful!&#62;</code>&#34;), and so on (&#34;<code>and that feature is known as B&#60;autovivification&#62;</code>&#34;).</p>
+
+<dt><a name='C'></a><a name="C&#60;code&#62;_--_code_text"
+><code>C&#60;code&#62;</code> -- code text <!--
+	INDEX: C
+--> <!--
+	INDEX: C&#60;&#62;
+--> <!--
+	INDEX: POD, formatting code, code
+--> <!--
+	INDEX: code
+--></a></dt>
+
+<dd>
+<p>Renders code in a typewriter font, or gives some other indication that this represents program text (&#34;<code>C&#60;gmtime($^T)&#62;</code>&#34;) or some other form of computerese (&#34;<code>C&#60;drwxr-xr-x&#62;</code>&#34;).</p>
+
+<dt><a name='L'></a><a name="L&#60;name&#62;_--_a_hyperlink"
+><code>L&#60;name&#62;</code> -- a hyperlink <!--
+	INDEX: L
+--> <!--
+	INDEX: L&#60;&#62;
+--> <!--
+	INDEX: POD, formatting code, hyperlink
+--> <!--
+	INDEX: hyperlink
+--></a></dt>
+
+<dd>
+<p>There are various syntaxes, listed below. In the syntaxes given, <code>text</code>, <code>name</code>, and <code>section</code> cannot contain the characters &#39;/&#39; and &#39;|&#39;; and any &#39;&#60;&#39; or &#39;&#62;&#39; should be matched.</p>
+
+<ul>
+<li><code>L&#60;name&#62;</code>
+<p>Link to a Perl manual page (e.g., <code>L&#60;Net::Ping&#62;</code>). Note that <code>name</code> should not contain spaces. This syntax is also occasionally used for references to Unix man pages, as in <code>L&#60;crontab(5)&#62;</code>.</p>
+</li>
+
+<li><code>L&#60;name/&#34;sec&#34;&#62;</code> or <code>L&#60;name/sec&#62;</code>
+<p>Link to a section in other manual page. E.g., <code>L&#60;perlsyn/&#34;For Loops&#34;&#62;</code></p>
+</li>
+
+<li><code>L&#60;/&#34;sec&#34;&#62;</code> or <code>L&#60;/sec&#62;</code>
+<p>Link to a section in this manual page. E.g., <code>L&#60;/&#34;Object Methods&#34;&#62;</code></p>
+</li>
+</ul>
+
+<p>A section is started by the named heading or item. For example, <code>L&#60;perlvar/$.&#62;</code> or <code>L&#60;perlvar/&#34;$.&#34;&#62;</code> both link to the section started by &#34;<code>=item $.</code>&#34; in perlvar. And <code>L&#60;perlsyn/For Loops&#62;</code> or <code>L&#60;perlsyn/&#34;For Loops&#34;&#62;</code> both link to the section started by &#34;<code>=head2 For Loops</code>&#34; in perlsyn.</p>
+
+<p>To control what text is used for display, you use &#34;<code>L&#60;text|...&#62;</code>&#34;, as in:</p>
+
+<ul>
+<li><code>L&#60;text|name&#62;</code>
+<p>Link this text to that manual page. E.g., <code>L&#60;Perl Error Messages|perldiag&#62;</code></p>
+</li>
+
+<li><code>L&#60;text|name/&#34;sec&#34;&#62;</code> or <code>L&#60;text|name/sec&#62;</code>
+<p>Link this text to that section in that manual page. E.g., <code>L&#60;postfix &#34;if&#34;|perlsyn/&#34;Statement Modifiers&#34;&#62;</code></p>
+</li>
+
+<li><code>L&#60;text|/&#34;sec&#34;&#62;</code> or <code>L&#60;text|/sec&#62;</code> or <code>L&#60;text|&#34;sec&#34;&#62;</code>
+<p>Link this text to that section in this manual page. E.g., <code>L&#60;the various attributes|/&#34;Member Data&#34;&#62;</code></p>
+</li>
+</ul>
+
+<p>Or you can link to a web page:</p>
+
+<ul>
+<li><code>L&#60;scheme:...&#62;</code>
+<p><code>L&#60;text|scheme:...&#62;</code></p>
+
+<p>Links to an absolute URL. For example, <code>L&#60;<a href="http://www.perl.org/" class="podlinkurl"
+>http://www.perl.org/</a>&#62;</code> or <code>L&#60;The Perl Home Page|<a href="http://www.perl.org/" class="podlinkurl"
+>http://www.perl.org/</a>&#62;</code>.</p>
+</li>
+</ul>
+
+<dt><a name='E'></a><a name="E&#60;escape&#62;_--_a_character_escape"
+><code>E&#60;escape&#62;</code> -- a character escape <!--
+	INDEX: E
+--> <!--
+	INDEX: E&#60;&#62;
+--> <!--
+	INDEX: POD, formatting code, escape
+--> <!--
+	INDEX: escape
+--></a></dt>
+
+<dd>
+<p>Very similar to HTML/XML <code>&#38;<i>foo</i>;</code> &#34;entity references&#34;:</p>
+
+<ul>
+<li><code>E&#60;lt&#62;</code> -- a literal &#60; (less than)</li>
+
+<li><code>E&#60;gt&#62;</code> -- a literal &#62; (greater than)</li>
+
+<li><code>E&#60;verbar&#62;</code> -- a literal | (<i>ver</i>tical <i>bar</i>)</li>
+
+<li><code>E&#60;sol&#62;</code> -- a literal / (<i>sol</i>idus)
+<p>The above four are optional except in other formatting codes, notably <code>L&#60;...&#62;</code>, and when preceded by a capital letter.</p>
+</li>
+
+<li><code>E&#60;htmlname&#62;</code>
+<p>Some non-numeric HTML entity name, such as <code>E&#60;eacute&#62;</code>, meaning the same thing as <code>&#38;eacute;</code> in HTML -- i.e., a lowercase e with an acute (/-shaped) accent.</p>
+</li>
+
+<li><code>E&#60;number&#62;</code>
+<p>The ASCII/Latin-1/Unicode character with that number. A leading &#34;0x&#34; means that <i>number</i> is hex, as in <code>E&#60;0x201E&#62;</code>. A leading &#34;0&#34; means that <i>number</i> is octal, as in <code>E&#60;075&#62;</code>. Otherwise <i>number</i> is interpreted as being in decimal, as in <code>E&#60;181&#62;</code>.</p>
+
+<p>Note that older Pod formatters might not recognize octal or hex numeric escapes, and that many formatters cannot reliably render characters above 255. (Some formatters may even have to use compromised renderings of Latin-1 characters, like rendering <code>E&#60;eacute&#62;</code> as just a plain &#34;e&#34;.)</p>
+</li>
+</ul>
+
+<dt><a name='F'></a><a name="F&#60;filename&#62;_--_used_for_filenames"
+><code>F&#60;filename&#62;</code> -- used for filenames <!--
+	INDEX: F
+--> <!--
+	INDEX: F&#60;&#62;
+--> <!--
+	INDEX: POD, formatting code, filename
+--> <!--
+	INDEX: filename
+--></a></dt>
+
+<dd>
+<p>Typically displayed in italics. Example: &#34;<code>F&#60;.cshrc&#62;</code>&#34;</p>
+
+<dt><a name='S'></a><a name="S&#60;text&#62;_--_text_contains_non-breaking_spaces"
+><code>S&#60;text&#62;</code> -- text contains non-breaking spaces <!--
+	INDEX: S
+--> <!--
+	INDEX: S&#60;&#62;
+--> <!--
+	INDEX: POD, formatting code, non-breaking space
+--> <!--
+	INDEX: non-breaking space
+--></a></dt>
+
+<dd>
+<p>This means that the words in <i>text</i> should not be broken across lines. Example: <code>S&#60;$x&#160;?&#160;$y&#160;:&#160;$z&#62;</code>.</p>
+
+<dt><a name='X'></a><a name="X&#60;topic_name&#62;_--_an_index_entry"
+><code>X&#60;topic name&#62;</code> -- an index entry <!--
+	INDEX: X
+--> <!--
+	INDEX: X&#60;&#62;
+--> <!--
+	INDEX: POD, formatting code, index entry
+--> <!--
+	INDEX: index entry
+--></a></dt>
+
+<dd>
+<p>This is ignored by most formatters, but some may use it for building indexes. It always renders as empty-string. Example: <code>X&#60;absolutizing relative URLs&#62;</code></p>
+
+<dt><a name='Z'></a><a name="Z&#60;&#62;_--_a_null_(zero-effect)_formatting_code"
+><code>Z&#60;&#62;</code> -- a null (zero-effect) formatting code <!--
+	INDEX: Z
+--> <!--
+	INDEX: Z&#60;&#62;
+--> <!--
+	INDEX: POD, formatting code, null
+--> <!--
+	INDEX: null
+--></a></dt>
+
+<dd>
+<p>This is rarely used. It&#39;s one way to get around using an E&#60;...&#62; code sometimes. For example, instead of &#34;<code>NE&#60;lt&#62;3</code>&#34; (for &#34;N&#60;3&#34;) you could write &#34;<code>NZ&#60;&#62;&#60;3</code>&#34; (the &#34;Z&#60;&#62;&#34; breaks up the &#34;N&#34; and the &#34;&#60;&#34; so they can&#39;t be considered the part of a (fictitious) &#34;N&#60;...&#62;&#34; code.</p>
+</dd>
+</dl>
+
+<p>Most of the time, you will need only a single set of angle brackets to delimit the beginning and end of formatting codes. However, sometimes you will want to put a real right angle bracket (a greater-than sign, &#39;&#62;&#39;) inside of a formatting code. This is particularly common when using a formatting code to provide a different font-type for a snippet of code. As with all things in Perl, there is more than one way to do it. One way is to simply escape the closing bracket using an <code>E</code> code:</p>
+
+<pre class="sh_perl">    C&#60;$a E&#60;lt&#62;=E&#60;gt&#62; $b&#62;</pre>
+
+<p>This will produce: &#34;<code>$a &#60;=&#62; $b</code>&#34;</p>
+
+<p>A more readable, and perhaps more &#34;plain&#34; way is to use an alternate set of delimiters that doesn&#39;t require a single &#34;&#62;&#34; to be escaped. Doubled angle brackets (&#34;&#60;&#60;&#34; and &#34;&#62;&#62;&#34;) may be used <i>if and only if there is whitespace right after the opening delimiter and whitespace right before the closing delimiter!</i> For example, the following will do the trick: <!--
+	INDEX: POD, formatting code, escaping with multiple brackets
+--></p>
+
+<pre class="sh_perl">    C&#60;&#60; $a &#60;=&#62; $b &#62;&#62;</pre>
+
+<p>In fact, you can use as many repeated angle-brackets as you like so long as you have the same number of them in the opening and closing delimiters, and make sure that whitespace immediately follows the last &#39;&#60;&#39; of the opening delimiter, and immediately precedes the first &#39;&#62;&#39; of the closing delimiter. (The whitespace is ignored.) So the following will also work: <!--
+	INDEX: POD, formatting code, escaping with multiple brackets
+--></p>
+
+<pre class="sh_perl">    C&#60;&#60;&#60; $a &#60;=&#62; $b &#62;&#62;&#62;
+    C&#60;&#60;&#60;&#60;  $a &#60;=&#62; $b     &#62;&#62;&#62;&#62;</pre>
+
+<p>And they all mean exactly the same as this:</p>
+
+<pre class="sh_perl">    C&#60;$a E&#60;lt&#62;=E&#60;gt&#62; $b&#62;</pre>
+
+<p>The multiple-bracket form does not affect the interpretation of the contents of the formatting code, only how it must end. That means that the examples above are also exactly the same as this:</p>
+
+<pre class="sh_perl">    C&#60;&#60; $a E&#60;lt&#62;=E&#60;gt&#62; $b &#62;&#62;</pre>
+
+<p>As a further example, this means that if you wanted to put these bits of code in <code>C</code> (code) style:</p>
+
+<pre class="sh_perl">    open(X, &#34;&#62;&#62;thing.dat&#34;) || die $!
+    $foo-&#62;bar();</pre>
+
+<p>you could do it like so:</p>
+
+<pre class="sh_perl">    C&#60;&#60;&#60; open(X, &#34;&#62;&#62;thing.dat&#34;) || die $! &#62;&#62;&#62;
+    C&#60;&#60; $foo-&#62;bar(); &#62;&#62;</pre>
+
+<p>which is presumably easier to read than the old way:</p>
+
+<pre class="sh_perl">    C&#60;open(X, &#34;E&#60;gt&#62;E&#60;gt&#62;thing.dat&#34;) || die $!&#62;
+    C&#60;$foo-E&#60;gt&#62;bar();&#62;</pre>
+
+<p>This is currently supported by pod2text (Pod::Text), pod2man (Pod::Man), and any other pod2xxx or Pod::Xxxx translators that use Pod::Parser 1.093 or later, or Pod::Tree 1.02 or later.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_Intent"
+>The Intent <!--
+	INDEX: POD, intent of
+--></a></h2>
+
+<p>The intent is simplicity of use, not power of expression. Paragraphs look like paragraphs (block format), so that they stand out visually, and so that I could run them through <code>fmt</code> easily to reformat them (that&#39;s F7 in my version of <b>vi</b>, or Esc Q in my version of <b>emacs</b>). I wanted the translator to always leave the <code>&#39;</code> and <code>`</code> and <code>&#34;</code> quotes alone, in verbatim mode, so I could slurp in a working program, shift it over four spaces, and have it print out, er, verbatim. And presumably in a monospace font.</p>
+
+<p>The Pod format is not necessarily sufficient for writing a book. Pod is just meant to be an idiot-proof common source for nroff, HTML, TeX, and other markup languages, as used for online documentation. Translators exist for <b>pod2text</b>, <b>pod2html</b>, <b>pod2man</b> (that&#39;s for nroff(1) and troff(1)), <b>pod2latex</b>, and <b>pod2fm</b>. Various others are available in CPAN.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Embedding_Pods_in_Perl_Modules"
+>Embedding Pods in Perl Modules <!--
+	INDEX: POD, embedding
+--></a></h2>
+
+<p>You can embed Pod documentation in your Perl modules and scripts. Start your documentation with an empty line, a &#34;=head1&#34; command at the beginning, and end it with a &#34;=cut&#34; command and an empty line. Perl will ignore the Pod text. See any of the supplied library modules for examples. If you&#39;re going to put your Pod at the end of the file, and you&#39;re using an __END__ or __DATA__ cut mark, make sure to put an empty line there before the first Pod command.</p>
+
+<pre class="sh_perl">  __END__
+
+  =head1 NAME
+
+  Time::Local - efficiently compute time from local and GMT time</pre>
+
+<p>Without that empty line before the &#34;=head1&#34;, many translators wouldn&#39;t have recognized the &#34;=head1&#34; as starting a Pod block.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Hints_for_Writing_Pod"
+>Hints for Writing Pod</a></h2>
+
+<ul>
+<li><!--
+	INDEX: podchecker
+--> <!--
+	INDEX: POD, validating
+-->
+<p>The <b>podchecker</b> command is provided for checking Pod syntax for errors and warnings. For example, it checks for completely blank lines in Pod blocks and for unknown commands and formatting codes. You should still also pass your document through one or more translators and proofread the result, or print out the result and proofread that. Some of the problems found may be bugs in the translators, which you may or may not wish to work around.</p>
+</li>
+
+<li>If you&#39;re more familiar with writing in HTML than with writing in Pod, you can try your hand at writing documentation in simple HTML, and converting it to Pod with the experimental <a href="/perldoc?Pod%3A%3AHTML2Pod" class="podlinkpod"
+>Pod::HTML2Pod</a> module, (available in CPAN), and looking at the resulting code. The experimental <a href="/perldoc?Pod%3A%3APXML" class="podlinkpod"
+>Pod::PXML</a> module in CPAN might also be useful.</li>
+
+<li>Many older Pod translators require the lines before every Pod command and after every Pod command (including &#34;=cut&#34;!) to be a blank line. Having something like this:
+<pre class="sh_perl"> # - - - - - - - - - - - -
+ =item $firecracker-&#62;boom()
+
+ This noisily detonates the firecracker object.
+ =cut
+ sub boom {
+ ...</pre>
+
+<p>...will make such Pod translators completely fail to see the Pod block at all.</p>
+
+<p>Instead, have it like this:</p>
+
+<pre class="sh_perl"> # - - - - - - - - - - - -
+
+ =item $firecracker-&#62;boom()
+
+ This noisily detonates the firecracker object.
+
+ =cut
+
+ sub boom {
+ ...</pre>
+</li>
+
+<li>Some older Pod translators require paragraphs (including command paragraphs like &#34;=head2 Functions&#34;) to be separated by <i>completely</i> empty lines. If you have an apparently empty line with some spaces on it, this might not count as a separator for those translators, and that could cause odd formatting.</li>
+
+<li>Older translators might add wording around an L&#60;&#62; link, so that <code>L&#60;Foo::Bar&#62;</code> may become &#34;the Foo::Bar manpage&#34;, for example. So you shouldn&#39;t write things like <code>the L&#60;foo&#62; documentation</code>, if you want the translated document to read sensibly. Instead, write <code>the L&#60;Foo::Bar|Foo::Bar&#62; documentation</code> or <code>L&#60;the Foo::Bar documentation|Foo::Bar&#62;</code>, to control how the link comes out.</li>
+
+<li>Going past the 70th column in a verbatim block might be ungracefully wrapped by some formatters.</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~flora/perl-5.14.2/pod/perlpodspec.pod" class="podlinkpod"
+>perlpodspec</a>, <a href="/~flora/perl-5.14.2/pod/perlsyn.pod#PODs:_Embedded_Documentation" class="podlinkpod"
+>&#34;PODs: Embedded Documentation&#34; in perlsyn</a>, <a href="/~flora/perl-5.14.2/pod/perlnewmod.pod" class="podlinkpod"
+>perlnewmod</a>, <a href="/~flora/perl-5.14.2/pod/perldoc.pod" class="podlinkpod"
+>perldoc</a>, <a href="/~flora/perl-5.14.2/ext/Pod-Html/pod2html.PL" class="podlinkpod"
+>pod2html</a>, <a href="/perldoc?pod2man" class="podlinkpod"
+>pod2man</a>, <a href="/perldoc?podchecker" class="podlinkpod"
+>podchecker</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Larry Wall, Sean M. Burke</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">77955 Uploads, 24665 Distributions
+105775 Modules, 9632 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Wed Apr 18 15:00:58 2012 GMT (0.15491509437561) @cpansearch1 -->
+ </body>
+</html>

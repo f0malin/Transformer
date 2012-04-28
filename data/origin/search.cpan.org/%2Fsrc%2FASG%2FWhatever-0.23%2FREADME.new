@@ -1,0 +1,62 @@
+Whatever - a perl6ish whatever-star for perl5
+
+SYNOPSIS
+
+this module provides a whatever-star C< * > term for perl 5. since this
+module is B<not> a source filter, the name C< &* > is as close as it's going to
+get.
+
+    use Whatever;
+
+    my $greet = 'hello, ' . &* . '!';
+
+    say $greet->('world'); # prints 'hello, world!'
+
+what was:
+
+    my $result = $someobj->map(sub{$_ * 2});
+
+can now be:
+
+    my $result = $someobj->map($* * 2);
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Build.PL
+	./Build
+	./Build test
+	./Build install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Whatever
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Whatever
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/Whatever
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/Whatever
+
+    Search CPAN
+        http://search.cpan.org/dist/Whatever/
+
+
+LICENSE AND COPYRIGHT
+
+Copyright (C) 2010 Eric Strom
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.

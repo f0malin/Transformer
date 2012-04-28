@@ -1,0 +1,49 @@
+    Creates a tied Tk::Menubutton widget hash reference object kinda
+    thingy....
+
+    It's actually much simplier then it sounds, at least to use. It walks
+    and talks half like an object, and half like a (tied) hash reference.
+    This is because it's both in one (it's a blessed reference to a tied
+    hash of the same class).
+
+    WARNING:
+        This is *not* a valid Tk widget as you would normally think of it.
+        You can not (currently) call it as
+
+            my $menuHash = $MW->MenuHash(); ## Don't try this (yet)!
+
+        The 2.x release will be a true widget and thus walk and talk
+        currently as such. As much as I will try and maintain this current
+        API for future compatibility, this may not be entire possible. The
+        2.x release will solidify this widget's API, but until then consider
+        this API in a state of flux. Thanks
+
+    When you add a key (label) to the hash it added it to the menubutton.
+    The value assigned must be either a valid Tk::Menubutton -command
+    option, or the string 'default' (case is not important). The default is
+    simply a function that configure()s the Menubuttons -text to that of the
+    selected label. You can then retrieve the text by just reading a key
+    (any key, even if it doesn't exist, it doesn't matter) from the hash.
+
+    The new() method passes back a reference to a tie()d MenuHash, but with
+    all the properties (and methods) of the Menubutton you passed it. With
+    this type you can set and delete fields as hash keys references:
+
+            $MenuHash->{'Some label'} = 'default';
+
+    But also call Tk::Menubutton (or sub-classes of it, if that's what you
+    passed the constructor) methods:
+
+            $MenuHash->configure ( -text => 'Pick something' );
+
+    This involves black magic to do, but it works. See the AUTOLOAD method
+    code if you have a morbid interest in this, however it's more that we
+    are dealing with 3 objects in 2 classes.
+
+    I prefer this useage myself as it meens I only need to carry around one
+    var that walks and talks almost exactly like a "real" Tk::Menubutton
+    (that is, you can call any valid Tk::Menubutton method off it directly),
+    but with the added (and much needed IMHO) feature of being able to
+    easily add, delete, select, and read menu options as simple hash ref
+    keys.
+

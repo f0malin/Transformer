@@ -1,0 +1,89 @@
+KNOWN BUGS
+
+- the 'recurrence' argument should be $_, instead of $_[0].
+  This is too late to change, because there are many DateTime modules
+  that use it.
+
+- 'set_time_zone' was published as a function, then as a mutator, 
+  then as a function, then as a mutator.
+  It settled as a mutator.
+
+
+TODO list for DT::Set, DT::Span, and DT::SpanSet
+
+2004-11-29
+
+- DateTime::SpanSet has no count() method
+
+2004-07-03
+
+- what happens if the recurrence function returns an 'undef' ?
+  (the program should die - add tests for this)
+
+- this POD entry is not entirely correct, it should be tested/fixed:
+
+    The callbacks can return C<DateTime::Infinite::Future> and
+    C<DateTime::Infinite::Past> objects, in order to define 
+    I<bounded recurrences>.
+    In this case, both 'next' and 'previous' callbacks must be defined:
+
+- 'truncate' method ?
+
+- add set_time_zone tests to Span & SpanSet 
+
+- add "mutability" tests for DT::Span, DT::SpanSet
+  see 02immutable.t
+
+- implement add/subtract in DT::Span, DT::SpanSet
+- implement start/end aliases in DT::Set
+
+2004-06-25
+
+- cleanup the examples in POD that use
+            return $_[0] if $_[0]->is_infinite;
+  and explain when and why to use this.
+- add tests for all examples given.
+
+-----------------
+
+- Test for errors, in case the "next/previous" 
+  recurrence spec is not followed (detect infinite loop).
+
+  Give a message like:
+  "A recurrence loop was detected. Check that you are using
+   the latest DateTime::Event module version" 
+
+  Or, try to detect the error and automatically
+  "downgrade" DateTime::Set.
+
+  The problem is, the infinite loops happens
+  _inside_ next(). There seems to be no way to
+  detect this.
+
+- implement set( locale => .. ) in Span and SpanSet
+
+- Add tests for new methods: DateTime::SpanSet::map / grep
+
+- discuss functions like 
+    is_infinite
+    is_empty 
+
+- implement faster DT::Set::complement(), 
+  using 'function composition'
+
+- move all 'set-specific' code to Set::Infinite::_recurrence 
+  use accessors instead of structure references
+
+- functions like before(), after(), during() might be useful
+  in DT::Span
+  or maybe these should be called next(), previous(), current(), closest()
+
+- document better:
+  how to transform a Span into an iterator - for example,
+  get the list of days in a span
+
+- optimization: rewrite intersection of recurrences 'previous' function
+
+- optimization: extract start_set / end_set right from
+  the data structure, if possible.
+

@@ -1,0 +1,384 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>The CPAN Search Site - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+<br><div class=t4> CPAN Mirrors</div><br>
+Any links from this site to a CPAN repository will, by default, goto <a href="http://www.cpan.org/">http://www.cpan.org/</a>
+<p />
+With this form you can customize where the redirects will lead you.
+Your current setting is <p />
+<a href="http%3A//www.cpan.org/">
+http://www.cpan.org/</a>
+<p />
+<form action="/mirror">
+<b>1. Public mirror</b><br />
+<select name="mirror">
+<option value="">None -- Use custom URL</option>
+<option value="http://cpan.mirror.ac.za/">Africa, South Africa, Cape Town (mirror.ac.za)</option>
+<option value="http://ftp.wa.co.za/pub/CPAN/">Africa, South Africa, Cape Town (wa.co.za)</option>
+<option value="http://mirror.is.co.za/pub/cpan/">Africa, South Africa, Gauteng, Johannesburg (is.co.za)</option>
+<option value="ftp://ftp.saix.net/pub/CPAN/">Africa, South Africa, Western Cape, Parow (saix.net)</option>
+<option value="http://cpan.mirror.tn/">Africa, Tunisia, Tunis (cpan.mirror.tn)</option>
+<option value="http://mirrors.ustc.edu.cn/CPAN/">Asia, China, AnHui, Hefei (ustc.edu.cn)</option>
+<option value="http://mirrors.sohu.com/CPAN/">Asia, China, Beijing (sohu.com)</option>
+<option value="http://mirrors.btte.net/CPAN/">Asia, China, Chaoyang, BeiJing (idc.btte.net)</option>
+<option value="http://mirrors.xmu.edu.cn/CPAN/">Asia, China, Fujian, Xiamen (xmu.edu.cn)</option>
+<option value="http://mirrors.163.com/cpan/">Asia, China, Hangzhou (rs.163.com)</option>
+<option value="http://cpan.communilink.net/">Asia, China, Hong Kong SAR, Hong Kong (communilink.net)</option>
+<option value="http://ftp.cuhk.edu.hk/pub/packages/perl/CPAN/">Asia, China, Hong Kong SAR, Hong Kong (cuhk.edu.hk)</option>
+<option value="http://mirrors.devlib.org/cpan/">Asia, China, Hong Kong SAR, Hong Kong (devlib.org)</option>
+<option value="http://cpan.wenzk.com/">Asia, China, Liaoning, Benxi (wenzk.com)</option>
+<option value="http://mirror.qdu.edu.cn/CPAN/">Asia, China, Shandong, Qingdao (qdu.edu.cn)</option>
+<option value="http://perlmirror.indialinks.com/">Asia, India, Maharashtra, Mumbai (indialinks.com)</option>
+<option value="ftp://ftp.itb.ac.id/pub/CPAN/">Asia, Indonesia, Bandung (itb.ac.id)</option>
+<option value="http://kambing.ui.ac.id/cpan/">Asia, Indonesia, Depok (kambing.ui.ac.id)</option>
+<option value="http://kartolo.sby.datautama.net.id/CPAN/">Asia, Indonesia, East Java, Surabaya (sby.datautama.net.id)</option>
+<option value="http://mwn-tlkm.archive.or.id/cpan/">Asia, Indonesia, Jakarta (mwn-tlkm.archive.or.id)</option>
+<option value="http://cpan.pesat.net.id/">Asia, Indonesia, Jakarta (pesat.net.id)</option>
+<option value="http://cpan.cermin.lipi.go.id/">Asia, Indonesia, Jakarta Selatan, Kuningan Barat (lipi.go.id)</option>
+<option value="http://cpan.iht.co.il/">Asia, Israel, Petah-Tiqwa (interhost.co.il)</option>
+<option value="http://biocourse.weizmann.ac.il/CPAN/">Asia, Israel, Rehovot (biocourse.weizmann.ac.il)</option>
+<option value="ftp://ftp.u-aizu.ac.jp/pub/CPAN/">Asia, Japan, Fukushima, Aizu-Wakamatsu (u-aizu.ac.jp)</option>
+<option value="ftp://ftp.kddilabs.jp/CPAN/">Asia, Japan, Kanto, Kamifukuoka (kddilabs.jp)</option>
+<option value="ftp://ftp.ring.gr.jp/pub/lang/perl/CPAN/">Asia, Japan, Kanto, Tsukuba (ring.gr.jp)</option>
+<option value="ftp://ftp.dti.ad.jp/pub/lang/CPAN/">Asia, Japan, Minato-ku, Tokyo (dti.ad.jp)</option>
+<option value="http://ftp.jaist.ac.jp/pub/CPAN/">Asia, Japan, Nomi, Tatsunokuchi (jaist.ac.jp)</option>
+<option value="http://ftp.riken.jp/lang/CPAN/">Asia, Japan, Saitama-Ken, Wako-shi (riken.jp)</option>
+<option value="http://ftp.nara.wide.ad.jp/pub/CPAN/">Asia, Japan, Takayama-cho (NAIST)</option>
+<option value="http://ftp.yz.yamagata-u.ac.jp/pub/lang/cpan/">Asia, Japan, Yamagata-ken, Yonezawa (yz.yamagata-u.ac.jp)</option>
+<option value="http://mirror.space.kz/CPAN/">Asia, Kazakhstan, Almaty (mirror.space.kz)</option>
+<option value="http://mirror.neolabs.kz/CPAN/">Asia, Kazakhstan, Almaty (neolabs.kz)</option>
+<option value="http://stingray.cyber.net.pk/pub/cpan/">Asia, Pakistan, Karachi (cyber.net.pk)</option>
+<option value="http://mirror-cybernet.lums.edu.pk/pub/CPAN/">Asia, Pakistan, Punjab, Lahore (mirror-cybernet.lums.edu.pk)</option>
+<option value="http://ftp.kaist.ac.kr/pub/CPAN/">Asia, Republic of Korea, Daejeon (kaist.ac.kr)</option>
+<option value="http://cpan.mirror.cdnetworks.com/">Asia, Republic of Korea, Seoul (cdnetworks.com)</option>
+<option value="http://cpan.sarang.net/">Asia, Republic of Korea, Seoul (sarang.net)</option>
+<option value="http://mirror.yongbok.net/CPAN/">Asia, Republic of Korea, Seoul (yongbok.net)</option>
+<option value="http://mirrors.isu.net.sa/pub/CPAN/languages/perl/CPAN/">Asia, Saudi Arabia, al-Wusta, Riyadh (isu.net.sa)</option>
+<option value="http://cpan.mirror.choon.net/">Asia, Singapore, Singapore (choon.net)</option>
+<option value="http://cpan.oss.eznetsols.org/">Asia, Singapore, Singapore (oss.eznetsols.org)</option>
+<option value="http://cpan.nctu.edu.tw/">Asia, Taiwan, HsinChu (nctu.edu.tw)</option>
+<option value="http://cpan.cdpa.nsysu.edu.tw/">Asia, Taiwan, Kao-hsiung (cpan.cdpa.nsysu.edu.tw)</option>
+<option value="http://cpan.stu.edu.tw/">Asia, Taiwan, Kaohsiung (cpan.stu.edu.tw)</option>
+<option value="http://cpan.cs.pu.edu.tw/">Asia, Taiwan, Taichung (cpan.cs.pu.edu.tw)</option>
+<option value="http://mirrors.issp.co.th/cpan/">Asia, Thailand, Bangkok (issp.co.th)</option>
+<option value="http://mirror.yourconnect.com/CPAN/">Asia, Thailand, Bangkok (yourconnet.com)</option>
+<option value="http://cpan.ulak.net.tr/">Asia, Turkey, Ankara (ulak.net.tr)</option>
+<option value="http://mirror.vit.com.tr/mirror/CPAN/">Asia, Turkey, Bursa (vit.com.tr)</option>
+<option value="http://mirrors.digipower.vn/CPAN/">Asia, Viet Nam, Ho Chi Minh City (digipower.vn)</option>
+<option value="http://cpan.inode.at/">Europe, Austria, Vienna (cpan.inode.at)</option>
+<option value="http://gd.tuwien.ac.at/languages/perl/CPAN/">Europe, Austria, Vienna (gd.tuwien.ac.at)</option>
+<option value="http://ftp.byfly.by/pub/CPAN/">Europe, Belarus, Minsk (byfly.by)</option>
+<option value="http://mirror.datacenter.by/pub/CPAN/">Europe, Belarus, Minsk (mirror.datacenter.by)</option>
+<option value="http://ftp.belnet.be/mirror/ftp.cpan.org/">Europe, Belgium, Brussels (belnet.be)</option>
+<option value="http://cpan.cu.be/">Europe, Belgium, Brussels (cu.be)</option>
+<option value="http://ftp.easynet.be/pub/CPAN/">Europe, Belgium, Brussels (easynet.be)</option>
+<option value="http://cpan.weepeetelecom.be/">Europe, Belgium, Brussels (weepee.org)</option>
+<option value="http://cpan.blic.net/">Europe, Bosnia and Herzegovina, Banja Luka (cpan.blic.net)</option>
+<option value="http://cpan.digsys.bg/">Europe, Bulgaria, Sofia (digsys.bg)</option>
+<option value="http://ftp.carnet.hr/pub/CPAN/">Europe, Croatia, Zagreb (carnet.hr)</option>
+<option value="ftp://ftp.fi.muni.cz/pub/CPAN/">Europe, Czech Republic, Jihomoravsk&yacute;, Brno (fi.muni.cz)</option>
+<option value="http://cpan.mirror.dkm.cz/pub/CPAN/">Europe, Czech Republic, Prague (cpan.mirror.dkm.cz)</option>
+<option value="http://mirrors.dotsrc.org/cpan/">Europe, Denmark, Aalborg (dotsrc.org)</option>
+<option value="http://www.cpan.dk/">Europe, Denmark, Copenhagen (cpan.dk)</option>
+<option value="http://mirror.uni-c.dk/pub/CPAN/">Europe, Denmark, Copenhagen (uni-c.dk)</option>
+<option value="http://servingzone.com/mirrors/cpan/">Europe, Estonia, Tallin (servingzone.com)</option>
+<option value="ftp://ftp.funet.fi/pub/languages/perl/CPAN/">Europe, Finland, Etel&auml;-Suomen L&auml;&auml;ni, Espoo (funet.fi)</option>
+<option value="http://mirror.ebsd.net/CPAN/">Europe, France, Haute-Normandie, Rouen (ebsd.net)</option>
+<option value="http://ftp.ciril.fr/pub/cpan/">Europe, France, Lorraine, Vandoeuvre-l&egrave;s-Nancy (ciril.fr)</option>
+<option value="http://cpan.enstimac.fr/">Europe, France, Midi-Pyr&eacute;n&eacute;es, Albi (perl.enstimac.fr)</option>
+<option value="http://cpan.cict.fr/">Europe, France, Midi-Pyr&eacute;n&eacute;es, Toulouse (cpan.cict.fr)</option>
+<option value="http://cpan.fiat-tux.fr/">Europe, France, Nord-Pas-de-Calais, Lille (fiat-tux.fr)</option>
+<option value="http://ftp.crihan.fr/mirrors/ftp.cpan.org/">Europe, France, Normandie, Rouen (crihan.fr)</option>
+<option value="http://mirror.ibcp.fr/pub/CPAN/">Europe, France, Rh&ocirc;ne-Alpes, Lyon (mirror.ibcp.fr)</option>
+<option value="ftp://ftp.inria.fr/pub/CPAN/">Europe, France, &Icirc;le-de-France, Le Chesnay (inria.fr)</option>
+<option value="http://mirror.bofh.so/cpan.org/">Europe, France, &Icirc;le-de-France, Paris (bofh.so)</option>
+<option value="http://distrib-coffee.ipsl.jussieu.fr/pub/mirrors/cpan/">Europe, France, &Icirc;le-de-France, Paris (jussieu.fr)</option>
+<option value="http://ftp.lip6.fr/pub/perl/CPAN/">Europe, France, &Icirc;le-de-France, Paris (lip6.fr)</option>
+<option value="http://mir2.ovh.net/ftp.cpan.org/">Europe, France, &Icirc;le-de-France, Paris (mir2.ovh.net)</option>
+<option value="ftp://ftp.oleane.net/pub/CPAN/">Europe, France, &Icirc;le-de-France, Paris (oleane.net)</option>
+<option value="http://ftp-stud.hs-esslingen.de/pub/Mirrors/CPAN/">Europe, Germany, Baden-W&uuml;rttemberg, Esslingen am Neckar (fht-esslingen.de)</option>
+<option value="http://www.chemmedia.de/mirrors/CPAN/">Europe, Germany, Bayern, M&uuml;nchen (chemmedia.de)</option>
+<option value="http://cpan.noris.de/">Europe, Germany, Bayern, N&uuml;remberg (cpan.noris.de)</option>
+<option value="ftp://ftp.fu-berlin.de/unix/languages/perl/">Europe, Germany, Berlin (fu-berlin.de)</option>
+<option value="http://www.planet-elektronik.de/CPAN/">Europe, Germany, Chemnitz (planet-elektronik.de)</option>
+<option value="http://mirror.netcologne.de/cpan/">Europe, Germany, Cologne (netcologne.de)</option>
+<option value="http://mirror.de.leaseweb.net/CPAN/">Europe, Germany, Frankfurt (de.leaseweb.net)</option>
+<option value="http://mirrors.zerg.biz/cpan/">Europe, Germany, Frankfurt (zerg.biz)</option>
+<option value="http://dl.ambiweb.de/mirrors/ftp.cpan.org/">Europe, Germany, Gernsbach (ambiweb.de)</option>
+<option value="http://artfiles.org/cpan.org/">Europe, Germany, Hamburg (artfiles.org)</option>
+<option value="http://cpan.mirror.clusters.kg/">Europe, Germany, Hamburg (clusters.kg)</option>
+<option value="http://cpan.mirror.iphh.net/">Europe, Germany, Hamburg (cpan.mirror.iphh.net)</option>
+<option value="http://cpan.softaculous.com/">Europe, Germany, H&uuml;rth (softaculous.com)</option>
+<option value="http://mirror.informatik.uni-mannheim.de/pub/mirrors/CPAN/">Europe, Germany, Mannheim (informatik.uni-mannheim.de)</option>
+<option value="http://ftp.gwdg.de/pub/languages/perl/CPAN/">Europe, Germany, Niedersachsen, G&ouml;ttingen (gwdg.de)</option>
+<option value="http://rub.de/ftp/pub/CPAN/">Europe, Germany, Nordrhein-Westfalen, Bochum (rub.de)</option>
+<option value="http://ftp.hosteurope.de/pub/CPAN/">Europe, Germany, Nordrhein-Westfalen, Cologne (ftp.hosteurope.de)</option>
+<option value="ftp://ftp.freenet.de/pub/ftp.cpan.org/pub/CPAN/">Europe, Germany, Nordrhein-Westfalen, D&uuml;sseldorf (freenet.de)</option>
+<option value="ftp://mirror.fraunhofer.de/CPAN/">Europe, Germany, Nordrhein-Westfalen, Sankt Augustin (fraunhofer.de)</option>
+<option value="ftp://mirror.petamem.com/CPAN/">Europe, Germany, N&uuml;remberg (petamem.com)</option>
+<option value="http://ftp.u-tx.net/CPAN/">Europe, Germany, N&uuml;remberg (u-tx.net)</option>
+<option value="ftp://ftp.mpi-inf.mpg.de/pub/perl/CPAN/">Europe, Germany, Saarland, Saarbr&uuml;cken (mpi-inf.mpg.de)</option>
+<option value="http://mirror.checkdomain.de/CPAN/">Europe, Germany, Sachsen, Falkenstein (checkdomain.de)</option>
+<option value="ftp://ftp.forthnet.gr/pub/languages/perl/CPAN/">Europe, Greece, Athens (forthnet.gr)</option>
+<option value="http://ftp.ntua.gr/pub/lang/perl/">Europe, Greece, Athens (ntua.gr)</option>
+<option value="http://cpan.cc.uoc.gr/">Europe, Greece, Crete, Heraklion (cpan.cc.uoc.gr)</option>
+<option value="http://cpan.hu/">Europe, Hungary, Kunszentmiklss (cpan.hu)</option>
+<option value="http://ftp.rhnet.is/pub/CPAN/">Europe, Iceland, Reykjavik (rhnet.is)</option>
+<option value="http://ftp.esat.net/pub/languages/perl/CPAN/">Europe, Ireland, Dublin (esat.net)</option>
+<option value="http://ftp.heanet.ie/mirrors/ftp.perl.org/pub/CPAN/">Europe, Ireland, Dublin (heanet.ie)</option>
+<option value="http://bo.mirror.garr.it/mirrors/CPAN/">Europe, Italy, Bologna (bo.mirror.garr.it)</option>
+<option value="http://cpan.panu.it/">Europe, Italy, Milano (cpan.panu.it)</option>
+<option value="ftp://ftp.eutelia.it/CPAN_Mirror/">Europe, Italy, Rome (eutelia.it)</option>
+<option value="http://kvin.lv/pub/CPAN/">Europe, Latvia, Riga (kvin.lv)</option>
+<option value="http://mirrors.webhostinggeeks.com/cpan/">Europe, Latvia, Riga (webhostinggeeks.com)</option>
+<option value="http://ftp.litnet.lt/pub/CPAN/">Europe, Lithuania, Kaunas (litnet.lt)</option>
+<option value="http://httpupdate37.cpanel.net/CPAN/">Europe, Netherlands, Amsterdam (httpupdate37.cpanel.net)</option>
+<option value="http://cpan.mirror.triple-it.nl/">Europe, Netherlands, Amsterdam (triple-it.nl)</option>
+<option value="http://cpan.weepeetelecom.nl/">Europe, Netherlands, Amsterdam (weepeetelecom.nl)</option>
+<option value="http://mirror.nl.leaseweb.net/CPAN/">Europe, Netherlands, Haarlem (nl.leaseweb.net)</option>
+<option value="ftp://download.xs4all.nl/pub/mirror/CPAN/">Europe, Netherlands, Noord-Holland, Amsterdam (xs4all.nl)</option>
+<option value="http://archive.cs.uu.nl/mirror/CPAN/">Europe, Netherlands, Utrecht (cs.uu.nl)</option>
+<option value="http://luxitude.net/cpan/">Europe, Netherlands, Utrecht (lxtd.net)</option>
+<option value="http://cpan.uib.no/">Europe, Norway, Bergen (uib.no)</option>
+<option value="ftp://ftp.uninett.no/pub/languages/perl/CPAN/">Europe, Norway, Oslo (uninett.no)</option>
+<option value="ftp://ftp.uit.no/pub/languages/perl/cpan/">Europe, Norway, Troms, Troms&oslash; (uit.no)</option>
+<option value="http://piotrkosoft.net/pub/mirrors/CPAN/">Europe, Poland, Malopolskie, Oswiecim (piotrkosoft.net)</option>
+<option value="http://www.idg.pl/mirrors/CPAN/">Europe, Poland, Mazowieckie, Warsaw (idg.pl)</option>
+<option value="ftp://sunsite.icm.edu.pl/pub/CPAN/">Europe, Poland, Mazowieckie, Warsaw (sunsite.icm.edu.pl)</option>
+<option value="http://ftp.man.poznan.pl/pub/CPAN/">Europe, Poland, Poznan (man.poznan.pl)</option>
+<option value="ftp://ftp.ps.pl/pub/CPAN/">Europe, Poland, Szczecin (ps.pl)</option>
+<option value="ftp://ftp.tpnet.pl/d4/CPAN/">Europe, Poland, Warsaw (tpnet.pl)</option>
+<option value="http://cpan.dei.uc.pt/">Europe, Portugal, Coimbra (dei.uc.pt)</option>
+<option value="http://cpan.perl.pt/">Europe, Portugal, Lisboa (perl.pt)</option>
+<option value="http://mirrors.nfsi.pt/CPAN/">Europe, Portugal, Lisbon (nfsi.pt)</option>
+<option value="http://cpan.dcc.fc.up.pt/">Europe, Portugal, Porto (cpan.dcc.fc.up.pt)</option>
+<option value="http://cpan.isep.ipp.pt/">Europe, Portugal, Porto (isep.ipp.pt)</option>
+<option value="http://mirrors.fe.up.pt/pub/CPAN/">Europe, Portugal, Porto (neacm.fe.up.pt)</option>
+<option value="ftp://ftp.lug.ro/CPAN/">Europe, Romania, Bucharest (lug.ro)</option>
+<option value="http://mirrors.teentelecom.net/CPAN/">Europe, Romania, Bucharest (teentelecom.net)</option>
+<option value="http://mirrors.xservers.ro/CPAN/">Europe, Romania, Bucharest (xservers.ro)</option>
+<option value="http://mirrors.hostingromania.ro/ftp.cpan.org/">Europe, Romania, Craiova (hostingromania.ro)</option>
+<option value="ftp://ftp.roedu.net/pub/CPAN/">Europe, Romania, Iasi (iasi.roedu.net)</option>
+<option value="http://cpan.uni-altai.ru/">Europe, Russian Federation, Barnaul (uni-altai.ru)</option>
+<option value="ftp://ftp.aha.ru/CPAN/">Europe, Russian Federation, Moscow (aha.ru)</option>
+<option value="http://cpan.rinet.ru/">Europe, Russian Federation, Moscow (cpan.rinet.ru)</option>
+<option value="http://mirrors.nlab.su/CPAN/">Europe, Russian Federation, Moscow (nlab.su)</option>
+<option value="http://cpan-mirror.rbc.ru/pub/CPAN/">Europe, Russian Federation, Moscow (rbc.ru)</option>
+<option value="http://mirror.rol.ru/CPAN/">Europe, Russian Federation, Moscow (rol.ru)</option>
+<option value="http://ftp.silvernet.ru/CPAN/">Europe, Russian Federation, St. Petersburg (silvernet.ru)</option>
+<option value="http://ftp.spbu.ru/CPAN/">Europe, Russian Federation, St. Petersburg (spbu.ru)</option>
+<option value="http://mirror.sbb.rs/CPAN/">Europe, Serbia, Belgrade (sbb.rs)</option>
+<option value="http://cpan.lnx.sk/">Europe, Slovakia, Bratislava (lnx.sk)</option>
+<option value="http://tux.rainside.sk/CPAN/">Europe, Slovakia, Bratislava (tux.rainside.sk)</option>
+<option value="http://ftp.arnes.si/software/perl/CPAN/">Europe, Slovenia, Ljubljana (arnes.si)</option>
+<option value="http://cpan.sinusiks.com/">Europe, Slovenia, Ljubljana (sinusiks.com)</option>
+<option value="http://osl.ugr.es/CPAN/">Europe, Spain, Andaluc&iacute;a, Granada (osl.ugr.es)</option>
+<option value="ftp://ftp.rediris.es/mirror/CPAN/">Europe, Spain, Madrid (rediris.es)</option>
+<option value="http://cpan.mirror3.ip-only.net/">Europe, Sweden, Stockholm (ip-only.net)</option>
+<option value="http://ftp.sunet.se/pub/lang/perl/CPAN/">Europe, Sweden, Uppsala (sunet.se)</option>
+<option value="http://cpan.mirror.solnet.ch/">Europe, Switzerland, Solothurn (solnet.ch)</option>
+<option value="ftp://ftp.adwired.ch/CPAN/">Europe, Switzerland, Z&uuml;rich (adwired.ch)</option>
+<option value="http://mirror.switch.ch/ftp/mirror/CPAN/">Europe, Switzerland, Z&uuml;rich (switch.ch)</option>
+<option value="http://cpan.makeperl.org/">Europe, Ukraine, Kiev (cpan.makeperl.org)</option>
+<option value="http://cpan-mirror.telesys.org.ua/">Europe, Ukraine, Kiev (telesys.org.ua)</option>
+<option value="http://cpan.download.ua/">Europe, Ukraine, Kyiv (download.ua)</option>
+<option value="http://cpan.telcom.net.ua/">Europe, Ukraine, Lviv (cpan.telcom.net.ua)</option>
+<option value="http://www.mirrorservice.org/sites/ftp.funet.fi/pub/languages/perl/CPAN/">Europe, United Kingdom, England, Canterbury and Lancaster (mirrorservice.org)</option>
+<option value="http://mirrors.coreix.net/CPAN/">Europe, United Kingdom, England, Enfield (coreix.net)</option>
+<option value="http://cpan.mirror.anlx.net/">Europe, United Kingdom, England, London (anlx.net)</option>
+<option value="http://cpan.cpantesters.org/">Europe, United Kingdom, England, London (cpantesters.org)</option>
+<option value="http://mirror.tje.me.uk/pub/mirrors/ftp.cpan.org/">Europe, United Kingdom, Heathrow (mirror.tje.me.uk)</option>
+<option value="http://www.mirror.8086.net/sites/CPAN/">Europe, United Kingdom, London (8086.net)</option>
+<option value="http://cpan.etla.org/">Europe, United Kingdom, London (cpan.etla.org)</option>
+<option value="http://mirror.sov.uk.goscomb.net/CPAN/">Europe, United Kingdom, London (goscomb.net)</option>
+<option value="http://httpupdate17.cpanel.net/CPAN/">Europe, United Kingdom, London (httpupdate17.cpanel.net)</option>
+<option value="http://cpan.singletasker.co.uk/">Europe, United Kingdom, London (singletasker.co.uk)</option>
+<option value="http://ftp.ticklers.org/pub/CPAN/">Europe, United Kingdom, London (ticklers.org)</option>
+<option value="http://cpan.mirrors.uk2.net/">Europe, United Kingdom, London (uk2.net)</option>
+<option value="http://mirror.bytemark.co.uk/CPAN/">Europe, United Kingdom, Manchester (bytemark.co.uk)</option>
+<option value="http://mirror.ox.ac.uk/sites/www.cpan.org/">Europe, United Kingdom, Oxford (ox.ac.uk)</option>
+<option value="http://cpan.arcticnetwork.ca/">North America, Canada, Alberta, Calgary (cpan.arcticnetwork.ca)</option>
+<option value="http://cpan.sunsite.ualberta.ca/">North America, Canada, Alberta, Edmonton (sunsite.ualberta.ca)</option>
+<option value="http://mirrors.gossamer-threads.com/CPAN/">North America, Canada, British Columbia, Vancouver (gossamer-threads.com)</option>
+<option value="http://theoryx5.uwinnipeg.ca/pub/CPAN/">North America, Canada, Manitoba, Winnipeg (theoryx5.uwinnipeg.ca)</option>
+<option value="http://mirror.its.dal.ca/cpan/">North America, Canada, Nova Scotia, Halifax (mirror.its.dal.ca)</option>
+<option value="http://cpan.perlnow.com/">North America, Canada, Ontario, Ancaster (cpan.perlnow.com)</option>
+<option value="http://CPAN.mirror.rafal.ca/">North America, Canada, Ontario, Hamilton (cpan.mirror.rafal.ca)</option>
+<option value="ftp://ftp.nrc.ca/pub/CPAN/">North America, Canada, Ontario, Ottawa (nrc.ca)</option>
+<option value="http://mirror.csclub.uwaterloo.ca/pub/CPAN/">North America, Canada, Ontario, Waterloo (csclub.uwaterloo.ca)</option>
+<option value="http://httpupdate25.cpanel.net/CPAN/">North America, Canada, Quebec, Montreal (httpupdate25.cpanel.net)</option>
+<option value="http://mirrors.abdicar.com/CPAN/">North America, Costa Rica, Heredia (abdicar.com)</option>
+<option value="http://mirrors.ucr.ac.cr/CPAN/">North America, Costa Rica, San Jos&eacute; Province, San Pedro (ucr.ac.cr)</option>
+<option value="http://www.msg.com.mx/CPAN/">North America, Mexico, Distrito Feder&aacute;l, Mexico City (msg.com.mx)</option>
+<option value="http://mirror.teklinks.com/CPAN/">North America, United States, Alabama, Birmingham (teklinks.com)</option>
+<option value="http://mirror.hiwaay.net/CPAN/">North America, United States, Alabama, Huntsville (hiwaay.net)</option>
+<option value="http://httpupdate19.cpanel.net/CPAN/">North America, United States, Arizona, Phoenix (httpupdate19.cpanel.net)</option>
+<option value="http://cpan.ezarticleinformation.com/">North America, United States, Arizona, Scottsdale (ezarticleinformation.com)</option>
+<option value="http://cpan.knowledgematters.net/">North America, United States, California, Brea (knowledgematters.net)</option>
+<option value="http://httpupdate27.cpanel.net/CPAN/">North America, United States, California, Dana Point (httpupdate27.cpanel.net)</option>
+<option value="http://cpan.develooper.com/">North America, United States, California, Los Angeles (cpan.develooper.com)</option>
+<option value="http://cpan.schatt.com/">North America, United States, California, Los Angeles (schatt.com)</option>
+<option value="http://mirrors.scurvynet.com/CPAN/">North America, United States, California, Los Angeles (scurvynet.com)</option>
+<option value="http://cpan.mirror.facebook.net/">North America, United States, California, San Francisco (facebook.net)</option>
+<option value="http://cpan-sj.viaverio.com/">North America, United States, California, San Jose (cpan-sj.viaverio.com)</option>
+<option value="http://www.perl.com/CPAN/">North America, United States, California, Sebastopol (perl.com)</option>
+<option value="http://cpan.yimg.com/">North America, United States, California, Sunnyvale (yahoo.com)</option>
+<option value="http://cpan.mirrorcatalogs.com/cpan/">North America, United States, Colorado, Denver (mirrorcatalogs.com)</option>
+<option value="http://httpupdate8.cpanel.net/CPAN/">North America, United States, Florida, Orlando (httpupdate8.cpanel.net)</option>
+<option value="http://mirror.atlantic.net/pub/CPAN/">North America, United States, Florida, Orlando (mirror.atlantic.net)</option>
+<option value="http://httpupdate23.cpanel.net/CPAN/">North America, United States, Georgia, Atlanta (httpupdate23.cpanel.net)</option>
+<option value="http://mirrors.syringanetworks.net/CPAN/">North America, United States, Idaho, Boise (syringanetworks.net)</option>
+<option value="http://cpan.mirrors.hoobly.com/">North America, United States, Illinois, Chicago (cpan.mirrors.hoobly.com)</option>
+<option value="http://httpupdate15.cpanel.net/CPAN/">North America, United States, Illinois, Chicago (httpupdate15.cpanel.net)</option>
+<option value="http://mirror.team-cymru.org/CPAN/">North America, United States, Illinois, Chicago (mirror.team-cymru.org)</option>
+<option value="http://mirrors.servercentral.net/CPAN/">North America, United States, Illinois, Chicago (servercentral.net)</option>
+<option value="http://soft-download.org/cpan/">North America, United States, Illinois, Chicago (soft-download.org)</option>
+<option value="http://www.stathy.com/CPAN/">North America, United States, Illinois, Chicago (stathy.com)</option>
+<option value="ftp://ftp.uwsg.iu.edu/pub/perl/CPAN/">North America, United States, Indiana, Bloomington (uwsg.iu.edu)</option>
+<option value="http://cpan.netnitco.net/">North America, United States, Indiana, Hebron (cpan.netnitco.net)</option>
+<option value="http://ftp.ndlug.nd.edu/pub/perl/">North America, United States, Indiana, Notre Dame (ndlug.nd.edu)</option>
+<option value="http://mirrors.ccs.neu.edu/CPAN/">North America, United States, Massachusetts, Boston (ccs.neu.edu)</option>
+<option value="http://ftp.wayne.edu/cpan/">North America, United States, Michigan, Detroit (wayne.edu)</option>
+<option value="http://httpupdate18.cpanel.net/CPAN/">North America, United States, Michigan, Lansing (httpupdate18.cpanel.net)</option>
+<option value="http://cpan.msi.umn.edu/">North America, United States, Minnesota, Minneapolis (msi.umn.edu)</option>
+<option value="http://mirror.metrocast.net/cpan/">North America, United States, New Hampshire, Rochester (metrocast.net)</option>
+<option value="http://mirror.datapipe.net/CPAN/">North America, United States, New Jersey, Newark (datapipe.net)</option>
+<option value="http://httpupdate1.cpanel.net/CPAN/">North America, United States, New Jersey, Newark (httpupdate1.cpanel.net)</option>
+<option value="http://noodle.portalias.net/CPAN/">North America, United States, New York, Brookyln (portalias.net)</option>
+<option value="http://mirror.cc.columbia.edu/pub/software/cpan/">North America, United States, New York, New York (cc.columbia.edu)</option>
+<option value="http://cpan.belfry.net/">North America, United States, New York, New York (cpan.belfry.net)</option>
+<option value="http://cpan.erlbaum.net/">North America, United States, New York, New York (cpan.erlbaum.net)</option>
+<option value="http://cpan.hexten.net/">North America, United States, New York, New York (cpan.hexten.net)</option>
+<option value="http://httpupdate3.cpanel.net/CPAN/">North America, United States, New York, New York (httpupdate3.cpanel.net)</option>
+<option value="ftp://mirror.nyi.net/CPAN/">North America, United States, New York, New York (nyi.net)</option>
+<option value="http://mirrors.rit.edu/CPAN/">North America, United States, New York, Rochester (rit.edu)</option>
+<option value="http://mirrors.ibiblio.org/CPAN/">North America, United States, North Carolina, Chapel Hill (ibiblio.org)</option>
+<option value="http://httpupdate40.cpanel.net/CPAN/">North America, United States, North Carolina, Charlotte (httpupdate40.cpanel.net)</option>
+<option value="http://ftp.osuosl.org/pub/CPAN/">North America, United States, Oregon, Corvallis (osuosl.org)</option>
+<option value="http://mirror.uoregon.edu/CPAN/">North America, United States, Oregon, Eugene (uoregon.edu)</option>
+<option value="http://cpan.pair.com/">North America, United States, Pennsylvania, Pittsburgh (cpan.pair.com)</option>
+<option value="http://cpan.mirror.clemson.edu/">North America, United States, South Carolina, Clemson (clemson.edu)</option>
+<option value="http://mirror.uta.edu/CPAN/">North America, United States, Texas, Arlington (uta.edu)</option>
+<option value="http://httpupdate.cpanel.net/CPAN/">North America, United States, Texas, Houston (httpupdate.cpanel.net)</option>
+<option value="http://classivox.com/pub/CPAN/">North America, United States, Texas, San Antonio (classivox.com)</option>
+<option value="http://cpan.cs.utah.edu/">North America, United States, Utah, Salt Lake City (cpan.cs.utah.edu)</option>
+<option value="ftp://mirror.xmission.com/CPAN/">North America, United States, Utah, Salt Lake City (xmission.com)</option>
+<option value="http://cpan-du.viaverio.com/">North America, United States, Virginia, Dulles (cpan-du.viaverio.com)</option>
+<option value="http://mirror.cogentco.com/pub/CPAN/">North America, United States, Virginia, Herndon (cogentco.com)</option>
+<option value="http://mirror.us.leaseweb.net/CPAN/">North America, United States, Virginia, Manassas (us.leaseweb.net)</option>
+<option value="http://httpupdate14.cpanel.net/CPAN/">North America, United States, Virginia, Richmond (httpupdate14.cpanel.net)</option>
+<option value="http://cpan.llarian.net/">North America, United States, Washington, Seattle (cpan.llarian.net)</option>
+<option value="ftp://ftp-mirror.internap.com/pub/CPAN/">North America, United States, Washington, Seattle (internap.com)</option>
+<option value="http://httpupdate35.cpanel.net/CPAN/">North America, United States, Washington, Tukwila (httpupdate35.cpanel.net)</option>
+<option value="http://cpan.mirrors.tds.net/">North America, United States, Wisconsin, Madison (cpan.mirrors.tds.net)</option>
+<option value="http://mirror.services.wisc.edu/pub/CPAN/">North America, United States, Wisconsin, Madison (doit.wisc.edu)</option>
+<option value="http://mirror.optusnet.com.au/CPAN/">Oceania, Australia, New South Wales, Sydney (optusnet.com.au)</option>
+<option value="http://cpan.mirror.uber.com.au/">Oceania, Australia, New South Wales, Sydney (uber.com.au)</option>
+<option value="http://mirror.westfield.com.au/cpan/">Oceania, Australia, New South Wales, Sydney (westfield.com.au)</option>
+<option value="ftp://mirror.internode.on.net/pub/cpan/">Oceania, Australia, South Australia, Adelaide (mirror.internode.on.net)</option>
+<option value="http://httpupdate43.cpanel.net/CPAN/">Oceania, Australia, Sydney (httpupdate43.cpanel.net)</option>
+<option value="http://cpan.mirrors.ilisys.com.au/">Oceania, Australia, Victoria, Melbourne (cpan.mirrors.ilisys.com.au)</option>
+<option value="http://cpan.schools.net.au/">Oceania, Australia, Victoria, Richmond (schools.net.au)</option>
+<option value="http://mirror.waia.asn.au/pub/cpan/">Oceania, Australia, Western Australia, Perth (waia.asn.au)</option>
+<option value="http://cpan.nautile.nc/CPAN/">Oceania, New Caledonia, Noum&eacute;a (nautile.nc)</option>
+<option value="ftp://ftp.auckland.ac.nz/pub/perl/CPAN/">Oceania, New Zealand, Auckland (auckland.ac.nz)</option>
+<option value="http://mirror.webtastix.net/CPAN/">Oceania, New Zealand, Auckland (webtastix.net)</option>
+<option value="http://cpan.inspire.net.nz/">Oceania, New Zealand, Palmerston North (cpan.inspire.net.nz)</option>
+<option value="http://cpan.catalyst.net.nz/CPAN/">Oceania, New Zealand, Wellington (cpan.catalyst.net.nz)</option>
+<option value="http://cpan.localhost.net.ar/">South America, Argentina, Buenos Aires (localhost.net.ar)</option>
+<option value="http://cpan.mmgdesigns.com.ar/">South America, Argentina, Buenos Aires (mmgdesigns.com.ar)</option>
+<option value="http://mirrors.coopvgg.com.ar/CPAN/">South America, Argentina, Santa Fe, Villa Gobernador Galvez (coopvgg.com.ar)</option>
+<option value="http://httpupdate38.cpanel.net/CPAN/">South America, Brazil, Para&iacute;ba, Joao Pessoa (httpupdate38.cpanel.net)</option>
+<option value="http://cpan.kinghost.net/">South America, Brazil, Porto Alegre (kinghost.net)</option>
+<option value="http://cpan.homehost.com.br/">South America, Brazil, RJ, Rio de Janeiro (homehost.com.br)</option>
+<option value="http://linorg.usp.br/CPAN/">South America, Brazil, Sao Paulo (linorg.usp.br)</option>
+<option value="http://cpan.dcc.uchile.cl/">South America, Chile, Santiago (sunsite.dcc.uchile.cl)</option>
+<option value="http://www.laqee.unal.edu.co/CPAN/">South America, Colombia, Cundinamarca, Bogot&aacute; (unal.edu.co)</option>
+</select><p />
+<b>or</b><p /><b>2. Custom URL</b> (eg http://my.site/CPAN/)<br />
+<input type=text name=url value="" size=80>
+<br /><p />
+<input type=submit value=Submit>
+</form>
+<div class="footer"><div class="cpanstats">78064 Uploads, 24686 Distributions
+105893 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Other']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Other']);
+    });
+  });
+</script>
+<!-- Sun Apr 22 01:27:31 2012 GMT (0.0203728675842285) @cpansearch1 -->
+ </body>
+</html>

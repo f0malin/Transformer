@@ -1,0 +1,54 @@
+name    = DateTime
+author  = Dave Rolsky <autarch@urth.org>
+copyright_year = 2010
+
+version = 0.66
+
+[@Filter]
+-bundle = @Basic
+-remove = MakeMaker
+
+[PruneFiles]
+filenames = Build.PL
+
+[PkgVersion]
+
+[=inc::MyModuleBuild]
+
+[PurePerlTests]
+env_var = PERL_DATETIME_PP
+
+[InstallGuide]
+[MetaJSON]
+
+[MetaResources]
+bugtracker.web    = http://rt.cpan.org/NoAuth/Bugs.html?Dist=DateTime
+bugtracker.mailto = bug-datetime@rt.cpan.org
+repository.url    = http://hg.urth.org/hg/DateTime.pm
+repository.web    = http://hg.urth.org/hg/DateTime.pm
+repository.type   = hg
+
+[SurgicalPodWeaver]
+
+[KwaliteeTests]
+[NoTabsTests]
+[EOLTests]
+[Signature]
+
+[CheckChangeLog]
+
+[@Mercurial]
+
+[Prereqs]
+DateTime::Locale   = 0.41
+DateTime::TimeZone = 1.09
+Params::Validate   = 0.76
+Scalar::Util       = 0
+Time::Local        = 1.04
+
+[Prereqs / BuildRequires]
+ExtUtils::CBuilder = 0
+Module::Build      = 0
+Pod::Man           = 1.14
+Test::Exception    = 0
+Test::More         = 0.88

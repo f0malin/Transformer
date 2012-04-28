@@ -1,0 +1,27 @@
+This is the README file for Module::ScanDeps, a module to recursively
+scan Perl programs for dependencies.
+
+An application of Module::ScanDeps is to generate executables from scripts
+that contains necessary modules; this module supports two such projects,
+PAR and App::Packer.  Please see their respective documentations on CPAN
+for further information.
+
+* Installation
+
+Module::ScanDeps uses the standard perl module install process:
+
+    cpansign -v         # optional; see SIGNATURE for details
+    perl Makefile.PL
+    make                # or 'nmake' on Win32
+    make test
+    make install
+
+* Copyright
+
+Copyright 2002-2008 by Audrey Tang <autrijus@autrijus.org>;
+2005-2009 by Steffen Mueller <smueller@cpan.org>.
+
+All rights reserved.  You can redistribute and/or modify
+this bundle under the same terms as Perl itself.
+
+See <http://www.perl.com/perl/misc/Artistic.html>.

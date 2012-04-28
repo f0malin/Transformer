@@ -1,0 +1,468 @@
+Author: James Simpson <j2simpso at uwaterloo.ca>
+Date  : Mon Aug 16 2010
+
+CHANGED : Repurposed ASCIIO for strictly designing User Interfaces in ASCII.
+		  Numerous changes made : Addition of a UI component palette and addition several types of components (stencils).
+		  Changed menu design from context menu to menu assigned to top of window.
+		  Changed behaviour of stripes to better reflect the behaviours that UI components have.
+		  Changed copy/paste behaviour to allow only ASCII text to be used for either routine.
+		  Changed open to allow for opening of strictly ASCII files containing UI design for GUIIO to interpret
+		  Changed save to ensure that designs created in GUIIO can be saved to a strictly text only format.
+		  This project (fork) is now being called GUIIO as its focus is on GUI designs using only ASCII
+OTHER NOTES:
+			This module as it stands now acts as a proof of concept that it is possible to bring the affordances
+			of a UI Builder such as QT Designer or GLADE Interface Builder for designing User Interfaces in a text only
+			medium.  It is our hope that by version 1.0 of the release, that GUIIO can be a fully functional implementaiton
+			of our goal.
+
+commit 67a872d9a3d01d46b04bf10c37974b9b7e696619
+Author: nadim khemir <nkh@cpan.org>
+Date:   Wed Dec 17 23:49:21 2008 +0100
+
+    CHANGED: use git to generate Changes
+
+commit 1b59aba199b99f6ea99fc2b108ae1cf0ef392928
+Author: nadim khemir <nkh@cpan.org>
+Date:   Wed Dec 17 23:31:27 2008 +0100
+
+    CHANGED: default box made smaller
+    CHANGED: remove unnecessary test dependencies
+    CHANGED: simplify Build.PL
+
+commit 9726996439418451761ff28e4f9625af08c32dc3
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sun Oct 26 13:50:26 2008 +0100
+
+    ADDED: cut and paste use the primary selection (used by emacs) patch by Eddward DeVilla
+
+commit 0489cbf50c4f28f4c7c367fbed78370a8cbb02e9
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sun Oct 26 13:42:50 2008 +0100
+
+    ADDED: .gitignore
+
+commit 830946d92fe1e4601751316cef1569c466d26e55
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Tue Aug 26 20:18:46 2008 +0200
+
+    FIXED: gtk warning test
+
+commit 91c2e8d85488dd504d33e0a93187611bc1b12889
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sat Aug 23 18:55:09 2008 +0200
+
+    CHANGED: actions moving objects take offset argument
+
+commit 7fda4a05605c5c8ef1839e67beede591b0954573
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sat Aug 23 13:18:18 2008 +0200
+
+    ADDED: simple slide API
+
+commit b1b19e62716d9ca2bfcf72bdc798b95eb7fda366
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Thu Aug 21 21:35:17 2008 +0200
+
+    CHANGED: split stencils in different files
+    CHANGED: thin_box is now box
+    ADDED: import from clipboard to box
+    CHANGED: documentation update
+
+commit d8fa2393b90aea894735e195c2ac36b76f302458
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Thu Aug 21 18:50:15 2008 +0200
+
+    ADDED: box auto shrink and context menue entry
+
+commit 5545955ef31af33ffc11f27bd03b06dad302e930
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Wed Aug 20 22:46:20 2008 +0200
+
+    CHANGED: keyboard mapping information format
+
+commit 54e36b66715ae2ff75ae7b070f149bcf512ed439
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Thu Jun 5 22:51:06 2008 +0200
+
+    ADDED: selection that doesn't take arrows (middle button)
+    ADDED: saving of single stencil
+
+commit c06cda291372f7fcb5f91a9e0a6d982438b6f3c2
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Thu Jun 5 21:34:53 2008 +0200
+
+    CHANGED: stencils name have their directory prepended
+    CHANGED: ASCII menu entry removed
+    ADDED: stencils directly created from ascii
+    ADDED: network stencils
+
+commit 80b4b037640daf6f2d4e203d21715b65ef699e72
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Tue Jun 3 21:05:16 2008 +0200
+
+    ADDED: batch stencil loading
+
+commit 490a1c3835237da5fe56a2f9cefb0bfad733fffc
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Tue Jun 3 19:41:57 2008 +0200
+
+    ADDED: remove first section from multi wirl arrow
+
+commit 76094db961c271ea419b7835ad15f432bbb66fc1
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Tue Jun 3 19:20:18 2008 +0200
+
+    ADDED: prepend section to multi wirl
+
+commit 34ae4c898f3937625baccf12690276670194da71
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sat May 31 18:10:11 2008 +0200
+
+    ADDED: vertical text
+
+commit d1e0d1bfc044d1d5ef9fdf6e1944a696d7726027
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Fri May 30 23:55:02 2008 +0200
+
+    CHANGED: text element contains a single letter, this fixes the resize problem on creation
+    ADDED: box object, invisible, border connectors
+
+commit a20878b3e338cf263fa01caa2487066fac57b231
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Fri May 30 20:33:02 2008 +0200
+
+    CHANGED: newly added element, via shortcut, is selected
+
+commit 89875206288eebadda5f88745e81625d5c8460ba
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Wed May 28 14:34:35 2008 +0200
+
+    ADDED: keep selected elements selected after a quick link
+
+commit e021055fcbc708a39f26e2d9a1c524664add87b9
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Thu May 15 08:30:42 2008 +0200
+
+    ADDED: changing background and grid color
+    ADDED: show/hide grid
+
+commit 9df9c91a11a865ea95b8abedc245a29c825e8e6d
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Fri May 9 01:45:37 2008 +0200
+
+    CHANGED: shortcuts to zoomin zoom out
+    CHANGED: text edit box automatically focused and selected (thanks to Tian)
+
+commit 08ae9b7e8d9fe1d4e3cb7b8d72623cc3e116cf3a
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Wed May 7 23:51:42 2008 +0200
+
+    FIXED: title has frame when text doesn't
+
+commit ae1b8461e6698ae7df9f8ba49e0189794803e742
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Wed May 7 21:57:50 2008 +0200
+
+    ADDED: background and grid color changing
+
+commit 611b3a181257daf60cb3ea771ee1631c7350b314
+Merge: 637524b... 8a7f7d3...
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Wed May 7 01:48:24 2008 +0200
+
+    Merge hp:/home/nadim/Desktop/guiio
+    
+    Conflicts:
+    
+    	Todo.txt
+
+commit 637524b6813500d1f9f1eafb56a273a6dcf41df3
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Wed May 7 01:45:30 2008 +0200
+
+    ADDED: resuirements and errors in todo file
+
+commit 8a7f7d3275151edd9a2746f9b25b4a7f0203cece
+Author: nadim khemir <nadim@hp.(none)>
+Date:   Wed May 7 01:40:55 2008 +0200
+
+    ADDED: requirements from visio and other diagram applications
+
+commit 262bc9aa7e1dfba51564e6d1bf03cf771782f219
+Author: nadim khemir <nadim@hp.(none)>
+Date:   Sat May 3 16:44:54 2008 +0200
+
+    ADDED: icon to 'save and quit' button
+
+commit c0f22394a1cea72eb2d18ff1b53aa1981d32bd00
+Author: nadim khemir <nadim@hp.(none)>
+Date:   Sat May 3 16:36:52 2008 +0200
+
+    ADDED: "save and exit" when closing guiio
+    ADDED: actions can return results to their caller
+
+commit b41cdf8aa720823977cf024543a71ce5eb1babeb
+Author: nadim khemir <nadim@hp.(none)>
+Date:   Sat May 3 15:35:12 2008 +0200
+
+    CHANGED: filtered out unecessary information from keyboard shortcuts listing
+
+commit 14e04110795cfc9679a1a4a0c90aa79a68599794
+Author: nadim khemir <nadim@hp.(none)>
+Date:   Sat May 3 15:15:37 2008 +0200
+
+    FIXED: diagonal to non-diagonal section connection
+    CHANGED: refactored non-diagonal connection code
+
+commit ac24a1ea8ba1eb907e562cc93b741bf9c21ca724
+Author: nadim khemir <nadim@hp.(none)>
+Date:   Fri May 2 21:41:18 2008 +0200
+
+    CHANGED: refactored intersection overlay code
+
+commit e0cbcdb5c36e8988dfe1bbdcd35a8692f3f09567
+Author: nadim khemir <nadim@hp.(none)>
+Date:   Fri May 2 21:21:27 2008 +0200
+
+    FIXED: diagonal arrows connector overlay
+
+commit 5496f3823605735bc5e72b1744dbb991418d76ab
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Fri May 2 10:25:28 2008 +0200
+
+    ADDED: ruler context menu entry
+
+commit 19f188b707c16e8c08a4861fcdb57f5e37211ae8
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Fri May 2 02:04:07 2008 +0200
+
+    FIXED: handle error when running an external command
+
+commit 3885ae0ac37ac0575518f78b6865aae0da87aba9
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Thu May 1 18:35:38 2008 +0200
+
+    CHANGED: paste at the mouse position
+
+commit b15d56c6b93463db710e683172ea23e561d995db
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Thu May 1 17:08:48 2008 +0200
+
+    ADDED: context menue to allow diagonal lines
+
+commit 3ff5e3d048d96abccf66fc772f5de7ecdb007743
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Thu May 1 16:45:04 2008 +0200
+
+    ADDED: arrow can be connected anywhere but modifying box removes connection
+
+commit ec1b202992af51e491fe66a13c32efaa7c390f90
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Thu May 1 16:24:12 2008 +0200
+
+    ADDED: copy selected element to clipboard
+
+commit 2a1c7cd90299a6474cad3bedfb06cc82c31c09c5
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Thu May 1 16:15:02 2008 +0200
+
+    FIXED: ALLOW_DIAGONALS field missing
+
+commit db6e60c8b44aa6ab7046809f897004f3f779a1d0
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sun Apr 27 16:48:38 2008 +0200
+
+    CHANGED: context menu structure and naming
+
+commit 2274872f897aa7e46acc89096b58c936498c2dd6
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sun Apr 27 16:28:02 2008 +0200
+
+    ADDED: context menu entries for ruler lines
+    CHANGED: moved default ruler lines definitions to user setup
+
+commit 1652aad118f0faa0ef16da7dd707260487c9c4a8
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sun Apr 27 14:57:29 2008 +0200
+
+    CHANGED: moved ruler definition to setup
+
+commit 4b6f905babca8c9ed60c8116b86d5fb0019397cf
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sun Apr 27 14:27:38 2008 +0200
+
+    FIXED: number of group colors is automatically updated from cnumber of group color definitions
+
+commit 50bd22c8587dad4c929e0e4ce8e2943919bea257
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Fri Apr 25 19:48:07 2008 +0200
+
+    ADDED: context menu to activate/deactivate wirl arrow connectors
+
+commit fa36c0c325a3c0a3663eb5065cb189929c058d73
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Fri Apr 25 16:18:41 2008 +0200
+
+    ADDED: non connecting arrows. no UI done yet.
+
+commit 929a4766c4de5ec4a4f8e19d8fd63d4e7e896e12
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Fri Apr 25 15:17:14 2008 +0200
+
+    ADDED: external command output insertion
+
+commit f0494cfc4aded8366b17c3f48c265e9510756084
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Wed Apr 23 00:19:48 2008 +0200
+
+    CHANGED: group color has less priority than element color
+
+commit 1be6f8e0f4f3f62d2962e0b75e1c7cc97ca25a9c
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sun Apr 20 09:15:14 2008 +0200
+
+    FIXED: error message and typos
+
+commit 49a0e831d105a318fbda1c8a03b84a22d2242341
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sat Apr 19 15:59:57 2008 +0200
+
+    ADDED: remove last multi-wirl section
+
+commit 44ccf80bf9f8967f96317578ea37b7265b9087d7
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sat Apr 19 09:56:18 2008 +0200
+
+    ADDED: export to png format
+
+commit a2203d03a022f3c9083fa5f549f3429ab0564a78
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sat Apr 19 09:10:03 2008 +0200
+
+    ADDED: destroy sub and commented the startup script
+
+commit e3ef7f54ba6da3d1236b3e220bd5878f93e9aa4e
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Wed Apr 16 21:49:47 2008 +0200
+
+    ADDED: 'return' edits the currently selected box
+
+commit 660303247b64b9e1a820309c77ddad95ea30bb6c
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Wed Apr 16 21:28:24 2008 +0200
+
+    CHANGE: close button to ok button
+
+commit 856b724bb39754b64b0457bfffd1a22043716ba7
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Wed Apr 16 20:25:32 2008 +0200
+
+    FIXED: targets are not opened
+
+commit d48bf64b1335799dff72b8df2c6a6e2297e9eeec
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Wed Apr 16 08:46:12 2008 +0200
+
+    CHANGED: register_action_handlers use own data instead for the evaled package returned values
+    CHANGED: closing window use icons (code by Muppet)
+
+commit d7441253720c02741722f1f9ed4b185ce5e1f34d
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Tue Apr 15 09:56:45 2008 +0200
+
+    ADDED: dump of actions per file (for user help and document generation)
+
+commit e6e758fd15a725138de0f6195e81fe8e04186a01
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Tue Apr 15 07:59:24 2008 +0200
+
+    FIXED: multi wirl inter-sections overlays error when the arrow backtracked on itself
+
+commit 1e25b671042386f1070d5b454b714a064c3d0c94
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Tue Apr 15 07:53:23 2008 +0200
+
+    FIXED: moving connectors on each other bugs the connector size
+
+commit 0e9e6402ed2684bc572fab38c74fbcef9d9f2448
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Mon Apr 14 11:39:43 2008 +0200
+
+    FIXED: multi wirl inter-sections overlays should be taken from the arrow definition
+
+commit 3eca833a47fa621560c637f2a75c305f2f8608ae
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Mon Apr 14 10:29:26 2008 +0200
+
+    FIXED: added section connects automatically
+
+commit b0a8e3cd026aff7680a9da666e29c50b8429e02c
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Mon Apr 14 10:05:20 2008 +0200
+
+    FIXED: Add section keeps connection
+
+commit d16ccabee59e0f9e7ac5eb76b1162fba42404906
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Mon Apr 14 09:51:54 2008 +0200
+
+    ADDED: add section to current mouse position
+
+commit 8d79bf5561cd7e5c5dbe8e5113fc6c1a35ff710e
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Mon Apr 14 09:15:47 2008 +0200
+
+    ADDED: keep element selection order
+    ADDED: change arrow type from context menue
+    ADDED: development guiio run command (./A)
+
+commit dd91c74a4a770616ae3dbf6c2256465ce634870f
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sun Apr 13 21:46:30 2008 +0200
+
+    CHANGED: change direction and flip arrow work with multi wirl arrow
+    ADDED: action origin file is kept and displayed when action is run
+    ADDED: scripts handle setup path
+
+commit 0f02ed81a5470dfffa95bb10151e31deccfe0783
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sun Apr 13 17:24:44 2008 +0200
+
+    CHANGED: single wirl arrow by multi-wirl arrow with single section
+
+commit 6a575918d14bbf92e5d1b916a8820c4f1e204c51
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Sat Apr 12 02:20:58 2008 +0200
+
+    CHANGED: use multi wirl arrow instead for wirl arrow
+
+commit ee282672d7a8b1377ce2882a788a15c3ee95cd42
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Fri Apr 11 22:29:24 2008 +0200
+
+    ADDED: --script
+
+commit 5a6c93d3029d199fa81efe4d41adc30cfbbe6627
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Fri Apr 11 20:20:31 2008 +0200
+
+    FIXED: multi key actions
+
+commit 6ced133739a12d2852529d16a5092d34c637413b
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Fri Apr 11 19:58:57 2008 +0200
+
+    FIXED: uninitialized variable in context menu box action
+
+commit fe37cb45242cbcf6b259ee702631398a3a7d567d
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Fri Apr 11 19:38:12 2008 +0200
+
+    ADDED: Option parsing from PBS
+    ADDED: Context menu actions
+
+commit d17636a35a37ada8e66b80d8cae057385d9f2611
+Author: nadim khemir <nadim@naquadim.(none)>
+Date:   Wed Apr 9 23:38:23 2008 +0200
+
+    Initial commit after changing to guiio name

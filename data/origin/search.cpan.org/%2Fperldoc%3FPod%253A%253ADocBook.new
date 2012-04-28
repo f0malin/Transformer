@@ -1,0 +1,828 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Pod::DocBook - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Pod-DocBook",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Pod-DocBook-1.2",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Pod::DocBook",3]);
+    _gaq.push(["_setCustomVar",1,"Author","NANDU",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Pod::DocBook">permalink</a></div>
+  <a href="/~nandu/">Nandu Shah</a> &gt;
+  <a href="/~nandu/Pod-DocBook-1.2/">Pod-DocBook-1.2</a> &gt;
+  Pod::DocBook
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/165cff4a512336600a5fc8c5eba12a12?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/N/NA/NANDU/Pod-DocBook-1.2.tar.gz">Pod-DocBook-1.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Pod%3A%3ADocBook;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~NANDU/Pod-DocBook-1.2/lib/Pod/DocBook.pm">Annotate this POD
+(4)
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Pod%3A%3AUsage">Pod::Usage</a><br>
+<a href="/perldoc?Pod%3A%3APdf">Pod::Pdf</a><br>
+<a href="/perldoc?Pod%3A%3ALaTeX">Pod::LaTeX</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Pod%3A%3ADocBook">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 2</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 2</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Pod-DocBook">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.2 &nbsp;
+<span class="noprint">
+  <a href="/src/NANDU/Pod-DocBook-1.2/lib/Pod/DocBook.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#POD_TO_DOCBOOK_TRANSLATION'>POD TO DOCBOOK TRANSLATION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Document_Types'>Document Types</a>
+    <li class='indexItem indexItem2'><a href='#Ordinary_Paragraphs'>Ordinary Paragraphs</a>
+    <li class='indexItem indexItem2'><a href='#Verbatim_Paragraphs'>Verbatim Paragraphs</a>
+    <li class='indexItem indexItem2'><a href='#Command_Paragraphs'>Command Paragraphs</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Embedded_DocBook_Markup'>Embedded DocBook Markup</a>
+      <li class='indexItem indexItem3'><a href='#Simple_Tables'>Simple Tables</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Formatting_Codes'>Formatting Codes</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DIAGNOSTICS'>DIAGNOSTICS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Pod::DocBook - Convert Pod data to DocBook SGML</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use Pod::DocBook;
+  my $parser = Pod::DocBook-&#62;new (title             =&#62; &#39;My Article&#39;,
+                                  doctype           =&#62; &#39;article&#39;,
+                                  fix_double_quotes =&#62; 1,
+                                  spaces            =&#62; 3);
+
+  $parser-&#62;parse_from_file (&#39;my_article.pod&#39;, &#39;my_article.sgml&#39;);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Pod::DocBook is a module for translating Pod-formatted documents to DocBook 4.2 SGML (see <a href="http://www.docbook.org/" class="podlinkurl"
+>http://www.docbook.org/</a>). It is primarily a back end for <b>pod2docbook</b>, but, as a Pod::Parser subclass, it can be used on its own. The only public extensions to the Pod::Parser interface are options available to <code>new()</code>:</p>
+
+<dl>
+<dt><a name="doctype"
+>doctype</a></dt>
+
+<dd>
+<p>This option sets the output document&#39;s doctype. The currently supported types are <b>article</b>, <b>chapter</b>, <b>refentry</b> and <b>section</b>. Special processing is performed when the doctype is set to <b>refentry</b> (see <a href="#Document_Types" class="podlinkpod"
+>&#34;Document Types&#34;</a>). You <i>must</i> set this option in order to get valid DocBook output.</p>
+
+<dt><a name="fix_double_quotes"
+>fix_double_quotes</a></dt>
+
+<dd>
+<p>If this option is set to a true value, pairs of double quote characters (&#39;&#34;&#39;) in ordinary paragraphs will be replaced with <b>&#60;quote&#62;</b> and <b>&#60;/quote&#62;</b>. See <a href="#Ordinary_Paragraphs" class="podlinkpod"
+>&#34;Ordinary Paragraphs&#34;</a> for details.</p>
+
+<dt><a name="header"
+>header</a></dt>
+
+<dd>
+<p>If this option is set to a true value, Pod::DocBook will emit a DOCTYPE as the first line of output.</p>
+
+<dt><a name="spaces"
+>spaces</a></dt>
+
+<dd>
+<p>Pod::DocBook produces pretty-printed output. This option sets the number of spaces per level of indentation in the output.</p>
+
+<dt><a name="title"
+>title</a></dt>
+
+<dd>
+<p>This option sets the output document&#39;s title.</p>
+</dd>
+</dl>
+
+<p>The rest of this document only describes issues specific to Pod::DocBook; for details on invoking the parser, specifically the <code>new()</code>, <code>parse_from_file()</code> and <code>parse_from_filehandle()</code> methods, see <a href="/perldoc?Pod%3A%3AParser" class="podlinkpod"
+>Pod::Parser</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="POD_TO_DOCBOOK_TRANSLATION"
+>POD TO DOCBOOK TRANSLATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Pod is a deceptively simple format; it is easy to learn and very straightforward to use, but it is suprisingly expressive. Nevertheless, it is not nearly as expressive or complex as DocBook. In most cases, given some Pod, the analogous DocBook markup is obvious, but not always. This section describes how Pod::DocBook treats Pod input so that Pod authors may make informed choices. In every case, Pod::DocBook strives to make easy things easy and hard things possible.</p>
+
+<p>The primary motivation behind Pod::DocBook is to facilitate single-source publishing. That is, you should be able to generate man pages, web pages, PDF and PostScript documents, or any other format your SGML and/or Pod tools can produce, from the same Pod source, without the need for hand-editing any intermediate files. This may not always be possible, or you may simply choose to render Pod to DocBook and use that as your single source. To satisfy the first requirement, Pod::DocBook always processes the entire Pod source and tries very hard to produce valid DocBook markup, even in the presence of malformed Pod (see <a href="#DIAGNOSTICS" class="podlinkpod"
+>&#34;DIAGNOSTICS&#34;</a>). To satisfy the second requirement (and to be a little nifty), Pod::DocBook pretty-prints its output. If you&#39;re curious about what specific output to expect, read on.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Document_Types"
+>Document Types</a></h2>
+
+<p>DocBook&#39;s structure is very modular; many of its document types can be embedded directly into other documents. Accordingly, Pod::DocBook will generate four different document types: <b>article</b>, <b>chapter</b>, <b>refentry</b>, and <b>section</b>. This makes it easy, for instance, to write all the chapters of a book in separate Pod documents, translate them into DocBook markup and later glue them together before processing the entire book. You could do the same with each section in an article, or you could write the entire article in a single Pod document. Other document types, such as <b>book</b> and <b>set</b>, do not map easily from Pod, because they require structure for which there is no Pod equivalent. But given sections and chapters, making larger documents becomes much simpler.</p>
+
+<p>The <b>refentry</b> document type is a little different from the others. Sections, articles, and chapters are essentially composed of nested sections. But a refentry has specialized elements for the <i>NAME</i> and <i>SYNOPSIS</i> sections. To accommodate this, Pod::DocBook performs extra processing on the Pod source when the <b>doctype</b> is set to <b>refentry</b>. You probably don&#39;t have to do anything to your document to assist the processing; typical man page conventions cover the requirements. Just make sure that the <i>NAME</i> and <i>SYNOPSIS</i> headers are both <b>=head1</b>s, that &#34;NAME&#34; and &#34;SYNOPSIS&#34; are both uppercase, and that <b>=head1 NAME</b> is the first line of Pod source.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Ordinary_Paragraphs"
+>Ordinary Paragraphs</a></h2>
+
+<p>Ordinary paragraphs in a Pod document translate naturally to DocBook paragraphs. Specifically, after any formatting codes are processed, the characters <code>&#60;</code>, <code>&#62;</code> and <code>&#38;</code> are translated to their respective SGML character entities, and the paragraph is wrapped in <b>&#60;para&#62;</b> and <b>&#60;/para&#62;</b>.</p>
+
+<p>For example, given this Pod paragraph:</p>
+
+<pre class="sh_perl">  Here is some text with I&#60;italics&#62; &#38; an ampersand.</pre>
+
+<p>Pod::DocBook would produce DocBook markup similar to this:</p>
+
+<pre class="sh_perl">  &#60;para&#62;
+    Here is some text with &#60;emphasis role=&#34;italic&#34;&#62;italics&#60;/emphasis&#62;
+    &#38;amp; an ampersand.
+  &#60;/para&#62;</pre>
+
+<p>Depending on your final output format, you may sometimes want double quotes in ordinary paragraphs to show up ultimately as &#34;smart quotes&#34; (little 66s and 99s). Pod::DocBook offers a convenient mechanism for handling double quotes in ordinary paragraphs and letting your SGML toolchain manage their presentation: the <b>fix_double_quotes</b> option to <code>new()</code>. If this option is set to a true value, Pod::DocBook will replace pairs of double quotes in ordinary paragraphs (and <i>only</i> in ordinary paragraphs) with <b>&#60;quote&#62;</b> and <b>&#60;/quote&#62;</b>.</p>
+
+<p>For example, given this Pod paragraph:</p>
+
+<pre class="sh_perl">  Here is some text with I&#60;italics&#62; &#38; an &#34;ampersand&#34;.</pre>
+
+<p>Pod::DocBook, with <b>fix_double_quotes</b> set, would produce DocBook markup similar to this:</p>
+
+<pre class="sh_perl">  &#60;para&#62;
+    Here is some text with &#60;emphasis role=&#34;italic&#34;&#62;italics&#60;/emphasis&#62;
+    &#38;amp; an &#60;quote&#62;ampersand&#60;/quote&#62;.
+  &#60;/para&#62;</pre>
+
+<p>If you have a paragraph with an odd number of double quotes, the last one will be left untouched, which may or may not be what you want. If you have such a document, replace the unpaired double quote character with <b>E&#60;quot&#62;</b>, and Pod::DocBook should be able to give you the output you expect. Also, if you have any <b>=begin&#160;docbook</b> ... <b>=end&#160;docbook</b> regions (see <a href="#Embedded_DocBook_Markup" class="podlinkpod"
+>&#34;Embedded DocBook Markup&#34;</a>) in your Pod, you are responsible for managing your own quotes in those regions.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Verbatim_Paragraphs"
+>Verbatim Paragraphs</a></h2>
+
+<p>Verbatim paragraphs translate even more naturally; <a href="/perldoc?perlpodspec" class="podlinkpod"
+>perlpodspec</a> mandates that absolutely no processing should be performed on them. So Pod::DocBook simply marks them as CDATA and wraps them in <b>&#60;screen&#62;</b> and <b>&#60;/screen&#62;</b>. They are not indented the way ordinary paragraphs are, because they treat whitespace as significant.</p>
+
+<p>For example, given this verbatim paragraph (imagine there&#39;s leading whitespace in the source):</p>
+
+<pre class="sh_perl">  my $i = 10;
+  while (&#60;&#62; &#38;&#38; $i--) {
+      print &#34;$i: $_&#34;;
+  }</pre>
+
+<p>Pod::DocBook would produce DocBook markup similar to this:</p>
+
+<pre class="sh_perl">  &#60;screen&#62;&#60;![CDATA[my $i = 10;
+  while (&#60;&#62; &#38;&#38; $i--) {
+      print &#34;$i: $_&#34;;
+  }]] &#62;&#60;/screen&#62;</pre>
+
+<p>Multiple contiguous verbatim paragraphs are treated as a single <i>screen</i> element, with blank lines separating the paragraphs, as dictated by <a href="/perldoc?perlpodspec" class="podlinkpod"
+>perlpodspec</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Command_Paragraphs"
+>Command Paragraphs</a></h2>
+
+<dl>
+<dt><a name='head1'></a><a name="=head1_Heading_Text"
+><code>=head1 Heading Text</code></a></dt>
+
+<dd>
+<dt><a name='head2'></a><a name="=head2_Heading_Text"
+><code>=head2 Heading Text</code></a></dt>
+
+<dd>
+<dt><a name='head3'></a><a name="=head3_Heading_Text"
+><code>=head3 Heading Text</code></a></dt>
+
+<dd>
+<dt><a name='head4'></a><a name="=head4_Heading_Text"
+><code>=head4 Heading Text</code></a></dt>
+
+<dd>
+<p>All of the Pod heading commands produce DocBook <i>section</i> elements, with the heading text as titles. Pod::DocBook (<a href="/perldoc?perlpod" class="podlinkpod"
+>perlpod</a>) only allows for 4 heading levels, but DocBook allows arbitrary nesting; see <a href="#Embedded_DocBook_Markup" class="podlinkpod"
+>&#34;Embedded DocBook Markup&#34;</a> if you need more than 4 levels. Pod::DocBook only looks at relative heading levels to determine nesting. For example, this bit of Pod:</p>
+
+<pre class="sh_perl">  =head1 1
+
+  Contents of section 1
+
+  =head2 1.1
+
+  Contents of section 1.1</pre>
+
+<p>and this bit of Pod:</p>
+
+<pre class="sh_perl">  =head1 1
+
+  Contents of section 1
+
+  =head3 1.1
+
+  Contents of section 1.1</pre>
+
+<p>both produce the same DocBook markup, which will look something like this:</p>
+
+<pre class="sh_perl">  &#60;section id=&#34;article-My-Article-1&#34;&#62;&#60;title&#62;1&#60;/title&#62;
+    &#60;para&#62;
+      Contents of section 1
+    &#60;/para&#62;
+    &#60;section id=&#34;article-My-Article-1-1&#34;&#62;&#60;title&#62;1.1&#60;/title&#62;
+      &#60;para&#62;
+        Contents of section 1.1
+      &#60;/para&#62;
+    &#60;/section&#62;
+  &#60;/section&#62;</pre>
+
+<p>Note that Pod::DocBook automatically generates section identifiers from your doctype, document title and section title. It does the same when you make internal links (see <a href="#Formatting_Codes" class="podlinkpod"
+>&#34;Formatting Codes&#34;</a>, ensuring that if you supply the same link text as you did for the section title, the resulting identifiers will be the same.</p>
+
+<dt><a name='over'></a><a name="=over_indentlevel"
+><code>=over indentlevel</code></a></dt>
+
+<dd>
+<dt><a name='item'></a><a name="=item_stuff..."
+><code>=item stuff...</code></a></dt>
+
+<dd>
+<dt><a name='back'></a><a name="=back"
+><code>=back</code></a></dt>
+
+<dd>
+<p><code>=over</code> ... <code>=back</code> regions are somewhat complex, in that they can lead to a variety of DocBook constructs. In every case, <i>indentlevel</i> is ignored by Pod::DocBook, since that&#39;s best left to your stylesheets.</p>
+
+<p>An <code>=over</code> ... <code>=back</code> region with no <code>=item</code>s represents indented text and maps directly to a DocBook <i>blockquote</i> element. Given this source:</p>
+
+<pre class="sh_perl">  =over 4
+
+  This text should be indented.
+
+  =back</pre>
+
+<p>Pod::DocBook will produce DocBook markup similar to this:</p>
+
+<pre class="sh_perl">  &#60;blockquote&#62;
+    &#60;para&#62;
+      This text should be indented.
+    &#60;/para&#62;
+  &#60;/blockquote&#62;</pre>
+
+<p>Inside an <code>=over</code> ... <code>=back</code> region, <code>=item</code> commands generate lists. The text that follows the first <code>=item</code> determines the type of list that will be output:</p>
+
+<ul>
+<li>&#34;*&#34; (an asterisk) produces <b>&#60;itemizedlist&#62;</b></li>
+
+<li>&#34;1&#34; or &#34;1.&#34; produces <b>&#60;orderedlist&#160;numeration=&#34;arabic&#34;&#62;</b></li>
+
+<li>&#34;a&#34; or &#34;a.&#34; produces <b>&#60;orderedlist&#160;numeration=&#34;loweralpha&#34;&#62;</b></li>
+
+<li>&#34;A&#34; or &#34;A.&#34; produces <b>&#60;orderedlist&#160;numeration=&#34;upperalpha&#34;&#62;</b></li>
+
+<li>&#34;i&#34; or &#34;i.&#34; produces <b>&#60;orderedlist&#160;numeration=&#34;lowerroman&#34;&#62;</b></li>
+
+<li>&#34;I&#34; or &#34;I.&#34; produces <b>&#60;orderedlist&#160;numeration=&#34;upperroman&#34;&#62;</b></li>
+
+<li>anything else produces <b>&#60;variablelist&#62;</b></li>
+</ul>
+
+<p>Since the output from each of these is relatively verbose, the best way to see examples is to actually render some Pod into DocBook.</p>
+
+<dt><a name='pod'></a><a name="=pod"
+><code>=pod</code></a></dt>
+
+<dd>
+<dt><a name='cut'></a><a name="=cut"
+><code>=cut</code></a></dt>
+
+<dd>
+<p><a href="/perldoc?Pod%3A%3AParser" class="podlinkpod"
+>Pod::Parser</a> recognizes these commands, and, therefore, so does Pod::DocBook, but they don&#39;t produce any output.</p>
+
+<dt><a name='begin'></a><a name="=begin_formatname"
+><code>=begin formatname</code></a></dt>
+
+<dd>
+<dt><a name='end'></a><a name="=end_formatname"
+><code>=end formatname</code></a></dt>
+
+<dd>
+<dt><a name='for'></a><a name="=for_formatname_text..."
+><code>=for formatname text...</code></a></dt>
+
+<dd>
+<p>Pod::DocBook supports two formats: <b>docbook</b>, explained in <a href="#Embedded_DocBook_Markup" class="podlinkpod"
+>&#34;Embedded DocBook Markup&#34;</a>, and <b>table</b>, explained in <a href="#Simple_Tables" class="podlinkpod"
+>&#34;Simple Tables&#34;</a>.</p>
+
+<dt><a name='encoding'></a><a name="=encoding_encodingname"
+><code>=encoding encodingname</code></a></dt>
+
+<dd>
+<p>This command is currently not supported. If Pod::DocBook encounters a document that contains <code>=encoding</code>, it will ignore the command and report an error (<a href="#unknown_command_`%s&#39;_at_line_%d_in_file_%s" class="podlinkpod"
+>&#34;unknown command `%s&#39; at line %d in file %s&#34;</a>).</p>
+</dd>
+</dl>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Embedded_DocBook_Markup"
+>Embedded DocBook Markup</a></h3>
+
+<p>There are a wide range of DocBook structures for which there is no Pod equivalent. For these, you will have to provide your own markup using <b>=begin docbook</b> ... <b>=end docbook</b> or <b>=for docbook ...</b>. Pod::DocBook will directly output whatever text you provide, unprocessed, so it&#39;s up to you to ensure that it&#39;s valid DocBook.</p>
+
+<p>Images, footnotes and many inline elements are obvious candidates for embedded markup. Another possible use is nesting sections more than four-deep. For example, given this source:</p>
+
+<pre class="sh_perl">  =head1  1
+
+  This is Section 1
+
+  =head2 1.1
+
+  This is Section 1.1
+
+  =head3 1.1.1
+
+  This is Section 1.1.1
+
+  =head4 1.1.1.1
+
+  This is Section 1.1.1.1
+
+  =begin docbook
+
+  &#60;section&#62;
+  &#60;title&#62;1.1.1.1.1&#60;/title&#62;
+  &#60;para&#62;This is Section 1.1.1.1.1&#60;/para&#62;
+  &#60;/section&#62;
+
+  =end docbook</pre>
+
+<p>Pod::DocBook will generate DocBook markup similar to this:</p>
+
+<pre class="sh_perl">    &#60;section id=&#34;article-My-Article-1&#34;&#62;&#60;title&#62;1&#60;/title&#62;
+      &#60;para&#62;
+        This is Section 1
+      &#60;/para&#62;
+      &#60;section id=&#34;article-My-Article-1-1&#34;&#62;&#60;title&#62;1.1&#60;/title&#62;
+        &#60;para&#62;
+          This is Section 1.1
+        &#60;/para&#62;
+        &#60;section id=&#34;article-My-Article-1-1-1&#34;&#62;&#60;title&#62;1.1.1&#60;/title&#62;
+          &#60;para&#62;
+            This is Section 1.1.1
+          &#60;/para&#62;
+          &#60;section id=&#34;article-My-Article-1-1-1-1&#34;&#62;&#60;title&#62;1.1.1.1&#60;/title&#62;
+            &#60;para&#62;
+              This is Section 1.1.1.1
+            &#60;/para&#62;
+  &#60;section&#62;
+  &#60;title&#62;1.1.1.1.1&#60;/title&#62;
+  &#60;para&#62;This is Section 1.1.1.1.1&#60;/para&#62;
+  &#60;/section&#62;
+          &#60;/section&#62;
+        &#60;/section&#62;
+      &#60;/section&#62;
+    &#60;/section&#62;</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Simple_Tables"
+>Simple Tables</a></h3>
+
+<p>Pod::DocBook also provides a mechanism for generating basic tables with <b>=begin&#160;table</b> and <b>=end&#160;docbook</b>. If you have simple tabular data or a CSV file exported from some application, Pod::DocBook makes it easy to generate a table from your data. The syntax is intended to be simple, so DocBook&#39;s entire table feature set is not represented, but even if you do need more complex table markup than Pod::DocBook produces, you can rapidly produce some markup which you can hand-edit and then embed directly in your Pod with <b>=begin&#160;docbook</b> ... <b>=end&#160;docbook</b>. Each table definition spans multiple lines, so there is no equivalent <b>=for&#160;table</b> command.</p>
+
+<p>The first line of a table definition gives the table&#39;s title. The second line gives a list of comma-separated column specifications (really just column alignments), each of which can be <b>left</b>, <b>center</b> or <b>right</b>. The third line is a list of comma-separated column headings, and every subsequent line consists of comma-separated row data. If any of your data actually contain commas, you can enclose them in double quotes; if they also contain double quotes, you must escape the inner quotes with backslashes (typical CSV stuff).</p>
+
+<p>Here&#39;s an example:</p>
+
+<pre class="sh_perl">  =begin table
+
+  Sample Table
+  left,center,right
+  Powers of Ten,Planets,Dollars
+  10,Earth,$1
+  100,Mercury,$5
+  1000,Mars,$10
+  10000,Venus,$20
+  100000,&#34;Jupiter, Saturn&#34;,$50
+
+  =end table</pre>
+
+<p>And here&#39;s what Pod::DocBook would do with it:</p>
+
+<pre class="sh_perl">  &#60;table&#62;
+    &#60;title&#62;Sample Table&#60;/title&#62;
+    &#60;tgroup cols=&#34;3&#34;&#62;
+      &#60;colspec align=&#34;left&#34;&#62;
+      &#60;colspec align=&#34;center&#34;&#62;
+      &#60;colspec align=&#34;right&#34;&#62;
+      &#60;thead&#62;
+        &#60;row&#62;
+          &#60;entry&#62;Powers of Ten&#60;/entry&#62;
+          &#60;entry&#62;Planets&#60;/entry&#62;
+          &#60;entry&#62;Dollars&#60;/entry&#62;
+        &#60;/row&#62;
+      &#60;/thead&#62;
+      &#60;tbody&#62;
+        &#60;row&#62;
+          &#60;entry&#62;10&#60;/entry&#62;
+          &#60;entry&#62;Earth&#60;/entry&#62;
+          &#60;entry&#62;$1&#60;/entry&#62;
+        &#60;/row&#62;
+        &#60;row&#62;
+          &#60;entry&#62;100&#60;/entry&#62;
+          &#60;entry&#62;Mercury&#60;/entry&#62;
+          &#60;entry&#62;$5&#60;/entry&#62;
+        &#60;/row&#62;
+        &#60;row&#62;
+          &#60;entry&#62;1000&#60;/entry&#62;
+          &#60;entry&#62;Mars&#60;/entry&#62;
+          &#60;entry&#62;$10&#60;/entry&#62;
+        &#60;/row&#62;
+        &#60;row&#62;
+          &#60;entry&#62;10000&#60;/entry&#62;
+          &#60;entry&#62;Venus&#60;/entry&#62;
+          &#60;entry&#62;$20&#60;/entry&#62;
+        &#60;/row&#62;
+        &#60;row&#62;
+          &#60;entry&#62;100000&#60;/entry&#62;
+          &#60;entry&#62;Jupiter, Saturn&#60;/entry&#62;
+          &#60;entry&#62;$50&#60;/entry&#62;
+        &#60;/row&#62;
+      &#60;/tbody&#62;
+    &#60;/tgroup&#62;
+  &#60;/table&#62;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Formatting_Codes"
+>Formatting Codes</a></h2>
+
+<p>Pod formatting codes render directly into DocBook as inline elements:</p>
+
+<ul>
+<li><code>I&#60;text&#62;</code>
+<pre class="sh_perl">  &#60;emphasis role=&#34;italic&#34;&#62;text&#60;/emphasis&#62;</pre>
+</li>
+
+<li><code>B&#60;text&#62;</code>
+<pre class="sh_perl">  &#60;emphasis role=&#34;bold&#34;&#62;text&#60;/emphasis&#62;</pre>
+</li>
+
+<li><code>C&#60;code&#62;</code>
+<pre class="sh_perl">  &#60;literal role=&#34;code&#34;&#62;&#60;![CDATA[code]] &#62;&#60;/literal&#62;</pre>
+</li>
+
+<li><code>L&#60;name&#62;</code>
+<pre class="sh_perl">  &#60;citerefentry&#62;&#60;refentrytitle&#62;name&#60;/refentrytitle&#62;&#60;/citerefentry&#62;</pre>
+</li>
+
+<li><code>L&#60;name(n)&#62;</code>
+<pre class="sh_perl">  &#60;citerefentry&#62;&#60;refentrytitle&#62;name&#60;/refentrytitle&#62;
+  &#60;manvolnum&#62;n&#60;/manvolnum&#62;&#60;/citerefentry&#62;</pre>
+</li>
+
+<li><code>L&#60;name/&#34;sec&#34;&#62;</code> or <code>L&#60;name/sec&#62;</code>
+<pre class="sh_perl">  &#60;quote&#62;sec&#60;/quote&#62; in &#60;citerefentry&#62;
+  &#60;refentrytitle&#62;name&#60;/refentrytitle&#62;&#60;/citerefentry&#62;</pre>
+</li>
+
+<li><code>L&#60;name(n)/&#34;sec&#34;&#62;</code> or <code>L&#60;name(n)/sec&#62;</code>
+<pre class="sh_perl">  &#60;quote&#62;sec&#60;/quote&#62; in &#60;citerefentry&#62;
+  &#60;refentrytitle&#62;name&#60;/refentrytitle&#62;&#60;manvolnum&#62;n&#60;/manvolnum&#62;
+  &#60;/citerefentry&#62;</pre>
+</li>
+
+<li><code>L&#60;/&#34;sec&#34;&#62;</code> or <code>L&#60;/sec&#62;</code> or <code>L&#60;&#34;sec&#34;&#62;</code>
+<pre class="sh_perl">  &#60;link linkend=&#34;article-My-Article-sec&#34;&#62;&#60;quote&#62;sec&#60;/quote&#62;&#60;/link&#62;</pre>
+</li>
+
+<li><code>L&#60;text|name&#62;</code>
+<pre class="sh_perl">  text</pre>
+</li>
+
+<li><code>L&#60;text|name/&#34;sec&#34;&#62;</code> or <code>L&#60;text|name/sec&#62;</code>
+<pre class="sh_perl">  text</pre>
+</li>
+
+<li><code>L&#60;text|/&#34;sec&#34;&#62;</code> or <code>L&#60;text|/sec&#62;</code> or <code>L&#60;text|&#34;sec&#34;&#62;</code>
+<pre class="sh_perl">  &#60;link linkend=&#34;article-My-Article-sec&#34;&#62;&#60;quote&#62;text&#60;/quote&#62;&#60;/link&#62;</pre>
+</li>
+
+<li><code>L&#60;scheme:...&#62;</code>
+<pre class="sh_perl">  &#60;ulink url=&#34;scheme:...&#34;&#62;scheme:...&#60;/ulink&#62;</pre>
+</li>
+
+<li><code>E&#60;verbar&#62;</code>
+<pre class="sh_perl">  |</pre>
+</li>
+
+<li><code>E&#60;sol&#62;</code>
+<pre class="sh_perl">  /</pre>
+</li>
+
+<li><code>E&#60;number&#62;</code>
+<pre class="sh_perl">  &#38;#number;</pre>
+</li>
+
+<li>any other <code>E&#60;escape&#62;</code>
+<pre class="sh_perl">  &#38;escape;</pre>
+</li>
+
+<li><code>F&#60;filename&#62;</code>
+<p>&#60;filename&#62;filename&#60;/filename&#62;</p>
+</li>
+
+<li><code>S&#60;text with spaces&#62;</code>
+<pre class="sh_perl"> text&#38;nbsp;with&#38;nbsp;spaces</pre>
+</li>
+
+<li><code>X&#60;topic name&#62;</code>
+<p>&#60;indexterm&#62;&#60;primary&#62;topic name&#60;/primary&#62;&#60;/indexterm&#62;</p>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIAGNOSTICS"
+>DIAGNOSTICS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Pod::DocBook makes every possible effort to produce valid DocBook markup, even with malformed POD source. Any processing errors will be noted in comments at the end of the output document. Even when errors occur, Pod::DocBook always reads the entire input document and never exits with a non-zero status.</p>
+
+<dl>
+<dt><a name='unknown'></a><a name="unknown_command_`%s&#39;_at_line_%d_in_file_%s"
+>unknown command `%s&#39; at line %d in file %s</a></dt>
+
+<dd>
+<p>See <a href="/perldoc?perlpod#Command_Paragraph" class="podlinkpod"
+>&#34;Command Paragraph&#34; in perlpod</a> for a list of valid commands. The command referenced in the error message was ignored.</p>
+
+<dt><a name='formatting'></a><a name="formatting_code_`%s&#39;_nested_within_`%s&#39;_at_line_%d_in_file_%s"
+>formatting code `%s&#39; nested within `%s&#39; at line %d in file %s</a></dt>
+
+<dd>
+<p>See <a href="/perldoc?perlpod#Formatting_Codes" class="podlinkpod"
+>&#34;Formatting Codes&#34; in perlpod</a> for details on which formatting codes can be nested. The offending code was translated into the output document as the raw text inside its angle brackets.</p>
+
+<dt><a name='unknown'></a><a name="unknown_formatting_code_`%s&#39;_at_line_in_file_%s"
+>unknown formatting code `%s&#39; at line in file %s</a></dt>
+
+<dd>
+<p>The input contained a formatting code not listed in <a href="/perldoc?perlpod" class="podlinkpod"
+>perlpod</a>; it was translated into the output document as the raw text inside the angle brackets.</p>
+
+<dt><a name='empty'></a><a name="empty_L&#60;&#62;_at_line_%d_in_file_%s"
+>empty L&#60;&#62; at line %d in file %s</a></dt>
+
+<dd>
+<p>Self-explanatory.</p>
+
+<dt><a name='invalid'></a><a name="invalid_escape_`%s&#39;_at_line_%d_in_file_%s"
+>invalid escape `%s&#39; at line %d in file %s</a></dt>
+
+<dd>
+<p>Self-explanatory; it was translated into the output document as the raw text inside the angle brackets.</p>
+
+<dt><a name='item'></a><a name="=item_must_be_inside_an_=over_..._=back_section_at_line_%d_in_file_%s"
+>=item must be inside an =over ... =back section at line %d in file %s</a></dt>
+
+<dd>
+<p>Self-explanatory. The `=item&#39; referenced in the error was ignored.</p>
+
+<dt><a name='end'></a><a name="`=end_%s&#39;_found_but_current_region_opened_with_`=begin_%s&#39;"
+>`=end %s&#39; found but current region opened with `=begin %s&#39;</a></dt>
+
+<dd>
+<p>The closest `=end&#39; command to the referenced `=begin&#39; didn&#39;t match; processing continued as if the mismatched `=end&#39; wasn&#39;t there.</p>
+
+<dt><a name='no'></a><a name="no_matching_`=end&#39;_for_`=begin_%s&#39;"
+>no matching `=end&#39; for `=begin %s&#39;</a></dt>
+
+<dd>
+<p>Pod::DocBook reached the end of its input without finding an `=end&#39; command to match the `=begin&#39; referenced in the error; end-of-file processing continued.</p>
+
+<dt><a name='unknown'></a><a name="unknown_colspec_`%s&#39;_in_table_at_line_%d_in_file_%s"
+>unknown colspec `%s&#39; in table at line %d in file %s</a></dt>
+
+<dd>
+<p>See <a href="#Simple_Tables" class="podlinkpod"
+>&#34;Simple Tables&#34;</a> for a list of supported column specifications.</p>
+
+<dt><a name='encountered'></a><a name="encountered_unknown_state_`%s&#39;_(this_should_never_happen)"
+>encountered unknown state `%s&#39; (this should never happen)</a></dt>
+
+<dd>
+<p>The state referred to is an internal variable used to properly manage nested DocBook structures. You should indeed never see this message, but if you do, you should contact the module&#39;s author.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~nandu/Pod-DocBook-1.2/pod2docbook" class="podlinkpod"
+>pod2docbook</a>, <a href="/perldoc?perlpod" class="podlinkpod"
+>perlpod</a>, <a href="http://www.docbook.org/" class="podlinkurl"
+>http://www.docbook.org/</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Alligator Descartes &#60;descarte@symbolstone.org&#62; wrote a module called Pod::DocBook, which was later maintained by Jan Iven &#60;jan.iven@cern.ch&#62;. That module was based on the original <a href="/perldoc?pod2html" class="podlinkpod"
+>pod2html</a> by Tom Christiansen &#60;tchrist@mox.perl.com&#62;.</p>
+
+<p>Nandu Shah &#60;nandu@zvolve.com&#62; wrote this Pod::DocBook, which is unrelated to the previous module (even though they both perform the same function).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2004, Nandu Shah &#60;nandu@zvolve.com&#62;</p>
+
+<p>This library is free software; you may redistribute it and/or modify it under the same terms as Perl itself</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78280 Uploads, 24725 Distributions
+106010 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 28 05:54:44 2012 GMT (0.332225799560547) @cpansearch1 -->
+ </body>
+</html>

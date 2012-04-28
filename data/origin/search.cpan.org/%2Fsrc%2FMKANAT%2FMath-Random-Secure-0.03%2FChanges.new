@@ -1,0 +1,18 @@
+0.03 Thu Dec 30 2011
+    - Clear the seed after the first call to rand() or irand(), so
+      that an attacker can't inspect the state of the RNG to determine
+      the seed.
+    - Only seed ourselves with 64 bytes (512 bits) intead of 1024 bytes
+      (8192 bits). The author of ISAAC says that this is safe.
+    - Add POD explaining seed sizes and the importance of seed randomness.
+    - Warn users if they pass in a bad seed or set seed_size too small.
+    - Fix some small code and POD issues (thanks to LpSolit)
+
+0.02 Wed Dec 29 2011
+    - Remove the modulo bias from irand().
+    - Add a test that proves the uniformity of generated values.
+    - Update the POD quite a bit.
+
+0.01 Tue Dec 28 2011
+    - First release. Uses ISAAC as a backend and Crypt::Random::Source
+      for seed data.

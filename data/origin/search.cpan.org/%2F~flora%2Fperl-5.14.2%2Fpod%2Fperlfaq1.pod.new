@@ -1,0 +1,684 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>perlfaq1 - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",4,"Document","perlfaq1",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?perlfaq1">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  perlfaq1
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/pod/perlfaq1.pod">Annotate this POD
+(1)
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/pod/perlfaq1.pod">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#What_is_Perl?'>What is Perl?</a>
+    <li class='indexItem indexItem2'><a href='#Who_supports_Perl?_Who_develops_it?_Why_is_it_free?'>Who supports Perl? Who develops it? Why is it free?</a>
+    <li class='indexItem indexItem2'><a href='#Which_version_of_Perl_should_I_use?'>Which version of Perl should I use?</a>
+    <li class='indexItem indexItem2'><a href='#What_are_Perl_4,_Perl_5,_or_Perl_6?'>What are Perl 4, Perl 5, or Perl 6?</a>
+    <li class='indexItem indexItem2'><a href='#What_was_Ponie?'>What was Ponie?</a>
+    <li class='indexItem indexItem2'><a href='#What_is_Perl_6?'>What is Perl 6?</a>
+    <li class='indexItem indexItem2'><a href='#How_stable_is_Perl?'>How stable is Perl?</a>
+    <li class='indexItem indexItem2'><a href='#Is_Perl_difficult_to_learn?'>Is Perl difficult to learn?</a>
+    <li class='indexItem indexItem2'><a href='#How_does_Perl_compare_with_other_languages_like_Java,_Python,_REXX,_Scheme,_or_Tcl?'>How does Perl compare with other languages like Java, Python, REXX, Scheme, or Tcl?</a>
+    <li class='indexItem indexItem2'><a href='#Can_I_do_[task]_in_Perl?'>Can I do [task] in Perl?</a>
+    <li class='indexItem indexItem2'><a href='#When_shouldn&#39;t_I_program_in_Perl?'>When shouldn&#39;t I program in Perl?</a>
+    <li class='indexItem indexItem2'><a href='#What&#39;s_the_difference_between_&#34;perl&#34;_and_&#34;Perl&#34;?'>What&#39;s the difference between &#34;perl&#34; and &#34;Perl&#34;?</a>
+    <li class='indexItem indexItem2'><a href='#Is_it_a_Perl_program_or_a_Perl_script?'>Is it a Perl program or a Perl script?</a>
+    <li class='indexItem indexItem2'><a href='#What_is_a_JAPH?'>What is a JAPH?</a>
+    <li class='indexItem indexItem2'><a href='#Where_can_I_get_a_list_of_Larry_Wall_witticisms?'>Where can I get a list of Larry Wall witticisms?</a>
+    <li class='indexItem indexItem2'><a href='#How_can_I_convince_others_to_use_Perl?'>How can I convince others to use Perl?</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHOR_AND_COPYRIGHT'>AUTHOR AND COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>perlfaq1 - General Questions About Perl</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This section of the FAQ answers very general,
+high-level questions about Perl.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="What_is_Perl?"
+>What is Perl?</a></h2>
+
+<p>Perl is a high-level programming language with an eclectic heritage written by Larry Wall and a cast of thousands.
+It derives from the ubiquitous C programming language and to a lesser extent from sed,
+awk,
+the Unix shell,
+and at least a dozen other tools and languages.
+Perl&#39;s process,
+file,
+and text manipulation facilities make it particularly well-suited for tasks involving quick prototyping,
+system utilities,
+software tools,
+system management tasks,
+database access,
+graphical programming,
+networking,
+and world wide web programming.
+These strengths make it especially popular with system administrators and CGI script authors,
+but mathematicians,
+geneticists,
+journalists,
+and even managers also use Perl.
+Maybe you should,
+too.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Who_supports_Perl?_Who_develops_it?_Why_is_it_free?"
+>Who supports Perl?
+Who develops it?
+Why is it free?</a></h2>
+
+<p>The original culture of the pre-populist Internet and the deeply-held beliefs of Perl&#39;s author,
+Larry Wall,
+gave rise to the free and open distribution policy of perl.
+Perl is supported by its users.
+The core,
+the standard Perl library,
+the optional modules,
+and the documentation you&#39;re reading now were all written by volunteers.
+See the personal note at the end of the README file in the perl source distribution for more details.
+See <a href="/~flora/perl-5.14.2/pod/perlhist.pod" class="podlinkpod"
+>perlhist</a> (new as of 5.005) for Perl&#39;s milestone releases.</p>
+
+<p>In particular,
+the core development team (known as the Perl Porters) are a rag-tag band of highly altruistic individuals committed to producing better software for free than you could hope to purchase for money.
+You may snoop on pending developments via the archives at <a href="http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/" class="podlinkurl"
+>http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/</a> and <a href="http://archive.develooper.com/perl5-porters@perl.org/" class="podlinkurl"
+>http://archive.develooper.com/perl5-porters@perl.org/</a> or the news gateway <a href="nntp://nntp.perl.org/perl.perl5.porters" class="podlinkurl"
+>nntp://nntp.perl.org/perl.perl5.porters</a> or its web interface at <a href="http://nntp.perl.org/group/perl.perl5.porters" class="podlinkurl"
+>http://nntp.perl.org/group/perl.perl5.porters</a> ,
+or read the faq at <a href="http://dev.perl.org/perl5/docs/p5p-faq.html" class="podlinkurl"
+>http://dev.perl.org/perl5/docs/p5p-faq.html</a> ,
+or you can subscribe to the mailing list by sending perl5-porters-subscribe@perl.org a subscription request (an empty message with no subject is fine).</p>
+
+<p>While the GNU project includes Perl in its distributions,
+there&#39;s no such thing as &#34;GNU Perl&#34;.
+Perl is not produced nor maintained by the Free Software Foundation.
+Perl&#39;s licensing terms are also more open than GNU software&#39;s tend to be.</p>
+
+<p>You can get commercial support of Perl if you wish,
+although for most users the informal support will more than suffice.
+See the answer to &#34;Where can I buy a commercial version of perl?&#34; for more information.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Which_version_of_Perl_should_I_use?"
+>Which version of Perl should I use?</a></h2>
+
+<p>(contributed by brian d foy)</p>
+
+<p>There is often a matter of opinion and taste,
+and there isn&#39;t any one answer that fits everyone.
+In general,
+you want to use either the current stable release,
+or the stable release immediately prior to that one.
+Currently,
+those are perl5.14.x and perl5.12.x,
+respectively.</p>
+
+<p>Beyond that,
+you have to consider several things and decide which is best for you.</p>
+
+<ul>
+<li>If things aren&#39;t broken,
+upgrading perl may break them (or at least issue new warnings).</li>
+
+<li>The latest versions of perl have more bug fixes.</li>
+
+<li>The Perl community is geared toward supporting the most recent releases,
+so you&#39;ll have an easier time finding help for those.</li>
+
+<li>Versions prior to perl5.004 had serious security problems with buffer overflows,
+and in some cases have CERT advisories (for instance,
+<a href="http://www.cert.org/advisories/CA-1997-17.html" class="podlinkurl"
+>http://www.cert.org/advisories/CA-1997-17.html</a> ).</li>
+
+<li>The latest versions are probably the least deployed and widely tested,
+so you may want to wait a few months after their release and see what problems others have if you are risk averse.</li>
+
+<li>The immediate,
+previous releases (i.e.
+perl5.8.x ) are usually maintained for a while,
+although not at the same level as the current releases.</li>
+
+<li>No one is actively supporting Perl 4.
+Ten years ago it was a dead camel carcass (according to this document).
+Now it&#39;s barely a skeleton as its whitewashed bones have fractured or eroded.</li>
+
+<li>There is no Perl 6 release scheduled,
+but it will be available when it&#39;s ready.
+The joke is that it&#39;s scheduled for Christmas,
+but that we just don&#39;t know which one.
+Stay tuned,
+but don&#39;t worry that you&#39;ll have to change major versions of Perl; no one is going to take Perl 5 away from you.</li>
+
+<li>There are really two tracks of perl development: a maintenance version and an experimental version.
+The maintenance versions are stable,
+and have an even number as the minor release (i.e.
+perl5.10.x,
+where 10 is the minor release).
+The experimental versions may include features that don&#39;t make it into the stable versions,
+and have an odd number as the minor release (i.e.
+perl5.9.x,
+where 9 is the minor release).</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="What_are_Perl_4,_Perl_5,_or_Perl_6?"
+>What are Perl 4,
+Perl 5,
+or Perl 6?</a></h2>
+
+<p>(contributed by brian d foy)</p>
+
+<p>In short,
+Perl 4 is the past,
+Perl 5 is the present,
+and Perl 6 is the future.</p>
+
+<p>The number after Perl (i.e.
+the 5 after Perl 5) is the major release of the perl interpreter as well as the version of the language.
+Each major version has significant differences that earlier versions cannot support.</p>
+
+<p>The current major release of Perl is Perl 5,
+and was first released in 1994.
+It can run scripts from the previous major release,
+Perl 4 (March 1991),
+but has significant differences.
+It introduced the concept of references,
+complex data structures,
+and modules.
+The Perl 5 interpreter was a complete re-write of the previous perl sources.</p>
+
+<p>Perl 6 is the next major version of Perl,
+although it&#39;s not intended to replace Perl 5.
+It&#39;s still in development in both its syntax and design.
+The work started in 2002 and is still ongoing.
+Some of the most interesting features have shown up in the latest versions of Perl 5,
+and some Perl 5 modules allow you to use some Perl 6 syntax in your programs.
+The current leading implementation of Perl 6 is Rakudo ( <a href="http://rakudo.org" class="podlinkurl"
+>http://rakudo.org</a> ).</p>
+
+<p>See <a href="/~flora/perl-5.14.2/pod/perlhist.pod" class="podlinkpod"
+>perlhist</a> for a history of Perl revisions.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="What_was_Ponie?"
+>What was Ponie?</a></h2>
+
+<p>(contributed by brian d foy)</p>
+
+<p>Ponie stands for &#34;Perl On the New Internal Engine&#34;,
+started by Arthur Bergman from Fotango in 2003,
+and subsequently run as a project of The Perl Foundation.
+It was abandoned in 2006 ( <a href="http://www.nntp.perl.org/group/perl.ponie.dev/487" class="podlinkurl"
+>http://www.nntp.perl.org/group/perl.ponie.dev/487</a> ).</p>
+
+<p>Instead of using the current Perl internals,
+Ponie aimed to create a new one that would provide a translation path from Perl 5 to Perl 6 (or anything else that targets Parrot,
+actually).
+You would have been able to just keep using Perl 5 with Parrot,
+the virtual machine which will compile and run Perl 6 bytecode.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="What_is_Perl_6?"
+>What is Perl 6?</a></h2>
+
+<p>At The Second O&#39;Reilly Open Source Software Convention,
+Larry Wall announced Perl 6 development would begin in earnest.
+Perl 6 was an oft used term for Chip Salzenberg&#39;s project to rewrite Perl in C++ named Topaz.
+However,
+Topaz provided valuable insights to the next version of Perl and its implementation,
+but was ultimately abandoned.</p>
+
+<p>If you want to learn more about Perl 6,
+or have a desire to help in the crusade to make Perl a better place then read the Perl 6 developers page at <a href="http://dev.perl.org/perl6/" class="podlinkurl"
+>http://dev.perl.org/perl6/</a> and get involved.</p>
+
+<p>Perl 6 is not scheduled for release yet,
+and Perl 5 will still be supported for quite awhile after its release.
+Do not wait for Perl 6 to do whatever you need to do.</p>
+
+<p>&#34;We&#39;re really serious about reinventing everything that needs reinventing.&#34; --Larry Wall</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="How_stable_is_Perl?"
+>How stable is Perl?</a></h2>
+
+<p>Production releases,
+which incorporate bug fixes and new functionality,
+are widely tested before release.
+Since the 5.000 release,
+we have averaged only about one production release per year.</p>
+
+<p>Larry and the Perl development team occasionally make changes to the internal core of the language,
+but all possible efforts are made toward backward compatibility.
+While not quite all Perl 4 scripts run flawlessly under Perl 5,
+an update to perl should nearly never invalidate a program written for an earlier version of perl (barring accidental bug fixes and the rare new keyword).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Is_Perl_difficult_to_learn?"
+>Is Perl difficult to learn?</a></h2>
+
+<p>No,
+Perl is easy to start learning--and easy to keep learning.
+It looks like most programming languages you&#39;re likely to have experience with,
+so if you&#39;ve ever written a C program,
+an awk script,
+a shell script,
+or even a BASIC program,
+you&#39;re already partway there.</p>
+
+<p>Most tasks only require a small subset of the Perl language.
+One of the guiding mottos for Perl development is &#34;there&#39;s more than one way to do it&#34; (TMTOWTDI,
+sometimes pronounced &#34;tim toady&#34;).
+Perl&#39;s learning curve is therefore shallow (easy to learn) and long (there&#39;s a whole lot you can do if you really want).</p>
+
+<p>Finally,
+because Perl is frequently (but not always,
+and certainly not by definition) an interpreted language,
+you can write your programs and test them without an intermediate compilation step,
+allowing you to experiment and test/debug quickly and easily.
+This ease of experimentation flattens the learning curve even more.</p>
+
+<p>Things that make Perl easier to learn: Unix experience,
+almost any kind of programming experience,
+an understanding of regular expressions,
+and the ability to understand other people&#39;s code.
+If there&#39;s something you need to do,
+then it&#39;s probably already been done,
+and a working example is usually available for free.
+Don&#39;t forget Perl modules,
+either.
+They&#39;re discussed in Part 3 of this FAQ,
+along with CPAN,
+which is discussed in Part 2.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="How_does_Perl_compare_with_other_languages_like_Java,_Python,_REXX,_Scheme,_or_Tcl?"
+>How does Perl compare with other languages like Java,
+Python,
+REXX,
+Scheme,
+or Tcl?</a></h2>
+
+<p>Favorably in some areas,
+unfavorably in others.
+Precisely which areas are good and bad is often a personal choice,
+so asking this question on Usenet runs a strong risk of starting an unproductive Holy War.</p>
+
+<p>Probably the best thing to do is try to write equivalent code to do a set of tasks.
+These languages have their own newsgroups in which you can learn about (but hopefully not argue about) them.</p>
+
+<p>Some comparison documents can be found at <a href="http://www.perl.com/doc/FMTEYEWTK/versus/" class="podlinkurl"
+>http://www.perl.com/doc/FMTEYEWTK/versus/</a> if you really can&#39;t stop yourself.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Can_I_do_[task]_in_Perl?"
+>Can I do [task] in Perl?</a></h2>
+
+<p>Perl is flexible and extensible enough for you to use on virtually any task,
+from one-line file-processing tasks to large,
+elaborate systems.
+For many people,
+Perl serves as a great replacement for shell scripting.
+For others,
+it serves as a convenient,
+high-level replacement for most of what they&#39;d program in low-level languages like C or C++.
+It&#39;s ultimately up to you (and possibly your management) which tasks you&#39;ll use Perl for and which you won&#39;t.</p>
+
+<p>If you have a library that provides an API,
+you can make any component of it available as just another Perl function or variable using a Perl extension written in C or C++ and dynamically linked into your main perl interpreter.
+You can also go the other direction,
+and write your main program in C or C++,
+and then link in some Perl code on the fly,
+to create a powerful application.
+See <a href="/~flora/perl-5.14.2/pod/perlembed.pod" class="podlinkpod"
+>perlembed</a>.</p>
+
+<p>That said,
+there will always be small,
+focused,
+special-purpose languages dedicated to a specific problem domain that are simply more convenient for certain kinds of problems.
+Perl tries to be all things to all people,
+but nothing special to anyone.
+Examples of specialized languages that come to mind include prolog and matlab.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="When_shouldn&#39;t_I_program_in_Perl?"
+>When shouldn&#39;t I program in Perl?</a></h2>
+
+<p>When your manager forbids it--but do consider replacing them :-).</p>
+
+<p>Actually,
+one good reason is when you already have an existing application written in another language that&#39;s all done (and done well),
+or you have an application language specifically designed for a certain task (e.g.
+prolog,
+make).</p>
+
+<p>For various reasons,
+Perl is probably not well-suited for real-time embedded systems,
+low-level operating systems development work like device drivers or context-switching code,
+complex multi-threaded shared-memory applications,
+or extremely large applications.
+You&#39;ll notice that perl is not itself written in Perl.</p>
+
+<p>Perl remains fundamentally a dynamically typed language,
+not a statically typed one.
+You certainly won&#39;t be chastised if you don&#39;t trust nuclear-plant or brain-surgery monitoring code to it.
+And Larry will sleep easier,
+too--Wall Street programs not withstanding.
+:-)</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="What&#39;s_the_difference_between_&#34;perl&#34;_and_&#34;Perl&#34;?"
+>What&#39;s the difference between &#34;perl&#34; and &#34;Perl&#34;?</a></h2>
+
+<p>One bit.
+Oh,
+you weren&#39;t talking ASCII?
+:-) Larry now uses &#34;Perl&#34; to signify the language proper and &#34;perl&#34; the implementation of it,
+i.e.
+the current interpreter.
+Hence Tom&#39;s quip that &#34;Nothing but perl can parse Perl.&#34;</p>
+
+<p>Before the first edition of <i>Programming perl</i>,
+people commonly referred to the language as &#34;perl&#34;,
+and its name appeared that way in the title because it referred to the interpreter.
+In the book,
+Randal Schwartz capitalised the language&#39;s name to make it stand out better when typeset.
+This convention was adopted by the community,
+and the second edition became <i>Programming Perl</i>,
+using the capitalized version of the name to refer to the language.</p>
+
+<p>You may or may not choose to follow this usage.
+For example,
+parallelism means &#34;awk and perl&#34; and &#34;Python and Perl&#34; look good,
+while &#34;awk and Perl&#34; and &#34;Python and perl&#34; do not.
+But never write &#34;PERL&#34;,
+because perl is not an acronym,
+apocryphal folklore and post-facto expansions notwithstanding.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Is_it_a_Perl_program_or_a_Perl_script?"
+>Is it a Perl program or a Perl script?</a></h2>
+
+<p>Larry doesn&#39;t really care.
+He says (half in jest) that &#34;a script is what you give the actors.
+A program is what you give the audience.&#34;</p>
+
+<p>Originally,
+a script was a canned sequence of normally interactive commands--that is,
+a chat script.
+Something like a UUCP or PPP chat script or an expect script fits the bill nicely,
+as do configuration scripts run by a program at its start up,
+such <em>.cshrc</em> or <em>.ircrc</em>,
+for example.
+Chat scripts were just drivers for existing programs,
+not stand-alone programs in their own right.</p>
+
+<p>A computer scientist will correctly explain that all programs are interpreted and that the only question is at what level.
+But if you ask this question of someone who isn&#39;t a computer scientist,
+they might tell you that a <i>program</i> has been compiled to physical machine code once and can then be run multiple times,
+whereas a <i>script</i> must be translated by a program each time it&#39;s used.</p>
+
+<p>Now that &#34;script&#34; and &#34;scripting&#34; are terms that have been seized by unscrupulous or unknowing marketeers for their own nefarious purposes,
+they have begun to take on strange and often pejorative meanings,
+like &#34;non serious&#34; or &#34;not real programming&#34;.
+Consequently,
+some Perl programmers prefer to avoid them altogether.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="What_is_a_JAPH?"
+>What is a JAPH?</a></h2>
+
+<p>(contributed by brian d foy)</p>
+
+<p>JAPH stands for &#34;Just another Perl hacker,&#34;,
+which Randal Schwartz used to sign email and usenet messages starting in the late 1980s.
+He previously used the phrase with many subjects (&#34;Just another x hacker,&#34;),
+so to distinguish his JAPH,
+he started to write them as Perl programs:</p>
+
+<pre class="sh_perl">        print &#34;Just another Perl hacker,&#34;;</pre>
+
+<p>Other people picked up on this and started to write clever or obfuscated programs to produce the same output, spinning things quickly out of control while still providing hours of amusement for their creators and readers.</p>
+
+<p>CPAN has several JAPH programs at <a href="http://www.cpan.org/misc/japh" class="podlinkurl"
+>http://www.cpan.org/misc/japh</a> .</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Where_can_I_get_a_list_of_Larry_Wall_witticisms?"
+>Where can I get a list of Larry Wall witticisms?</a></h2>
+
+<p>(contributed by brian d foy)</p>
+
+<p>Google &#34;larry wall quotes&#34;! You might even try the &#34;I feel lucky&#34; button. :)</p>
+
+<p>Wikiquote has the witticisms from Larry along with their source, including his usenet postings and source code comments.</p>
+
+<p>If you want a plain text file, try <a href="http://www.cpan.org/misc/lwall-quotes.txt.gz" class="podlinkurl"
+>http://www.cpan.org/misc/lwall-quotes.txt.gz</a> .</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="How_can_I_convince_others_to_use_Perl?"
+>How can I convince others to use Perl?</a></h2>
+
+<p>(contributed by brian d foy)</p>
+
+<p>Appeal to their self interest! If Perl is new (and thus scary) to them, find something that Perl can do to solve one of their problems. That might mean that Perl either saves them something (time, headaches, money) or gives them something (flexibility, power, testability).</p>
+
+<p>In general, the benefit of a language is closely related to the skill of the people using that language. If you or your team can be faster, better, and stronger through Perl, you&#39;ll deliver more value. Remember, people often respond better to what they get out of it. If you run into resistance, figure out what those people get out of the other choice and how Perl might satisfy that requirement.</p>
+
+<p>You don&#39;t have to worry about finding or paying for Perl; it&#39;s freely available and several popular operating systems come with Perl. Community support in places such as Perlmonks ( <a href="http://www.perlmonks.com" class="podlinkurl"
+>http://www.perlmonks.com</a> ) and the various Perl mailing lists ( <a href="http://lists.perl.org" class="podlinkurl"
+>http://lists.perl.org</a> ) means that you can usually get quick answers to your problems.</p>
+
+<p>Finally, keep in mind that Perl might not be the right tool for every job. You&#39;re a much better advocate if your claims are reasonable and grounded in reality. Dogmatically advocating anything tends to make people discount your message. Be honest about possible disadvantages to your choice of Perl since any choice has trade-offs.</p>
+
+<p>You might find these links useful:</p>
+
+<ul>
+<li><a href="http://perltraining.com.au/whyperl.html" class="podlinkurl"
+>http://perltraining.com.au/whyperl.html</a></li>
+
+<li><a href="http://www.perl.org/advocacy/whyperl.html" class="podlinkurl"
+>http://www.perl.org/advocacy/whyperl.html</a></li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR_AND_COPYRIGHT"
+>AUTHOR AND COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 1997-2010 Tom Christiansen, Nathan Torkington, and other authors as noted. All rights reserved.</p>
+
+<p>This documentation is free; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>Irrespective of its distribution, all code examples here are in the public domain. You are permitted and encouraged to use this code and any derivatives thereof in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit to the FAQ would be courteous but is not required.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">77978 Uploads, 24666 Distributions
+105774 Modules, 9632 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Thu Apr 19 02:05:11 2012 GMT (0.0681169033050537) @cpansearch1 -->
+ </body>
+</html>

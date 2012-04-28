@@ -1,0 +1,899 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Params::Validate - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Params-Validate",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Params-Validate-1.06",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Params::Validate",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DROLSKY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Params::Validate">permalink</a></div>
+  <a href="/~drolsky/">Dave Rolsky</a> &gt;
+  <a href="/~drolsky/Params-Validate-1.06/">Params-Validate-1.06</a> &gt;
+  Params::Validate
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/1401e7f176d9e13ad2a9380ecd1f18f6?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DR/DROLSKY/Params-Validate-1.06.tar.gz">Params-Validate-1.06.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Params%3A%3AValidate;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DROLSKY/Params-Validate-1.06/lib/Params/Validate.pm">Annotate this POD
+(1)
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Module%3A%3ABuild">Module::Build</a><br>
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?Regexp%3A%3ACommon">Regexp::Common</a><br>
+<a href="/perldoc?Test%3A%3AMore">Test::More</a><br>
+<a href="/perldoc?HTML%3A%3ATemplate">HTML::Template</a><br>
+<a href="/perldoc?Scalar%3A%3AUtil">Scalar::Util</a><br>
+<a href="/perldoc?Class%3A%3AContract">Class::Contract</a><br>
+<a href="/perldoc?Carp%3A%3AAssert">Carp::Assert</a><br>
+<a href="/perldoc?Class%3A%3ADBI">Class::DBI</a><br>
+<a href="/perldoc?CGI%3A%3AApplication">CGI::Application</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Params%3A%3AValidate">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 10</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 8</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Params-Validate">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.06 &nbsp;
+<span class="noprint">
+  <a href="/src/DROLSKY/Params-Validate-1.06/lib/Params/Validate.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#EXPORT'>EXPORT</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#PARAMETER_VALIDATION'>PARAMETER VALIDATION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Mandatory/Optional_Parameters'>Mandatory/Optional Parameters</a>
+    <li class='indexItem indexItem2'><a href='#Type_Validation'>Type Validation</a>
+    <li class='indexItem indexItem2'><a href='#Interface_Validation'>Interface Validation</a>
+    <li class='indexItem indexItem2'><a href='#Class_Validation'>Class Validation</a>
+    <li class='indexItem indexItem2'><a href='#Regex_Validation'>Regex Validation</a>
+    <li class='indexItem indexItem2'><a href='#Callback_Validation'>Callback Validation</a>
+    <li class='indexItem indexItem2'><a href='#Untainting'>Untainting</a>
+    <li class='indexItem indexItem2'><a href='#Mandatory/Optional_Revisited'>Mandatory/Optional Revisited</a>
+    <li class='indexItem indexItem2'><a href='#Dependencies'>Dependencies</a>
+    <li class='indexItem indexItem2'><a href='#Specifying_defaults'>Specifying defaults</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#USAGE_NOTES'>USAGE NOTES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Validation_failure'>Validation failure</a>
+    <li class='indexItem indexItem2'><a href='#Method_calls'>Method calls</a>
+    <li class='indexItem indexItem2'><a href='#Speeding_Up_Validation'>Speeding Up Validation</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#&#34;GLOBAL&#34;_OPTIONS'>&#34;GLOBAL&#34; OPTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Options'>Options</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#PER-INVOCATION_OPTIONS'>PER-INVOCATION OPTIONS</a>
+  <li class='indexItem indexItem1'><a href='#DISABLING_VALIDATION'>DISABLING VALIDATION</a>
+  <li class='indexItem indexItem1'><a href='#LIMITATIONS'>LIMITATIONS</a>
+  <li class='indexItem indexItem1'><a href='#SUPPORT'>SUPPORT</a>
+  <li class='indexItem indexItem1'><a href='#DONATIONS'>DONATIONS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Params::Validate - Validate method/function parameters</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 1.06</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Params::Validate qw(:all);
+
+    # takes named params (hash or hashref)
+    sub foo {
+        validate(
+            @_, {
+                foo =&#62; 1,    # mandatory
+                bar =&#62; 0,    # optional
+            }
+        );
+    }
+
+    # takes positional params
+    sub bar {
+        # first two are mandatory, third is optional
+        validate_pos( @_, 1, 1, 0 );
+    }
+
+    sub foo2 {
+        validate(
+            @_, {
+                foo =&#62;
+                    # specify a type
+                    { type =&#62; ARRAYREF },
+                bar =&#62;
+                    # specify an interface
+                    { can =&#62; [ &#39;print&#39;, &#39;flush&#39;, &#39;frobnicate&#39; ] },
+                baz =&#62; {
+                    type      =&#62; SCALAR,     # a scalar ...
+                                             # ... that is a plain integer ...
+                    regex     =&#62; qr/^\d+$/,
+                    callbacks =&#62; {           # ... and smaller than 90
+                        &#39;less than 90&#39; =&#62; sub { shift() &#60; 90 },
+                    },
+                }
+            }
+        );
+    }
+
+    sub with_defaults {
+        my %p = validate(
+            @_, {
+                # required
+                foo =&#62; 1,
+                # $p{bar} will be 99 if bar is not given.  bar is now
+                # optional.
+                bar =&#62; { default =&#62; 99 }
+            }
+        );
+    }
+
+    sub pos_with_defaults {
+        my @p = validate_pos( @_, 1, { default =&#62; 99 } );
+    }
+
+    sub sets_options_on_call {
+        my %p = validate_with(
+            params =&#62; \@_,
+            spec   =&#62; { foo =&#62; { type =&#62; SCALAR, default =&#62; 2 } },
+            normalize_keys =&#62; sub { $_[0] =~ s/^-//; lc $_[0] },
+        );
+    }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The Params::Validate module allows you to validate method or function call parameters to an arbitrary level of specificity. At the simplest level, it is capable of validating the required parameters were given and that no unspecified additional parameters were passed in.</p>
+
+<p>It is also capable of determining that a parameter is of a specific type, that it is an object of a certain class hierarchy, that it possesses certain methods, or applying validation callbacks to arguments.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORT"
+>EXPORT</a></h2>
+
+<p>The module always exports the <code>validate()</code> and <code>validate_pos()</code> functions.</p>
+
+<p>It also has an additional function available for export, <code>validate_with</code>, which can be used to validate any type of parameters, and set various options on a per-invocation basis.</p>
+
+<p>In addition, it can export the following constants, which are used as part of the type checking. These are <code>SCALAR</code>, <code>ARRAYREF</code>, <code>HASHREF</code>, <code>CODEREF</code>, <code>GLOB</code>, <code>GLOBREF</code>, and <code>SCALARREF</code>, <code>UNDEF</code>, <code>OBJECT</code>, <code>BOOLEAN</code>, and <code>HANDLE</code>. These are explained in the section on <a href="/~drolsky/Params-Validate-1.06/lib/Params/Validate.pm#Type_Validation" class="podlinkpod"
+>Type Validation</a>.</p>
+
+<p>The constants are available via the export tag <code>:types</code>. There is also an <code>:all</code> tag which includes all of the constants as well as the <code>validation_options()</code> function.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PARAMETER_VALIDATION"
+>PARAMETER VALIDATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The validation mechanisms provided by this module can handle both named or positional parameters. For the most part, the same features are available for each. The biggest difference is the way that the validation specification is given to the relevant subroutine. The other difference is in the error messages produced when validation checks fail.</p>
+
+<p>When handling named parameters, the module will accept either a hash or a hash reference.</p>
+
+<p>Subroutines expecting named parameters should call the <code>validate()</code> subroutine like this:</p>
+
+<pre class="sh_perl">    validate(
+        @_, {
+            parameter1 =&#62; validation spec,
+            parameter2 =&#62; validation spec,
+            ...
+        }
+    );</pre>
+
+<p>Subroutines expecting positional parameters should call the <code>validate_pos()</code> subroutine like this:</p>
+
+<pre class="sh_perl">    validate_pos( @_, { validation spec }, { validation spec } );</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Mandatory/Optional_Parameters"
+>Mandatory/Optional Parameters</a></h2>
+
+<p>If you just want to specify that some parameters are mandatory and others are optional, this can be done very simply.</p>
+
+<p>For a subroutine expecting named parameters, you would do this:</p>
+
+<pre class="sh_perl">    validate( @_, { foo =&#62; 1, bar =&#62; 1, baz =&#62; 0 } );</pre>
+
+<p>This says that the &#34;foo&#34; and &#34;bar&#34; parameters are mandatory and that the &#34;baz&#34; parameter is optional. The presence of any other parameters will cause an error.</p>
+
+<p>For a subroutine expecting positional parameters, you would do this:</p>
+
+<pre class="sh_perl">    validate_pos( @_, 1, 1, 0, 0 );</pre>
+
+<p>This says that you expect at least 2 and no more than 4 parameters. If you have a subroutine that has a minimum number of parameters but can take any maximum number, you can do this:</p>
+
+<pre class="sh_perl">    validate_pos( @_, 1, 1, (0) x (@_ - 2) );</pre>
+
+<p>This will always be valid as long as at least two parameters are given. A similar construct could be used for the more complex validation parameters described further on.</p>
+
+<p>Please note that this:</p>
+
+<pre class="sh_perl">    validate_pos( @_, 1, 1, 0, 1, 1 );</pre>
+
+<p>makes absolutely no sense, so don&#39;t do it. Any zeros must come at the end of the validation specification.</p>
+
+<p>In addition, if you specify that a parameter can have a default, then it is considered optional.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Type_Validation"
+>Type Validation</a></h2>
+
+<p>This module supports the following simple types, which can be <a href="#EXPORT" class="podlinkpod"
+>exported as constants</a>:</p>
+
+<ul>
+<li>SCALAR
+<p>A scalar which is not a reference, such as <code>10</code> or <code>&#39;hello&#39;</code>. A parameter that is undefined is <b>not</b> treated as a scalar. If you want to allow undefined values, you will have to specify <code>SCALAR | UNDEF</code>.</p>
+</li>
+
+<li>ARRAYREF
+<p>An array reference such as <code>[1, 2, 3]</code> or <code>\@foo</code>.</p>
+</li>
+
+<li>HASHREF
+<p>A hash reference such as <code>{ a =&#62; 1, b =&#62; 2 }</code> or <code>\%bar</code>.</p>
+</li>
+
+<li>CODEREF
+<p>A subroutine reference such as <code>\&#38;foo_sub</code> or <code>sub { print &#34;hello&#34; }</code>.</p>
+</li>
+
+<li>GLOB
+<p>This one is a bit tricky. A glob would be something like <code>*FOO</code>, but not <code>\*FOO</code>, which is a glob reference. It should be noted that this trick:</p>
+
+<pre class="sh_perl">    my $fh = do { local *FH; };</pre>
+
+<p>makes <code>$fh</code> a glob, not a glob reference. On the other hand, the return value from <code>Symbol::gensym</code> is a glob reference. Either can be used as a file or directory handle.</p>
+</li>
+
+<li>GLOBREF
+<p>A glob reference such as <code>\*FOO</code>. See the <a href="/perldoc?GLOB" class="podlinkpod"
+>GLOB</a> entry above for more details.</p>
+</li>
+
+<li>SCALARREF
+<p>A reference to a scalar such as <code>\$x</code>.</p>
+</li>
+
+<li>UNDEF
+<p>An undefined value</p>
+</li>
+
+<li>OBJECT
+<p>A blessed reference.</p>
+</li>
+
+<li>BOOLEAN
+<p>This is a special option, and is just a shortcut for <code>UNDEF | SCALAR</code>.</p>
+</li>
+
+<li>HANDLE
+<p>This option is also special, and is just a shortcut for <code>GLOB | GLOBREF</code>. However, it seems likely that most people interested in either globs or glob references are likely to really be interested in whether the parameter in question could be a valid file or directory handle.</p>
+</li>
+</ul>
+
+<p>To specify that a parameter must be of a given type when using named parameters, do this:</p>
+
+<pre class="sh_perl">    validate(
+        @_, {
+            foo =&#62; { type =&#62; SCALAR },
+            bar =&#62; { type =&#62; HASHREF }
+        }
+    );</pre>
+
+<p>If a parameter can be of more than one type, just use the bitwise or (<code>|</code>) operator to combine them.</p>
+
+<pre class="sh_perl">    validate( @_, { foo =&#62; { type =&#62; GLOB | GLOBREF } );</pre>
+
+<p>For positional parameters, this can be specified as follows:</p>
+
+<pre class="sh_perl">    validate_pos( @_, { type =&#62; SCALAR | ARRAYREF }, { type =&#62; CODEREF } );</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Interface_Validation"
+>Interface Validation</a></h2>
+
+<p>To specify that a parameter is expected to have a certain set of methods, we can do the following:</p>
+
+<pre class="sh_perl">    validate(
+        @_, {
+            foo =&#62;
+                # just has to be able to -&#62;bar
+                { can =&#62; &#39;bar&#39; }
+        }
+    );
+
+ ... or ...
+
+    validate(
+        @_, {
+            foo =&#62;
+                # must be able to -&#62;bar and -&#62;print
+                { can =&#62; [qw( bar print )] }
+        }
+    );</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Class_Validation"
+>Class Validation</a></h2>
+
+<p>A word of warning. When constructing your external interfaces, it is probably better to specify what methods you expect an object to have rather than what class it should be of (or a child of). This will make your API much more flexible.</p>
+
+<p>With that said, if you want to validate that an incoming parameter belongs to a class (or child class) or classes, do:</p>
+
+<pre class="sh_perl">    validate(
+        @_,
+        { foo =&#62; { isa =&#62; &#39;My::Frobnicator&#39; } }
+    );
+
+ ... or ...
+
+    validate(
+        @_,
+        # must be both, not either!
+        { foo =&#62; { isa =&#62; [qw( My::Frobnicator IO::Handle )] } }
+    );</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Regex_Validation"
+>Regex Validation</a></h2>
+
+<p>If you want to specify that a given parameter must match a specific regular expression, this can be done with &#34;regex&#34; spec key. For example:</p>
+
+<pre class="sh_perl">    validate(
+        @_,
+        { foo =&#62; { regex =&#62; qr/^\d+$/ } }
+    );</pre>
+
+<p>The value of the &#34;regex&#34; key may be either a string or a pre-compiled regex created via <code>qr</code>.</p>
+
+<p>If the value being checked against a regex is undefined, the regex is explicitly checked against the empty string (&#39;&#39;) instead, in order to avoid &#34;Use of uninitialized value&#34; warnings.</p>
+
+<p>The <code>Regexp::Common</code> module on CPAN is an excellent source of regular expressions suitable for validating input.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Callback_Validation"
+>Callback Validation</a></h2>
+
+<p>If none of the above are enough, it is possible to pass in one or more callbacks to validate the parameter. The callback will be given the <b>value</b> of the parameter as its first argument. Its second argument will be all the parameters, as a reference to either a hash or array. Callbacks are specified as hash reference. The key is an id for the callback (used in error messages) and the value is a subroutine reference, such as:</p>
+
+<pre class="sh_perl">    validate(
+        @_, {
+            foo =&#62; {
+                callbacks =&#62; {
+                    &#39;smaller than a breadbox&#39; =&#62; sub { shift() &#60; $breadbox },
+                    &#39;green or blue&#39; =&#62;
+                        sub { $_[0] eq &#39;green&#39; || $_[0] eq &#39;blue&#39; }
+                }
+            }
+        );
+
+    validate(
+        @_, {
+            foo =&#62; {
+                callbacks =&#62; {
+                    &#39;bigger than baz&#39; =&#62; sub { $_[0] &#62; $_[1]-&#62;{baz} }
+                }
+            }
+        }
+    );</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Untainting"
+>Untainting</a></h2>
+
+<p>If you want values untainted, set the &#34;untaint&#34; key in a spec hashref to a true value, like this:</p>
+
+<pre class="sh_perl">    my %p = validate(
+        @_, {
+            foo =&#62; { type =&#62; SCALAR, untaint =&#62; 1 },
+            bar =&#62; { type =&#62; ARRAYREF }
+        }
+    );</pre>
+
+<p>This will untaint the &#34;foo&#34; parameter if the parameters are valid.</p>
+
+<p>Note that untainting is only done if <i>all parameters</i> are valid. Also, only the return values are untainted, not the original values passed into the validation function.</p>
+
+<p>Asking for untainting of a reference value will not do anything, as <code>Params::Validate</code> will only attempt to untaint the reference itself.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Mandatory/Optional_Revisited"
+>Mandatory/Optional Revisited</a></h2>
+
+<p>If you want to specify something such as type or interface, plus the fact that a parameter can be optional, do this:</p>
+
+<pre class="sh_perl">    validate(
+        @_, {
+            foo =&#62; { type =&#62; SCALAR },
+            bar =&#62; { type =&#62; ARRAYREF, optional =&#62; 1 }
+        }
+    );</pre>
+
+<p>or this for positional parameters:</p>
+
+<pre class="sh_perl">    validate_pos(
+        @_,
+        { type =&#62; SCALAR },
+        { type =&#62; ARRAYREF, optional =&#62; 1 }
+    );</pre>
+
+<p>By default, parameters are assumed to be mandatory unless specified as optional.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Dependencies"
+>Dependencies</a></h2>
+
+<p>It also possible to specify that a given optional parameter depends on the presence of one or more other optional parameters.</p>
+
+<pre class="sh_perl">    validate(
+        @_, {
+            cc_number =&#62; {
+                type     =&#62; SCALAR,
+                optional =&#62; 1,
+                depends  =&#62; [ &#39;cc_expiration&#39;, &#39;cc_holder_name&#39; ],
+            },
+            cc_expiration  { type =&#62; SCALAR, optional =&#62; 1 },
+            cc_holder_name { type =&#62; SCALAR, optional =&#62; 1 },
+        }
+    );</pre>
+
+<p>In this case, &#34;cc_number&#34;, &#34;cc_expiration&#34;, and &#34;cc_holder_name&#34; are all optional. However, if &#34;cc_number&#34; is provided, then &#34;cc_expiration&#34; and &#34;cc_holder_name&#34; must be provided as well.</p>
+
+<p>This allows you to group together sets of parameters that all must be provided together.</p>
+
+<p>The <code>validate_pos()</code> version of dependencies is slightly different, in that you can only depend on one other parameter. Also, if for example, the second parameter 2 depends on the fourth parameter, then it implies a dependency on the third parameter as well. This is because if the fourth parameter is required, then the user must also provide a third parameter so that there can be four parameters in total.</p>
+
+<p><code>Params::Validate</code> will die if you try to depend on a parameter not declared as part of your parameter specification.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Specifying_defaults"
+>Specifying defaults</a></h2>
+
+<p>If the <code>validate()</code> or <code>validate_pos()</code> functions are called in a list context, they will return a hash or containing the original parameters plus defaults as indicated by the validation spec.</p>
+
+<p>If the function is not called in a list context, providing a default in the validation spec still indicates that the parameter is optional.</p>
+
+<p>The hash or array returned from the function will always be a copy of the original parameters, in order to leave <code>@_</code> untouched for the calling function.</p>
+
+<p>Simple examples of defaults would be:</p>
+
+<pre class="sh_perl">    my %p = validate( @_, { foo =&#62; 1, bar =&#62; { default =&#62; 99 } } );
+
+    my @p = validate_pos( @_, 1, { default =&#62; 99 } );</pre>
+
+<p>In scalar context, a hash reference or array reference will be returned, as appropriate.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="USAGE_NOTES"
+>USAGE NOTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Validation_failure"
+>Validation failure</a></h2>
+
+<p>By default, when validation fails <code>Params::Validate</code> calls <code>Carp::confess()</code>. This can be overridden by setting the <code>on_fail</code> option, which is described in the <a href="/perldoc?%22GLOBAL%22%20OPTIONS" class="podlinkpod"
+>&#34;GLOBAL&#34; OPTIONS</a> section.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Method_calls"
+>Method calls</a></h2>
+
+<p>When using this module to validate the parameters passed to a method call, you will probably want to remove the class/object from the parameter list <b>before</b> calling <code>validate()</code> or <code>validate_pos()</code>. If your method expects named parameters, then this is necessary for the <code>validate()</code> function to actually work, otherwise <code>@_</code> will not be usable as a hash, because it will first have your object (or class) <b>followed</b> by a set of keys and values.</p>
+
+<p>Thus the idiomatic usage of <code>validate()</code> in a method call will look something like this:</p>
+
+<pre class="sh_perl">    sub method {
+        my $self = shift;
+
+        my %params = validate(
+            @_, {
+                foo =&#62; 1,
+                bar =&#62; { type =&#62; ARRAYREF },
+            }
+        );
+    }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Speeding_Up_Validation"
+>Speeding Up Validation</a></h2>
+
+<p>In most cases, the validation spec will remain the same for each call to a subroutine. In that case, you can speed up validation by defining the validation spec just once, rather than on each call to the subroutine:</p>
+
+<pre class="sh_perl">    my %spec = ( ... );
+    sub foo {
+        my %params = validate( @_, \%spec );
+    }</pre>
+
+<p>You can also use the <code>state</code> feature to do this:</p>
+
+<pre class="sh_perl">    use feature &#39;state&#39;;
+
+    sub foo {
+        state %spec = ( ... );
+        my %params = validate( @_, \%spec );
+    }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="&#34;GLOBAL&#34;_OPTIONS"
+>&#34;GLOBAL&#34; OPTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Because the API for the <code>validate()</code> and <code>validate_pos()</code> functions does not make it possible to specify any options other than the validation spec, it is possible to set some options as pseudo-&#39;globals&#39;. These allow you to specify such things as whether or not the validation of named parameters should be case sensitive, for one example.</p>
+
+<p>These options are called pseudo-&#39;globals&#39; because these settings are <b>only applied to calls originating from the package that set the options</b>.</p>
+
+<p>In other words, if I am in package <code>Foo</code> and I call <code>validation_options()</code>, those options are only in effect when I call <code>validate()</code> from package <code>Foo</code>.</p>
+
+<p>While this is quite different from how most other modules operate, I feel that this is necessary in able to make it possible for one module/application to use Params::Validate while still using other modules that also use Params::Validate, perhaps with different options set.</p>
+
+<p>The downside to this is that if you are writing an app with a standard calling style for all functions, and your app has ten modules, <b>each module must include a call to <code>validation_options()</code></b>. You could of course write a module that all your modules use which uses various trickery to do this when imported.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Options"
+>Options</a></h2>
+
+<ul>
+<li>normalize_keys =&#62; $callback
+<p>This option is only relevant when dealing with named parameters.</p>
+
+<p>This callback will be used to transform the hash keys of both the parameters and the parameter spec when <code>validate()</code> or <code>validate_with()</code> are called.</p>
+
+<p>Any alterations made by this callback will be reflected in the parameter hash that is returned by the validation function. For example:</p>
+
+<pre class="sh_perl">    sub foo {
+        return validate_with(
+            params =&#62; \@_,
+            spec   =&#62; { foo =&#62; { type =&#62; SCALAR } },
+            normalize_keys =&#62;
+                sub { my $k = shift; $k =~ s/^-//; return uc $k },
+        );
+
+    }
+
+    %p = foo( foo =&#62; 20 );
+
+    # $p{FOO} is now 20
+
+    %p = foo( -fOo =&#62; 50 );
+
+    # $p{FOO} is now 50</pre>
+
+<p>The callback must return a defined value.</p>
+
+<p>If a callback is given then the deprecated &#34;ignore_case&#34; and &#34;strip_leading&#34; options are ignored.</p>
+</li>
+
+<li>allow_extra =&#62; $boolean
+<p>If true, then the validation routine will allow extra parameters not named in the validation specification. In the case of positional parameters, this allows an unlimited number of maximum parameters (though a minimum may still be set). Defaults to false.</p>
+</li>
+
+<li>on_fail =&#62; $callback
+<p>If given, this callback will be called whenever a validation check fails. It will be called with a single parameter, which will be a string describing the failure. This is useful if you wish to have this module throw exceptions as objects rather than as strings, for example.</p>
+
+<p>This callback is expected to <code>die()</code> internally. If it does not, the validation will proceed onwards, with unpredictable results.</p>
+
+<p>The default is to simply use the Carp module&#39;s <code>confess()</code> function.</p>
+</li>
+
+<li>stack_skip =&#62; $number
+<p>This tells Params::Validate how many stack frames to skip when finding a subroutine name to use in error messages. By default, it looks one frame back, at the immediate caller to <code>validate()</code> or <code>validate_pos()</code>. If this option is set, then the given number of frames are skipped instead.</p>
+</li>
+
+<li>ignore_case =&#62; $boolean
+<p>DEPRECATED</p>
+
+<p>This is only relevant when dealing with named parameters. If it is true, then the validation code will ignore the case of parameter names. Defaults to false.</p>
+</li>
+
+<li>strip_leading =&#62; $characters
+<p>DEPRECATED</p>
+
+<p>This too is only relevant when dealing with named parameters. If this is given then any parameters starting with these characters will be considered equivalent to parameters without them entirely. For example, if this is specified as &#39;-&#39;, then <code>-foo</code> and <code>foo</code> would be considered identical.</p>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PER-INVOCATION_OPTIONS"
+>PER-INVOCATION OPTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The <code>validate_with()</code> function can be used to set the options listed above on a per-invocation basis. For example:</p>
+
+<pre class="sh_perl">    my %p = validate_with(
+        params =&#62; \@_,
+        spec   =&#62; {
+            foo =&#62; { type    =&#62; SCALAR },
+            bar =&#62; { default =&#62; 10 }
+        },
+        allow_extra =&#62; 1,
+    );</pre>
+
+<p>In addition to the options listed above, it is also possible to set the option &#34;called&#34;, which should be a string. This string will be used in any error messages caused by a failure to meet the validation spec.</p>
+
+<p>This subroutine will validate named parameters as a hash if the &#34;spec&#34; parameter is a hash reference. If it is an array reference, the parameters are assumed to be positional.</p>
+
+<pre class="sh_perl">    my %p = validate_with(
+        params =&#62; \@_,
+        spec   =&#62; {
+            foo =&#62; { type    =&#62; SCALAR },
+            bar =&#62; { default =&#62; 10 }
+        },
+        allow_extra =&#62; 1,
+        called      =&#62; &#39;The Quux::Baz class constructor&#39;,
+    );
+
+    my @p = validate_with(
+        params =&#62; \@_,
+        spec   =&#62; [
+            { type    =&#62; SCALAR },
+            { default =&#62; 10 }
+        ],
+        allow_extra =&#62; 1,
+        called      =&#62; &#39;The Quux::Baz class constructor&#39;,
+    );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DISABLING_VALIDATION"
+>DISABLING VALIDATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If the environment variable <code>PERL_NO_VALIDATION</code> is set to something true, then validation is turned off. This may be useful if you only want to use this module during development but don&#39;t want the speed hit during production.</p>
+
+<p>The only error that will be caught will be when an odd number of parameters are passed into a function/method that expects a hash.</p>
+
+<p>If you want to selectively turn validation on and off at runtime, you can directly set the <code>$Params::Validate::NO_VALIDATION</code> global variable. It is <b>strongly</b> recommended that you <b>localize</b> any changes to this variable, because other modules you are using may expect validation to be on when they execute. For example:</p>
+
+<pre class="sh_perl">    {
+        local $Params::Validate::NO_VALIDATION = 1;
+
+        # no error
+        foo( bar =&#62; 2 );
+    }
+
+    # error
+    foo( bar =&#62; 2 );
+
+    sub foo {
+        my %p = validate( @_, { foo =&#62; 1 } );
+        ...;
+    }</pre>
+
+<p>But if you want to shoot yourself in the foot and just turn it off, go ahead!</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LIMITATIONS"
+>LIMITATIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Right now there is no way (short of a callback) to specify that something must be of one of a list of classes, or that it must possess one of a list of methods. If this is desired, it can be added in the future.</p>
+
+<p>Ideally, there would be only one validation function. If someone figures out how to do this, please let me know.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUPPORT"
+>SUPPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Please submit bugs and patches to the CPAN RT system at <a href="http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Params%3A%3AValidate" class="podlinkurl"
+>http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Params%3A%3AValidate</a> or via email at bug-params-validate@rt.cpan.org.</p>
+
+<p>Support questions can be sent to Dave at autarch@urth.org.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DONATIONS"
+>DONATIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you&#39;d like to thank me for the work I&#39;ve done on this module, please consider making a &#34;donation&#34; to me via PayPal. I spend a lot of free time creating free software, and would appreciate any support you&#39;d care to offer.</p>
+
+<p>Please note that <b>I am not suggesting that you must do this</b> in order for me to continue working on this particular software. I will continue to do so, inasmuch as I have in the past, for as long as it interests me.</p>
+
+<p>Similarly, a donation made in this way will probably not make me work on this software much more, unless I get so many donations that I can consider working on free software full time, which seems unlikely at best.</p>
+
+<p>To donate, log into PayPal and send money to autarch@urth.org or use the button on this page: <a href="http://www.urth.org/~autarch/fs-donation.html" class="podlinkurl"
+>http://www.urth.org/~autarch/fs-donation.html</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Dave Rolsky, &#60;autarch@urth.org&#62; and Ilya Martynov &#60;ilya@martynov.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This software is Copyright (c) 2012 by Dave Rolsky and Ilya Martynov.</p>
+
+<p>This is free software, licensed under:</p>
+
+<pre class="sh_perl">  The Artistic License 2.0 (GPL Compatible)</pre>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78290 Uploads, 24725 Distributions
+106015 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 28 08:49:47 2012 GMT (0.143581867218018) @cpansearch1 -->
+ </body>
+</html>

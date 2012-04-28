@@ -1,0 +1,538 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Moose::Manual::Roles - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Moose",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Moose-2.0403",3]);
+    _gaq.push(["_setCustomVar",4,"Document","Moose::Manual::Roles",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DOY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Moose::Manual::Roles">permalink</a></div>
+  <a href="/~doy/">Jesse Luehrs</a> &gt;
+  <a href="/~doy/Moose-2.0403/">Moose-2.0403</a> &gt;
+  Moose::Manual::Roles
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/88766de7a058697d3d0335b8d384fd2a?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DO/DOY/Moose-2.0403.tar.gz">Moose-2.0403.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DOY/Moose-2.0403/lib/Moose/Manual/Roles.pod">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 13</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 27</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 4</td></tr>
+</table>
+<a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Moose">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/DOY/Moose-2.0403/lib/Moose/Manual/Roles.pod">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~doy/Moose/lib/Moose/Manual/Roles.pod">Moose-2.0501-TRIAL</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#WHAT_IS_A_ROLE?'>WHAT IS A ROLE?</a>
+  <li class='indexItem indexItem1'><a href='#A_SIMPLE_ROLE'>A SIMPLE ROLE</a>
+  <li class='indexItem indexItem1'><a href='#REQUIRED_METHODS'>REQUIRED METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Roles_Versus_Abstract_Base_Classes'>Roles Versus Abstract Base Classes</a>
+    <li class='indexItem indexItem2'><a href='#Required_Attributes'>Required Attributes</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#USING_METHOD_MODIFIERS'>USING METHOD MODIFIERS</a>
+  <li class='indexItem indexItem1'><a href='#METHOD_CONFLICTS'>METHOD CONFLICTS</a>
+  <li class='indexItem indexItem1'><a href='#METHOD_EXCLUSION_AND_ALIASING'>METHOD EXCLUSION AND ALIASING</a>
+  <li class='indexItem indexItem1'><a href='#ROLE_EXCLUSION'>ROLE EXCLUSION</a>
+  <li class='indexItem indexItem1'><a href='#ADDING_A_ROLE_TO_AN_OBJECT_INSTANCE'>ADDING A ROLE TO AN OBJECT INSTANCE</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose::Manual::Roles - Roles,
+an alternative to deep hierarchies and base classes</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 2.0403</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="WHAT_IS_A_ROLE?"
+>WHAT IS A ROLE? <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>A role encapsulates some piece of behavior or state that can be shared between classes.
+It is something that classes <i>do</i>.
+It is important to understand that <i>roles are not classes</i>.
+You cannot inherit from a role,
+and a role cannot be instantiated.
+We sometimes say that roles are <i>consumed</i>,
+either by classes or other roles.</p>
+
+<p>Instead,
+a role is <i>composed</i> into a class.
+In practical terms,
+this means that all of the methods,
+method modifiers,
+and attributes defined in a role are added directly to (we sometimes say &#34;flattened into&#34;) the class that consumes the role.
+These attributes and methods then appear as if they were defined in the class itself.
+A subclass of the consuming class will inherit all of these methods and attributes.</p>
+
+<p>Moose roles are similar to mixins or interfaces in other languages.</p>
+
+<p>Besides defining their own methods and attributes,
+roles can also require that the consuming class define certain methods of its own.
+You could have a role that consisted only of a list of required methods,
+in which case the role would be very much like a Java interface.</p>
+
+<p>Note that attribute accessors also count as methods for the purposes of satisfying the requirements of a role.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="A_SIMPLE_ROLE"
+>A SIMPLE ROLE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Creating a role looks a lot like creating a Moose class:</p>
+
+<pre class="sh_perl">  package Breakable;
+
+  use Moose::Role;
+
+  has &#39;is_broken&#39; =&#62; (
+      is  =&#62; &#39;rw&#39;,
+      isa =&#62; &#39;Bool&#39;,
+  );
+
+  sub break {
+      my $self = shift;
+
+      print &#34;I broke\n&#34;;
+
+      $self-&#62;is_broken(1);
+  }</pre>
+
+<p>Except for our use of <a href="/~doy/Moose-2.0403/lib/Moose/Role.pm" class="podlinkpod"
+>Moose::Role</a>, this looks just like a class definition with Moose. However, this is not a class, and it cannot be instantiated.</p>
+
+<p>Instead, its attributes and methods will be composed into classes which use the role:</p>
+
+<pre class="sh_perl">  package Car;
+
+  use Moose;
+
+  with &#39;Breakable&#39;;
+
+  has &#39;engine&#39; =&#62; (
+      is  =&#62; &#39;ro&#39;,
+      isa =&#62; &#39;Engine&#39;,
+  );</pre>
+
+<p>The <code>with</code> function composes roles into a class. Once that is done, the <code>Car</code> class has an <code>is_broken</code> attribute and a <code>break</code> method. The <code>Car</code> class also <code>does(&#39;Breakable&#39;)</code>:</p>
+
+<pre class="sh_perl">  my $car = Car-&#62;new( engine =&#62; Engine-&#62;new );
+
+  print $car-&#62;is_broken ? &#39;Busted&#39; : &#39;Still working&#39;;
+  $car-&#62;break;
+  print $car-&#62;is_broken ? &#39;Busted&#39; : &#39;Still working&#39;;
+
+  $car-&#62;does(&#39;Breakable&#39;); # true</pre>
+
+<p>This prints:</p>
+
+<pre class="sh_perl">  Still working
+  I broke
+  Busted</pre>
+
+<p>We could use this same role in a <code>Bone</code> class:</p>
+
+<pre class="sh_perl">  package Bone;
+
+  use Moose;
+
+  with &#39;Breakable&#39;;
+
+  has &#39;marrow&#39; =&#62; (
+      is  =&#62; &#39;ro&#39;,
+      isa =&#62; &#39;Marrow&#39;,
+  );</pre>
+
+<p>See also <a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Roles/Recipe1.pod" class="podlinkpod"
+>Moose::Cookbook::Roles::Recipe1</a> for an example.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="REQUIRED_METHODS"
+>REQUIRED METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>As mentioned previously, a role can require that consuming classes provide one or more methods. Using our <code>Breakable</code> example, let&#39;s make it require that consuming classes implement their own <code>break</code> methods:</p>
+
+<pre class="sh_perl">  package Breakable;
+
+  use Moose::Role;
+
+  requires &#39;break&#39;;
+
+  has &#39;is_broken&#39; =&#62; (
+      is  =&#62; &#39;rw&#39;,
+      isa =&#62; &#39;Bool&#39;,
+  );
+
+  after &#39;break&#39; =&#62; sub {
+      my $self = shift;
+
+      $self-&#62;is_broken(1);
+  };</pre>
+
+<p>If we try to consume this role in a class that does not have a <code>break</code> method, we will get an exception.</p>
+
+<p>You can see that we added a method modifier on <code>break</code>. We want classes that consume this role to implement their own logic for breaking, but we make sure that the <code>is_broken</code> attribute is always set to true when <code>break</code> is called.</p>
+
+<pre class="sh_perl">  package Car
+
+  use Moose;
+
+  with &#39;Breakable&#39;;
+
+  has &#39;engine&#39; =&#62; (
+      is  =&#62; &#39;ro&#39;,
+      isa =&#62; &#39;Engine&#39;,
+  );
+
+  sub break {
+      my $self = shift;
+
+      if ( $self-&#62;is_moving ) {
+          $self-&#62;stop;
+      }
+  }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Roles_Versus_Abstract_Base_Classes"
+>Roles Versus Abstract Base Classes</a></h2>
+
+<p>If you are familiar with the concept of abstract base classes in other languages, you may be tempted to use roles in the same way.</p>
+
+<p>You <i>can</i> define an &#34;interface-only&#34; role, one that contains <i>just</i> a list of required methods.</p>
+
+<p>However, any class which consumes this role must implement all of the required methods, either directly or through inheritance from a parent. You cannot delay the method requirement check so that they can be implemented by future subclasses.</p>
+
+<p>Because the role defines the required methods directly, adding a base class to the mix would not achieve anything. We recommend that you simply consume the interface role in each class which implements that interface.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Required_Attributes"
+>Required Attributes</a></h2>
+
+<p>As mentioned before, a role&#39;s required method may also be satisfied by an attribute accessor. However, the call to <code>has</code> which defines an attribute happens at runtime. This means that you must define the attribute <i>before</i> consuming the role, or else the role will not see the generated accessor.</p>
+
+<pre class="sh_perl">  package Breakable;
+
+  use Moose::Role;
+
+  requires &#39;stress&#39;;
+
+  package Car;
+
+  use Moose;
+
+  has &#39;stress&#39; =&#62; (
+      is  =&#62; &#39;rw&#39;,
+      isa =&#62; &#39;Int&#39;,
+  );
+
+  with &#39;Breakable&#39;;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="USING_METHOD_MODIFIERS"
+>USING METHOD MODIFIERS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Method modifiers and roles are a very powerful combination. Often, a role will combine method modifiers and required methods. We already saw one example with our <code>Breakable</code> example.</p>
+
+<p>Method modifiers increase the complexity of roles, because they make the role application order relevant. If a class uses multiple roles, each of which modify the same method, those modifiers will be applied in the same order as the roles are used:</p>
+
+<pre class="sh_perl">  package MovieCar;
+
+  use Moose;
+
+  extends &#39;Car&#39;;
+
+  with &#39;Breakable&#39;, &#39;ExplodesOnBreakage&#39;;</pre>
+
+<p>Assuming that the new <code>ExplodesOnBreakage</code> method <i>also</i> has an <code>after</code> modifier on <code>break</code>, the <code>after</code> modifiers will run one after the other. The modifier from <code>Breakable</code> will run first, then the one from <code>ExplodesOnBreakage</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHOD_CONFLICTS"
+>METHOD CONFLICTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If a class composes multiple roles, and those roles have methods of the same name, we will have a conflict. In that case, the composing class is required to provide its <i>own</i> method of the same name.</p>
+
+<pre class="sh_perl">  package Breakdancer;
+
+  use Moose::Role
+
+  sub break {
+
+  }</pre>
+
+<p>If we compose both <code>Breakable</code> and <code>Breakdancer</code> in a class, we must provide our own <code>break</code> method:</p>
+
+<pre class="sh_perl">  package FragileDancer;
+
+  use Moose;
+
+  with &#39;Breakable&#39;, &#39;Breakdancer&#39;;
+
+  sub break { ... }</pre>
+
+<p>A role can be a collection of other roles:</p>
+
+<pre class="sh_perl">  package Break::Bundle;
+
+  use Moose::Role;
+
+  with (&#39;Breakable&#39;, &#39;Breakdancer&#39;);</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHOD_EXCLUSION_AND_ALIASING"
+>METHOD EXCLUSION AND ALIASING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If we want our <code>FragileDancer</code> class to be able to call the methods from both its roles, we can alias the methods:</p>
+
+<pre class="sh_perl">  package FragileDancer;
+
+  use Moose;
+
+  with &#39;Breakable&#39;   =&#62; { -alias =&#62; { break =&#62; &#39;break_bone&#39; } },
+       &#39;Breakdancer&#39; =&#62; { -alias =&#62; { break =&#62; &#39;break_dance&#39; } };</pre>
+
+<p>However, aliasing a method simply makes a <i>copy</i> of the method with the new name. We also need to exclude the original name:</p>
+
+<pre class="sh_perl">  with &#39;Breakable&#39; =&#62; {
+      -alias    =&#62; { break =&#62; &#39;break_bone&#39; },
+      -excludes =&#62; &#39;break&#39;,
+      },
+      &#39;Breakdancer&#39; =&#62; {
+      -alias    =&#62; { break =&#62; &#39;break_dance&#39; },
+      -excludes =&#62; &#39;break&#39;,
+      };</pre>
+
+<p>The excludes parameter prevents the <code>break</code> method from being composed into the <code>FragileDancer</code> class, so we don&#39;t have a conflict. This means that <code>FragileDancer</code> does not need to implement its own <code>break</code> method.</p>
+
+<p>This is useful, but it&#39;s worth noting that this breaks the contract implicit in consuming a role. Our <code>FragileDancer</code> class does both the <code>Breakable</code> and <code>BreakDancer</code>, but does not provide a <code>break</code> method. If some API expects an object that does one of those roles, it probably expects it to implement that method.</p>
+
+<p>In some use cases we might alias and exclude methods from roles, but then provide a method of the same name in the class itself.</p>
+
+<p>Also see <a href="/~doy/Moose-2.0403/lib/Moose/Cookbook/Roles/Recipe2.pod" class="podlinkpod"
+>Moose::Cookbook::Roles::Recipe2</a> for an example.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ROLE_EXCLUSION"
+>ROLE EXCLUSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>A role can say that it cannot be combined with some other role. This should be used with great caution, since it limits the re-usability of the role.</p>
+
+<pre class="sh_perl">  package Breakable;
+
+  use Moose::Role;
+
+  excludes &#39;BreakDancer&#39;;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ADDING_A_ROLE_TO_AN_OBJECT_INSTANCE"
+>ADDING A ROLE TO AN OBJECT INSTANCE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>You may want to add a role to an object instance, rather than to a class. For example, you may want to add debug tracing to one instance of an object while debugging a particular bug. Another use case might be to dynamically change objects based on a user&#39;s configuration, as a plugin system.</p>
+
+<p>The best way to do this is to use the <code>apply_all_roles()</code> function from <a href="/~doy/Moose-2.0403/lib/Moose/Util.pm" class="podlinkpod"
+>Moose::Util</a>:</p>
+
+<pre class="sh_perl">  use Moose::Util qw( apply_all_roles );
+
+  my $car = Car-&#62;new;
+  apply_all_roles( $car, &#39;Breakable&#39; );</pre>
+
+<p>This function can apply more than one role at a time, and will do so using the normal Moose role combination system. We recommend using this function to apply roles to an object. This is what Moose uses internally when you call <code>with</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose is maintained by the Moose Cabal, along with the help of many contributors. See <a href="/~doy/Moose-2.0403/lib/Moose.pm#CABAL" class="podlinkpod"
+>&#34;CABAL&#34; in Moose</a> and <a href="/~doy/Moose-2.0403/lib/Moose.pm#CONTRIBUTORS" class="podlinkpod"
+>&#34;CONTRIBUTORS&#34; in Moose</a> for details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This software is copyright (c) 2012 by Infinity Interactive, Inc..</p>
+
+<p>This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78172 Uploads, 24707 Distributions
+105971 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 01:41:14 2012 GMT (0.0751221179962158) @cpansearch1 -->
+ </body>
+</html>

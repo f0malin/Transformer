@@ -1,0 +1,1706 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>GD - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","GD",3]);
+    _gaq.push(["_setCustomVar",5,"Release","GD-2.46",3]);
+    _gaq.push(["_setCustomVar",3,"Module","GD",3]);
+    _gaq.push(["_setCustomVar",1,"Author","LDS",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?GD">permalink</a></div>
+  <a href="/~lds/">Lincoln D. Stein</a> &gt;
+  <a href="/~lds/GD-2.46/">GD-2.46</a> &gt;
+  GD
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/d5d94e49bade52d29be36e2a5259993b?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/L/LD/LDS/GD-2.46.tar.gz">GD-2.46.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=GD;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~LDS/GD-2.46/GD.pm">Annotate this POD
+(6)
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 55</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 18</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=GD">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  2.46 &nbsp;
+<span class="noprint">
+  <a href="/src/LDS/GD-2.46/GD.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#Object_Constructors:_Creating_Images'>Object Constructors: Creating Images</a>
+  <li class='indexItem indexItem1'><a href='#GD::Image_Methods'>GD::Image Methods</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Image_Data_Output_Methods'>Image Data Output Methods</a>
+    <li class='indexItem indexItem2'><a href='#Color_Control'>Color Control</a>
+    <li class='indexItem indexItem2'><a href='#Special_Colors'>Special Colors</a>
+    <li class='indexItem indexItem2'><a href='#Drawing_Commands'>Drawing Commands</a>
+    <li class='indexItem indexItem2'><a href='#Image_Copying_Commands'>Image Copying Commands</a>
+    <li class='indexItem indexItem2'><a href='#Image_Transformation_Commands'>Image Transformation Commands</a>
+    <li class='indexItem indexItem2'><a href='#Character_and_String_Drawing'>Character and String Drawing</a>
+    <li class='indexItem indexItem2'><a href='#Alpha_channels'>Alpha channels</a>
+    <li class='indexItem indexItem2'><a href='#Miscellaneous_Image_Methods'>Miscellaneous Image Methods</a>
+    <li class='indexItem indexItem2'><a href='#Grouping_Methods'>Grouping Methods</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Polygons'>Polygons</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#GD::Polyline'>GD::Polyline</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Font_Utilities'>Font Utilities</a>
+  <li class='indexItem indexItem1'><a href='#Obtaining_the_C-language_version_of_gd'>Obtaining the C-language version of gd</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>GD.pm - Interface to Gd Graphics Library</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use GD;
+
+    # create a new image
+    $im = new GD::Image(100,100);
+
+    # allocate some colors
+    $white = $im-&#62;colorAllocate(255,255,255);
+    $black = $im-&#62;colorAllocate(0,0,0);       
+    $red = $im-&#62;colorAllocate(255,0,0);      
+    $blue = $im-&#62;colorAllocate(0,0,255);
+
+    # make the background transparent and interlaced
+    $im-&#62;transparent($white);
+    $im-&#62;interlaced(&#39;true&#39;);
+
+    # Put a black frame around the picture
+    $im-&#62;rectangle(0,0,99,99,$black);
+
+    # Draw a blue oval
+    $im-&#62;arc(50,50,95,75,0,360,$blue);
+
+    # And fill it with red
+    $im-&#62;fill(50,50,$red);
+
+    # make sure we are writing to a binary stream
+    binmode STDOUT;
+
+    # Convert the image to PNG and print it on standard output
+    print $im-&#62;png;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><b>GD.pm</b> is a Perl interface to Thomas Boutell&#39;s gd graphics library (version 2.01 or higher; see below). GD allows you to create color drawings using a large number of graphics primitives, and emit the drawings as PNG files.</p>
+
+<p>GD defines the following four classes:</p>
+
+<dl>
+<dt><a name='GD'></a><a name="GD::Image"
+><code>GD::Image</code></a></dt>
+
+<dd>
+<p>An image class, which holds the image data and accepts graphic primitive method calls.</p>
+
+<dt><a name='GD'></a><a name="GD::Font"
+><code>GD::Font</code></a></dt>
+
+<dd>
+<p>A font class, which holds static font information and used for text rendering.</p>
+
+<dt><a name='GD'></a><a name="GD::Polygon"
+><code>GD::Polygon</code></a></dt>
+
+<dd>
+<p>A simple polygon object, used for storing lists of vertices prior to rendering a polygon into an image.</p>
+
+<dt><a name='GD'></a><a name="GD::Simple"
+><code>GD::Simple</code></a></dt>
+
+<dd>
+<p>A &#34;simple&#34; class that simplifies the GD::Image API and then adds a set of object-oriented drawing methods using turtle graphics, simplified font handling, ability to work in polar coordinates, HSV color spaces, and human-readable color names like &#34;lightblue&#34;. Please see <a href="/~lds/GD-2.46/GD/Simple.pm" class="podlinkpod"
+>GD::Simple</a> for a description of these methods.</p>
+</dd>
+</dl>
+
+<p>A Simple Example:</p>
+
+<pre class="sh_perl">        #!/usr/local/bin/perl
+
+        use GD;
+
+        # create a new image
+        $im = new GD::Image(100,100);
+
+        # allocate some colors
+        $white = $im-&#62;colorAllocate(255,255,255);
+        $black = $im-&#62;colorAllocate(0,0,0);       
+        $red = $im-&#62;colorAllocate(255,0,0);      
+        $blue = $im-&#62;colorAllocate(0,0,255);
+
+        # make the background transparent and interlaced
+        $im-&#62;transparent($white);
+        $im-&#62;interlaced(&#39;true&#39;);
+
+        # Put a black frame around the picture
+        $im-&#62;rectangle(0,0,99,99,$black);
+
+        # Draw a blue oval
+        $im-&#62;arc(50,50,95,75,0,360,$blue);
+
+        # And fill it with red
+        $im-&#62;fill(50,50,$red);
+
+        # make sure we are writing to a binary stream
+        binmode STDOUT;
+
+        # Convert the image to PNG and print it on standard output
+        print $im-&#62;png;</pre>
+
+<p>Notes:</p>
+
+<dl>
+<dt><a 
+>1. To create a new, empty image, send a new() message to GD::Image, passing it the width and height of the image you want to create. An image object will be returned. Other class methods allow you to initialize an image from a preexisting JPG, PNG, GD, GD2 or XBM file.</a></dt>
+
+<dd>
+<dt><a 
+>2. Next you will ordinarily add colors to the image&#39;s color table. colors are added using a colorAllocate() method call. The three parameters in each call are the red, green and blue (rgb) triples for the desired color. The method returns the index of that color in the image&#39;s color table. You should store these indexes for later use.</a></dt>
+
+<dd>
+<dt><a 
+>3. Now you can do some drawing! The various graphics primitives are described below. In this example, we do some text drawing, create an oval, and create and draw a polygon.</a></dt>
+
+<dd>
+<dt><a 
+>4. Polygons are created with a new() message to GD::Polygon. You can add points to the returned polygon one at a time using the addPt() method. The polygon can then be passed to an image for rendering.</a></dt>
+
+<dd>
+<dt><a 
+>5. When you&#39;re done drawing, you can convert the image into PNG format by sending it a png() message. It will return a (potentially large) scalar value containing the binary data for the image. Ordinarily you will print it out at this point or write it to a file. To ensure portability to platforms that differentiate between text and binary files, be sure to call <code>binmode()</code> on the file you are writing the image to.</a></dt>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Object_Constructors:_Creating_Images"
+>Object Constructors: Creating Images <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The following class methods allow you to create new GD::Image objects.</p>
+
+<dl>
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;new([$width,$height],[$truecolor])"
+><b>$image = GD::Image-&#62;new([$width,$height],[$truecolor])</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;new(*FILEHANDLE)"
+><b>$image = GD::Image-&#62;new(*FILEHANDLE)</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;new($filename)"
+><b>$image = GD::Image-&#62;new($filename)</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;new($data)"
+><b>$image = GD::Image-&#62;new($data)</b></a></dt>
+
+<dd>
+<p>The new() method is the main constructor for the GD::Image class. Called with two integer arguments, it creates a new blank image of the specified width and height. For example:</p>
+
+<pre class="sh_perl">        $myImage = new GD::Image(100,100) || die;</pre>
+
+<p>This will create an image that is 100 x 100 pixels wide. If you don&#39;t specify the dimensions, a default of 64 x 64 will be chosen.</p>
+
+<p>The optional third argument, $truecolor, tells new() to create a truecolor GD::Image object. Truecolor images have 24 bits of color data (eight bits each in the red, green and blue channels respectively), allowing for precise photograph-quality color usage. If not specified, the image will use an 8-bit palette for compatibility with older versions of libgd.</p>
+
+<p>Alternatively, you may create a GD::Image object based on an existing image by providing an open filehandle, a filename, or the image data itself. The image formats automatically recognized and accepted are: PNG, JPEG, XPM and GD2. Other formats, including WBMP, and GD version 1, cannot be recognized automatically at this time.</p>
+
+<p>If something goes wrong (e.g. insufficient memory), this call will return undef.</p>
+
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;trueColor([0,1])"
+><b>$image = GD::Image-&#62;trueColor([0,1])</b></a></dt>
+
+<dd>
+<p>For backwards compatibility with scripts previous versions of GD, new images created from scratch (width, height) are palette based by default. To change this default to create true color images use:</p>
+
+<pre class="sh_perl">        GD::Image-&#62;trueColor(1);</pre>
+
+<p>somewhere before creating new images. To switch back to palette based by default, use:</p>
+
+<pre class="sh_perl">        GD::Image-&#62;trueColor(0);</pre>
+
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newPalette([$width,$height])"
+><b>$image = GD::Image-&#62;newPalette([$width,$height])</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newTrueColor([$width,$height])"
+><b>$image = GD::Image-&#62;newTrueColor([$width,$height])</b></a></dt>
+
+<dd>
+<p>The newPalette() and newTrueColor() methods can be used to explicitly create an palette based or true color image regardless of the current setting of trueColor().</p>
+
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newFromPng($file,_[$truecolor])"
+><b>$image = GD::Image-&#62;newFromPng($file, [$truecolor])</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newFromPngData($data,_[$truecolor])"
+><b>$image = GD::Image-&#62;newFromPngData($data, [$truecolor])</b></a></dt>
+
+<dd>
+<p>The newFromPng() method will create an image from a PNG file read in through the provided filehandle or file path. The filehandle must previously have been opened on a valid PNG file or pipe. If successful, this call will return an initialized image which you can then manipulate as you please. If it fails, which usually happens if the thing at the other end of the filehandle is not a valid PNG file, the call returns undef. Notice that the call doesn&#39;t automatically close the filehandle for you. But it does call <code>binmode(FILEHANDLE)</code> for you, on platforms where this matters.</p>
+
+<p>You may use any of the following as the argument:</p>
+
+<pre class="sh_perl">  1) a simple filehandle, such as STDIN
+  2) a filehandle glob, such as *PNG
+  3) a reference to a glob, such as \*PNG
+  4) an IO::Handle object
+  5) the pathname of a file</pre>
+
+<p>In the latter case, newFromPng() will attempt to open the file for you and read the PNG information from it.</p>
+
+<pre class="sh_perl">  Example1:
+
+  open (PNG,&#34;barnswallow.png&#34;) || die;
+  $myImage = newFromPng GD::Image(\*PNG) || die;
+  close PNG;
+
+  Example2:
+  $myImage = newFromPng GD::Image(&#39;barnswallow.png&#39;);</pre>
+
+<p>To get information about the size and color usage of the information, you can call the image query methods described below. Images created by reading PNG images will be truecolor if the image file itself is truecolor. To force the image to be palette-based, pass a value of 0 in the optional $truecolor argument.</p>
+
+<p>The newFromPngData() method will create a new GD::Image initialized with the PNG format <b>data</b> contained in <code>$data</code>.</p>
+
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newFromJpeg($file,_[$truecolor])"
+><b>$image = GD::Image-&#62;newFromJpeg($file, [$truecolor])</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newFromJpegData($data,_[$truecolor])"
+><b>$image = GD::Image-&#62;newFromJpegData($data, [$truecolor])</b></a></dt>
+
+<dd>
+<p>These methods will create an image from a JPEG file. They work just like newFromPng() and newFromPngData(), and will accept the same filehandle and pathname arguments.</p>
+
+<p>Images created by reading JPEG images will always be truecolor. To force the image to be palette-based, pass a value of 0 in the optional $truecolor argument.</p>
+
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newFromGif($file)"
+><b>$image = GD::Image-&#62;newFromGif($file)</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newFromGifData($data)"
+><b>$image = GD::Image-&#62;newFromGifData($data)</b></a></dt>
+
+<dd>
+<p>These methods will create an image from a GIF file. They work just like newFromPng() and newFromPngData(), and will accept the same filehandle and pathname arguments.</p>
+
+<p>Images created from GIFs are always 8-bit palette images. To convert to truecolor, you must create a truecolor image and then perform a copy.</p>
+
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newFromXbm($file)"
+><b>$image = GD::Image-&#62;newFromXbm($file)</b></a></dt>
+
+<dd>
+<p>This works in exactly the same way as <code>newFromPng</code>, but reads the contents of an X Bitmap (black &#38; white) file:</p>
+
+<pre class="sh_perl">        open (XBM,&#34;coredump.xbm&#34;) || die;
+        $myImage = newFromXbm GD::Image(\*XBM) || die;
+        close XBM;</pre>
+
+<p>There is no newFromXbmData() function, because there is no corresponding function in the gd library.</p>
+
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newFromGd($file)"
+><b>$image = GD::Image-&#62;newFromGd($file)</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newFromGdData($data)"
+><b>$image = GD::Image-&#62;newFromGdData($data)</b></a></dt>
+
+<dd>
+<p>These methods initialize a GD::Image from a Gd file, filehandle, or data. Gd is Tom Boutell&#39;s disk-based storage format, intended for the rare case when you need to read and write the image to disk quickly. It&#39;s not intended for regular use, because, unlike PNG or JPEG, no image compression is performed and these files can become <b>BIG</b>.</p>
+
+<pre class="sh_perl">        $myImage = newFromGd GD::Image(&#34;godzilla.gd&#34;) || die;
+        close GDF;</pre>
+
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newFromGd2($file)"
+><b>$image = GD::Image-&#62;newFromGd2($file)</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newFromGd2Data($data)"
+><b>$image = GD::Image-&#62;newFromGd2Data($data)</b></a></dt>
+
+<dd>
+<p>This works in exactly the same way as <code>newFromGd()</code> and newFromGdData, but use the new compressed GD2 image format.</p>
+
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newFromGd2Part($file,srcX,srcY,width,height)"
+><b>$image = GD::Image-&#62;newFromGd2Part($file,srcX,srcY,width,height)</b></a></dt>
+
+<dd>
+<p>This class method allows you to read in just a portion of a GD2 image file. In addition to a filehandle, it accepts the top-left corner and dimensions (width,height) of the region of the image to read. For example:</p>
+
+<pre class="sh_perl">        open (GDF,&#34;godzilla.gd2&#34;) || die;
+        $myImage = GD::Image-&#62;newFromGd2Part(\*GDF,10,20,100,100) || die;
+        close GDF;</pre>
+
+<p>This reads a 100x100 square portion of the image starting from position (10,20).</p>
+
+<dt><a name='image'></a><a name="$image_=_GD::Image-&#62;newFromXpm($filename)"
+><b>$image = GD::Image-&#62;newFromXpm($filename)</b></a></dt>
+
+<dd>
+<p>This creates a new GD::Image object starting from a <b>filename</b>. This is unlike the other newFrom() functions because it does not take a filehandle. This difference comes from an inconsistency in the underlying gd library.</p>
+
+<pre class="sh_perl">        $myImage = newFromXpm GD::Image(&#39;earth.xpm&#39;) || die;</pre>
+
+<p>This function is only available if libgd was compiled with XPM support.</p>
+
+<p>NOTE: The libgd library is unable to read certain XPM files, returning an all-black image instead.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="GD::Image_Methods"
+>GD::Image Methods <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Once a GD::Image object is created, you can draw with it, copy it, and merge two images. When you are finished manipulating the object, you can convert it into a standard image file format to output or save to a file.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Image_Data_Output_Methods"
+>Image Data Output Methods</a></h2>
+
+<p>The following methods convert the internal drawing format into standard output file formats.</p>
+
+<dl>
+<dt><a name='pngdata'></a><a name="$pngdata_=_$image-&#62;png([$compression_level])"
+><b>$pngdata = $image-&#62;png([$compression_level])</b></a></dt>
+
+<dd>
+<p>This returns the image data in PNG format. You can then print it, pipe it to a display program, or write it to a file. Example:</p>
+
+<pre class="sh_perl">        $png_data = $myImage-&#62;png;
+        open (DISPLAY,&#34;| display -&#34;) || die;
+        binmode DISPLAY;
+        print DISPLAY $png_data;
+        close DISPLAY;</pre>
+
+<p>Note the use of <code>binmode()</code>. This is crucial for portability to DOSish platforms.</p>
+
+<p>The optional $compression_level argument controls the amount of compression to apply to the output PNG image. Values range from 0-9, where 0 means no compression (largest files, highest quality) and 9 means maximum compression (smallest files, worst quality). A compression level of -1 uses the default compression level selected when zlib was compiled on your system, and is the same as calling png() with no argument. Be careful not to confuse this argument with the jpeg() quality argument, which ranges from 0-100 and has the opposite meaning from compression (higher numbers give higher quality).</p>
+
+<dt><a name='gifdata'></a><a name="$gifdata_=_$image-&#62;gifanimbegin([$GlobalCM_[,_$Loops]])"
+><b>$gifdata = $image-&#62;gifanimbegin([$GlobalCM [, $Loops]])</b></a></dt>
+
+<dd>
+<p>For libgd version 2.0.33 and higher, this call begins an animated GIF by returning the data that comprises animated gif image file header. After you call this method, call gifanimadd() one or more times to add the frames of the image. Then call gifanimend(). Each frame must be the same width and height.</p>
+
+<p>A typical sequence will look like this:</p>
+
+<pre class="sh_perl">  my $gifdata = $image-&#62;gifanimbegin;
+  $gifdata   .= $image-&#62;gifanimadd;    # first frame
+  for (1..100) {
+     # make a frame of right size
+     my $frame  = GD::Image-&#62;new($image-&#62;getBounds);
+     add_frame_data($frame);              # add the data for this frame
+     $gifdata   .= $frame-&#62;gifanimadd;     # add frame
+  }
+  $gifdata   .= $image-&#62;gifanimend;   # finish the animated GIF
+  print $gifdata;                     # write animated gif to STDOUT</pre>
+
+<p>If you do not wish to store the data in memory, you can print it to stdout or a file.</p>
+
+<p>The image that you call gifanimbegin on is used to set the image size, color resolution and color map. If argument $GlobalCM is 1, the image color map becomes the GIF89a global color map. If $Loops is given and &#62;= 0, the NETSCAPE2.0 application extension is created, with looping count. Looping count 0 means forever.</p>
+
+<dt><a name='gifdata'></a><a name="$gifdata_=_$image-&#62;gifanimadd([$LocalCM_[,_$LeftOfs_[,_$TopOfs_[,_$Delay_[,_$Disposal_[,_$previm]]]]]])"
+><b>$gifdata = $image-&#62;gifanimadd([$LocalCM [, $LeftOfs [, $TopOfs [, $Delay [, $Disposal [, $previm]]]]]])</b></a></dt>
+
+<dd>
+<p>Returns the data that comprises one animated gif image frame. You can then print it, pipe it to a display program, or write it to a file. With $LeftOfs and $TopOfs you can place this frame in different offset than (0,0) inside the image screen. Delay between the previous frame and this frame is in 1/100s units. Disposal is usually and by default 1. Compression is activated by giving the previous image as a parameter. This function then compares the images and only writes the changed pixels to the new frame in animation. The Disposal parameter for optimized animations must be set to 1, also for the first frame. $LeftOfs and $TopOfs parameters are ignored for optimized frames.</p>
+
+<dt><a name='gifdata'></a><a name="$gifdata_=_$image-&#62;gifanimend()"
+><b>$gifdata = $image-&#62;gifanimend()</b></a></dt>
+
+<dd>
+<p>Returns the data for end segment of animated gif file. It always returns string &#39;;&#39;. This string must be printed to an animated gif file after all image frames to properly terminate it according to GIF file syntax. Image object is not used at all in this method.</p>
+
+<dt><a name='jpegdata'></a><a name="$jpegdata_=_$image-&#62;jpeg([$quality])"
+><b>$jpegdata = $image-&#62;jpeg([$quality])</b></a></dt>
+
+<dd>
+<p>This returns the image data in JPEG format. You can then print it, pipe it to a display program, or write it to a file. You may pass an optional quality score to jpeg() in order to control the JPEG quality. This should be an integer between 0 and 100. Higher quality scores give larger files and better image quality. If you don&#39;t specify the quality, jpeg() will choose a good default.</p>
+
+<dt><a name='gifdata'></a><a name="$gifdata_=_$image-&#62;gif()."
+><b>$gifdata = $image-&#62;gif()</b>.</a></dt>
+
+<dd>
+<p>This returns the image data in GIF format. You can then print it, pipe it to a display program, or write it to a file.</p>
+
+<dt><a name='gddata'></a><a name="$gddata_=_$image-&#62;gd"
+><b>$gddata = $image-&#62;gd</b></a></dt>
+
+<dd>
+<p>This returns the image data in GD format. You can then print it, pipe it to a display program, or write it to a file. Example:</p>
+
+<pre class="sh_perl">        binmode MYOUTFILE;
+        print MYOUTFILE $myImage-&#62;gd;</pre>
+
+<dt><a name='gd2data'></a><a name="$gd2data_=_$image-&#62;gd2"
+><b>$gd2data = $image-&#62;gd2</b></a></dt>
+
+<dd>
+<p>Same as gd(), except that it returns the data in compressed GD2 format.</p>
+
+<dt><a name='wbmpdata'></a><a name="$wbmpdata_=_$image-&#62;wbmp([$foreground])"
+><b>$wbmpdata = $image-&#62;wbmp([$foreground])</b></a></dt>
+
+<dd>
+<p>This returns the image data in WBMP format, which is a black-and-white image format. Provide the index of the color to become the foreground color. All other pixels will be considered background.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Color_Control"
+>Color Control</a></h2>
+
+<p>These methods allow you to control and manipulate the GD::Image color table.</p>
+
+<dl>
+<dt><a name='index'></a><a name="$index_=_$image-&#62;colorAllocate(red,green,blue)"
+><b>$index = $image-&#62;colorAllocate(red,green,blue)</b></a></dt>
+
+<dd>
+<p>This allocates a color with the specified red, green and blue components and returns its index in the color table, if specified. The first color allocated in this way becomes the image&#39;s background color. (255,255,255) is white (all pixels on). (0,0,0) is black (all pixels off). (255,0,0) is fully saturated red. (127,127,127) is 50% gray. You can find plenty of examples in /usr/X11/lib/X11/rgb.txt.</p>
+
+<p>If no colors are allocated, then this function returns -1.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $white = $myImage-&#62;colorAllocate(0,0,0); #background color
+        $black = $myImage-&#62;colorAllocate(255,255,255);
+        $peachpuff = $myImage-&#62;colorAllocate(255,218,185);</pre>
+
+<dt><a name='index'></a><a name="$index_=_$image-&#62;colorAllocateAlpha(reg,green,blue,alpha)"
+><b>$index = $image-&#62;colorAllocateAlpha(reg,green,blue,alpha)</b></a></dt>
+
+<dd>
+<p>This allocates a color with the specified red, green, and blue components, plus the specified alpha channel. The alpha value may range from 0 (opaque) to 127 (transparent). The <code>alphaBlending</code> function changes the way this alpha channel affects the resulting image.</p>
+
+<dt><a name='image'></a><a name="$image-&#62;colorDeallocate(colorIndex)"
+><b>$image-&#62;colorDeallocate(colorIndex)</b></a></dt>
+
+<dd>
+<p>This marks the color at the specified index as being ripe for reallocation. The next time colorAllocate is used, this entry will be replaced. You can call this method several times to deallocate multiple colors. There&#39;s no function result from this call.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $myImage-&#62;colorDeallocate($peachpuff);
+        $peachy = $myImage-&#62;colorAllocate(255,210,185);</pre>
+
+<dt><a name='index'></a><a name="$index_=_$image-&#62;colorClosest(red,green,blue)"
+><b>$index = $image-&#62;colorClosest(red,green,blue)</b></a></dt>
+
+<dd>
+<p>This returns the index of the color closest in the color table to the red green and blue components specified. If no colors have yet been allocated, then this call returns -1.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $apricot = $myImage-&#62;colorClosest(255,200,180);</pre>
+
+<dt><a name='index'></a><a name="$index_=_$image-&#62;colorClosestHWB(red,green,blue)"
+><b>$index = $image-&#62;colorClosestHWB(red,green,blue)</b></a></dt>
+
+<dd>
+<p>This also attempts to return the color closest in the color table to the red green and blue components specified. It uses a Hue/White/Black color representation to make the selected color more likely to match human perceptions of similar colors.</p>
+
+<p>If no colors have yet been allocated, then this call returns -1.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $mostred = $myImage-&#62;colorClosestHWB(255,0,0);</pre>
+
+<dt><a name='index'></a><a name="$index_=_$image-&#62;colorExact(red,green,blue)"
+><b>$index = $image-&#62;colorExact(red,green,blue)</b></a></dt>
+
+<dd>
+<p>This returns the index of a color that exactly matches the specified red green and blue components. If such a color is not in the color table, this call returns -1.</p>
+
+<pre class="sh_perl">        $rosey = $myImage-&#62;colorExact(255,100,80);
+        warn &#34;Everything&#39;s coming up roses.\n&#34; if $rosey &#62;= 0;</pre>
+
+<dt><a name='index'></a><a name="$index_=_$image-&#62;colorResolve(red,green,blue)"
+><b>$index = $image-&#62;colorResolve(red,green,blue)</b></a></dt>
+
+<dd>
+<p>This returns the index of a color that exactly matches the specified red green and blue components. If such a color is not in the color table and there is room, then this method allocates the color in the color table and returns its index.</p>
+
+<pre class="sh_perl">        $rosey = $myImage-&#62;colorResolve(255,100,80);
+        warn &#34;Everything&#39;s coming up roses.\n&#34; if $rosey &#62;= 0;</pre>
+
+<dt><a name='colorsTotal'></a><a name="$colorsTotal_=_$image-&#62;colorsTotal_object_method"
+><b>$colorsTotal = $image-&#62;colorsTotal</b> <i>object method</i></a></dt>
+
+<dd>
+<p>This returns the total number of colors allocated in the object.</p>
+
+<pre class="sh_perl">        $maxColors = $myImage-&#62;colorsTotal;</pre>
+
+<p>In the case of a TrueColor image, this call will return undef.</p>
+
+<dt><a name='index'></a><a name="$index_=_$image-&#62;getPixel(x,y)_object_method"
+><b>$index = $image-&#62;getPixel(x,y)</b> <i>object method</i></a></dt>
+
+<dd>
+<p>This returns the color table index underneath the specified point. It can be combined with rgb() to obtain the rgb color underneath the pixel.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $index = $myImage-&#62;getPixel(20,100);
+        ($r,$g,$b) = $myImage-&#62;rgb($index);</pre>
+
+<dt><a name='red'></a><a name="($red,$green,$blue)_=_$image-&#62;rgb($index)"
+><b>($red,$green,$blue) = $image-&#62;rgb($index)</b></a></dt>
+
+<dd>
+<p>This returns a list containing the red, green and blue components of the specified color index.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        @RGB = $myImage-&#62;rgb($peachy);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;transparent($colorIndex)"
+><b>$image-&#62;transparent($colorIndex)</b></a></dt>
+
+<dd>
+<p>This marks the color at the specified index as being transparent. Portions of the image drawn in this color will be invisible. This is useful for creating paintbrushes of odd shapes, as well as for making PNG backgrounds transparent for displaying on the Web. Only one color can be transparent at any time. To disable transparency, specify -1 for the index.</p>
+
+<p>If you call this method without any parameters, it will return the current index of the transparent color, or -1 if none.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        open(PNG,&#34;test.png&#34;);
+        $im = newFromPng GD::Image(PNG);
+        $white = $im-&#62;colorClosest(255,255,255); # find white
+        $im-&#62;transparent($white);
+        binmode STDOUT;
+        print $im-&#62;png;</pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Special_Colors"
+>Special Colors</a></h2>
+
+<p>GD implements a number of special colors that can be used to achieve special effects. They are constants defined in the GD:: namespace, but automatically exported into your namespace when the GD module is loaded.</p>
+
+<dl>
+<dt><a name='image'></a><a name="$image-&#62;setBrush($image)"
+><b>$image-&#62;setBrush($image)</b></a></dt>
+
+<dd>
+<p>You can draw lines and shapes using a brush pattern. Brushes are just images that you can create and manipulate in the usual way. When you draw with them, their contents are used for the color and shape of the lines.</p>
+
+<p>To make a brushed line, you must create or load the brush first, then assign it to the image using setBrush(). You can then draw in that with that brush using the <b>gdBrushed</b> special color. It&#39;s often useful to set the background of the brush to transparent so that the non-colored parts don&#39;t overwrite other parts of your image.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        # Create a brush at an angle
+        $diagonal_brush = new GD::Image(5,5);
+        $white = $diagonal_brush-&#62;colorAllocate(255,255,255);
+        $black = $diagonal_brush-&#62;colorAllocate(0,0,0);
+        $diagonal_brush-&#62;transparent($white);
+        $diagonal_brush-&#62;line(0,4,4,0,$black); # NE diagonal
+
+        # Set the brush
+        $myImage-&#62;setBrush($diagonal_brush);
+        
+        # Draw a circle using the brush
+        $myImage-&#62;arc(50,50,25,25,0,360,gdBrushed);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;setThickness($thickness)"
+><b>$image-&#62;setThickness($thickness)</b></a></dt>
+
+<dd>
+<p>Lines drawn with line(), rectangle(), arc(), and so forth are 1 pixel thick by default. Call setThickness() to change the line drawing width.</p>
+
+<dt><a name='image'></a><a name="$image-&#62;setStyle(@colors)"
+><b>$image-&#62;setStyle(@colors)</b></a></dt>
+
+<dd>
+<p>Styled lines consist of an arbitrary series of repeated colors and are useful for generating dotted and dashed lines. To create a styled line, use setStyle() to specify a repeating series of colors. It accepts an array consisting of one or more color indexes. Then draw using the <b>gdStyled</b> special color. Another special color, <b>gdTransparent</b> can be used to introduce holes in the line, as the example shows.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        # Set a style consisting of 4 pixels of yellow,
+        # 4 pixels of blue, and a 2 pixel gap
+        $myImage-&#62;setStyle($yellow,$yellow,$yellow,$yellow,
+                           $blue,$blue,$blue,$blue,
+                           gdTransparent,gdTransparent);
+        $myImage-&#62;arc(50,50,25,25,0,360,gdStyled);</pre>
+
+<p>To combine the <code>gdStyled</code> and <code>gdBrushed</code> behaviors, you can specify <code>gdStyledBrushed</code>. In this case, a pixel from the current brush pattern is rendered wherever the color specified in setStyle() is neither gdTransparent nor 0.</p>
+
+<dt><a name="gdTiled"
+><b>gdTiled</b></a></dt>
+
+<dd>
+<p>Draw filled shapes and flood fills using a pattern. The pattern is just another image. The image will be tiled multiple times in order to fill the required space, creating wallpaper effects. You must call <code>setTile</code> in order to define the particular tile pattern you&#39;ll use for drawing when you specify the gdTiled color. details.</p>
+
+<dt><a name="gdStyled"
+><b>gdStyled</b></a></dt>
+
+<dd>
+<p>The gdStyled color is used for creating dashed and dotted lines. A styled line can contain any series of colors and is created using the setStyled() command.</p>
+
+<dt><a name="gdAntiAliased"
+><b>gdAntiAliased</b></a></dt>
+
+<dd>
+<p>The <code>gdAntiAliased</code> color is used for drawing lines with antialiasing turned on. Antialiasing will blend the jagged edges of lines with the background, creating a smoother look. The actual color drawn is set with setAntiAliased().</p>
+
+<dt><a name='image'></a><a name="$image-&#62;setAntiAliased($color)"
+><b>$image-&#62;setAntiAliased($color)</b></a></dt>
+
+<dd>
+<p>&#34;Antialiasing&#34; is a process by which jagged edges associated with line drawing can be reduced by blending the foreground color with an appropriate percentage of the background, depending on how much of the pixel in question is actually within the boundaries of the line being drawn. All line-drawing methods, such as line() and polygon, will draw antialiased lines if the special &#34;color&#34; <b>gdAntiAliased</b> is used when calling them.</p>
+
+<p>setAntiAliased() is used to specify the actual foreground color to be used when drawing antialiased lines. You may set any color to be the foreground, however as of libgd version 2.0.12 an alpha channel component is not supported.</p>
+
+<p>Antialiased lines can be drawn on both truecolor and palette-based images. However, attempts to draw antialiased lines on highly complex palette-based backgrounds may not give satisfactory results, due to the limited number of colors available in the palette. Antialiased line-drawing on simple backgrounds should work well with palette-based images; otherwise create or fetch a truecolor image instead. When using palette-based images, be sure to allocate a broad spectrum of colors in order to have sufficient colors for the antialiasing to use.</p>
+
+<dt><a name='image'></a><a name="$image-&#62;setAntiAliasedDontBlend($color,[$flag])"
+><b>$image-&#62;setAntiAliasedDontBlend($color,[$flag])</b></a></dt>
+
+<dd>
+<p>Normally, when drawing lines with the special <b>gdAntiAliased</b> &#34;color,&#34; blending with the background to reduce jagged edges is the desired behavior. However, when it is desired that lines not be blended with one particular color when it is encountered in the background, the setAntiAliasedDontBlend() method can be used to indicate the special color that the foreground should stand out more clearly against.</p>
+
+<p>Once turned on, you can turn this feature off by calling setAntiAliasedDontBlend() with a second argument of 0:</p>
+
+<pre class="sh_perl"> $image-&#62;setAntiAliasedDontBlend($color,0);</pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Drawing_Commands"
+>Drawing Commands</a></h2>
+
+<p>These methods allow you to draw lines, rectangles, and ellipses, as well as to perform various special operations like flood-fill.</p>
+
+<dl>
+<dt><a name='image'></a><a name="$image-&#62;setPixel($x,$y,$color)"
+><b>$image-&#62;setPixel($x,$y,$color)</b></a></dt>
+
+<dd>
+<p>This sets the pixel at (x,y) to the specified color index. No value is returned from this method. The coordinate system starts at the upper left at (0,0) and gets larger as you go down and to the right. You can use a real color, or one of the special colors gdBrushed, gdStyled and gdStyledBrushed can be specified.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        # This assumes $peach already allocated
+        $myImage-&#62;setPixel(50,50,$peach);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;line($x1,$y1,$x2,$y2,$color)"
+><b>$image-&#62;line($x1,$y1,$x2,$y2,$color)</b></a></dt>
+
+<dd>
+<p>This draws a line from (x1,y1) to (x2,y2) of the specified color. You can use a real color, or one of the special colors gdBrushed, gdStyled and gdStyledBrushed.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        # Draw a diagonal line using the currently defined
+        # paintbrush pattern.
+        $myImage-&#62;line(0,0,150,150,gdBrushed);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;dashedLine($x1,$y1,$x2,$y2,$color)"
+><b>$image-&#62;dashedLine($x1,$y1,$x2,$y2,$color)</b></a></dt>
+
+<dd>
+<p>DEPRECATED: The libgd library provides this method solely for backward compatibility with libgd version 1.0, and there have been reports that it no longer works as expected. Please use the setStyle() and gdStyled methods as described below.</p>
+
+<p>This draws a dashed line from (x1,y1) to (x2,y2) in the specified color. A more powerful way to generate arbitrary dashed and dotted lines is to use the setStyle() method described below and to draw with the special color gdStyled.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $myImage-&#62;dashedLine(0,0,150,150,$blue);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;rectangle($x1,$y1,$x2,$y2,$color)"
+><b>$image-&#62;rectangle($x1,$y1,$x2,$y2,$color)</b></a></dt>
+
+<dd>
+<p>This draws a rectangle with the specified color. (x1,y1) and (x2,y2) are the upper left and lower right corners respectively. Both real color indexes and the special colors gdBrushed, gdStyled and gdStyledBrushed are accepted.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $myImage-&#62;rectangle(10,10,100,100,$rose);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;filledRectangle($x1,$y1,$x2,$y2,$color)"
+><b>$image-&#62;filledRectangle($x1,$y1,$x2,$y2,$color)</b></a></dt>
+
+<dd>
+<p>This draws a rectangle filed with the specified color. You can use a real color, or the special fill color gdTiled to fill the polygon with a pattern.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        # read in a fill pattern and set it
+        $tile = newFromPng GD::Image(&#39;happyface.png&#39;);
+        $myImage-&#62;setTile($tile); 
+
+        # draw the rectangle, filling it with the pattern
+        $myImage-&#62;filledRectangle(10,10,150,200,gdTiled);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;openPolygon($polygon,$color)"
+><b>$image-&#62;openPolygon($polygon,$color)</b></a></dt>
+
+<dd>
+<p>This draws a polygon with the specified color. The polygon must be created first (see below). The polygon must have at least three vertices. If the last vertex doesn&#39;t close the polygon, the method will close it for you. Both real color indexes and the special colors gdBrushed, gdStyled and gdStyledBrushed can be specified.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $poly = new GD::Polygon;
+        $poly-&#62;addPt(50,0);
+        $poly-&#62;addPt(99,99);
+        $poly-&#62;addPt(0,99);
+        $myImage-&#62;openPolygon($poly,$blue);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;unclosedPolygon($polygon,$color)"
+><b>$image-&#62;unclosedPolygon($polygon,$color)</b></a></dt>
+
+<dd>
+<p>This draws a sequence of connected lines with the specified color, without connecting the first and last point to a closed polygon. The polygon must be created first (see below). The polygon must have at least three vertices. Both real color indexes and the special colors gdBrushed, gdStyled and gdStyledBrushed can be specified.</p>
+
+<p>You need libgd 2.0.33 or higher to use this feature.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $poly = new GD::Polygon;
+        $poly-&#62;addPt(50,0);
+        $poly-&#62;addPt(99,99);
+        $poly-&#62;addPt(0,99);
+        $myImage-&#62;unclosedPolygon($poly,$blue);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;filledPolygon($poly,$color)"
+><b>$image-&#62;filledPolygon($poly,$color)</b></a></dt>
+
+<dd>
+<p>This draws a polygon filled with the specified color. You can use a real color, or the special fill color gdTiled to fill the polygon with a pattern.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        # make a polygon
+        $poly = new GD::Polygon;
+        $poly-&#62;addPt(50,0);
+        $poly-&#62;addPt(99,99);
+        $poly-&#62;addPt(0,99);
+
+        # draw the polygon, filling it with a color
+        $myImage-&#62;filledPolygon($poly,$peachpuff);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;ellipse($cx,$cy,$width,$height,$color)"
+><b>$image-&#62;ellipse($cx,$cy,$width,$height,$color)</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image-&#62;filledEllipse($cx,$cy,$width,$height,$color)"
+><b>$image-&#62;filledEllipse($cx,$cy,$width,$height,$color)</b></a></dt>
+
+<dd>
+<p>These methods() draw ellipses. ($cx,$cy) is the center of the arc, and ($width,$height) specify the ellipse width and height, respectively. filledEllipse() is like Ellipse() except that the former produces filled versions of the ellipse.</p>
+
+<dt><a name='image'></a><a name="$image-&#62;arc($cx,$cy,$width,$height,$start,$end,$color)"
+><b>$image-&#62;arc($cx,$cy,$width,$height,$start,$end,$color)</b></a></dt>
+
+<dd>
+<p>This draws arcs and ellipses. (cx,cy) are the center of the arc, and (width,height) specify the width and height, respectively. The portion of the ellipse covered by the arc are controlled by start and end, both of which are given in degrees from 0 to 360. Zero is at the top of the ellipse, and angles increase clockwise. To specify a complete ellipse, use 0 and 360 as the starting and ending angles. To draw a circle, use the same value for width and height.</p>
+
+<p>You can specify a normal color or one of the special colors <b>gdBrushed</b>, <b>gdStyled</b>, or <b>gdStyledBrushed</b>.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        # draw a semicircle centered at 100,100
+        $myImage-&#62;arc(100,100,50,50,0,180,$blue);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;filledArc($cx,$cy,$width,$height,$start,$end,$color_[,$arc_style])"
+><b>$image-&#62;filledArc($cx,$cy,$width,$height,$start,$end,$color [,$arc_style])</b></a></dt>
+
+<dd>
+<p>This method is like arc() except that it colors in the pie wedge with the selected color. $arc_style is optional. If present it is a bitwise OR of the following constants:</p>
+
+<pre class="sh_perl">  gdArc           connect start &#38; end points of arc with a rounded edge
+  gdChord         connect start &#38; end points of arc with a straight line
+  gdPie           synonym for gdChord
+  gdNoFill        outline the arc or chord
+  gdEdged         connect beginning and ending of the arc to the center</pre>
+
+<p>gdArc and gdChord are mutually exclusive. gdChord just connects the starting and ending angles with a straight line, while gdArc produces a rounded edge. gdPie is a synonym for gdArc. gdNoFill indicates that the arc or chord should be outlined, not filled. gdEdged, used together with gdNoFill, indicates that the beginning and ending angles should be connected to the center; this is a good way to outline (rather than fill) a &#34;pie slice.&#34;</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">  $image-&#62;filledArc(100,100,50,50,0,90,$blue,gdEdged|gdNoFill);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;fill($x,$y,$color)"
+><b>$image-&#62;fill($x,$y,$color)</b></a></dt>
+
+<dd>
+<p>This method flood-fills regions with the specified color. The color will spread through the image, starting at point (x,y), until it is stopped by a pixel of a different color from the starting pixel (this is similar to the &#34;paintbucket&#34; in many popular drawing toys). You can specify a normal color, or the special color gdTiled, to flood-fill with patterns.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        # Draw a rectangle, and then make its interior blue
+        $myImage-&#62;rectangle(10,10,100,100,$black);
+        $myImage-&#62;fill(50,50,$blue);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;fillToBorder($x,$y,$bordercolor,$color)"
+><b>$image-&#62;fillToBorder($x,$y,$bordercolor,$color)</b></a></dt>
+
+<dd>
+<p>Like <code>fill</code>, this method flood-fills regions with the specified color, starting at position (x,y). However, instead of stopping when it hits a pixel of a different color than the starting pixel, flooding will only stop when it hits the color specified by bordercolor. You must specify a normal indexed color for the bordercolor. However, you are free to use the gdTiled color for the fill.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        # This has the same effect as the previous example
+        $myImage-&#62;rectangle(10,10,100,100,$black);
+        $myImage-&#62;fillToBorder(50,50,$black,$blue);</pre>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Image_Copying_Commands"
+>Image Copying Commands</a></h2>
+
+<p>Two methods are provided for copying a rectangular region from one image to another. One method copies a region without resizing it. The other allows you to stretch the region during the copy operation.</p>
+
+<p>With either of these methods it is important to know that the routines will attempt to flesh out the destination image&#39;s color table to match the colors that are being copied from the source. If the destination&#39;s color table is already full, then the routines will attempt to find the best match, with varying results.</p>
+
+<dl>
+<dt><a name='image'></a><a name="$image-&#62;copy($sourceImage,$dstX,$dstY,"
+><b>$image-&#62;copy($sourceImage,$dstX,$dstY,</b></a></dt>
+
+<dd>
+<p><b> $srcX,$srcY,$width,$height)</b></p>
+
+<p>This is the simplest of the several copy operations, copying the specified region from the source image to the destination image (the one performing the method call). (srcX,srcY) specify the upper left corner of a rectangle in the source image, and (width,height) give the width and height of the region to copy. (dstX,dstY) control where in the destination image to stamp the copy. You can use the same image for both the source and the destination, but the source and destination regions must not overlap or strange things will happen.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $myImage = new GD::Image(100,100);
+        ... various drawing stuff ...
+        $srcImage = new GD::Image(50,50);
+        ... more drawing stuff ...
+        # copy a 25x25 pixel region from $srcImage to
+        # the rectangle starting at (10,10) in $myImage
+        $myImage-&#62;copy($srcImage,10,10,0,0,25,25);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;clone()"
+><b>$image-&#62;clone()</b></a></dt>
+
+<dd>
+<p>Make a copy of the image and return it as a new object. The new image will look identical. However, it may differ in the size of the color palette and other nonessential details.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $myImage = new GD::Image(100,100);
+        ... various drawing stuff ...
+        $copy = $myImage-&#62;clone;</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;copyMerge($sourceImage,$dstX,$dstY,"
+><b>$image-&#62;copyMerge($sourceImage,$dstX,$dstY,</b></a></dt>
+
+<dd>
+<p><b> $srcX,$srcY,$width,$height,$percent)</b></p>
+
+<p>This copies the indicated rectangle from the source image to the destination image, merging the colors to the extent specified by percent (an integer between 0 and 100). Specifying 100% has the same effect as copy() -- replacing the destination pixels with the source image. This is most useful for highlighting an area by merging in a solid rectangle.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $myImage = new GD::Image(100,100);
+        ... various drawing stuff ...
+        $redImage = new GD::Image(50,50);
+        ... more drawing stuff ...
+        # copy a 25x25 pixel region from $srcImage to
+        # the rectangle starting at (10,10) in $myImage, merging 50%
+        $myImage-&#62;copyMerge($srcImage,10,10,0,0,25,25,50);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;copyMergeGray($sourceImage,$dstX,$dstY,"
+><b>$image-&#62;copyMergeGray($sourceImage,$dstX,$dstY,</b></a></dt>
+
+<dd>
+<p><b> $srcX,$srcY,$width,$height,$percent)</b></p>
+
+<p>This is identical to copyMerge() except that it preserves the hue of the source by converting all the pixels of the destination rectangle to grayscale before merging.</p>
+
+<dt><a name='image'></a><a name="$image-&#62;copyResized($sourceImage,$dstX,$dstY,"
+><b>$image-&#62;copyResized($sourceImage,$dstX,$dstY,</b></a></dt>
+
+<dd>
+<p><b> $srcX,$srcY,$destW,$destH,$srcW,$srcH)</b></p>
+
+<p>This method is similar to copy() but allows you to choose different sizes for the source and destination rectangles. The source and destination rectangle&#39;s are specified independently by (srcW,srcH) and (destW,destH) respectively. copyResized() will stretch or shrink the image to accommodate the size requirements.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $myImage = new GD::Image(100,100);
+        ... various drawing stuff ...
+        $srcImage = new GD::Image(50,50);
+        ... more drawing stuff ...
+        # copy a 25x25 pixel region from $srcImage to
+        # a larger rectangle starting at (10,10) in $myImage
+        $myImage-&#62;copyResized($srcImage,10,10,0,0,50,50,25,25);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;copyResampled($sourceImage,$dstX,$dstY,"
+><b>$image-&#62;copyResampled($sourceImage,$dstX,$dstY,</b></a></dt>
+
+<dd>
+<p><b> $srcX,$srcY,$destW,$destH,$srcW,$srcH)</b></p>
+
+<p>This method is similar to copyResized() but provides &#34;smooth&#34; copying from a large image to a smaller one, using a weighted average of the pixels of the source area rather than selecting one representative pixel. This method is identical to copyResized() when the destination image is a palette image.</p>
+
+<dt><a name='image'></a><a name="$image-&#62;copyRotated($sourceImage,$dstX,$dstY,"
+><b>$image-&#62;copyRotated($sourceImage,$dstX,$dstY,</b></a></dt>
+
+<dd>
+<p><b> $srcX,$srcY,$width,$height,$angle)</b></p>
+
+<p>Like copyResized() but the $angle argument specifies an arbitrary amount to rotate the image clockwise (in degrees). In addition, $dstX and $dstY species the <b>center</b> of the destination image, and not the top left corner.</p>
+
+<dt><a name='image'></a><a name="$image-&#62;trueColorToPalette([$dither],_[$colors])"
+><b>$image-&#62;trueColorToPalette([$dither], [$colors])</b></a></dt>
+
+<dd>
+<p>This method converts a truecolor image to a palette image. The code for this function was originally drawn from the Independent JPEG Group library code, which is excellent. The code has been modified to preserve as much alpha channel information as possible in the resulting palette, in addition to preserving colors as well as possible. This does not work as well as might be hoped. It is usually best to simply produce a truecolor output image instead, which guarantees the highest output quality. Both the dithering (0/1, default=0) and maximum number of colors used (&#60;=256, default = gdMaxColors) can be specified.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Image_Transformation_Commands"
+>Image Transformation Commands</a></h2>
+
+<p>Gd also provides some common image transformations:</p>
+
+<dl>
+<dt><a name='image'></a><a name="$image_=_$sourceImage-&#62;copyRotate90()"
+><b>$image = $sourceImage-&#62;copyRotate90()</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_$sourceImage-&#62;copyRotate180()"
+><b>$image = $sourceImage-&#62;copyRotate180()</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_$sourceImage-&#62;copyRotate270()"
+><b>$image = $sourceImage-&#62;copyRotate270()</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_$sourceImage-&#62;copyFlipHorizontal()"
+><b>$image = $sourceImage-&#62;copyFlipHorizontal()</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_$sourceImage-&#62;copyFlipVertical()"
+><b>$image = $sourceImage-&#62;copyFlipVertical()</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_$sourceImage-&#62;copyTranspose()"
+><b>$image = $sourceImage-&#62;copyTranspose()</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image_=_$sourceImage-&#62;copyReverseTranspose()"
+><b>$image = $sourceImage-&#62;copyReverseTranspose()</b></a></dt>
+
+<dd>
+<p>These methods can be used to rotate, flip, or transpose an image. The result of the method is a copy of the image.</p>
+
+<dt><a name='image'></a><a name="$image-&#62;rotate180()"
+><b>$image-&#62;rotate180()</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image-&#62;flipHorizontal()"
+><b>$image-&#62;flipHorizontal()</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image-&#62;flipVertical()"
+><b>$image-&#62;flipVertical()</b></a></dt>
+
+<dd>
+<p>These methods are similar to the copy* versions, but instead modify the image in place.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Character_and_String_Drawing"
+>Character and String Drawing</a></h2>
+
+<p>GD allows you to draw characters and strings, either in normal horizontal orientation or rotated 90 degrees. These routines use a GD::Font object, described in more detail below. There are four built-in monospaced fonts, available in the global variables <b>gdGiantFont</b>, <b>gdLargeFont</b>, <b>gdMediumBoldFont</b>, <b>gdSmallFont</b> and <b>gdTinyFont</b>.</p>
+
+<p>In addition, you can use the load() method to load GD-formatted bitmap font files at runtime. You can create these bitmap files from X11 BDF-format files using the bdf2gd.pl script, which should have been installed with GD (see the bdf_scripts directory if it wasn&#39;t). The format happens to be identical to the old-style MSDOS bitmap &#34;.fnt&#34; files, so you can use one of those directly if you happen to have one.</p>
+
+<p>For writing proportional scaleable fonts, GD offers the stringFT() method, which allows you to load and render any TrueType font on your system.</p>
+
+<dl>
+<dt><a name='image'></a><a name="$image-&#62;string($font,$x,$y,$string,$color)"
+><b>$image-&#62;string($font,$x,$y,$string,$color)</b></a></dt>
+
+<dd>
+<p>This method draws a string starting at position (x,y) in the specified font and color. Your choices of fonts are gdSmallFont, gdMediumBoldFont, gdTinyFont, gdLargeFont and gdGiantFont.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl">        $myImage-&#62;string(gdSmallFont,2,10,&#34;Peachy Keen&#34;,$peach);</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;stringUp($font,$x,$y,$string,$color)"
+><b>$image-&#62;stringUp($font,$x,$y,$string,$color)</b></a></dt>
+
+<dd>
+<p>Just like the previous call, but draws the text rotated counterclockwise 90 degrees.</p>
+
+<dt><a name='image'></a><a name="$image-&#62;char($font,$x,$y,$char,$color)"
+><b>$image-&#62;char($font,$x,$y,$char,$color)</b></a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image-&#62;charUp($font,$x,$y,$char,$color)"
+><b>$image-&#62;charUp($font,$x,$y,$char,$color)</b></a></dt>
+
+<dd>
+<p>These methods draw single characters at position (x,y) in the specified font and color. They&#39;re carry-overs from the C interface, where there is a distinction between characters and strings. Perl is insensible to such subtle distinctions.</p>
+
+<dt><a name='font'></a><a name="$font_=_GD::Font-&#62;load($fontfilepath)"
+>$font = <b>GD::Font-&#62;load($fontfilepath)</b></a></dt>
+
+<dd>
+<p>This method dynamically loads a font file, returning a font that you can use in subsequent calls to drawing methods. For example:</p>
+
+<pre class="sh_perl">   my $courier = GD::Font-&#62;load(&#39;./courierR12.fnt&#39;) or die &#34;Can&#39;t load font&#34;;
+   $image-&#62;string($courier,2,10,&#34;Peachy Keen&#34;,$peach);</pre>
+
+<p>Font files must be in GD binary format, as described above.</p>
+
+<dt><a name='bounds'></a><a name="@bounds_=_$image-&#62;stringFT($fgcolor,$fontname,$ptsize,$angle,$x,$y,$string)"
+><b>@bounds = $image-&#62;stringFT($fgcolor,$fontname,$ptsize,$angle,$x,$y,$string)</b></a></dt>
+
+<dd>
+<dt><a name='bounds'></a><a name="@bounds_=_GD::Image-&#62;stringFT($fgcolor,$fontname,$ptsize,$angle,$x,$y,$string)"
+><b>@bounds = GD::Image-&#62;stringFT($fgcolor,$fontname,$ptsize,$angle,$x,$y,$string)</b></a></dt>
+
+<dd>
+<dt><a name='bounds'></a><a name="@bounds_=_$image-&#62;stringFT($fgcolor,$fontname,$ptsize,$angle,$x,$y,$string,\%options)"
+><b>@bounds = $image-&#62;stringFT($fgcolor,$fontname,$ptsize,$angle,$x,$y,$string,\%options)</b></a></dt>
+
+<dd>
+<p>This method uses TrueType to draw a scaled, antialiased string using the TrueType vector font of your choice. It requires that libgd to have been compiled with TrueType support, and for the appropriate TrueType font to be installed on your system.</p>
+
+<p>The arguments are as follows:</p>
+
+<pre class="sh_perl">  fgcolor    Color index to draw the string in
+  fontname   A path to the TrueType (.ttf) font file or a font pattern.
+  ptsize     The desired point size (may be fractional)
+  angle      The rotation angle, in radians (positive values rotate counter clockwise)
+  x,y        X and Y coordinates to start drawing the string
+  string     The string itself</pre>
+
+<p>If successful, the method returns an eight-element list giving the boundaries of the rendered string:</p>
+
+<pre class="sh_perl"> @bounds[0,1]  Lower left corner (x,y)
+ @bounds[2,3]  Lower right corner (x,y)
+ @bounds[4,5]  Upper right corner (x,y)
+ @bounds[6,7]  Upper left corner (x,y)</pre>
+
+<p>In case of an error (such as the font not being available, or FT support not being available), the method returns an empty list and sets $@ to the error message.</p>
+
+<p>The string may contain UTF-8 sequences like: &#34;&#38;#192;&#34;</p>
+
+<p>You may also call this method from the GD::Image class name, in which case it doesn&#39;t do any actual drawing, but returns the bounding box using an inexpensive operation. You can use this to perform layout operations prior to drawing.</p>
+
+<p>Using a negative color index will disable antialiasing, as described in the libgd manual page at <a href="http://www.boutell.com/gd/manual2.0.9.html#gdImageStringFT" class="podlinkurl"
+>http://www.boutell.com/gd/manual2.0.9.html#gdImageStringFT</a>.</p>
+
+<p>An optional 8th argument allows you to pass a hashref of options to stringFT(). Several hashkeys are recognized: <b>linespacing</b>, <b>charmap</b>, <b>resolution</b>, and <b>kerning</b>.</p>
+
+<p>The value of <b>linespacing</b> is supposed to be a multiple of the character height, so setting linespacing to 2.0 will result in double-spaced lines of text. However the current version of libgd (2.0.12) does not do this. Instead the linespacing seems to be double what is provided in this argument. So use a spacing of 0.5 to get separation of exactly one line of text. In practice, a spacing of 0.6 seems to give nice results. Another thing to watch out for is that successive lines of text should be separated by the &#34;\r\n&#34; characters, not just &#34;\n&#34;.</p>
+
+<p>The value of <b>charmap</b> is one of &#34;Unicode&#34;, &#34;Shift_JIS&#34; and &#34;Big5&#34;. The interaction between Perl, Unicode and libgd is not clear to me, and you should experiment a bit if you want to use this feature.</p>
+
+<p>The value of <b>resolution</b> is the vertical and horizontal resolution, in DPI, in the format &#34;hdpi,vdpi&#34;. If present, the resolution will be passed to the Freetype rendering engine as a hint to improve the appearance of the rendered font.</p>
+
+<p>The value of <b>kerning</b> is a flag. Set it to false to turn off the default kerning of text.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl"> $gd-&#62;stringFT($black,&#39;/dosc/windows/Fonts/pala.ttf&#39;,40,0,20,90,
+              &#34;hi there\r\nbye now&#34;,
+              {linespacing=&#62;0.6,
+               charmap  =&#62; &#39;Unicode&#39;,
+              });</pre>
+
+<p>If GD was compiled with fontconfig support, and the fontconfig library is available on your system, then you can use a font name pattern instead of a path. Patterns are described in <a href="/perldoc?fontconfig" class="podlinkpod"
+>fontconfig</a> and will look something like this &#34;Times:italic&#34;. For backward compatibility, this feature is disabled by default. You must enable it by calling useFontConfig(1) prior to the stringFT() call.</p>
+
+<pre class="sh_perl">   $image-&#62;useFontConfig(1);</pre>
+
+<p>For backward compatibility with older versions of the FreeType library, the alias stringTTF() is also recognized.</p>
+
+<dt><a name='hasfontconfig'></a><a name="$hasfontconfig_=_$image-&#62;useFontConfig($flag)"
+><b>$hasfontconfig = $image-&#62;useFontConfig($flag)</b></a></dt>
+
+<dd>
+<p>Call useFontConfig() with a value of 1 in order to enable support for fontconfig font patterns (see stringFT). Regardless of the value of $flag, this method will return a true value if the fontconfig library is present, or false otherwise.</p>
+
+<dt><a name='result'></a><a name="$result_=_$image-stringFTCircle($cx,$cy,$radius,$textRadius,$fillPortion,$font,$points,$top,$bottom,$fgcolor)&#62;"
+><b>$result = $image-</b>stringFTCircle($cx,$cy,$radius,$textRadius,$fillPortion,$font,$points,$top,$bottom,$fgcolor)&#62;</a></dt>
+
+<dd>
+<p>This draws text in a circle. Currently (libgd 2.0.33) this function does not work for me, but the interface is provided for completeness. The call signature is somewhat complex. Here is an excerpt from the libgd manual page:</p>
+
+<p>Draws the text strings specified by top and bottom on the image, curved along the edge of a circle of radius radius, with its center at cx and cy. top is written clockwise along the top; bottom is written counterclockwise along the bottom. textRadius determines the &#34;height&#34; of each character; if textRadius is 1/2 of radius, characters extend halfway from the edge to the center. fillPortion varies from 0 to 1.0, with useful values from about 0.4 to 0.9, and determines how much of the 180 degrees of arc assigned to each section of text is actually occupied by text; 0.9 looks better than 1.0 which is rather crowded. font is a freetype font; see gdImageStringFT. points is passed to the freetype engine and has an effect on hinting; although the size of the text is determined by radius, textRadius, and fillPortion, you should pass a point size that &#34;hints&#34; appropriately -- if you know the text will be large, pass a large point size such as 24.0 to get the best results. fgcolor can be any color, and may have an alpha component, do blending, etc.</p>
+
+<p>Returns a true value on success.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Alpha_channels"
+>Alpha channels</a></h2>
+
+<p>The alpha channel methods allow you to control the way drawings are processed according to the alpha channel. When true color is turned on, colors are encoded as four bytes, in which the last three bytes are the RGB color values, and the first byte is the alpha channel. Therefore the hexadecimal representation of a non transparent RGB color will be: C=0x00(rr)(bb)(bb)</p>
+
+<p>When alpha blending is turned on, you can use the first byte of the color to control the transparency, meaning that a rectangle painted with color 0x00(rr)(bb)(bb) will be opaque, and another one painted with 0x7f(rr)(gg)(bb) will be transparent. The Alpha value must be &#62;= 0 and &#60;= 0x7f.</p>
+
+<dl>
+<dt><a name='image'></a><a name="$image-&#62;alphaBlending($integer)"
+><b>$image-&#62;alphaBlending($integer)</b></a></dt>
+
+<dd>
+<p>The alphaBlending() method allows for two different modes of drawing on truecolor images. In blending mode, which is on by default (libgd 2.0.2 and above), the alpha channel component of the color supplied to all drawing functions, such as <code>setPixel</code>, determines how much of the underlying color should be allowed to shine through. As a result, GD automatically blends the existing color at that point with the drawing color, and stores the result in the image. The resulting pixel is opaque. In non-blending mode, the drawing color is copied literally with its alpha channel information, replacing the destination pixel. Blending mode is not available when drawing on palette images.</p>
+
+<p>Pass a value of 1 for blending mode, and 0 for non-blending mode.</p>
+
+<dt><a name='image'></a><a name="$image-&#62;saveAlpha($saveAlpha)"
+><b>$image-&#62;saveAlpha($saveAlpha)</b></a></dt>
+
+<dd>
+<p>By default, GD (libgd 2.0.2 and above) does not attempt to save full alpha channel information (as opposed to single-color transparency) when saving PNG images. (PNG is currently the only output format supported by gd which can accommodate alpha channel information.) This saves space in the output file. If you wish to create an image with alpha channel information for use with tools that support it, call <code>saveAlpha(1)</code> to turn on saving of such information, and call <code>alphaBlending(0)</code> to turn off alpha blending within the library so that alpha channel information is actually stored in the image rather than being composited immediately at the time that drawing functions are invoked.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Miscellaneous_Image_Methods"
+>Miscellaneous Image Methods</a></h2>
+
+<p>These are various utility methods that are useful in some circumstances.</p>
+
+<dl>
+<dt><a name='image'></a><a name="$image-&#62;interlaced([$flag])"
+><b>$image-&#62;interlaced([$flag])</b></a></dt>
+
+<dd>
+<p>This method sets or queries the image&#39;s interlaced setting. Interlace produces a cool venetian blinds effect on certain viewers. Provide a true parameter to set the interlace attribute. Provide undef to disable it. Call the method without parameters to find out the current setting.</p>
+
+<dt><a name='width'></a><a name="($width,$height)_=_$image-&#62;getBounds()"
+><b>($width,$height) = $image-&#62;getBounds()</b></a></dt>
+
+<dd>
+<p>This method will return a two-member list containing the width and height of the image. You query but not change the size of the image once it&#39;s created.</p>
+
+<dt><a name='width'></a><a name="$width_=_$image-&#62;width"
+><b>$width = $image-&#62;width</b></a></dt>
+
+<dd>
+<dt><a name='height'></a><a name="$height_=_$image-&#62;height"
+><b>$height = $image-&#62;height</b></a></dt>
+
+<dd>
+<p>Return the width and height of the image, respectively.</p>
+
+<dt><a name='is_truecolor'></a><a name="$is_truecolor_=_$image-&#62;isTrueColor()"
+><b>$is_truecolor = $image-&#62;isTrueColor()</b></a></dt>
+
+<dd>
+<p>This method will return a Boolean representing whether the image is true color or not.</p>
+
+<dt><a name='flag'></a><a name="$flag_=_$image1-&#62;compare($image2)"
+><b>$flag = $image1-&#62;compare($image2)</b></a></dt>
+
+<dd>
+<p>Compare two images and return a bitmap describing the differences found, if any. The return value must be logically ANDed with one or more constants in order to determine the differences. The following constants are available:</p>
+
+<pre class="sh_perl">  GD_CMP_IMAGE             The two images look different
+  GD_CMP_NUM_COLORS        The two images have different numbers of colors
+  GD_CMP_COLOR             The two images&#39; palettes differ
+  GD_CMP_SIZE_X            The two images differ in the horizontal dimension
+  GD_CMP_SIZE_Y            The two images differ in the vertical dimension
+  GD_CMP_TRANSPARENT       The two images have different transparency
+  GD_CMP_BACKGROUND        The two images have different background colors
+  GD_CMP_INTERLACE         The two images differ in their interlace
+  GD_CMP_TRUECOLOR         The two images are not both true color</pre>
+
+<p>The most important of these is GD_CMP_IMAGE, which will tell you whether the two images will look different, ignoring differences in the order of colors in the color palette and other invisible changes. The constants are not imported by default, but must be imported individually or by importing the :cmp tag. Example:</p>
+
+<pre class="sh_perl">  use GD qw(:DEFAULT :cmp);
+  # get $image1 from somewhere
+  # get $image2 from somewhere
+  if ($image1-&#62;compare($image2) &#38; GD_CMP_IMAGE) {
+     warn &#34;images differ!&#34;;
+  }</pre>
+
+<dt><a name='image'></a><a name="$image-&#62;clip($x1,$y1,$x2,$y2)"
+><b>$image-&#62;clip($x1,$y1,$x2,$y2)</b></a></dt>
+
+<dd>
+<dt><a name='x1'></a><a name="($x1,$y1,$x2,$y2)_=_$image-&#62;clip"
+><b>($x1,$y1,$x2,$y2) = $image-&#62;clip</b></a></dt>
+
+<dd>
+<p>Set or get the clipping rectangle. When the clipping rectangle is set, all drawing will be clipped to occur within this rectangle. The clipping rectangle is initially set to be equal to the boundaries of the whole image. Change it by calling clip() with the coordinates of the new clipping rectangle. Calling clip() without any arguments will return the current clipping rectangle.</p>
+
+<dt><a name='flag'></a><a name="$flag_=_$image-&#62;boundsSafe($x,$y)"
+><b>$flag = $image-&#62;boundsSafe($x,$y)</b></a></dt>
+
+<dd>
+<p>The boundsSafe() method will return true if the point indicated by ($x,$y) is within the clipping rectangle, or false if it is not. If the clipping rectangle has not been set, then it will return true if the point lies within the image boundaries.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Grouping_Methods"
+>Grouping Methods</a></h2>
+
+<p>GD does not support grouping of objects, but GD::SVG does. In that subclass, the following methods declare new groups of graphical objects:</p>
+
+<dl>
+<dt><a name='image'></a><a name="$image-&#62;startGroup([$id,\%style])"
+>$image-&#62;startGroup([$id,\%style])</a></dt>
+
+<dd>
+<dt><a name='image'></a><a name="$image-&#62;endGroup()"
+>$image-&#62;endGroup()</a></dt>
+
+<dd>
+<dt><a name='group'></a><a name="$group_=_$image-&#62;newGroup"
+>$group = $image-&#62;newGroup</a></dt>
+
+<dd>
+<p>See <a href="/perldoc?GD%3A%3ASVG" class="podlinkpod"
+>GD::SVG</a> for information.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Polygons"
+>Polygons <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>A few primitive polygon creation and manipulation methods are provided. They aren&#39;t part of the Gd library, but I thought they might be handy to have around (they&#39;re borrowed from my qd.pl Quickdraw library). Also see <a href="/~lds/GD-2.46/GD/Polyline.pm" class="podlinkpod"
+>GD::Polyline</a>.</p>
+
+<dl>
+<dt><a name='poly'></a><a name="$poly_=_GD::Polygon-&#62;new"
+><b>$poly = GD::Polygon-&#62;new</b></a></dt>
+
+<dd>
+<p>Create an empty polygon with no vertices.</p>
+
+<pre class="sh_perl">        $poly = new GD::Polygon;</pre>
+
+<dt><a name='poly'></a><a name="$poly-&#62;addPt($x,$y)"
+><b>$poly-&#62;addPt($x,$y)</b></a></dt>
+
+<dd>
+<p>Add point (x,y) to the polygon.</p>
+
+<pre class="sh_perl">        $poly-&#62;addPt(0,0);
+        $poly-&#62;addPt(0,50);
+        $poly-&#62;addPt(25,25);
+        $myImage-&#62;fillPoly($poly,$blue);</pre>
+
+<dt><a name='x'></a><a name="($x,$y)_=_$poly-&#62;getPt($index)"
+><b>($x,$y) = $poly-&#62;getPt($index)</b></a></dt>
+
+<dd>
+<p>Retrieve the point at the specified vertex.</p>
+
+<pre class="sh_perl">        ($x,$y) = $poly-&#62;getPt(2);</pre>
+
+<dt><a name='poly'></a><a name="$poly-&#62;setPt($index,$x,$y)"
+><b>$poly-&#62;setPt($index,$x,$y)</b></a></dt>
+
+<dd>
+<p>Change the value of an already existing vertex. It is an error to set a vertex that isn&#39;t already defined.</p>
+
+<pre class="sh_perl">        $poly-&#62;setPt(2,100,100);</pre>
+
+<dt><a name='x'></a><a name="($x,$y)_=_$poly-&#62;deletePt($index)"
+><b>($x,$y) = $poly-&#62;deletePt($index)</b></a></dt>
+
+<dd>
+<p>Delete the specified vertex, returning its value.</p>
+
+<pre class="sh_perl">        ($x,$y) = $poly-&#62;deletePt(1);</pre>
+
+<dt><a name='poly'></a><a name="$poly-&#62;clear()"
+><b>$poly-&#62;clear()</b></a></dt>
+
+<dd>
+<p>Delete all vertices, restoring the polygon to its initial empty state.</p>
+
+<dt><a name='poly'></a><a name="$poly-&#62;toPt($dx,$dy)"
+><b>$poly-&#62;toPt($dx,$dy)</b></a></dt>
+
+<dd>
+<p>Draw from current vertex to a new vertex, using relative (dx,dy) coordinates. If this is the first point, act like addPt().</p>
+
+<pre class="sh_perl">        $poly-&#62;addPt(0,0);
+        $poly-&#62;toPt(0,50);
+        $poly-&#62;toPt(25,-25);
+        $myImage-&#62;fillPoly($poly,$blue);</pre>
+
+<dt><a name='vertex_count'></a><a name="$vertex_count_=_$poly-&#62;length"
+><b>$vertex_count = $poly-&#62;length</b></a></dt>
+
+<dd>
+<p>Return the number of vertices in the polygon.</p>
+
+<pre class="sh_perl">        $points = $poly-&#62;length;</pre>
+
+<dt><a name='vertices'></a><a name="@vertices_=_$poly-&#62;vertices"
+><b>@vertices = $poly-&#62;vertices</b></a></dt>
+
+<dd>
+<p>Return a list of all the vertices in the polygon object. Each member of the list is a reference to an (x,y) array.</p>
+
+<pre class="sh_perl">        @vertices = $poly-&#62;vertices;
+        foreach $v (@vertices)
+           print join(&#34;,&#34;,@$v),&#34;\n&#34;;
+        }</pre>
+
+<dt><a name='rect'></a><a name="@rect_=_$poly-&#62;bounds"
+><b>@rect = $poly-&#62;bounds</b></a></dt>
+
+<dd>
+<p>Return the smallest rectangle that completely encloses the polygon. The return value is an array containing the (left,top,right,bottom) of the rectangle.</p>
+
+<pre class="sh_perl">        ($left,$top,$right,$bottom) = $poly-&#62;bounds;</pre>
+
+<dt><a name='poly'></a><a name="$poly-&#62;offset($dx,$dy)"
+><b>$poly-&#62;offset($dx,$dy)</b></a></dt>
+
+<dd>
+<p>Offset all the vertices of the polygon by the specified horizontal (dh) and vertical (dy) amounts. Positive numbers move the polygon down and to the right.</p>
+
+<pre class="sh_perl">        $poly-&#62;offset(10,30);</pre>
+
+<dt><a name='poly'></a><a name="$poly-&#62;map($srcL,$srcT,$srcR,$srcB,$destL,$dstT,$dstR,$dstB)"
+><b>$poly-&#62;map($srcL,$srcT,$srcR,$srcB,$destL,$dstT,$dstR,$dstB)</b></a></dt>
+
+<dd>
+<p>Map the polygon from a source rectangle to an equivalent position in a destination rectangle, moving it and resizing it as necessary. See polys.pl for an example of how this works. Both the source and destination rectangles are given in (left,top,right,bottom) coordinates. For convenience, you can use the polygon&#39;s own bounding box as the source rectangle.</p>
+
+<pre class="sh_perl">        # Make the polygon really tall
+        $poly-&#62;map($poly-&#62;bounds,0,0,50,200);</pre>
+
+<dt><a name='poly'></a><a name="$poly-&#62;scale($sx,$sy)"
+><b>$poly-&#62;scale($sx,$sy)</b></a></dt>
+
+<dd>
+<p>Scale each vertex of the polygon by the X and Y factors indicated by sx and sy. For example scale(2,2) will make the polygon twice as large. For best results, move the center of the polygon to position (0,0) before you scale, then move it back to its previous position.</p>
+
+<dt><a name='poly'></a><a name="$poly-&#62;transform($sx,$rx,$sy,$ry,$tx,$ty)"
+><b>$poly-&#62;transform($sx,$rx,$sy,$ry,$tx,$ty)</b></a></dt>
+
+<dd>
+<p>Run each vertex of the polygon through a transformation matrix, where sx and sy are the X and Y scaling factors, rx and ry are the X and Y rotation factors, and tx and ty are X and Y offsets. See the Adobe PostScript Reference, page 154 for a full explanation, or experiment.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="GD::Polyline"
+>GD::Polyline</a></h2>
+
+<p>Please see <a href="/~lds/GD-2.46/GD/Polyline.pm" class="podlinkpod"
+>GD::Polyline</a> for information on creating open polygons and splines.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Font_Utilities"
+>Font Utilities <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The libgd library (used by the Perl GD library) has built-in support for about half a dozen fonts, which were converted from public-domain X Windows fonts. For more fonts, compile libgd with TrueType support and use the stringFT() call.</p>
+
+<p>If you wish to add more built-in fonts, the directory bdf_scripts contains two contributed utilities that may help you convert X-Windows BDF-format fonts into the format that libgd uses internally. However these scripts were written for earlier versions of GD which included its own mini-gd library. These scripts will have to be adapted for use with libgd, and the libgd library itself will have to be recompiled and linked! Please do not contact me for help with these scripts: they are unsupported.</p>
+
+<p>Each of these fonts is available both as an imported global (e.g. <b>gdSmallFont</b>) and as a package method (e.g. <b>GD::Font-&#62;Small</b>).</p>
+
+<dl>
+<dt><a name="gdSmallFont"
+><b>gdSmallFont</b></a></dt>
+
+<dd>
+<dt><a name='GD'></a><a name="GD::Font-&#62;Small"
+><b>GD::Font-&#62;Small</b></a></dt>
+
+<dd>
+<p>This is the basic small font, &#34;borrowed&#34; from a well known public domain 6x12 font.</p>
+
+<dt><a name="gdLargeFont"
+><b>gdLargeFont</b></a></dt>
+
+<dd>
+<dt><a name='GD'></a><a name="GD::Font-&#62;Large"
+><b>GD::Font-&#62;Large</b></a></dt>
+
+<dd>
+<p>This is the basic large font, &#34;borrowed&#34; from a well known public domain 8x16 font.</p>
+
+<dt><a name="gdMediumBoldFont"
+><b>gdMediumBoldFont</b></a></dt>
+
+<dd>
+<dt><a name='GD'></a><a name="GD::Font-&#62;MediumBold"
+><b>GD::Font-&#62;MediumBold</b></a></dt>
+
+<dd>
+<p>This is a bold font intermediate in size between the small and large fonts, borrowed from a public domain 7x13 font;</p>
+
+<dt><a name="gdTinyFont"
+><b>gdTinyFont</b></a></dt>
+
+<dd>
+<dt><a name='GD'></a><a name="GD::Font-&#62;Tiny"
+><b>GD::Font-&#62;Tiny</b></a></dt>
+
+<dd>
+<p>This is a tiny, almost unreadable font, 5x8 pixels wide.</p>
+
+<dt><a name="gdGiantFont"
+><b>gdGiantFont</b></a></dt>
+
+<dd>
+<dt><a name='GD'></a><a name="GD::Font-&#62;Giant"
+><b>GD::Font-&#62;Giant</b></a></dt>
+
+<dd>
+<p>This is a 9x15 bold font converted by Jan Pazdziora from a sans serif X11 font.</p>
+
+<dt><a name='font'></a><a name="$font-&#62;nchars"
+><b>$font-&#62;nchars</b></a></dt>
+
+<dd>
+<p>This returns the number of characters in the font.</p>
+
+<pre class="sh_perl">        print &#34;The large font contains &#34;,gdLargeFont-&#62;nchars,&#34; characters\n&#34;;</pre>
+
+<dt><a name='font'></a><a name="$font-&#62;offset"
+><b>$font-&#62;offset</b></a></dt>
+
+<dd>
+<p>This returns the ASCII value of the first character in the font</p>
+
+<dt><a name='width'></a><a name="$width_=_$font-&#62;width"
+><b>$width = $font-&#62;width</b></a></dt>
+
+<dd>
+<dt><a name='height'></a><a name="$height_=_$font-&#62;height"
+><b>$height = $font-&#62;height</b></a></dt>
+
+<dd>
+<dt><a name="height"
+><code>height</code></a></dt>
+
+<dd>
+<p>These return the width and height of the font.</p>
+
+<pre class="sh_perl">  ($w,$h) = (gdLargeFont-&#62;width,gdLargeFont-&#62;height);</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Obtaining_the_C-language_version_of_gd"
+>Obtaining the C-language version of gd <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>libgd, the C-language version of gd, can be obtained at URL <a href="http://www.boutell.com/gd/" class="podlinkurl"
+>http://www.boutell.com/gd/</a>. Directions for installing and using it can be found at that site. Please do not contact me for help with libgd.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The GD.pm interface is copyright 1995-2010, Lincoln D. Stein. This package and its accompanying libraries is free software; you can redistribute it and/or modify it under the terms of the GPL (either version 1, or at your option, any later version) or the Artistic License 2.0. Refer to LICENSE for the full license text. package for details.</p>
+
+<p>The latest versions of GD.pm are available at</p>
+
+<pre class="sh_perl">  <a href="http://stein.cshl.org/WWW/software/GD" class="podlinkurl"
+>http://stein.cshl.org/WWW/software/GD</a></pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/~lds/GD-2.46/GD/Polyline.pm" class="podlinkpod"
+>GD::Polyline</a>, <a href="/perldoc?GD%3A%3ASVG" class="podlinkpod"
+>GD::SVG</a>, <a href="/~lds/GD-2.46/GD/Simple.pm" class="podlinkpod"
+>GD::Simple</a>, <a href="/perldoc?Image%3A%3AMagick" class="podlinkpod"
+>Image::Magick</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78227 Uploads, 24717 Distributions
+106018 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Thu Apr 26 06:54:14 2012 GMT (0.164482116699219) @cpansearch1 -->
+ </body>
+</html>

@@ -1,0 +1,2047 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>DateTime - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","DateTime",3]);
+    _gaq.push(["_setCustomVar",5,"Release","DateTime-0.74",3]);
+    _gaq.push(["_setCustomVar",3,"Module","DateTime",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DROLSKY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?DateTime">permalink</a></div>
+  <a href="/~drolsky/">Dave Rolsky</a> &gt;
+  <a href="/~drolsky/DateTime-0.74/">DateTime-0.74</a> &gt;
+  DateTime
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/1401e7f176d9e13ad2a9380ecd1f18f6?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DR/DROLSKY/DateTime-0.74.tar.gz">DateTime-0.74.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=DateTime;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DROLSKY/DateTime-0.74/lib/DateTime.pm">Annotate this POD
+(15)
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 5</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 9</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 2</td></tr>
+</table>
+<a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=DateTime">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.74 &nbsp;
+<span class="noprint">
+  <a href="/src/DROLSKY/DateTime-0.74/lib/DateTime.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#USAGE'>USAGE</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#0-based_Versus_1-based_Numbers'>0-based Versus 1-based Numbers</a>
+    <li class='indexItem indexItem2'><a href='#Error_Handling'>Error Handling</a>
+    <li class='indexItem indexItem2'><a href='#Locales'>Locales</a>
+    <li class='indexItem indexItem2'><a href='#Floating_DateTimes'>Floating DateTimes</a>
+    <li class='indexItem indexItem2'><a href='#Math'>Math</a>
+    <li class='indexItem indexItem2'><a href='#Time_Zone_Warnings'>Time Zone Warnings</a>
+    <li class='indexItem indexItem2'><a href='#Methods'>Methods</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Constructors'>Constructors</a>
+      <ul   class='indexList indexList4'>
+        <li class='indexItem indexItem4'><a href='#Parsing_Dates'>Parsing Dates</a>
+        <li class='indexItem indexItem4'><a href='#Ambiguous_Local_Times'>Ambiguous Local Times</a>
+        <li class='indexItem indexItem4'><a href='#Invalid_Local_Times'>Invalid Local Times</a>
+      </ul>
+      <li class='indexItem indexItem3'><a href='#&#34;Get&#34;_Methods'>&#34;Get&#34; Methods</a>
+      <li class='indexItem indexItem3'><a href='#&#34;Set&#34;_Methods'>&#34;Set&#34; Methods</a>
+      <li class='indexItem indexItem3'><a href='#Math_Methods'>Math Methods</a>
+      <li class='indexItem indexItem3'><a href='#Class_Methods'>Class Methods</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#How_Datetime_Math_Works'>How Datetime Math Works</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Making_Things_Simple'>Making Things Simple</a>
+      <li class='indexItem indexItem3'><a href='#Adding_a_Duration_to_a_Datetime'>Adding a Duration to a Datetime</a>
+      <li class='indexItem indexItem3'><a href='#Datetime_Subtraction'>Datetime Subtraction</a>
+      <li class='indexItem indexItem3'><a href='#Reversibility'>Reversibility</a>
+      <li class='indexItem indexItem3'><a href='#Leap_Seconds_and_Date_Math'>Leap Seconds and Date Math</a>
+      <li class='indexItem indexItem3'><a href='#Local_vs._UTC_and_24_hours_vs._1_day'>Local vs. UTC and 24 hours vs. 1 day</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Overloading'>Overloading</a>
+    <li class='indexItem indexItem2'><a href='#Formatters_And_Stringification'>Formatters And Stringification</a>
+    <li class='indexItem indexItem2'><a href='#CLDR_Patterns'>CLDR Patterns</a>
+    <li class='indexItem indexItem2'><a href='#strftime_Patterns'>strftime Patterns</a>
+    <li class='indexItem indexItem2'><a href='#DateTime.pm_and_Storable'>DateTime.pm and Storable</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#THE_DATETIME_PROJECT_ECOSYSTEM'>THE DATETIME PROJECT ECOSYSTEM</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#DateTime::Set'>DateTime::Set</a>
+    <li class='indexItem indexItem2'><a href='#Format_Modules'>Format Modules</a>
+    <li class='indexItem indexItem2'><a href='#Calendar_Modules'>Calendar Modules</a>
+    <li class='indexItem indexItem2'><a href='#Event_Modules'>Event Modules</a>
+    <li class='indexItem indexItem2'><a href='#Others'>Others</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#KNOWN_BUGS'>KNOWN BUGS</a>
+  <li class='indexItem indexItem1'><a href='#SUPPORT'>SUPPORT</a>
+  <li class='indexItem indexItem1'><a href='#DONATIONS'>DONATIONS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DateTime - A date and time object</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 0.74</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use DateTime;
+
+  $dt = DateTime-&#62;new(
+      year       =&#62; 1964,
+      month      =&#62; 10,
+      day        =&#62; 16,
+      hour       =&#62; 16,
+      minute     =&#62; 12,
+      second     =&#62; 47,
+      nanosecond =&#62; 500000000,
+      time_zone  =&#62; &#39;Asia/Taipei&#39;,
+  );
+
+  $dt = DateTime-&#62;from_epoch( epoch =&#62; $epoch );
+  $dt = DateTime-&#62;now; # same as ( epoch =&#62; time() )
+
+  $year   = $dt-&#62;year;
+  $month  = $dt-&#62;month;          # 1-12
+
+  $day    = $dt-&#62;day;            # 1-31
+
+  $dow    = $dt-&#62;day_of_week;    # 1-7 (Monday is 1)
+
+  $hour   = $dt-&#62;hour;           # 0-23
+  $minute = $dt-&#62;minute;         # 0-59
+
+  $second = $dt-&#62;second;         # 0-61 (leap seconds!)
+
+  $doy    = $dt-&#62;day_of_year;    # 1-366 (leap years)
+
+  $doq    = $dt-&#62;day_of_quarter; # 1..
+
+  $qtr    = $dt-&#62;quarter;        # 1-4
+
+  # all of the start-at-1 methods above have corresponding start-at-0
+  # methods, such as $dt-&#62;day_of_month_0, $dt-&#62;month_0 and so on
+
+  $ymd    = $dt-&#62;ymd;           # 2002-12-06
+  $ymd    = $dt-&#62;ymd(&#39;/&#39;);      # 2002/12/06
+
+  $mdy    = $dt-&#62;mdy;           # 12-06-2002
+  $mdy    = $dt-&#62;mdy(&#39;/&#39;);      # 12/06/2002
+
+  $dmy    = $dt-&#62;dmy;           # 06-12-2002
+  $dmy    = $dt-&#62;dmy(&#39;/&#39;);      # 06/12/2002
+
+  $hms    = $dt-&#62;hms;           # 14:02:29
+  $hms    = $dt-&#62;hms(&#39;!&#39;);      # 14!02!29
+
+  $is_leap  = $dt-&#62;is_leap_year;
+
+  # these are localizable, see Locales section
+  $month_name  = $dt-&#62;month_name; # January, February, ...
+  $month_abbr  = $dt-&#62;month_abbr; # Jan, Feb, ...
+  $day_name    = $dt-&#62;day_name;   # Monday, Tuesday, ...
+  $day_abbr    = $dt-&#62;day_abbr;   # Mon, Tue, ...
+
+  # May not work for all possible datetime, see the docs on this
+  # method for more details.
+  $epoch_time  = $dt-&#62;epoch;
+
+  $dt2 = $dt + $duration_object;
+
+  $dt3 = $dt - $duration_object;
+
+  $duration_object = $dt - $dt2;
+
+  $dt-&#62;set( year =&#62; 1882 );
+
+  $dt-&#62;set_time_zone( &#39;America/Chicago&#39; );
+
+  $dt-&#62;set_formatter( $formatter );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>DateTime is a class for the representation of date/time combinations, and is part of the Perl DateTime project. For details on this project please see <a href="http://datetime.perl.org/" class="podlinkurl"
+>http://datetime.perl.org/</a>. The DateTime site has a FAQ which may help answer many &#34;how do I do X?&#34; questions. The FAQ is at <a href="http://datetime.perl.org/wiki/datetime/page/FAQ" class="podlinkurl"
+>http://datetime.perl.org/wiki/datetime/page/FAQ</a>.</p>
+
+<p>It represents the Gregorian calendar, extended backwards in time before its creation (in 1582). This is sometimes known as the &#34;proleptic Gregorian calendar&#34;. In this calendar, the first day of the calendar (the epoch), is the first day of year 1, which corresponds to the date which was (incorrectly) believed to be the birth of Jesus Christ.</p>
+
+<p>The calendar represented does have a year 0, and in that way differs from how dates are often written using &#34;BCE/CE&#34; or &#34;BC/AD&#34;.</p>
+
+<p>For infinite datetimes, please see the <a href="/~drolsky/DateTime-0.74/lib/DateTime/Infinite.pm" class="podlinkpod"
+>DateTime::Infinite</a> module.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="USAGE"
+>USAGE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="0-based_Versus_1-based_Numbers"
+>0-based Versus 1-based Numbers</a></h2>
+
+<p>The DateTime.pm module follows a simple consistent logic for determining whether or not a given number is 0-based or 1-based.</p>
+
+<p>Month, day of month, day of week, and day of year are 1-based. Any method that is 1-based also has an equivalent 0-based method ending in &#34;_0&#34;. So for example, this class provides both <code>day_of_week()</code> and <code>day_of_week_0()</code> methods.</p>
+
+<p>The <code>day_of_week_0()</code> method still treats Monday as the first day of the week.</p>
+
+<p>All <i>time</i>-related numbers such as hour, minute, and second are 0-based.</p>
+
+<p>Years are neither, as they can be both positive or negative, unlike any other datetime component. There <i>is</i> a year 0.</p>
+
+<p>There is no <code>quarter_0()</code> method.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Error_Handling"
+>Error Handling</a></h2>
+
+<p>Some errors may cause this module to die with an error string. This can only happen when calling constructor methods, methods that change the object, such as <code>set()</code>, or methods that take parameters. Methods that retrieve information about the object, such as <code>year()</code> or <code>epoch()</code>, will never die.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Locales"
+>Locales</a></h2>
+
+<p>All the object methods which return names or abbreviations return data based on a locale. This is done by setting the locale when constructing a DateTime object. There is also a <code>DefaultLocale()</code> class method which may be used to set the default locale for all DateTime objects created. If this is not set, then &#34;en_US&#34; is used.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Floating_DateTimes"
+>Floating DateTimes</a></h2>
+
+<p>The default time zone for new DateTime objects, except where stated otherwise, is the &#34;floating&#34; time zone. This concept comes from the iCal standard. A floating datetime is one which is not anchored to any particular time zone. In addition, floating datetimes do not include leap seconds, since we cannot apply them without knowing the datetime&#39;s time zone.</p>
+
+<p>The results of date math and comparison between a floating datetime and one with a real time zone are not really valid, because one includes leap seconds and the other does not. Similarly, the results of datetime math between two floating datetimes and two datetimes with time zones are not really comparable.</p>
+
+<p>If you are planning to use any objects with a real time zone, it is strongly recommended that you <b>do not</b> mix these with floating datetimes.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Math"
+>Math</a></h2>
+
+<p>If you are going to be using doing date math, please read the section <a href="#How_Datetime_Math_Works" class="podlinkpod"
+>&#34;How Datetime Math Works&#34;</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Time_Zone_Warnings"
+>Time Zone Warnings</a></h2>
+
+<p>Determining the local time zone for a system can be slow. If <code>$ENV{TZ}</code> is not set, it may involve reading a number of files in <em>/etc</em> or elsewhere. If you know that the local time zone won&#39;t change while your code is running, and you need to make many objects for the local time zone, it is strongly recommended that you retrieve the local time zone once and cache it:</p>
+
+<pre class="sh_perl">  our $App::LocalTZ = DateTime::TimeZone-&#62;new( name =&#62; &#39;local&#39; );
+
+  ... # then everywhere else
+
+  my $dt = DateTime-&#62;new( ..., time_zone =&#62; $App::LocalTZ );</pre>
+
+<p>DateTime itself does not do this internally because local time zones can change, and there&#39;s no good way to determine if it&#39;s changed without doing all the work to look it up.</p>
+
+<p>Do not try to use named time zones (like &#34;America/Chicago&#34;) with dates very far in the future (thousands of years). The current implementation of <code>DateTime::TimeZone</code> will use a huge amount of memory calculating all the DST changes from now until the future date. Use UTC or the floating time zone and you will be safe.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Methods"
+>Methods</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Constructors"
+>Constructors</a></h3>
+
+<p>All constructors can die when invalid parameters are given.</p>
+
+<ul>
+<li>DateTime-&#62;new( ... )
+<p>This class method accepts parameters for each date and time component: &#34;year&#34;, &#34;month&#34;, &#34;day&#34;, &#34;hour&#34;, &#34;minute&#34;, &#34;second&#34;, &#34;nanosecond&#34;. It also accepts &#34;locale&#34;, &#34;time_zone&#34;, and &#34;formatter&#34; parameters.</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;new(
+      year       =&#62; 1966,
+      month      =&#62; 10,
+      day        =&#62; 25,
+      hour       =&#62; 7,
+      minute     =&#62; 15,
+      second     =&#62; 47,
+      nanosecond =&#62; 500000000,
+      time_zone  =&#62; &#39;America/Chicago&#39;,
+  );</pre>
+
+<p>DateTime validates the &#34;month&#34;, &#34;day&#34;, &#34;hour&#34;, &#34;minute&#34;, and &#34;second&#34;, and &#34;nanosecond&#34; parameters. The valid values for these parameters are:</p>
+
+<ul>
+<li>month
+<p>An integer from 1-12.</p>
+</li>
+
+<li>day
+<p>An integer from 1-31, and it must be within the valid range of days for the specified month.</p>
+</li>
+
+<li>hour
+<p>An integer from 0-23.</p>
+</li>
+
+<li>minute
+<p>An integer from 0-59.</p>
+</li>
+
+<li>second
+<p>An integer from 0-61 (to allow for leap seconds). Values of 60 or 61 are only allowed when they match actual leap seconds.</p>
+</li>
+
+<li>nanosecond
+<p>An integer &#62;= 0. If this number is greater than 1 billion, it will be normalized into the second value for the DateTime object.</p>
+</li>
+</ul>
+
+<p>Invalid parameter types (like an array reference) will cause the constructor to die.</p>
+
+<p>The value for seconds may be from 0 to 61, to account for leap seconds. If you give a value greater than 59, DateTime does check to see that it really matches a valid leap second.</p>
+
+<p>All of the parameters are optional except for &#34;year&#34;. The &#34;month&#34; and &#34;day&#34; parameters both default to 1, while the &#34;hour&#34;, &#34;minute&#34;, &#34;second&#34;, and &#34;nanosecond&#34; parameters all default to 0.</p>
+
+<p>The &#34;locale&#34; parameter should be a string matching one of the valid locales, or a <code>DateTime::Locale</code> object. See the <a href="/perldoc?DateTime%3A%3ALocale" class="podlinkpod"
+>DateTime::Locale</a> documentation for details.</p>
+
+<p>The time_zone parameter can be either a scalar or a <code>DateTime::TimeZone</code> object. A string will simply be passed to the <code>DateTime::TimeZone-&#62;new</code> method as its &#34;name&#34; parameter. This string may be an Olson DB time zone name (&#34;America/Chicago&#34;), an offset string (&#34;+0630&#34;), or the words &#34;floating&#34; or &#34;local&#34;. See the <code>DateTime::TimeZone</code> documentation for more details.</p>
+
+<p>The default time zone is &#34;floating&#34;.</p>
+
+<p>The &#34;formatter&#34; can be either a scalar or an object, but the class specified by the scalar or the object must implement a <code>format_datetime()</code> method.</p>
+</li>
+</ul>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name="Parsing_Dates"
+>Parsing Dates</a></h4>
+
+<p><b>This module does not parse dates!</b> That means there is no constructor to which you can pass things like &#34;March 3, 1970 12:34&#34;.</p>
+
+<p>Instead, take a look at the various <code>DateTime::Format::*</code> modules on CPAN. These parse all sorts of different date formats, and you&#39;re bound to find something that can handle your particular needs.</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name="Ambiguous_Local_Times"
+>Ambiguous Local Times</a></h4>
+
+<p>Because of Daylight Saving Time, it is possible to specify a local time that is ambiguous. For example, in the US in 2003, the transition from to saving to standard time occurred on October 26, at 02:00:00 local time. The local clock changed from 01:59:59 (saving time) to 01:00:00 (standard time). This means that the hour from 01:00:00 through 01:59:59 actually occurs twice, though the UTC time continues to move forward.</p>
+
+<p>If you specify an ambiguous time, then the latest UTC time is always used, in effect always choosing standard time. In this case, you can simply subtract an hour to the object in order to move to saving time, for example:</p>
+
+<pre class="sh_perl">  # This object represent 01:30:00 standard time
+  my $dt = DateTime-&#62;new(
+      year      =&#62; 2003,
+      month     =&#62; 10,
+      day       =&#62; 26,
+      hour      =&#62; 1,
+      minute    =&#62; 30,
+      second    =&#62; 0,
+      time_zone =&#62; &#39;America/Chicago&#39;,
+  );
+
+  print $dt-&#62;hms;  # prints 01:30:00
+
+  # Now the object represent 01:30:00 saving time
+  $dt-&#62;subtract( hours =&#62; 1 );
+
+  print $dt-&#62;hms;  # still prints 01:30:00</pre>
+
+<p>Alternately, you could create the object with the UTC time zone, and then call the <code>set_time_zone()</code> method to change the time zone. This is a good way to ensure that the time is not ambiguous.</p>
+
+<h4><a class='u' href='#___top' title='click to go to top of document'
+name="Invalid_Local_Times"
+>Invalid Local Times</a></h4>
+
+<p>Another problem introduced by Daylight Saving Time is that certain local times just do not exist. For example, in the US in 2003, the transition from standard to saving time occurred on April 6, at the change to 2:00:00 local time. The local clock changes from 01:59:59 (standard time) to 03:00:00 (saving time). This means that there is no 02:00:00 through 02:59:59 on April 6!</p>
+
+<p>Attempting to create an invalid time currently causes a fatal error. This may change in future version of this module.</p>
+
+<ul>
+<li>DateTime-&#62;from_epoch( epoch =&#62; $epoch, ... )
+<p>This class method can be used to construct a new DateTime object from an epoch time instead of components. Just as with the <code>new()</code> method, it accepts &#34;time_zone&#34;, &#34;locale&#34;, and &#34;formatter&#34; parameters.</p>
+
+<p>If the epoch value is not an integer, the part after the decimal will be converted to nanoseconds. This is done in order to be compatible with <code>Time::HiRes</code>. If the floating portion extends past 9 decimal places, it will be truncated to nine, so that 1.1234567891 will become 1 second and 123,456,789 nanoseconds.</p>
+
+<p>By default, the returned object will be in the UTC time zone.</p>
+</li>
+
+<li>DateTime-&#62;now( ... )
+<p>This class method is equivalent to calling <code>from_epoch()</code> with the value returned from Perl&#39;s <code>time()</code> function. Just as with the <code>new()</code> method, it accepts &#34;time_zone&#34; and &#34;locale&#34; parameters.</p>
+
+<p>By default, the returned object will be in the UTC time zone.</p>
+</li>
+
+<li>DateTime-&#62;today( ... )
+<p>This class method is equivalent to:</p>
+
+<pre class="sh_perl">  DateTime-&#62;now-&#62;truncate( to =&#62; &#39;day&#39; );</pre>
+</li>
+
+<li>DateTime-&#62;from_object( object =&#62; $object, ... )
+<p>This class method can be used to construct a new DateTime object from any object that implements the <code>utc_rd_values()</code> method. All <code>DateTime::Calendar</code> modules must implement this method in order to provide cross-calendar compatibility. This method accepts a &#34;locale&#34; and &#34;formatter&#34; parameter</p>
+
+<p>If the object passed to this method has a <code>time_zone()</code> method, that is used to set the time zone of the newly created <code>DateTime.pm</code> object.</p>
+
+<p>Otherwise, the returned object will be in the floating time zone.</p>
+</li>
+
+<li>DateTime-&#62;last_day_of_month( ... )
+<p>This constructor takes the same arguments as can be given to the <code>new()</code> method, except for &#34;day&#34;. Additionally, both &#34;year&#34; and &#34;month&#34; are required.</p>
+</li>
+
+<li>DateTime-&#62;from_day_of_year( ... )
+<p>This constructor takes the same arguments as can be given to the <code>new()</code> method, except that it does not accept a &#34;month&#34; or &#34;day&#34; argument. Instead, it requires both &#34;year&#34; and &#34;day_of_year&#34;. The day of year must be between 1 and 366, and 366 is only allowed for leap years.</p>
+</li>
+
+<li>$dt-&#62;clone()
+<p>This object method returns a new object that is replica of the object upon which the method is called.</p>
+</li>
+</ul>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="&#34;Get&#34;_Methods"
+>&#34;Get&#34; Methods</a></h3>
+
+<p>This class has many methods for retrieving information about an object.</p>
+
+<ul>
+<li>$dt-&#62;year()
+<p>Returns the year.</p>
+</li>
+
+<li>$dt-&#62;ce_year()
+<p>Returns the year according to the BCE/CE numbering system. The year before year 1 in this system is year -1, aka &#34;1 BCE&#34;.</p>
+</li>
+
+<li>$dt-&#62;era_name()
+<p>Returns the long name of the current era, something like &#34;Before Christ&#34;. See the <a href="#Locales" class="podlinkpod"
+>Locales</a> section for more details.</p>
+</li>
+
+<li>$dt-&#62;era_abbr()
+<p>Returns the abbreviated name of the current era, something like &#34;BC&#34;. See the <a href="#Locales" class="podlinkpod"
+>Locales</a> section for more details.</p>
+</li>
+
+<li>$dt-&#62;christian_era()
+<p>Returns a string, either &#34;BC&#34; or &#34;AD&#34;, according to the year.</p>
+</li>
+
+<li>$dt-&#62;secular_era()
+<p>Returns a string, either &#34;BCE&#34; or &#34;CE&#34;, according to the year.</p>
+</li>
+
+<li>$dt-&#62;year_with_era()
+<p>Returns a string containing the year immediately followed by its era abbreviation. The year is the absolute value of <code>ce_year()</code>, so that year 1 is &#34;1AD&#34; and year 0 is &#34;1BC&#34;.</p>
+</li>
+
+<li>$dt-&#62;year_with_christian_era()
+<p>Like <code>year_with_era()</code>, but uses the christian_era() method to get the era name.</p>
+</li>
+
+<li>$dt-&#62;year_with_secular_era()
+<p>Like <code>year_with_era()</code>, but uses the secular_era() method to get the era name.</p>
+</li>
+
+<li>$dt-&#62;month()
+<p>Returns the month of the year, from 1..12.</p>
+
+<p>Also available as <code>$dt-&#62;mon()</code>.</p>
+</li>
+
+<li>$dt-&#62;month_name()
+<p>Returns the name of the current month. See the <a href="#Locales" class="podlinkpod"
+>Locales</a> section for more details.</p>
+</li>
+
+<li>$dt-&#62;month_abbr()
+<p>Returns the abbreviated name of the current month. See the <a href="#Locales" class="podlinkpod"
+>Locales</a> section for more details.</p>
+</li>
+
+<li>$dt-&#62;day()
+<p>Returns the day of the month, from 1..31.</p>
+
+<p>Also available as <code>$dt-&#62;mday()</code> and <code>$dt-&#62;day_of_month()</code>.</p>
+</li>
+
+<li>$dt-&#62;day_of_week()
+<p>Returns the day of the week as a number, from 1..7, with 1 being Monday and 7 being Sunday.</p>
+
+<p>Also available as <code>$dt-&#62;wday()</code> and <code>$dt-&#62;dow()</code>.</p>
+</li>
+
+<li>$dt-&#62;local_day_of_week()
+<p>Returns the day of the week as a number, from 1..7. The day corresponding to 1 will vary based on the locale.</p>
+</li>
+
+<li>$dt-&#62;day_name()
+<p>Returns the name of the current day of the week. See the <a href="#Locales" class="podlinkpod"
+>Locales</a> section for more details.</p>
+</li>
+
+<li>$dt-&#62;day_abbr()
+<p>Returns the abbreviated name of the current day of the week. See the <a href="#Locales" class="podlinkpod"
+>Locales</a> section for more details.</p>
+</li>
+
+<li>$dt-&#62;day_of_year()
+<p>Returns the day of the year.</p>
+
+<p>Also available as <code>$dt-&#62;doy()</code>.</p>
+</li>
+
+<li>$dt-&#62;quarter()
+<p>Returns the quarter of the year, from 1..4.</p>
+</li>
+
+<li>$dt-&#62;quarter_name()
+<p>Returns the name of the current quarter. See the <a href="#Locales" class="podlinkpod"
+>Locales</a> section for more details.</p>
+</li>
+
+<li>$dt-&#62;quarter_abbr()
+<p>Returns the abbreviated name of the current quarter. See the <a href="#Locales" class="podlinkpod"
+>Locales</a> section for more details.</p>
+</li>
+
+<li>$dt-&#62;day_of_quarter()
+<p>Returns the day of the quarter.</p>
+
+<p>Also available as <code>$dt-&#62;doq()</code>.</p>
+</li>
+
+<li>$dt-&#62;weekday_of_month()
+<p>Returns a number from 1..5 indicating which week day of the month this is. For example, June 9, 2003 is the second Monday of the month, and so this method returns 2 for that day.</p>
+</li>
+
+<li>$dt-&#62;ymd( $optional_separator )</li>
+
+<li>$dt-&#62;mdy( $optional_separator )</li>
+
+<li>$dt-&#62;dmy( $optional_separator )
+<p>Each method returns the year, month, and day, in the order indicated by the method name. Years are zero-padded to four digits. Months and days are 0-padded to two digits.</p>
+
+<p>By default, the values are separated by a dash (-), but this can be overridden by passing a value to the method.</p>
+
+<p>The <code>$dt-&#62;ymd()</code> method is also available as <code>$dt-&#62;date()</code>.</p>
+</li>
+
+<li>$dt-&#62;hour()
+<p>Returns the hour of the day, from 0..23.</p>
+</li>
+
+<li>$dt-&#62;hour_1()
+<p>Returns the hour of the day, from 1..24.</p>
+</li>
+
+<li>$dt-&#62;hour_12()
+<p>Returns the hour of the day, from 1..12.</p>
+</li>
+
+<li>$dt-&#62;hour_12_0()
+<p>Returns the hour of the day, from 0..11.</p>
+</li>
+
+<li>$dt-&#62;am_or_pm()
+<p>Returns the appropriate localized abbreviation, depending on the current hour.</p>
+</li>
+
+<li>$dt-&#62;minute()
+<p>Returns the minute of the hour, from 0..59.</p>
+
+<p>Also available as <code>$dt-&#62;min()</code>.</p>
+</li>
+
+<li>$dt-&#62;second()
+<p>Returns the second, from 0..61. The values 60 and 61 are used for leap seconds.</p>
+
+<p>Also available as <code>$dt-&#62;sec()</code>.</p>
+</li>
+
+<li>$dt-&#62;fractional_second()
+<p>Returns the second, as a real number from 0.0 until 61.999999999</p>
+
+<p>The values 60 and 61 are used for leap seconds.</p>
+</li>
+
+<li>$dt-&#62;millisecond()
+<p>Returns the fractional part of the second as milliseconds (1E-3 seconds).</p>
+
+<p>Half a second is 500 milliseconds.</p>
+</li>
+
+<li>$dt-&#62;microsecond()
+<p>Returns the fractional part of the second as microseconds (1E-6 seconds). This value will be rounded to an integer.</p>
+
+<p>Half a second is 500_000 microseconds. This value will be rounded to an integer.</p>
+</li>
+
+<li>$dt-&#62;nanosecond()
+<p>Returns the fractional part of the second as nanoseconds (1E-9 seconds).</p>
+
+<p>Half a second is 500_000_000 nanoseconds.</p>
+</li>
+
+<li>$dt-&#62;hms( $optional_separator )
+<p>Returns the hour, minute, and second, all zero-padded to two digits. If no separator is specified, a colon (:) is used by default.</p>
+
+<p>Also available as <code>$dt-&#62;time()</code>.</p>
+</li>
+
+<li>$dt-&#62;datetime()
+<p>This method is equivalent to:</p>
+
+<pre class="sh_perl">  $dt-&#62;ymd(&#39;-&#39;) . &#39;T&#39; . $dt-&#62;hms(&#39;:&#39;)</pre>
+
+<p>Also available as <code>$dt-&#62;iso8601()</code>.</p>
+</li>
+
+<li>$dt-&#62;is_leap_year()
+<p>This method returns a true or false indicating whether or not the datetime object is in a leap year.</p>
+</li>
+
+<li>$dt-&#62;week()
+<pre class="sh_perl"> ($week_year, $week_number) = $dt-&#62;week;</pre>
+
+<p>Returns information about the calendar week which contains this datetime object. The values returned by this method are also available separately through the week_year and week_number methods.</p>
+
+<p>The first week of the year is defined by ISO as the one which contains the fourth day of January, which is equivalent to saying that it&#39;s the first week to overlap the new year by at least four days.</p>
+
+<p>Typically the week year will be the same as the year that the object is in, but dates at the very beginning of a calendar year often end up in the last week of the prior year, and similarly, the final few days of the year may be placed in the first week of the next year.</p>
+</li>
+
+<li>$dt-&#62;week_year()
+<p>Returns the year of the week. See <code>$dt-&#62;week()</code> for details.</p>
+</li>
+
+<li>$dt-&#62;week_number()
+<p>Returns the week of the year, from 1..53. See <code>$dt-&#62;week()</code> for details.</p>
+</li>
+
+<li>$dt-&#62;week_of_month()
+<p>The week of the month, from 0..5. The first week of the month is the first week that contains a Thursday. This is based on the ICU definition of week of month, and correlates to the ISO8601 week of year definition. A day in the week <i>before</i> the week with the first Thursday will be week 0.</p>
+</li>
+
+<li>$dt-&#62;jd()</li>
+
+<li>$dt-&#62;mjd()
+<p>These return the Julian Day and Modified Julian Day, respectively. The value returned is a floating point number. The fractional portion of the number represents the time portion of the datetime.</p>
+</li>
+
+<li>$dt-&#62;time_zone()
+<p>This returns the <code>DateTime::TimeZone</code> object for the datetime object.</p>
+</li>
+
+<li>$dt-&#62;offset()
+<p>This returns the offset from UTC, in seconds, of the datetime object according to the time zone.</p>
+</li>
+
+<li>$dt-&#62;is_dst()
+<p>Returns a boolean indicating whether or not the datetime object is currently in Daylight Saving Time or not.</p>
+</li>
+
+<li>$dt-&#62;time_zone_long_name()
+<p>This is a shortcut for <code>$dt-&#62;time_zone-&#62;name</code>. It&#39;s provided so that one can use &#34;%{time_zone_long_name}&#34; as a strftime format specifier.</p>
+</li>
+
+<li>$dt-&#62;time_zone_short_name()
+<p>This method returns the time zone abbreviation for the current time zone, such as &#34;PST&#34; or &#34;GMT&#34;. These names are <b>not</b> definitive, and should not be used in any application intended for general use by users around the world.</p>
+</li>
+
+<li>$dt-&#62;strftime( $format, ... )
+<p>This method implements functionality similar to the <code>strftime()</code> method in C. However, if given multiple format strings, then it will return multiple scalars, one for each format string.</p>
+
+<p>See the <a href="#strftime_Patterns" class="podlinkpod"
+>&#34;strftime Patterns&#34;</a> section for a list of all possible strftime patterns.</p>
+
+<p>If you give a pattern that doesn&#39;t exist, then it is simply treated as text.</p>
+</li>
+
+<li>$dt-&#62;format_cldr( $format, ... )
+<p>This method implements formatting based on the CLDR date patterns. If given multiple format strings, then it will return multiple scalars, one for each format string.</p>
+
+<p>See the <a href="#CLDR_Patterns" class="podlinkpod"
+>&#34;CLDR Patterns&#34;</a> section for a list of all possible CLDR patterns.</p>
+
+<p>If you give a pattern that doesn&#39;t exist, then it is simply treated as text.</p>
+</li>
+
+<li>$dt-&#62;epoch()
+<p>Return the UTC epoch value for the datetime object. Internally, this is implemented using <code>Time::Local</code>, which uses the Unix epoch even on machines with a different epoch (such as MacOS). Datetimes before the start of the epoch will be returned as a negative number.</p>
+
+<p>The return value from this method is always an integer.</p>
+
+<p>Since the epoch does not account for leap seconds, the epoch time for 1972-12-31T23:59:60 (UTC) is exactly the same as that for 1973-01-01T00:00:00.</p>
+
+<p>This module uses <code>Time::Local</code> to calculate the epoch, which may or may not handle epochs before 1904 or after 2038 (depending on the size of your system&#39;s integers, and whether or not Perl was compiled with 64-bit int support).</p>
+</li>
+
+<li>$dt-&#62;hires_epoch()
+<p>Returns the epoch as a floating point number. The floating point portion of the value represents the nanosecond value of the object. This method is provided for compatibility with the <code>Time::HiRes</code> module.</p>
+</li>
+
+<li>$dt-&#62;is_finite()</li>
+
+<li>$dt-&#62;is_infinite()
+<p>These methods allow you to distinguish normal datetime objects from infinite ones. Infinite datetime objects are documented in <a href="/~drolsky/DateTime-0.74/lib/DateTime/Infinite.pm" class="podlinkpod"
+>DateTime::Infinite</a>.</p>
+</li>
+
+<li>$dt-&#62;utc_rd_values()
+<p>Returns the current UTC Rata Die days, seconds, and nanoseconds as a three element list. This exists primarily to allow other calendar modules to create objects based on the values provided by this object.</p>
+</li>
+
+<li>$dt-&#62;local_rd_values()
+<p>Returns the current local Rata Die days, seconds, and nanoseconds as a three element list. This exists for the benefit of other modules which might want to use this information for date math, such as <code>DateTime::Event::Recurrence</code>.</p>
+</li>
+
+<li>$dt-&#62;leap_seconds()
+<p>Returns the number of leap seconds that have happened up to the datetime represented by the object. For floating datetimes, this always returns 0.</p>
+</li>
+
+<li>$dt-&#62;utc_rd_as_seconds()
+<p>Returns the current UTC Rata Die days and seconds purely as seconds. This number ignores any fractional seconds stored in the object, as well as leap seconds.</p>
+</li>
+
+<li>$dt-&#62;locale()
+<p>Returns the current locale object.</p>
+</li>
+
+<li>$dt-&#62;formatter()
+<p>Returns current formatter object or class. See <a href="#Formatters_And_Stringification" class="podlinkpod"
+>&#34;Formatters And Stringification&#34;</a> for details.</p>
+</li>
+</ul>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="&#34;Set&#34;_Methods"
+>&#34;Set&#34; Methods</a></h3>
+
+<p>The remaining methods provided by <code>DateTime.pm</code>, except where otherwise specified, return the object itself, thus making method chaining possible. For example:</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;now-&#62;set_time_zone( &#39;Australia/Sydney&#39; );
+
+  my $first = DateTime
+                -&#62;last_day_of_month( year =&#62; 2003, month =&#62; 3 )
+                -&#62;add( days =&#62; 1 )
+                -&#62;subtract( seconds =&#62; 1 );</pre>
+
+<ul>
+<li>$dt-&#62;set( .. )
+<p>This method can be used to change the local components of a date time, or its locale. This method accepts any parameter allowed by the <code>new()</code> method except for &#34;time_zone&#34;. Time zones may be set using the <code>set_time_zone()</code> method.</p>
+
+<p>This method performs parameters validation just as is done in the <code>new()</code> method.</p>
+
+<p><b>Do not use this method to do date math. Use the <code>add()</code> and <code>subtract()</code> methods instead.</b></p>
+</li>
+
+<li>$dt-&#62;set_year()</li>
+
+<li>$dt-&#62;set_month()</li>
+
+<li>$dt-&#62;set_day()</li>
+
+<li>$dt-&#62;set_hour()</li>
+
+<li>$dt-&#62;set_minute()</li>
+
+<li>$dt-&#62;set_second()</li>
+
+<li>$dt-&#62;set_nanosecond()</li>
+
+<li>$dt-&#62;set_locale()
+<p>These are shortcuts to calling <code>set()</code> with a single key. They all take a single parameter.</p>
+</li>
+
+<li>$dt-&#62;truncate( to =&#62; ... )
+<p>This method allows you to reset some of the local time components in the object to their &#34;zero&#34; values. The &#34;to&#34; parameter is used to specify which values to truncate, and it may be one of &#34;year&#34;, &#34;month&#34;, &#34;week&#34;, &#34;day&#34;, &#34;hour&#34;, &#34;minute&#34;, or &#34;second&#34;. For example, if &#34;month&#34; is specified, then the local day becomes 1, and the hour, minute, and second all become 0.</p>
+
+<p>If &#34;week&#34; is given, then the datetime is set to the beginning of the week in which it occurs, and the time components are all set to 0.</p>
+</li>
+
+<li>$dt-&#62;set_time_zone( $tz )
+<p>This method accepts either a time zone object or a string that can be passed as the &#34;name&#34; parameter to <code>DateTime::TimeZone-&#62;new()</code>. If the new time zone&#39;s offset is different from the old time zone, then the <i>local</i> time is adjusted accordingly.</p>
+
+<p>For example:</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;new(
+      year      =&#62; 2000,
+      month     =&#62; 5,
+      day       =&#62; 10,
+      hour      =&#62; 15,
+      minute    =&#62; 15,
+      time_zone =&#62; &#39;America/Los_Angeles&#39;,
+  );
+
+  print $dt-&#62;hour; # prints 15
+
+  $dt-&#62;set_time_zone( &#39;America/Chicago&#39; );
+
+  print $dt-&#62;hour; # prints 17</pre>
+
+<p>If the old time zone was a floating time zone, then no adjustments to the local time are made, except to account for leap seconds. If the new time zone is floating, then the <i>UTC</i> time is adjusted in order to leave the local time untouched.</p>
+
+<p>Fans of Tsai Ming-Liang&#39;s films will be happy to know that this does work:</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;now( time_zone =&#62; &#39;Asia/Taipei&#39; );
+
+  $dt-&#62;set_time_zone( &#39;Europe/Paris&#39; );</pre>
+
+<p>Yes, now we can know &#34;ni3 na4 bian1 ji2dian3?&#34;</p>
+</li>
+
+<li>$dt-&#62;set_formatter( $formatter )
+<p>Set the formatter for the object. See <a href="#Formatters_And_Stringification" class="podlinkpod"
+>&#34;Formatters And Stringification&#34;</a> for details.</p>
+
+<p>You can set this to <code>undef</code> to revert to the default formatter.</p>
+</li>
+</ul>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Math_Methods"
+>Math Methods</a></h3>
+
+<p>Like the set methods, math related methods always return the object itself, to allow for chaining:</p>
+
+<pre class="sh_perl">  $dt-&#62;add( days =&#62; 1 )-&#62;subtract( seconds =&#62; 1 );</pre>
+
+<ul>
+<li>$dt-&#62;duration_class()
+<p>This returns <code>DateTime::Duration</code>, but exists so that a subclass of <code>DateTime.pm</code> can provide a different value.</p>
+</li>
+
+<li>$dt-&#62;add_duration( $duration_object )
+<p>This method adds a <code>DateTime::Duration</code> to the current datetime. See the <a href="/~drolsky/DateTime-0.74/lib/DateTime/Duration.pm" class="podlinkpod"
+>DateTime::Duration</a> docs for more details.</p>
+</li>
+
+<li>$dt-&#62;add( DateTime::Duration-&#62;new parameters )
+<p>This method is syntactic sugar around the <code>add_duration()</code> method. It simply creates a new <code>DateTime::Duration</code> object using the parameters given, and then calls the <code>add_duration()</code> method.</p>
+</li>
+
+<li>$dt-&#62;subtract_duration( $duration_object )
+<p>When given a <code>DateTime::Duration</code> object, this method simply calls <code>invert()</code> on that object and passes that new duration to the <code>add_duration</code> method.</p>
+</li>
+
+<li>$dt-&#62;subtract( DateTime::Duration-&#62;new parameters )
+<p>Like <code>add()</code>, this is syntactic sugar for the <code>subtract_duration()</code> method.</p>
+</li>
+
+<li>$dt-&#62;subtract_datetime( $datetime )
+<p>This method returns a new <code>DateTime::Duration</code> object representing the difference between the two dates. The duration is <b>relative</b> to the object from which <code>$datetime</code> is subtracted. For example:</p>
+
+<pre class="sh_perl">    2003-03-15 00:00:00.00000000
+ -  2003-02-15 00:00:00.00000000
+ -------------------------------
+ = 1 month</pre>
+
+<p>Note that this duration is not an absolute measure of the amount of time between the two datetimes, because the length of a month varies, as well as due to the presence of leap seconds.</p>
+
+<p>The returned duration may have deltas for months, days, minutes, seconds, and nanoseconds.</p>
+</li>
+
+<li>$dt-&#62;delta_md( $datetime )</li>
+
+<li>$dt-&#62;delta_days( $datetime )
+<p>Each of these methods returns a new <code>DateTime::Duration</code> object representing some portion of the difference between two datetimes. The <code>delta_md()</code> method returns a duration which contains only the month and day portions of the duration is represented. The <code>delta_days()</code> method returns a duration which contains only days.</p>
+
+<p>The <code>delta_md</code> and <code>delta_days</code> methods truncate the duration so that any fractional portion of a day is ignored. Both of these methods operate on the date portion of a datetime only, and so effectively ignore the time zone.</p>
+
+<p>Unlike the subtraction methods, <b>these methods always return a positive (or zero) duration</b>.</p>
+</li>
+
+<li>$dt-&#62;delta_ms( $datetime )
+<p>Returns a duration which contains only minutes and seconds. Any day and month differences to minutes are converted to minutes and seconds. This method also <b>always return a positive (or zero) duration</b>.</p>
+</li>
+
+<li>$dt-&#62;subtract_datetime_absolute( $datetime )
+<p>This method returns a new <code>DateTime::Duration</code> object representing the difference between the two dates in seconds and nanoseconds. This is the only way to accurately measure the absolute amount of time between two datetimes, since units larger than a second do not represent a fixed number of seconds.</p>
+</li>
+</ul>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Class_Methods"
+>Class Methods</a></h3>
+
+<ul>
+<li>DateTime-&#62;DefaultLocale( $locale )
+<p>This can be used to specify the default locale to be used when creating DateTime objects. If unset, then &#34;en_US&#34; is used.</p>
+</li>
+
+<li>DateTime-&#62;compare( $dt1, $dt2 )</li>
+
+<li>DateTime-&#62;compare_ignore_floating( $dt1, $dt2 )
+<pre class="sh_perl">  $cmp = DateTime-&#62;compare( $dt1, $dt2 );
+
+  $cmp = DateTime-&#62;compare_ignore_floating( $dt1, $dt2 );</pre>
+
+<p>Compare two DateTime objects. The semantics are compatible with Perl&#39;s <code>sort()</code> function; it returns -1 if $dt1 &#60; $dt2, 0 if $dt1 == $dt2, 1 if $dt1 &#62; $dt2.</p>
+
+<p>If one of the two DateTime objects has a floating time zone, it will first be converted to the time zone of the other object. This is what you want most of the time, but it can lead to inconsistent results when you compare a number of DateTime objects, some of which are floating, and some of which are in other time zones.</p>
+
+<p>If you want to have consistent results (because you want to sort a number of objects, for example), you can use the <code>compare_ignore_floating()</code> method:</p>
+
+<pre class="sh_perl">  @dates = sort { DateTime-&#62;compare_ignore_floating($a, $b) } @dates;</pre>
+
+<p>In this case, objects with a floating time zone will be sorted as if they were UTC times.</p>
+
+<p>Since DateTime objects overload comparison operators, this:</p>
+
+<pre class="sh_perl">  @dates = sort @dates;</pre>
+
+<p>is equivalent to this:</p>
+
+<pre class="sh_perl">  @dates = sort { DateTime-&#62;compare($a, $b) } @dates;</pre>
+
+<p>DateTime objects can be compared to any other calendar class that implements the <code>utc_rd_values()</code> method.</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="How_Datetime_Math_Works"
+>How Datetime Math Works</a></h2>
+
+<p>It&#39;s important to have some understanding of how datetime math is implemented in order to effectively use this module and <code>DateTime::Duration</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Making_Things_Simple"
+>Making Things Simple</a></h3>
+
+<p>If you want to simplify your life and not have to think too hard about the nitty-gritty of datetime math, I have several recommendations:</p>
+
+<ul>
+<li>use the floating time zone
+<p>If you do not care about time zones or leap seconds, use the &#34;floating&#34; timezone:</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;now( time_zone =&#62; &#39;floating&#39; );</pre>
+
+<p>Math done on two objects in the floating time zone produces very predictable results.</p>
+
+<p>Note that in most cases you will want to start by creating an object in a specific zone and <i>then</i> convert it to the floating time zone. When an object goes from a real zone to the floating zone, the time for the object remains the same.</p>
+
+<p>This means that passing the floating zone to a constructor may not do what you want.</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;now( time_zone =&#62; &#39;floating&#39; );</pre>
+
+<p>is equivalent to</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;now( time_zone =&#62; &#39;UTC&#39; )-&#62;set_time_zone(&#39;floating&#39;);</pre>
+
+<p>This might not be what you wanted. Instead, you may prefer to do this:</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;now( time_zone =&#62; &#39;local&#39; )-&#62;set_time_zone(&#39;floating&#39;);</pre>
+</li>
+
+<li>use UTC for all calculations
+<p>If you do care about time zones (particularly DST) or leap seconds, try to use non-UTC time zones for presentation and user input only. Convert to UTC immediately and convert back to the local time zone for presentation:</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;new( %user_input, time_zone =&#62; $user_tz );
+  $dt-&#62;set_time_zone(&#39;UTC&#39;);
+
+  # do various operations - store it, retrieve it, add, subtract, etc.
+
+  $dt-&#62;set_time_zone($user_tz);
+  print $dt-&#62;datetime;</pre>
+</li>
+
+<li>math on non-UTC time zones
+<p>If you need to do date math on objects with non-UTC time zones, please read the caveats below carefully. The results <code>DateTime.pm</code> produces are predictable and correct, and mostly intuitive, but datetime math gets very ugly when time zones are involved, and there are a few strange corner cases involving subtraction of two datetimes across a DST change.</p>
+
+<p>If you can always use the floating or UTC time zones, you can skip ahead to <a href="/perldoc?Leap%20Seconds%20and%20Date%20Math" class="podlinkpod"
+>Leap Seconds and Date Math</a></p>
+</li>
+
+<li>date vs datetime math
+<p>If you only care about the date (calendar) portion of a datetime, you should use either <code>delta_md()</code> or <code>delta_days()</code>, not <code>subtract_datetime()</code>. This will give predictable, unsurprising results, free from DST-related complications.</p>
+</li>
+
+<li>subtract_datetime() and add_duration()
+<p>You must convert your datetime objects to the UTC time zone before doing date math if you want to make sure that the following formulas are always true:</p>
+
+<pre class="sh_perl">  $dt2 - $dt1 = $dur
+  $dt1 + $dur = $dt2
+  $dt2 - $dur = $dt1</pre>
+
+<p>Note that using <code>delta_days</code> ensures that this formula always works, regardless of the timezone of the objects involved, as does using <code>subtract_datetime_absolute()</code>. Other methods of subtraction are not always reversible.</p>
+</li>
+</ul>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Adding_a_Duration_to_a_Datetime"
+>Adding a Duration to a Datetime</a></h3>
+
+<p>The parts of a duration can be broken down into five parts. These are months, days, minutes, seconds, and nanoseconds. Adding one month to a date is different than adding 4 weeks or 28, 29, 30, or 31 days. Similarly, due to DST and leap seconds, adding a day can be different than adding 86,400 seconds, and adding a minute is not exactly the same as 60 seconds.</p>
+
+<p>We cannot convert between these units, except for seconds and nanoseconds, because there is no fixed conversion between the two units, because of things like leap seconds, DST changes, etc.</p>
+
+<p><code>DateTime.pm</code> always adds (or subtracts) days, then months, minutes, and then seconds and nanoseconds. If there are any boundary overflows, these are normalized at each step. For the days and months the local (not UTC) values are used. For minutes and seconds, the local values are used. This generally just works.</p>
+
+<p>This means that adding one month and one day to February 28, 2003 will produce the date April 1, 2003, not March 29, 2003.</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;new( year =&#62; 2003, month =&#62; 2, day =&#62; 28 );
+
+  $dt-&#62;add( months =&#62; 1, days =&#62; 1 );
+
+  # 2003-04-01 - the result</pre>
+
+<p>On the other hand, if we add months first, and then separately add days, we end up with March 29, 2003:</p>
+
+<pre class="sh_perl">  $dt-&#62;add( months =&#62; 1 )-&#62;add( days =&#62; 1 );
+
+  # 2003-03-29</pre>
+
+<p>We see similar strangeness when math crosses a DST boundary:</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;new(
+      year      =&#62; 2003,
+      month     =&#62; 4,
+      day       =&#62; 5,
+      hour      =&#62; 1,
+      minute    =&#62; 58,
+      time_zone =&#62; &#34;America/Chicago&#34;,
+  );
+
+  $dt-&#62;add( days =&#62; 1, minutes =&#62; 3 );
+  # 2003-04-06 02:01:00
+
+  $dt-&#62;add( minutes =&#62; 3 )-&#62;add( days =&#62; 1 );
+  # 2003-04-06 03:01:00</pre>
+
+<p>Note that if you converted the datetime object to UTC first you would get predictable results.</p>
+
+<p>If you want to know how many seconds a duration object represents, you have to add it to a datetime to find out, so you could do:</p>
+
+<pre class="sh_perl"> my $now = DateTime-&#62;now( time_zone =&#62; &#39;UTC&#39; );
+ my $later = $now-&#62;clone-&#62;add_duration($duration);
+
+ my $seconds_dur = $later-&#62;subtract_datetime_absolute($now);</pre>
+
+<p>This returns a duration which only contains seconds and nanoseconds.</p>
+
+<p>If we were add the duration to a different datetime object we might get a different number of seconds.</p>
+
+<p><a href="/~drolsky/DateTime-0.74/lib/DateTime/Duration.pm" class="podlinkpod"
+>DateTime::Duration</a> supports three different end-of-month algorithms for adding months. This comes into play when an addition results in a day past the end of the month (for example, adding one month to January 30).</p>
+
+<pre class="sh_perl"> # 2010-08-31 + 1 month = 2010-10-01
+ $dt-&#62;add( months =&#62; 1, end_of_month =&#62; &#39;wrap&#39; );
+
+ # 2010-01-30 + 1 month = 2010-02-28
+ $dt-&#62;add( months =&#62; 1, end_of_month =&#62; &#39;limit&#39; );
+
+ # 2010-04-30 + 1 month = 2010-05-31
+ $dt-&#62;add( months =&#62; 1, end_of_month =&#62; &#39;preserve&#39; );</pre>
+
+<p>By default, it uses &#34;wrap&#34; for positive durations and &#34;preserve&#34; for negative durations. See <a href="/~drolsky/DateTime-0.74/lib/DateTime/Duration.pm" class="podlinkpod"
+>DateTime::Duration</a> for a detailed explanation of these algorithms.</p>
+
+<p>If you need to do lots of work with durations, take a look at Rick Measham&#39;s <code>DateTime::Format::Duration</code> module, which lets you present information from durations in many useful ways.</p>
+
+<p>There are other subtract/delta methods in DateTime.pm to generate different types of durations. These methods are <code>subtract_datetime()</code>, <code>subtract_datetime_absolute()</code>, <code>delta_md()</code>, <code>delta_days()</code>, and <code>delta_ms()</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Datetime_Subtraction"
+>Datetime Subtraction</a></h3>
+
+<p>Date subtraction is done solely based on the two object&#39;s local datetimes, with one exception to handle DST changes. Also, if the two datetime objects are in different time zones, one of them is converted to the other&#39;s time zone first before subtraction. This is best explained through examples:</p>
+
+<p>The first of these probably makes the most sense:</p>
+
+<pre class="sh_perl">  my $dt1 = DateTime-&#62;new(
+      year      =&#62; 2003,
+      month     =&#62; 5,
+      day       =&#62; 6,
+      time_zone =&#62; &#39;America/Chicago&#39;,
+  );
+
+  # not DST
+
+  my $dt2 = DateTime-&#62;new(
+      year      =&#62; 2003,
+      month     =&#62; 11,
+      day       =&#62; 6,
+      time_zone =&#62; &#39;America/Chicago&#39;,
+  );
+
+  # is DST
+
+  my $dur = $dt2-&#62;subtract_datetime($dt1);
+  # 6 months</pre>
+
+<p>Nice and simple.</p>
+
+<p>This one is a little trickier, but still fairly logical:</p>
+
+<pre class="sh_perl">  my $dt1 = DateTime-&#62;new(
+      year      =&#62; 2003,
+      month     =&#62; 4,
+      day       =&#62; 5,
+      hour      =&#62; 1,
+      minute    =&#62; 58,
+      time_zone =&#62; &#34;America/Chicago&#34;,
+  );
+
+  # is DST
+
+  my $dt2 = DateTime-&#62;new(
+      year      =&#62; 2003,
+      month     =&#62; 4,
+      day       =&#62; 7,
+      hour      =&#62; 2,
+      minute    =&#62; 1,
+      time_zone =&#62; &#34;America/Chicago&#34;,
+  );
+
+  # not DST
+
+  my $dur = $dt2-&#62;subtract_datetime($dt1);
+
+  # 2 days and 3 minutes</pre>
+
+<p>Which contradicts the result this one gives, even though they both make sense:</p>
+
+<pre class="sh_perl">  my $dt1 = DateTime-&#62;new(
+      year      =&#62; 2003,
+      month     =&#62; 4,
+      day       =&#62; 5,
+      hour      =&#62; 1,
+      minute    =&#62; 58,
+      time_zone =&#62; &#34;America/Chicago&#34;,
+  );
+
+  # is DST
+
+  my $dt2 = DateTime-&#62;new(
+      year      =&#62; 2003,
+      month     =&#62; 4,
+      day       =&#62; 6,
+      hour      =&#62; 3,
+      minute    =&#62; 1,
+      time_zone =&#62; &#34;America/Chicago&#34;,
+  );
+
+  # not DST
+
+  my $dur = $dt2-&#62;subtract_datetime($dt1);
+
+  # 1 day and 3 minutes</pre>
+
+<p>This last example illustrates the &#34;DST&#34; exception mentioned earlier. The exception accounts for the fact 2003-04-06 only lasts 23 hours.</p>
+
+<p>And finally:</p>
+
+<pre class="sh_perl">  my $dt2 = DateTime-&#62;new(
+      year      =&#62; 2003,
+      month     =&#62; 10,
+      day       =&#62; 26,
+      hour      =&#62; 1,
+      time_zone =&#62; &#39;America/Chicago&#39;,
+  );
+
+  my $dt1 = $dt2-&#62;clone-&#62;subtract( hours =&#62; 1 );
+
+  my $dur = $dt2-&#62;subtract_datetime($dt1);
+  # 60 minutes</pre>
+
+<p>This seems obvious until you realize that subtracting 60 minutes from <code>$dt2</code> in the above example still leaves the clock time at &#34;01:00:00&#34;. This time we are accounting for a 25 hour day.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Reversibility"
+>Reversibility</a></h3>
+
+<p>Date math operations are not always reversible. This is because of the way that addition operations are ordered. As was discussed earlier, adding 1 day and 3 minutes in one call to <code>add()</code> is not the same as first adding 3 minutes and 1 day in two separate calls.</p>
+
+<p>If we take a duration returned from <code>subtract_datetime()</code> and then try to add or subtract that duration from one of the datetimes we just used, we sometimes get interesting results:</p>
+
+<pre class="sh_perl">  my $dt1 = DateTime-&#62;new(
+      year      =&#62; 2003,
+      month     =&#62; 4,
+      day       =&#62; 5,
+      hour      =&#62; 1,
+      minute    =&#62; 58,
+      time_zone =&#62; &#34;America/Chicago&#34;,
+  );
+
+  my $dt2 = DateTime-&#62;new(
+      year      =&#62; 2003,
+      month     =&#62; 4,
+      day       =&#62; 6,
+      hour      =&#62; 3,
+      minute    =&#62; 1,
+      time_zone =&#62; &#34;America/Chicago&#34;,
+  );
+
+  my $dur = $dt2-&#62;subtract_datetime($dt1);
+  # 1 day and 3 minutes
+
+  $dt1-&#62;add_duration($dur);
+  # gives us $dt2
+
+  $dt2-&#62;subtract_duration($dur);
+  # gives us 2003-04-05 02:58:00 - 1 hour later than $dt1</pre>
+
+<p>The <code>subtract_duration()</code> operation gives us a (perhaps) unexpected answer because it first subtracts one day to get 2003-04-05T03:01:00 and then subtracts 3 minutes to get the final result.</p>
+
+<p>If we explicitly reverse the order we can get the original value of <code>$dt1</code>. This can be facilitated by <code>DateTime::Duration</code>&#39;s <code>calendar_duration()</code> and <code>clock_duration()</code> methods:</p>
+
+<pre class="sh_perl">  $dt2-&#62;subtract_duration( $dur-&#62;clock_duration )
+      -&#62;subtract_duration( $dur-&#62;calendar_duration );</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Leap_Seconds_and_Date_Math"
+>Leap Seconds and Date Math</a></h3>
+
+<p>The presence of leap seconds can cause even more anomalies in date math. For example, the following is a legal datetime:</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;new(
+      year      =&#62; 1972,
+      month     =&#62; 12,
+      day       =&#62; 31,
+      hour      =&#62; 23,
+      minute    =&#62; 59,
+      second    =&#62; 60,
+      time_zone =&#62; &#39;UTC&#39;
+  );</pre>
+
+<p>If we do the following:</p>
+
+<pre class="sh_perl"> $dt-&#62;add( months =&#62; 1 );</pre>
+
+<p>Then the datetime is now &#34;1973-02-01 00:00:00&#34;, because there is no 23:59:60 on 1973-01-31.</p>
+
+<p>Leap seconds also force us to distinguish between minutes and seconds during date math. Given the following datetime:</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;new(
+      year      =&#62; 1972,
+      month     =&#62; 12,
+      day       =&#62; 31,
+      hour      =&#62; 23,
+      minute    =&#62; 59,
+      second    =&#62; 30,
+      time_zone =&#62; &#39;UTC&#39;
+  );</pre>
+
+<p>we will get different results when adding 1 minute than we get if we add 60 seconds. This is because in this case, the last minute of the day, beginning at 23:59:00, actually contains 61 seconds.</p>
+
+<p>Here are the results we get:</p>
+
+<pre class="sh_perl">  # 1972-12-31 23:59:30 - our starting datetime
+
+  $dt-&#62;clone-&#62;add( minutes =&#62; 1 );
+  # 1973-01-01 00:00:30 - one minute later
+
+  $dt-&#62;clone-&#62;add( seconds =&#62; 60 );
+  # 1973-01-01 00:00:29 - 60 seconds later
+
+  $dt-&#62;clone-&#62;add( seconds =&#62; 61 );
+  # 1973-01-01 00:00:30 - 61 seconds later</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Local_vs._UTC_and_24_hours_vs._1_day"
+>Local vs. UTC and 24 hours vs. 1 day</a></h3>
+
+<p>When math crosses a daylight saving boundary, a single day may have more or less than 24 hours.</p>
+
+<p>For example, if you do this:</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;new(
+      year      =&#62; 2003,
+      month     =&#62; 4,
+      day       =&#62; 5,
+      hour      =&#62; 2,
+      time_zone =&#62; &#39;America/Chicago&#39;,
+  );
+
+  $dt-&#62;add( days =&#62; 1 );</pre>
+
+<p>then you will produce an <i>invalid</i> local time, and therefore an exception will be thrown.</p>
+
+<p>However, this works:</p>
+
+<pre class="sh_perl">  my $dt = DateTime-&#62;new(
+      year      =&#62; 2003,
+      month     =&#62; 4,
+      day       =&#62; 5,
+      hour      =&#62; 2,
+      time_zone =&#62; &#39;America/Chicago&#39;,
+  );
+
+  $dt-&#62;add( hours =&#62; 24 );</pre>
+
+<p>and produces a datetime with the local time of &#34;03:00&#34;.</p>
+
+<p>If all this makes your head hurt, there is a simple alternative. Just convert your datetime object to the &#34;UTC&#34; time zone before doing date math on it, and switch it back to the local time zone afterwards. This avoids the possibility of having date math throw an exception, and makes sure that 1 day equals 24 hours. Of course, this may not always be desirable, so caveat user!</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Overloading"
+>Overloading</a></h2>
+
+<p>This module explicitly overloads the addition (+), subtraction (-), string and numeric comparison operators. This means that the following all do sensible things:</p>
+
+<pre class="sh_perl">  my $new_dt = $dt + $duration_obj;
+
+  my $new_dt = $dt - $duration_obj;
+
+  my $duration_obj = $dt - $new_dt;
+
+  foreach my $dt ( sort @dts ) { ... }</pre>
+
+<p>Additionally, the fallback parameter is set to true, so other derivable operators (+=, -=, etc.) will work properly. Do not expect increment (++) or decrement (--) to do anything useful.</p>
+
+<p>The string comparison operators, <code>eq</code> or <code>ne</code>, will use the string value to compare with non-DateTime objects.</p>
+
+<p>DateTime objects do not have a numeric value, using <code>==</code> or <code>&#60;=&#62;</code> to compare a DateTime object with a non-DateTime object will result in an exception. To safely sort mixed DateTime and non-DateTime objects, use <code>sort { $a cmp $b } @dates</code>.</p>
+
+<p>The module also overloads stringification using the object&#39;s formatter, defaulting to <code>iso8601()</code> method. See <a href="#Formatters_And_Stringification" class="podlinkpod"
+>&#34;Formatters And Stringification&#34;</a> for details.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Formatters_And_Stringification"
+>Formatters And Stringification</a></h2>
+
+<p>You can optionally specify a &#34;formatter&#34;, which is usually a DateTime::Format::* object/class, to control the stringification of the DateTime object.</p>
+
+<p>Any of the constructor methods can accept a formatter argument:</p>
+
+<pre class="sh_perl">  my $formatter = DateTime::Format::Strptime-&#62;new(...);
+  my $dt = DateTime-&#62;new(year =&#62; 2004, formatter =&#62; $formatter);</pre>
+
+<p>Or, you can set it afterwards:</p>
+
+<pre class="sh_perl">  $dt-&#62;set_formatter($formatter);
+  $formatter = $dt-&#62;formatter();</pre>
+
+<p>Once you set the formatter, the overloaded stringification method will use the formatter. If unspecified, the <code>iso8601()</code> method is used.</p>
+
+<p>A formatter can be handy when you know that in your application you want to stringify your DateTime objects into a special format all the time, for example to a different language.</p>
+
+<p>If you provide a formatter class name or object, it must implement a <code>format_datetime</code> method. This method will be called with just the DateTime object as its argument.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="CLDR_Patterns"
+>CLDR Patterns</a></h2>
+
+<p>The CLDR pattern language is both more powerful and more complex than strftime. Unlike strftime patterns, you often have to explicitly escape text that you do not want formatted, as the patterns are simply letters without any prefix.</p>
+
+<p>For example, &#34;yyyy-MM-dd&#34; is a valid CLDR pattern. If you want to include any lower or upper case ASCII characters as-is, you can surround them with single quotes (&#39;). If you want to include a single quote, you must escape it as two single quotes (&#39;&#39;).</p>
+
+<pre class="sh_perl">  &#39;Today is &#39; EEEE
+  &#39;It is now&#39; h &#39;o&#39;&#39;clock&#39; a</pre>
+
+<p>Spaces and any non-letter text will always be passed through as-is.</p>
+
+<p>Many CLDR patterns which produce numbers will pad the number with leading zeroes depending on the length of the format specifier. For example, &#34;h&#34; represents the current hour from 1-12. If you specify &#34;hh&#34; then the 1-9 will have a leading zero prepended.</p>
+
+<p>However, CLDR often uses five of a letter to represent the narrow form of a pattern. This inconsistency is necessary for backwards compatibility.</p>
+
+<p>CLDR often distinguishes between the &#34;format&#34; and &#34;stand-alone&#34; forms of a pattern. The format pattern is used when the thing in question is being placed into a larger string. The stand-alone form is used when displaying that item by itself, for example in a calendar.</p>
+
+<p>It also often provides three sizes for each item, wide (the full name), abbreviated, and narrow. The narrow form is often just a single character, for example &#34;T&#34; for &#34;Tuesday&#34;, and may not be unique.</p>
+
+<p>CLDR provides a fairly complex system for localizing time zones that we ignore entirely. The time zone patterns just use the information provided by <code>DateTime::TimeZone</code>, and <i>do not follow the CLDR spec</i>.</p>
+
+<p>The output of a CLDR pattern is always localized, when applicable.</p>
+
+<p>CLDR provides the following patterns:</p>
+
+<ul>
+<li>G{1,3}
+<p>The abbreviated era (BC, AD).</p>
+</li>
+
+<li>GGGG
+<p>The wide era (Before Christ, Anno Domini).</p>
+</li>
+
+<li>GGGGG
+<p>The narrow era, if it exists (and it mostly doesn&#39;t).</p>
+</li>
+
+<li>y and y{3,}
+<p>The year, zero-prefixed as needed. Negative years will start with a &#34;-&#34;, and this will be included in the length calculation.</p>
+
+<p>In other, words the &#34;yyyyy&#34; pattern will format year -1234 as &#34;-1234&#34;, not &#34;-01234&#34;.</p>
+</li>
+
+<li>yy
+<p>This is a special case. It always produces a two-digit year, so &#34;1976&#34; becomes &#34;76&#34;. Negative years will start with a &#34;-&#34;, making them one character longer.</p>
+</li>
+
+<li>Y{1,}
+<p>The week of the year, from <code>$dt-&#62;week_year()</code>.</p>
+</li>
+
+<li>u{1,}
+<p>Same as &#34;y&#34; except that &#34;uu&#34; is not a special case.</p>
+</li>
+
+<li>Q{1,2}
+<p>The quarter as a number (1..4).</p>
+</li>
+
+<li>QQQ
+<p>The abbreviated format form for the quarter.</p>
+</li>
+
+<li>QQQQ
+<p>The wide format form for the quarter.</p>
+</li>
+
+<li>q{1,2}
+<p>The quarter as a number (1..4).</p>
+</li>
+
+<li>qqq
+<p>The abbreviated stand-alone form for the quarter.</p>
+</li>
+
+<li>qqqq
+<p>The wide stand-alone form for the quarter.</p>
+</li>
+
+<li>M{1,2]
+<p>The numerical month.</p>
+</li>
+
+<li>MMM
+<p>The abbreviated format form for the month.</p>
+</li>
+
+<li>MMMM
+<p>The wide format form for the month.</p>
+</li>
+
+<li>MMMMM
+<p>The narrow format form for the month.</p>
+</li>
+
+<li>L{1,2]
+<p>The numerical month.</p>
+</li>
+
+<li>LLL
+<p>The abbreviated stand-alone form for the month.</p>
+</li>
+
+<li>LLLL
+<p>The wide stand-alone form for the month.</p>
+</li>
+
+<li>LLLLL
+<p>The narrow stand-alone form for the month.</p>
+</li>
+
+<li>w{1,2}
+<p>The week of the year, from <code>$dt-&#62;week_number()</code>.</p>
+</li>
+
+<li>W
+<p>The week of the month, from <code>$dt-&#62;week_of_month()</code>.</p>
+</li>
+
+<li>d{1,2}
+<p>The numeric day of of the month.</p>
+</li>
+
+<li>D{1,3}
+<p>The numeric day of of the year.</p>
+</li>
+
+<li>F
+<p>The day of the week in the month, from <code>$dt-&#62;weekday_of_month()</code>.</p>
+</li>
+
+<li>g{1,}
+<p>The modified Julian day, from <code>$dt-&#62;mjd()</code>.</p>
+</li>
+
+<li>E{1,3} and eee
+<p>The abbreviated format form for the day of the week.</p>
+</li>
+
+<li>EEEE and eeee
+<p>The wide format form for the day of the week.</p>
+</li>
+
+<li>EEEEE and eeeee
+<p>The narrow format form for the day of the week.</p>
+</li>
+
+<li>e{1,2}
+<p>The <i>local</i> numeric day of the week, from 1 to 7. This number depends on what day is considered the first day of the week, which varies by locale. For example, in the US, Sunday is the first day of the week, so this returns 2 for Monday.</p>
+</li>
+
+<li>c
+<p>The numeric day of the week from 1 to 7, treating Monday as the first of the week, regardless of locale.</p>
+</li>
+
+<li>ccc
+<p>The abbreviated stand-alone form for the day of the week.</p>
+</li>
+
+<li>cccc
+<p>The wide stand-alone form for the day of the week.</p>
+</li>
+
+<li>ccccc
+<p>The narrow format form for the day of the week.</p>
+</li>
+
+<li>a
+<p>The localized form of AM or PM for the time.</p>
+</li>
+
+<li>h{1,2}
+<p>The hour from 1-12.</p>
+</li>
+
+<li>H{1,2}
+<p>The hour from 0-23.</p>
+</li>
+
+<li>K{1,2}
+<p>The hour from 0-11.</p>
+</li>
+
+<li>k{1,2}
+<p>The hour from 1-24.</p>
+</li>
+
+<li>j{1,2}
+<p>The hour, in 12 or 24 hour form, based on the preferred form for the locale. In other words, this is equivalent to either &#34;h{1,2}&#34; or &#34;H{1,2}&#34;.</p>
+</li>
+
+<li>m{1,2}
+<p>The minute.</p>
+</li>
+
+<li>s{1,2}
+<p>The second.</p>
+</li>
+
+<li>S{1,}
+<p>The fractional portion of the seconds, rounded based on the length of the specifier. This returned <i>without</i> a leading decimal point, but may have leading or trailing zeroes.</p>
+</li>
+
+<li>A{1,}
+<p>The millisecond of the day, based on the current time. In other words, if it is 12:00:00.00, this returns 43200000.</p>
+</li>
+
+<li>z{1,3}
+<p>The time zone short name.</p>
+</li>
+
+<li>zzzz
+<p>The time zone long name.</p>
+</li>
+
+<li>Z{1,3}
+<p>The time zone offset.</p>
+</li>
+
+<li>ZZZZ
+<p>The time zone short name and the offset as one string, so something like &#34;CDT-0500&#34;.</p>
+</li>
+
+<li>v{1,3}
+<p>The time zone short name.</p>
+</li>
+
+<li>vvvv
+<p>The time zone long name.</p>
+</li>
+
+<li>V{1,3}
+<p>The time zone short name.</p>
+</li>
+
+<li>VVVV
+<p>The time zone long name.</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="strftime_Patterns"
+>strftime Patterns</a></h2>
+
+<p>The following patterns are allowed in the format string given to the <code>$dt-&#62;strftime()</code> method:</p>
+
+<ul>
+<li>%a
+<p>The abbreviated weekday name.</p>
+</li>
+
+<li>%A
+<p>The full weekday name.</p>
+</li>
+
+<li>%b
+<p>The abbreviated month name.</p>
+</li>
+
+<li>%B
+<p>The full month name.</p>
+</li>
+
+<li>%c
+<p>The default datetime format for the object&#39;s locale.</p>
+</li>
+
+<li>%C
+<p>The century number (year/100) as a 2-digit integer.</p>
+</li>
+
+<li>%d
+<p>The day of the month as a decimal number (range 01 to 31).</p>
+</li>
+
+<li>%D
+<p>Equivalent to %m/%d/%y. This is not a good standard format if you want folks from both the United States and the rest of the world to understand the date!</p>
+</li>
+
+<li>%e
+<p>Like %d, the day of the month as a decimal number, but a leading zero is replaced by a space.</p>
+</li>
+
+<li>%F
+<p>Equivalent to %Y-%m-%d (the ISO 8601 date format)</p>
+</li>
+
+<li>%G
+<p>The ISO 8601 year with century as a decimal number. The 4-digit year corresponding to the ISO week number (see %V). This has the same format and value as %Y, except that if the ISO week number belongs to the previous or next year, that year is used instead. (TZ)</p>
+</li>
+
+<li>%g
+<p>Like %G, but without century, i.e., with a 2-digit year (00-99).</p>
+</li>
+
+<li>%h
+<p>Equivalent to %b.</p>
+</li>
+
+<li>%H
+<p>The hour as a decimal number using a 24-hour clock (range 00 to 23).</p>
+</li>
+
+<li>%I
+<p>The hour as a decimal number using a 12-hour clock (range 01 to 12).</p>
+</li>
+
+<li>%j
+<p>The day of the year as a decimal number (range 001 to 366).</p>
+</li>
+
+<li>%k
+<p>The hour (24-hour clock) as a decimal number (range 0 to 23); single digits are preceded by a blank. (See also %H.)</p>
+</li>
+
+<li>%l
+<p>The hour (12-hour clock) as a decimal number (range 1 to 12); single digits are preceded by a blank. (See also %I.)</p>
+</li>
+
+<li>%m
+<p>The month as a decimal number (range 01 to 12).</p>
+</li>
+
+<li>%M
+<p>The minute as a decimal number (range 00 to 59).</p>
+</li>
+
+<li>%n
+<p>A newline character.</p>
+</li>
+
+<li>%N
+<p>The fractional seconds digits. Default is 9 digits (nanoseconds).</p>
+
+<pre class="sh_perl">  %3N   milliseconds (3 digits)
+  %6N   microseconds (6 digits)
+  %9N   nanoseconds  (9 digits)</pre>
+</li>
+
+<li>%p
+<p>Either `AM&#39; or `PM&#39; according to the given time value, or the corresponding strings for the current locale. Noon is treated as `pm&#39; and midnight as `am&#39;.</p>
+</li>
+
+<li>%P
+<p>Like %p but in lowercase: `am&#39; or `pm&#39; or a corresponding string for the current locale.</p>
+</li>
+
+<li>%r
+<p>The time in a.m. or p.m. notation. In the POSIX locale this is equivalent to `%I:%M:%S %p&#39;.</p>
+</li>
+
+<li>%R
+<p>The time in 24-hour notation (%H:%M). (SU) For a version including the seconds, see %T below.</p>
+</li>
+
+<li>%s
+<p>The number of seconds since the epoch.</p>
+</li>
+
+<li>%S
+<p>The second as a decimal number (range 00 to 61).</p>
+</li>
+
+<li>%t
+<p>A tab character.</p>
+</li>
+
+<li>%T
+<p>The time in 24-hour notation (%H:%M:%S).</p>
+</li>
+
+<li>%u
+<p>The day of the week as a decimal, range 1 to 7, Monday being 1. See also %w.</p>
+</li>
+
+<li>%U
+<p>The week number of the current year as a decimal number, range 00 to 53, starting with the first Sunday as the first day of week 01. See also %V and %W.</p>
+</li>
+
+<li>%V
+<p>The ISO 8601:1988 week number of the current year as a decimal number, range 01 to 53, where week 1 is the first week that has at least 4 days in the current year, and with Monday as the first day of the week. See also %U and %W.</p>
+</li>
+
+<li>%w
+<p>The day of the week as a decimal, range 0 to 6, Sunday being 0. See also %u.</p>
+</li>
+
+<li>%W
+<p>The week number of the current year as a decimal number, range 00 to 53, starting with the first Monday as the first day of week 01.</p>
+</li>
+
+<li>%x
+<p>The default date format for the object&#39;s locale.</p>
+</li>
+
+<li>%X
+<p>The default time format for the object&#39;s locale.</p>
+</li>
+
+<li>%y
+<p>The year as a decimal number without a century (range 00 to 99).</p>
+</li>
+
+<li>%Y
+<p>The year as a decimal number including the century.</p>
+</li>
+
+<li>%z
+<p>The time-zone as hour offset from UTC. Required to emit RFC822-conformant dates (using &#34;%a, %d %b %Y %H:%M:%S %z&#34;).</p>
+</li>
+
+<li>%Z
+<p>The time zone or name or abbreviation.</p>
+</li>
+
+<li>%%
+<p>A literal `%&#39; character.</p>
+</li>
+
+<li>%{method}
+<p>Any method name may be specified using the format <code>%{method}</code> name where &#34;method&#34; is a valid <code>DateTime.pm</code> object method.</p>
+</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="DateTime.pm_and_Storable"
+>DateTime.pm and Storable</a></h2>
+
+<p>DateTime implements Storable hooks in order to reduce the size of a serialized DateTime object.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="THE_DATETIME_PROJECT_ECOSYSTEM"
+>THE DATETIME PROJECT ECOSYSTEM <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This module is part of a larger ecosystem of modules in the DateTime family.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="DateTime::Set"
+><a href="/perldoc?DateTime%3A%3ASet" class="podlinkpod"
+>DateTime::Set</a></a></h2>
+
+<p>The <a href="/perldoc?DateTime%3A%3ASet" class="podlinkpod"
+>DateTime::Set</a> module represents sets (including recurrences) of datetimes. Many modules return sets or recurrences.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Format_Modules"
+>Format Modules</a></h2>
+
+<p>The various format modules exist to parse and format datetimes. For example, <a href="/perldoc?DateTime%3A%3AFormat%3A%3AHTTP" class="podlinkpod"
+>DateTime::Format::HTTP</a> parses dates according to the RFC 1123 format:</p>
+
+<pre class="sh_perl">  my $datetime
+      = DateTime::Format::HTTP-&#62;parse_datetime(&#39;Thu Feb  3 17:03:55 GMT 1994&#39;);
+
+  print DateTime::Format::HTTP-&#62;format_datetime($datetime);</pre>
+
+<p>Most format modules are suitable for use as a <code>formatter</code> with a DateTime object.</p>
+
+<p>All format modules start with <code>DateTime::Format::</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Calendar_Modules"
+>Calendar Modules</a></h2>
+
+<p>There are a number of modules on CPAN that implement non-Gregorian calendars, such as the Chinese, Mayan, and Julian calendars.</p>
+
+<p>All calendar modules start with <code>DateTime::Calendar::</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Event_Modules"
+>Event Modules</a></h2>
+
+<p>There are a number of modules that calculate the dates for events, such as Easter, Sunrise, etc.</p>
+
+<p>All event modules start with <code>DateTime::Event::</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Others"
+>Others</a></h2>
+
+<p>There are many other modules that work with DateTime, including modules in the <code>DateTimeX</code> namespace, as well as others.</p>
+
+<p>See the <a href="http://datetime.perl.org" class="podlinkurl"
+>datetime wiki</a> and <a href="http://search.cpan.org/search?query=datetime&#38;mode=dist" class="podlinkurl"
+>search.cpan.org</a> for more details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="KNOWN_BUGS"
+>KNOWN BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The tests in <em>20infinite.t</em> seem to fail on some machines, particularly on Win32. This appears to be related to Perl&#39;s internal handling of IEEE infinity and NaN, and seems to be highly platform/compiler/phase of moon dependent.</p>
+
+<p>If you don&#39;t plan to use infinite datetimes you can probably ignore this. This will be fixed (perhaps) in future versions.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUPPORT"
+>SUPPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Support for this module is provided via the datetime@perl.org email list. See <a href="http://datetime.perl.org/wiki/datetime/page/Mailing_List" class="podlinkurl"
+>http://datetime.perl.org/wiki/datetime/page/Mailing_List</a> for details.</p>
+
+<p>Please submit bugs to the CPAN RT system at <a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=DateTime" class="podlinkurl"
+>http://rt.cpan.org/NoAuth/Bugs.html?Dist=DateTime</a> or via email at bug-datetime@rt.cpan.org.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DONATIONS"
+>DONATIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you&#39;d like to thank me for the work I&#39;ve done on this module, please consider making a &#34;donation&#34; to me via PayPal. I spend a lot of free time creating free software, and would appreciate any support you&#39;d care to offer.</p>
+
+<p>Please note that <b>I am not suggesting that you must do this</b> in order for me to continue working on this particular software. I will continue to do so, inasmuch as I have in the past, for as long as it interests me.</p>
+
+<p>Similarly, a donation made in this way will probably not make me work on this software much more, unless I get so many donations that I can consider working on free software full time, which seems unlikely at best.</p>
+
+<p>To donate, log into PayPal and send money to autarch@urth.org or use the button on this page: <a href="http://www.urth.org/~autarch/fs-donation.html" class="podlinkurl"
+>http://www.urth.org/~autarch/fs-donation.html</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>datetime@perl.org mailing list</p>
+
+<p><a href="http://datetime.perl.org/" class="podlinkurl"
+>http://datetime.perl.org/</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Dave Rolsky &#60;autarch@urth.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This software is Copyright (c) 2012 by Dave Rolsky.</p>
+
+<p>This is free software, licensed under:</p>
+
+<pre class="sh_perl">  The Artistic License 2.0 (GPL Compatible)</pre>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78056 Uploads, 24684 Distributions
+105889 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 20:28:40 2012 GMT (0.18616509437561) @cpansearch1 -->
+ </body>
+</html>

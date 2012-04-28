@@ -1,0 +1,42 @@
+TODO file for DateTime::Incomplete
+
+- Add new methods from DateTime
+
+- truncate( to => 'week' )
+
+- test Storable hooks
+
+    perl -Ilib -MStorable -MDateTime::Incomplete -MData::Dumper -e '$dt=DateTime->new(year=>1970);$dti=DateTime::Incomplete->new( year => 2003, base=>$dt, time_zone => "America/Chicago" );$freeze = Storable::nfreeze( $dti );print "$freeze\n"; '
+
+- more tests for next/previous/closest with year and nanosecond
+- use $FIELDS[0] instead of 'year'; $FIELDS[-2] instead of nanosecond
+- change @FIELDS to a "class" constant (instead of "package")
+
+- locale and time_zone tests:
+  mixing string and object time_zones;
+  time_zone-only and locale-only DT::I objects.
+
+IDEAS
+
+* 'undef_char' could be configurable.
+
+* add_datetime
+
+Just like to_datetime, but adds the field values.
+
+* compare
+
+or is that simply not defined?
+
+* join( $dti )
+
+join the "defined" keys of two DT::Incomplete objects
+
+* set_week
+
+$dti->set( week => 10 )
+
+* is_incomplete/is_complete
+
+How do we know it is complete?
+

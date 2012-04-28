@@ -1,0 +1,1348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Set::IntSpan - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Set-IntSpan",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Set-IntSpan-1.16",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Set::IntSpan",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SWMCD",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Set::IntSpan">permalink</a></div>
+  <a href="/~swmcd/">Steven McDougall</a> &gt;
+  <a href="/~swmcd/Set-IntSpan-1.16/">Set-IntSpan-1.16</a> &gt;
+  Set::IntSpan
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/ed61327470f4c13b4ad519ada797985c?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SW/SWMCD/Set-IntSpan-1.16.tar.gz">Set-IntSpan-1.16.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Set%3A%3AIntSpan;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SWMCD/Set-IntSpan-1.16/IntSpan.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?List%3A%3AUtil">List::Util</a><br>
+<a href="/perldoc?Set%3A%3AScalar">Set::Scalar</a><br>
+<a href="/perldoc?Set%3A%3AInfinite">Set::Infinite</a><br>
+<a href="/perldoc?Math%3A%3ABigInt">Math::BigInt</a><br>
+<a href="/perldoc?Regexp%3A%3AGenex">Regexp::Genex</a><br>
+<a href="/perldoc?Bit%3A%3AVector">Bit::Vector</a><br>
+<a href="/perldoc?Math%3A%3ABigFloat">Math::BigFloat</a><br>
+<a href="/perldoc?Devel%3A%3ADProf">Devel::DProf</a><br>
+<a href="/perldoc?Array%3A%3AIntSpan">Array::IntSpan</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Set%3A%3AIntSpan">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Set-IntSpan">View/Report Bugs</a><br/>
+
+</div>
+</div>
+  Module Version:  1.16 &nbsp;
+<span class="noprint">
+  <a href="/src/SWMCD/Set-IntSpan-1.16/IntSpan.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Operator_overloads'>Operator overloads</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#EXPORTS'>EXPORTS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#@EXPORT'>@EXPORT</a>
+    <li class='indexItem indexItem2'><a href='#@EXPORT_OK'>@EXPORT_OK</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#SPANS'>SPANS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Finite_forms'>Finite forms</a>
+    <li class='indexItem indexItem2'><a href='#Infinite_forms'>Infinite forms</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SET_SPECIFICATIONS'>SET SPECIFICATIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Empty'>Empty</a>
+    <li class='indexItem indexItem2'><a href='#Object_reference'>Object reference</a>
+    <li class='indexItem indexItem2'><a href='#Run_list'>Run list</a>
+    <li class='indexItem indexItem2'><a href='#Finite_forms'>Finite forms</a>
+    <li class='indexItem indexItem2'><a href='#Infinite_forms'>Infinite forms</a>
+    <li class='indexItem indexItem2'><a href='#Empty_forms'>Empty forms</a>
+    <li class='indexItem indexItem2'><a href='#Restrictions'>Restrictions</a>
+    <li class='indexItem indexItem2'><a href='#Examples'>Examples</a>
+    <li class='indexItem indexItem2'><a href='#Array_reference'>Array reference</a>
+    <li class='indexItem indexItem2'><a href='#Examples'>Examples</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#ITERATORS'>ITERATORS</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Creation'>Creation</a>
+    <li class='indexItem indexItem2'><a href='#Set_operations'>Set operations</a>
+    <li class='indexItem indexItem2'><a href='#Mutators'>Mutators</a>
+    <li class='indexItem indexItem2'><a href='#Comparison'>Comparison</a>
+    <li class='indexItem indexItem2'><a href='#Cardinality'>Cardinality</a>
+    <li class='indexItem indexItem2'><a href='#Membership'>Membership</a>
+    <li class='indexItem indexItem2'><a href='#Extrema'>Extrema</a>
+    <li class='indexItem indexItem2'><a href='#Spans'>Spans</a>
+    <li class='indexItem indexItem2'><a href='#Iterators'>Iterators</a>
+    <li class='indexItem indexItem2'><a href='#Indexing'>Indexing</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#OPERATOR_OVERLOADS'>OPERATOR OVERLOADS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#set_operations'>set operations</a>
+    <li class='indexItem indexItem2'><a href='#equality'>equality</a>
+    <li class='indexItem indexItem2'><a href='#equivalence'>equivalence</a>
+    <li class='indexItem indexItem2'><a href='#conversion'>conversion</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#FUNCTIONS'>FUNCTIONS</a>
+  <li class='indexItem indexItem1'><a href='#CLASS_VARIABLES'>CLASS VARIABLES</a>
+  <li class='indexItem indexItem1'><a href='#DIAGNOSTICS'>DIAGNOSTICS</a>
+  <li class='indexItem indexItem1'><a href='#NOTES'>NOTES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Traps'>Traps</a>
+    <li class='indexItem indexItem2'><a href='#grep_set_and_map_set'>grep_set and map_set</a>
+    <li class='indexItem indexItem2'><a href='#Error_handling'>Error handling</a>
+    <li class='indexItem indexItem2'><a href='#Limitations'>Limitations</a>
+    <li class='indexItem indexItem2'><a href='#Extensions'>Extensions</a>
+    <li class='indexItem indexItem2'><a href='#Roots'>Roots</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#ACKNOWLEDGMENTS'>ACKNOWLEDGMENTS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Set::IntSpan - Manages sets of integers</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use Set::IntSpan qw(grep_set map_set grep_spans map_spans);
+
+  $Set::IntSpan::Empty_String = $string;
+
+  $set    = new   Set::IntSpan $set_spec;
+  $set    = new   Set::IntSpan @set_specs;
+  $valid  = valid Set::IntSpan $run_list;
+  $set    = copy  $set $set_spec;
+
+  $run_list = run_list $set;
+  @elements = elements $set;
+  @sets     = sets     $set;
+  @spans    = spans    $set;
+
+  $u_set = union      $set $set_spec;
+  $i_set = intersect  $set $set_spec;
+  $x_set = xor        $set $set_spec;
+  $d_set = diff       $set $set_spec;
+  $c_set = complement $set;
+
+  $set-&#62;U($set_spec);   # Union
+  $set-&#62;I($set_spec);   # Intersect
+  $set-&#62;X($set_spec);   # Xor
+  $set-&#62;D($set_spec);   # Diff
+  $set-&#62;C;              # Complement
+
+  equal      $set $set_spec
+  equivalent $set $set_spec
+  superset   $set $set_spec
+  subset     $set $set_spec
+
+  $n = cardinality $set;
+  $n = size        $set;
+
+  empty      $set
+  finite     $set
+  neg_inf    $set
+  pos_inf    $set
+  infinite   $set
+  universal  $set
+
+  member     $set $n;
+  insert     $set $n;
+  remove     $set $n;
+
+  $min = min $set;
+  $max = max $set;
+
+  $holes   = holes $set;
+  $cover   = cover $set;
+  $inset   = inset $set $n;
+  $smaller = trim  $set $n;
+  $bigger  = pad   $set $n;
+
+  $subset  = grep_set   { ... } $set;
+  $mapset  = map_set    { ... } $set;
+
+  $subset  = grep_spans { ... } $set;
+  $mapset  = map_spans  { ... } $set;
+
+  for ($element=$set-&#62;first; defined $element; $element=$set-&#62;next) { ... }
+  for ($element=$set-&#62;last ; defined $element; $element=$set-&#62;prev) { ... }
+
+  $element = $set-&#62;start($n);
+  $element = $set-&#62;current;
+
+  $n       = $set-&#62;at($i);
+  $slice   = $set-&#62;slice($from, $to);
+  $i       = $set-&#62;ord($n);
+  $i       = $set-&#62;span_ord($n);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Operator_overloads"
+>Operator overloads</a></h2>
+
+<pre class="sh_perl">  $u_set =  $set + $set_spec;   # union
+  $i_set =  $set * $set_spec;   # intersect
+  $x_set =  $set ^ $set_spec;   # xor
+  $d_set =  $set - $set_spec;   # diff
+  $c_set = ~$set;               # complement
+
+  $set += $set_spec;            # union
+  $set *= $set_spec;            # intersect
+  $set ^= $set_spec;            # xor
+  $set -= $set_spec;            # diff
+
+  $set eq $set_spec             # equal
+  $set ne $set_spec             # not equal
+  $set le $set_spec             # subset
+  $set lt $set_spec             # proper subset
+  $set ge $set_spec             # superset
+  $set gt $set_spec             # proper superset
+
+  # compare sets by cardinality
+  $set1 ==  $set2
+  $set1 !=  $set2
+  $set1 &#60;=  $set2
+  $set1 &#60;   $set2
+  $set1 &#62;=  $set2
+  $set1 &#62;   $set2
+  $set1 &#60;=&#62; $set2
+
+  # compare cardinality of set to an integer
+  $set1 ==  $n
+  $set1 !=  $n
+  $set1 &#60;=  $n
+  $set1 &#60;   $n
+  $set1 &#62;=  $n
+  $set1 &#62;   $n
+  $set1 &#60;=&#62; $n
+
+  @sorted = sort @sets;         # sort sets by cardinality
+
+  if ($set) { ... }             # true if $set is not empty
+
+  print &#34;$set\n&#34;;               # stringizes to the run list</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORTS"
+>EXPORTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="@EXPORT"
+><code>@EXPORT</code></a></h2>
+
+<p>Nothing</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="@EXPORT_OK"
+><code>@EXPORT_OK</code></a></h2>
+
+<p><code>grep_set</code>, <code>map_set</code>, <code>grep_spans</code>, <code>map_spans</code></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Set::IntSpan</code> manages sets of integers. It is optimized for sets that have long runs of consecutive integers. These arise, for example, in .newsrc files, which maintain lists of articles:</p>
+
+<pre class="sh_perl">  alt.foo: 1-21,28,31
+  alt.bar: 1-14192,14194,14196-14221</pre>
+
+<p>A run of consecutive integers is sometimes called a <i>span</i>.</p>
+
+<p>Sets are stored internally in a run-length coded form. This provides for both compact storage and efficient computation. In particular, set operations can be performed directly on the encoded representation.</p>
+
+<p><code>Set::IntSpan</code> is designed to manage finite sets. However, it can also represent some simple infinite sets, such as { x | x&#62;n }. This allows operations involving complements to be carried out consistently, without having to worry about the actual value of INT_MAX on your machine.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SPANS"
+>SPANS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>A <i>span</i> is a run of consecutive integers. A span may be represented by an array reference, in any of 5 forms:</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Finite_forms"
+>Finite forms</a></h2>
+
+<pre class="sh_perl">    Span                Set
+  [ $n,    $n    ]      { n }
+  [ $a,    $b    ]      { x | a&#60;=x &#38;&#38; x&#60;=b}</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Infinite_forms"
+>Infinite forms</a></h2>
+
+<pre class="sh_perl">    Span                Set
+  [ undef, $b    ]      { x | x&#60;=b }
+  [ $a   , undef ]      { x | x&#62;=a }
+  [ undef, undef ]      The set of all integers</pre>
+
+<p>Some methods operate directly on spans.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SET_SPECIFICATIONS"
+>SET SPECIFICATIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Many of the methods take a <i>set specification</i>. There are four kinds of set specifications.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Empty"
+>Empty</a></h2>
+
+<p>If a set specification is omitted, then the empty set is assumed. Thus,</p>
+
+<pre class="sh_perl">  $set = new Set::IntSpan;</pre>
+
+<p>creates a new, empty set. Similarly,</p>
+
+<pre class="sh_perl">  copy $set;</pre>
+
+<p>removes all elements from $set.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Object_reference"
+>Object reference</a></h2>
+
+<p>If an object reference is given, it is taken to be a <code>Set::IntSpan</code> object.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Run_list"
+>Run list</a></h2>
+
+<p>If a string is given, it is taken to be a <i>run list</i>. A run list specifies a set using a syntax similar to that in newsrc files.</p>
+
+<p>A run list is a comma-separated list of <i>runs</i>. Each run specifies a set of consecutive integers. The set is the union of all the runs.</p>
+
+<p>Runs may be written in any of 5 forms.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Finite_forms"
+>Finite forms</a></h2>
+
+<dl>
+<dt><a name="n"
+>n</a></dt>
+
+<dd>
+<p>{ n }</p>
+
+<dt><a name='a'></a><a name="a-b"
+>a-b</a></dt>
+
+<dd>
+<p>{ x | a&#60;=x &#38;&#38; x&#60;=b }</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Infinite_forms"
+>Infinite forms</a></h2>
+
+<dl>
+<dt><a name='n'></a><a name="(-n"
+>(-n</a></dt>
+
+<dd>
+<p>{ x | x&#60;=n }</p>
+
+<dt><a name='n'></a><a name="n-)"
+>n-)</a></dt>
+
+<dd>
+<p>{ x | x&#62;=n }</p>
+
+<dt><a name="(-)"
+>(-)</a></dt>
+
+<dd>
+<p>The set of all integers</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Empty_forms"
+>Empty forms</a></h2>
+
+<p>The empty set is consistently written as &#39;&#39; (the null string). It is also denoted by the special form &#39;-&#39; (a single dash).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Restrictions"
+>Restrictions</a></h2>
+
+<p>The runs in a run list must be disjoint, and must be listed in increasing order.</p>
+
+<p>Valid characters in a run list are 0-9, &#39;(&#39;, &#39;)&#39;, &#39;-&#39; and &#39;,&#39;. White space and underscore (_) are ignored. Other characters are not allowed.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Examples"
+>Examples</a></h2>
+
+<pre class="sh_perl">  Run list          Set
+  &#34;-&#34;               { }
+  &#34;1&#34;               { 1 }
+  &#34;1-2&#34;             { 1, 2 }
+  &#34;-5--1&#34;           { -5, -4, -3, -2, -1 }
+  &#34;(-)&#34;             the integers
+  &#34;(--1&#34;            the negative integers
+  &#34;1-3, 4, 18-21&#34;   { 1, 2, 3, 4, 18, 19, 20, 21 }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Array_reference"
+>Array reference</a></h2>
+
+<p>If an array reference is given, then the elements of the array specify the elements of the set. The array may contain</p>
+
+<ul>
+<li>integers</li>
+
+<li><a href="#SPANS" class="podlinkpod"
+>spans</a></li>
+</ul>
+
+<p>The set is the union of all the integers and spans in the array. The integers and spans need not be disjoint. The integers and spans may be in any order.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Examples"
+>Examples</a></h2>
+
+<pre class="sh_perl">  Array ref                         Set
+  [ ]                               { }
+  [ 1, 1 ]                          { 1 }
+  [ 1, 3, 2 ]                       { 1, 2, 3 }
+  [ 1, [ 5, 8 ], 5, [ 7, 9 ], 2 ]   { 1, 2, 5, 6, 7, 8, 9 }
+  [ undef, undef ]                  the integers
+  [ undef, -1 ]                     the negative integers</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ITERATORS"
+>ITERATORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Each set has a single <i>iterator</i>, which is shared by all calls to <code>first</code>, <code>last</code>, <code>start</code>, <code>next</code>, <code>prev</code>, and <code>current</code>. At all times, the iterator is either an element of the set, or <code>undef</code>.</p>
+
+<p><code>first</code>, <code>last</code>, and <code>start</code> set the iterator; <code>next</code>, and <code>prev</code> move it; and <code>current</code> returns it. Calls to these methods may be freely intermixed.</p>
+
+<p>Using <code>next</code> and <code>prev</code>, a single loop can move both forwards and backwards through a set. Using <code>start</code>, a loop can iterate over portions of an infinite set.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Creation"
+>Creation</a></h2>
+
+<dl>
+<dt><a name='set'></a><a name="$set_=_new_Set::IntSpan_$set_spec"
+><i>$set</i> = <code>new</code> <code>Set::IntSpan</code> <i>$set_spec</i></a></dt>
+
+<dd>
+<dt><a name='set'></a><a name="$set_=_new_Set::IntSpan_@set_specs"
+><i>$set</i> = <code>new</code> <code>Set::IntSpan</code> <i>@set_specs</i></a></dt>
+
+<dd>
+<p>Creates and returns a <code>Set::IntSpan</code> object.</p>
+
+<p>The initial contents of the set are given by <i>$set_spec</i>, or by the union of all the <i>@set_specs</i>.</p>
+
+<dt><a name='ok'></a><a name="$ok_=_valid_Set::IntSpan_$run_list"
+><i>$ok</i> = <code>valid</code> <code>Set::IntSpan</code> <i>$run_list</i></a></dt>
+
+<dd>
+<p>Returns true if <i>$run_list</i> is a valid run list. Otherwise, returns false and leaves an error message in $@.</p>
+
+<dt><a name='set'></a><a name="$set_=_copy_$set_$set_spec"
+><i>$set</i> = <code>copy</code> <i>$set</i> <i>$set_spec</i></a></dt>
+
+<dd>
+<p>Copies <i>$set_spec</i> into <i>$set</i>. The previous contents of <i>$set</i> are lost. For convenience, <code>copy</code> returns <i>$set</i>.</p>
+
+<dt><a name='run_list'></a><a name="$run_list_=_run_list_$set"
+><i>$run_list</i> = <code>run_list</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns a run list that represents <i>$set</i>. The run list will not contain white space. <i>$set</i> is not affected.</p>
+
+<p>By default, the empty set is formatted as &#39;-&#39;; a different string may be specified in <code>$Set::IntSpan::Empty_String</code>.</p>
+
+<dt><a name='elements'></a><a name="@elements_=_elements_$set"
+><i>@elements</i> = <code>elements</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns an array containing the elements of <i>$set</i>. The elements will be sorted in numerical order. In scalar context, returns an array reference. <i>$set</i> is not affected.</p>
+
+<dt><a name='sets'></a><a name="@sets_=_sets_$set"
+><i>@sets</i> = <code>sets</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns the runs in <i>$set</i>, as a list of <code>Set::IntSpan</code> objects. The sets in the list are in order.</p>
+
+<dt><a name='spans'></a><a name="@spans_=_spans_$set"
+><i>@spans</i> = <code>spans</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns the runs in <i>$set</i>, as a list of the form</p>
+
+<pre class="sh_perl">  ([$a1, $b1],
+   [$a2, $b2],
+   ...
+   [$aN, $bN])</pre>
+
+<p>If a run contains only a single integer, then the upper and lower bounds of the corresponding span will be equal.</p>
+
+<p>If the set has no lower bound, then $a1 will be <code>undef</code>. Similarly, if the set has no upper bound, then $bN will be <code>undef</code>.</p>
+
+<p>The runs in the list are in order.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Set_operations"
+>Set operations</a></h2>
+
+<p>For these operations, a new <code>Set::IntSpan</code> object is created and returned. The operands are not affected.</p>
+
+<dl>
+<dt><a name='u_set'></a><a name="$u_set_=_union_$set_$set_spec"
+><i>$u_set</i> = <code>union</code> <i>$set</i> <i>$set_spec</i></a></dt>
+
+<dd>
+<p>Returns the set of integers in either <i>$set</i> or <i>$set_spec</i>.</p>
+
+<dt><a name='i_set'></a><a name="$i_set_=_intersect_$set_$set_spec"
+><i>$i_set</i> = <code>intersect</code> <i>$set</i> <i>$set_spec</i></a></dt>
+
+<dd>
+<p>Returns the set of integers in both <i>$set</i> and <i>$set_spec</i>.</p>
+
+<dt><a name='x_set'></a><a name="$x_set_=_xor_$set_$set_spec"
+><i>$x_set</i> = <code>xor</code> <i>$set</i> <i>$set_spec</i></a></dt>
+
+<dd>
+<p>Returns the set of integers in <i>$set</i> or <i>$set_spec</i>, but not both.</p>
+
+<dt><a name='d_set'></a><a name="$d_set_=_diff_$set_$set_spec"
+><i>$d_set</i> = <code>diff</code> <i>$set</i> <i>$set_spec</i></a></dt>
+
+<dd>
+<p>Returns the set of integers in <i>$set</i> but not in <i>$set_spec</i>.</p>
+
+<dt><a name='c_set'></a><a name="$c_set_=_complement_$set"
+><i>$c_set</i> = <code>complement</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns the set of integers that are not in <i>$set</i>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Mutators"
+>Mutators</a></h2>
+
+<p>By popular demand, <code>Set::IntSpan</code> now has mutating forms of the binary set operations. These methods alter the object on which they are called.</p>
+
+<dl>
+<dt><a name='set'></a><a name="$set-&#62;U($set_spec)"
+><i>$set</i>-&#62;<code>U</code>(<i>$set_spec</i>)</a></dt>
+
+<dd>
+<p>Makes <i>$set</i> the union of <i>$set</i> and <i>$set_spec</i>. Returns <i>$set</i>.</p>
+
+<dt><a name='set'></a><a name="$set-&#62;I($set_spec)"
+><i>$set</i>-&#62;<code>I</code>(<i>$set_spec</i>)</a></dt>
+
+<dd>
+<p>Makes <i>$set</i> the intersection of <i>$set</i> and <i>$set_spec</i>. Returns <i>$set</i>.</p>
+
+<dt><a name='set'></a><a name="$set-&#62;X($set_spec)"
+><i>$set</i>-&#62;<code>X</code>(<i>$set_spec</i>)</a></dt>
+
+<dd>
+<p>Makes <i>$set</i> the symmetric difference of <i>$set</i> and <i>$set_spec</i>. Returns <i>$set</i>.</p>
+
+<dt><a name='set'></a><a name="$set-&#62;D($set_spec)"
+><i>$set</i>-&#62;<code>D</code>(<i>$set_spec</i>)</a></dt>
+
+<dd>
+<p>Makes <i>$set</i> the difference of <i>$set</i> and <i>$set_spec</i>. Returns <i>$set</i>.</p>
+
+<dt><a name='set'></a><a name="$set-&#62;C"
+><i>$set</i>-&#62;<code>C</code></a></dt>
+
+<dd>
+<p>Converts <i>$set</i> to its own complement. Returns <i>$set</i>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Comparison"
+>Comparison</a></h2>
+
+<dl>
+<dt><a name='equal'></a><a name="equal_$set_$set_spec"
+><code>equal</code> <i>$set</i> <i>$set_spec</i></a></dt>
+
+<dd>
+<p>Returns true iff <i>$set</i> and <i>$set_spec</i> contain the same elements.</p>
+
+<dt><a name='equivalent'></a><a name="equivalent_$set_$set_spec"
+><code>equivalent</code> <i>$set</i> <i>$set_spec</i></a></dt>
+
+<dd>
+<p>Returns true iff <i>$set</i> and <i>$set_spec</i> contain the same number of elements. All infinite sets are equivalent.</p>
+
+<dt><a name='superset'></a><a name="superset_$set_$set_spec"
+><code>superset</code> <i>$set</i> <i>$set_spec</i></a></dt>
+
+<dd>
+<p>Returns true iff <i>$set</i> is a superset of <i>$set_spec</i>.</p>
+
+<dt><a name='subset'></a><a name="subset_$set_$set_spec"
+><code>subset</code> <i>$set</i> <i>$set_spec</i></a></dt>
+
+<dd>
+<p>Returns true iff <i>$set</i> is a subset of <i>$set_spec</i>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Cardinality"
+>Cardinality</a></h2>
+
+<dl>
+<dt><a name='n'></a><a name="$n_=_cardinality_$set"
+><i>$n</i> = <code>cardinality</code> <i>$set</i></a></dt>
+
+<dd>
+<dt><a name='n'></a><a name="$n_=_size_$set"
+><i>$n</i> = <code>size</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns the number of elements in <i>$set</i>. Returns -1 for infinite sets. <code>size</code> is provided as an alias for <code>cardinality</code>.</p>
+
+<dt><a name='empty'></a><a name="empty_$set"
+><code>empty</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns true iff <i>$set</i> is empty.</p>
+
+<dt><a name='finite'></a><a name="finite_$set"
+><code>finite</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns true iff <i>$set</i> is finite.</p>
+
+<dt><a name='neg_inf'></a><a name="neg_inf_$set"
+><code>neg_inf</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns true iff <i>$set</i> contains {x | x&#60;n} for some n.</p>
+
+<dt><a name='pos_inf'></a><a name="pos_inf_$set"
+><code>pos_inf</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns true iff <i>$set</i> contains {x | x&#62;n} for some n.</p>
+
+<dt><a name='infinite'></a><a name="infinite_$set"
+><code>infinite</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns true iff <i>$set</i> is infinite.</p>
+
+<dt><a name='universal'></a><a name="universal_$set"
+><code>universal</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns true iff <i>$set</i> contains all integers.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Membership"
+>Membership</a></h2>
+
+<dl>
+<dt><a name='member'></a><a name="member_$set_$n"
+><code>member</code> <i>$set</i> <i>$n</i></a></dt>
+
+<dd>
+<p>Returns true iff the integer <i>$n</i> is a member of <i>$set</i>.</p>
+
+<dt><a name='insert'></a><a name="insert_$set_$n"
+><code>insert</code> <i>$set</i> <i>$n</i></a></dt>
+
+<dd>
+<p>Inserts the integer <i>$n</i> into <i>$set</i>. Does nothing if <i>$n</i> is already a member of <i>$set</i>.</p>
+
+<dt><a name='remove'></a><a name="remove_$set_$n"
+><code>remove</code> <i>$set</i> <i>$n</i></a></dt>
+
+<dd>
+<p>Removes the integer <i>$n</i> from <i>$set</i>. Does nothing if <i>$n</i> is not a member of <i>$set</i>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Extrema"
+>Extrema</a></h2>
+
+<dl>
+<dt><a name='min'></a><a name="min_$set"
+><code>min</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns the smallest element of <i>$set</i>, or <code>undef</code> if there is none.</p>
+
+<dt><a name='max'></a><a name="max_$set"
+><code>max</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns the largest element of <i>$set</i>, or <code>undef</code> if there is none.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Spans"
+>Spans</a></h2>
+
+<dl>
+<dt><a name='holes'></a><a name="$holes_=_holes_$set"
+><i>$holes</i> = <code>holes</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns a set containing all the holes in <i>$set</i>, that is, all the integers that are in-between spans of <i>$set</i>.</p>
+
+<p><code>holes</code> is always a finite set.</p>
+
+<dt><a name='cover'></a><a name="$cover_=_cover_$set"
+><i>$cover</i> = <code>cover</code> <i>$set</i></a></dt>
+
+<dd>
+<p>Returns a set consisting of a single span from <i>$set</i>-&#62;<code>min</code> to <i>$set</i>-&#62;<code>max</code>. This is the same as</p>
+
+<pre class="sh_perl">  union $set $set-&#62;holes</pre>
+
+<dt><a name='inset'></a><a name="$inset_=_inset_$set_$n"
+><i>$inset</i> = <code>inset</code> <i>$set</i> <i>$n</i></a></dt>
+
+<dd>
+<dt><a name='smaller'></a><a name="$smaller_=_trim_$set_$n"
+><i>$smaller</i> = <code>trim</code> <i>$set</i> <i>$n</i></a></dt>
+
+<dd>
+<dt><a name='bigger'></a><a name="$bigger_=_pad_$set_$n"
+><i>$bigger</i> = <code>pad</code> <i>$set</i> <i>$n</i></a></dt>
+
+<dd>
+<p><code>inset</code> returns a set constructed by removing <i>$n</i> integers from each end of each span of <i>$set</i>. If <i>$n</i> is negative, then -<i>$n</i> integers are added to each end of each span.</p>
+
+<p>In the first case, spans may vanish from the set; in the second case, holes may vanish.</p>
+
+<p><code>trim</code> is provided as a synonym for <code>inset</code>.</p>
+
+<p><code>pad</code> <i>$set</i> <i>$n</i> is the same as <code>inset</code> <i>$set</i> -<i>$n</i>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Iterators"
+>Iterators</a></h2>
+
+<dl>
+<dt><a name='set'></a><a name="$set-&#62;first"
+><i>$set</i>-&#62;<code>first</code></a></dt>
+
+<dd>
+<p>Sets the iterator for <i>$set</i> to the smallest element of <i>$set</i>. If there is no smallest element, sets the iterator to <code>undef</code>. Returns the iterator.</p>
+
+<dt><a name='set'></a><a name="$set-&#62;last"
+><i>$set</i>-&#62;<code>last</code></a></dt>
+
+<dd>
+<p>Sets the iterator for <i>$set</i> to the largest element of <i>$set</i>. If there is no largest element, sets the iterator to <code>undef</code>. Returns the iterator.</p>
+
+<dt><a name='set'></a><a name="$set-&#62;start($n)"
+><i>$set</i>-&#62;<code>start</code>(<i>$n</i>)</a></dt>
+
+<dd>
+<p>Sets the iterator for <i>$set</i> to <i>$n</i>. If <i>$n</i> is not an element of <i>$set</i>, sets the iterator to <code>undef</code>. Returns the iterator.</p>
+
+<dt><a name='set'></a><a name="$set-&#62;next"
+><i>$set</i>-&#62;<code>next</code></a></dt>
+
+<dd>
+<p>Sets the iterator for <i>$set</i> to the next element of <i>$set</i>. If there is no next element, sets the iterator to <code>undef</code>. Returns the iterator.</p>
+
+<p><code>next</code> will return <code>undef</code> only once; the next call to <code>next</code> will reset the iterator to the smallest element of <i>$set</i>.</p>
+
+<dt><a name='set'></a><a name="$set-&#62;prev"
+><i>$set</i>-&#62;<code>prev</code></a></dt>
+
+<dd>
+<p>Sets the iterator for <i>$set</i> to the previous element of <i>$set</i>. If there is no previous element, sets the iterator to <code>undef</code>. Returns the iterator.</p>
+
+<p><code>prev</code> will return <code>undef</code> only once; the next call to <code>prev</code> will reset the iterator to the largest element of <i>$set</i>.</p>
+
+<dt><a name='set'></a><a name="$set-&#62;current"
+><i>$set</i>-&#62;<code>current</code></a></dt>
+
+<dd>
+<p>Returns the iterator for <i>$set</i>.</p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Indexing"
+>Indexing</a></h2>
+
+<p>The elements of a set are kept in numerical order. These methods index into the set based on this ordering.</p>
+
+<dl>
+<dt><a name='n'></a><a name="$n_=_$set-&#62;at($i)"
+><i>$n</i> = <i>$set</i>-&#62;<code>at</code>($i)</a></dt>
+
+<dd>
+<p>Returns the <i>$i</i>th element of <i>$set</i>, or <code>undef</code> if there is no <i>$i</i>th element. Negative indices count backwards from the end of the set.</p>
+
+<p>Dies if</p>
+
+<ul>
+<li><i>$i</i> is non-negative and <i>$set</i> is <code>neg_inf</code></li>
+
+<li><i>$i</i> is negative and <i>$set</i> is <code>pos_inf</code></li>
+</ul>
+
+<dt><a name='slice'></a><a name="$slice_=_$set-&#62;slice($from,_$to)"
+><i>$slice</i> = <i>$set</i>-&#62;<code>slice</code>(<i>$from</i>, <i>$to</i>)</a></dt>
+
+<dd>
+<p>Returns a <code>Set::IntSpan</code> object containing the elements of <i>$set</i> at indices <i>$from</i>..<i>$to</i>. Negative indices count backwards from the end of the set.</p>
+
+<p>Dies if</p>
+
+<ul>
+<li><i>$from</i> is non-negative and <i>$set</i> is <code>neg_inf</code></li>
+
+<li><i>$from</i> is negative and <i>$set</i> is <code>pos_inf</code></li>
+</ul>
+
+<dt><a name='i'></a><a name="$i_=_$set-&#62;ord($n)"
+><i>$i</i> = <i>$set</i>-&#62;<code>ord</code>($n)</a></dt>
+
+<dd>
+<p>The inverse of <code>at</code>.</p>
+
+<p>Returns the index <i>$i</i> of the integer <i>$n</i> in <i>$set</i>, or <code>undef</code> if <i>$n</i> if not an element of <i>$set</i>.</p>
+
+<p>Dies if <i>$set</i> is <code>neg_inf</code>.</p>
+
+<dt><a name='i'></a><a name="$i_=_$set-&#62;span_ord($n)"
+><i>$i</i> = <i>$set</i>-&#62;<code>span_ord</code>($n)</a></dt>
+
+<dd>
+<p>Returns the index <i>$i</i> of the span containing the integer <i>$n</i>, or <code>undef</code> if <i>$n</i> if not an element of <i>$set</i>.</p>
+
+<p>To recover the span containing <i>$n</i>, write</p>
+
+<pre class="sh_perl">  ($set-&#62;spans)[$i]</pre>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OPERATOR_OVERLOADS"
+>OPERATOR OVERLOADS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>For convenience, some operators are overloaded on <code>Set::IntSpan</code> objects.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="set_operations"
+>set operations</a></h2>
+
+<p>One operand must be a <code>Set::IntSpan</code> object. The other operand may be a <code>Set::IntSpan</code> object or a set specification.</p>
+
+<pre class="sh_perl">  $u_set =  $set + $set_spec;   # union
+  $i_set =  $set * $set_spec;   # intersect
+  $x_set =  $set ^ $set_spec;   # xor
+  $d_set =  $set - $set_spec;   # diff
+  $c_set = ~$set;               # complement
+
+  $set += $set_spec;            # union
+  $set *= $set_spec;            # intersect
+  $set ^= $set_spec;            # xor
+  $set -= $set_spec;            # diff</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="equality"
+>equality</a></h2>
+
+<p>The string comparison operations are overloaded to compare sets for equality and containment. One operand must be a <code>Set::IntSpan</code> object. The other operand may be a <code>Set::IntSpan</code> object or a set specification.</p>
+
+<pre class="sh_perl">  $set eq $set_spec             # equal
+  $set ne $set_spec             # not equal
+  $set le $set_spec             # subset
+  $set lt $set_spec             # proper subset
+  $set ge $set_spec             # superset
+  $set gt $set_spec             # proper superset</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="equivalence"
+>equivalence</a></h2>
+
+<p>The numerical comparison operations are overloaded to compare sets by cardinality. One operand must be a <code>Set::IntSpan</code> object. The other operand may be a <code>Set::IntSpan</code> object or an integer.</p>
+
+<pre class="sh_perl">  $set1 ==  $set2
+  $set1 !=  $set2
+  $set1 &#60;=  $set2
+  $set1 &#60;   $set2
+  $set1 &#62;=  $set2
+  $set1 &#62;   $set2
+  $set1 &#60;=&#62; $set2
+  $set1 cmp $set2
+
+  $set1 ==  $n
+  $set1 !=  $n
+  $set1 &#60;=  $n
+  $set1 &#60;   $n
+  $set1 &#62;=  $n
+  $set1 &#62;   $n
+  $set1 &#60;=&#62; $n
+  $set1 cmp $n</pre>
+
+<p>N.B. The <code>cmp</code> operator is overloaded to compare sets by cardinality, not containment. This is done so that</p>
+
+<pre class="sh_perl">  sort @sets</pre>
+
+<p>will sort a list of sets by cardinality.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="conversion"
+>conversion</a></h2>
+
+<p>In boolean context, a <code>Set::IntSpan</code> object evaluates to true if it is not empty.</p>
+
+<p>A <code>Set::IntSpan</code> object stringizes to its run list.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="FUNCTIONS"
+>FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='sub_set'></a><a name="$sub_set_=_grep_set_{_..._}_$set"
+><i>$sub_set</i> = <code>grep_set</code> { ... } <i>$set</i></a></dt>
+
+<dd>
+<p>Evaluates the BLOCK for each integer in <i>$set</i> (locally setting <code>$_</code> to each integer) and returns a <code>Set::IntSpan</code> object containing those integers for which the BLOCK returns TRUE.</p>
+
+<p>Returns <code>undef</code> if <i>$set</i> is infinite.</p>
+
+<dt><a name='map_set'></a><a name="$map_set_=_map_set_{_..._}_$set"
+><i>$map_set</i> = <code>map_set</code> { ... } <i>$set</i></a></dt>
+
+<dd>
+<p>Evaluates the BLOCK for each integer in <i>$set</i> (locally setting <code>$_</code> to each integer) and returns a <code>Set::IntSpan</code> object containing all the integers returned as results of all those evaluations.</p>
+
+<p>Evaluates the BLOCK in list context, so each element of <i>$set</i> may produce zero, one, or more elements in the returned set. The elements may be returned in any order, and need not be disjoint.</p>
+
+<p>Returns <code>undef</code> if <i>$set</i> is infinite.</p>
+
+<dt><a name='sub_set'></a><a name="$sub_set_=_grep_spans_{_..._}_$set"
+><i>$sub_set</i> = <code>grep_spans</code> { ... } <i>$set</i></a></dt>
+
+<dd>
+<p>Evaluates the BLOCK for each span in <i>$set</i> and returns a <code>Set::IntSpan</code> object containing those spans for which the BLOCK returns TRUE.</p>
+
+<p>Within BLOCK, <code>$_</code> is locally set to an array ref of the form</p>
+
+<pre class="sh_perl">  [ $lower, $upper ]</pre>
+
+<p>where <i>$lower</i> and <i>$upper</i> are the bounds of the span. If the span contains only one integer, then <i>$lower</i> and <i>$upper</i> will be equal. If the span is unbounded, then the corresponding element(s) of the array will be <code>undef</code>.</p>
+
+<dt><a name='map_set'></a><a name="$map_set_=_map_spans_{_..._}_$set"
+><i>$map_set</i> = <code>map_spans</code> { ... } <i>$set</i></a></dt>
+
+<dd>
+<p>Evaluates the BLOCK for each span in <i>$set</i>, and returns a <code>Set::IntSpan</code> object consisting of the union of all the spans returned as results of all those evaluations.</p>
+
+<p>Within BLOCK, <code>$_</code> is locally set to an array ref of the form</p>
+
+<pre class="sh_perl">  [ $lower, $upper ]</pre>
+
+<p>as described above for <code>grep_spans</code>. Each evaluation of BLOCK must return a list of <a href="#SPANS" class="podlinkpod"
+>spans</a>. Each returned list may contain zero, one, or more spans. Spans may be returned in any order, and need not be disjoint. However, for each bounded span, the constraint</p>
+
+<pre class="sh_perl">  $lower &#60;= $upper</pre>
+
+<p>must hold.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CLASS_VARIABLES"
+>CLASS VARIABLES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name='Set'></a><a name="$Set::IntSpan::Empty_String"
+><code>$Set::IntSpan::Empty_String</code></a></dt>
+
+<dd>
+<p><code>$Set::IntSpan::Empty_String</code> contains the string that is returned when <code>run_list</code> is called on the empty set. <code>$Empty_String</code> is initially &#39;-&#39;; alternatively, it may be set to &#39;&#39;. Other values should be avoided, to ensure that <code>run_list</code> always returns a valid run list.</p>
+
+<p><code>run_list</code> accesses <code>$Empty_String</code> through a reference stored in <i>$set</i>-&#62;{<code>empty_string</code>}. Subclasses that wish to override the value of <code>$Empty_String</code> can reassign this reference.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DIAGNOSTICS"
+>DIAGNOSTICS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Any method (except <code>valid</code>) will <code>die</code> if it is passed an invalid run list.</p>
+
+<dl>
+<dt><a name='Set'></a><a name="Set::IntSpan::_copy_run_list:_Bad_syntax:_$runList"
+><code>Set::IntSpan::_copy_run_list: Bad syntax:</code> <i>$runList</i></a></dt>
+
+<dd>
+<p>(F) <i>$run_list</i> has bad syntax</p>
+
+<dt><a name='Set'></a><a name="Set::IntSpan::_copy_run_list:_Bad_order:_$runList"
+><code>Set::IntSpan::_copy_run_list: Bad order:</code> <i>$runList</i></a></dt>
+
+<dd>
+<p>(F) <i>$run_list</i> has overlapping runs or runs that are out of order.</p>
+
+<dt><a name='Set'></a><a name="Set::IntSpan::elements:_infinite_set"
+><code>Set::IntSpan::elements: infinite set</code></a></dt>
+
+<dd>
+<p>(F) An infinite set was passed to <code>elements</code>.</p>
+
+<dt><a name='Set'></a><a name="Set::IntSpan::at:_negative_infinite_set"
+><code>Set::IntSpan::at: negative infinite set</code></a></dt>
+
+<dd>
+<p>(F) <code>at</code> was called with a non-negative index on a negative infinite set.</p>
+
+<dt><a name='Set'></a><a name="Set::IntSpan::at:_positive_infinite_set"
+><code>Set::IntSpan::at: positive infinite set</code></a></dt>
+
+<dd>
+<p>(F) <code>at</code> was called with a negative index on a positive infinite set.</p>
+
+<dt><a name='Set'></a><a name="Set::IntSpan::slice:_negative_infinite_set"
+><code>Set::IntSpan::slice: negative infinite set</code></a></dt>
+
+<dd>
+<p>(F) <code>slice</code> was called with <i>$from</i> non-negative on a negative infinite set.</p>
+
+<dt><a name='Set'></a><a name="Set::IntSpan::slice:_positive_infinite_set"
+><code>Set::IntSpan::slice: positive infinite set</code></a></dt>
+
+<dd>
+<p>(F) <code>slice</code> was called with <i>$from</i> negative on a positive infinite set.</p>
+
+<dt><a name='Set'></a><a name="Set::IntSpan::ord:_negative_infinite_set"
+><code>Set::IntSpan::ord: negative infinite set</code></a></dt>
+
+<dd>
+<p>(F) <code>ord</code> was called on a negative infinite set.</p>
+
+<dt><a name='Out'></a><a name="Out_of_memory!"
+>Out of memory!</a></dt>
+
+<dd>
+<p>(X) <code>elements</code> <i>$set</i> can generate an &#34;Out of memory!&#34; message on sufficiently large finite sets.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NOTES"
+>NOTES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Traps"
+>Traps</a></h2>
+
+<p>Beware of forms like</p>
+
+<pre class="sh_perl">  union $set [1..5];</pre>
+
+<p>This passes an element of @set to union, which is probably not what you want. To force interpretation of $set and [1..5] as separate arguments, use forms like</p>
+
+<pre class="sh_perl">    union $set +[1..5];</pre>
+
+<p>or</p>
+
+<pre class="sh_perl">    $set-&#62;union([1..5]);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="grep_set_and_map_set"
+>grep_set and map_set</a></h2>
+
+<p><code>grep_set</code> and <code>map_set</code> make it easy to construct sets for which the internal representation used by <code>Set::IntSpan</code> is <i>not</i> small. Consider:</p>
+
+<pre class="sh_perl">  $billion = new Set::IntSpan &#39;0-1_000_000_000&#39;;   # OK
+  $odd     = grep_set { $_ &#38; 1 } $billion;         # trouble
+  $even    = map_set  { $_ * 2 } $billion;         # double trouble</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Error_handling"
+>Error handling</a></h2>
+
+<p>There are two common approaches to error handling: exceptions and return codes. There seems to be some religion on the topic, so <code>Set::IntSpan</code> provides support for both.</p>
+
+<p>To catch exceptions, protect method calls with an eval:</p>
+
+<pre class="sh_perl">    $run_list = &#60;STDIN&#62;;
+    eval { $set = new Set::IntSpan $run_list };
+    $@ and print &#34;$@: try again\n&#34;;</pre>
+
+<p>To check return codes, use an appropriate method call to validate arguments:</p>
+
+<pre class="sh_perl">    $run_list = &#60;STDIN&#62;;
+    if (valid Set::IntSpan $run_list)
+       { $set = new Set::IntSpan $run_list }
+    else
+       { print &#34;$@ try again\n&#34; }</pre>
+
+<p>Similarly, use <code>finite</code> to protect calls to <code>elements</code>:</p>
+
+<pre class="sh_perl">    finite $set and @elements = elements $set;</pre>
+
+<p>Calling <code>elements</code> on a large, finite set can generate an &#34;Out of memory!&#34; message, which cannot (easily) be trapped. Applications that must retain control after an error can use <code>intersect</code> to protect calls to <code>elements</code>:</p>
+
+<pre class="sh_perl">    @elements = elements { intersect $set &#34;-1_000_000 - 1_000_000&#34; };</pre>
+
+<p>or check the size of $set first:</p>
+
+<pre class="sh_perl">    finite $set and cardinality $set &#60; 2_000_000 and @elements = elements $set;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Limitations"
+>Limitations</a></h2>
+
+<p>Although <code>Set::IntSpan</code> can represent some infinite sets, it does <i>not</i> perform infinite-precision arithmetic. Therefore, finite elements are restricted to the range of integers on your machine.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Extensions"
+>Extensions</a></h2>
+
+<p>Users report that you can construct Set::IntSpan objects on anything that behaves like an integer. For example:</p>
+
+<pre class="sh_perl">    $x   = new Math::BigInt ...;
+    $set = new Set::Intspan [ [ $x, $x+5 ] ];</pre>
+
+<p>I&#39;m not documenting this as supported behavior, because I don&#39;t have the resources to test it, but I&#39;ll try not to break it. If anyone finds problems with it, let me know.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Roots"
+>Roots</a></h2>
+
+<p>The sets implemented here are based on a Macintosh data structure called a <i>region</i>. See Inside Macintosh for more information.</p>
+
+<p><code>Set::IntSpan</code> was originally written to manage run lists for the <a href="/perldoc?News%3A%3ANewsrc" class="podlinkpod"
+><code>News::Newsrc</code></a> module.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Steven McDougall &#60;swmcd@world.std.com&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="ACKNOWLEDGMENTS"
+>ACKNOWLEDGMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li>Malcolm Cook &#60;mec@stowers-institute.org&#62;</li>
+
+<li>David Hawthorne &#60;dsrthorne@hotmail.com&#62;</li>
+
+<li>Martin Krzywinski &#60;martink@bcgsc.ca&#62;</li>
+
+<li>Marc Lehmann &#60;schmorp@schmorp.de&#62;</li>
+
+<li>Andrew Olson &#60;aolson@me.com&#62;</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 1996-2010 by Steven McDougall. This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78260 Uploads, 24722 Distributions
+105996 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 14:11:24 2012 GMT (0.393191814422607) @cpansearch1 -->
+ </body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Option Parameter Config Processing - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+  <div class=path>
+  <a href="/">Top</a> &gt;
+  Option Parameter Config Processing
+ </div>
+
+ 
+
+
+
+ <table width="100%">
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DApp%3A%3AInfo">App::Info</a></td>
+   <td><small><code><a href="/dlsip?RpdOp">RpdOp</a></code></small></td>
+   <td width="80%">Information about software packages</td>
+   <td><small><a href="/~dwheeler">DWHEELER</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DApp%3A%3AOptions">App::Options</a></td>
+   <td><small><code><a href="/dlsip?Rpdfp">Rpdfp</a></code></small></td>
+   <td width="80%">combine cmdline opts, env vars, config files</td>
+   <td><small><a href="/~spadkins">SPADKINS</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DAppConfig">AppConfig</a></td>
+   <td><small><code><a href="/dlsip?MpdO">MpdO</a></code></small></td>
+   <td width="80%">Application config (from ARGV, file, ...)</td>
+   <td><small><a href="/~abw">ABW</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DAppConfig%3A%3AStd">AppConfig::Std</a></td>
+   <td><small><code><a href="/dlsip?RpdO">RpdO</a></code></small></td>
+   <td width="80%">Provides standard configuration options</td>
+   <td><small><a href="/~neilb">NEILB</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DArgv">Argv</a></td>
+   <td><small><code><a href="/dlsip?bpdh">bpdh</a></code></small></td>
+   <td width="80%">Provide an OO interface to an ARGV</td>
+   <td><small><a href="/~dsb">DSB</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DCfgTie">CfgTie</a></td>
+   <td><small><code><a href="/dlsip?apdh">apdh</a></code></small></td>
+   <td width="80%">Framework for tieing system admin tasks</td>
+   <td><small><a href="/~randym">RANDYM</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AAbstract">Config::Abstract</a></td>
+   <td><small><code><a href="/dlsip?apdOp">apdOp</a></code></small></td>
+   <td width="80%">Abstractions for configfiles in many formats</td>
+   <td><small><a href="/~avajadi">AVAJADI</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AApt%3A%3ASources">Config::Apt::Sources</a></td>
+   <td><small><code><a href="/dlsip?bpdOp">bpdOp</a></code></small></td>
+   <td width="80%">OO module for parsing apt sources.list files</td>
+   <td><small><a href="/~iank">IANK</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3ABuildHelper">Config::BuildHelper</a></td>
+   <td><small><code><a href="/dlsip?RpdOp">RpdOp</a></code></small></td>
+   <td width="80%">Build config files for clusters.</td>
+   <td><small><a href="/~triddle">TRIDDLE</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AFile">Config::File</a></td>
+   <td><small><code><a href="/dlsip?Mpdfp">Mpdfp</a></code></small></td>
+   <td width="80%">Parse a simple configuration file</td>
+   <td><small><a href="/~gwolf">GWOLF</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AFind">Config::Find</a></td>
+   <td><small><code><a href="/dlsip?MpdOp">MpdOp</a></code></small></td>
+   <td width="80%">find configuration files</td>
+   <td><small><a href="/~salva">SALVA</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AFreeForm">Config::FreeForm</a></td>
+   <td><small><code><a href="/dlsip?bpdfp">bpdfp</a></code></small></td>
+   <td width="80%">Provide in-memory configuration data</td>
+   <td><small><a href="/~btrott">BTROTT</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AGeneral">Config::General</a></td>
+   <td><small><code><a href="/dlsip?RpdOa">RpdOa</a></code></small></td>
+   <td width="80%">Generic config file parser</td>
+   <td><small><a href="/~tlinden">TLINDEN</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AIni">Config::Ini</a></td>
+   <td><small><code><a href="/dlsip?RpdOp">RpdOp</a></code></small></td>
+   <td width="80%">Accesses Windows .ini and .reg files</td>
+   <td><small><a href="/~avatar">AVATAR</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AIniFiles">Config::IniFiles</a></td>
+   <td><small><code><a href="/dlsip?Rpmhp">Rpmhp</a></code></small></td>
+   <td width="80%">Read/Write INI-Style configuration files</td>
+   <td><small><a href="/~wadg">WADG</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AIniHash">Config::IniHash</a></td>
+   <td><small><code><a href="/dlsip?Rpdfp">Rpdfp</a></code></small></td>
+   <td width="80%">Read and write INI files</td>
+   <td><small><a href="/~jenda">JENDA</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AIniRegEx">Config::IniRegEx</a></td>
+   <td><small><code><a href="/dlsip?RpdOp">RpdOp</a></code></small></td>
+   <td width="80%">Ini workaround, regex search for parameters</td>
+   <td><small><a href="/~sasikala">SASIKALA</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AInteractive">Config::Interactive</a></td>
+   <td><small><code><a href="/dlsip?RpdOo">RpdOo</a></code></small></td>
+   <td width="80%">configfile parsing with XML  &amp; interpolation</td>
+   <td><small><a href="/~mpg">MPG</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AJSON">Config::JSON</a></td>
+   <td><small><code><a href="/dlsip?RpdOp">RpdOp</a></code></small></td>
+   <td width="80%">A JSON-based config file system.</td>
+   <td><small><a href="/~rizen">RIZEN</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AMagic">Config::Magic</a></td>
+   <td><small><code><a href="/dlsip?bpdhp">bpdhp</a></code></small></td>
+   <td width="80%">Recognizes configuration files, makes a hash</td>
+   <td><small><a href="/~rustyp">RUSTYP</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AMerge">Config::Merge</a></td>
+   <td><small><code><a href="/dlsip?Mpdhp">Mpdhp</a></code></small></td>
+   <td width="80%">Merge config dirs with YAML,JSON,XML etc</td>
+   <td><small><a href="/~drtech">DRTECH</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AModel">Config::Model</a></td>
+   <td><small><code><a href="/dlsip?bpmOl">bpmOl</a></code></small></td>
+   <td width="80%">Framework for config validation and edition</td>
+   <td><small><a href="/~ddumont">DDUMONT</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AModel%3A%3AApprox">Config::Model::Approx</a></td>
+   <td><small><code><a href="/dlsip?bpmOl">bpmOl</a></code></small></td>
+   <td width="80%">Approx configuration files editor and API</td>
+   <td><small><a href="/~ddumont">DDUMONT</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AModel%3A%3ABackend%3A%3AAugeas">Config::Model::Backend::Augeas</a></td>
+   <td><small><code><a href="/dlsip?bpmOl">bpmOl</a></code></small></td>
+   <td width="80%">Read and write config data through Augeas</td>
+   <td><small><a href="/~ddumont">DDUMONT</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AModel%3A%3AOpenSsh">Config::Model::OpenSsh</a></td>
+   <td><small><code><a href="/dlsip?bpmOl">bpmOl</a></code></small></td>
+   <td width="80%">OpenSsh configuration files editor and API</td>
+   <td><small><a href="/~ddumont">DDUMONT</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AProperties">Config::Properties</a></td>
+   <td><small><code><a href="/dlsip?MpdOp">MpdOp</a></code></small></td>
+   <td width="80%">Configuration using Java style properties</td>
+   <td><small><a href="/~salva">SALVA</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AScoped">Config::Scoped</a></td>
+   <td><small><code><a href="/dlsip?MpdOp">MpdOp</a></code></small></td>
+   <td width="80%">feature rich configuration file parser</td>
+   <td><small><a href="/~gaissmai">GAISSMAI</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3ASofu">Config::Sofu</a></td>
+   <td><small><code><a href="/dlsip?Rpdpo">Rpdpo</a></code></small></td>
+   <td width="80%">Retrieves and stores complex data structures</td>
+   <td><small><a href="/~maluku">MALUKU</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AStrict">Config::Strict</a></td>
+   <td><small><code><a href="/dlsip?apdOp">apdOp</a></code></small></td>
+   <td width="80%">Add strict typing to config management</td>
+   <td><small><a href="/~blakew">BLAKEW</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AValidator">Config::Validator</a></td>
+   <td><small><code><a href="/dlsip?bpdOp">bpdOp</a></code></small></td>
+   <td width="80%">schema based configuration validation</td>
+   <td><small><a href="/~lcons">LCONS</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AVersioned">Config::Versioned</a></td>
+   <td><small><code><a href="/dlsip?cpdOp">cpdOp</a></code></small></td>
+   <td width="80%">Versioned access to configuration data</td>
+   <td><small><a href="/~mrscotty">MRSCOTTY</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AYUM">Config::YUM</a></td>
+   <td><small><code><a href="/dlsip?apmOp">apmOp</a></code></small></td>
+   <td width="80%">Config::YUM is used to parse a yum.conf</td>
+   <td><small><a href="/~opitz">OPITZ</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfig%3A%3AYacp">Config::Yacp</a></td>
+   <td><small><code><a href="/dlsip?RpdOp">RpdOp</a></code></small></td>
+   <td width="80%">Yet Another Configuration Parser</td>
+   <td><small><a href="/~tstanley">TSTANLEY</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DConfigReader">ConfigReader</a></td>
+   <td><small><code><a href="/dlsip?cpdO">cpdO</a></code></small></td>
+   <td width="80%">Read directives from configuration file</td>
+   <td><small><a href="/~amw">AMW</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DConfigReader%3A%3ASimple">ConfigReader::Simple</a></td>
+   <td><small><code><a href="/dlsip?RpdOp">RpdOp</a></code></small></td>
+   <td width="80%">Read simple configuration file formats</td>
+   <td><small><a href="/~bdfoy">BDFOY</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DGetargs%3A%3ALong">Getargs::Long</a></td>
+   <td><small><code><a href="/dlsip?apdfa">apdfa</a></code></small></td>
+   <td width="80%">Parses long function args f(-arg =&gt; value)</td>
+   <td><small><a href="/~dcoppit">DCOPPIT</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DGetargs%3A%3AMixed">Getargs::Mixed</a></td>
+   <td><small><code><a href="/dlsip?bpdfp">bpdfp</a></code></small></td>
+   <td width="80%">Mixed positional/named parameter processor</td>
+   <td><small><a href="/~hanenkamp">HANENKAMP</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3AArgvFile">Getopt::ArgvFile</a></td>
+   <td><small><code><a href="/dlsip?Mpdf2">Mpdf2</a></code></small></td>
+   <td width="80%">Take options from files</td>
+   <td><small><a href="/~jstenzel">JSTENZEL</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3AAttribute">Getopt::Attribute</a></td>
+   <td><small><code><a href="/dlsip?Rpdrp">Rpdrp</a></code></small></td>
+   <td width="80%">Attribute wrapper for Getopt::Long</td>
+   <td><small><a href="/~marcel">MARCEL</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3ACommandLineExports">Getopt::CommandLineExports</a></td>
+   <td><small><code><a href="/dlsip?bpdfp">bpdfp</a></code></small></td>
+   <td width="80%">export command lines for subs in a script</td>
+   <td><small><a href="/~rhaxton">RHAXTON</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3ADeclare">Getopt::Declare</a></td>
+   <td><small><code><a href="/dlsip?MpdO">MpdO</a></code></small></td>
+   <td width="80%">An easy-to-use WYSIWYG command-line parser</td>
+   <td><small><a href="/~dconway">DCONWAY</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3AEvaP">Getopt::EvaP</a></td>
+   <td><small><code><a href="/dlsip?Mpdfp">Mpdfp</a></code></small></td>
+   <td width="80%">Long/short options, multilevel help</td>
+   <td><small><a href="/~lusol">LUSOL</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3AFileConfig">Getopt::FileConfig</a></td>
+   <td><small><code><a href="/dlsip?RpdOp">RpdOp</a></code></small></td>
+   <td width="80%">Define options and defaults in a file.</td>
+   <td><small><a href="/~mtadel">MTADEL</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3AFlex">Getopt::Flex</a></td>
+   <td><small><code><a href="/dlsip?RpdOb">RpdOb</a></code></small></td>
+   <td width="80%">Option parsing, done differently</td>
+   <td><small><a href="/~rpkelly">RPKELLY</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3AGUI%3A%3ALong">Getopt::GUI::Long</a></td>
+   <td><small><code><a href="/dlsip?RpmOp">RpmOp</a></code></small></td>
+   <td width="80%">Auto-GUI extending Getopt::Long</td>
+   <td><small><a href="/~hardaker">HARDAKER</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3AGetArgs">Getopt::GetArgs</a></td>
+   <td><small><code><a href="/dlsip?apdfp">apdfp</a></code></small></td>
+   <td width="80%">Enhanced argument passing to subroutines</td>
+   <td><small><a href="/~bbb">BBB</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3AGnu">Getopt::Gnu</a></td>
+   <td><small><code><a href="/dlsip?acdf">acdf</a></code></small></td>
+   <td width="80%">GNU form of long option handling</td>
+   <td><small><a href="/~wscot">WSCOT</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3ALong">Getopt::Long</a></td>
+   <td><small><code><a href="/dlsip?Spdr">Spdr</a></code></small></td>
+   <td width="80%">Advanced handling of command line options</td>
+   <td><small><a href="/~jv">JV</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3ALong%3A%3ADescriptive">Getopt::Long::Descriptive</a></td>
+   <td><small><code><a href="/dlsip?Rpdfp">Rpdfp</a></code></small></td>
+   <td width="80%">Getopt::Long with usage text and validation</td>
+   <td><small><a href="/~hdp">HDP</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3ALong%3A%3AString">Getopt::Long::String</a></td>
+   <td><small><code><a href="/dlsip?apdfp">apdfp</a></code></small></td>
+   <td width="80%">Parses strings option</td>
+   <td><small><a href="/~levengli">LEVENGLI</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3AMixed%3A%3AHelp">Getopt::Mixed::Help</a></td>
+   <td><small><code><a href="/dlsip?Mpdpp">Mpdpp</a></code></small></td>
+   <td width="80%">combine "Getopt::Mixed" with usage and help</td>
+   <td><small><a href="/~dorner">DORNER</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3ANumeric">Getopt::Numeric</a></td>
+   <td><small><code><a href="/dlsip?bpdf2">bpdf2</a></code></small></td>
+   <td width="80%">Implement numeric-only option</td>
+   <td><small><a href="/~cabutler">CABUTLER</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3ASimple">Getopt::Simple</a></td>
+   <td><small><code><a href="/dlsip?MpdOo">MpdOo</a></code></small></td>
+   <td width="80%">A simple-to-use interface to Getopt::Long</td>
+   <td><small><a href="/~rsavage">RSAVAGE</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3AStd">Getopt::Std</a></td>
+   <td><small><code><a href="/dlsip?Spuf">Spuf</a></code></small></td>
+   <td width="80%">Implements basic getopt and getopts</td>
+   <td><small><a href="/~p5p">P5P</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3ATabular">Getopt::Tabular</a></td>
+   <td><small><code><a href="/dlsip?apdr">apdr</a></code></small></td>
+   <td width="80%">Table-driven argument parsing with help text</td>
+   <td><small><a href="/~gward">GWARD</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3ATiny">Getopt::Tiny</a></td>
+   <td><small><code><a href="/dlsip?Rpdra">Rpdra</a></code></small></td>
+   <td width="80%">Table of references interface, auto usage()</td>
+   <td><small><a href="/~muir">MUIR</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DGetopt%3A%3AXML">Getopt::XML</a></td>
+   <td><small><code><a href="/dlsip?Rpdhp">Rpdhp</a></code></small></td>
+   <td width="80%">Use an XML Doc as input to Getopt::Long</td>
+   <td><small><a href="/~rglaue">RGLAUE</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DMRTG%3A%3AConfig">MRTG::Config</a></td>
+   <td><small><code><a href="/dlsip?bpdOp">bpdOp</a></code></small></td>
+   <td width="80%">Parse large, complex MRTG config files fast</td>
+   <td><small><a href="/~sscaffidi">SSCAFFIDI</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DMac%3A%3APropertyList">Mac::PropertyList</a></td>
+   <td><small><code><a href="/dlsip?bpdfp">bpdfp</a></code></small></td>
+   <td width="80%">work with MacOS X plist files</td>
+   <td><small><a href="/~bdfoy">BDFOY</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DParams%3A%3AAttr">Params::Attr</a></td>
+   <td><small><code><a href="/dlsip?Rpdnp">Rpdnp</a></code></small></td>
+   <td width="80%">function signature checking via attributes</td>
+   <td><small><a href="/~fluffy">FLUFFY</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DParams%3A%3AProfile">Params::Profile</a></td>
+   <td><small><code><a href="/dlsip?Rpdfo">Rpdfo</a></code></small></td>
+   <td width="80%">Module for registering parameter profiles</td>
+   <td><small><a href="/~michiel">MICHIEL</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DParams%3A%3AValidate">Params::Validate</a></td>
+   <td><small><code><a href="/dlsip?Mhdfp">Mhdfp</a></code></small></td>
+   <td width="80%">Validate sub params against a spec</td>
+   <td><small><a href="/~drolsky">DROLSKY</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DResources">Resources</a></td>
+   <td><small><code><a href="/dlsip?bpdf">bpdf</a></code></small></td>
+   <td width="80%">Application defaults management in Perl</td>
+   <td><small><a href="/~francoc">FRANCOC</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DScript%3A%3AToolbox">Script::Toolbox</a></td>
+   <td><small><code><a href="/dlsip?Rpuhp">Rpuhp</a></code></small></td>
+   <td width="80%">A toolbox for the daily business scripts</td>
+   <td><small><a href="/~eckardt">ECKARDT</a></small></td>
+  </tr>
+  <tr class=r>
+   <td><a href="/search%3Fmodule%3DUser%3A%3AIdentity">User::Identity</a></td>
+   <td><small><code><a href="/dlsip?apdOp">apdOp</a></code></small></td>
+   <td width="80%">Define a person</td>
+   <td><small><a href="/~markov">MARKOV</a></small></td>
+  </tr>
+  <tr class=s>
+   <td><a href="/search%3Fmodule%3DUser%3A%3AVault">User::Vault</a></td>
+   <td><small><code><a href="/dlsip?ipdOp">ipdOp</a></code></small></td>
+   <td width="80%">User credentials and settings management</td>
+   <td><small><a href="/~greenpau">GREENPAU</a></small></td>
+  </tr>
+ </table>
+
+<div class="footer"><div class="cpanstats">78064 Uploads, 24686 Distributions
+105893 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Other']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Other']);
+    });
+  });
+</script>
+<!-- Sun Apr 22 01:07:29 2012 GMT (0.0181000232696533) @cpansearch1 -->
+ </body>
+</html>

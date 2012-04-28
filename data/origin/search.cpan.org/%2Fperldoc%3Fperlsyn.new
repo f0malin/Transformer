@@ -1,0 +1,1135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>perlsyn - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",4,"Document","perlsyn",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?perlsyn">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  perlsyn
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/pod/perlsyn.pod">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/pod/perlsyn.pod">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~abigail/perl/pod/perlsyn.pod">perl-5.15.9</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME </a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Declarations'>Declarations    </a>
+    <li class='indexItem indexItem2'><a href='#Comments'>Comments  </a>
+    <li class='indexItem indexItem2'><a href='#Simple_Statements'>Simple Statements    </a>
+    <li class='indexItem indexItem2'><a href='#Truth_and_Falsehood'>Truth and Falsehood        </a>
+    <li class='indexItem indexItem2'><a href='#Statement_Modifiers'>Statement Modifiers         </a>
+    <li class='indexItem indexItem2'><a href='#Compound_Statements'>Compound Statements              </a>
+    <li class='indexItem indexItem2'><a href='#Loop_Control'>Loop Control      </a>
+    <li class='indexItem indexItem2'><a href='#For_Loops'>For Loops  </a>
+    <li class='indexItem indexItem2'><a href='#Foreach_Loops'>Foreach Loops  </a>
+    <li class='indexItem indexItem2'><a href='#Basic_BLOCKs'>Basic BLOCKs </a>
+    <li class='indexItem indexItem2'><a href='#Switch_statements'>Switch statements     </a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Breaking_out'>Breaking out</a>
+      <li class='indexItem indexItem3'><a href='#Fall-through'>Fall-through</a>
+      <li class='indexItem indexItem3'><a href='#Return_value'>Return value</a>
+      <li class='indexItem indexItem3'><a href='#Switching_in_a_loop'>Switching in a loop</a>
+      <li class='indexItem indexItem3'><a href='#Smart_matching_in_detail'>Smart matching in detail</a>
+      <li class='indexItem indexItem3'><a href='#Custom_matching_via_overloading'>Custom matching via overloading</a>
+      <li class='indexItem indexItem3'><a href='#Differences_from_Perl_6'>Differences from Perl 6</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Goto'>Goto </a>
+    <li class='indexItem indexItem2'><a href='#PODs:_Embedded_Documentation'>PODs: Embedded Documentation  </a>
+    <li class='indexItem indexItem2'><a href='#Plain_Old_Comments_(Not!)'>Plain Old Comments (Not!)     </a>
+  </ul>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <!--
+	INDEX: syntax
+--> <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>perlsyn - Perl syntax</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>A Perl program consists of a sequence of declarations and statements which run from the top to the bottom.
+Loops,
+subroutines and other control structures allow you to jump around within the code.</p>
+
+<p>Perl is a <b>free-form</b> language,
+you can format and indent it however you like.
+Whitespace mostly serves to separate tokens,
+unlike languages like Python where it is an important part of the syntax.</p>
+
+<p>Many of Perl&#39;s syntactic elements are <b>optional</b>.
+Rather than requiring you to put parentheses around every function call and declare every variable,
+you can often leave such explicit elements off and Perl will figure out what you meant.
+This is known as <b>Do What I Mean</b>,
+abbreviated <b>DWIM</b>.
+It allows programmers to be <b>lazy</b> and to code in a style with which they are comfortable.</p>
+
+<p>Perl <b>borrows syntax</b> and concepts from many languages: awk,
+sed,
+C,
+Bourne Shell,
+Smalltalk,
+Lisp and even English.
+Other languages have borrowed syntax from Perl,
+particularly its regular expression extensions.
+So if you have programmed in another language you will see familiar pieces in Perl.
+They often work the same,
+but see <a href="/~flora/perl-5.14.2/pod/perltrap.pod" class="podlinkpod"
+>perltrap</a> for information about how they differ.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Declarations"
+>Declarations <!--
+	INDEX: declaration
+--> <!--
+	INDEX: undef
+--> <!--
+	INDEX: undefined
+--> <!--
+	INDEX: uninitialized
+--></a></h2>
+
+<p>The only things you need to declare in Perl are report formats and subroutines (and sometimes not even subroutines).
+A variable holds the undefined value (<code>undef</code>) until it has been assigned a defined value,
+which is anything other than <code>undef</code>.
+When used as a number,
+<code>undef</code> is treated as <code>0</code>; when used as a string,
+it is treated as the empty string,
+<code>&#34;&#34;</code>; and when used as a reference that isn&#39;t being assigned to,
+it is treated as an error.
+If you enable warnings,
+you&#39;ll be notified of an uninitialized value whenever you treat <code>undef</code> as a string or a number.
+Well,
+usually.
+Boolean contexts,
+such as:</p>
+
+<pre class="sh_perl">    my $a;
+    if ($a) {}</pre>
+
+<p>are exempt from warnings (because they care about truth rather than definedness). Operators such as <code>++</code>, <code>--</code>, <code>+=</code>, <code>-=</code>, and <code>.=</code>, that operate on undefined left values such as:</p>
+
+<pre class="sh_perl">    my $a;
+    $a++;</pre>
+
+<p>are also always exempt from such warnings.</p>
+
+<p>A declaration can be put anywhere a statement can, but has no effect on the execution of the primary sequence of statements--declarations all take effect at compile time. Typically all the declarations are put at the beginning or the end of the script. However, if you&#39;re using lexically-scoped private variables created with <code>my()</code>, you&#39;ll have to make sure your format or subroutine definition is within the same block scope as the my if you expect to be able to access those private variables.</p>
+
+<p>Declaring a subroutine allows a subroutine name to be used as if it were a list operator from that point forward in the program. You can declare a subroutine without defining it by saying <code>sub name</code>, thus: <!--
+	INDEX: subroutine, declaration
+--></p>
+
+<pre class="sh_perl">    sub myname;
+    $me = myname $0             or die &#34;can&#39;t get myname&#34;;</pre>
+
+<p>Note that myname() functions as a list operator, not as a unary operator; so be careful to use <code>or</code> instead of <code>||</code> in this case. However, if you were to declare the subroutine as <code>sub myname ($)</code>, then <code>myname</code> would function as a unary operator, so either <code>or</code> or <code>||</code> would work.</p>
+
+<p>Subroutines declarations can also be loaded up with the <code>require</code> statement or both loaded and imported into your namespace with a <code>use</code> statement. See <a href="/~flora/perl-5.14.2/pod/perlmod.pod" class="podlinkpod"
+>perlmod</a> for details on this.</p>
+
+<p>A statement sequence may contain declarations of lexically-scoped variables, but apart from declaring a variable name, the declaration acts like an ordinary statement, and is elaborated within the sequence of statements as if it were an ordinary statement. That means it actually has both compile-time and run-time effects.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Comments"
+>Comments <!--
+	INDEX: comment
+--> <!--
+	INDEX: #
+--></a></h2>
+
+<p>Text from a <code>&#34;#&#34;</code> character until the end of the line is a comment, and is ignored. Exceptions include <code>&#34;#&#34;</code> inside a string or regular expression.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Simple_Statements"
+>Simple Statements <!--
+	INDEX: statement
+--> <!--
+	INDEX: semicolon
+--> <!--
+	INDEX: expression
+--> <!--
+	INDEX: ;
+--></a></h2>
+
+<p>The only kind of simple statement is an expression evaluated for its side effects. Every simple statement must be terminated with a semicolon, unless it is the final statement in a block, in which case the semicolon is optional. (A semicolon is still encouraged if the block takes up more than one line, because you may eventually add another line.) Note that there are some operators like <code>eval {}</code> and <code>do {}</code> that look like compound statements, but aren&#39;t (they&#39;re just TERMs in an expression), and thus need an explicit termination if used as the last item in a statement.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Truth_and_Falsehood"
+>Truth and Falsehood <!--
+	INDEX: truth
+--> <!--
+	INDEX: falsehood
+--> <!--
+	INDEX: true
+--> <!--
+	INDEX: false
+--> <!--
+	INDEX: !
+--> <!--
+	INDEX: not
+--> <!--
+	INDEX: negation
+--> <!--
+	INDEX: 0
+--></a></h2>
+
+<p>The number 0, the strings <code>&#39;0&#39;</code> and <code>&#39;&#39;</code>, the empty list <code>()</code>, and <code>undef</code> are all false in a boolean context. All other values are true. Negation of a true value by <code>!</code> or <code>not</code> returns a special false value. When evaluated as a string it is treated as <code>&#39;&#39;</code>, but as a number, it is treated as 0.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Statement_Modifiers"
+>Statement Modifiers <!--
+	INDEX: statement modifier
+--> <!--
+	INDEX: modifier
+--> <!--
+	INDEX: if
+--> <!--
+	INDEX: unless
+--> <!--
+	INDEX: while
+--> <!--
+	INDEX: until
+--> <!--
+	INDEX: when
+--> <!--
+	INDEX: foreach
+--> <!--
+	INDEX: for
+--></a></h2>
+
+<p>Any simple statement may optionally be followed by a <i>SINGLE</i> modifier, just before the terminating semicolon (or block ending). The possible modifiers are:</p>
+
+<pre class="sh_perl">    if EXPR
+    unless EXPR
+    while EXPR
+    until EXPR
+    when EXPR
+    for LIST
+    foreach LIST</pre>
+
+<p>The <code>EXPR</code> following the modifier is referred to as the &#34;condition&#34;. Its truth or falsehood determines how the modifier will behave.</p>
+
+<p><code>if</code> executes the statement once <i>if</i> and only if the condition is true. <code>unless</code> is the opposite, it executes the statement <i>unless</i> the condition is true (i.e., if the condition is false).</p>
+
+<pre class="sh_perl">    print &#34;Basset hounds got long ears&#34; if length $ear &#62;= 10;
+    go_outside() and play() unless $is_raining;</pre>
+
+<p><code>when</code> executes the statement <i>when</i> <code>$_</code> smart matches <code>EXPR</code>, and then either <code>break</code>s out if it&#39;s enclosed in a <code>given</code> scope or skips to the <code>next</code> element when it lies directly inside a <code>for</code> loop. See also <a href="#Switch_statements" class="podlinkpod"
+>&#34;Switch statements&#34;</a>.</p>
+
+<pre class="sh_perl">    given ($something) {
+        $abc    = 1 when /^abc/;
+        $just_a = 1 when /^a/;
+        $other  = 1;
+    }
+
+    for (@names) {
+        admin($_)   when [ qw/Alice Bob/ ];
+        regular($_) when [ qw/Chris David Ellen/ ];
+    }</pre>
+
+<p>The <code>foreach</code> modifier is an iterator: it executes the statement once for each item in the LIST (with <code>$_</code> aliased to each item in turn).</p>
+
+<pre class="sh_perl">    print &#34;Hello $_!\n&#34; foreach qw(world Dolly nurse);</pre>
+
+<p><code>while</code> repeats the statement <i>while</i> the condition is true. <code>until</code> does the opposite, it repeats the statement <i>until</i> the condition is true (or while the condition is false):</p>
+
+<pre class="sh_perl">    # Both of these count from 0 to 10.
+    print $i++ while $i &#60;= 10;
+    print $j++ until $j &#62;  10;</pre>
+
+<p>The <code>while</code> and <code>until</code> modifiers have the usual &#34;<code>while</code> loop&#34; semantics (conditional evaluated first), except when applied to a <code>do</code>-BLOCK (or to the deprecated <code>do</code>-SUBROUTINE statement), in which case the block executes once before the conditional is evaluated. This is so that you can write loops like:</p>
+
+<pre class="sh_perl">    do {
+        $line = &#60;STDIN&#62;;
+        ...
+    } until $line  eq &#34;.\n&#34;;</pre>
+
+<p>See <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#do" class="podlinkpod"
+>&#34;do&#34; in perlfunc</a>. Note also that the loop control statements described later will <i>NOT</i> work in this construct, because modifiers don&#39;t take loop labels. Sorry. You can always put another block inside of it (for <code>next</code>) or around it (for <code>last</code>) to do that sort of thing. For <code>next</code>, just double the braces: <!--
+	INDEX: next
+--> <!--
+	INDEX: last
+--> <!--
+	INDEX: redo
+--></p>
+
+<pre class="sh_perl">    do {{
+        next if $x == $y;
+        # do something here
+    }} until $x++ &#62; $z;</pre>
+
+<p>For <code>last</code>, you have to be more elaborate: <!--
+	INDEX: last
+--></p>
+
+<pre class="sh_perl">    LOOP: { 
+            do {
+                last if $x = $y**2;
+                # do something here
+            } while $x++ &#60;= $z;
+    }</pre>
+
+<p><b>NOTE:</b> The behaviour of a <code>my</code> statement modified with a statement modifier conditional or loop construct (e.g. <code>my $x if ...</code>) is <b>undefined</b>. The value of the <code>my</code> variable may be <code>undef</code>, any previously assigned value, or possibly anything else. Don&#39;t rely on it. Future versions of perl might do something different from the version of perl you try it out on. Here be dragons. <!--
+	INDEX: my
+--></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Compound_Statements"
+>Compound Statements <!--
+	INDEX: statement, compound
+--> <!--
+	INDEX: block
+--> <!--
+	INDEX: bracket, curly
+--> <!--
+	INDEX: curly bracket
+--> <!--
+	INDEX: brace
+--> <!--
+	INDEX: {
+--> <!--
+	INDEX: }
+--> <!--
+	INDEX: if
+--> <!--
+	INDEX: unless
+--> <!--
+	INDEX: while
+--> <!--
+	INDEX: until
+--> <!--
+	INDEX: foreach
+--> <!--
+	INDEX: for
+--> <!--
+	INDEX: continue
+--></a></h2>
+
+<p>In Perl, a sequence of statements that defines a scope is called a block. Sometimes a block is delimited by the file containing it (in the case of a required file, or the program as a whole), and sometimes a block is delimited by the extent of a string (in the case of an eval).</p>
+
+<p>But generally, a block is delimited by curly brackets, also known as braces. We will call this syntactic construct a BLOCK.</p>
+
+<p>The following compound statements may be used to control flow:</p>
+
+<pre class="sh_perl">    if (EXPR) BLOCK
+    if (EXPR) BLOCK else BLOCK
+    if (EXPR) BLOCK elsif (EXPR) BLOCK ... else BLOCK
+    unless (EXPR) BLOCK
+    unless (EXPR) BLOCK else BLOCK
+    unless (EXPR) BLOCK elsif (EXPR) BLOCK ... else BLOCK
+    LABEL while (EXPR) BLOCK
+    LABEL while (EXPR) BLOCK continue BLOCK
+    LABEL until (EXPR) BLOCK
+    LABEL until (EXPR) BLOCK continue BLOCK
+    LABEL for (EXPR; EXPR; EXPR) BLOCK
+    LABEL foreach VAR (LIST) BLOCK
+    LABEL foreach VAR (LIST) BLOCK continue BLOCK
+    LABEL BLOCK continue BLOCK</pre>
+
+<p>Note that, unlike C and Pascal, these are defined in terms of BLOCKs, not statements. This means that the curly brackets are <i>required</i>--no dangling statements allowed. If you want to write conditionals without curly brackets there are several other ways to do it. The following all do the same thing:</p>
+
+<pre class="sh_perl">    if (!open(FOO)) { die &#34;Can&#39;t open $FOO: $!&#34;; }
+    die &#34;Can&#39;t open $FOO: $!&#34; unless open(FOO);
+    open(FOO) or die &#34;Can&#39;t open $FOO: $!&#34;;     # FOO or bust!
+    open(FOO) ? &#39;hi mom&#39; : die &#34;Can&#39;t open $FOO: $!&#34;;
+                        # a bit exotic, that last one</pre>
+
+<p>The <code>if</code> statement is straightforward. Because BLOCKs are always bounded by curly brackets, there is never any ambiguity about which <code>if</code> an <code>else</code> goes with. If you use <code>unless</code> in place of <code>if</code>, the sense of the test is reversed. Like <code>if</code>, <code>unless</code> can be followed by <code>else</code>. <code>unless</code> can even be followed by one or more <code>elsif</code> statements, though you may want to think twice before using that particular language construct, as everyone reading your code will have to think at least twice before they can understand what&#39;s going on.</p>
+
+<p>The <code>while</code> statement executes the block as long as the expression is <a href="#Truth_and_Falsehood" class="podlinkpod"
+>true</a>. The <code>until</code> statement executes the block as long as the expression is false. The LABEL is optional, and if present, consists of an identifier followed by a colon. The LABEL identifies the loop for the loop control statements <code>next</code>, <code>last</code>, and <code>redo</code>. If the LABEL is omitted, the loop control statement refers to the innermost enclosing loop. This may include dynamically looking back your call-stack at run time to find the LABEL. Such desperate behavior triggers a warning if you use the <code>use warnings</code> pragma or the <b>-w</b> flag.</p>
+
+<p>If there is a <code>continue</code> BLOCK, it is always executed just before the conditional is about to be evaluated again. Thus it can be used to increment a loop variable, even when the loop has been continued via the <code>next</code> statement.</p>
+
+<p>Extension modules can also hook into the Perl parser to define new kinds of compound statement. These are introduced by a keyword which the extension recognizes, and the syntax following the keyword is defined entirely by the extension. If you are an implementor, see <a href="/~flora/perl-5.14.2/autodoc.pl#PL_keyword_plugin" class="podlinkpod"
+>&#34;PL_keyword_plugin&#34; in perlapi</a> for the mechanism. If you are using such a module, see the module&#39;s documentation for details of the syntax that it defines.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Loop_Control"
+>Loop Control <!--
+	INDEX: loop control
+--> <!--
+	INDEX: loop, control
+--> <!--
+	INDEX: next
+--> <!--
+	INDEX: last
+--> <!--
+	INDEX: redo
+--> <!--
+	INDEX: continue
+--></a></h2>
+
+<p>The <code>next</code> command starts the next iteration of the loop:</p>
+
+<pre class="sh_perl">    LINE: while (&#60;STDIN&#62;) {
+        next LINE if /^#/;      # discard comments
+        ...
+    }</pre>
+
+<p>The <code>last</code> command immediately exits the loop in question. The <code>continue</code> block, if any, is not executed:</p>
+
+<pre class="sh_perl">    LINE: while (&#60;STDIN&#62;) {
+        last LINE if /^$/;      # exit when done with header
+        ...
+    }</pre>
+
+<p>The <code>redo</code> command restarts the loop block without evaluating the conditional again. The <code>continue</code> block, if any, is <i>not</i> executed. This command is normally used by programs that want to lie to themselves about what was just input.</p>
+
+<p>For example, when processing a file like <em>/etc/termcap</em>. If your input lines might end in backslashes to indicate continuation, you want to skip ahead and get the next record.</p>
+
+<pre class="sh_perl">    while (&#60;&#62;) {
+        chomp;
+        if (s/\\$//) {
+            $_ .= &#60;&#62;;
+            redo unless eof();
+        }
+        # now process $_
+    }</pre>
+
+<p>which is Perl short-hand for the more explicitly written version:</p>
+
+<pre class="sh_perl">    LINE: while (defined($line = &#60;ARGV&#62;)) {
+        chomp($line);
+        if ($line =~ s/\\$//) {
+            $line .= &#60;ARGV&#62;;
+            redo LINE unless eof(); # not eof(ARGV)!
+        }
+        # now process $line
+    }</pre>
+
+<p>Note that if there were a <code>continue</code> block on the above code, it would get executed only on lines discarded by the regex (since redo skips the continue block). A continue block is often used to reset line counters or <code>m?pat?</code> one-time matches:</p>
+
+<pre class="sh_perl">    # inspired by :1,$g/fred/s//WILMA/
+    while (&#60;&#62;) {
+        m?(fred)?    &#38;&#38; s//WILMA $1 WILMA/;
+        m?(barney)?  &#38;&#38; s//BETTY $1 BETTY/;
+        m?(homer)?   &#38;&#38; s//MARGE $1 MARGE/;
+    } continue {
+        print &#34;$ARGV $.: $_&#34;;
+        close ARGV  if eof;             # reset $.
+        reset       if eof;             # reset ?pat?
+    }</pre>
+
+<p>If the word <code>while</code> is replaced by the word <code>until</code>, the sense of the test is reversed, but the conditional is still tested before the first iteration.</p>
+
+<p>The loop control statements don&#39;t work in an <code>if</code> or <code>unless</code>, since they aren&#39;t loops. You can double the braces to make them such, though.</p>
+
+<pre class="sh_perl">    if (/pattern/) {{
+        last if /fred/;
+        next if /barney/; # same effect as &#34;last&#34;, but doesn&#39;t document as well
+        # do something here
+    }}</pre>
+
+<p>This is caused by the fact that a block by itself acts as a loop that executes once, see <a href="#Basic_BLOCKs" class="podlinkpod"
+>&#34;Basic BLOCKs&#34;</a>.</p>
+
+<p>The form <code>while/if BLOCK BLOCK</code>, available in Perl 4, is no longer available. Replace any occurrence of <code>if BLOCK</code> by <code>if (do BLOCK)</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="For_Loops"
+>For Loops <!--
+	INDEX: for
+--> <!--
+	INDEX: foreach
+--></a></h2>
+
+<p>Perl&#39;s C-style <code>for</code> loop works like the corresponding <code>while</code> loop; that means that this:</p>
+
+<pre class="sh_perl">    for ($i = 1; $i &#60; 10; $i++) {
+        ...
+    }</pre>
+
+<p>is the same as this:</p>
+
+<pre class="sh_perl">    $i = 1;
+    while ($i &#60; 10) {
+        ...
+    } continue {
+        $i++;
+    }</pre>
+
+<p>There is one minor difference: if variables are declared with <code>my</code> in the initialization section of the <code>for</code>, the lexical scope of those variables is exactly the <code>for</code> loop (the body of the loop and the control sections). <!--
+	INDEX: my
+--></p>
+
+<p>Besides the normal array index looping, <code>for</code> can lend itself to many other interesting applications. Here&#39;s one that avoids the problem you get into if you explicitly test for end-of-file on an interactive file descriptor causing your program to appear to hang. <!--
+	INDEX: eof
+--> <!--
+	INDEX: end-of-file
+--> <!--
+	INDEX: end of file
+--></p>
+
+<pre class="sh_perl">    $on_a_tty = -t STDIN &#38;&#38; -t STDOUT;
+    sub prompt { print &#34;yes? &#34; if $on_a_tty }
+    for ( prompt(); &#60;STDIN&#62;; prompt() ) {
+        # do something
+    }</pre>
+
+<p>Using <code>readline</code> (or the operator form, <code>&#60;EXPR&#62;</code>) as the conditional of a <code>for</code> loop is shorthand for the following. This behaviour is the same as a <code>while</code> loop conditional. <!--
+	INDEX: readline
+--> <!--
+	INDEX: &#60;&#62;
+--></p>
+
+<pre class="sh_perl">    for ( prompt(); defined( $_ = &#60;STDIN&#62; ); prompt() ) {
+        # do something
+    }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Foreach_Loops"
+>Foreach Loops <!--
+	INDEX: for
+--> <!--
+	INDEX: foreach
+--></a></h2>
+
+<p>The <code>foreach</code> loop iterates over a normal list value and sets the variable VAR to be each element of the list in turn. If the variable is preceded with the keyword <code>my</code>, then it is lexically scoped, and is therefore visible only within the loop. Otherwise, the variable is implicitly local to the loop and regains its former value upon exiting the loop. If the variable was previously declared with <code>my</code>, it uses that variable instead of the global one, but it&#39;s still localized to the loop. This implicit localization occurs <i>only</i> in a <code>foreach</code> loop. <!--
+	INDEX: my
+--> <!--
+	INDEX: local
+--></p>
+
+<p>The <code>foreach</code> keyword is actually a synonym for the <code>for</code> keyword, so you can use <code>foreach</code> for readability or <code>for</code> for brevity. (Or because the Bourne shell is more familiar to you than <i>csh</i>, so writing <code>for</code> comes more naturally.) If VAR is omitted, <code>$_</code> is set to each value. <!--
+	INDEX: $_
+--></p>
+
+<p>If any element of LIST is an lvalue, you can modify it by modifying VAR inside the loop. Conversely, if any element of LIST is NOT an lvalue, any attempt to modify that element will fail. In other words, the <code>foreach</code> loop index variable is an implicit alias for each item in the list that you&#39;re looping over. <!--
+	INDEX: alias
+--></p>
+
+<p>If any part of LIST is an array, <code>foreach</code> will get very confused if you add or remove elements within the loop body, for example with <code>splice</code>. So don&#39;t do that. <!--
+	INDEX: splice
+--></p>
+
+<p><code>foreach</code> probably won&#39;t do what you expect if VAR is a tied or other special variable. Don&#39;t do that either.</p>
+
+<p>Examples:</p>
+
+<pre class="sh_perl">    for (@ary) { s/foo/bar/ }
+
+    for my $elem (@elements) {
+        $elem *= 2;
+    }
+
+    for $count (10,9,8,7,6,5,4,3,2,1,&#39;BOOM&#39;) {
+        print $count, &#34;\n&#34;; sleep(1);
+    }
+
+    for (1..15) { print &#34;Merry Christmas\n&#34;; }
+
+    foreach $item (split(/:[\\\n:]*/, $ENV{TERMCAP})) {
+        print &#34;Item: $item\n&#34;;
+    }</pre>
+
+<p>Here&#39;s how a C programmer might code up a particular algorithm in Perl:</p>
+
+<pre class="sh_perl">    for (my $i = 0; $i &#60; @ary1; $i++) {
+        for (my $j = 0; $j &#60; @ary2; $j++) {
+            if ($ary1[$i] &#62; $ary2[$j]) {
+                last; # can&#39;t go to outer :-(
+            }
+            $ary1[$i] += $ary2[$j];
+        }
+        # this is where that last takes me
+    }</pre>
+
+<p>Whereas here&#39;s how a Perl programmer more comfortable with the idiom might do it:</p>
+
+<pre class="sh_perl">    OUTER: for my $wid (@ary1) {
+    INNER:   for my $jet (@ary2) {
+                next OUTER if $wid &#62; $jet;
+                $wid += $jet;
+             }
+          }</pre>
+
+<p>See how much easier this is? It&#39;s cleaner, safer, and faster. It&#39;s cleaner because it&#39;s less noisy. It&#39;s safer because if code gets added between the inner and outer loops later on, the new code won&#39;t be accidentally executed. The <code>next</code> explicitly iterates the other loop rather than merely terminating the inner one. And it&#39;s faster because Perl executes a <code>foreach</code> statement more rapidly than it would the equivalent <code>for</code> loop.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Basic_BLOCKs"
+>Basic BLOCKs <!--
+	INDEX: block
+--></a></h2>
+
+<p>A BLOCK by itself (labeled or not) is semantically equivalent to a loop that executes once. Thus you can use any of the loop control statements in it to leave or restart the block. (Note that this is <i>NOT</i> true in <code>eval{}</code>, <code>sub{}</code>, or contrary to popular belief <code>do{}</code> blocks, which do <i>NOT</i> count as loops.) The <code>continue</code> block is optional.</p>
+
+<p>The BLOCK construct can be used to emulate case structures.</p>
+
+<pre class="sh_perl">    SWITCH: {
+        if (/^abc/) { $abc = 1; last SWITCH; }
+        if (/^def/) { $def = 1; last SWITCH; }
+        if (/^xyz/) { $xyz = 1; last SWITCH; }
+        $nothing = 1;
+    }</pre>
+
+<p>Such constructs are quite frequently used, because older versions of Perl had no official <code>switch</code> statement.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Switch_statements"
+>Switch statements <!--
+	INDEX: switch
+--> <!--
+	INDEX: case
+--> <!--
+	INDEX: given
+--> <!--
+	INDEX: when
+--> <!--
+	INDEX: default
+--></a></h2>
+
+<p>Starting from Perl 5.10, you can say</p>
+
+<pre class="sh_perl">    use feature &#34;switch&#34;;</pre>
+
+<p>which enables a switch feature that is closely based on the Perl 6 proposal.</p>
+
+<p>The keywords <code>given</code> and <code>when</code> are analogous to <code>switch</code> and <code>case</code> in other languages, so the code above could be written as</p>
+
+<pre class="sh_perl">    given($_) {
+        when (/^abc/) { $abc = 1; }
+        when (/^def/) { $def = 1; }
+        when (/^xyz/) { $xyz = 1; }
+        default { $nothing = 1; }
+    }</pre>
+
+<p>This construct is very flexible and powerful. For example:</p>
+
+<pre class="sh_perl">    use feature &#34;:5.10&#34;;
+    given($foo) {
+        when (undef) {
+            say &#39;$foo is undefined&#39;;
+        }
+        when (&#34;foo&#34;) {
+            say &#39;$foo is the string &#34;foo&#34;&#39;;
+        }
+        when ([1,3,5,7,9]) {
+            say &#39;$foo is an odd digit&#39;;
+            continue; # Fall through
+        }
+        when ($_ &#60; 100) {
+            say &#39;$foo is numerically less than 100&#39;;
+        }
+        when (\&#38;complicated_check) {
+            say &#39;a complicated check for $foo is true&#39;;
+        }
+        default {
+            die q(I don&#39;t know what to do with $foo);
+        }
+    }</pre>
+
+<p><code>given(EXPR)</code> will assign the value of EXPR to <code>$_</code> within the lexical scope of the block, so it&#39;s similar to</p>
+
+<pre class="sh_perl">        do { my $_ = EXPR; ... }</pre>
+
+<p>except that the block is automatically broken out of by a successful <code>when</code> or an explicit <code>break</code>.</p>
+
+<p>Most of the power comes from implicit smart matching:</p>
+
+<pre class="sh_perl">        when($foo)</pre>
+
+<p>is exactly equivalent to</p>
+
+<pre class="sh_perl">        when($_ ~~ $foo)</pre>
+
+<p>Most of the time, <code>when(EXPR)</code> is treated as an implicit smart match of <code>$_</code>, i.e. <code>$_ ~~ EXPR</code>. (See <a href="#Smart_matching_in_detail" class="podlinkpod"
+>&#34;Smart matching in detail&#34;</a> for more information on smart matching.) But when EXPR is one of the below exceptional cases, it is used directly as a boolean:</p>
+
+<ul>
+<li>a subroutine or method call</li>
+
+<li>a regular expression match, i.e. <code>/REGEX/</code> or <code>$foo =~ /REGEX/</code>, or a negated regular expression match (<code>!/REGEX/</code> or <code>$foo !~ /REGEX/</code>).</li>
+
+<li>a comparison such as <code>$_ &#60; 10</code> or <code>$x eq &#34;abc&#34;</code> (or of course <code>$_ ~~ $c</code>)</li>
+
+<li><code>defined(...)</code>, <code>exists(...)</code>, or <code>eof(...)</code></li>
+
+<li>a negated expression <code>!(...)</code> or <code>not (...)</code>, or a logical exclusive-or <code>(...) xor (...)</code>.</li>
+
+<li>a filetest operator, with the exception of <code>-s</code>, <code>-M</code>, <code>-A</code>, and <code>-C</code>, that return numerical values, not boolean ones.</li>
+
+<li>the <code>..</code> and <code>...</code> flip-flop operators.</li>
+</ul>
+
+<p>In those cases the value of EXPR is used directly as a boolean.</p>
+
+<p>Furthermore, Perl inspects the operands of the binary boolean operators to decide whether to use smart matching for each one by applying the above test to the operands:</p>
+
+<ul>
+<li>If EXPR is <code>... &#38;&#38; ...</code> or <code>... and ...</code>, the test is applied recursively to both operands. If <i>both</i> operands pass the test, then the expression is treated as boolean; otherwise, smart matching is used.</li>
+
+<li>If EXPR is <code>... || ...</code>, <code>... // ...</code> or <code>... or ...</code>, the test is applied recursively to the first operand (which may be a higher-precedence AND operator, for example). If the first operand is to use smart matching, then both operands will do so; if it is not, then the second argument will not be either.</li>
+</ul>
+
+<p>These rules look complicated, but usually they will do what you want. For example:</p>
+
+<pre class="sh_perl">    when (/^\d+$/ &#38;&#38; $_ &#60; 75) { ... }</pre>
+
+<p>will be treated as a boolean match because the rules say both a regex match and an explicit test on $_ will be treated as boolean.</p>
+
+<p>Also:</p>
+
+<pre class="sh_perl">    when ([qw(foo bar)] &#38;&#38; /baz/) { ... }</pre>
+
+<p>will use smart matching because only <i>one</i> of the operands is a boolean; the other uses smart matching, and that wins.</p>
+
+<p>Further:</p>
+
+<pre class="sh_perl">    when ([qw(foo bar)] || /^baz/) { ... }</pre>
+
+<p>will use smart matching (only the first operand is considered), whereas</p>
+
+<pre class="sh_perl">    when (/^baz/ || [qw(foo bar)]) { ... }</pre>
+
+<p>will test only the regex, which causes both operands to be treated as boolean. Watch out for this one, then, because an arrayref is always a true value, which makes it effectively redundant.</p>
+
+<p>Tautologous boolean operators are still going to be optimized away. Don&#39;t be tempted to write</p>
+
+<pre class="sh_perl">    when (&#39;foo&#39; or &#39;bar&#39;) { ... }</pre>
+
+<p>This will optimize down to <code>&#39;foo&#39;</code>, so <code>&#39;bar&#39;</code> will never be considered (even though the rules say to use a smart match on <code>&#39;foo&#39;</code>). For an alternation like this, an array ref will work, because this will instigate smart matching:</p>
+
+<pre class="sh_perl">    when ([qw(foo bar)] { ... }</pre>
+
+<p>This is somewhat equivalent to the C-style switch statement&#39;s fallthrough functionality (not to be confused with <i>Perl&#39;s</i> fallthrough functionality - see below), wherein the same block is used for several <code>case</code> statements.</p>
+
+<p>Another useful shortcut is that, if you use a literal array or hash as the argument to <code>given</code>, it is turned into a reference. So <code>given(@foo)</code> is the same as <code>given(\@foo)</code>, for example.</p>
+
+<p><code>default</code> behaves exactly like <code>when(1 == 1)</code>, which is to say that it always matches.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Breaking_out"
+>Breaking out</a></h3>
+
+<p>You can use the <code>break</code> keyword to break out of the enclosing <code>given</code> block. Every <code>when</code> block is implicitly ended with a <code>break</code>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Fall-through"
+>Fall-through</a></h3>
+
+<p>You can use the <code>continue</code> keyword to fall through from one case to the next:</p>
+
+<pre class="sh_perl">    given($foo) {
+        when (/x/) { say &#39;$foo contains an x&#39;; continue }
+        when (/y/) { say &#39;$foo contains a y&#39; }
+        default    { say &#39;$foo does not contain a y&#39; }
+    }</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Return_value"
+>Return value</a></h3>
+
+<p>When a <code>given</code> statement is also a valid expression (e.g. when it&#39;s the last statement of a block), it evaluates to :</p>
+
+<ul>
+<li>an empty list as soon as an explicit <code>break</code> is encountered.</li>
+
+<li>the value of the last evaluated expression of the successful <code>when</code>/<code>default</code> clause, if there&#39;s one.</li>
+
+<li>the value of the last evaluated expression of the <code>given</code> block if no condition is true.</li>
+</ul>
+
+<p>In both last cases, the last expression is evaluated in the context that was applied to the <code>given</code> block.</p>
+
+<p>Note that, unlike <code>if</code> and <code>unless</code>, failed <code>when</code> statements always evaluate to an empty list.</p>
+
+<pre class="sh_perl">    my $price = do { given ($item) {
+        when ([ &#39;pear&#39;, &#39;apple&#39; ]) { 1 }
+        break when &#39;vote&#39;;      # My vote cannot be bought
+        1e10  when /Mona Lisa/;
+        &#39;unknown&#39;;
+    } };</pre>
+
+<p>Currently, <code>given</code> blocks can&#39;t always be used as proper expressions. This may be addressed in a future version of perl.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Switching_in_a_loop"
+>Switching in a loop</a></h3>
+
+<p>Instead of using <code>given()</code>, you can use a <code>foreach()</code> loop. For example, here&#39;s one way to count how many times a particular string occurs in an array:</p>
+
+<pre class="sh_perl">    my $count = 0;
+    for (@array) {
+        when (&#34;foo&#34;) { ++$count }
+    }
+    print &#34;\@array contains $count copies of &#39;foo&#39;\n&#34;;</pre>
+
+<p>At the end of all <code>when</code> blocks, there is an implicit <code>next</code>. You can override that with an explicit <code>last</code> if you&#39;re only interested in the first match.</p>
+
+<p>This doesn&#39;t work if you explicitly specify a loop variable, as in <code>for $item (@array)</code>. You have to use the default variable <code>$_</code>. (You can use <code>for my $_ (@array)</code>.)</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Smart_matching_in_detail"
+>Smart matching in detail</a></h3>
+
+<p>The behaviour of a smart match depends on what type of thing its arguments are. The behaviour is determined by the following table: the first row that applies determines the match behaviour (which is thus mostly determined by the type of the right operand). Note that the smart match implicitly dereferences any non-blessed hash or array ref, so the &#34;Hash&#34; and &#34;Array&#34; entries apply in those cases. (For blessed references, the &#34;Object&#34; entries apply.)</p>
+
+<p>Note that the &#34;Matching Code&#34; column is not always an exact rendition. For example, the smart match operator short-circuits whenever possible, but <code>grep</code> does not.</p>
+
+<pre class="sh_perl">    $a      $b        Type of Match Implied    Matching Code
+    ======  =====     =====================    =============
+    Any     undef     undefined                !defined $a
+
+    Any     Object    invokes ~~ overloading on $object, or dies
+
+    Hash    CodeRef   sub truth for each key[1] !grep { !$b-&#62;($_) } keys %$a
+    Array   CodeRef   sub truth for each elt[1] !grep { !$b-&#62;($_) } @$a
+    Any     CodeRef   scalar sub truth          $b-&#62;($a)
+
+    Hash    Hash      hash keys identical (every key is found in both hashes)
+    Array   Hash      hash keys intersection   grep { exists $b-&#62;{$_} } @$a
+    Regex   Hash      hash key grep            grep /$a/, keys %$b
+    undef   Hash      always false (undef can&#39;t be a key)
+    Any     Hash      hash entry existence     exists $b-&#62;{$a}
+
+    Hash    Array     hash keys intersection   grep { exists $a-&#62;{$_} } @$b
+    Array   Array     arrays are comparable[2]
+    Regex   Array     array grep               grep /$a/, @$b
+    undef   Array     array contains undef     grep !defined, @$b
+    Any     Array     match against an array element[3]
+                                               grep $a ~~ $_, @$b
+
+    Hash    Regex     hash key grep            grep /$b/, keys %$a
+    Array   Regex     array grep               grep /$b/, @$a
+    Any     Regex     pattern match            $a =~ /$b/
+
+    Object  Any       invokes ~~ overloading on $object, or falls back:
+    Any     Num       numeric equality         $a == $b
+    Num     numish[4] numeric equality         $a == $b
+    undef   Any       undefined                !defined($b)
+    Any     Any       string equality          $a eq $b
+
+ 1 - empty hashes or arrays will match.
+ 2 - that is, each element smart-matches the element of same index in the
+     other array. [3]
+ 3 - If a circular reference is found, we fall back to referential equality.
+ 4 - either a real number, or a string that looks like a number</pre>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Custom_matching_via_overloading"
+>Custom matching via overloading</a></h3>
+
+<p>You can change the way that an object is matched by overloading the <code>~~</code> operator. This may alter the usual smart match semantics.</p>
+
+<p>It should be noted that <code>~~</code> will refuse to work on objects that don&#39;t overload it (in order to avoid relying on the object&#39;s underlying structure).</p>
+
+<p>Note also that smart match&#39;s matching rules take precedence over overloading, so if <code>$obj</code> has smart match overloading, then</p>
+
+<pre class="sh_perl">    $obj ~~ X</pre>
+
+<p>will not automatically invoke the overload method with X as an argument; instead the table above is consulted as normal, and based in the type of X, overloading may or may not be invoked.</p>
+
+<p>See <a href="/~flora/perl-5.14.2/lib/overload.pm" class="podlinkpod"
+>overload</a>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Differences_from_Perl_6"
+>Differences from Perl 6</a></h3>
+
+<p>The Perl 5 smart match and <code>given</code>/<code>when</code> constructs are not absolutely identical to their Perl 6 analogues. The most visible difference is that, in Perl 5, parentheses are required around the argument to <code>given()</code> and <code>when()</code> (except when this last one is used as a statement modifier). Parentheses in Perl 6 are always optional in a control construct such as <code>if()</code>, <code>while()</code>, or <code>when()</code>; they can&#39;t be made optional in Perl 5 without a great deal of potential confusion, because Perl 5 would parse the expression</p>
+
+<pre class="sh_perl">  given $foo {
+    ...
+  }</pre>
+
+<p>as though the argument to <code>given</code> were an element of the hash <code>%foo</code>, interpreting the braces as hash-element syntax.</p>
+
+<p>The table of smart matches is not identical to that proposed by the Perl 6 specification, mainly due to the differences between Perl 6&#39;s and Perl 5&#39;s data models.</p>
+
+<p>In Perl 6, <code>when()</code> will always do an implicit smart match with its argument, whilst it is convenient in Perl 5 to suppress this implicit smart match in certain situations, as documented above. (The difference is largely because Perl 5 does not, even internally, have a boolean type.)</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Goto"
+>Goto <!--
+	INDEX: goto
+--></a></h2>
+
+<p>Although not for the faint of heart, Perl does support a <code>goto</code> statement. There are three forms: <code>goto</code>-LABEL, <code>goto</code>-EXPR, and <code>goto</code>-&#38;NAME. A loop&#39;s LABEL is not actually a valid target for a <code>goto</code>; it&#39;s just the name of the loop.</p>
+
+<p>The <code>goto</code>-LABEL form finds the statement labeled with LABEL and resumes execution there. It may not be used to go into any construct that requires initialization, such as a subroutine or a <code>foreach</code> loop. It also can&#39;t be used to go into a construct that is optimized away. It can be used to go almost anywhere else within the dynamic scope, including out of subroutines, but it&#39;s usually better to use some other construct such as <code>last</code> or <code>die</code>. The author of Perl has never felt the need to use this form of <code>goto</code> (in Perl, that is--C is another matter).</p>
+
+<p>The <code>goto</code>-EXPR form expects a label name, whose scope will be resolved dynamically. This allows for computed <code>goto</code>s per FORTRAN, but isn&#39;t necessarily recommended if you&#39;re optimizing for maintainability:</p>
+
+<pre class="sh_perl">    goto((&#34;FOO&#34;, &#34;BAR&#34;, &#34;GLARCH&#34;)[$i]);</pre>
+
+<p>The <code>goto</code>-&#38;NAME form is highly magical, and substitutes a call to the named subroutine for the currently running subroutine. This is used by <code>AUTOLOAD()</code> subroutines that wish to load another subroutine and then pretend that the other subroutine had been called in the first place (except that any modifications to <code>@_</code> in the current subroutine are propagated to the other subroutine.) After the <code>goto</code>, not even <code>caller()</code> will be able to tell that this routine was called first.</p>
+
+<p>In almost all cases like this, it&#39;s usually a far, far better idea to use the structured control flow mechanisms of <code>next</code>, <code>last</code>, or <code>redo</code> instead of resorting to a <code>goto</code>. For certain applications, the catch and throw pair of <code>eval{}</code> and die() for exception processing can also be a prudent approach.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PODs:_Embedded_Documentation"
+>PODs: Embedded Documentation <!--
+	INDEX: POD
+--> <!--
+	INDEX: documentation
+--></a></h2>
+
+<p>Perl has a mechanism for intermixing documentation with source code. While it&#39;s expecting the beginning of a new statement, if the compiler encounters a line that begins with an equal sign and a word, like this</p>
+
+<pre class="sh_perl">    =head1 Here There Be Pods!</pre>
+
+<p>Then that text and all remaining text up through and including a line beginning with <code>=cut</code> will be ignored. The format of the intervening text is described in <a href="/~flora/perl-5.14.2/pod/perlpod.pod" class="podlinkpod"
+>perlpod</a>.</p>
+
+<p>This allows you to intermix your source code and your documentation text freely, as in</p>
+
+<pre class="sh_perl">    =item snazzle($)
+
+    The snazzle() function will behave in the most spectacular
+    form that you can possibly imagine, not even excepting
+    cybernetic pyrotechnics.
+
+    =cut back to the compiler, nuff of this pod stuff!
+
+    sub snazzle($) {
+        my $thingie = shift;
+        .........
+    }</pre>
+
+<p>Note that pod translators should look at only paragraphs beginning with a pod directive (it makes parsing easier), whereas the compiler actually knows to look for pod escapes even in the middle of a paragraph. This means that the following secret stuff will be ignored by both the compiler and the translators.</p>
+
+<pre class="sh_perl">    $a=3;
+    =secret stuff
+     warn &#34;Neither POD nor CODE!?&#34;
+    =cut back
+    print &#34;got $a\n&#34;;</pre>
+
+<p>You probably shouldn&#39;t rely upon the <code>warn()</code> being podded out forever. Not all pod translators are well-behaved in this regard, and perhaps the compiler will become pickier.</p>
+
+<p>One may also use pod directives to quickly comment out a section of code.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Plain_Old_Comments_(Not!)"
+>Plain Old Comments (Not!) <!--
+	INDEX: comment
+--> <!--
+	INDEX: line
+--> <!--
+	INDEX: #
+--> <!--
+	INDEX: preprocessor
+--> <!--
+	INDEX: eval
+--></a></h2>
+
+<p>Perl can process line directives, much like the C preprocessor. Using this, one can control Perl&#39;s idea of filenames and line numbers in error or warning messages (especially for strings that are processed with <code>eval()</code>). The syntax for this mechanism is almost the same as for most C preprocessors: it matches the regular expression</p>
+
+<pre class="sh_perl">    # example: &#39;# line 42 &#34;new_filename.plx&#34;&#39;
+    /^\#   \s*
+      line \s+ (\d+)   \s*
+      (?:\s(&#34;?)([^&#34;]+)\g2)? \s*
+     $/x</pre>
+
+<p>with <code>$1</code> being the line number for the next line, and <code>$3</code> being the optional filename (specified with or without quotes). Note that no whitespace may precede the <code>#</code>, unlike modern C preprocessors.</p>
+
+<p>There is a fairly obvious gotcha included with the line directive: Debuggers and profilers will only show the last source line to appear at a particular line number in a given file. Care should be taken not to cause line number collisions in code you&#39;d like to debug later.</p>
+
+<p>Here are some examples that you should be able to type into your command shell:</p>
+
+<pre class="sh_perl">    % perl
+    # line 200 &#34;bzzzt&#34;
+    # the `#&#39; on the previous line must be the first char on line
+    die &#39;foo&#39;;
+    __END__
+    foo at bzzzt line 201.
+
+    % perl
+    # line 200 &#34;bzzzt&#34;
+    eval qq[\n#line 2001 &#34;&#34;\ndie &#39;foo&#39;]; print $@;
+    __END__
+    foo at - line 2001.
+
+    % perl
+    eval qq[\n#line 200 &#34;foo bar&#34;\ndie &#39;foo&#39;]; print $@;
+    __END__
+    foo at foo bar line 200.
+
+    % perl
+    # line 345 &#34;goop&#34;
+    eval &#34;\n#line &#34; . __LINE__ . &#39; &#34;&#39; . __FILE__ .&#34;\&#34;\ndie &#39;foo&#39;&#34;;
+    print $@;
+    __END__
+    foo at goop line 345.</pre>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78231 Uploads, 24723 Distributions
+106029 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Thu Apr 26 21:50:23 2012 GMT (0.150238037109375) @cpansearch1 -->
+ </body>
+</html>

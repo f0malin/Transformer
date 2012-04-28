@@ -1,0 +1,224 @@
+version 0.97
+==================================
+
+Full version object support, with patch for bug in Perl 5.10.0 core
+version support.
+
+YOU SHOULD INSTALL THIS RELEASE WHEN USING VERSION OBJECTS IN PERL 5.10.0.
+There was a bug caused by objects serialized by YAML that will cause Perl
+5.10.0 to segfault.  As long as some module calls 'use version', then the
+replacement code will take effect and Perl will not crash.
+
+Major Changes in 0.97 - 2012-02-28
+=====================================
+Minor tweak to locale test to skip if no locales are installed at all.
+
+Major Changes in 0.96 - 2012-02-06
+=====================================
+Merge in upstream changes from bleadperl.  Improved locale tests.
+
+Major Changes in 0.95 - 2011-11-12
+=====================================
+Restore compatibility in replacement UNIVERSAL::VERSION with the behavior
+of Perl 5.14.x, essentially by reverting the changes in 
+
+    https://rt.perl.org/rt3/Ticket/Display.html?id=95544
+
+Fix segfault error with strings that begin with 'v', especially the string
+'version'.  Resolves:
+
+    https://rt.cpan.org/Ticket/Display.html?id=72365
+
+Forbid all math operations on version objects in base class (this was
+already the case for XS code but the pure Perl was lacking).  Resolves:
+
+    https://rt.cpan.org/Public/Bug/Display.html?id=70950
+
+Major Changes in 0.94 - 2011-08-21
+=====================================
+Clarify documentation on advisability of using leading 'v' (it isn't
+mandatory, but it is much more likely to DTRT).  Resolves:
+
+    https://rt.cpan.org/Public/Bug/Display.html?id=70120
+
+Use a localized DIE handler when attempting to load the XS code, in case
+the caller has its own DIE handler.  Resolves:
+
+    https://rt.cpan.org/Public/Bug/Display.html?id=70260
+
+Major Changes in 0.93 - 2011-07-27
+=====================================
+Fix problem with UNIVERSAL::VERSION noted by Father Chrysostomos.
+
+Major Changes in 0.92 - 2011-07-26
+=====================================
+Forbid negative versions.  Make replacement UNIVERSAL::VERSION return the
+original $VERSION scalar if called without a requested version.  Resolves
+
+  https://rt.perl.org/rt3/Ticket/Display.html?id=95544
+
+Rewrite code so that we just override all subs for Perl >= 5.9.0 (when
+version.pm was added to the core).
+
+Major Changes in 0.91 - 2011-06-05
+=====================================
+Fix compilation/linking on Strawberry Perl, resolves
+
+  https://rt.cpan.org/Ticket/Display.html?id=68611
+
+Major Changes in 0.90 - 2011-06-01
+=====================================
+Make all tests pass even with older Test::More releases.  Resolves
+
+  https://rt.cpan.org/Ticket/Display.html?id=68588
+
+Major Changes in 0.89 - 2011-05-31
+=====================================
+Change behavior of pure Perl qv/declare to match the core/XS behavior; do 
+not use parent's new() class for derived classes.  This breaks
+encapsulation but I can justify it because qv/declare is a very specific
+thing that shouldn't be casually overridden (unless you do it directly in the
+subclass).
+
+Major Changes in 0.88 - 2010-12-19
+=====================================
+Fix Makefile.PL to make Strawberry Perl happy.  Resolves:
+
+	https://rt.cpan.org/Public/Bug/Display.html?id=63991
+
+Major Changes in 0.87 - 2010-12-09
+=====================================
+Remove Build.PL since there are modules in the Module::Build tool chain
+that require version.pm, leading to circular dependencies.  This also allows
+Module::Build itself to depend on version.pm.
+
+Major Changes in 0.86 - 2010-11-26
+=====================================
+is_strict/is_lax were not exported correctly (which no one noticed).  Also
+pull in strict/lax tests from core.
+
+Major Changes in 0.85 - 2010-10-25
+=====================================
+Don't include MYMETA.yml file in distro
+
+Major Changes in 0.84 - 2010-10-24
+=====================================
+Restore public API vcmp() broken in 0.83
+
+Major Changes in 0.83 - 2010-10-17
+=====================================
+Changed vverify API (David Golden).  Improved heuristic for non-magical
+v-strings (Perl 5.6.0-5.8.0).  Install in proper patch post-@INC
+reordering.
+
+Major Changes in 0.82 - 2010-04-13
+=====================================
+Still more changes to sync with Perl 5.12.0-as-released.  Rewritten POD
+thanks to many hands, but mostly David Golden.  Vastly improved Regex
+definitions from Zephram.
+
+Major Changes in 0.81 - 2010-02-01
+=====================================
+Merge in changes from bleadperl that will be part of Perl 5.12.0.
+Completely rewrite pure Perl code to operate exactly like the XS code,
+through the creation of a character-array class called charstar.  Now
+the pure Perl code and XS code can be more easily be synchronized.
+
+Major Changes in 0.80 - 2010-01-21
+=====================================
+No outwardly visible changes.  This release is to fix an assertion error
+with certain picky/older compilers.  NOTE: this is not the version object
+code that will be part of Perl 5.12.0, which will be released shortly as
+0.81.
+
+Major Changes in 0.79 - 2010-01-03
+=====================================
+No outwardly visible changes.  This release is to match the code that 
+will part of Perl 5.12.0, but which doesn't affect the external API of
+the CPAN release.
+
+
+Major Changes in 0.78 - 2009-10-12
+=====================================
+More changes to improve the non-magic v-string heuristics, this time 
+affecting both the pure Perl and XS backends.  NOTE: these fixes only
+matter if you are running Perl 5.6.x to 5.8.0 (inclusive).  Beginning
+with Perl 5.8.1, v-strings are now magical and version.pm no longer has
+to guess.  Resolves:
+
+	https://rt.cpan.org/Ticket/Display.html?id=50347
+
+Also resolve the issue where attempting to install CPAN releases on top
+of core releases (e.g. 5.10.0 and 5.10.1) would not DTRT.  Resolves:
+
+	https://rt.cpan.org/Ticket/Display.html?id=49667
+
+Major Changes in 0.7702 - 2009-09-07
+=====================================
+Add additional contraints to the code which tries to guess whether something
+is a v-string or not for Perl 5.6.0 through 5.8.0 (inclusive).  Resolves:
+
+	https://rt.cpan.org/Ticket/Display.html?id=49348
+
+Major Changes in 0.7701 - 2009-07-28
+=====================================
+Special RHEL4.x/Fedora4.x Are Too Stupid to Live Release.  Those distros
+have never updated beyond Perl 5.8.5/5.8.6 respectively.  Consequently,
+they contain a complete broken Test::More::use_ok which doesn't load the
+package into the correct namespace:
+
+	https://rt.cpan.org/Ticket/Display.html?id=48268
+
+thus causing mysterious test failures.  No version.pm code was changed at
+all. :(
+
+Major Changes in 0.77 - 2009-07-26
+===================================
+
+Complete POD rewrite to document common usage in version.pod and put all
+of the implementation details into version::Internals.
+
+Resolve a number of RT tickets:
+RT#48135 - Compilation failure using MS VC++ 7.0.
+RT#47980 - Remove need for runtime class loading in pure Perl code
+RT#46921 - locale and eval action at a distance.
+RT#45241 - mistaken regex to convert large exponential numbers
+to non-exponential form before scanning.
+
+
+Please read the POD documentation for usage/details.  See the CHANGES file
+for full details of all changes to the module behavior.
+
+INSTALLATION
+
+To install this module type the following:
+
+   $ perl Makefile.PL
+   $ make
+   $ make test
+   # make install
+
+This release includes an optional pure Perl implementation (in case
+you don't have a C-compiler or if some reason you want your code to be
+much slower).  You can test it by replacing the first line above with:
+
+   $ perl Makefile.PL --perl_only
+
+and it will install the Perl only version.
+
+DEPENDENCIES
+
+The same C compiler used to build Perl (or not).  Module::Build 0.2611
+or better.
+
+Module::Build installs fine under 5.005_03 or better, though the optional
+dependency Archive::Tar doesn't.  If you install Module::Build without any
+of the optional dependencies, you can safely install version.pm.
+
+
+COPYRIGHT AND LICENCE
+
+This module can be distributed under the same terms as Perl.
+
+Copyright (C) 2004-2010 John Peacock
+

@@ -1,0 +1,924 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>POE - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","POE",3]);
+    _gaq.push(["_setCustomVar",5,"Release","POE-1.352",3]);
+    _gaq.push(["_setCustomVar",3,"Module","POE",3]);
+    _gaq.push(["_setCustomVar",1,"Author","RCAPUTO",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?POE">permalink</a></div>
+  <a href="/~rcaputo/">Rocco Caputo</a> &gt;
+  <a href="/~rcaputo/POE-1.352/">POE-1.352</a> &gt;
+  POE
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/3d4f61dae367905f646713ee2a0b65c5?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/R/RC/RCAPUTO/POE-1.352.tar.gz">POE-1.352.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=POE;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~RCAPUTO/POE-1.352/lib/POE.pm">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://poe.perl.org/">Website</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 2</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 3</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 2</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=POE">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.352 &nbsp;
+<span class="noprint">
+  <a href="/src/RCAPUTO/POE-1.352/lib/POE.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Layer_1:_Kernel_and_Sessions'>Layer 1: Kernel and Sessions</a>
+    <li class='indexItem indexItem2'><a href='#Layer_2:_Wheels,_Filters,_and_Drivers'>Layer 2: Wheels, Filters, and Drivers</a>
+    <li class='indexItem indexItem2'><a href='#Layer_3:_Components'>Layer 3: Components</a>
+    <li class='indexItem indexItem2'><a href='#Layer_4_and_Beyond:_Frameworks_and_Object_Metaphors'>Layer 4 and Beyond: Frameworks and Object Metaphors</a>
+    <li class='indexItem indexItem2'><a href='#Layer_0:_POE&#39;s_Internals'>Layer 0: POE&#39;s Internals</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DOCUMENTATION_ROADMAP'>DOCUMENTATION ROADMAP</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Basic_Features'>Basic Features</a>
+    <li class='indexItem indexItem2'><a href='#Basic_Usage'>Basic Usage</a>
+    <li class='indexItem indexItem2'><a href='#@_[KERNEL,_HEAP,_etc.]'>@_[KERNEL, HEAP, etc.]</a>
+    <li class='indexItem indexItem2'><a href='#Base_Classes_Document_Common_Features'>Base Classes Document Common Features</a>
+    <li class='indexItem indexItem2'><a href='#Helper_Classes'>Helper Classes</a>
+    <li class='indexItem indexItem2'><a href='#Event_Loop_Bridges'>Event Loop Bridges</a>
+    <li class='indexItem indexItem2'><a href='#POE::Queue_and_POE::Queue::Array'>POE::Queue and POE::Queue::Array</a>
+    <li class='indexItem indexItem2'><a href='#This_Section_Isn&#39;t_Complete'>This Section Isn&#39;t Complete</a>
+    <li class='indexItem indexItem2'><a href='#See_SEE_ALSO'>See SEE ALSO</a>
+    <li class='indexItem indexItem2'><a href='#Don&#39;t_Forget_the_Web'>Don&#39;t Forget the Web</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SYSTEM_REQUIREMENTS'>SYSTEM REQUIREMENTS</a>
+  <li class='indexItem indexItem1'><a href='#COMPATIBILITY_ISSUES'>COMPATIBILITY ISSUES</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Windows_Issues'>Windows Issues</a>
+    <li class='indexItem indexItem2'><a href='#Linux/Unix_Issues'>Linux/Unix Issues</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#pty_woes'>pty woes</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Other_Compatibility_Issues'>Other Compatibility Issues</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#GETTING_HELP'>GETTING HELP</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#POE&#39;s_Request_Tracker'>POE&#39;s Request Tracker</a>
+    <li class='indexItem indexItem2'><a href='#POE&#39;s_Mailing_List'>POE&#39;s Mailing List</a>
+    <li class='indexItem indexItem2'><a href='#POE&#39;s_Web_Site'>POE&#39;s Web Site</a>
+    <li class='indexItem indexItem2'><a href='#POE&#39;s_Source_Code'>POE&#39;s Source Code</a>
+    <li class='indexItem indexItem2'><a href='#SourceForge'>SourceForge</a>
+    <li class='indexItem indexItem2'><a href='#Internet_Relay_Chat_(IRC)'>Internet Relay Chat (IRC)</a>
+    <li class='indexItem indexItem2'><a href='#Personal_Support'>Personal Support</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Layer_1'>Layer 1</a>
+    <li class='indexItem indexItem2'><a href='#Layer_2'>Layer 2</a>
+    <li class='indexItem indexItem2'><a href='#Layer_3'>Layer 3</a>
+    <li class='indexItem indexItem2'><a href='#Layer_0'>Layer 0</a>
+    <li class='indexItem indexItem2'><a href='#Helpers'>Helpers</a>
+    <li class='indexItem indexItem2'><a href='#Home_Page'>Home Page</a>
+    <li class='indexItem indexItem2'><a href='#Bug_Tracker'>Bug Tracker</a>
+    <li class='indexItem indexItem2'><a href='#Repository'>Repository</a>
+    <li class='indexItem indexItem2'><a href='#Other_Resources'>Other Resources</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHORS_&#38;_COPYRIGHT'>AUTHORS &#38; COPYRIGHT</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Author'>Author</a>
+  </ul>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>POE - portable multitasking and networking framework for any event loop</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  #!/usr/bin/perl -w
+  use strict;
+
+  use POE;  # Auto-includes POE::Kernel and POE::Session.
+
+  sub handler_start {
+    my ($kernel, $heap, $session) = @_[KERNEL, HEAP, SESSION];
+    print &#34;Session &#34;, $session-&#62;ID, &#34; has started.\n&#34;;
+    $heap-&#62;{count} = 0;
+    $kernel-&#62;yield(&#39;increment&#39;);
+  }
+
+  sub handler_increment {
+    my ($kernel, $heap, $session) = @_[KERNEL, HEAP, SESSION];
+    print &#34;Session &#34;, $session-&#62;ID, &#34; counted to &#34;, ++$heap-&#62;{count}, &#34;.\n&#34;;
+    $kernel-&#62;yield(&#39;increment&#39;) if $heap-&#62;{count} &#60; 10;
+  }
+
+  sub handler_stop {
+    print &#34;Session &#34;, $_[SESSION]-&#62;ID, &#34; has stopped.\n&#34;;
+  }
+
+  for (1..10) {
+    POE::Session-&#62;create(
+      inline_states =&#62; {
+        _start    =&#62; \&#38;handler_start,
+        increment =&#62; \&#38;handler_increment,
+        _stop     =&#62; \&#38;handler_stop,
+      }
+    );
+  }
+
+  POE::Kernel-&#62;run();
+  exit;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>POE is a framework for cooperative, event driven multitasking and networking in Perl. Other languages have similar frameworks. Python has Twisted. TCL has &#34;the event loop&#34;.</p>
+
+<p>POE provides a unified interface for several other event loops, including select(), <a href="/perldoc?IO%3A%3APoll" class="podlinkpod"
+>IO::Poll</a>, <a href="/perldoc?Glib" class="podlinkpod"
+>Glib</a>, <a href="/perldoc?Gtk" class="podlinkpod"
+>Gtk</a>, <a href="/perldoc?Tk" class="podlinkpod"
+>Tk</a>, <a href="/perldoc?Wx" class="podlinkpod"
+>Wx</a>, and <a href="/perldoc?Gtk2" class="podlinkpod"
+>Gtk2</a>. Many of these event loop interfaces were written by others, with the help of POE::Test::Loops. They may be found on the CPAN.</p>
+
+<p>POE achieves its its high degree of portability to different operating systems and Perl versions by being written entirely in Perl. CPAN hosts optional XS modules for POE if speed is more desirable than portability.</p>
+
+<p>POE is designed in layers. Each layer builds atop the lower level ones. Programs are free to use POE at any level of abstraction, and different levels can be mixed and matched seamlessly within a single program. Remember, though, that higher-level abstractions often require more resources than lower-level ones. The conveniences they provide are not free.</p>
+
+<p>POE&#39;s bundled abstraction layers are the tip of a growing iceberg. <a href="/perldoc?Sprocket" class="podlinkpod"
+>Sprocket</a>, <a href="/perldoc?POE%3A%3AStage" class="podlinkpod"
+>POE::Stage</a>, and other CPAN distributions build upon this work. You&#39;re encouraged to look around.</p>
+
+<p>No matter how high you go, though, it all boils down to calls to <a href="/~rcaputo/POE-1.352/lib/POE/Kernel.pm" class="podlinkpod"
+>POE::Kernel</a>. So your down-to-earth code can easily cooperate with stratospheric systems.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Layer_1:_Kernel_and_Sessions"
+>Layer 1: Kernel and Sessions</a></h2>
+
+<p>The lowest public layer is comprised of <a href="/~rcaputo/POE-1.352/lib/POE/Kernel.pm" class="podlinkpod"
+>POE::Kernel</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Session.pm" class="podlinkpod"
+>POE::Session</a>, and other session types.</p>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Kernel.pm" class="podlinkpod"
+>POE::Kernel</a> does most of the heavy lifting. It provides a portable interface for filehandle activity detection, multiple alarms and other timers, signal handling, and other less-common features.</p>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Session.pm" class="podlinkpod"
+>POE::Session</a> and derived classes encapsulate the notion of an event driven task. They also customize event dispatch to a particular calling convention. <a href="/~rcaputo/POE-1.352/lib/POE/NFA.pm" class="podlinkpod"
+>POE::NFA</a>, for example, is more of a proper state machine. The CPAN has several other kinds of sessions.</p>
+
+<p>Everything ultimately builds on these classes or the concepts they implement. If you&#39;re short on time, the things to read besides this are <a href="/~rcaputo/POE-1.352/lib/POE/Kernel.pm" class="podlinkpod"
+>POE::Kernel</a> and <a href="/~rcaputo/POE-1.352/lib/POE/Session.pm" class="podlinkpod"
+>POE::Session</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Layer_2:_Wheels,_Filters,_and_Drivers"
+>Layer 2: Wheels, Filters, and Drivers</a></h2>
+
+<p>POE::Wheel objects are dynamic mix-ins for POE::Session instances. These &#34;wheels&#34; perform very common, generic tasks in a highly reusable and customizable way. <a href="/~rcaputo/POE-1.352/lib/POE/Wheel/ReadWrite.pm" class="podlinkpod"
+>POE::Wheel::ReadWrite</a>, for example, implements non-blocking buffered I/O. Nearly everybody needs this, so why require people to reinvent it all the time?</p>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Filter.pm" class="podlinkpod"
+>POE::Filter</a> objects customize wheels in a modular way. Filters act as I/O layers, turning raw streams into structured data, and serializing structures into something suitable for streams. The CPAN also has several of these.</p>
+
+<p>Drivers are where the wheels meet the road. In this case, the road is some type of file handle. Drivers do the actual reading and writing in a standard way so wheels don&#39;t need to know the difference between send() and syswrite().</p>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Driver.pm" class="podlinkpod"
+>POE::Driver</a> objects get relatively short shrift because very few are needed. The most common driver, <a href="/~rcaputo/POE-1.352/lib/POE/Driver/SysRW.pm" class="podlinkpod"
+>POE::Driver::SysRW</a> is ubiquitous and also the default, so most people will never need to specify one.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Layer_3:_Components"
+>Layer 3: Components</a></h2>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Component.pm" class="podlinkpod"
+>POE::Component</a> classes are essentially Perl classes that use POE to perform tasks in a non-blocking or cooperative way. This is a very broad definition, and POE components are all over the abstraction map.</p>
+
+<p>Many components, such as <a href="/perldoc?POE%3A%3AComponent%3A%3AServer%3A%3ASMTP" class="podlinkpod"
+>POE::Component::Server::SMTP</a>, encapsulate the generic details of an entire application. Others perform rather narrow tasks, such as <a href="/perldoc?POE%3A%3AComponent%3A%3ADirWatch%3A%3AObject" class="podlinkpod"
+>POE::Component::DirWatch::Object</a>.</p>
+
+<p>POE components are often just plain Perl objects. The previously mentioned <a href="/perldoc?POE%3A%3AComponent%3A%3ADirWatch%3A%3AObject" class="podlinkpod"
+>POE::Component::DirWatch::Object</a> uses <a href="/perldoc?Moose" class="podlinkpod"
+>Moose</a>. Other object and meta-object frameworks are compatible.</p>
+
+<p>Also of interest is <a href="/perldoc?POE%3A%3AComponent%3A%3AGeneric" class="podlinkpod"
+>POE::Component::Generic</a>, which is allows you to create a POE component from nearly nearly any blocking module.</p>
+
+<p>There are quite a lot of components on the CPAN. <a href="http://search.cpan.org/search?query=poe+component&#38;mode=all" class="podlinkurl"
+>http://search.cpan.org/search?query=poe+component&#38;mode=all</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Layer_4_and_Beyond:_Frameworks_and_Object_Metaphors"
+>Layer 4 and Beyond: Frameworks and Object Metaphors</a></h2>
+
+<p>It&#39;s possible to abstract POE entirely behind a different framework. In fact we encourage people to write domain-specific abstractions that entirely hide POE if necessary. The nice thing here is that even at these high levels of abstraction, things will continue to interoperate all the way down to layer 1.</p>
+
+<p>Two examples of ultra-high level abstraction are <a href="/perldoc?Sprocket" class="podlinkpod"
+>Sprocket</a>, a networking framework that does its own thing, and <a href="/perldoc?POE%3A%3AStage" class="podlinkpod"
+>POE::Stage</a>, which is POE&#39;s creator&#39;s attempt to formalize and standardize POE components.</p>
+
+<p>It is also possible to communicate between POE processes. This is called IKC, for <i>Inter-Kernel Communication</i>. There are a few IKC components on the CPAN (<a href="http://search.cpan.org/search?query=IKC&#38;mode=all" class="podlinkurl"
+>http://search.cpan.org/search?query=IKC&#38;mode=all</a>), notably <a href="/perldoc?POE%3A%3AComponent%3A%3AIKC" class="podlinkpod"
+>POE::Component::IKC</a> and <a href="/perldoc?POE%3A%3ATIKC" class="podlinkpod"
+>POE::TIKC</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Layer_0:_POE&#39;s_Internals"
+>Layer 0: POE&#39;s Internals</a></h2>
+
+<p>POE&#39;s layered architecture continues below the surface. POE&#39;s guts are broken into specific <a href="/~rcaputo/POE-1.352/lib/POE/Loop.pm" class="podlinkpod"
+>POE::Loop</a> classes for each event loop it supports. Internals are divided up by type, giving <a href="/~rcaputo/POE-1.352/lib/POE/Resource.pm" class="podlinkpod"
+>POE::Resource</a> classes for Aliases, Controls, Events, Extrefs, FileHandles, SIDs, Sessions and Signals.</p>
+
+<p>POE::Kernel&#39;s APIs are extensible through POE::API mix-in classes. Some brave souls have even published new APIs on CPAN, such as <a href="/perldoc?POE%3A%3AAPI%3A%3APeek" class="podlinkpod"
+>POE::API::Peek</a> (which gives you access to some of the internal <a href="/~rcaputo/POE-1.352/lib/POE/Resource.pm" class="podlinkpod"
+>POE::Resource</a> methods).</p>
+
+<p>By design, it&#39;s possible to implement new <a href="/~rcaputo/POE-1.352/lib/POE/Kernel.pm" class="podlinkpod"
+>POE::Kernel</a> guts by creating another <a href="/~rcaputo/POE-1.352/lib/POE/Resource.pm" class="podlinkpod"
+>POE::Resource</a> class. One can then expose the functionality with a new POE::API mix-in.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DOCUMENTATION_ROADMAP"
+>DOCUMENTATION ROADMAP <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>You&#39;re reading the main POE documentation. It&#39;s the general entry point to the world of POE. You already know this, however, so let&#39;s talk about something more interesting.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Basic_Features"
+>Basic Features</a></h2>
+
+<p>POE&#39;s basic features are documented mainly in <a href="/~rcaputo/POE-1.352/lib/POE/Kernel.pm" class="podlinkpod"
+>POE::Kernel</a> and <a href="/~rcaputo/POE-1.352/lib/POE/Session.pm" class="podlinkpod"
+>POE::Session</a>. Methods are documented in the classes that implement them. Broader concepts are covered in the most appropriate class, and sometimes they are divided among classes that share in their implementation.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Basic_Usage"
+>Basic Usage</a></h2>
+
+<p>Basic usage, even for POE.pm, is documented in <a href="/~rcaputo/POE-1.352/lib/POE/Kernel.pm" class="podlinkpod"
+>POE::Kernel</a>. That&#39;s where most of POE&#39;s work is done, and POE.pm is little more than a class loader.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="@_[KERNEL,_HEAP,_etc.]"
+>@_[KERNEL, HEAP, etc.]</a></h2>
+
+<p>Event handler calling conventions, that weird <code>@_[KERNEL, HEAP]</code> stuff, is documented in <a href="/~rcaputo/POE-1.352/lib/POE/Session.pm" class="podlinkpod"
+>POE::Session</a>. That&#39;s because POE::Session implements the calling convention, and other session types often do it differently.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Base_Classes_Document_Common_Features"
+>Base Classes Document Common Features</a></h2>
+
+<p>The <a href="/~rcaputo/POE-1.352/lib/POE/Wheel.pm" class="podlinkpod"
+>POE::Wheel</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Driver.pm" class="podlinkpod"
+>POE::Driver</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Filter.pm" class="podlinkpod"
+>POE::Filter</a>, and <a href="/~rcaputo/POE-1.352/lib/POE/Component.pm" class="podlinkpod"
+>POE::Component</a> base classes describe what&#39;s common among each class. It&#39;s a good idea to at least skim the base class documentation since the subclasses tend not to rehash the common things.</p>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Queue.pm" class="podlinkpod"
+>POE::Queue</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Resource.pm" class="podlinkpod"
+>POE::Resource</a>, and <a href="/~rcaputo/POE-1.352/lib/POE/Loop.pm" class="podlinkpod"
+>POE::Loop</a> document the concepts and sometimes the standard interfaces behind multiple subclasses. You&#39;re encouraged to have a look.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Helper_Classes"
+>Helper Classes</a></h2>
+
+<p>POE includes some helper classes for portability. <a href="/~rcaputo/POE-1.352/lib/POE/Pipe.pm" class="podlinkpod"
+>POE::Pipe</a>, and its subclasses <a href="/~rcaputo/POE-1.352/lib/POE/Pipe/OneWay.pm" class="podlinkpod"
+>POE::Pipe::OneWay</a> and <a href="/~rcaputo/POE-1.352/lib/POE/Pipe/TwoWay.pm" class="podlinkpod"
+>POE::Pipe::TwoWay</a> are portable pipes.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Event_Loop_Bridges"
+>Event Loop Bridges</a></h2>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Loop.pm" class="podlinkpod"
+>POE::Loop</a> documents and specifies the interface for all of POE&#39;s event loop bridges. The individual classes may document specific details, but generally they adhere to the spec strongly enough that they don&#39;t need to.</p>
+
+<p>Many of the existing <a href="/~rcaputo/POE-1.352/lib/POE/Loop.pm" class="podlinkpod"
+>POE::Loop</a> bridges provided in POE&#39;s base distribution will move out to separate distributions shortly. The documentation will probably remain the same, however.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="POE::Queue_and_POE::Queue::Array"
+>POE::Queue and POE::Queue::Array</a></h2>
+
+<p>POE&#39;s event queue is basically a priority heap implemented as an ordered array. <a href="/~rcaputo/POE-1.352/lib/POE/Queue.pm" class="podlinkpod"
+>POE::Queue</a> documents the standard interface for POE event queues, and <a href="/~rcaputo/POE-1.352/lib/POE/Queue/Array.pm" class="podlinkpod"
+>POE::Queue::Array</a> implements the ordered array queue. Tony Cook has released <a href="/perldoc?POE%3A%3AXS%3A%3AQueue%3A%3AArray" class="podlinkpod"
+>POE::XS::Queue::Array</a>, which is a drop-in C replacement for <a href="/~rcaputo/POE-1.352/lib/POE/Queue/Array.pm" class="podlinkpod"
+>POE::Queue::Array</a>. You might give it a try if you need more performance. POE&#39;s event queue is some of the hottest code in the system.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="This_Section_Isn&#39;t_Complete"
+>This Section Isn&#39;t Complete</a></h2>
+
+<p>Help organize the documentation. Obviously we can&#39;t think of everything. We&#39;re well aware of this and welcome audience participation.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="See_SEE_ALSO"
+>See SEE ALSO</a></h2>
+
+<p>Wherever possible, the SEE ALSO section will cross-reference one module to related ones.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Don&#39;t_Forget_the_Web"
+>Don&#39;t Forget the Web</a></h2>
+
+<p>Finally, there are many POE resources on the web. The CPAN contains a growing number of POE modules. <a href="http://poe.perl.org/" class="podlinkurl"
+>http://poe.perl.org/</a> hosts POE&#39;s wiki, which includes tutorials, an extensive set of examples, documentation, and more. Plus it&#39;s a wiki, so you can trivially pitch in your two cents.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYSTEM_REQUIREMENTS"
+>SYSTEM REQUIREMENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>POE&#39;s basic requirements are rather light. Most are included with modern versions of Perl, and the rest (if any) should be generally portable by now.</p>
+
+<p><a href="/perldoc?Time%3A%3AHiRes" class="podlinkpod"
+>Time::HiRes</a> is highly recommended, even for older Perls that don&#39;t include it. POE will work without it, but alarms and other features will be much more accurate if it&#39;s included. <a href="/~rcaputo/POE-1.352/lib/POE/Kernel.pm" class="podlinkpod"
+>POE::Kernel</a> will use Time::HiRes automatically if it&#39;s available.</p>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Filter/Reference.pm" class="podlinkpod"
+>POE::Filter::Reference</a> needs a module to serialize data for transporting it across a network. It will use <a href="/perldoc?Storable" class="podlinkpod"
+>Storable</a>, <a href="/perldoc?FreezeThaw" class="podlinkpod"
+>FreezeThaw</a>, <a href="/perldoc?YAML" class="podlinkpod"
+>YAML</a>, or some other package with freeze() and thaw() methods. It can also use <a href="/perldoc?Compress%3A%3AZlib" class="podlinkpod"
+>Compress::Zlib</a> to conserve bandwidth and reduce latency over slow links, but it&#39;s not required.</p>
+
+<p>If you want to write web servers, you&#39;ll need to install libwww-perl, which requires libnet. This is a small world of modules that includes <a href="/perldoc?HTTP%3A%3AStatus" class="podlinkpod"
+>HTTP::Status</a>, <a href="/perldoc?HTTP%3A%3ARequest" class="podlinkpod"
+>HTTP::Request</a>, <a href="/perldoc?HTTP%3A%3ADate" class="podlinkpod"
+>HTTP::Date</a>, and <a href="/perldoc?HTTP%3A%3AResponse" class="podlinkpod"
+>HTTP::Response</a>. They are generally good to have, and modern versions of Perl even include them.</p>
+
+<p>Programs that use <a href="/~rcaputo/POE-1.352/lib/POE/Wheel/Curses.pm" class="podlinkpod"
+>POE::Wheel::Curses</a> will of course require the <a href="/perldoc?Curses" class="podlinkpod"
+>Curses</a> module, which in turn requires some sort of curses library.</p>
+
+<p>If you&#39;re using POE with Tk, you&#39;ll need <a href="/perldoc?Tk" class="podlinkpod"
+>Tk</a> installed.</p>
+
+<p>And other obvious things. Let us know if we&#39;ve overlooked a non-obvious detail.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COMPATIBILITY_ISSUES"
+>COMPATIBILITY ISSUES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>One of POE&#39;s design goals is to be as portable as possible. That&#39;s why it&#39;s written in &#34;Plain Perl&#34;. XS versions of POE modules are available as third-party distributions. Parts of POE that require nonstandard libraries are optional, and not having those libraries should not prevent POE from installing.</p>
+
+<p>Despite Chris Williams&#39; efforts, we can&#39;t test POE everywhere. Please see the GETTING HELP section if you run into a problem.</p>
+
+<p>POE is expected to work on most forms of UNIX, including FreeBSD, MacOS X, Linux, Solaris. Maybe even AIX and QNX, but we&#39;re not sure.</p>
+
+<p>POE is also tested on Windows XP, using the latest version of ActiveState, Strawberry and Cygwin Perl. POE is fully supported with Strawberry Perl, as it&#39;s included in the Strawberry distribution.</p>
+
+<p>OS/2 and MacOS 9 have been reported to work in the past, but nobody seems to be testing there anymore. Reports and patches are still welcome.</p>
+
+<p>Past versions of POE have been tested with Perl versions as far back as 5.6.2 and as recent as &#34;blead&#34;, today&#39;s development build. We can no longer guarantee each release will work everywhere, but we will be happy to work with you if you need special support for a really old system. You can always use older POE releases that works on your version, please check <a href="http://backpan.perl.org/authors/id/R/RC/RCAPUTO/" class="podlinkurl"
+>BackPAN</a>.</p>
+
+<p>POE&#39;s quality is due in large part to the fine work of Chris Williams and the other CPAN testers. They have dedicated resources towards ensuring CPAN distributions pass their own tests, and we watch their reports religiously. You can, too. The latest POE test reports can be found at <a href="http://cpantesters.org/distro/P/POE.html" class="podlinkurl"
+>http://cpantesters.org/distro/P/POE.html</a>.</p>
+
+<p>Thanks also go out to Benjamin Smith and the 2006 Google Summer of Code. Ben was awarded a grant to improve POE&#39;s test suite, which he did admirably.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Windows_Issues"
+>Windows Issues</a></h2>
+
+<p>POE seems to work very nicely with Perl compiled for Cygwin. If you must use ActiveState Perl, please use the absolute latest version. ActiveState Perl&#39;s compatibility fluctuates from one build to another, so we tend not to support older releases.</p>
+
+<p>Windows and ActiveState Perl are considered an esoteric platform due to the complex interactions between various versions. POE therefore relies on user feedback and support here.</p>
+
+<p>A number of people have helped bring POE&#39;s Windows support this far, through contributions of time, patches, and other resources. Some of them are: Sean Puckett, Douglas Couch, Andrew Chen, Uhlarik Ondoej, Nick Williams, and Chris Williams (no relation).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Linux/Unix_Issues"
+>Linux/Unix Issues</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="pty_woes"
+>pty woes</a></h3>
+
+<p>Some distributions chose to not completely setup the pseudo-tty support. This is needed for <a href="/~rcaputo/POE-1.352/lib/POE/Wheel/Run.pm" class="podlinkpod"
+>POE::Wheel::Run</a> to interact with the subprocess. If you see something like this while running <code>make test</code> please look at your distribution&#39;s documentation on how to fix it. For example, on Debian-based systems the solution was to execute &#34;sudo apt-get install udev&#34;.</p>
+
+<pre class="sh_perl">  t/30_loops/io_poll/wheel_run.t ..................... 1/99
+  pty_allocate(nonfatal): posix_openpt(): No such file or directory at /usr/local/lib/perl/5.10.0/IO/Pty.pm line 24.
+  ...
+  Cannot open a pty at /home/apoc/poe/blib/lib/POE/Wheel/Run.pm line 251
+  Compilation failed in require at t/30_loops/io_poll/wheel_run.t line 24.
+  # Looks like you planned 99 tests but ran 5.
+  # Looks like your test exited with 22 just after 5.
+  t/30_loops/io_poll/wheel_run.t ..................... Dubious, test returned 22 (wstat 5632, 0x1600)</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Other_Compatibility_Issues"
+>Other Compatibility Issues</a></h2>
+
+<p>None currently known. See GETTING HELP below if you&#39;ve run into something.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="GETTING_HELP"
+>GETTING HELP <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>POE&#39;s developers take pride in its quality. If you encounter a problem, please let us know.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="POE&#39;s_Request_Tracker"
+>POE&#39;s Request Tracker</a></h2>
+
+<p>You&#39;re welcome to e-mail questions and bug reports to &#60;bug-POE@rt.cpan.org&#62;. This is not a realtime support channel, though. If you need a more immediate response, try one of the methods below.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="POE&#39;s_Mailing_List"
+>POE&#39;s Mailing List</a></h2>
+
+<p>POE has a dedicated mailing list where developers and users discuss the software and its use. You&#39;re welcome to join us. Send an e-mail to &#60;poe-help@perl.org&#62; for subscription instructions. The subject and message body are ignored.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="POE&#39;s_Web_Site"
+>POE&#39;s Web Site</a></h2>
+
+<p>&#60;<a href="http://poe.perl.org" class="podlinkurl"
+>http://poe.perl.org</a>&#62; contains recent information, tutorials, and examples. It&#39;s also a wiki, so people are invited to share tips and code snippets there as well.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="POE&#39;s_Source_Code"
+>POE&#39;s Source Code</a></h2>
+
+<p>The following command will fetch the most current version of POE into the &#34;poe&#34; subdirectory:</p>
+
+<pre class="sh_perl">  svn co <a href="https://poe.svn.sourceforge.net/svnroot/poe" class="podlinkurl"
+>https://poe.svn.sourceforge.net/svnroot/poe</a> poe</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SourceForge"
+>SourceForge</a></h2>
+
+<p><a href="http://sourceforge.net/projects/poe/" class="podlinkurl"
+>http://sourceforge.net/projects/poe/</a> is POE&#39;s project page.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Internet_Relay_Chat_(IRC)"
+>Internet Relay Chat (IRC)</a></h2>
+
+<p>irc.perl.org channel #poe is an informal place to waste some time and maybe even discuss Perl and POE. Consider an SSH relay if your workplace frowns on IRC. But only if they won&#39;t fire you if you&#39;re caught.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Personal_Support"
+>Personal Support</a></h2>
+
+<p>Unfortunately we don&#39;t have resources to provide free one-on-one personal support anymore. We&#39;ll do it for a fee, though. Send Rocco an e-mail via his CPAN address.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Broken down by abstraction layer.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Layer_1"
+>Layer 1</a></h2>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Kernel.pm" class="podlinkpod"
+>POE::Kernel</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Session.pm" class="podlinkpod"
+>POE::Session</a>, <a href="/~rcaputo/POE-1.352/lib/POE/NFA.pm" class="podlinkpod"
+>POE::NFA</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Layer_2"
+>Layer 2</a></h2>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Wheel.pm" class="podlinkpod"
+>POE::Wheel</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Wheel/Curses.pm" class="podlinkpod"
+>POE::Wheel::Curses</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Wheel/FollowTail.pm" class="podlinkpod"
+>POE::Wheel::FollowTail</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Wheel/ListenAccept.pm" class="podlinkpod"
+>POE::Wheel::ListenAccept</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Wheel/ReadLine.pm" class="podlinkpod"
+>POE::Wheel::ReadLine</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Wheel/ReadWrite.pm" class="podlinkpod"
+>POE::Wheel::ReadWrite</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Wheel/Run.pm" class="podlinkpod"
+>POE::Wheel::Run</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Wheel/SocketFactory.pm" class="podlinkpod"
+>POE::Wheel::SocketFactory</a></p>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Driver.pm" class="podlinkpod"
+>POE::Driver</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Driver/SysRW.pm" class="podlinkpod"
+>POE::Driver::SysRW</a></p>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Filter.pm" class="podlinkpod"
+>POE::Filter</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Filter/Block.pm" class="podlinkpod"
+>POE::Filter::Block</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Filter/Grep.pm" class="podlinkpod"
+>POE::Filter::Grep</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Filter/HTTPD.pm" class="podlinkpod"
+>POE::Filter::HTTPD</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Filter/Line.pm" class="podlinkpod"
+>POE::Filter::Line</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Filter/Map.pm" class="podlinkpod"
+>POE::Filter::Map</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Filter/RecordBlock.pm" class="podlinkpod"
+>POE::Filter::RecordBlock</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Filter/Reference.pm" class="podlinkpod"
+>POE::Filter::Reference</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Filter/Stackable.pm" class="podlinkpod"
+>POE::Filter::Stackable</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Filter/Stream.pm" class="podlinkpod"
+>POE::Filter::Stream</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Layer_3"
+>Layer 3</a></h2>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Component.pm" class="podlinkpod"
+>POE::Component</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Component/Client/TCP.pm" class="podlinkpod"
+>POE::Component::Client::TCP</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Component/Server/TCP.pm" class="podlinkpod"
+>POE::Component::Server::TCP</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Layer_0"
+>Layer 0</a></h2>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Loop.pm" class="podlinkpod"
+>POE::Loop</a>, <a href="/perldoc?POE%3A%3ALoop%3A%3AEvent" class="podlinkpod"
+>POE::Loop::Event</a>, <a href="/perldoc?POE%3A%3ALoop%3A%3AGtk" class="podlinkpod"
+>POE::Loop::Gtk</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Loop/IO_Poll.pm" class="podlinkpod"
+>POE::Loop::IO_Poll</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Loop/Select.pm" class="podlinkpod"
+>POE::Loop::Select</a>, <a href="/perldoc?POE%3A%3ALoop%3A%3ATk" class="podlinkpod"
+>POE::Loop::Tk</a></p>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Queue.pm" class="podlinkpod"
+>POE::Queue</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Queue/Array.pm" class="podlinkpod"
+>POE::Queue::Array</a></p>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Resource.pm" class="podlinkpod"
+>POE::Resource</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Resource/Aliases.pm" class="podlinkpod"
+>POE::Resource::Aliases</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Resource/Events.pm" class="podlinkpod"
+>POE::Resource::Events</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Resource/Extrefs.pm" class="podlinkpod"
+>POE::Resource::Extrefs</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Resource/FileHandles.pm" class="podlinkpod"
+>POE::Resource::FileHandles</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Resource/SIDs.pm" class="podlinkpod"
+>POE::Resource::SIDs</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Resource/Sessions.pm" class="podlinkpod"
+>POE::Resource::Sessions</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Resource/Signals.pm" class="podlinkpod"
+>POE::Resource::Signals</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Helpers"
+>Helpers</a></h2>
+
+<p><a href="/~rcaputo/POE-1.352/lib/POE/Pipe.pm" class="podlinkpod"
+>POE::Pipe</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Pipe/OneWay.pm" class="podlinkpod"
+>POE::Pipe::OneWay</a>, <a href="/~rcaputo/POE-1.352/lib/POE/Pipe/TwoWay.pm" class="podlinkpod"
+>POE::Pipe::TwoWay</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Home_Page"
+>Home Page</a></h2>
+
+<p><a href="http://poe.perl.org/" class="podlinkurl"
+>http://poe.perl.org/</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Bug_Tracker"
+>Bug Tracker</a></h2>
+
+<p><a href="https://rt.cpan.org/Dist/Display.html?Status=Active&#38;Queue=POE" class="podlinkurl"
+>https://rt.cpan.org/Dist/Display.html?Status=Active&#38;Queue=POE</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Repository"
+>Repository</a></h2>
+
+<p><a href="https://poe.svn.sourceforge.net/svnroot/poe/trunk/poe" class="podlinkurl"
+>https://poe.svn.sourceforge.net/svnroot/poe/trunk/poe</a></p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Other_Resources"
+>Other Resources</a></h2>
+
+<p><a href="http://search.cpan.org/dist/POE/" class="podlinkurl"
+>http://search.cpan.org/dist/POE/</a></p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHORS_&#38;_COPYRIGHT"
+>AUTHORS &#38; COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>POE is the combined effort of quite a lot of people. This is an incomplete list of some early contributors. A more complete list can be found in POE&#39;s change log.</p>
+
+<dl>
+<dt><a name='Ann'></a><a name="Ann_Barcomb"
+>Ann Barcomb</a></dt>
+
+<dd>
+<p>Ann Barcomb is &#60;kudra@domaintje.com&#62;, aka <code>kudra</code>. Ann contributed large portions of POE::Simple and the code that became the ReadWrite support in POE::Component::Server::TCP. Her ideas also inspired Client::TCP component, introduced in version 0.1702.</p>
+
+<dt><a name='Artur'></a><a name="Artur_Bergman"
+>Artur Bergman</a></dt>
+
+<dd>
+<p>Artur Bergman is &#60;sky@cpan.org&#62;. He contributed many hours&#39; work into POE and quite a lot of ideas. Years later, I decide he&#39;s right and actually implement them.</p>
+
+<p>Artur is the author of Filter::HTTPD and Filter::Reference, as well as bits and pieces throughout POE. His feedback, testing, design and inspiration have been instrumental in making POE what it is today.</p>
+
+<p>Artur is investing his time heavily into perl 5&#39;s iThreads and PONIE at the moment. This project has far-reaching implications for POE&#39;s future.</p>
+
+<dt><a name='Jos'></a><a name="Jos_Boumans"
+>Jos Boumans</a></dt>
+
+<dd>
+<p>Jos Boumans is &#60;kane@cpan.org&#62;, aka <code>kane</code>. Jos is a major driving force behind the POE::Simple movement and has helped inspire the POE::Components for TCP clients and servers.</p>
+
+<dt><a name='Matt'></a><a name="Matt_Cashner"
+>Matt Cashner</a></dt>
+
+<dd>
+<p>Matt Cashner is &#60;sungo@pobox.com&#62;, aka <code>sungo</code>. Matt is one of POE&#39;s core developers. He&#39;s spearheaded the movement to simplify POE for new users, flattening the learning curve and making the system more accessible to everyone. He uses the system in mission critical applications, folding feedback and features back into the distribution for everyone&#39;s enjoyment.</p>
+
+<dt><a name='Andrew'></a><a name="Andrew_Chen"
+>Andrew Chen</a></dt>
+
+<dd>
+<p>Andrew Chen is &#60;achen-poe@micropixel.com&#62;. Andrew is the resident POE/Windows guru. He contributes much needed testing for Solaris on the SPARC and Windows on various Intel platforms.</p>
+
+<dt><a name='Douglas'></a><a name="Douglas_Couch"
+>Douglas Couch</a></dt>
+
+<dd>
+<p>Douglas Couch is &#60;dscouch@purdue.edu&#62;. Douglas helped port and maintain POE for Windows early on.</p>
+
+<dt><a name='Jeffrey'></a><a name="Jeffrey_Goff"
+>Jeffrey Goff</a></dt>
+
+<dd>
+<p>Jeffrey Goff is &#60;jgoff@blackboard.com&#62;. Jeffrey is the author of several POE modules, including a tokenizing filter and a component for managing user information, PoCo::UserBase. He&#39;s also co-author of &#34;A Beginner&#39;s Introduction to POE&#34; at www.perl.com.</p>
+
+<dt><a name='Philip'></a><a name="Philip_Gwyn"
+>Philip Gwyn</a></dt>
+
+<dd>
+<p>Philip Gwyn is &#60;gwynp@artware.qc.ca&#62;. He extended the Wheels I/O abstraction to support hot-swappable filters, and he eventually convinced Rocco that unique session and kernel IDs were a good thing.</p>
+
+<p>Philip also enhanced <a href="/~rcaputo/POE-1.352/lib/POE/Filter/Reference.pm" class="podlinkpod"
+>POE::Filter::Reference</a> to support different serialization methods. He has also improved POE&#39;s quality by finding and fixing several bugs. He provided POE a much needed code review around version 0.06.</p>
+
+<p>Lately, Philip tracked down the race condition in signal handling and fixed it with the signal pipe.</p>
+
+<dt><a name='Arnar'></a><a name="Arnar_M._Hrafnkelsson"
+>Arnar M. Hrafnkelsson</a></dt>
+
+<dd>
+<p>Arnar is &#60;addi@umich.edu&#62;. Addi tested POE and <a href="/perldoc?POE%3A%3AComponent%3A%3AIRC" class="podlinkpod"
+>POE::Component::IRC</a> on Windows, finding bugs and testing fixes. He appears throughout the Changes file. He has also written &#34;cpoe&#34;, which is a POE-like library for C.</p>
+
+<dt><a name='Dave'></a><a name="Dave_Paris"
+>Dave Paris</a></dt>
+
+<dd>
+<p>Dave Paris is &#60;dparis@w3works.com&#62;. Dave tested and benchmarked POE around version 0.05, discovering some subtle (and not so subtle) timing problems. The pre-forking server sample was his idea. Versions 0.06 and later scaled to higher loads because of his work. He has contributed a lot of testing and feedback, much of which is tagged in the Changes file as a-mused. The man is scarily good at testing and troubleshooting.</p>
+
+<dt><a name='Dieter'></a><a name="Dieter_Pearcey"
+>Dieter Pearcey</a></dt>
+
+<dd>
+<p>Dieter Pearcey is &#60;dieter@bullfrog.perlhacker.org&#62;. He goes by several Japanese nicknames. Dieter&#39;s current area of expertise is in Wheels and Filters. He greatly improved <a href="/~rcaputo/POE-1.352/lib/POE/Wheel/FollowTail.pm" class="podlinkpod"
+>POE::Wheel::FollowTail</a>, and his Filter contributions include the basic Block filter, as well as Stackable, RecordBlock, Grep and Map.</p>
+
+<dt><a name='Plixer'></a><a name="Plixer_International"
+>Plixer International</a></dt>
+
+<dd>
+<p>Plixer International is at <a href="http://plixer.com/" class="podlinkurl"
+>http://plixer.com/</a>. Their sponsorship has helped POE 1.300 and beyond be significantly more robust using iThreads, especially when using fork() in Windows.</p>
+
+<dt><a name='Robert'></a><a name="Robert_Seifer"
+>Robert Seifer</a></dt>
+
+<dd>
+<p>Robert Seifer is &#60;e-mail unknown&#62;. He rotates IRC nicknames regularly.</p>
+
+<p>Robert contributed entirely too much time, both his own and his computers, towards the detection and eradication of a memory corruption bug that POE tickled in earlier Perl versions. In the end, his work produced a simple compile-time hack that worked around a problem relating to anonymous subs, scope and @{} processing.</p>
+
+<dt><a name='Matt'></a><a name="Matt_Sergeant"
+>Matt Sergeant</a></dt>
+
+<dd>
+<p>Matt contributed <code>POE::Kernel::Poll</code>, a more efficient way to watch multiple files than select(). It&#39;s since been moved to <a href="/~rcaputo/POE-1.352/lib/POE/Loop/IO_Poll.pm" class="podlinkpod"
+>POE::Loop::IO_Poll</a>.</p>
+
+<dt><a name='Richard'></a><a name="Richard_Soderberg"
+>Richard Soderberg</a></dt>
+
+<dd>
+<p>Richard Soderberg is &#60;poe@crystalflame.net&#62;, aka <code>coral</code>. Richard is a collaborator on several side projects involving POE. His work provides valuable testing and feedback from a user&#39;s point of view.</p>
+
+<dt><a name='Dennis'></a><a name="Dennis_Taylor"
+>Dennis Taylor</a></dt>
+
+<dd>
+<p>Dennis Taylor is &#60;dennis@funkplanet.com&#62;. Dennis has been testing, debugging and patching bits here and there, such as Filter::Line which he improved by leaps in 0.1102. He&#39;s also the author of <a href="/perldoc?POE%3A%3AComponent%3A%3AIRC" class="podlinkpod"
+>POE::Component::IRC</a>, the widely popular POE-based successor to his wildly popular <a href="/perldoc?Net%3A%3AIRC" class="podlinkpod"
+>Net::IRC</a> library.</p>
+
+<dt><a name='David'></a><a name="David_Davis"
+>David Davis</a></dt>
+
+<dd>
+<p>David Davis, aka Xantus is &#60;xantus@cpan.org&#62;. David contributed patches to the HTTPD filter, and added CALLER_STATE to <a href="/~rcaputo/POE-1.352/lib/POE/Session.pm" class="podlinkpod"
+>POE::Session</a>. He is the author of <a href="/perldoc?Sprocket" class="podlinkpod"
+>Sprocket</a>, a networking framework built on POE.</p>
+
+<dt><a name='Others'></a><a name="Others?"
+>Others?</a></dt>
+
+<dd>
+<p>Please contact the author if you&#39;ve been forgotten and would like to be included here.</p>
+
+<p></p>
+</dd>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Author"
+>Author</a></h2>
+
+<dl>
+<dt><a name='Rocco'></a><a name="Rocco_Caputo"
+>Rocco Caputo</a></dt>
+
+<dd>
+<p>Rocco Caputo is &#60;rcaputo@cpan.org&#62;. POE is his brainchild. He wishes to thank you for your interest, and he has more thanks than he can count for all the people who have contributed. POE would not be nearly as cool without you.</p>
+
+<p>Except where otherwise noted, POE is Copyright 1998-2009 Rocco Caputo. All rights reserved. POE is free software; you may redistribute it and/or modify it under the same terms as Perl itself.</p>
+</dd>
+</dl>
+
+<p>Thank you for reading!</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78232 Uploads, 24718 Distributions
+106021 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Thu Apr 26 11:27:53 2012 GMT (0.132901906967163) @cpansearch1 -->
+ </body>
+</html>

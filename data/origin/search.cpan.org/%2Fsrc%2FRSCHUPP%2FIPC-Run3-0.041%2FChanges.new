@@ -1,0 +1,120 @@
+Changes file for IPC::Run3
+
+0.041	2008-08-03
+	Handle arbitrary binmode() layers in "binmode_*" options; for
+	  backward compatibility, any true option that doesn't start
+	  with ":" is treated as ":raw"
+	  NOTE: This does work for the built-in layers, e.g. ":utf8",
+	  but all bets are off for fancier stuff like ":via(...)" .
+	Add an option "return_if_system_error" that causes run3()
+	  to refrain from throwing an exception when system() returns -1
+	  (cf. RT 14272).
+
+0.040	2007-12-26
+	major rewrite of pod: 
+	  - describe all possible forms of redirectors
+	  - list available options
+	  - explain how run3() works
+	fix #31343 by using the three argument form of open() for files;
+	  unfortunately that isn't available before Perl 5.6.0, 
+	  hence "use 5.006_00"; also use lexical filehandles everywhere
+	implement options append_{stdout,stderr}; add test cases
+	edit META.yml so that the profiling modules IPC::Run3::Prof*
+	  (which aren't of general use) won't show on CPAN
+
+0.039	2007-11-01
+  avoid some warnings while testing profiler (thanks, SCOP)
+
+0.038	2007-10-08
+  remove use warnings for 5.005 compat (thanks, David Golden)
+
+0.037	2006-09-19
+  document license more clearly for META.yml
+
+0.036	2006-09-19
+  document more clearly the return value of run3
+
+0.035	2006-07-27
+  remove requirement for Test::Pod and ::Coverage just to build
+
+0.034	2005-12-12
+	skip t/fork.t on MSWin32 (and Cygwin):
+	  Win32 threads (and fork() is emulated via threads) in the
+	  same process share the same STDIN/STDOUT/STDERR, hence
+	  the method used by run3() (redirect STD* and then call system())
+	  doesn't work here and IO crossover is to be expected -
+	  a possible alternative on Win32 would be to use CreateProcess
+	  which lets you explicitly specify three filehandles for the
+	  new process' STDIN/STDOUT/STDERR; however Win32::Process::Create()
+	  (from the libwin32 CPAN distribution) as omitted these
+	  parameters from the Perl wrapper
+	add a note to the documentation about the problems with
+	  concurrent calls to run3 in a threaded environment 
+	  (incl. fork() on Win32)
+	make sure all tests run with warnings on
+
+0.033	2005-11-15
+	make documentation in IPC/Run3/ProfReporter.pm comply with
+	  older versions of Pod::Coverage (fixes bug #15749)
+	new version of t/fork.t that will work on Windows 
+	  (there are still unresolved issues on Cygwin)
+	switch t/fd_leak.t to use Test::More and relax file descriptor check
+	  to "same or fewer fd's after the call to run3 than before", 
+	  because Darwin 7.2 sometimes actually report fewer fd's
+	  (fixes bug #15741)
+	extricated some dead code from IPC/Run3.pm that 
+	  resulted in 6 unused file descriptors
+	fix call to binmode missing a filehandle in IPC/Run3.pm
+        fix warnings in test scripts
+
+0.032	2005-10-19
+        comaint granted to RSCHUPP (thanks, barry!)
+        fix bug #15003 "Data corruption with fork when both parent 
+          and child use run3": 
+          - purge %fh_cache when we detect that a fork has happened
+          - add t/fork.t to detect "crossover" between child processes
+          - fix (and test) only works on Unix, Windows has more
+            problems with run3 from a forked (pseudo) process
+        fix prereq - should specify 0 (not 1) if any version will do
+	added tests for redirection to/from filehandles to t/IPC-Run3.t
+
+0.031   2005-09-27
+        documentation improvements
+
+0.020   2005-07-12 08:39:00 EST
+        maintenance assumed (temporarily) by RJBS
+        removed inexplicable and mysterious MY::libscan from Makefile.PL
+        call import on ::PProf when profiling (argh!)
+        add Time::HiRes prereq
+        add Win32 prereq on Win32
+        add () to gettimeofday call to make debugger happy
+        properly handle redirection to filehandle
+        properly handle failure to start program
+
+0.010   2004-03-09 01:46:11 EST
+        POD cleaned up
+        shell quoting improved for win32 
+
+0.009   2003-09-26 15:44:18 EDT
+        CRLF bugs fixed on WinNT, WinXP, Win2K
+        0.008 slipped out without an update to this file.
+
+0.007   2003-04-01 09:02:21 EST
+        Fixed STDIN fd leak on NT 4.51 and perhaps other Win32s
+        Solved problem of world peace, see PEACE.txt
+        Improved t/fd_leak.t
+
+0.006   2003-03-21 12:07:47 EST
+        Port to Win32
+        Test for and eliminate an fd leak
+
+0.005   2003-02-25 15:11:47 EST
+        Fixed a few bugs in dealing with temp files and non-temp files
+
+0.003   2003-02-11 15:47:59 EST
+        use dup2() to overwrite STDIN for the child
+        Added $ENV{IPCRUN3DEBUG} (and, silently, IPCRUNDEBUG) 
+        debugging support.  TODO: Add more debugging warnings.
+
+0.000_1 2003-02-04 15:09:30
+        Created

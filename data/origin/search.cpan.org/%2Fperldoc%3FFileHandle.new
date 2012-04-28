@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>FileHandle - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","perl",3]);
+    _gaq.push(["_setCustomVar",5,"Release","perl-5.14.2",3]);
+    _gaq.push(["_setCustomVar",3,"Module","FileHandle",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FLORA",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?FileHandle">permalink</a></div>
+  <a href="/~flora/">Florian Ragwitz</a> &gt;
+  <a href="/~flora/perl-5.14.2/">perl-5.14.2</a> &gt;
+  FileHandle
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/fd2bdaaefe41908133793d1ddf38f75d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FL/FLORA/perl-5.14.2.tar.gz">perl-5.14.2.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=FileHandle;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FLORA/perl-5.14.2/lib/FileHandle.pm">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="http://www.perl.org/">Website</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+  Module Version:  2.02 &nbsp;
+<span class="noprint">
+  <a href="/src/FLORA/perl-5.14.2/lib/FileHandle.pm">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~abigail/perl/lib/FileHandle.pm">perl-5.15.9</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>FileHandle - supply object methods for filehandles</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use FileHandle;
+
+    $fh = FileHandle-&#62;new;
+    if ($fh-&#62;open(&#34;&#60; file&#34;)) {
+        print &#60;$fh&#62;;
+        $fh-&#62;close;
+    }
+
+    $fh = FileHandle-&#62;new(&#34;&#62; FOO&#34;);
+    if (defined $fh) {
+        print $fh &#34;bar\n&#34;;
+        $fh-&#62;close;
+    }
+
+    $fh = FileHandle-&#62;new(&#34;file&#34;, &#34;r&#34;);
+    if (defined $fh) {
+        print &#60;$fh&#62;;
+        undef $fh;       # automatically closes the file
+    }
+
+    $fh = FileHandle-&#62;new(&#34;file&#34;, O_WRONLY|O_APPEND);
+    if (defined $fh) {
+        print $fh &#34;corge\n&#34;;
+        undef $fh;       # automatically closes the file
+    }
+
+    $pos = $fh-&#62;getpos;
+    $fh-&#62;setpos($pos);
+
+    $fh-&#62;setvbuf($buffer_var, _IOLBF, 1024);
+
+    ($readfh, $writefh) = FileHandle::pipe;
+
+    autoflush STDOUT 1;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>NOTE: This class is now a front-end to the IO::* classes.</p>
+
+<p><code>FileHandle::new</code> creates a <code>FileHandle</code>, which is a reference to a newly created symbol (see the <code>Symbol</code> package). If it receives any parameters, they are passed to <code>FileHandle::open</code>; if the open fails, the <code>FileHandle</code> object is destroyed. Otherwise, it is returned to the caller.</p>
+
+<p><code>FileHandle::new_from_fd</code> creates a <code>FileHandle</code> like <code>new</code> does. It requires two parameters, which are passed to <code>FileHandle::fdopen</code>; if the fdopen fails, the <code>FileHandle</code> object is destroyed. Otherwise, it is returned to the caller.</p>
+
+<p><code>FileHandle::open</code> accepts one parameter or two. With one parameter, it is just a front end for the built-in <code>open</code> function. With two parameters, the first parameter is a filename that may include whitespace or other special characters, and the second parameter is the open mode, optionally followed by a file permission value.</p>
+
+<p>If <code>FileHandle::open</code> receives a Perl mode string (&#34;&#62;&#34;, &#34;+&#60;&#34;, etc.) or a POSIX fopen() mode string (&#34;w&#34;, &#34;r+&#34;, etc.), it uses the basic Perl <code>open</code> operator.</p>
+
+<p>If <code>FileHandle::open</code> is given a numeric mode, it passes that mode and the optional permissions value to the Perl <code>sysopen</code> operator. For convenience, <code>FileHandle::import</code> tries to import the O_XXX constants from the Fcntl module. If dynamic loading is not available, this may fail, but the rest of FileHandle will still work.</p>
+
+<p><code>FileHandle::fdopen</code> is like <code>open</code> except that its first parameter is not a filename but rather a file handle name, a FileHandle object, or a file descriptor number.</p>
+
+<p>If the C functions fgetpos() and fsetpos() are available, then <code>FileHandle::getpos</code> returns an opaque value that represents the current position of the FileHandle, and <code>FileHandle::setpos</code> uses that value to return to a previously visited position.</p>
+
+<p>If the C function setvbuf() is available, then <code>FileHandle::setvbuf</code> sets the buffering policy for the FileHandle. The calling sequence for the Perl function is the same as its C counterpart, including the macros <code>_IOFBF</code>, <code>_IOLBF</code>, and <code>_IONBF</code>, except that the buffer parameter specifies a scalar variable to use as a buffer. WARNING: A variable used as a buffer by <code>FileHandle::setvbuf</code> must not be modified in any way until the FileHandle is closed or until <code>FileHandle::setvbuf</code> is called again, or memory corruption may result!</p>
+
+<p>See <a href="/~flora/perl-5.14.2/pod/perlfunc.pod" class="podlinkpod"
+>perlfunc</a> for complete descriptions of each of the following supported <code>FileHandle</code> methods, which are just front ends for the corresponding built-in functions:</p>
+
+<pre class="sh_perl">    close
+    fileno
+    getc
+    gets
+    eof
+    clearerr
+    seek
+    tell</pre>
+
+<p>See <a href="/~flora/perl-5.14.2/pod/perlvar.pod" class="podlinkpod"
+>perlvar</a> for complete descriptions of each of the following supported <code>FileHandle</code> methods:</p>
+
+<pre class="sh_perl">    autoflush
+    output_field_separator
+    output_record_separator
+    input_record_separator
+    input_line_number
+    format_page_number
+    format_lines_per_page
+    format_lines_left
+    format_name
+    format_top_name
+    format_line_break_characters
+    format_formfeed</pre>
+
+<p>Furthermore, for doing normal I/O you might need these:</p>
+
+<dl>
+<dt><a name='fh'></a><a name="$fh-&#62;print"
+>$fh-&#62;print</a></dt>
+
+<dd>
+<p>See <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#print" class="podlinkpod"
+>&#34;print&#34; in perlfunc</a>.</p>
+
+<dt><a name='fh'></a><a name="$fh-&#62;printf"
+>$fh-&#62;printf</a></dt>
+
+<dd>
+<p>See <a href="/~flora/perl-5.14.2/pod/perlfunc.pod#printf" class="podlinkpod"
+>&#34;printf&#34; in perlfunc</a>.</p>
+
+<dt><a name='fh'></a><a name="$fh-&#62;getline"
+>$fh-&#62;getline</a></dt>
+
+<dd>
+<p>This works like &#60;$fh&#62; described in <a href="/~flora/perl-5.14.2/pod/perlop.pod#I/O_Operators" class="podlinkpod"
+>&#34;I/O Operators&#34; in perlop</a> except that it&#39;s more readable and can be safely called in a list context but still returns just one line.</p>
+
+<dt><a name='fh'></a><a name="$fh-&#62;getlines"
+>$fh-&#62;getlines</a></dt>
+
+<dd>
+<p>This works like &#60;$fh&#62; when called in a list context to read all the remaining lines in a file, except that it&#39;s more readable. It will also croak() if accidentally called in a scalar context.</p>
+</dd>
+</dl>
+
+<p>There are many other functions available since FileHandle is descended from IO::File, IO::Seekable, and IO::Handle. Please see those respective pages for documentation on more functions.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The <b>IO</b> extension, <a href="/~flora/perl-5.14.2/pod/perlfunc.pod" class="podlinkpod"
+>perlfunc</a>, <a href="/~flora/perl-5.14.2/pod/perlop.pod#I/O_Operators" class="podlinkpod"
+>&#34;I/O Operators&#34; in perlop</a>.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78259 Uploads, 24725 Distributions
+106040 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Fri Apr 27 07:14:09 2012 GMT (0.0823829174041748) @cpansearch1 -->
+ </body>
+</html>

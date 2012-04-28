@@ -1,0 +1,453 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>CPAN::Reporter - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","CPAN-Reporter",3]);
+    _gaq.push(["_setCustomVar",5,"Release","CPAN-Reporter-1.2006",3]);
+    _gaq.push(["_setCustomVar",3,"Module","CPAN::Reporter",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DAGOLDEN",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?CPAN::Reporter">permalink</a></div>
+  <a href="/~dagolden/">David Golden</a> &gt;
+  <a href="/~dagolden/CPAN-Reporter-1.2006/">CPAN-Reporter-1.2006</a> &gt;
+  CPAN::Reporter
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/bb755c989fcb9897f28a2c6e00df61e2?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DA/DAGOLDEN/CPAN-Reporter-1.2006.tar.gz">CPAN-Reporter-1.2006.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=CPAN%3A%3AReporter;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DAGOLDEN/CPAN-Reporter-1.2006/lib/CPAN/Reporter.pm">Annotate this POD
+</a></p>
+     <p style="text-align:right"><a href="https://github.com/dagolden/cpan-reporter">Website</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Module%3A%3ABuild">Module::Build</a><br>
+<a href="/perldoc?Test%3A%3AReporter">Test::Reporter</a><br>
+<a href="/perldoc?Test%3A%3AMore">Test::More</a><br>
+<a href="/perldoc?Scalar%3A%3AUtil">Scalar::Util</a><br>
+<a href="/perldoc?IPC%3A%3ARun">IPC::Run</a><br>
+<a href="/perldoc?HTML%3A%3AParser">HTML::Parser</a><br>
+<a href="/perldoc?Module%3A%3AInstall">Module::Install</a><br>
+<a href="/perldoc?Net%3A%3ASMTP">Net::SMTP</a><br>
+<a href="/perldoc?IPC%3A%3AOpen3">IPC::Open3</a><br>
+<a href="/perldoc?File%3A%3APath">File::Path</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=CPAN%3A%3AReporter">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 6</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 24</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 3</td></tr>
+</table>
+<a href="http://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Reporter">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.2006 &nbsp;
+<span class="noprint">
+  <a href="/src/DAGOLDEN/CPAN-Reporter-1.2006/lib/CPAN/Reporter.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#GETTING_STARTED'>GETTING STARTED</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Installation'>Installation</a>
+    <li class='indexItem indexItem2'><a href='#Configuration'>Configuration</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#The_Metabase'>The Metabase</a>
+    </ul>
+    <li class='indexItem indexItem2'><a href='#Using_CPAN::Reporter'>Using CPAN::Reporter</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#UNDERSTANDING_TEST_GRADES'>UNDERSTANDING TEST GRADES</a>
+  <li class='indexItem indexItem1'><a href='#PRIVACY_WARNING'>PRIVACY WARNING</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#SUPPORT'>SUPPORT</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Bugs_/_Feature_Requests'>Bugs / Feature Requests</a>
+    <li class='indexItem indexItem2'><a href='#Source_Code'>Source Code</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>CPAN::Reporter - Adds CPAN Testers reporting to CPAN.pm</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 1.2006</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>From the CPAN shell:</p>
+
+<pre class="sh_perl">  cpan&#62; install Task::CPAN::Reporter
+  cpan&#62; reload cpan
+  cpan&#62; o conf init test_report</pre>
+
+<p>Installing <a href="/perldoc?Task%3A%3ACPAN%3A%3AReporter" class="podlinkpod"
+>Task::CPAN::Reporter</a> will pull in additional dependencies that new CPAN Testers will need.</p>
+
+<p>Advanced CPAN Testers with custom <a href="/perldoc?Test%3A%3AReporter%3A%3ATransport" class="podlinkpod"
+>Test::Reporter::Transport</a> setups may wish to install only CPAN::Reporter, which has fewer dependencies.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The CPAN Testers project captures and analyzes detailed results from building and testing CPAN distributions on multiple operating systems and multiple versions of Perl. This provides valuable feedback to module authors and potential users to identify bugs or platform compatibility issues and improves the overall quality and value of CPAN.</p>
+
+<p>One way individuals can contribute is to send a report for each module that they test or install. CPAN::Reporter is an add-on for the CPAN.pm module to send the results of building and testing modules to the CPAN Testers project. Full support for CPAN::Reporter is available in CPAN.pm as of version 1.92.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="GETTING_STARTED"
+>GETTING STARTED <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Installation"
+>Installation</a></h2>
+
+<p>The first step in using CPAN::Reporter is to install it using whatever version of CPAN.pm is already installed. CPAN.pm will be upgraded as a dependency if necessary.</p>
+
+<pre class="sh_perl">  cpan&#62; install CPAN::Reporter</pre>
+
+<p>If CPAN.pm was upgraded, it needs to be reloaded.</p>
+
+<pre class="sh_perl">  cpan&#62; reload cpan</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Configuration"
+>Configuration</a></h2>
+
+<p>If upgrading from a very old version of CPAN.pm, users may be prompted to renew their configuration settings, including the &#39;test_report&#39; option to enable CPAN::Reporter.</p>
+
+<p>If not prompted automatically, users should manually initialize CPAN::Reporter support. After enabling CPAN::Reporter, CPAN.pm will automatically continue with interactive configuration of CPAN::Reporter options.</p>
+
+<pre class="sh_perl">  cpan&#62; o conf init test_report</pre>
+
+<p>Users will need to enter an email address in one of the following formats:</p>
+
+<pre class="sh_perl">  johndoe@example.com
+  John Doe &#60;johndoe@example.com&#62;
+  &#34;John Q. Public&#34; &#60;johnqpublic@example.com&#62;</pre>
+
+<p>Users that are new to CPAN::Reporter should accept the recommended values for other configuration options.</p>
+
+<p>Users will be prompted to create a <i>Metabase profile</i> file that uniquely identifies their test reports. See <a href="#The_Metabase" class="podlinkpod"
+>&#34;The Metabase&#34;</a> below for details.</p>
+
+<p>After completing interactive configuration, be sure to commit (save) the CPAN configuration changes.</p>
+
+<pre class="sh_perl">  cpan&#62; o conf commit</pre>
+
+<p>See <a href="/~dagolden/CPAN-Reporter-1.2006/lib/CPAN/Reporter/Config.pm" class="podlinkpod"
+>CPAN::Reporter::Config</a> for advanced configuration settings.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="The_Metabase"
+>The Metabase</a></h3>
+
+<p>CPAN::Reporter sends test reports to a server known as the Metabase. This requires an active Internet connection and a profile file. To create the profile, users will need to run <code>metabase-profile</code> from a terminal window and fill the information at the prompts. This will create a file called <code>metabase_id.json</code> in the current directory. That file should be moved to the <code>.cpanreporter</code> directory inside the user&#39;s home directory.</p>
+
+<p>Users with an existing metabase profile file (e.g. from another machine), should copy it into the <code>.cpanreporter</code> directory instead of creating a new one. Profile files may be located outside the <code>.cpanreporter</code> directory by following instructions in <a href="/~dagolden/CPAN-Reporter-1.2006/lib/CPAN/Reporter/Config.pm" class="podlinkpod"
+>CPAN::Reporter::Config</a>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Using_CPAN::Reporter"
+>Using CPAN::Reporter</a></h2>
+
+<p>Once CPAN::Reporter is enabled and configured, test or install modules with CPAN.pm as usual.</p>
+
+<p>For example, to test the File::Marker module:</p>
+
+<pre class="sh_perl">  cpan&#62; test File::Marker</pre>
+
+<p>If a distribution&#39;s tests fail, users will be prompted to edit the report to add additional information that might help the author understand the failure.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="UNDERSTANDING_TEST_GRADES"
+>UNDERSTANDING TEST GRADES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>CPAN::Reporter will assign one of the following grades to the report:</p>
+
+<ul>
+<li><code>pass</code> -- distribution built and tested correctly</li>
+
+<li><code>fail</code> -- distribution failed to test correctly</li>
+
+<li><code>unknown</code> -- distribution failed to build, had no test suite or outcome was inconclusive</li>
+
+<li><code>na</code> --- distribution is not applicable to this platform and/or version of Perl</li>
+</ul>
+
+<p>In returning results of the test suite to CPAN.pm, &#34;pass&#34; and &#34;unknown&#34; are considered successful attempts to &#34;make test&#34; or &#34;Build test&#34; and will not prevent installation. &#34;fail&#34; and &#34;na&#34; are considered to be failures and CPAN.pm will not install unless forced.</p>
+
+<p>An error from Makefile.PL/Build.PL or make/Build will also be graded as &#34;unknown&#34; and a failure will be signaled to CPAN.pm.</p>
+
+<p>If prerequisites specified in <code>Makefile.PL</code> or <code>Build.PL</code> are not available, no report will be generated and a failure will be signaled to CPAN.pm.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="PRIVACY_WARNING"
+>PRIVACY WARNING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>CPAN::Reporter includes information in the test report about environment variables and special Perl variables that could be affecting test results in order to help module authors interpret the results of the tests. This includes information about paths, terminal, locale, user/group ID, installed toolchain modules (e.g. ExtUtils::MakeMaker) and so on.</p>
+
+<p>These have been intentionally limited to items that should not cause harmful personal information to be revealed -- it does <i>not</i> include your entire environment. Nevertheless, please do not use CPAN::Reporter if you are concerned about the disclosure of this information as part of your test report.</p>
+
+<p>Users wishing to review this information may choose to edit the report prior to sending it.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Please report any bugs or feature using the CPAN Request Tracker. Bugs can be submitted through the web interface at <a href="http://rt.cpan.org/Dist/Display.html?Queue=CPAN-Reporter" class="podlinkurl"
+>http://rt.cpan.org/Dist/Display.html?Queue=CPAN-Reporter</a></p>
+
+<p>When submitting a bug or request, please include a test-file or a patch to an existing test-file that illustrates the bug or desired feature.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Information about <a href="/perldoc?CPAN%3A%3ATesters" class="podlinkpod"
+>CPAN::Testers</a>:</p>
+
+<ul>
+<li><a href="/perldoc?CPAN%3A%3ATesters" class="podlinkpod"
+>CPAN::Testers</a> -- overview of CPAN Testers architecture stack</li>
+
+<li><a href="http://www.cpantesters.org" class="podlinkurl"
+>http://www.cpantesters.org</a> -- project home with all reports</li>
+
+<li><a href="http://wiki.cpantesters.org" class="podlinkurl"
+>http://wiki.cpantesters.org</a> -- documentation and wiki</li>
+</ul>
+
+<p>Additional Documentation:</p>
+
+<ul>
+<li><a href="/~dagolden/CPAN-Reporter-1.2006/lib/CPAN/Reporter/Config.pm" class="podlinkpod"
+>CPAN::Reporter::Config</a> -- advanced configuration settings</li>
+
+<li><a href="/~dagolden/CPAN-Reporter-1.2006/lib/CPAN/Reporter/FAQ.pm" class="podlinkpod"
+>CPAN::Reporter::FAQ</a> -- hints and tips</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUPPORT"
+>SUPPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Bugs_/_Feature_Requests"
+>Bugs / Feature Requests</a></h2>
+
+<p>Please report any bugs or feature requests through the issue tracker at <a href="http://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Reporter" class="podlinkurl"
+>http://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Reporter</a>. You will be notified automatically of any progress on your issue.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Source_Code"
+>Source Code</a></h2>
+
+<p>This is open source software. The code repository is available for public review and contribution under the terms of the license.</p>
+
+<p><a href="https://github.com/dagolden/cpan-reporter" class="podlinkurl"
+>https://github.com/dagolden/cpan-reporter</a></p>
+
+<pre class="sh_perl">  git clone <a href="https://github.com/dagolden/cpan-reporter.git" class="podlinkurl"
+>https://github.com/dagolden/cpan-reporter.git</a></pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>David Golden &#60;dagolden@cpan.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This software is Copyright (c) 2006 by David Golden.</p>
+
+<p>This is free software, licensed under:</p>
+
+<pre class="sh_perl">  The Apache License, Version 2.0, January 2004</pre>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78163 Uploads, 24704 Distributions
+105968 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 20:47:15 2012 GMT (0.152695894241333) @cpansearch1 -->
+ </body>
+</html>

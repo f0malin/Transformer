@@ -1,0 +1,91 @@
+Date::Tie
+
+0.20  2009-02-12
+ - fixed a test that went wrong due to Feb having 28 days this year. 
+
+0.19  2009-01-09
+ - fixed an infinite loop in week number calculation. 
+   Bug found by Martin Labonté; http://rt.cpan.org/Ticket/Display.html?id=42028
+
+0.18  2008-01-09
+ - fixed week number.  Jean via http://rt.cpan.org/Ticket/Display.html?id=32071 
+
+0.17  2003-07-28
+ - fixes utc_epoch handling.  Dan Wright.
+ - removed some debugging code
+ - added reference to DateTime
+
+0.16  2003-05-14
+ - utc_epoch key.  Dan Wright.
+
+0.15
+ - can make new() from an existing object ("clone")
+
+0.14
+ - catches overflow when calling timegm (fix error when using perl 5.8.0)
+
+0.13
+ - clears a Win32 warning when making %a = %c;
+
+0.12
+ - accepts hash-copy syntax:
+     tie my %b, 'Date::Tie', %d;
+     #     hash %d MUST be tied do Date::Tie, if you are using timezones
+ - changed "int" to "floor" in month overflow; caused month-- to fail
+     thanks to Henrique Pantarotto.
+
+0.10 
+ - accepts comma as fractional separator on input
+ - read/write fractional hours, minutes, seconds, epoch. 
+ - fractional days, months, years don't give an error, 
+   but are always rounded to 'integer'.
+ - corrections and additions to docs
+
+0.09 
+ - added 'frac' - fractional seconds
+ - uses integer arithmetic to avoid rounding problems
+
+0.08 
+ - changing 'month' after changing 'day' would reset
+   day to '1'
+     thanks to Eduardo M. Cavalcanti.
+   
+0.07 
+ - more POD
+ - examples don't use internal functions
+
+0.06 
+ - correct day overflow on month/year change
+ - more tests, examples
+
+0.05
+ -  POD format correction
+ - tzhour,tzminute is -00-30 instead of +00-30
+ - more tests
+
+0.04
+ - yearday, weekday, week, weekyear
+ - better storage
+ - initializes to 'now'.
+ - timezones
+ - more tests
+ 
+0.03
+ - STORE rewritten
+ - examples work
+
+0.02
+ - Make it a real module
+
+0.01
+ - I started this when dLux said:
+> What about this kind of syntax:
+> my $mydate = new XXXX::Date "2001-11-07";
+> # somewhere later in the code
+> my $duedate = $mydate + 14 * XXX::Date::DAY;
+> my $duedate = $mydate + 14 * DAY;
+> my $duedate = $mydate->add(12, DAYS);
+> my $duedate = $mydate->add(day => 12);
+> my $duedate = $mydate + "12 days";
+> my $duedate = $mydate + "12 days and 4 hours and 3 seconds"; # :-)
+

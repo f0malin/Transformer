@@ -1,0 +1,605 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Test::MockObject - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Test-MockObject",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Test-MockObject-1.20120301",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Test::MockObject",3]);
+    _gaq.push(["_setCustomVar",1,"Author","CHROMATIC",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Test::MockObject">permalink</a></div>
+  <a href="/~chromatic/">chromatic</a> &gt;
+  <a href="/~chromatic/Test-MockObject-1.20120301/">Test-MockObject-1.20120301</a> &gt;
+  Test::MockObject
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/2c517b2a26b5f95a8d2160737ae984fb?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/C/CH/CHROMATIC/Test-MockObject-1.20120301.tar.gz">Test-MockObject-1.20120301.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Test%3A%3AMockObject;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~CHROMATIC/Test-MockObject-1.20120301/lib/Test/MockObject.pm">Annotate this POD
+(1)
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 12</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 3</td></tr>
+</table>
+<a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Test-MockObject">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.20120301 &nbsp;
+<span class="noprint">
+  <a href="/src/CHROMATIC/Test-MockObject-1.20120301/lib/Test/MockObject.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#IMPORTANT_CAVEATS'>IMPORTANT CAVEATS</a>
+    <li class='indexItem indexItem2'><a href='#EXPORT'>EXPORT</a>
+    <li class='indexItem indexItem2'><a href='#METHODS'>METHODS</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#The_Basics'>The Basics</a>
+      <li class='indexItem indexItem3'><a href='#Mocking'>Mocking</a>
+      <li class='indexItem indexItem3'><a href='#Checking_Your_Mocks'>Checking Your Mocks</a>
+      <li class='indexItem indexItem3'><a href='#Logging'>Logging</a>
+      <li class='indexItem indexItem3'><a href='#Subclassing'>Subclassing</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#TODO'>TODO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Test::MockObject - Perl extension for emulating troublesome interfaces</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use Test::MockObject;
+  my $mock = Test::MockObject-&#62;new();
+  $mock-&#62;set_true( &#39;somemethod&#39; );
+  ok( $mock-&#62;somemethod() );
+
+  $mock-&#62;set_true( &#39;veritas&#39;)
+       -&#62;set_false( &#39;ficta&#39; )
+       -&#62;set_series( &#39;amicae&#39;, &#39;Sunny&#39;, &#39;Kylie&#39;, &#39;Bella&#39; );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>It&#39;s a simple program that doesn&#39;t use any other modules, and those are easy to test. More often, testing a program completely means faking up input to another module, trying to coax the right output from something you&#39;re not supposed to be testing anyway.</p>
+
+<p>Testing is a lot easier when you can control the entire environment. With Test::MockObject, you can get a lot closer.</p>
+
+<p>Test::MockObject allows you to create objects that conform to particular interfaces with very little code. You don&#39;t have to reimplement the behavior, just the input and the output.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="IMPORTANT_CAVEATS"
+>IMPORTANT CAVEATS</a></h2>
+
+<p>Before you go wild with your testing powers, consider three caveats:</p>
+
+<ul>
+<li>It is possible to write highly detailed unit tests that pass even when your integration tests may fail. Testing the pieces individually does not excuse you from testing the whole thing together.</li>
+
+<li>In cases where you only need to mock one or two pieces of an existing module, consider <a href="/~chromatic/Test-MockObject-1.20120301/lib/Test/MockObject/Extends.pm" class="podlinkpod"
+>Test::MockObject::Extends</a> instead.</li>
+
+<li>If the code under testing produces strange errors about type checks, pass the <code>-debug</code> flag when using <code>Test::MockObject</code> or <code>Test::MockObject::Extends</code>. This will load both <a href="/perldoc?UNIVERSAL%3A%3Aisa" class="podlinkpod"
+>UNIVERSAL::isa</a> and <a href="/perldoc?UNIVERSAL%3A%3Acan" class="podlinkpod"
+>UNIVERSAL::can</a> to perform additional debugging on the incorrect use of both methods from the <a href="/perldoc?UNIVERSAL" class="podlinkpod"
+>UNIVERSAL</a> package. (This behavior used to be active by default, but that was, however correct, probably a burden to onerous for the CPAN.)</li>
+</ul>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="EXPORT"
+>EXPORT</a></h2>
+
+<p>None.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS</a></h2>
+
+<p>The most important thing a Mock Object can do is to conform sufficiently to an interface. For example, if you&#39;re testing something that relies on CGI.pm, you may find it easier to create a mock object that returns controllable results at given times than to fake query string input.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="The_Basics"
+>The Basics</a></h3>
+
+<ul>
+<li><code>new</code>
+<p>Creates a new mock object. By default, this is a blessed hash. Pass a reference to bless that reference.</p>
+
+<pre class="sh_perl">    my $mock_array  = Test::MockObject-&#62;new( [] );
+    my $mock_scalar = Test::MockObject-&#62;new( \( my $scalar ) );
+    my $mock_code   = Test::MockObject-&#62;new( sub {} );
+    my $mock_glob   = Test::MockObject-&#62;new( \*GLOB );</pre>
+</li>
+</ul>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Mocking"
+>Mocking</a></h3>
+
+<p>Your mock object is nearly useless if you don&#39;t tell it what it&#39;s mocking. This is done by installing methods. You control the output of these mocked methods. In addition, any mocked method is tracked. You can tell not only what was called, but which arguments were passed. Please note that you cannot track non-mocked method calls. They will still be allowed, though Test::MockObject will carp() about them. This is considered a feature, though it may be possible to disable this in the future.</p>
+
+<p>As implied in the example above, it&#39;s possible to chain these calls together. Thanks to a suggestion from the fabulous Piers Cawley (CPAN RT #1249), this feature came about in version 0.09. Shorter testing code is nice!</p>
+
+<ul>
+<li><code>mock(<i>name</i>, <i>coderef</i>)</code>
+<p>Adds a coderef to the object. This allows code to call the named method on the object. For example, this code:</p>
+
+<pre class="sh_perl">    my $mock = Test::MockObject-&#62;new();
+    $mock-&#62;mock( &#39;fluorinate&#39;,
+        sub { &#39;impurifying precious bodily fluids&#39; } );
+    print $mock-&#62;fluorinate;</pre>
+
+<p>will print a helpful warning message. Please note that methods are only added to a single object at a time and not the class. (There is no small similarity to the Self programming language or the <a href="/perldoc?Class%3A%3APrototyped" class="podlinkpod"
+>Class::Prototyped</a> module.)</p>
+
+<p>This method forms the basis for most of Test::MockObject&#39;s testing goodness.</p>
+
+<p><b>Please Note:</b> this method used to be <code>add()</code>. Due to its ambiguity, it now has a different spelling. For backwards compatibility purposes, add() is available, though version 0.07 deprecated it. It goes to some contortions to try to do what you mean, but I make few guarantees.</p>
+</li>
+
+<li><code>fake_module(<i>module name</i>), [ <i>subname</i> =</code> <i>coderef</i>, ... ]
+<p><b>Note:</b> See <a href="/perldoc?Test%3A%3AMockModule" class="podlinkpod"
+>Test::MockModule</a> for an alternate (and better) approach.</p>
+
+<p>Lies to Perl that it has already loaded a named module. This is handy when providing a mockup of a real module if you&#39;d like to prevent the actual module from interfering with the nice fakery. If you&#39;re mocking <a href="/perldoc?Regexp%3A%3AEnglish" class="podlinkpod"
+>Regexp::English</a>, say:</p>
+
+<pre class="sh_perl">    $mock-&#62;fake_module( &#39;Regexp::English&#39; );</pre>
+
+<p>This is both a class and as an object method. Beware that this must take place before the actual module has a chance to load. Either wrap it in a BEGIN block before a use or require or place it before a <code>use_ok()</code> or <code>require_ok()</code> call.</p>
+
+<p>You can optionally add functions to the mocked module by passing them as name =&#62; coderef pairs to <code>fake_module()</code>. This is handy if you want to test an <code>import()</code>:</p>
+
+<pre class="sh_perl">    my $import;
+    $mock-&#62;fake_module(
+        &#39;Regexp::English&#39;,
+        import =&#62; sub { $import = caller }
+    );
+    use_ok( &#39;Regexp::Esperanto&#39; );
+    is( $import, &#39;Regexp::Esperanto&#39;,
+        &#39;Regexp::Esperanto should use() Regexp::English&#39; );</pre>
+
+<p>If you use <code>fake_module()</code> to mock a module that already exists in memory -- one you&#39;ve loaded elsewhere perhaps, but do not pass any subroutines to mock, this method will throw an exception. This is because if you call the constructor later on, you probably won&#39;t get a mock object back and you&#39;ll be confused.</p>
+</li>
+
+<li><code>fake_new(<i>module name</i>)</code>
+<p><b>Note:</b> see <a href="/~chromatic/Test-MockObject-1.20120301/lib/Test/MockObject/Extends.pm" class="podlinkpod"
+>Test::MockObject::Extends</a> for a better alternative to this method.</p>
+
+<p>Provides a fake constructor for the given module that returns the invoking mock object. Used in conjunction with <code>fake_module()</code>, you can force the tested unit to work with the mock object instead.</p>
+
+<pre class="sh_perl">    $mock-&#62;fake_module( &#39;CGI&#39; );
+    $mock-&#62;fake_new( &#39;CGI&#39; );
+
+    use_ok( &#39;Some::Module&#39; );
+    my $s = Some::Module-&#62;new();
+    is( $s-&#62;{_cgi}, $mock,
+        &#39;new() should create and store a new CGI object&#39; );</pre>
+</li>
+
+<li><code>set_always(<i>name</i>, <i>value</i>)</code>
+<p>Adds a method of the specified name that always returns the specified value.</p>
+</li>
+
+<li><code>set_true(<i>name_1</i>, <i>name_2</i>, ... <i>name_n</i>)</code>
+<p>Adds a method of the specified name that always returns a true value. This can take a list of names.</p>
+</li>
+
+<li><code>set_false(<i>name_1</i>, <i>name_2</i>, ... <i>name_n</i>)</code>
+<p>Adds a method of the specified name that always returns a false value. (Since it installs an empty subroutine, the value should be false in both scalar and list contexts.) This can take a list of names.</p>
+</li>
+
+<li><code>set_list(<i>name</i>, [ <i>item1</i>, <i>item2</i>, ... ]</code>
+<p>Adds a method that always returns a given list of values. It takes some care to provide a list and not an array, if that&#39;s important to you.</p>
+</li>
+
+<li><code>set_series(<i>name</i>, [ <i>item1</i>, <i>item2</i>, ... ]</code>
+<p>Adds a method that will return the next item in a series on each call. This can help to test error handling, by forcing a failure on the first method call and then subsequent successes. Note that the series does not repeat; it will eventually run out.</p>
+</li>
+
+<li><code>set_bound(<i>name</i>, <i>reference</i>)</code>
+<p>Adds a method bound to a variable. Pass in a reference to a variable in your test. When you change the variable, the return value of the new method will change as well. This is often handier than replacing mock methods.</p>
+</li>
+
+<li><code>set_isa( <i>name1</i>, <i>name2</i>, ... <i>namen</i> )</code>
+<p>Adds an apparent parent to the module, so that calling <code>isa()</code> on the mock will return true appropriately. Sometimes you really need this.</p>
+</li>
+
+<li><code>remove(<i>name</i>)</code>
+<p>Removes a named method.</p>
+</li>
+</ul>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Checking_Your_Mocks"
+>Checking Your Mocks</a></h3>
+
+<ul>
+<li><code>can( $method_name )</code>
+<p>Returns a subroutine reference if this particular mocked object can handle the named method, false otherwise.</p>
+</li>
+
+<li><code>isa( $class_name )</code>
+<p>Returns true if the invocant object mocks a particular class. You must have used <code>set_isa()</code> first.</p>
+</li>
+
+<li><code>called(<i>name</i>)</code>
+<p>Checks to see if something has called a named method on the object. This returns a boolean value. The current implementation does not scale especially well, so use this sparingly if you need to search through hundreds of calls.</p>
+</li>
+
+<li><code>clear()</code>
+<p>Clears the internal record of all method calls on the object. It&#39;s handy to do this every now and then. Note that this does not affect the mocked methods, only all of the methods called on the object to this point.</p>
+
+<p>It&#39;s handy to <code>clear()</code> methods in between series of tests. That makes it much easier to call <code>next_method()</code> without having to skip over the calls from the last set of tests.</p>
+</li>
+
+<li><code>next_call([ <i>position</i> ])</code>
+<p>Returns the name and argument list of the next mocked method called on an object, in list context. In scalar context, returns only the method name. There are two important things to know about this method. First, it starts at the beginning of the call list. If your code runs like this:</p>
+
+<pre class="sh_perl">    $mock-&#62;set_true( &#39;foo&#39; );
+    $mock-&#62;set_true( &#39;bar&#39; );
+    $mock-&#62;set_true( &#39;baz&#39; );
+
+    $mock-&#62;foo();
+    $mock-&#62;bar( 3, 4 );
+    $mock-&#62;foo( 1, 2 );</pre>
+
+<p>Then you might see output of:</p>
+
+<pre class="sh_perl">    my ($name, $args) = $mock-&#62;next_call();
+    print &#34;$name (@$args)&#34;;
+
+    # prints &#39;foo&#39;
+
+    $name = $mock-&#62;next_call();
+    print $name;
+
+    # prints &#39;bar&#39;
+
+    ($name, $args) = $mock-&#62;next_call();
+    print &#34;$name (@$args)&#34;;
+
+    # prints &#39;foo 1 2&#39;</pre>
+
+<p>If you provide an optional number as the <i>position</i> argument, the method will skip that many calls, returning the data for the last one skipped.</p>
+
+<pre class="sh_perl">    $mock-&#62;foo();
+    $mock-&#62;bar();
+    $mock-&#62;baz();
+
+    $name = $mock-&#62;next_call();
+    print $name;
+
+    # prints &#39;foo&#39;
+
+    $name = $mock-&#62;next_call( 2 );
+    print $name
+
+    # prints &#39;baz&#39;</pre>
+
+<p>When it reaches the end of the list, it returns undef. This is probably the most convenient method in the whole module, but for the sake of completeness and backwards compatibility (it takes me a while to reach the truest state of laziness!), there are several other methods.</p>
+</li>
+
+<li><code>call_pos(<i>position</i>)</code>
+<p>Returns the name of the method called on the object at a specified position. This is handy if you need to test a certain order of calls. For example:</p>
+
+<pre class="sh_perl">    Some::Function( $mock );
+    is( $mock-&#62;call_pos(1),  &#39;setup&#39;,
+        &#39;Function() should first call setup()&#39; );
+    is( $mock-&#62;call_pos(-1), &#39;end&#39;,
+        &#39;... and last call end()&#39; );</pre>
+
+<p>Positions can be positive or negative. Please note that the first position is, in fact, 1. (This may change in the future. I like it, but am willing to reconsider.)</p>
+</li>
+
+<li><code>call_args(<i>position</i>)</code>
+<p>Returns a list of the arguments provided to the method called at the appropriate position. Following the test above, one might say:</p>
+
+<pre class="sh_perl">    is( ($mock-&#62;call_args(1))[0], $mock,
+        &#39;... passing the object to setup()&#39; );
+    is( scalar $mock-&#62;call_args(-1), 0,
+        &#39;... and no args to end()&#39; );</pre>
+</li>
+
+<li><code>call_args_pos(<i>call position</i>, <i>argument position</i>)</code>
+<p>Returns the argument at the specified position for the method call at the specified position. One might rewrite the first test of the last example as:</p>
+
+<pre class="sh_perl">    is( $mock-&#62;call_args_pos(1, 1), $mock,
+        &#39;... passing the object to setup()&#39;);</pre>
+</li>
+
+<li><code>call_args_string(<i>position</i>, [ <i>separator</i> ])</code>
+<p>Returns a stringified version of the arguments at the specified position. If no separator is given, they will not be separated. This can be used as:</p>
+
+<pre class="sh_perl">    is( $mock-&#62;call_args_string(1), &#34;$mock initialize&#34;,
+        &#39;... passing object, initialize as arguments&#39; );</pre>
+</li>
+
+<li><code>called_ok(<i>method name</i>, [ <i>test name</i> ])</code>
+<p>Tests to see whether a method of the specified name has been called on the object. This and the following methods use Test::Builder, so they integrate nicely with a test suite built around Test::Simple, Test::More, or anything else compatible:</p>
+
+<pre class="sh_perl">    $mock-&#62;foo();
+    $mock-&#62;called_ok( &#39;foo&#39; );</pre>
+
+<p>A generic default test name is provided.</p>
+</li>
+
+<li><code>called_pos_ok(<i>position</i>, <i>method name</i>, [ <i>test name</i> ])</code>
+<p>Tests to see whether the named method was called at the specified position. A default test name is provided.</p>
+</li>
+
+<li><code>called_args_pos_is(<i>method position</i>, <i>argument position</i>, <i>expected</i>, [ <i>test name</i> ])</code>
+<p>Tests to see whether the argument at the appropriate position of the method in the specified position equals a specified value. A default, rather non-descript test name is provided.</p>
+</li>
+
+<li><code>called_args_string_is(<i>method position</i>, <i>separator</i>, <i>expected</i>, [ <i>test name</i> ])</code>
+<p>Joins together all of the arguments to a method at the appropriate position and matches against a specified string. A generically bland test name is provided by default. You can probably do much better.</p>
+</li>
+
+<li><code>check_class_loaded( $class_name )</code>
+<p>Attempts to determine whether you have a class of the given name loaded and compiled. Returns true or false.</p>
+</li>
+</ul>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Logging"
+>Logging</a></h3>
+
+<p>Test::MockObject logs all mocked methods by default. Sometimes you don&#39;t want to do this. To prevent logging all calls to a given method, prepend the name of the method with <code>-</code> when mocking it.</p>
+
+<p>That is:</p>
+
+<pre class="sh_perl">    $mock-&#62;set_true( &#39;-foo&#39;, &#39;bar&#39; );</pre>
+
+<p>will set mock both <code>foo()</code> and <code>bar()</code>, causing both to return true. However, the object will log only calls to <code>bar()</code>, not <code>foo()</code>. To log <code>foo()</code> again, merely mock it again without the leading <code>-</code>:</p>
+
+<pre class="sh_perl">    $mock-&#62;set_true( &#39;foo&#39; );</pre>
+
+<p><code>$mock</code> will log all subsequent calls to <code>foo()</code> again.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Subclassing"
+>Subclassing</a></h3>
+
+<p>There are two methods provided for subclassing:</p>
+
+<ul>
+<li><code>dispatch_mocked_method( $method_name, @_ )</code>
+<p>This method determines how to call a method (named as <code>$method_name</code>) not available in this class. It also controls logging. You may or may not find it useful, but I certainly take advantage of it for Test::MockObject::Extends.</p>
+</li>
+
+<li><code>log_call( $method_name, @_ )</code>
+<p>This method tracks the call of the named method and its arguments.</p>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TODO"
+>TODO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li>Add a factory method to avoid namespace collisions (soon)</li>
+
+<li>Add more useful methods (catch <code>import()</code>?)</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>chromatic, &#60;chromatic at wgz dot org&#62;</p>
+
+<p>Thanks go to Curtis &#39;Ovid&#39; Poe, as well as ONSITE! Technology, Inc., for finding several bugs and providing several constructive suggestions.</p>
+
+<p>Jay Bonci also found a false positive in <code>called_ok()</code>. Thanks!</p>
+
+<p>Chris Winters was the first to report I&#39;d accidentally scheduled 0.12 for deletion without uploading a newer version. He also gave useful feedback on Test::MockObject::Extends.</p>
+
+<p>Stevan Little provided the impetus and code for <code>set_isa()</code>.</p>
+
+<p>Nicholas Clark found a documentation error.</p>
+
+<p>Mutant suggested a potential problem with fake_module().</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?perl" class="podlinkpod"
+>perl</a>, <a href="/perldoc?Test%3A%3ATutorial" class="podlinkpod"
+>Test::Tutorial</a>, <a href="/perldoc?Test%3A%3AMore" class="podlinkpod"
+>Test::More</a>, <a href="/perldoc?http%3A%2F%2Fwww.perl.com%2Fpub%2Fa%2F2001%2F12%2F04%2Ftesting.html" class="podlinkpod"
+>http://www.perl.com/pub/a/2001/12/04/testing.html</a>, and <a href="/perldoc?http%3A%2F%2Fwww.perl.com%2Fpub%2Fa%2F2002%2F07%2F10%2Ftmo.html" class="podlinkpod"
+>http://www.perl.com/pub/a/2002/07/10/tmo.html</a>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2002 - 2011 by chromatic &#60;chromatic at wgz dot org&#62;.</p>
+
+<p>This program is free software; you can use, modify, and redistribute it under the same terms as Perl 5.10.x itself.</p>
+
+<p>See <a href="http://www.perl.com/perl/misc/Artistic.html" class="podlinkurl"
+>http://www.perl.com/perl/misc/Artistic.html</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78163 Uploads, 24704 Distributions
+105968 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 21:32:51 2012 GMT (0.125464916229248) @cpansearch1 -->
+ </body>
+</html>

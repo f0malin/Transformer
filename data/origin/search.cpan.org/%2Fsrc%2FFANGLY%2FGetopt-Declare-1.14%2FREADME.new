@@ -1,0 +1,146 @@
+==============================================================================
+                             Getopt::Declare
+    Declaratively Expressed Command-Line Arguments via Regular Expressions
+==============================================================================
+
+
+Getopt::Declare is *yet another* command-line argument parser, one which
+is specifically designed to be powerful but exceptionally easy to use.
+
+To parse the command-line in `@ARGV', one simply creates a
+Getopt::Declare object, by passing `Getopt::Declare::new()' a
+specification of the various parameters that may be encountered:
+
+    $args = new Getopt::Declare($specification);
+
+The specification is a single string such as this:
+
+    $specification = q(
+
+	    -a              Process all data
+
+	    -b <N:n>        Set mean byte length threshold to <N>
+				    { bytelen = $N; }
+
+	    +c <FILE>       Create new file <FILE>
+
+	    --del           Delete old file
+				    { delold() }
+
+	    delete          [ditto]
+
+	    e <H:i>x<W:i>   Expand image to height <H> and width <W>
+				    { expand($H,$W); }
+
+	    -F <file>...    Process named file(s)
+				    { defer {for (@file) {process()}} }
+
+	    =getrand [<N>]  Get a random number
+			    (or, optionally, <N> of them)
+				    { $N = 1 unless defined $N; }
+
+	    --              Traditionally indicates end of arguments
+				    { finish }
+    );
+
+in which the syntax of each parameter is declared, along with a
+description and (optionally) one or more actions to be performed when
+the parameter is encountered. The specification string may also include
+other usage formatting information (such as group headings or
+separators) as well as standard Perl comments (which are ignored).
+
+Calling Getopt::Delare::new() parses the contents of the array
+@ARGV, extracting any arguments which match the parameters defined in
+the specification string, and storing the parsed values as hash elements
+within the new Getopt::Declare object being created.
+
+Other features of the Getopt::Declare package include:
+
+        * The use of full Perl regular expressions to constrain
+          matching of parameter components.
+
+        * Automatic generation of error, usage and version information.
+
+        * Optional conditional execution of embedded actions (i.e. only
+          on successful parsing of the entire command-line)
+
+        * Strict or non-strict parsing (unrecognized command-line
+          elements may either trigger an error or may simply be left in
+          @ARGV)
+
+        * Declarative specification of various inter-parameter
+          relationships (for example, two parameters may be declared
+          mutually exclusive and this relationship will then be
+          automatically enforced).
+
+        * Intelligent clustering of adjacent flags (for example: the
+          command-line sequence "-a -b -c" may be abbreviated to
+          "-abc", unless there is also a `-abc' flag declared).
+
+        * Selective or global case-insensitivity of parameters.
+
+        * The ability to parse files (especially configuration files)
+          instead of the command-line.
+
+
+==============================================================================
+
+CHANGES
+
+See the file 'Changes' for a list of changes and release dates.
+
+
+==============================================================================
+
+INSTALLATION
+
+Note: requires the Text::Balanced module
+
+Getopt::Declare has been uploaded to the CPAN:
+    http://search.cpan.org/search?query=getopt+declare
+
+So, the easiest way is to use the 'cpan' command if it is installed on your
+computer:
+	cpan Getopt::Declare
+
+Otherwise:
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+Consult the POD for exhaustive documentation:
+	perldoc Getopt::Declare
+
+Also, some demos are available in the demos folder.
+
+
+==============================================================================
+
+AUTHOR
+
+Damian Conway <damian@conway.org>
+
+
+==============================================================================
+
+COPYRIGHT
+
+       Copyright (c) 1997-2000, Damian Conway. All Rights Reserved.
+     This module is free software. It may be used, redistributed
+     and/or modified under the terms of the Perl Artistic License
+          (see http://www.perl.com/perl/misc/Artistic.html)
+
+
+==============================================================================
+
+BUGS AND ANNOYANCES
+
+There are undoubtedly serious bugs lurking somewhere in this code.
+
+If nothing else, it shouldn't take 1500 lines to explain a
+package that was designed for intuitive ease of use!
+
+Bug reports and other feedback are most welcome at:
+	https://rt.cpan.org/Public/Bug/Report.html?Queue=Getopt-Declare
+

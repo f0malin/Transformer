@@ -1,0 +1,993 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Set::Infinite - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Set-Infinite",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Set-Infinite-0.65",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Set::Infinite",3]);
+    _gaq.push(["_setCustomVar",1,"Author","FGLOCK",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Set::Infinite">permalink</a></div>
+  <a href="/~fglock/">Fl&aacute;vio Soibelmann Glock</a> &gt;
+  <a href="/~fglock/Set-Infinite-0.65/">Set-Infinite-0.65</a> &gt;
+  Set::Infinite
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/2c622ad013f36460f87c54eee7a50e0c?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/F/FG/FGLOCK/Set-Infinite-0.65.tar.gz">Set-Infinite-0.65.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Set%3A%3AInfinite;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~FGLOCK/Set-Infinite-0.65/lib/Set/Infinite.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Data%3A%3ADumper">Data::Dumper</a><br>
+<a href="/perldoc?HTTP%3A%3AProxy">HTTP::Proxy</a><br>
+<a href="/perldoc?Set%3A%3AIntSpan">Set::IntSpan</a><br>
+<a href="/perldoc?Inline%3A%3AFiles">Inline::Files</a><br>
+<a href="/perldoc?Math%3A%3ABigInt">Math::BigInt</a><br>
+<a href="/perldoc?List%3A%3AUtil">List::Util</a><br>
+<a href="/perldoc?HTTP%3A%3AResponse">HTTP::Response</a><br>
+<a href="/perldoc?Set%3A%3AWindow">Set::Window</a><br>
+<a href="/perldoc?Array%3A%3AIntSpan">Array::IntSpan</a><br>
+<a href="/perldoc?Set%3A%3AScalar">Set::Scalar</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Set%3A%3AInfinite">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Set-Infinite">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.65 &nbsp;
+<span class="noprint">
+  <a href="/src/FGLOCK/Set-Infinite-0.65/lib/Set/Infinite.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#CONSTRUCTOR'>CONSTRUCTOR</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#clone_/_copy'>clone / copy</a>
+    <li class='indexItem indexItem2'><a href='#empty_set'>empty_set</a>
+    <li class='indexItem indexItem2'><a href='#universal_set'>universal_set</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SET_FUNCTIONS'>SET FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#union'>union</a>
+    <li class='indexItem indexItem2'><a href='#intersection'>intersection</a>
+    <li class='indexItem indexItem2'><a href='#complement'>complement</a>
+    <li class='indexItem indexItem2'><a href='#minus'>minus</a>
+    <li class='indexItem indexItem2'><a href='#difference'>difference</a>
+    <li class='indexItem indexItem2'><a href='#symmetric_difference'>symmetric_difference</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DENSITY_METHODS'>DENSITY METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#real'>real</a>
+    <li class='indexItem indexItem2'><a href='#integer'>integer</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#LOGIC_FUNCTIONS'>LOGIC FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#intersects'>intersects</a>
+    <li class='indexItem indexItem2'><a href='#contains'>contains</a>
+    <li class='indexItem indexItem2'><a href='#is_empty'>is_empty</a>
+    <li class='indexItem indexItem2'><a href='#is_null'>is_null</a>
+    <li class='indexItem indexItem2'><a href='#is_nonempty'>is_nonempty</a>
+    <li class='indexItem indexItem2'><a href='#is_span'>is_span</a>
+    <li class='indexItem indexItem2'><a href='#is_singleton'>is_singleton</a>
+    <li class='indexItem indexItem2'><a href='#is_subset(_$set_)'>is_subset( $set )</a>
+    <li class='indexItem indexItem2'><a href='#is_proper_subset(_$set_)'>is_proper_subset( $set )</a>
+    <li class='indexItem indexItem2'><a href='#is_disjoint(_$set_)'>is_disjoint( $set )</a>
+    <li class='indexItem indexItem2'><a href='#is_too_complex'>is_too_complex</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SCALAR_FUNCTIONS'>SCALAR FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#min'>min</a>
+    <li class='indexItem indexItem2'><a href='#max'>max</a>
+    <li class='indexItem indexItem2'><a href='#size'>size</a>
+    <li class='indexItem indexItem2'><a href='#count'>count</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#OVERLOADED_OPERATORS'>OVERLOADED OPERATORS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#stringification'>stringification</a>
+    <li class='indexItem indexItem2'><a href='#comparison'>comparison</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CLASS_METHODS'>CLASS METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#type'>type</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SPECIAL_SET_FUNCTIONS'>SPECIAL SET FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#span'>span</a>
+    <li class='indexItem indexItem2'><a href='#until'>until</a>
+    <li class='indexItem indexItem2'><a href='#start_set'>start_set</a>
+    <li class='indexItem indexItem2'><a href='#end_set'>end_set</a>
+    <li class='indexItem indexItem2'><a href='#intersected_spans'>intersected_spans</a>
+    <li class='indexItem indexItem2'><a href='#quantize'>quantize</a>
+    <li class='indexItem indexItem2'><a href='#select'>select</a>
+    <li class='indexItem indexItem2'><a href='#offset'>offset</a>
+    <li class='indexItem indexItem2'><a href='#iterate'>iterate</a>
+    <li class='indexItem indexItem2'><a href='#first_/_last'>first / last</a>
+    <li class='indexItem indexItem2'><a href='#type'>type</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#INTERNAL_FUNCTIONS'>INTERNAL FUNCTIONS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#_backtrack'>_backtrack</a>
+    <li class='indexItem indexItem2'><a href='#numeric'>numeric</a>
+    <li class='indexItem indexItem2'><a href='#fixtype'>fixtype</a>
+    <li class='indexItem indexItem2'><a href='#tolerance'>tolerance</a>
+    <li class='indexItem indexItem2'><a href='#min_a'>min_a</a>
+    <li class='indexItem indexItem2'><a href='#max_a'>max_a</a>
+    <li class='indexItem indexItem2'><a href='#as_string'>as_string</a>
+    <li class='indexItem indexItem2'><a href='#spaceship'>spaceship</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CAVEATS'>CAVEATS</a>
+  <li class='indexItem indexItem1'><a href='#INTERNALS'>INTERNALS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Set::Infinite - Sets of intervals</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use Set::Infinite;
+
+  $set = Set::Infinite-&#62;new(1,2);    # [1..2]
+  print $set-&#62;union(5,6);            # [1..2],[5..6]</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Set::Infinite is a Set Theory module for infinite sets.</p>
+
+<p>A set is a collection of objects. The objects that belong to a set are called its members, or &#34;elements&#34;.</p>
+
+<p>As objects we allow (almost) anything: reals, integers, and objects (such as dates).</p>
+
+<p>We allow sets to be infinite.</p>
+
+<p>There is no account for the order of elements. For example, {1,2} = {2,1}.</p>
+
+<p>There is no account for repetition of elements. For example, {1,2,2} = {1,1,1,2} = {1,2}.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CONSTRUCTOR"
+>CONSTRUCTOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+>new</a></h2>
+
+<p>Creates a new set object:</p>
+
+<pre class="sh_perl">    $set = Set::Infinite-&#62;new;             # empty set
+    $set = Set::Infinite-&#62;new( 10 );       # single element
+    $set = Set::Infinite-&#62;new( 10, 20 );   # single range
+    $set = Set::Infinite-&#62;new( 
+              [ 10, 20 ], [ 50, 70 ] );    # two ranges</pre>
+
+<dl>
+<dt><a name='empty'></a><a name="empty_set"
+>empty set</a></dt>
+
+<dd>
+<pre class="sh_perl">    $set = Set::Infinite-&#62;new;</pre>
+
+<dt><a name='set'></a><a name="set_with_a_single_element"
+>set with a single element</a></dt>
+
+<dd>
+<pre class="sh_perl">    $set = Set::Infinite-&#62;new( 10 );
+
+    $set = Set::Infinite-&#62;new( [ 10 ] );</pre>
+
+<dt><a name='set'></a><a name="set_with_a_single_span"
+>set with a single span</a></dt>
+
+<dd>
+<pre class="sh_perl">    $set = Set::Infinite-&#62;new( 10, 20 );
+
+    $set = Set::Infinite-&#62;new( [ 10, 20 ] );
+    # 10 &#60;= x &#60;= 20</pre>
+
+<dt><a name='set'></a><a name="set_with_a_single,_open_span"
+>set with a single, open span</a></dt>
+
+<dd>
+<pre class="sh_perl">    $set = Set::Infinite-&#62;new(
+        {
+            a =&#62; 10, open_begin =&#62; 0,
+            b =&#62; 20, open_end =&#62; 1,
+        }
+    );
+    # 10 &#60;= x &#60; 20</pre>
+
+<dt><a name='set'></a><a name="set_with_multiple_spans"
+>set with multiple spans</a></dt>
+
+<dd>
+<pre class="sh_perl">    $set = Set::Infinite-&#62;new( 10, 20,  100, 200 );
+
+    $set = Set::Infinite-&#62;new( [ 10, 20 ], [ 100, 200 ] );
+
+    $set = Set::Infinite-&#62;new(
+        {
+            a =&#62; 10, open_begin =&#62; 0,
+            b =&#62; 20, open_end =&#62; 0,
+        },
+        {
+            a =&#62; 100, open_begin =&#62; 0,
+            b =&#62; 200, open_end =&#62; 0,
+        }
+    );</pre>
+</dd>
+</dl>
+
+<p>The <code>new()</code> method expects <i>ordered</i> parameters.</p>
+
+<p>If you have unordered ranges, you can build the set using <code>union</code>:</p>
+
+<pre class="sh_perl">    @ranges = ( [ 10, 20 ], [ -10, 1 ] );
+    $set = Set::Infinite-&#62;new;
+    $set = $set-&#62;union( @$_ ) for @ranges;</pre>
+
+<p>The data structures passed to <code>new</code> must be <i>immutable</i>. So this is not good practice:</p>
+
+<pre class="sh_perl">    $set = Set::Infinite-&#62;new( $object_a, $object_b );
+    $object_a-&#62;set_value( 10 );</pre>
+
+<p>This is the recommended way to do it:</p>
+
+<pre class="sh_perl">    $set = Set::Infinite-&#62;new( $object_a-&#62;clone, $object_b-&#62;clone );
+    $object_a-&#62;set_value( 10 );</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="clone_/_copy"
+>clone / copy</a></h2>
+
+<p>Creates a new object, and copy the object data.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="empty_set"
+>empty_set</a></h2>
+
+<p>Creates an empty set.</p>
+
+<p>If called from an existing set, the empty set inherits the &#34;type&#34; and &#34;density&#34; characteristics.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="universal_set"
+>universal_set</a></h2>
+
+<p>Creates a set containing &#34;all&#34; possible elements.</p>
+
+<p>If called from an existing set, the universal set inherits the &#34;type&#34; and &#34;density&#34; characteristics.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SET_FUNCTIONS"
+>SET FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="union"
+>union</a></h2>
+
+<pre class="sh_perl">    $set = $set-&#62;union($b);</pre>
+
+<p>Returns the set of all elements from both sets.</p>
+
+<p>This function behaves like an &#34;OR&#34; operation.</p>
+
+<pre class="sh_perl">    $set1 = new Set::Infinite( [ 1, 4 ], [ 8, 12 ] );
+    $set2 = new Set::Infinite( [ 7, 20 ] );
+    print $set1-&#62;union( $set2 );
+    # output: [1..4],[7..20]</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="intersection"
+>intersection</a></h2>
+
+<pre class="sh_perl">    $set = $set-&#62;intersection($b);</pre>
+
+<p>Returns the set of elements common to both sets.</p>
+
+<p>This function behaves like an &#34;AND&#34; operation.</p>
+
+<pre class="sh_perl">    $set1 = new Set::Infinite( [ 1, 4 ], [ 8, 12 ] );
+    $set2 = new Set::Infinite( [ 7, 20 ] );
+    print $set1-&#62;intersection( $set2 );
+    # output: [8..12]</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="complement"
+>complement</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="minus"
+>minus</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="difference"
+>difference</a></h2>
+
+<pre class="sh_perl">    $set = $set-&#62;complement;</pre>
+
+<p>Returns the set of all elements that don&#39;t belong to the set.</p>
+
+<pre class="sh_perl">    $set1 = new Set::Infinite( [ 1, 4 ], [ 8, 12 ] );
+    print $set1-&#62;complement;
+    # output: (-inf..1),(4..8),(12..inf)</pre>
+
+<p>The complement function might take a parameter:</p>
+
+<pre class="sh_perl">    $set = $set-&#62;minus($b);</pre>
+
+<p>Returns the set-difference, that is, the elements that don&#39;t belong to the given set.</p>
+
+<pre class="sh_perl">    $set1 = new Set::Infinite( [ 1, 4 ], [ 8, 12 ] );
+    $set2 = new Set::Infinite( [ 7, 20 ] );
+    print $set1-&#62;minus( $set2 );
+    # output: [1..4]</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="symmetric_difference"
+>symmetric_difference</a></h2>
+
+<p>Returns a set containing elements that are in either set, but not in both. This is the &#34;set&#34; version of &#34;XOR&#34;.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DENSITY_METHODS"
+>DENSITY METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="real"
+>real</a></h2>
+
+<pre class="sh_perl">    $set1 = $set-&#62;real;</pre>
+
+<p>Returns a set with density &#34;0&#34;.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="integer"
+>integer</a></h2>
+
+<pre class="sh_perl">    $set1 = $set-&#62;integer;</pre>
+
+<p>Returns a set with density &#34;1&#34;.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LOGIC_FUNCTIONS"
+>LOGIC FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="intersects"
+>intersects</a></h2>
+
+<pre class="sh_perl">    $logic = $set-&#62;intersects($b);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="contains"
+>contains</a></h2>
+
+<pre class="sh_perl">    $logic = $set-&#62;contains($b);</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_empty"
+>is_empty</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_null"
+>is_null</a></h2>
+
+<pre class="sh_perl">    $logic = $set-&#62;is_null;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_nonempty"
+>is_nonempty</a></h2>
+
+<p>This set that has at least 1 element.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_span"
+>is_span</a></h2>
+
+<p>This set that has a single span or interval.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_singleton"
+>is_singleton</a></h2>
+
+<p>This set that has a single element.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_subset(_$set_)"
+>is_subset( $set )</a></h2>
+
+<p>Every element of this set is a member of the given set.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_proper_subset(_$set_)"
+>is_proper_subset( $set )</a></h2>
+
+<p>Every element of this set is a member of the given set. Some members of the given set are not elements of this set.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_disjoint(_$set_)"
+>is_disjoint( $set )</a></h2>
+
+<p>The given set has no elements in common with this set.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="is_too_complex"
+>is_too_complex</a></h2>
+
+<p>Sometimes a set might be too complex to enumerate or print.</p>
+
+<p>This happens with sets that represent infinite recurrences, such as when you ask for a quantization on a set bounded by -inf or inf.</p>
+
+<p>See also: <code>count</code> method.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SCALAR_FUNCTIONS"
+>SCALAR FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="min"
+>min</a></h2>
+
+<pre class="sh_perl">    $i = $set-&#62;min;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="max"
+>max</a></h2>
+
+<pre class="sh_perl">    $i = $set-&#62;max;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="size"
+>size</a></h2>
+
+<pre class="sh_perl">    $i = $set-&#62;size;  </pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="count"
+>count</a></h2>
+
+<pre class="sh_perl">    $i = $set-&#62;count;</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="OVERLOADED_OPERATORS"
+>OVERLOADED OPERATORS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="stringification"
+>stringification</a></h2>
+
+<pre class="sh_perl">    print $set;
+
+    $str = &#34;$set&#34;;</pre>
+
+<p>See also: <code>as_string</code>.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="comparison"
+>comparison</a></h2>
+
+<pre class="sh_perl">    sort
+
+    &#62; &#60; == &#62;= &#60;= &#60;=&#62; </pre>
+
+<p>See also: <code>spaceship</code> method.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CLASS_METHODS"
+>CLASS METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    Set::Infinite-&#62;separators(@i)
+
+        chooses the interval separators for stringification. 
+
+        default are [ ] ( ) &#39;..&#39; &#39;,&#39;.
+
+    inf
+
+        returns an &#39;Infinity&#39; number.
+
+    minus_inf
+
+        returns &#39;-Infinity&#39; number.</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="type"
+>type</a></h2>
+
+<pre class="sh_perl">    type( &#34;My::Class::Name&#34; )</pre>
+
+<p>Chooses a default object data type.</p>
+
+<p>Default is none (a normal Perl SCALAR).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SPECIAL_SET_FUNCTIONS"
+>SPECIAL SET FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="span"
+>span</a></h2>
+
+<pre class="sh_perl">    $set1 = $set-&#62;span;</pre>
+
+<p>Returns the set span.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="until"
+>until</a></h2>
+
+<p>Extends a set until another:</p>
+
+<pre class="sh_perl">    0,5,7 -&#62; until 2,6,10</pre>
+
+<p>gives</p>
+
+<pre class="sh_perl">    [0..2), [5..6), [7..10)</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="start_set"
+>start_set</a></h2>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="end_set"
+>end_set</a></h2>
+
+<p>These methods do the inverse of the &#34;until&#34; method.</p>
+
+<p>Given:</p>
+
+<pre class="sh_perl">    [0..2), [5..6), [7..10)</pre>
+
+<p>start_set is:</p>
+
+<pre class="sh_perl">    0,5,7</pre>
+
+<p>end_set is:</p>
+
+<pre class="sh_perl">    2,6,10</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="intersected_spans"
+>intersected_spans</a></h2>
+
+<pre class="sh_perl">    $set = $set1-&#62;intersected_spans( $set2 );</pre>
+
+<p>The method returns a new set, containing all spans that are intersected by the given set.</p>
+
+<p>Unlike the <code>intersection</code> method, the spans are not modified. See diagram below:</p>
+
+<pre class="sh_perl">               set1   [....]   [....]   [....]   [....]
+               set2      [................]
+
+       intersection      [.]   [....]   [.]
+
+  intersected_spans   [....]   [....]   [....]</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="quantize"
+>quantize</a></h2>
+
+<pre class="sh_perl">    quantize( parameters )
+
+        Makes equal-sized subsets.
+
+        Returns an ordered set of equal-sized subsets.
+
+        Example: 
+
+            $set = Set::Infinite-&#62;new([1,3]);
+            print join (&#34; &#34;, $set-&#62;quantize( quant =&#62; 1 ) );
+
+        Gives: 
+
+            [1..2) [2..3) [3..4)</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="select"
+>select</a></h2>
+
+<pre class="sh_perl">    select( parameters )</pre>
+
+<p>Selects set spans based on their ordered positions</p>
+
+<p><code>select</code> has a behaviour similar to an array <code>slice</code>.</p>
+
+<pre class="sh_perl">            by       - default=All
+            count    - default=Infinity
+
+ 0  1  2  3  4  5  6  7  8      # original set
+ 0  1  2                        # count =&#62; 3 
+    1              6            # by =&#62; [ -2, 1 ]</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="offset"
+>offset</a></h2>
+
+<pre class="sh_perl">    offset ( parameters )</pre>
+
+<p>Offsets the subsets. Parameters:</p>
+
+<pre class="sh_perl">    value   - default=[0,0]
+    mode    - default=&#39;offset&#39;. Possible values are: &#39;offset&#39;, &#39;begin&#39;, &#39;end&#39;.
+    unit    - type of value. Can be &#39;days&#39;, &#39;weeks&#39;, &#39;hours&#39;, &#39;minutes&#39;, &#39;seconds&#39;.</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="iterate"
+>iterate</a></h2>
+
+<pre class="sh_perl">    iterate ( sub { } , @args )</pre>
+
+<p>Iterates on the set spans, over a callback subroutine. Returns the union of all partial results.</p>
+
+<p>The callback argument <code>$_[0]</code> is a span. If there are additional arguments they are passed to the callback.</p>
+
+<p>The callback can return a span, a hashref (see <code>Set::Infinite::Basic</code>), a scalar, an object, or <code>undef</code>.</p>
+
+<p>[EXPERIMENTAL] <code>iterate</code> accepts an optional <code>backtrack_callback</code> argument. The purpose of the <code>backtrack_callback</code> is to <i>reverse</i> the iterate() function, overcoming the limitations of the internal backtracking algorithm. The syntax is:</p>
+
+<pre class="sh_perl">    iterate ( sub { } , backtrack_callback =&#62; sub { }, @args )</pre>
+
+<p>The <code>backtrack_callback</code> can return a span, a hashref, a scalar, an object, or <code>undef</code>.</p>
+
+<p>For example, the following snippet adds a constant to each element of an unbounded set:</p>
+
+<pre class="sh_perl">    $set1 = $set-&#62;iterate( 
+                 sub { $_[0]-&#62;min + 54, $_[0]-&#62;max + 54 }, 
+              backtrack_callback =&#62;  
+                 sub { $_[0]-&#62;min - 54, $_[0]-&#62;max - 54 }, 
+              );</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="first_/_last"
+>first / last</a></h2>
+
+<pre class="sh_perl">    first / last</pre>
+
+<p>In scalar context returns the first or last interval of a set.</p>
+
+<p>In list context returns the first or last interval of a set, and the remaining set (the &#39;tail&#39;).</p>
+
+<p>See also: <code>min</code>, <code>max</code>, <code>min_a</code>, <code>max_a</code> methods.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="type"
+>type</a></h2>
+
+<pre class="sh_perl">    type( &#34;My::Class::Name&#34; )</pre>
+
+<p>Chooses a default object data type.</p>
+
+<p>default is none (a normal perl SCALAR).</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INTERNAL_FUNCTIONS"
+>INTERNAL FUNCTIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="_backtrack"
+>_backtrack</a></h2>
+
+<pre class="sh_perl">    $set-&#62;_backtrack( &#39;intersection&#39;, $b );</pre>
+
+<p>Internal function to evaluate recurrences.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="numeric"
+>numeric</a></h2>
+
+<pre class="sh_perl">    $set-&#62;numeric;</pre>
+
+<p>Internal function to ignore the set &#34;type&#34;. It is used in some internal optimizations, when it is possible to use scalar values instead of objects.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="fixtype"
+>fixtype</a></h2>
+
+<pre class="sh_perl">    $set-&#62;fixtype;</pre>
+
+<p>Internal function to fix the result of operations that use the numeric() function.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="tolerance"
+>tolerance</a></h2>
+
+<pre class="sh_perl">    $set = $set-&#62;tolerance(0)    # defaults to real sets (default)
+    $set = $set-&#62;tolerance(1)    # defaults to integer sets</pre>
+
+<p>Internal function for changing the set &#34;density&#34;.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="min_a"
+>min_a</a></h2>
+
+<pre class="sh_perl">    ($min, $min_is_open) = $set-&#62;min_a;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="max_a"
+>max_a</a></h2>
+
+<pre class="sh_perl">    ($max, $max_is_open) = $set-&#62;max_a;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="as_string"
+>as_string</a></h2>
+
+<p>Implements the &#34;stringification&#34; operator.</p>
+
+<p>Stringification of unbounded recurrences is not implemented.</p>
+
+<p>Unbounded recurrences are stringified as &#34;function descriptions&#34;, if the class variable $PRETTY_PRINT is set.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="spaceship"
+>spaceship</a></h2>
+
+<p>Implements the &#34;comparison&#34; operator.</p>
+
+<p>Comparison of unbounded recurrences is not implemented.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEATS"
+>CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<ul>
+<li>constructor &#34;span&#34; notation
+<pre class="sh_perl">    $set = Set::Infinite-&#62;new(10,1);</pre>
+
+<p>Will be interpreted as [1..10]</p>
+</li>
+
+<li>constructor &#34;multiple-span&#34; notation
+<pre class="sh_perl">    $set = Set::Infinite-&#62;new(1,2,3,4);</pre>
+
+<p>Will be interpreted as [1..2],[3..4] instead of [1,2,3,4]. You probably want -&#62;new([1],[2],[3],[4]) instead, or maybe -&#62;new(1,4)</p>
+</li>
+
+<li>&#34;range operator&#34;
+<pre class="sh_perl">    $set = Set::Infinite-&#62;new(1..3);</pre>
+
+<p>Will be interpreted as [1..2],3 instead of [1,2,3]. You probably want -&#62;new(1,3) instead.</p>
+</li>
+</ul>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="INTERNALS"
+>INTERNALS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The base <i>set</i> object, without recurrences, is a <code>Set::Infinite::Basic</code>.</p>
+
+<p>A <i>recurrence-set</i> is represented by a <i>method name</i>, one or two <i>parent objects</i>, and extra arguments. The <code>list</code> key is set to an empty array, and the <code>too_complex</code> key is set to <code>1</code>.</p>
+
+<p>This is a structure that holds the union of two &#34;complex sets&#34;:</p>
+
+<pre class="sh_perl">  {
+    too_complex =&#62; 1,             # &#34;this is a recurrence&#34;
+    list   =&#62; [ ],                # not used
+    method =&#62; &#39;union&#39;,            # function name
+    parent =&#62; [ $set1, $set2 ],   # &#34;leaves&#34; in the syntax-tree
+    param  =&#62; [ ]                 # optional arguments for the function
+  }</pre>
+
+<p>This is a structure that holds the complement of a &#34;complex set&#34;:</p>
+
+<pre class="sh_perl">  {
+    too_complex =&#62; 1,             # &#34;this is a recurrence&#34;
+    list   =&#62; [ ],                # not used
+    method =&#62; &#39;complement&#39;,       # function name
+    parent =&#62; $set,               # &#34;leaf&#34; in the syntax-tree
+    param  =&#62; [ ]                 # optional arguments for the function
+  }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>See modules <a href="/perldoc?DateTime%3A%3ASet" class="podlinkpod"
+>DateTime::Set</a>, <a href="/perldoc?DateTime%3A%3AEvent%3A%3ARecurrence" class="podlinkpod"
+>DateTime::Event::Recurrence</a>, <a href="/perldoc?DateTime%3A%3AEvent%3A%3AICal" class="podlinkpod"
+>DateTime::Event::ICal</a>, <a href="/perldoc?DateTime%3A%3AEvent%3A%3ACron" class="podlinkpod"
+>DateTime::Event::Cron</a> for up-to-date information on date-sets.</p>
+
+<p>The perl-date-time project &#60;<a href="http://datetime.perl.org" class="podlinkurl"
+>http://datetime.perl.org</a>&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Flavio S. Glock &#60;fglock@gmail.com&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c) 2003 Flavio Soibelmann Glock. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>The full text of the license can be found in the LICENSE file included with this module.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78071 Uploads, 24685 Distributions
+105889 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 17:59:51 2012 GMT (0.161164999008179) @cpansearch1 -->
+ </body>
+</html>

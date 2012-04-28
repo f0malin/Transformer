@@ -1,0 +1,705 @@
+Revision history for autodie
+
+2.11
+        * DOCS: Explicitly documented that autodie is context
+          unaware.  (Thanks to chromatic.)
+
+        * TEST: Multi-arg open tests are skipped on VMS.
+          (Thanks to Craig A. Berry.)
+
+        * TEST BUGFIX recv.t shouldn't assume STDIN is a file handle.
+          (Thanks to Todd Rinaldo)
+
+        * TEST: Fixed compatibility with Carp 1.25.
+          (Thanks to Olivier Mengué.)
+
+        * INTERNAL: Exception classes are loaded more safely.
+          (Thanks to Schwern)
+
+2.10  Sat Feb 27 14:01:18 AUSEST 2010
+        * BUGFIX: Fatal and autodie no longer leak Carp functions
+          into the caller's namespace.  Thanks to Schwern.
+
+        * TEST: Multi-arg open tests are really really skipped
+          under Windows now.
+
+        * DOCUMENTATION: Many more people are properly attributed
+          in the 'AUTHORS' file.
+
+2.09  Tue Feb 23 00:33:09 AUSEST 2010
+        * DOCS: Fixed documentation typo.  RT #48575
+          Thanks to David Taylor.
+
+        * TEST: Tests involved multi-arg open are skipped
+          on Windows (where multi-arg pipe is not implemented).
+
+2.08  Mon Feb  8 14:24:26 AUSEST 2010
+        * BUGFIX: Addeds support for chmod.  Many thanks to
+          Jonathan Yu for reporting this (RT #50423).
+
+        * BUGFIX: Multi-arg open is now supported by open.
+          Many thanks to Nick Cleaton for finding and fix this
+          bug.  (RT #52427)
+
+        * BUILD: Updated to Module::Install 0.93
+
+2.07  Fri Jul 31 16:35:40 BST 2009
+
+        * FEATURE: Added ->eval_error to autodie::exception, which
+          stores the contents of $@ at the time autodie throws its
+          own exception.  This is useful when dealing with modules
+          such as Text::Balanced which set (but do not throw)
+          $@ on error.
+
+        * TEST: Checking for flock() support no longer causes
+          test failures on older VMS sysstems. (RT #47812)
+          Thanks to Craig A. Berry for supplying a patch.
+
+        * TEST: hints.t tests should no longer cause bogus
+          failures relating to File::Copy on VMS and Windows
+          systems prior to Perl 5.10.2.
+
+2.06  Tue Jul  7 00:01:37 AUSEST 2009
+
+        * BUG: Explicitly documented that autodie does NOT play
+          nicely with string evals, especially under Perl 5.10.x.
+          Please avoid using string evals while autodie is in scope.
+
+        * TEST: Check for autodie leaking out of scope in the
+          presence of string evals.  (string-eval-leak.t)
+          Thanks to Florian Ragwitz and Vincent Pit for identifying
+          this.
+
+        * BUGFIX: autodie once again correctly works when used
+          inside a string eval.  (This was accidently broken
+          somewhere around 1.997-1.998).
+
+2.05  Sat Jul  4 16:33:01 AUSEST 2009
+
+        * BUGFIX: format_default() in autodie::exception no longer
+          returns a string with file and line attached.  This would
+          cause the file and line information to appear twice when
+          format handlers would choose to fall back to the defaults.
+          The file and line information is now always added by
+          stringify().  (RT #47520, thanks to Michael Schwern)
+
+        * BUGFIX: Exceptions thrown by 2-argument open() are more likely
+          to specify the mode as 'for reading' when no explicit
+          mode was given.  (RT #47520, thanks to Michael Schwern)
+
+2.04  Thu Jul  2 18:56:57 AUSEST 2009
+
+        * TEST: Removed spurious warning about insufficient credit.
+
+        * TEST: hints.t produces less debugging output when testing
+          the Perl core.  (Thanks to Jerry D. Hedden)
+
+        * TEST: hints.t no longer spuriously fails when checking
+          the return values from File::Copy under Windows before
+          Perl 5.10.1.  (Thanks to Curtis Jewell)
+
+2.03  Wed Jul  1 15:39:16 AUSEST 2009
+
+        * BUGFIX: Stopped blog_hints.t from booching under Perl
+          5.8.x. because parent.pm is not installed.
+
+2.02  Wed Jul  1 15:06:21 AUSEST 2009
+
+        * FEATURE: autodie::exception now supports ->context() to
+          discover the context of the failing subroutine, and
+          ->return() to get a list of what it returned.
+
+        * BUGFIX: ->function from autodie::exception now returns
+          the original name of the dying sub, rather than its imported
+          name.  For example, 'File::Copy::copy' rather than 'main::copy'.
+          Core functions continue to always return 'CORE::whatever'.
+
+        * TEST: blog_hints.t tests new hinting features against
+          examples in my blog at http://pjf.id.au/blog/
+
+2.01  Wed Jul  1 01:31:24 AUSEST 2009
+
+        * DOCUMENTATION: General copyediting and tidy-up
+          (Thanks to Toby Corkindale)
+
+        * BUGFIX: Warnings are no longer emitted when undefined values
+          are compared by hinting routines.
+
+        * BUGFIX: Hints for File::Copy now operate correctly under
+          Perl 5.10.1.
+
+        * BUGFIX: Inheritance is now considered sufficient to declare
+          allegiance to the hints provider role under Perl 5.8.x.
+          (Thanks to Glenn Fowler)
+
+        * TEST: hints.t no longer throws failures under Perl 5.10.1.
+
+        * TEST: pod-coverage.t (author test) no longer fails if
+          Sub::Identify is not installed.
+          (Thanks to Jonathan Yu. RT #47437)
+
+2.00  Mon Jun 29 01:24:49 AUSEST 2009
+
+        * FEATURE: autodie can now accept hints regarding how
+          user and module subroutines should be handled.  See
+          autodie::hints for more information.
+
+        * INTERFACE: The calls to the internal subroutines
+          one_invocation() and write_invocation() have changed.
+          An additional argument (the user subroutine reference) is
+          passed as the second-last argument.  This may break code
+          that previously tried to call these subroutines directly.
+
+        * BUGFIX: Calls to subroutines to File::Copy should now
+          correctly throw exceptions when called in a list context.
+
+        * BUGFIX: An internal error where autodie could potentially
+          fail to correctly report a dying function's name has been
+          fixed.
+
+        * BUGFIX: autodie will no longer clobber package scalars when
+          a format has the same name as an autodying function.
+          (Thanks to Ben Morrow)
+
+        * INTERFACE: The internal interfaces for fill_protos(),
+          one_invocation(), write_invocation() are now once again
+          backward compatible with legacy versions of Fatal.  It is
+          still strongly recommended these interfaces are NOT called
+          directly.  The _make_fatal() subroutine is not backwards
+          compatible.
+
+        * TEST: Added internal-backcompat.t to test backwards
+          compatibility of internal interfaces.
+
+        * DOCUMENTATION: Expanded documentation regarding how
+          autodie changes calls to system(), and how this must be
+          explicitly enabled.
+
+        * BUILD: Upgraded to Module::Install 0.91
+
+        * BUGFIX: A situation where certain compile-time diagnostics
+          and errors from autodie would not be displayed has been
+          fixed.
+
+1.999 Sat Feb 28 18:36:55 AUSEDT 2009
+
+        * BUGFIX: Autodie now correctly propagates into string evals
+          under 5.10+.  Autodie completely fails to propagate into
+          string evals under 5.8.  No fix for 5.8 is known.
+
+        * BUGFIX: The caller() method on autodie::exception objects
+          should now always report the correct caller.  While it
+          would always get the line, file, and package correct, previously
+          it would sometimes report less-than-helpful callers like
+          '__ANON__' or '(eval)'.
+
+        * BUGFIX: autodie was treating system() as a user-sub, not
+          a built-in.  This could tigger extra (unnecessary) work
+          inside autodie, but otherwise had no user impact.
+
+        * DOCUMENTATION: The synopsis for autodie::exception::system
+          previously implied system() was made autodying by default.
+          This was not the case.  It must still be enabled with
+          use autodie qw(system).
+
+        * DOCUMENTATION: Noted the 5.8 string eval bug in
+          autodie/BUGS.
+
+        * TEST: Added test for correct caller output on
+          autodie::exception objects.  Thanks to Piers Harding
+          for spotting this bug at KiwiFoo.
+
+        * TEST: Added tests for user-defined autodying functions
+          changing behaviour depending upon context.  This was
+          reported in http://perlmonks.org/?node_id=744246 .
+
+        * TEST: Tests for autodie propagating into string eval.
+
+        * TEST: Expanded tests to ensure autodie::exception returns
+          the correct line number and caller.
+
+        * TEST: Expanded tests to ensure autodie::exception returns
+          correct information when calling subroutines in external files.
+
+1.998 Sat Jan  3 11:19:53 AUSEDT 2009
+
+        * BUILD: Removed Module::AutoInstall, which previously
+          was loaded but not used, but currently doesn't actually
+          do what we want.
+
+        * TEST: We manually stringify $@ for one test in
+          exception_class.t to avoid a bug involving overloaded
+          classes containing apostrophies.
+
+        * TEST: unlink.t and mkdir.t avoid changing directories,
+          which could cause spurious failures when @INC includes
+          paths relative to the current working directory.
+
+        * DOCUMENTATION: Spurious "used only once" messages are
+          documented in Fatal's documentation (as well as autodie's).
+
+        * TEST: truncate.t has been updated to avoid incorrect
+          test failures on VMS machines.  Many thanks to Craig A
+          Berry for the bug report and fix.  (RT #42110)
+
+1.997 Thu Dec  4 15:14:00 AUSEDT 2008
+        * TEST: Test::More 0.86 (and possibly 0.85) appears to
+          dislike package names that contain the apostrophe
+          character (these occur in some tests for Klingon
+          localisation).  We now skip these tests on systems
+          with Test::More >= 0.85 installed.
+
+1.996 Thu Dec  4 09:07:39 AUSEDT 2008
+        * FEATURE: Child classes can now provide an exception_class()
+          method that returns the desired exception class, rather
+          than over-riding the whole throw() method.  Existing classes
+          that over-ride throw() will still work as before.
+
+        * BUGFIX: Fixed a bug where multiple autodie-derived classes
+          would share the same subroutine cache.  This could result
+          in excptions from the wrong class being thrown.
+
+          This bug did not affect programs which used only autodie,
+          or a single autodie-derived class.
+
+        * BUGFIX: Missing 1.995 version tag added to export list.
+
+        * TEST: Make sure that we always have a working version tag for
+          our current version.
+
+1.995 Sun Nov 30 17:30:16 AUSEDT 2008
+
+        * FEATURE: Errors from 2-argument open now have more human
+          friendly error messages for reading, writing, and appending.
+
+        * FEATURE: autodie will never print unsightly references to
+          GLOB(0x...) structures in error messages; instead it uses
+          the placeholder '$fh'.
+
+        * BUILD: Bundled Module::AutoInstall makes it clear to users
+          they need to install IPC::System::Simple for autodying
+          system() support.
+
+        * TEST: truncate.t provides more diagnostics on failure.
+
+        * TEST: Tests for better formatted reports from connect().
+
+        * TEST: New 'open.t' contains specific tests for well-formatted
+          messages from open().
+
+1.994 Thu Sep 25 16:18:56 AUSEST 2008
+
+        * BUGFIX: flock(), ioctl() and truncate() are now part of
+          the :file tag.
+
+        * BUGFIX: link(), mkdir(), rmdir(), symlink() and umask()
+          are now part of the :filesys tag.
+
+        * BUGFIX: The new :msg tag contains msgctl(), msgget(), msgrcv(),
+          and msgsnd().
+
+        * BUGFIX: The new :semaphore tag contains semctl(), semget()
+          and semop().
+
+        * BUGFIX: The new :shm tag contains shmget(), shmread() and
+          shmctl().
+
+        * BUGFIX: The new :ipc tag contains :msg, :semaphore, :shm and pipe().
+
+        * BUGFIX: The read(), seek(), sysread(), syswrite() and sysseek()
+          methods have been added to :io.
+
+        * BUGFIX: autodie produces more detailed messages on internal
+          faults, and is more aggressive about stopping code compilation.
+
+        * FEATURE: flock will not die on failure when called
+          with the LOCK_NB option and would return false
+          due to an EWOULDBLOCK.  See function specific notes
+          in autodie documentation for more details.
+
+        * FEATURE: Stringified exceptions from flock() are significantly
+          nicer to read.
+
+        * FEATURE: use autodie qw(:1.994) can be used to specify the
+          :default tag from a particular version.
+
+        * DOCUMENTATION: flock() is documented as being in the :file tag.
+
+        * DOCUMENTATION: Added function-specific notes in autodie.pm
+
+        * TEST: New tests for rmdir(), mkdir(), and unlink(), thanks
+          to Jacinta Richardson.
+
+        * TEST: Added author-only perlcritic tests.
+
+        * META: META.yml has more correct author information.
+
+1.993 Sun Sep 14 11:15:36 AUSEST 2008
+
+        * DOCUMENTATION: The :dbm tag is now correctly documented
+          in autodie/CATEGORIES.  Thanks to Darren Duncan for spotting
+          this.  (RT #39172)
+
+        * DOCUMENTATION: The README file has been updated to reflect
+          current minimum Perl versions (5.8.0) and current resources.
+
+        * DOCUMENTATION: The closedir() function is properly
+          documented as being included in the :filesys tag.
+
+        * DOCUMENTATION: Feedback section added to the autodie
+          documentation.  If you find the module useful, consider
+          saying so on cpanratings.perl.org, or dropping me a note.
+
+        * BUILD: Upgrade to Module::Intstall 0.77
+
+1.992 Sun Sep  7 15:51:32 AUSEST 2008
+
+        * BUGFIX: unlink(), rename(), chdir() and closedir() functions
+          are now included in the :filesys tag.
+
+        * BUGFIX: binmode() is now checked for failure as part of
+          the :file tag.
+
+        * BUGFIX: Using an unopened filehandle in an autodying
+          built-in no longer triggers a spurious warning.
+
+        * BUGFIX: RT #38845, corrected a missing space in the error
+          produced by autodie when called with the ':void' switch.
+          Many thanks to Matt Kraai for the patch!
+
+        * FEATURE: The dbmopen() and dbmclose() functions are now
+          supported in their own :dbm tag.  This is part of :io
+          (and hence :default).
+
+        * FEATURE: The dbmopen() built-in has its own formatter,
+          which ensures errors always display the mask in octal,
+          not decimal.
+
+        * DOCUMENTATION: The :filesys tag is properly documented.
+
+        * DOCUMENTATION: Added link to Perl tip on autodie.
+
+        * TEST: RT #38845, t/internal.t updated to detect malformed error
+          messages involving the mixing of ':void' and autodie.
+
+1.991 Fri Aug 22 23:57:24 AUSEST 2008
+
+        * BUGFIX: RT #38614, stringified autodie::exceptions objects
+          now always end with a newline.  Thanks to Offer Kaye for the
+          report.
+
+        * BUGFIX: Makefile.PL is no longer executable.
+
+        * BUGFIX: 'chdir' added to defaults, and the :filesys group.
+
+        * BUGFIX: RT #38598, the errno attribute on autodie::exception
+          objects is now correctly set.
+
+        * BUGFIX: RT #38066, exceptions from system() now report
+          the correct line number.
+
+        * TEST: Internal tests changes to ease integration with core.
+
+        * TEST: Checks added for empty 'errno' string in basic_exceptions.t
+
+        * TEST: Errors should end with a newline.
+
+        * TEST: fork tests should no longer mysteriously fail
+          on Solaris.
+
+        * TEST: backcompat.t should no longer give strange failures on
+          old versions of 5.8.3 or earlier.
+
+        * TEST: system.t ensures the correct file is reported.
+
+        * BUILD: Upgrade to Module::Install 0.75
+
+1.99 Mon Jul 21 02:25:23 PDT 2008
+
+        * RELEASE CODENAME: "jarich", in thanks for her giving
+          up pretty much a whole week of her life to do nothing
+          but help me work on my talks for OSCON.
+
+        * BUGFIX: autodie will now check open() for returning
+          undef, not merely false, as open() can legimiately
+          return zero for open(my $fh, '-|') || exec(...) style
+          calls.
+
+        * TEST: Added t/lethal.t, a test for basic subclassing.
+
+        * TEST: Added t/usersub.t, a test for correct handling
+          of user subroutines.
+
+        * DOCUMENTATION: Noted in autodie.pm that user subs can
+          only be made Fatal/autodying if they've been declared
+          first.
+
+        * FEATURE: Conflicts between 'no autodie' and 'use Fatal'
+          re-enabled.
+
+        * FEATURE: Added sysopen() and fcntl() to :file, and
+          exec() and system to :system.  exec() doesn't yet work
+          due to its prototype;
+
+        * FEATURE: Vanilla 'use autodie' now implies
+          'use autodie qw(:default)'.  This excludes system(),
+          which depends upon an optional module, and exec(),
+          which breaks its exotic form.
+
+        * TEST: Internal tests moved from Fatal.t to
+          internal.t
+
+        * FEATURE: Added support for fileno.
+
+        * FEATURE: Addded support for exec (although this
+          breaks the exotic form while autodie is in scope).
+
+        * BUGFIX: 'no autodie' now plays nicely with user subs.
+
+        * DOCUMENTATION: Added a brief mention of the category
+          system that autodie provides.
+
+1.11_01 Fri Jul  4 12:53:11 AEST 2008
+
+        * RELEASE CODENAME: "Aristotle", in thanks for the many
+          long and detailed discussions about the autodie interface
+          and how it should interact with Fatal.  Aristotle was
+          instrumental in ensuring autodie has the clean and
+          simple interface that it does now.
+
+        * FEATURE: 5.8 now has the ability to differentiate between calls
+          that return false to indicate failure, and those that
+          only return undef to indicate failure.  CORE::send and
+          CORE::recv are examples of these.
+
+        * FEATURE: You can now 'use autodie qw(fork)' to make sure your
+          forks are successful (they must return defined).
+
+        * TEST: t/todo.t removed.  We have passing tests (recv.t)
+          for the reminder I had stuffed into here.
+
+        * TEST: t/fork.t added, for testing autodying fork.
+
+        * INTERNAL: The internal subroutine _remove_lexical_subs has been
+          renamed to a much less misleading name of _install_subs,
+          since that's what it actually does now.
+
+        * BUGFIX: Found and fixed a nasty bug where autodie's internal
+          subroutine cache was being too agressive.  This could result in
+          handles from the incorrect package being used.  Scalar filehandles
+          have never been affected by this bug.
+
+        * BUGFIX: Autodying subroutines will no longer leak into other
+          files if they are used/required/done in the same lexical scope.
+
+        * BUILD: Fatal and autodie now install themselves with a
+          INSTALLDIRS=perl target, meaning they will now correctly
+          override (and possibly overwrite) your installed Fatal.pm
+          on 'make install'.
+
+        * DOCUMENTATION: Documented the 'used only once' bug when
+          using Fatal/autodie with package filehandles.  This has
+          always existed in Fatal, and as far as I know it incurable
+          (but harmless).
+
+        * FEATURE: autodie and its exceptions can now be subclassed!
+
+        * TEST: Added t/crickey.t as an example of using fair dinkum
+          subclasses of autodie.  Mate, I reckon it's time for a beer.
+
+        * INTERNAL: Moved exception architecture from inside-out
+          objects (which need lots of extra work under 5.8) to
+          regular hashes (which don't need extra work).
+
+        * INTERNAL: Inlined relevant portions of Scope::Guard, meaning
+          autodie can be installed with no dependencies.  (It still
+          recommends IPC::System::Simple.)
+
+1.10_07 Sun Jun 29 15:54:26 AEST 2008
+        * RELEASE CODENAME: "ikegami", in thanks for solving the problem
+          of getting lexical replacement of subroutines working for real
+          under Perl 5.8.  As this works better than my 5.10 implemenation,
+          it forms the foundation for this release.
+
+        * Removed inappropriate diagnostics about :lexical from Fatal.pm
+
+        * Moved can't mix lexical and void diagnostics to autodie.pm
+
+        * Added some basic tests for sysopen()
+
+        * Removed the 5.10 only way of tracking lexical hints with
+          %^H.  Our code now exclusively uses the more portable
+          5.8 code that employs Scope::Guard (and has less side-effects).
+
+        * Exotic system is no longer clobbered under 5.10 outside of
+          autodie's scope.
+
+        * autodie::exception::match is better exercised in the 5.8
+          test suite.
+
+        * Re-enabled 'use autodie' vanilla tests.
+
+        * t/backcompat.t no longer fails under Devel::Cover
+
+        * Repeating function names in arguments to autodie no
+          longer causes those functions to become 'stuck' in
+          autodying mode.
+
+        * Wrong-version of Fatal.pm support added, along with basic
+          hints on how to get it working.
+
+        * Expanded documentation on autodie, particularly for
+          exception handling under Perl 5.8.
+
+        * Less warnings from t/exceptions.t when running under 5.10.
+
+        * All releases now really depend upon Scope::Guard, not just 5.8.
+
+1.10_06 Sun Jun 22 21:50:39 AEST 2008
+
+        * RELEASE CODENAME: "Chocolateboy", in thanks for his wonderful
+          insights, and for letting me sound off way too many ideas
+          about how things may be done.
+
+        * Fixed speeling errors in context.t, thanks to Stennie.
+
+        * Fixed minor pod errors and omissions.
+
+        * Fixed bug in recv.t which resulted in an incorrect number
+          of skipped tests on systems using socketpair emulation.
+
+        * Fixed a bug that would cause unwanted interactions between
+          autodie and autobox.  Thanks to chocolateboy. (5.8)
+
+        * Wrote a (failing) test case demonstrating that the
+          autodie pragma could leak across files.  Many thanks to
+          chocolateboy for bringing this to my attention.
+
+        * t/system.t checks to see if exotic system has been injured
+          in the same package as 'use qutodie qw(system)'
+
+        * Calling filename reliably reported in 5.8 error messages
+          and error objects.
+
+        * User subs can be made autodying under 5.8, but they leak
+          over the entire package (which is very bad!)
+
+        * Context-checking tests split into package-scope tests and
+          lexical scope tests.
+
+        * Lexical user-subs are disabled under Perl 5.8.  They were
+          leaking everywhere and not being lexical at all.  Attempting
+          to use a lexical user-sub under 5.8 now causes an error.
+
+        * Bugs found in interaction between autodie and Fatal in
+          5.8.  When used together, we can't reliably replace a
+          Fatalised sub with an autodying one, and then switch it
+          back again at the end of block.
+
+        * Bugs described above fixed, thanks to ikegami!
+
+        * Overhauled _remove_lexical_subs, based on ikegami's
+          input.  This routine would now be better named
+          "_install_lexical_subs", since it can now both
+          install and remove.
+
+        * Surpressed some warnings under 5.8 about uninitialised
+          hints hashes.
+
+        * Added support for backwards compatible Fatal calls in
+          5.8.  These are currently a little *too* backwards compatible,
+          possessing the same bugs as the old Fatal (clobbering
+          context).
+
+        * Improved caching of pre-generated subroutines.  We now
+          cache the compiled subroutine, rather than the uncompiled
+          code.
+
+        * Added more tests to ensure Fatal throws backcompat
+          strings, whereas autodie throws exception objects.
+
+        * Support for lexical user-subs enabled, tested, and working
+          in 5.8!
+
+        * Added resources to Makefile.PL / META.yml
+
+
+1.10_05 Sun Jun 15 15:46:38 AEST 2008
+        * Kludgy support for Perl 5.8 using Scope::Guard and dark
+          and terrible magicks taken from namespace::clean.
+
+        * Rudimentary caching of generated code, to avoid having
+          to regenerate the same code every single time Fatal/autodie
+          is used on the same function.
+
+        * Nuking subroutines at end of lexical scope moved into
+          own subroutine.
+
+        * Perl 5.8 support working!  Backcompat mode not yet
+          supported, nor is autodie with user defined subs.
+          The 5.8 support that is there is rather kludgy, and
+          still needs a lot of work.
+
+        * Perl 5.8 code no longer gets executed under 5.10 when
+          executing write_invocation().
+
+        * lex58.t tells the user that we'll get warnings under
+          Win32, and these are to be ignored.  This is due to
+          a Perl behaviour where it always calls the shell under
+          Win32, even when multi-arg system is used.
+
+        * lex58.t no longer fails to compile on Perl 5.10 which
+          is still clobbering exotic open.  Perl 5.8 does not
+          clobber the exotic form.
+
+        * Backcompat tests are all marked as TODO under perl 5.8
+
+        * Makefile.PL moved back to saying autodie works under 5.8
+
+        * Context/user-sub tests skipped under 5.8, which does
+          not yet support autodying of user subs.
+
+        * lex58 tests now skipped if IPC::System::Simple not installed.
+
+        * Squished a spurious warning from lex58.t
+
+1.10_04 Sat Jun 14 15:02:17 AEST 2008
+        * Made all $VERSION numbers more friendly to static code
+          analysis tools (including CPAN).
+        * Added a test to make sure all version numbers are incremented
+          in lock-step.
+
+        * Started 5.8 support
+                * Removed dependencies on 5.10 'use feature'.
+                * Removed dependencies on 5.10 fieldhashes.
+                * a::e::match no longer uses smart-match or //
+                * %^H init doesn't use // anymore.
+                * 5.8 won't try to use // in fatalised subs (kludge)
+
+        * recv.t corrected to use a custom socket (closed for writing)
+          and to ignore SIGPIPEs.
+
+1.10_03 Fri Jun 13 11:04:17 AEST 2008
+        * Updated backwards compatibility tests to work on
+          non-Enligh systems.
+
+1.10_02 Fri Jun 13 10:55:00 AEST 2008
+        * Tweaked boilerplate test to remove windows-only paths.
+
+1.10_01 Thu Jun 12 17:19:13 AEST 2008
+        * First beta release of module.
+
+1.09    UNRELEASED
+        * Many changes not documented here.
+        * Fatal is now fully backwaards compatible again.
+        * system() can be fatalised/autodying if IPC::System::Simple
+          is installed.
+        * Rationlisation of autodie::exception API.
+        * autodie::exception->function() now always returns the
+          full function name as best we can find it, and not
+          what may be getting replaced (eg, CORE::open instead of
+          main::open).
+
+1.08    Sat Mar 29 10:54:20 AEDT 2008
+        Dual-lifed module internally from work I was doing on p5p.
+

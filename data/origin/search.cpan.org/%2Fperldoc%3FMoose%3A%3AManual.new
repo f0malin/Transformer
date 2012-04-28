@@ -1,0 +1,517 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Moose::Manual - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Moose",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Moose-2.0403",3]);
+    _gaq.push(["_setCustomVar",4,"Document","Moose::Manual",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DOY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Moose::Manual">permalink</a></div>
+  <a href="/~doy/">Jesse Luehrs</a> &gt;
+  <a href="/~doy/Moose-2.0403/">Moose-2.0403</a> &gt;
+  Moose::Manual
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/88766de7a058697d3d0335b8d384fd2a?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DO/DOY/Moose-2.0403.tar.gz">Moose-2.0403.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DOY/Moose-2.0403/lib/Moose/Manual.pod">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 13</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 27</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 4</td></tr>
+</table>
+<a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Moose">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/DOY/Moose-2.0403/lib/Moose/Manual.pod">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~doy/Moose/lib/Moose/Manual.pod">Moose-2.0501-TRIAL</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#WHAT_IS_MOOSE?'>WHAT IS MOOSE?</a>
+  <li class='indexItem indexItem1'><a href='#WHY_MOOSE?'>WHY MOOSE?</a>
+  <li class='indexItem indexItem1'><a href='#AN_EXAMPLE'>AN EXAMPLE</a>
+  <li class='indexItem indexItem1'><a href='#TABLE_OF_CONTENTS'>TABLE OF CONTENTS</a>
+  <li class='indexItem indexItem1'><a href='#JUSTIFICATION'>JUSTIFICATION</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose::Manual - What is Moose,
+and how do I use it?</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 2.0403</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="WHAT_IS_MOOSE?"
+>WHAT IS MOOSE? <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose is a <i>complete</i> object system for Perl 5.
+Consider any modern object-oriented language (which Perl 5 definitely isn&#39;t).
+It provides keywords for attribute declaration,
+object construction,
+inheritance,
+and maybe more.
+These keywords are part of the language,
+and you don&#39;t care how they are implemented.</p>
+
+<p>Moose aims to do the same thing for Perl 5 OO.
+We can&#39;t actually create new keywords,
+but we do offer &#34;sugar&#34; that looks a lot like them.
+More importantly,
+with Moose,
+you <i>define your class declaratively</i>,
+without needing to know about blessed hashrefs,
+accessor methods,
+and so on.</p>
+
+<p>With Moose,
+you can concentrate on the <i>logical</i> structure of your classes,
+focusing on &#34;what&#34; rather than &#34;how&#34;.
+A class definition with Moose reads like a list of very concise English sentences.</p>
+
+<p>Moose is built on top of <code>Class::MOP</code>,
+a meta-object protocol (aka MOP).
+Using the MOP,
+Moose provides complete introspection for all Moose-using classes.
+This means you can ask classes about their attributes,
+parents,
+children,
+methods,
+etc.,
+all using a well-defined API.
+The MOP abstracts away the symbol table,
+looking at <code>@ISA</code> vars,
+and all the other crufty Perl tricks we know and love(?).</p>
+
+<p>Moose is based in large part on the Perl 6 object system,
+as well as drawing on the best ideas from CLOS,
+Smalltalk,
+and many other languages.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="WHY_MOOSE?"
+>WHY MOOSE? <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose makes Perl 5 OO both simpler and more powerful.
+It encapsulates Perl 5 power tools in high-level declarative APIs which are easy to use.
+Best of all,
+you don&#39;t need to be a wizard to use it.</p>
+
+<p>But if you want to dig about in the guts,
+Moose lets you do that too,
+by using and extending its powerful introspection API.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AN_EXAMPLE"
+>AN EXAMPLE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  package Person;
+
+  use Moose;
+
+  has &#39;first_name&#39; =&#62; (
+      is  =&#62; &#39;rw&#39;,
+      isa =&#62; &#39;Str&#39;,
+  );
+
+  has &#39;last_name&#39; =&#62; (
+      is  =&#62; &#39;rw&#39;,
+      isa =&#62; &#39;Str&#39;,
+  );
+
+  no Moose;
+  __PACKAGE__-&#62;meta-&#62;make_immutable;</pre>
+
+<p>This is a <i>complete and usable</i> class definition!</p>
+
+<pre class="sh_perl">  package User;
+
+  use DateTime;
+  use Moose;
+
+  extends &#39;Person&#39;;
+
+  has &#39;password&#39; =&#62; (
+      is  =&#62; &#39;rw&#39;,
+      isa =&#62; &#39;Str&#39;,
+  );
+
+  has &#39;last_login&#39; =&#62; (
+      is      =&#62; &#39;rw&#39;,
+      isa     =&#62; &#39;DateTime&#39;,
+      handles =&#62; { &#39;date_of_last_login&#39; =&#62; &#39;date&#39; },
+  );
+
+  sub login {
+      my $self = shift;
+      my $pw   = shift;
+
+      return 0 if $pw ne $self-&#62;password;
+
+      $self-&#62;last_login( DateTime-&#62;now() );
+
+      return 1;
+  }
+
+  no Moose;
+  __PACKAGE__-&#62;meta-&#62;make_immutable;</pre>
+
+<p>We&#39;ll leave the line-by-line explanation of this code to other documentation, but you can see how Moose reduces common OO idioms to simple declarative constructs.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="TABLE_OF_CONTENTS"
+>TABLE OF CONTENTS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This manual consists of a number of documents.</p>
+
+<dl>
+<dt><a name='Moose'></a><a name="Moose::Manual::Concepts"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/Concepts.pod" class="podlinkpod"
+>Moose::Manual::Concepts</a></a></dt>
+
+<dd>
+<p>Introduces Moose concepts, and contrasts them against &#34;old school&#34; Perl 5 OO.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::Unsweetened"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/Unsweetened.pod" class="podlinkpod"
+>Moose::Manual::Unsweetened</a></a></dt>
+
+<dd>
+<p>Shows two example classes, each written first with Moose and then with &#34;plain old Perl 5&#34;.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::Classes"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/Classes.pod" class="podlinkpod"
+>Moose::Manual::Classes</a></a></dt>
+
+<dd>
+<p>How do you make use of Moose in your classes? Now that I&#39;m a Moose, how do I subclass something?</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::Attributes"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/Attributes.pod" class="podlinkpod"
+>Moose::Manual::Attributes</a></a></dt>
+
+<dd>
+<p>Attributes are a core part of the Moose OO system. An attribute is a piece of data that an object has. Moose has a lot of attribute-related features!</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::Delegation"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/Delegation.pod" class="podlinkpod"
+>Moose::Manual::Delegation</a></a></dt>
+
+<dd>
+<p>Delegation is a powerful way to make use of attributes which are themselves objects.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::Construction"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/Construction.pod" class="podlinkpod"
+>Moose::Manual::Construction</a></a></dt>
+
+<dd>
+<p>Learn how objects are built in Moose, and in particular about the <code>BUILD</code> and <code>BUILDARGS</code> methods. Also covers object destruction with <code>DEMOLISH</code>.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::MethodModifiers"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/MethodModifiers.pod" class="podlinkpod"
+>Moose::Manual::MethodModifiers</a></a></dt>
+
+<dd>
+<p>A method modifier lets you say &#34;before calling method X, do this first&#34;, or &#34;wrap method X in this code&#34;. Method modifiers are particularly handy in roles and with attribute accessors.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::Roles"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/Roles.pod" class="podlinkpod"
+>Moose::Manual::Roles</a></a></dt>
+
+<dd>
+<p>A role is something a class does (like &#34;Debuggable&#34; or &#34;Printable&#34;). Roles provide a way of adding behavior to classes that is orthogonal to inheritance.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::Types"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/Types.pod" class="podlinkpod"
+>Moose::Manual::Types</a></a></dt>
+
+<dd>
+<p>Moose&#39;s type system lets you strictly define what values an attribute can contain.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::MOP"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/MOP.pod" class="podlinkpod"
+>Moose::Manual::MOP</a></a></dt>
+
+<dd>
+<p>Moose&#39;s meta API system lets you ask classes about their parents, children, methods, attributes, etc.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::MooseX"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/MooseX.pod" class="podlinkpod"
+>Moose::Manual::MooseX</a></a></dt>
+
+<dd>
+<p>This document describes a few of the most useful Moose extensions on CPAN.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::BestPractices"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/BestPractices.pod" class="podlinkpod"
+>Moose::Manual::BestPractices</a></a></dt>
+
+<dd>
+<p>Moose has a lot of features, and there&#39;s definitely more than one way to do it. However, we think that picking a subset of these features and using them consistently makes everyone&#39;s life easier.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::FAQ"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/FAQ.pod" class="podlinkpod"
+>Moose::Manual::FAQ</a></a></dt>
+
+<dd>
+<p>Frequently asked questions about Moose.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::Contributing"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/Contributing.pod" class="podlinkpod"
+>Moose::Manual::Contributing</a></a></dt>
+
+<dd>
+<p>Interested in hacking on Moose? Read this.</p>
+
+<dt><a name='Moose'></a><a name="Moose::Manual::Delta"
+><a href="/~doy/Moose-2.0403/lib/Moose/Manual/Delta.pod" class="podlinkpod"
+>Moose::Manual::Delta</a></a></dt>
+
+<dd>
+<p>This document details backwards-incompatibilities and other major changes to Moose.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="JUSTIFICATION"
+>JUSTIFICATION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>If you&#39;re still asking yourself &#34;Why do I need this?&#34;, then this section is for you.</p>
+
+<dl>
+<dt><a name='Another'></a><a name="Another_object_system!?!?"
+>Another object system!?!?</a></dt>
+
+<dd>
+<p>Yes, we know there are many, many ways to build objects in Perl 5, many of them based on inside-out objects and other such things. Moose is different because it is not a new object system for Perl 5, but instead an extension of the existing object system.</p>
+
+<p>Moose is built on top of <a href="/~doy/Moose-2.0403/lib/Class/MOP.pm" class="podlinkpod"
+>Class::MOP</a>, which is a metaclass system for Perl 5. This means that Moose not only makes building normal Perl 5 objects better, but it also provides the power of metaclass programming.</p>
+
+<dt><a name='Is'></a><a name="Is_this_for_real?_Or_is_this_just_an_experiment?"
+>Is this for real? Or is this just an experiment?</a></dt>
+
+<dd>
+<p>Moose is <i>based</i> on the prototypes and experiments Stevan did for the Perl 6 meta-model. However, Moose is <b>NOT</b> an experiment or prototype; it is for <b>real</b>.</p>
+
+<dt><a name='Is'></a><a name="Is_this_ready_for_use_in_production?"
+>Is this ready for use in production?</a></dt>
+
+<dd>
+<p>Yes.</p>
+
+<p>Moose has been used successfully in production environments by many people and companies. There are Moose applications which have been in production with little or no issue now for years. We consider it highly stable and we are committed to keeping it stable.</p>
+
+<p>Of course, in the end, you need to make this call yourself. If you have any questions or concerns, please feel free to email Stevan or the moose@perl.org list, or just stop by irc.perl.org#moose and ask away.</p>
+
+<dt><a name='Is'></a><a name="Is_Moose_just_Perl_6_in_Perl_5?"
+>Is Moose just Perl 6 in Perl 5?</a></dt>
+
+<dd>
+<p>No. While Moose is very much inspired by Perl 6, it is not itself Perl 6. Instead, it is an OO system for Perl 5. Stevan built Moose because he was tired of writing the same old boring Perl 5 OO code, and drooling over Perl 6 OO. So instead of switching to Ruby, he wrote Moose :)</p>
+
+<dt><a name='Wait'></a><a name="Wait,_post_modern,_I_thought_it_was_just_modern?"
+>Wait, <i>post</i> modern, I thought it was just <i>modern</i>?</a></dt>
+
+<dd>
+<p>Stevan read Larry Wall&#39;s talk from the 1999 Linux World entitled &#34;Perl, the first postmodern computer language&#34; in which he talks about how he picked the features for Perl because he thought they were cool and he threw out the ones that he thought sucked. This got him thinking about how we have done the same thing in Moose. For Moose, we have &#34;borrowed&#34; features from Perl 6, CLOS (LISP), Smalltalk, Java, BETA, OCaml, Ruby and more, and the bits we didn&#39;t like (cause they sucked) we tossed aside. So for this reason (and a few others) Stevan has re-dubbed Moose a <i>postmodern</i> object system.</p>
+
+<p>Nuff Said.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose is maintained by the Moose Cabal, along with the help of many contributors. See <a href="/~doy/Moose-2.0403/lib/Moose.pm#CABAL" class="podlinkpod"
+>&#34;CABAL&#34; in Moose</a> and <a href="/~doy/Moose-2.0403/lib/Moose.pm#CONTRIBUTORS" class="podlinkpod"
+>&#34;CONTRIBUTORS&#34; in Moose</a> for details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This software is copyright (c) 2012 by Infinity Interactive, Inc..</p>
+
+<p>This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78152 Uploads, 24702 Distributions
+105959 Modules, 9642 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Tue Apr 24 15:12:37 2012 GMT (0.0733609199523926) @cpansearch1 -->
+ </body>
+</html>

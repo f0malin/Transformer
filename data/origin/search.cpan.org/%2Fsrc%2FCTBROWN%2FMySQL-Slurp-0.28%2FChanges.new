@@ -1,0 +1,73 @@
+Revision history for Perl extension MySQL::Slurp.
+0.28 Thur May 06 2010
+    - Syncronized version numbers
+    - fixed install problems
+    
+
+0.27_02 Sat Jan 03 2009
+    - Changed default permissions on the fifo directory to world all.   
+    - Replace File::Path with File::Temp for portable creation of 
+      Temporary Files.
+      - Remove command-line options tmp.  Also removed from 
+        script/mysqlslurp
+      - Removed use of _rmfifo, this is automatically cleaned up by 
+        File::Temp.
+
+0.27_01 Thu Dec 18
+    - Eliminated dependency on self  module which was failing unreliably
+      on Solaris 2.10
+    - Modified MySQL::Slurp::Writer to not extend IO::File and have the 
+      functionality in attribute iofile
+    - Minor documentaion tweaks.
+
+0.27  Sun Dec 07 
+    - Reworked documentation
+    - Made default method: dbi
+
+0.26  Thu Aug 14 02:47:00 2008
+    - Made mysqlslurp default method mysqlimport
+    - Fixed MANIFEST to include inc/*
+
+0.251 Wed Aug 13 14:44:00 2008
+    - Fixed typo in script/mysqlslurp pod ( Thanks Robert Grossman )
+    - Bumper version to 0.85
+
+0.25 Wed Aug 13 14:21:00 2008
+    - Fixed mispelling in MANIFEST ( Thanks Matt Boase )
+    - Fixed t/MySQL-Slurp.t to count correct number of tests
+
+0.24 Tue Aug 12 19:55:00 2008
+    - Changed methods to dbi|mysqlimport|mysql
+    - Fixed problems with prerequisites.
+
+0.23 Mon Aug 11 23:18:00 2008
+    - Created MySQL::Slurp::Writer class
+      - Made completely thread-safe through locking
+      - Made faster by buffering
+    - Added Method and Option 'LOAD'
+    - Documentation clean-up
+    - Changed 'force', 'verbose', 'fifo', 'dir' into lazy attributes
+    - Created buffer attribute
+    - Fixed some tests
+    - Removed dependency on IO::File:;flock
+
+0.21 Wed Aug 06 12:09:00 2008
+    - Minor changes to tests abd distribution
+
+0.20 Wed Aug 06 08:00:00 2008
+    - Major revision.  Writing to FIFO using buffering and locking
+    - New dependendy: IO::File::flock
+    
+0.16 Tue Jul 15 23:18:00 2008
+    - Fix non-required depenencies
+
+0.15 Sun Jul 13 00:00:00 2008
+    - First CPAN Release
+
+0.01  Mon May 12 00:20:59 2008
+	- original version; created by h2xs 1.23 with options
+		-XAn MySQL::Slurp
+
+
+
+    

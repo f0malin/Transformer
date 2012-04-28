@@ -1,0 +1,409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>enum - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","enum",3]);
+    _gaq.push(["_setCustomVar",5,"Release","enum-1.016",3]);
+    _gaq.push(["_setCustomVar",3,"Module","enum",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ZENIN",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?enum">permalink</a></div>
+  <a href="/~zenin/">Byron Brummer</a> &gt;
+  <a href="/~zenin/enum-1.016/">enum-1.016</a> &gt;
+  enum
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/7b66acc4d9e5c09bca6a77ec1081ba03?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/Z/ZE/ZENIN/enum-1.016.tar.gz">enum-1.016.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=enum;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ZENIN/enum-1.016/enum.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 2</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 0</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=enum">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.016 &nbsp;
+<span class="noprint">
+  <a href="/src/ZENIN/enum-1.016/enum.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#BITMASKS,_bitwise_operations,_and_bitmask_option_values'>BITMASKS, bitwise operations, and bitmask option values</a>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#HISTORY'>HISTORY</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>enum - C style enumerated types and bitmask flags in Perl</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use enum qw(Sun Mon Tue Wed Thu Fri Sat);
+  # Sun == 0, Mon == 1, etc
+
+  use enum qw(Forty=40 FortyOne Five=5 Six Seven);
+  # Yes, you can change the start indexs at any time as in C
+
+  use enum qw(:Prefix_ One Two Three);
+  ## Creates Prefix_One, Prefix_Two, Prefix_Three
+
+  use enum qw(:Letters_ A..Z);
+  ## Creates Letters_A, Letters_B, Letters_C, ...
+
+  use enum qw(
+      :Months_=0 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
+      :Days_=0   Sun Mon Tue Wed Thu Fri Sat
+      :Letters_=20 A..Z
+  );
+  ## Prefixes can be changed mid list and can have index changes too
+
+  use enum qw(BITMASK:LOCK_ SH EX NB UN);
+  ## Creates bitmask constants for LOCK_SH == 1, LOCK_EX == 2,
+  ## LOCK_NB == 4, and LOCK_UN == 8.
+  ## NOTE: This example is only valid on FreeBSD-2.2.5 however, so don&#39;t
+  ## actually do this.  Import from Fnctl instead.</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Defines a set of symbolic constants with ordered numeric values ala <b>C</b> <b>enum</b> types.</p>
+
+<p>Now capable of creating creating ordered bitmask constants as well. See the <b>BITMASKS</b> section for details.</p>
+
+<p>What are they good for? Typical uses would be for giving mnemonic names to indexes of arrays. Such arrays might be a list of months, days, or a return value index from a function such as localtime():</p>
+
+<pre class="sh_perl">  use enum qw(
+      :Months_=0 Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
+      :Days_=0   Sun Mon Tue Wed Thu Fri Sat
+      :LC_=0     Sec Min Hour MDay Mon Year WDay YDay Isdst
+  );
+
+  if ((localtime)[LC_Mon] == Months_Jan) {
+      print &#34;It&#39;s January!\n&#34;;
+  }
+  if ((localtime)[LC_WDay] == Days_Fri) {
+      print &#34;It&#39;s Friday!\n&#34;;
+  }</pre>
+
+<p>This not only reads easier, but can also be typo-checked at compile time when run under <b>use strict</b>. That is, if you misspell <b>Days_Fri</b> as <b>Days_Fry</b>, you&#39;ll generate a compile error.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BITMASKS,_bitwise_operations,_and_bitmask_option_values"
+>BITMASKS, bitwise operations, and bitmask option values <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The <b>BITMASK</b> option allows the easy creation of bitmask constants such as functions like flock() and sysopen() use. These are also very useful for your own code as they allow you to efficiently store many true/false options within a single integer.</p>
+
+<pre class="sh_perl">    use enum qw(BITMASK: MY_ FOO BAR CAT DOG);
+
+    my $foo = 0;
+    $foo |= MY_FOO;
+    $foo |= MY_DOG;
+    
+    if ($foo &#38; MY_DOG) {
+        print &#34;foo has the MY_DOG option set\n&#34;;
+    }
+    if ($foo &#38; (MY_BAR | MY_DOG)) {
+        print &#34;foo has either the MY_BAR or MY_DOG option set\n&#34;
+    }
+
+    $foo ^= MY_DOG;  ## Turn MY_DOG option off (set its bit to false)</pre>
+
+<p>When using bitmasks, remember that you must use the bitwise operators, <b>|</b>, <b>&#38;</b>, <b>^</b>, and <b>~</b>. If you try to do an operation like <code>$foo += MY_DOG;</code> and the <b>MY_DOG</b> bit has already been set, you&#39;ll end up setting other bits you probably didn&#39;t want to set. You&#39;ll find the documentation for these operators in the <b>perlop</b> manpage.</p>
+
+<p>You can set a starting index for bitmasks just as you can for normal <b>enum</b> values, but if the given index isn&#39;t a power of 2 it won&#39;t resolve to a single bit and therefor will generate a compile error. Because of this, whenever you set the <b>BITFIELD:</b> directive, the index is automatically set to 1. If you wish to go back to normal <b>enum</b> mode, use the <b>ENUM:</b> directive. Similarly to the <b>BITFIELD</b> directive, the <b>ENUM:</b> directive resets the index to 0. Here&#39;s an example:</p>
+
+<pre class="sh_perl">  use enum qw(
+      BITMASK:BITS_ FOO BAR CAT DOG
+      ENUM: FALSE TRUE
+      ENUM: NO YES
+      BITMASK: ONE TWO FOUR EIGHT SIX_TEEN
+  );</pre>
+
+<p>In this case, <b>BITS_FOO, BITS_BAR, BITS_CAT, and BITS_DOG</b> equal 1, 2, 4 and 8 respectively. <b>FALSE and TRUE</b> equal 0 and 1. <b>NO and YES</b> also equal 0 and 1. And <b>ONE, TWO, FOUR, EIGHT, and SIX_TEEN</b> equal, you guessed it, 1, 2, 4, 8, and 16.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Enum names can not be the same as method, function, or constant names. This is probably a Good Thing[tm].</p>
+
+<p>No way (that I know of) to cause compile time errors when one of these enum names get redefined. IMHO, there is absolutely no time when redefining a sub is a Good Thing[tm], and should be taken out of the language, or at least have a pragma that can cause it to be a compile time error.</p>
+
+<p>Enumerated types are package scoped just like constants, not block scoped as some other pragma modules are.</p>
+
+<p>It supports A..Z nonsense. Can anyone give me a Real World[tm] reason why anyone would ever use this feature...?</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="HISTORY"
+>HISTORY <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  $Log: enum.pm,v $
+  Revision 1.16  1999/05/27 16:00:35  byron
+
+
+  Fixed bug that caused bitwise operators to treat enum types as strings
+  instead of numbers.
+
+  Revision 1.15  1999/05/27 15:51:27  byron
+
+
+  Add support for negative values.
+
+  Added stricter hex value checks.
+
+  Revision 1.14  1999/05/13 15:58:18  byron
+
+
+  Fixed bug in hex index code that broke on 0xA.
+
+  Revision 1.13  1999/05/13 10:52:30  byron
+
+
+  Fixed auto-index bugs in new non-decimal numeric support.
+
+  Revision 1.12  1999/05/13 10:00:45  byron
+
+
+  Added support for non-decimal numeric representations ala 0x123, 0644, and
+  123_456.
+
+  First version committed to CVS.
+
+
+  Revision 1.11  1998/07/18 17:53:05  byron
+    -Added BITMASK and ENUM directives.
+    -Revamped documentation.
+
+  Revision 1.10  1998/06/12 20:12:50  byron
+    -Removed test code
+    -Released to CPAN
+
+  Revision 1.9  1998/06/12 00:21:00  byron
+    -Fixed -w warning when a null tag is used
+
+  Revision 1.8  1998/06/11 23:04:53  byron
+    -Fixed documentation bugs
+    -Moved A..Z case to last as it&#39;s not going to be used
+     as much as the other cases.
+
+  Revision 1.7  1998/06/10 12:25:04  byron
+    -Changed interface to match original design by Tom Phoenix
+     as implemented in an early version of enum.pm by Benjamin Holzman.
+    -Changed tag syntax to not require the &#39;PREFIX&#39; string of Tom&#39;s
+     interface.
+    -Allow multiple prefix tags to be used at any point.
+    -Allowed index value changes from tags.
+
+  Revision 1.6  1998/06/10 03:37:57  byron
+    -Fixed superfulous -w warning
+
+  Revision 1.4  1998/06/10 01:07:03  byron
+    -Changed behaver to closer resemble C enum types
+    -Changed docs to match new behaver</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Zenin &#60;zenin@archive.rhps.org&#62;</p>
+
+<p>aka Byron Brummer &#60;byron@omix.com&#62;.</p>
+
+<p>Based off of the <b>constant</b> module by Tom Phoenix.</p>
+
+<p>Original implementation of an interface of Tom Phoenix&#39;s design by Benjamin Holzman, for which we borrow the basic parse algorithm layout.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 1998 (c) Byron Brummer. Copyright 1998 (c) OMIX, Inc.</p>
+
+<p>Permission to use, modify, and redistribute this module granted under the same terms as <b>Perl</b>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>constant(3), perl(1).</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78059 Uploads, 24684 Distributions
+105888 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 21 09:15:52 2012 GMT (0.0322449207305908) @cpansearch1 -->
+ </body>
+</html>

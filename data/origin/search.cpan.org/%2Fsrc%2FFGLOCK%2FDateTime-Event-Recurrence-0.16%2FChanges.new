@@ -1,0 +1,151 @@
+0.16  2005-05-12
+- fix 'BYWEEK' -> 'BYWEEKNO'
+- Depends on DateTime 0.27 because it uses local_rd_values(). 
+  This fixes a local/UTC problem reported by Dave Rolsky.
+- uses no DateTime.pm internals
+- removed (undocumented) arguments 'after' and 'start'
+
+0.15_02   2005-01-27
+- allows interleaved neg/positive values; allows repeated indexes.
+  Supports weird argument lists such as [ -200, -10, -10, 200, 20 ].
+  Speed is slower by another 10%.
+
+0.15_01   2005-01-26
+- full overflow checking. 
+  The previous version only checked for some kinds of month overflows.
+  The tests run slower by about 12%.
+- checks for invalid parameters, such as "monthly( months=>xx )" or
+  "yearly( months=>xx, weeks=>xx )"
+- added a dispatch table for "offset" calculations
+- fixed and added tests for monthly( week => ...)
+- modified "sort positive values first". Patch by Yitzchak Scott-Thoennes.
+- refactored _setup_parameters()
+- Updated pod and tests.
+
+0.15    2005-01-19
+- array-ref parameter lists are not mutated. Patch by Daisuke Maki.
+- rewritten "sort positive values first" in _setup_parameters()
+
+0.14
+- requires DT::Set 0.17, because 0.16 had a bug that would break
+  some tests.
+
+0.13    2004-06-17
+- a weekly recurrence with an interval behaves strangely,
+  if the given dtstart is a sunday. Reported by Bridget Almas.
+  Fix: _week() uses "week start day" in the calculation.
+
+0.12    2004-05-26
+- monthly recurrence at day 29 shows march-01. Reported by Bridget Almas.
+
+0.11    2004-05-24
+- using both 'interval' and 'start' parameters could cause the program
+  to hang. Reported by Bridget Almas.
+
+0.10    2004-03-17
+0.0901  2004-03-09
+- the recurrence functions accept infinite DateTimes, as required
+  by DT::Set 0.1402
+
+0.09  2003-10-10
+- recurrences can be formatted using 
+  DateTime::Format::ICal->format_recurrence().
+  Some recurrences (ex: nanoseconds) are not supported by ICal format.
+- added nanosecond tests
+
+0.08  2003-10-31
+- bugfix: when "interval==1" it should be processed as if there
+  was no interval.  Found by Danny Rappleyea
+- document "start" parameter.
+- changed some operations in next/previous that were done twice.
+
+0.07   2003-09-02
+- tests pass under Perl 5.00503
+
+0.06
+- defines DateTime::Set::ICal class, in order to provide 
+  ICal strings to represent recurrences (set/get_ical)
+
+0.05   2003-05-23
+- memoizes durations; makes less calls to DT::Duration->new
+- 'weekly' can use 'week_start_day'
+
+0.04   2003-05-14
+- turn on warnings in tests and fix all warnings given.
+- require DateTime::Set 0.06
+
+0.03   2003-05-12
+- iterates using binary tree
+- parameter checking
+- fixed behaviour of negative numbers (rfc2445)
+   14h and -15min was: 13:45 = subtract 15 minutes
+                  now: 14:45 = last 15 minutes of hour
+- removed parameter 'year_type'
+- 'duration' argument is obsolete
+- added 'interval' parameter
+- moved local parameters to a hash
+- moved unit-specific subs to hash
+- added year_type => 'weekly' to yearly (internal)
+  default is year_type => 'monthly'.
+
+0.02   2003-04-27
+- tests month-day overflow for positive day offsets, if 'month'
+  argument is specified. Skips a datetime if it is invalid.
+- setup structure to allow other overflow tests.
+- returns empty set for 'impossible' recurrences.
+- many docs and code tweaks.  by Dave Rolsky
+
+0.01   2003-04-21
+- CPAN upload
+- no longer inherits DateTime::Set
+
+0.00_11
+
+- added 'set' tests
+- docs correction. Dave Rolsky
+
+0.00_10
+
+- ISA DateTime::Set
+- removed as_set
+- moved all accessors to DateTime::Set
+- requires DT::Set 0.02
+
+0.00_09
+
+- new syntax
+    $r = DT::E::R->monthly (
+                       days => [ 4, 15, 18 ],
+                       hours => [ 10, 20 ] );
+
+0.00_08
+
+- both previous and next work; all tests pass; more docs
+
+0.00_07
+
+- works with 2-D durations; looks up table in linear time (in worst case).
+  That is, a 4x4 table gives 4^4 combinations but is looked up in 4*4 time.
+  But it could be done in 4log4 time...
+
+0.00_06
+
+- works with multiple durations like
+    $r = DT::E::R->monthly (
+                       duration => \@durations );
+- durations _must_ be pre-sorted.
+
+0.00_05
+
+- refactored constructor subs
+- added a very rough multiple-duration structure 
+  (doesn't work with mixed negative/positive durations)
+
+0.00_03
+
+- "duration" argument in constructors
+
+0.00_02
+
+- previous, closest, weekly
+

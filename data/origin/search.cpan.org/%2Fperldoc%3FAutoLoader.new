@@ -1,0 +1,403 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>AutoLoader - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","AutoLoader",3]);
+    _gaq.push(["_setCustomVar",5,"Release","AutoLoader-5.72",3]);
+    _gaq.push(["_setCustomVar",3,"Module","AutoLoader",3]);
+    _gaq.push(["_setCustomVar",1,"Author","SMUELLER",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?AutoLoader">permalink</a></div>
+  <a href="/~smueller/">Steffen M&uuml;ller</a> &gt;
+  <a href="/~smueller/AutoLoader-5.72/">AutoLoader-5.72</a> &gt;
+  AutoLoader
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/ac0c0eab36df58cd3676c1f03f4d5185?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/S/SM/SMUELLER/AutoLoader-5.72.tar.gz">AutoLoader-5.72.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=AutoLoader;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~SMUELLER/AutoLoader-5.72/lib/AutoLoader.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+
+</div>
+</div>
+  Module Version:  5.72 &nbsp;
+<span class="noprint">
+  <a href="/src/SMUELLER/AutoLoader-5.72/lib/AutoLoader.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#Subroutine_Stubs'>Subroutine Stubs</a>
+    <li class='indexItem indexItem2'><a href='#Using_AutoLoader&#39;s_AUTOLOAD_Subroutine'>Using AutoLoader&#39;s AUTOLOAD Subroutine</a>
+    <li class='indexItem indexItem2'><a href='#Overriding_AutoLoader&#39;s_AUTOLOAD_Subroutine'>Overriding AutoLoader&#39;s AUTOLOAD Subroutine</a>
+    <li class='indexItem indexItem2'><a href='#Package_Lexicals'>Package Lexicals</a>
+    <li class='indexItem indexItem2'><a href='#Not_Using_AutoLoader'>Not Using AutoLoader</a>
+    <li class='indexItem indexItem2'><a href='#AutoLoader_vs._SelfLoader'>AutoLoader vs. SelfLoader</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#CAVEATS'>CAVEATS</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>AutoLoader - load subroutines only on demand</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    package Foo;
+    use AutoLoader &#39;AUTOLOAD&#39;;   # import the default AUTOLOAD subroutine
+
+    package Bar;
+    use AutoLoader;              # don&#39;t import AUTOLOAD, define our own
+    sub AUTOLOAD {
+        ...
+        $AutoLoader::AUTOLOAD = &#34;...&#34;;
+        goto &#38;AutoLoader::AUTOLOAD;
+    }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The <b>AutoLoader</b> module works with the <b>AutoSplit</b> module and the <code>__END__</code> token to defer the loading of some subroutines until they are used rather than loading them all at once.</p>
+
+<p>To use <b>AutoLoader</b>, the author of a module has to place the definitions of subroutines to be autoloaded after an <code>__END__</code> token. (See <a href="/perldoc?perldata" class="podlinkpod"
+>perldata</a>.) The <b>AutoSplit</b> module can then be run manually to extract the definitions into individual files <em>auto/funcname.al</em>.</p>
+
+<p><b>AutoLoader</b> implements an AUTOLOAD subroutine. When an undefined subroutine in is called in a client module of <b>AutoLoader</b>, <b>AutoLoader</b>&#39;s AUTOLOAD subroutine attempts to locate the subroutine in a file with a name related to the location of the file from which the client module was read. As an example, if <em>POSIX.pm</em> is located in <em>/usr/local/lib/perl5/POSIX.pm</em>, <b>AutoLoader</b> will look for perl subroutines <b>POSIX</b> in <em>/usr/local/lib/perl5/auto/POSIX/*.al</em>, where the <code>.al</code> file has the same name as the subroutine, sans package. If such a file exists, AUTOLOAD will read and evaluate it, thus (presumably) defining the needed subroutine. AUTOLOAD will then <code>goto</code> the newly defined subroutine.</p>
+
+<p>Once this process completes for a given function, it is defined, so future calls to the subroutine will bypass the AUTOLOAD mechanism.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Subroutine_Stubs"
+>Subroutine Stubs</a></h2>
+
+<p>In order for object method lookup and/or prototype checking to operate correctly even when methods have not yet been defined it is necessary to &#34;forward declare&#34; each subroutine (as in <code>sub NAME;</code>). See <a href="/perldoc?perlsub#SYNOPSIS" class="podlinkpod"
+>&#34;SYNOPSIS&#34; in perlsub</a>. Such forward declaration creates &#34;subroutine stubs&#34;, which are place holders with no code.</p>
+
+<p>The AutoSplit and <b>AutoLoader</b> modules automate the creation of forward declarations. The AutoSplit module creates an &#39;index&#39; file containing forward declarations of all the AutoSplit subroutines. When the AutoLoader module is &#39;use&#39;d it loads these declarations into its callers package.</p>
+
+<p>Because of this mechanism it is important that <b>AutoLoader</b> is always <code>use</code>d and not <code>require</code>d.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Using_AutoLoader&#39;s_AUTOLOAD_Subroutine"
+>Using <b>AutoLoader</b>&#39;s AUTOLOAD Subroutine</a></h2>
+
+<p>In order to use <b>AutoLoader</b>&#39;s AUTOLOAD subroutine you <i>must</i> explicitly import it:</p>
+
+<pre class="sh_perl">    use AutoLoader &#39;AUTOLOAD&#39;;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Overriding_AutoLoader&#39;s_AUTOLOAD_Subroutine"
+>Overriding <b>AutoLoader</b>&#39;s AUTOLOAD Subroutine</a></h2>
+
+<p>Some modules, mainly extensions, provide their own AUTOLOAD subroutines. They typically need to check for some special cases (such as constants) and then fallback to <b>AutoLoader</b>&#39;s AUTOLOAD for the rest.</p>
+
+<p>Such modules should <i>not</i> import <b>AutoLoader</b>&#39;s AUTOLOAD subroutine. Instead, they should define their own AUTOLOAD subroutines along these lines:</p>
+
+<pre class="sh_perl">    use AutoLoader;
+    use Carp;
+
+    sub AUTOLOAD {
+        my $sub = $AUTOLOAD;
+        (my $constname = $sub) =~ s/.*:://;
+        my $val = constant($constname, @_ ? $_[0] : 0);
+        if ($! != 0) {
+            if ($! =~ /Invalid/ || $!{EINVAL}) {
+                $AutoLoader::AUTOLOAD = $sub;
+                goto &#38;AutoLoader::AUTOLOAD;
+            }
+            else {
+                croak &#34;Your vendor has not defined constant $constname&#34;;
+            }
+        }
+        *$sub = sub { $val }; # same as: eval &#34;sub $sub { $val }&#34;;
+        goto &#38;$sub;
+    }</pre>
+
+<p>If any module&#39;s own AUTOLOAD subroutine has no need to fallback to the AutoLoader&#39;s AUTOLOAD subroutine (because it doesn&#39;t have any AutoSplit subroutines), then that module should not use <b>AutoLoader</b> at all.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Package_Lexicals"
+>Package Lexicals</a></h2>
+
+<p>Package lexicals declared with <code>my</code> in the main block of a package using <b>AutoLoader</b> will not be visible to auto-loaded subroutines, due to the fact that the given scope ends at the <code>__END__</code> marker. A module using such variables as package globals will not work properly under the <b>AutoLoader</b>.</p>
+
+<p>The <code>vars</code> pragma (see <a href="/perldoc?perlmod#vars" class="podlinkpod"
+>&#34;vars&#34; in perlmod</a>) may be used in such situations as an alternative to explicitly qualifying all globals with the package namespace. Variables pre-declared with this pragma will be visible to any autoloaded routines (but will not be invisible outside the package, unfortunately).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Not_Using_AutoLoader"
+>Not Using AutoLoader</a></h2>
+
+<p>You can stop using AutoLoader by simply</p>
+
+<pre class="sh_perl">        no AutoLoader;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="AutoLoader_vs._SelfLoader"
+><b>AutoLoader</b> vs. <b>SelfLoader</b></a></h2>
+
+<p>The <b>AutoLoader</b> is similar in purpose to <b>SelfLoader</b>: both delay the loading of subroutines.</p>
+
+<p><b>SelfLoader</b> uses the <code>__DATA__</code> marker rather than <code>__END__</code>. While this avoids the use of a hierarchy of disk files and the associated open/close for each routine loaded, <b>SelfLoader</b> suffers a startup speed disadvantage in the one-time parsing of the lines after <code>__DATA__</code>, after which routines are cached. <b>SelfLoader</b> can also handle multiple packages in a file.</p>
+
+<p><b>AutoLoader</b> only reads code as it is requested, and in many cases should be faster, but requires a mechanism like <b>AutoSplit</b> be used to create the individual files. <a href="/perldoc?ExtUtils%3A%3AMakeMaker" class="podlinkpod"
+>ExtUtils::MakeMaker</a> will invoke <b>AutoSplit</b> automatically if <b>AutoLoader</b> is used in a module source file.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="CAVEATS"
+>CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>AutoLoaders prior to Perl 5.002 had a slightly different interface. Any old modules which use <b>AutoLoader</b> should be changed to the new calling style. Typically this just means changing a require to a use, adding the explicit <code>&#39;AUTOLOAD&#39;</code> import if needed, and removing <b>AutoLoader</b> from <code>@ISA</code>.</p>
+
+<p>On systems with restrictions on file name length, the file corresponding to a subroutine may have a shorter name that the routine itself. This can lead to conflicting file names. The <i>AutoSplit</i> package warns of these potential conflicts when used to split a module.</p>
+
+<p>AutoLoader may fail to find the autosplit files (or even find the wrong ones) in cases where <code>@INC</code> contains relative paths, <b>and</b> the program does <code>chdir</code>.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?SelfLoader" class="podlinkpod"
+>SelfLoader</a> - an autoloader that doesn&#39;t use external files.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>AutoLoader</code> is maintained by the perl5-porters. Please direct any questions to the canonical mailing list. Anything that is applicable to the CPAN release can be sent to its maintainer, though.</p>
+
+<p>Author and Maintainer: The Perl5-Porters &#60;perl5-porters@perl.org&#62;</p>
+
+<p>Maintainer of the CPAN release: Steffen Mueller &#60;smueller@cpan.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This package has been part of the perl core since the first release of perl5. It has been released separately to CPAN so older installations can benefit from bug fixes.</p>
+
+<p>This package has the same copyright and license as the perl core:</p>
+
+<pre class="sh_perl">             Copyright (C) 1993, 1994, 1995, 1996, 1997, 1998, 1999,
+        2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2011
+        by Larry Wall and others
+    
+                            All rights reserved.
+    
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of either:
+    
+        a) the GNU General Public License as published by the Free
+        Software Foundation; either version 1, or (at your option) any
+        later version, or
+    
+        b) the &#34;Artistic License&#34; which comes with this Kit.
+    
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See either
+    the GNU General Public License or the Artistic License for more details.
+    
+    You should have received a copy of the Artistic License with this
+    Kit, in the file named &#34;Artistic&#34;.  If not, I&#39;ll be glad to provide one.
+    
+    You should also have received a copy of the GNU General Public License
+    along with this program in the file named &#34;Copying&#34;. If not, write to the 
+    Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+    MA 02110-1301, USA or visit their web page on the internet at
+    <a href="http://www.gnu.org/copyleft/gpl.html" class="podlinkurl"
+>http://www.gnu.org/copyleft/gpl.html</a>.
+    
+    For those of you that choose to use the GNU General Public License,
+    my interpretation of the GNU General Public License is that no Perl
+    script falls under the terms of the GPL unless you explicitly put
+    said script under the terms of the GPL yourself.  Furthermore, any
+    object code linked with perl does not automatically fall under the
+    terms of the GPL, provided such object code only adds definitions
+    of subroutines and variables, and does not otherwise impair the
+    resulting interpreter from executing any standard Perl script.  I
+    consider linking in C subroutines in this manner to be the moral
+    equivalent of defining subroutines in the Perl language itself.  You
+    may sell such an object file as proprietary provided that you provide
+    or offer to provide the Perl source, as specified by the GNU General
+    Public License.  (This is merely an alternate way of specifying input
+    to the program.)  You may also sell a binary produced by the dumping of
+    a running Perl script that belongs to you, provided that you provide or
+    offer to provide the Perl source as specified by the GPL.  (The
+    fact that a Perl interpreter and your code are in the same binary file
+    is, in this case, a form of mere aggregation.)  This is my interpretation
+    of the GPL.  If you still have concerns or difficulties understanding
+    my intent, feel free to contact me.  Of course, the Artistic License
+    spells all this out for your protection, so you may prefer to use that.</pre>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">77959 Uploads, 24665 Distributions
+105773 Modules, 9632 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Wed Apr 18 18:38:25 2012 GMT (0.14191198348999) @cpansearch1 -->
+ </body>
+</html>

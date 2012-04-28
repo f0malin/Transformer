@@ -1,0 +1,631 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Palm::Keyring - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Palm-Keyring",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Palm-Keyring-0.95",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Palm::Keyring",3]);
+    _gaq.push(["_setCustomVar",1,"Author","ANDREW",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Palm::Keyring">permalink</a></div>
+  <a href="/~andrew/">Andrew Fresh</a> &gt;
+  <a href="/~andrew/Palm-Keyring-0.95/">Palm-Keyring-0.95</a> &gt;
+  Palm::Keyring
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/18636b8c103162787de8d2b1728cf076?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/A/AN/ANDREW/Palm-Keyring-0.95.tar.gz">Palm-Keyring-0.95.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Palm%3A%3AKeyring;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~ANDREW/Palm-Keyring-0.95/lib/Palm/Keyring.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?Module%3A%3ABuild">Module::Build</a><br>
+<a href="/perldoc?Filter%3A%3ACrypto">Filter::Crypto</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=Palm%3A%3AKeyring">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 1</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 1</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Palm-Keyring">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  0.95 &nbsp;
+<span class="noprint">
+  <a href="/src/ANDREW/Palm-Keyring-0.95/lib/Palm/Keyring.pm">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~andrew/Palm-Keyring/lib/Palm/Keyring.pm">Palm-Keyring-0.96_07</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#SUBROUTINES/METHODS'>SUBROUTINES/METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new'>new</a>
+    <li class='indexItem indexItem2'><a href='#crypts'>crypts</a>
+    <li class='indexItem indexItem2'><a href='#Encrypt'>Encrypt</a>
+    <li class='indexItem indexItem2'><a href='#Decrypt'>Decrypt</a>
+    <li class='indexItem indexItem2'><a href='#Password'>Password</a>
+    <li class='indexItem indexItem2'><a href='#Other_overridden_subroutines/methods'>Other overridden subroutines/methods</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#DEPENDENCIES'>DEPENDENCIES</a>
+  <li class='indexItem indexItem1'><a href='#THANKS'>THANKS</a>
+  <li class='indexItem indexItem1'><a href='#BUGS_AND_LIMITATIONS'>BUGS AND LIMITATIONS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#LICENSE_AND_COPYRIGHT'>LICENSE AND COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Palm::Keyring - Handler for Palm Keyring databases.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The Keyring PDB handler is a helper class for the Palm::PDB package.
+It parses Keyring for Palm OS databases.
+See <a href="http://gnukeyring.sourceforge.net/" class="podlinkurl"
+>http://gnukeyring.sourceforge.net/</a>.</p>
+
+<p>It has the standard Palm::PDB methods with 2 additional public methods.
+Decrypt and Encrypt.</p>
+
+<p>It currently supports the v4 Keyring databases as well as the pre-release v5 databases.
+I am not completely happy with the interface for accessing v5 databases,
+so any suggestions on improvements on the interface are appreciated.</p>
+
+<p>This module doesn&#39;t store the decrypted content.
+It only keeps it until it returns it to you or encrypts it.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">    use Palm::PDB;
+    use Palm::Keyring;
+    
+    my $pass = &#39;password&#39;;
+    my $file = &#39;Keys-Gtkr.pdb&#39;;
+    my $pdb  = new Palm::PDB;
+    $pdb-&#62;Load($file);
+    
+    foreach (0..$#{ $pdb-&#62;{records} }) {
+        # skip the password record for version 4 databases
+        next if $_ == 0 &#38;&#38; $pdb-&#62;{version} == 4;
+        my $rec  = $pdb-&#62;{records}-&#62;[$_];
+        my $acct = $pdb-&#62;Decrypt($rec, $pass);
+        print $rec-&#62;{name}, &#39; - &#39;;
+        if ($pdb-&#62;{version} == 4 || $pdb-&#62;{options}-&#62;{v4compatible}) {
+            print &#39; - &#39;, $acct-&#62;{account};
+        } else {
+            foreach my $a (@{ $acct }) {
+                if ($a-&#62;{label} eq &#39;account&#39;) {
+                    print &#39; - &#39;,  $a-&#62;{data};
+                    last;
+                }
+            }
+        }
+        print &#34;\n&#34;;
+    }</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUBROUTINES/METHODS"
+>SUBROUTINES/METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new"
+>new</a></h2>
+
+<pre class="sh_perl">    $pdb = new Palm::Keyring([$password[, $version]]);</pre>
+
+<p>Create a new PDB, initialized with the various Palm::Keyring fields and an empty record list.</p>
+
+<p>Use this method if you&#39;re creating a Keyring PDB from scratch otherwise you can just use Palm::PDB::new() before calling Load().</p>
+
+<p>If you pass in a password, it will initalize the first record with the encrypted password.</p>
+
+<p>new() now also takes options in other formats</p>
+
+<pre class="sh_perl">    $pdb = new Palm::Keyring({ key1 =&#62; value1,  key2 =&#62; value2 });
+    $pdb = new Palm::Keyring( -key1 =&#62; value1, -key2 =&#62; value2);</pre>
+
+<dl>
+<dt><a name='Supported'></a><a name="Supported_options"
+>Supported options</a></dt>
+
+<dd>
+<dl>
+<dt><a name="password"
+>password</a></dt>
+
+<dd>
+<p>The password used to initialize the database</p>
+
+<dt><a name="version"
+>version</a></dt>
+
+<dd>
+<p>The version of database to create. Accepts either 4 or 5. Currently defaults to 4.</p>
+
+<dt><a name="v4compatible"
+>v4compatible</a></dt>
+
+<dd>
+<p>The format of the fields passed to Encrypt and returned from Decrypt have changed. This allows programs to use the newer databases with few changes but with less features.</p>
+
+<dt><a name="cipher"
+>cipher</a></dt>
+
+<dd>
+<p>The cipher to use. Either the number or the name.</p>
+
+<pre class="sh_perl">    0 =&#62; None
+    1 =&#62; DES_EDE3
+    2 =&#62; AES128
+    3 =&#62; AES256</pre>
+
+<dt><a name="iterations"
+>iterations</a></dt>
+
+<dd>
+<p>The number of iterations to encrypt with.</p>
+
+<dt><a name="options"
+>options</a></dt>
+
+<dd>
+<p>A hashref of the options that are set</p>
+</dd>
+</dl>
+</dd>
+</dl>
+
+<p>For v5 databases there are some additional appinfo fields set. These are set either on new() or Load().</p>
+
+<pre class="sh_perl">    $pdb-&#62;{appinfo} = {
+        # normal appinfo stuff described in L&#60;Palm::StdAppInfo&#62;
+        cipher     =&#62; The index number of the cipher being used
+        iter       =&#62; Number of iterations for the cipher
+    };</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="crypts"
+>crypts</a></h2>
+
+<p>Pass in the alias of the crypt to use, or the index.</p>
+
+<p>These only make sense for v5 databases.</p>
+
+<p>This is a function, not a method.</p>
+
+<p>$cipher can be 0, 1, 2, 3, None, DES_EDE3, AES128 or AES256.</p>
+
+<pre class="sh_perl">    my $c = Palm::Keyring::crypt($cipher);</pre>
+
+<p>$c is now:</p>
+
+<pre class="sh_perl">    $c = {
+        alias     =&#62; (None|DES_EDE3|AES128|AES256),
+        name      =&#62; (None|DES_EDE3|Rijndael),
+        keylen    =&#62; &#60;key length of the cipher&#62;,
+        blocksize =&#62; &#60;block size of the cipher&#62;,
+        default_iter =&#62; &#60;default iterations for the cipher&#62;,
+    };</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Encrypt"
+>Encrypt</a></h2>
+
+<pre class="sh_perl">    $pdb-&#62;Encrypt($rec, $acct[, $password[, $ivec]]);</pre>
+
+<p>Encrypts an account into a record, either with the password previously used, or with a password that is passed.</p>
+
+<p>$ivec is the initialization vector to use to encrypt the record. This is not used by v4 databases. Normally this is not passed and is generated randomly.</p>
+
+<p>$rec is a record from $pdb-&#62;{records} or a new_Record(). The v4 $acct is a hashref in the format below.</p>
+
+<pre class="sh_perl">    my $v4acct = {
+        name       =&#62; $rec-&#62;{name},
+        account    =&#62; $account,
+        password   =&#62; $password,
+        notes      =&#62; $notes,
+        lastchange =&#62; {
+            year  =&#62; 107, # years since 1900
+            month =&#62;   0, # 0-11, 0 = January, 11 = December
+            day   =&#62;  30, # 1-31, same as localtime
+        },
+    };</pre>
+
+<p>The v5 $acct is an arrayref full of hashrefs that contain each encrypted field.</p>
+
+<pre class="sh_perl">    my $v5acct = [
+        {
+            &#39;label_id&#39; =&#62; 2,
+            &#39;data&#39; =&#62; &#39;abcd1234&#39;,
+            &#39;label&#39; =&#62; &#39;password&#39;,
+            &#39;font&#39; =&#62; 0
+        },
+        {
+            &#39;label_id&#39; =&#62; 3,
+            &#39;data&#39; =&#62; {
+                &#39;month&#39; =&#62; 1,
+                &#39;day&#39; =&#62; 11,
+                &#39;year&#39; =&#62; 107
+            },
+            &#39;label&#39; =&#62; &#39;lastchange&#39;,
+            &#39;font&#39; =&#62; 0
+        },
+        {
+            &#39;label_id&#39; =&#62; 255,
+            &#39;data&#39; =&#62; &#39;This is a short note.&#39;,
+            &#39;label&#39; =&#62; &#39;notes&#39;,
+            &#39;font&#39; =&#62; 0
+        }
+    ];</pre>
+
+<p>The account name is stored in $rec-&#62;{name} for both v4 and v5 databases. It is not returned in the decrypted information for v5.</p>
+
+<pre class="sh_perl">    $rec-&#62;{name} = &#39;account name&#39;;</pre>
+
+<p>If you have changed anything other than the lastchange, or don&#39;t pass in a lastchange key, Encrypt() will generate a new lastchange date for you.</p>
+
+<p>If you pass in a lastchange field that is different than the one in the record, it will honor what you passed in.</p>
+
+<p>Encrypt() only uses the $acct-&#62;{name} if there is not already a $rec-&#62;{name}.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Decrypt"
+>Decrypt</a></h2>
+
+<pre class="sh_perl">    my $acct = $pdb-&#62;Decrypt($rec[, $password]);</pre>
+
+<p>Decrypts the record and returns a reference for the account as described under Encrypt().</p>
+
+<pre class="sh_perl">    foreach (0..$#{ $pdb-&#62;{records} }) {
+        next if $_ == 0 &#38;&#38; $pdb-&#62;{version} == 4;
+        my $rec = $pdb-&#62;{records}-&#62;[$_];
+        my $acct = $pdb-&#62;Decrypt($rec);
+        # do something with $acct
+    }</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Password"
+>Password</a></h2>
+
+<pre class="sh_perl">    $pdb-&#62;Password([$password[, $new_password]]);</pre>
+
+<p>Either sets the password to be used to crypt, or if you pass $new_password, changes the password on the database.</p>
+
+<p>If you have created a new $pdb, and you didn&#39;t set a password when you called new(), you only need to pass one password and it will set that as the password.</p>
+
+<p>If nothing is passed, it forgets the password that it was remembering.</p>
+
+<p>After a successful password verification the following fields are set</p>
+
+<p>For v4</p>
+
+<pre class="sh_perl">    $pdb-&#62;{digest}   = the calculated digest used from the key;
+    $pdb-&#62;{password} = the password that was passed in;</pre>
+
+<p>For v5</p>
+
+<pre class="sh_perl">    $pdb-&#62;{appinfo} = {
+        # As described under new() with these additional fields
+        cipher     =&#62; The index number of the cipher being used
+        iter       =&#62; Number of iterations for the cipher
+        key        =&#62; The key that is calculated from the password 
+                      and salt and is used to decrypt the records.
+        masterhash =&#62; the hash of the key that is stored in the 
+                      database.  Either set when Loading the database
+                      or when setting a new password.
+        salt       =&#62; the salt that is either read out of the database 
+                      or calculated when setting a new password.
+    };</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Other_overridden_subroutines/methods"
+>Other overridden subroutines/methods</a></h2>
+
+<dl>
+<dt><a name="ParseAppInfoBlock"
+>ParseAppInfoBlock</a></dt>
+
+<dd>
+<p>Converts the extra returned by Palm::StdAppInfo::ParseAppInfoBlock() into the following additions to $pdb-&#62;{appinfo}</p>
+
+<pre class="sh_perl">    $pdb-&#62;{appinfo} = {
+        cipher     =&#62; The index number of the cipher being used (Not v4)
+        iter       =&#62; Number of iterations for the cipher (Not v4)
+    };</pre>
+
+<dt><a name="PackAppInfoBlock"
+>PackAppInfoBlock</a></dt>
+
+<dd>
+<p>Reverses ParseAppInfoBlock before sending it on to Palm::StdAppInfo::PackAppInfoBlock()</p>
+
+<dt><a name="ParseRecord"
+>ParseRecord</a></dt>
+
+<dd>
+<p>Adds some fields to a record from Palm::StdAppInfo::ParseRecord()</p>
+
+<pre class="sh_perl">    $rec = {
+        name       =&#62; Account name
+        ivec       =&#62; The IV for the encrypted record.  (Not v4)
+        encrypted  =&#62; the encrypted information
+    };</pre>
+
+<dt><a name="PackRecord"
+>PackRecord</a></dt>
+
+<dd>
+<p>Reverses ParseRecord and then sends it through Palm::StdAppInfo::PackRecord()</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DEPENDENCIES"
+>DEPENDENCIES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Palm::StdAppInfo</p>
+
+<p><b>For v4 databases</b></p>
+
+<p>Digest::MD5</p>
+
+<p>Crypt::DES</p>
+
+<p><b>For v5 databases</b></p>
+
+<p>Digest::HMAC_SHA1</p>
+
+<p>Digest::SHA1</p>
+
+<p>Depending on how the database is encrypted</p>
+
+<p>Crypt::CBC - For any encryption but None</p>
+
+<p>Crypt::DES_EDE3 - DES_EDE3 encryption</p>
+
+<p>Crytp::Rijndael - AES encryption schemes</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="THANKS"
+>THANKS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>I would like to thank the helpful Perlmonk shigetsu who gave me some great advice and helped me get my first module posted. <a href="http://perlmonks.org/?node_id=596998" class="podlinkurl"
+>http://perlmonks.org/?node_id=596998</a></p>
+
+<p>I would also like to thank Johan Vromans &#60;jvromans@squirrel.nl&#62; -- <a href="http://www.squirrel.nl/people/jvromans" class="podlinkurl"
+>http://www.squirrel.nl/people/jvromans</a>. He had his own Palm::KeyRing module that he posted a couple of days before mine was ready and he was kind enough to let me have the namespace as well as giving me some very helpful hints about doing a few things that I was unsure of. He is really great.</p>
+
+<p>And finally, thanks to Jochen Hoenicke &#60;hoenicke@gmail.com&#62; (one of the authors of Palm Keyring) for getting me started on the v5 support as well as providing help and some subroutines.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS_AND_LIMITATIONS"
+>BUGS AND LIMITATIONS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>I am sure there are problems with this module. For example, I have not done very extensive testing of the v5 databases.</p>
+
+<p>I am not sure I am &#39;require module&#39; the best way, but I don&#39;t want to depend on modules that you don&#39;t need to use.</p>
+
+<p>I am not very happy with the data structures used by Encrypt() and Decrypt() for v5 databases, but I am not sure of a better way.</p>
+
+<p>The v4 compatibility mode does not insert a fake record 0 where normally the encrypted password is stored.</p>
+
+<p>The date validation for packing new dates is very poor.</p>
+
+<p>I have not gone through and standardized on how the module fails. Some things fail with croak, some return undef, some may even fail silently. Nothing initializes a lasterr method or anything like that. I need to fix all that before it is a 1.0 candidate.</p>
+
+<p>Please report any bugs or feature requests to <code>bug-palm-keyring at rt.cpan.org</code>, or through the web interface at <a href="http://rt.cpan.org" class="podlinkurl"
+>http://rt.cpan.org</a>. I will be notified, and then you&#39;ll automatically be notified of progress on your bug as I make changes.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Andrew Fresh &#60;andrew@cpan.org&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="LICENSE_AND_COPYRIGHT"
+>LICENSE AND COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright 2004, 2005, 2006, 2007 Andrew Fresh, All Rights Reserved.</p>
+
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?Palm%3A%3APDB" class="podlinkpod"
+>Palm::PDB</a>(3)</p>
+
+<p><a href="/perldoc?Palm%3A%3AStdAppInfo" class="podlinkpod"
+>Palm::StdAppInfo</a>(3)</p>
+
+<p>The Keyring for Palm OS website: <a href="http://gnukeyring.sourceforge.net/" class="podlinkurl"
+>http://gnukeyring.sourceforge.net/</a></p>
+
+<p>The HACKING guide for palm keyring databases: <a href="http://gnukeyring.cvs.sourceforge.net/*checkout*/gnukeyring/keyring/HACKING" class="podlinkurl"
+>http://gnukeyring.cvs.sourceforge.net/*checkout*/gnukeyring/keyring/HACKING</a></p>
+
+<p>Johan Vromans also has a wxkeyring app that now uses this module, available from his website at <a href="http://www.vromans.org/johan/software/sw_palmkeyring.html" class="podlinkurl"
+>http://www.vromans.org/johan/software/sw_palmkeyring.html</a></p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78069 Uploads, 24686 Distributions
+105893 Modules, 9637 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sun Apr 22 05:31:31 2012 GMT (0.130454063415527) @cpansearch1 -->
+ </body>
+</html>

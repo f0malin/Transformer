@@ -1,0 +1,59 @@
+name    = DateTime
+author  = Dave Rolsky <autarch@urth.org>
+license = Artistic_2_0
+copyright_holder = Dave Rolsky
+
+version = 0.70
+
+[NextRelease]
+format = %-6v %{yyyy-MM-dd}d
+
+[@Filter]
+-bundle = @Basic
+-remove = MakeMaker
+
+[PruneFiles]
+filenames = Build.PL
+
+[PkgVersion]
+
+; authordep Dist::Zilla::Plugin::ModuleBuild::XSOrPP
+[=inc::MyModuleBuild]
+
+[PurePerlTests]
+env_var = PERL_DATETIME_PP
+
+[InstallGuide]
+[MetaJSON]
+
+[MetaResources]
+bugtracker.web    = http://rt.cpan.org/NoAuth/Bugs.html?Dist=DateTime
+bugtracker.mailto = bug-datetime@rt.cpan.org
+repository.url    = http://hg.urth.org/hg/DateTime.pm
+repository.web    = http://hg.urth.org/hg/DateTime.pm
+repository.type   = hg
+
+[SurgicalPodWeaver]
+
+[PodSyntaxTests]
+[NoTabsTests]
+[EOLTests]
+[Test::CPAN::Changes]
+[Signature]
+
+[CheckChangeLog]
+
+[@Mercurial]
+
+[Prereqs]
+DateTime::Locale   = 0.41
+DateTime::TimeZone = 1.09
+Math::Round        = 0
+Params::Validate   = 0.76
+Scalar::Util       = 0
+Time::Local        = 1.04
+perl               = v5.8.1
+
+[Prereqs / TestRequires]
+Test::Exception    = 0
+Test::More         = 0.88

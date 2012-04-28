@@ -1,0 +1,505 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Moose::Cookbook::Snack::Keywords - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Moose",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Moose-2.0403",3]);
+    _gaq.push(["_setCustomVar",4,"Document","Moose::Cookbook::Snack::Keywords",3]);
+    _gaq.push(["_setCustomVar",1,"Author","DOY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Moose::Cookbook::Snack::Keywords">permalink</a></div>
+  <a href="/~doy/">Jesse Luehrs</a> &gt;
+  <a href="/~doy/Moose-2.0403/">Moose-2.0403</a> &gt;
+  Moose::Cookbook::Snack::Keywords
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/88766de7a058697d3d0335b8d384fd2a?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/D/DO/DOY/Moose-2.0403.tar.gz">Moose-2.0403.tar.gz</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~DOY/Moose-2.0403/lib/Moose/Cookbook/Snack/Keywords.pod">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 13</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 27</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 4</td></tr>
+</table>
+<a href="http://rt.cpan.org/NoAuth/Bugs.html?Dist=Moose">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+<span class="noprint">
+  <a href="/src/DOY/Moose-2.0403/lib/Moose/Cookbook/Snack/Keywords.pod">Source</a> &nbsp;
+  Latest&nbsp;Release:&nbsp;<a href="/~doy/Moose/lib/Moose/Cookbook/Snack/Keywords.pod">Moose-2.0501-TRIAL</a>
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#VERSION'>VERSION</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#The_&#39;meta&#39;_keyword'>The &#39;meta&#39; keyword</a>
+    <li class='indexItem indexItem2'><a href='#Moose_Keywords'>Moose Keywords</a>
+    <li class='indexItem indexItem2'><a href='#Moose::Util::TypeConstraints_Keywords'>Moose::Util::TypeConstraints Keywords</a>
+    <li class='indexItem indexItem2'><a href='#Avoiding_collisions'>Avoiding collisions</a>
+    <ul   class='indexList indexList3'>
+      <li class='indexItem indexItem3'><a href='#Turning_off_Moose'>Turning off Moose</a>
+      <li class='indexItem indexItem3'><a href='#Sub::Exporter_features'>Sub::Exporter features</a>
+      <li class='indexItem indexItem3'><a href='#namespace::autoclean_and_namespace::clean'>namespace::autoclean and namespace::clean</a>
+    </ul>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT_AND_LICENSE'>COPYRIGHT AND LICENSE</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose::Cookbook::Snack::Keywords - Restricted &#34;keywords&#34; in Moose</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="VERSION"
+>VERSION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>version 2.0403</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose exports a number of sugar functions in order to emulate Perl built-in keywords.
+These can cause clashes with other user-defined functions.
+This document provides a list of those keywords for easy reference.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="The_&#39;meta&#39;_keyword"
+>The &#39;meta&#39; keyword</a></h2>
+
+<p><code>use&#160;Moose</code> adds a method called <code>meta</code> to your class.
+If this conflicts with a method or function you are using,
+you can rename it,
+or prevent it from being installed entirely.
+To do this,
+pass the <code>-meta_name</code> option when you <code>use&#160;Moose</code>.
+For instance:</p>
+
+<pre class="sh_perl">  # install it under a different name
+  use Moose -meta_name =&#62; &#39;moose_meta&#39;;
+
+  # don&#39;t install it at all
+  use Moose -meta_name =&#62; undef;</pre>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Moose_Keywords"
+>Moose Keywords</a></h2>
+
+<p>If you are using <a href="/~doy/Moose-2.0403/lib/Moose.pm" class="podlinkpod"
+>Moose</a> or <a href="/~doy/Moose-2.0403/lib/Moose/Role.pm" class="podlinkpod"
+>Moose::Role</a> its best to avoid these keywords:</p>
+
+<dl>
+<dt><a name="extends"
+>extends</a></dt>
+
+<dd>
+<dt><a name="with"
+>with</a></dt>
+
+<dd>
+<dt><a name="has"
+>has</a></dt>
+
+<dd>
+<dt><a name="before"
+>before</a></dt>
+
+<dd>
+<dt><a name="after"
+>after</a></dt>
+
+<dd>
+<dt><a name="around"
+>around</a></dt>
+
+<dd>
+<dt><a name="super"
+>super</a></dt>
+
+<dd>
+<dt><a name="override"
+>override</a></dt>
+
+<dd>
+<dt><a name="inner"
+>inner</a></dt>
+
+<dd>
+<dt><a name="augment"
+>augment</a></dt>
+
+<dd>
+<dt><a name="confess"
+>confess</a></dt>
+
+<dd>
+<dt><a name="blessed"
+>blessed</a></dt>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Moose::Util::TypeConstraints_Keywords"
+>Moose::Util::TypeConstraints Keywords</a></h2>
+
+<p>If you are using <a href="/~doy/Moose-2.0403/lib/Moose/Util/TypeConstraints.pm" class="podlinkpod"
+>Moose::Util::TypeConstraints</a> its best to avoid these keywords</p>
+
+<dl>
+<dt><a name="type"
+>type</a></dt>
+
+<dd>
+<dt><a name="subtype"
+>subtype</a></dt>
+
+<dd>
+<dt><a name="class_type"
+>class_type</a></dt>
+
+<dd>
+<dt><a name="role_type"
+>role_type</a></dt>
+
+<dd>
+<dt><a name="maybe_type"
+>maybe_type</a></dt>
+
+<dd>
+<dt><a name="duck_type"
+>duck_type</a></dt>
+
+<dd>
+<dt><a name="as"
+>as</a></dt>
+
+<dd>
+<dt><a name="where"
+>where</a></dt>
+
+<dd>
+<dt><a name="message"
+>message</a></dt>
+
+<dd>
+<dt><a name="optimize_as"
+>optimize_as</a></dt>
+
+<dd>
+<dt><a name="inline_as"
+>inline_as</a></dt>
+
+<dd>
+<dt><a name="coerce"
+>coerce</a></dt>
+
+<dd>
+<dt><a name="from"
+>from</a></dt>
+
+<dd>
+<dt><a name="via"
+>via</a></dt>
+
+<dd>
+<dt><a name="enum"
+>enum</a></dt>
+
+<dd>
+<dt><a name="find_type_constraint"
+>find_type_constraint</a></dt>
+
+<dd>
+<dt><a name="register_type_constraint"
+>register_type_constraint</a></dt>
+</dl>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="Avoiding_collisions"
+>Avoiding collisions</a></h2>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Turning_off_Moose"
+>Turning off Moose</a></h3>
+
+<p>To remove the sugar functions <a href="/~doy/Moose-2.0403/lib/Moose.pm" class="podlinkpod"
+>Moose</a> exports just add <code>no&#160;Moose</code> at the bottom of your code:</p>
+
+<pre class="sh_perl">  package Thing;
+  use Moose;
+
+  # code here
+
+  no Moose;</pre>
+
+<p>This will unexport the sugar functions that <a href="/~doy/Moose-2.0403/lib/Moose.pm" class="podlinkpod"
+>Moose</a> originally exported. The same will also work for <a href="/~doy/Moose-2.0403/lib/Moose/Role.pm" class="podlinkpod"
+>Moose::Role</a> and <a href="/~doy/Moose-2.0403/lib/Moose/Util/TypeConstraints.pm" class="podlinkpod"
+>Moose::Util::TypeConstraints</a>.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="Sub::Exporter_features"
+>Sub::Exporter features</a></h3>
+
+<p><a href="/~doy/Moose-2.0403/lib/Moose.pm" class="podlinkpod"
+>Moose</a>, <a href="/~doy/Moose-2.0403/lib/Moose/Role.pm" class="podlinkpod"
+>Moose::Role</a> and <a href="/~doy/Moose-2.0403/lib/Moose/Util/TypeConstraints.pm" class="podlinkpod"
+>Moose::Util::TypeConstraints</a> all use <a href="/perldoc?Sub%3A%3AExporter" class="podlinkpod"
+>Sub::Exporter</a> to handle all their exporting needs. This means that all the features that <a href="/perldoc?Sub%3A%3AExporter" class="podlinkpod"
+>Sub::Exporter</a> provides are also available to them.</p>
+
+<p>For instance, with <a href="/perldoc?Sub%3A%3AExporter" class="podlinkpod"
+>Sub::Exporter</a> you can rename keywords, like so:</p>
+
+<pre class="sh_perl">  package LOL::Cat;
+  use Moose &#39;has&#39; =&#62; { -as =&#62; &#39;i_can_haz&#39; };
+
+  i_can_haz &#39;cheeseburger&#39; =&#62; (
+      is      =&#62; &#39;rw&#39;,
+      trigger =&#62; sub { print &#34;NOM NOM&#34; }
+  );
+
+  LOL::Cat-&#62;new-&#62;cheeseburger(&#39;KTHNXBYE&#39;);</pre>
+
+<p>See the <a href="/perldoc?Sub%3A%3AExporter" class="podlinkpod"
+>Sub::Exporter</a> docs for more information.</p>
+
+<h3><a class='u' href='#___top' title='click to go to top of document'
+name="namespace::autoclean_and_namespace::clean"
+>namespace::autoclean and namespace::clean</a></h3>
+
+<p>You can also use <a href="/perldoc?namespace%3A%3Aautoclean" class="podlinkpod"
+>namespace::autoclean</a> to clean up your namespace. This will remove all imported functions from your namespace. Note that if you are importing functions that are intended to be used as methods (this includes <a href="/perldoc?overload" class="podlinkpod"
+>overload</a>, due to internal implementation details), it will remove these as well.</p>
+
+<p>Another option is to use <a href="/perldoc?namespace%3A%3Aclean" class="podlinkpod"
+>namespace::clean</a> directly, but you must be careful not to remove <code>meta</code> when doing so:</p>
+
+<pre class="sh_perl">  package Foo;
+  use Moose;
+  use namespace::clean -except =&#62; &#39;meta&#39;;
+  # ...</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<dl>
+<dt><a name="Moose"
+><a href="/~doy/Moose-2.0403/lib/Moose.pm" class="podlinkpod"
+>Moose</a></a></dt>
+
+<dd>
+<dt><a name='Moose'></a><a name="Moose::Role"
+><a href="/~doy/Moose-2.0403/lib/Moose/Role.pm" class="podlinkpod"
+>Moose::Role</a></a></dt>
+
+<dd>
+<dt><a name='Moose'></a><a name="Moose::Utils::TypeConstraints"
+><a href="/perldoc?Moose%3A%3AUtils%3A%3ATypeConstraints" class="podlinkpod"
+>Moose::Utils::TypeConstraints</a></a></dt>
+
+<dd>
+<dt><a name='Sub'></a><a name="Sub::Exporter"
+><a href="/perldoc?Sub%3A%3AExporter" class="podlinkpod"
+>Sub::Exporter</a></a></dt>
+
+<dd>
+<dt><a name='namespace'></a><a name="namespace::autoclean"
+><a href="/perldoc?namespace%3A%3Aautoclean" class="podlinkpod"
+>namespace::autoclean</a></a></dt>
+
+<dd>
+<dt><a name='namespace'></a><a name="namespace::clean"
+><a href="/perldoc?namespace%3A%3Aclean" class="podlinkpod"
+>namespace::clean</a></a></dt>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Moose is maintained by the Moose Cabal, along with the help of many contributors. See <a href="/~doy/Moose-2.0403/lib/Moose.pm#CABAL" class="podlinkpod"
+>&#34;CABAL&#34; in Moose</a> and <a href="/~doy/Moose-2.0403/lib/Moose.pm#CONTRIBUTORS" class="podlinkpod"
+>&#34;CONTRIBUTORS&#34; in Moose</a> for details.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT_AND_LICENSE"
+>COPYRIGHT AND LICENSE <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This software is copyright (c) 2012 by Infinity Interactive, Inc..</p>
+
+<p>This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78184 Uploads, 24708 Distributions
+105990 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Document']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Document']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 05:49:33 2012 GMT (0.153214931488037) @cpansearch1 -->
+ </body>
+</html>

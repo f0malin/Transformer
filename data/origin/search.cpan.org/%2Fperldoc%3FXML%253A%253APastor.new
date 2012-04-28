@@ -1,0 +1,963 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>XML::Pastor - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","XML-Pastor",3]);
+    _gaq.push(["_setCustomVar",5,"Release","XML-Pastor-1.0.3",3]);
+    _gaq.push(["_setCustomVar",3,"Module","XML::Pastor",3]);
+    _gaq.push(["_setCustomVar",1,"Author","AULUSOY",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?XML::Pastor">permalink</a></div>
+  <a href="/~aulusoy/">Ayhan Ulusoy</a> &gt;
+  <a href="/~aulusoy/XML-Pastor-1.0.3/">XML-Pastor-1.0.3</a> &gt;
+  XML::Pastor
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/0ba7043abcc932ff47b7dfef2bb403af?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/A/AU/AULUSOY/XML-Pastor-1.0.3.tar.gz">XML-Pastor-1.0.3.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=XML%3A%3APastor;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~AULUSOY/XML-Pastor-1.0.3/lib/XML/Pastor.pm">Annotate this POD
+</a></p>
+<div class=box style='width:150px; float: right'>
+<h1 class=t5>Related Modules</h1>
+<div style="margin:2px">
+<a href="/perldoc?XML%3A%3ATwig">XML::Twig</a><br>
+<a href="/perldoc?XML%3A%3ASimple">XML::Simple</a><br>
+<a href="/perldoc?XML%3A%3AWriter">XML::Writer</a><br>
+<a href="/perldoc?XML%3A%3ALibXML">XML::LibXML</a><br>
+<a href="/perldoc?SOAP%3A%3AWSDL">SOAP::WSDL</a><br>
+<small>
+<a href="http://perlmonks.org/?node=cpan+module+search&pivot=1&module=XML%3A%3APastor">more...</a><br>
+By <a href="http://perlmonks.org/">perlmonks.org</a></small>
+</div>
+</div>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 3</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 2</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=XML-Pastor">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  1.0.3 &nbsp;
+<span class="noprint">
+  <a href="/src/AULUSOY/XML-Pastor-1.0.3/lib/XML/Pastor.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#SCOPE_AND_WARNING'>SCOPE AND WARNING</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new()_(CONSTRUCTOR)'>new() (CONSTRUCTOR)</a>
+    <li class='indexItem indexItem2'><a href='#version_(CLASS_METHOD)'>version (CLASS METHOD)</a>
+    <li class='indexItem indexItem2'><a href='#generate(%options)'>generate(%options)</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#::Pastor::Meta_CLASS'>::Pastor::Meta CLASS</a>
+  <li class='indexItem indexItem1'><a href='#SCHEMA_SUPPORT'>SCHEMA SUPPORT</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#SUPPORTED'>SUPPORTED</a>
+    <li class='indexItem indexItem2'><a href='#PARTIALLY_SUPPORTED'>PARTIALLY SUPPORTED</a>
+    <li class='indexItem indexItem2'><a href='#NOT_SUPPORTED'>NOT SUPPORTED</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#HOW_IT_WORKS'>HOW IT WORKS</a>
+  <li class='indexItem indexItem1'><a href='#NAMING_CONVENTIONS_FOR_GENERATED_CLASSES'>NAMING CONVENTIONS FOR GENERATED CLASSES</a>
+  <li class='indexItem indexItem1'><a href='#SUGGESTED_NAMING_CONVENTIONS_FOR_XML_TYPES,_ELEMENTS_AND_ATTRIBUTES_IN_W3C_SCHEMAS'>SUGGESTED NAMING CONVENTIONS FOR XML TYPES, ELEMENTS AND ATTRIBUTES IN W3C SCHEMAS</a>
+  <li class='indexItem indexItem1'><a href='#BUGS_&#38;_CAVEATS'>BUGS &#38; CAVEATS</a>
+  <li class='indexItem indexItem1'><a href='#AUTHOR'>AUTHOR</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#DISCLAIMER'>DISCLAIMER</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><b>XML::Pastor</b> - Generate Perl classes with XML bindings starting from a W3C XSD Schema</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  use XML::Pastor;
+   
+  my $pastor = XML::Pastor-&#62;new();
+
+  # Generate MULTIPLE modules, one module for each class, and put them under destination.  
+          
+  $pastor-&#62;generate(    
+                        mode =&#62;&#39;offline&#39;,
+                        style =&#62; &#39;multiple&#39;,
+                        schema=&#62;&#39;/some/path/to/schema.xsd&#39;, 
+                        class_prefix=&#62;&#39;MyApp::Data::&#39;,
+                        destination=&#62;&#39;/tmp/lib/perl/&#39;, 
+                        );  
+
+
+  # Generate a SINGLE module which contains all the classes and put it under destination.    
+  # Note that the schema may be read from a URL too.
+  
+  $pastor-&#62;generate(    
+                        mode =&#62;&#39;offline&#39;,
+                        style =&#62; &#39;single&#39;,
+                        schema=&#62;&#39;<a href="http://some/url/to/schema.xsd" class="podlinkurl"
+>http://some/url/to/schema.xsd</a>&#39;, 
+                        class_prefix=&#62;&#39;MyApp::Data::&#39;,
+                        module =&#62; &#39;Module&#39;,
+                        destination=&#62;&#39;/tmp/lib/perl/&#39;,                                                  
+                        );  
+
+
+  # Generate classes in MEMORY, and EVALUATE the generated code on the fly.
+  # (Run Time code generation)
+  
+    $pastor-&#62;generate(  
+                mode =&#62;&#39;eval&#39;,
+                        schema=&#62;&#39;/some/path/to/schema.xsd&#39;, 
+                        class_prefix=&#62;&#39;MyApp::Data::&#39;
+                        );  
+  
+
+  # Same thing, with a maximum of DEBUG output on STDERR
+ 
+    $pastor-&#62;generate(  
+                mode =&#62;&#39;eval&#39;,
+                        schema=&#62;&#39;/some/path/to/schema.xsd&#39;, 
+                        class_prefix=&#62;&#39;MyApp::Data::&#39;,
+                        verbose = 9
+                        );  </pre>
+
+<p>And somewhere in an other place of the code ... (Assuming a global XML element &#39;country&#39; existed in you schema and hence been generated by Pastor).</p>
+
+<pre class="sh_perl">  # This is the preferred way of getting at the class names of XML elements and types (since v1,0,3)
+  my $class = MyApp::Data::Pastor::Meta-&#62;Model-&#62;xml_item_class(&#39;country&#39;);
+  
+  # Or, with a namespace URI, in case there are multiple namespaces in the model.
+     $class = MyApp::Data::Pastor::Meta-&#62;Model-&#62;xml_item_class(&#39;country&#39;, &#39;<a href="http://www.example.com/country" class="podlinkurl"
+>http://www.example.com/country</a>&#39;);
+     
+  my $country = $class-&#62;from_xml_file(&#39;/some/path/to/country.xml&#39;);    # retrieve from a file    
+  $country = $class-&#62;from_xml_url(&#39;<a href="http://some/url/to/country.xml" class="podlinkurl"
+>http://some/url/to/country.xml</a>&#39;);     # or from a URL
+  $country = $class-&#62;from_xml_fh($fh);  # or from a file handle  
+  $country = $class-&#62;from_xml_dom($dom);        # or from DOM  (a XML::LibXML::Node or XML::LibXML::Document)
+  $country = $class-&#62;from_xml($resource);       # or from any of the above. Handy if you don&#39;t know the resource.&#39; 
+  
+  # or from an XML string (Note the alternate way of using the class name directly)
+  $country = MyApp::Data::country-&#62;from_xml_string(&#60;&#60;&#39;EOF&#39;);
+  
+  &#60;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&#62;
+  &#60;country      xmlns=&#34;<a href="http://www.example.com/country" class="podlinkurl"
+>http://www.example.com/country</a>&#34; 
+                        xmlns:xsi=&#34;<a href="http://www.w3.org/2001/XMLSchema-instance" class="podlinkurl"
+>http://www.w3.org/2001/XMLSchema-instance</a>&#34; 
+                        xsi:schemaLocation=&#34;<a href="http://www.example.com/country" class="podlinkurl"
+>http://www.example.com/country</a>&#34; 
+                        code=&#34;FR&#34;&#62;
+                        
+        &#60;name&#62;France&#60;/name&#62;
+        &#60;population date=&#34;2000-01-01&#34; figure=&#34;60000000&#34;/&#62;
+        &#60;currency code=&#34;EUR&#34; name=&#34;Euro&#34;/&#62;
+    &#60;city code=&#34;AVA&#34;&#62;
+                &#60;name&#62;Ambri&#195;&#168;res-les-Vall&#195;&#169;es&#60;/name&#62;
+        &#60;/city&#62;
+        &#60;city code=&#34;BCX&#34;&#62;
+                &#60;name&#62;Beire-le-Ch&#195;&#162;tel&#60;/name&#62;
+        &#60;/city&#62;
+        &#60;city code=&#34;LYO&#34;&#62;
+                &#60;name&#62;Lyon&#60;/name&#62;
+        &#60;/city&#62;
+        &#60;city code=&#34;NCE&#34;&#62;
+                &#60;name&#62;Nice&#60;/name&#62;
+        &#60;/city&#62;
+        &#60;city code=&#34;PAR&#34;&#62;
+                &#60;name&#62;Paris&#60;/name&#62;
+        &#60;/city&#62;
+  &#60;/country&#62;
+  EOF
+  
+  # or if you don&#39;t know if you have a file, URL, FH, or string
+  $country = MyApp::Data::country-&#62;from_xml(&#39;<a href="http://some/url/to/country.xml" class="podlinkurl"
+>http://some/url/to/country.xml</a>&#39;);
+  
+  
+  # Now you can manipulate your country object.  
+  print $country-&#62;name;                                 # prints &#34;France&#34;
+  print $country-&#62;currency-&#62;_code;              # prints &#34;EUR&#34;
+  print $country-&#62;city-&#62;[0]-&#62;name;              # prints &#34;Ambri&#195;&#168;res-les-Vall&#195;&#169;es&#34;
+  
+  print $country-&#62;city-&#62;name;                   # prints the same thing, i.e. &#34;Ambri&#195;&#168;res-les-Vall&#195;&#169;es&#34;
+                                                                                # Note the ABSENCE of array indexing. 
+                                                                                # You don&#39;t have to worry about multiplicity!
+  
+  # Let&#39;s make some changes  
+  $country-&#62;_code(&#39;fr&#39;);        # Change the &#39;code&#39; attribute. Notice the underscore prefix on the accessor.
+  $country-&#62;code(&#39;fr&#39;);         # Same thing, but risky in case of attribute name collision with a child element name. It&#39;s there for backward compatibility.     
+  $country-&#62;name(&#39;FRANCE&#39;);
+  
+  #Let&#39;s access the cities as a hash keyed on city code.
+  my $city_h = $country-&#62;city-&#62;hash(&#39;_code&#39;);                                   # This will hash the node array on the &#39;code&#39; attribute
+  my $city_h = $country-&#62;city-&#62;hash(sub {shift-&#62;_code(); });    # This will do the same thing with a CODE reference.
+  
+  print $city_h-&#62;{&#39;NCE&#39;}-&#62;name;         #&#194;&#160;prints &#34;Nice&#34;.
+  
+  
+  # Let&#39;s add a city
+  my $class=$country-&#62;xml_field_class(&#39;city&#39;);
+  my $city = $class-&#62;new();
+  $city-&#62;_code(&#39;MRS&#39;);
+  $city-&#62;name(&#39;Marseille&#39;);
+  
+  push @{$country-&#62;city}, $city;
+  
+  print $country-&#62;city-&#62;[5]-&#62;name;      # prints &#34;Marseille&#34;
+  
+  # Time to validate our XML
+  $country-&#62;xml_validate();                     # This one will DIE on failure
+  
+  if ($country-&#62;is_xml_valid()) {       # This one will not die.
+    print &#34;ok\n&#34;;
+  }else {
+    print &#34;Validation error : $@\n&#34;;  # Note that $@ contains the error message
+  }  
+  
+  # Time to write the the object back to XML
+  $country-&#62;to_xml_file(&#39;some/path/to/country.xml&#39;);            # To a file  
+  $country-&#62;to_xml_url(&#39;<a href="http://some/url/to/country.xml" class="podlinkurl"
+>http://some/url/to/country.xml</a>&#39;);       # To a URL  
+  $country-&#62;to_xml_fh($fh);                                     # To a FILE HANDLE  
+  $country-&#62;to_xml($resource);                          # To any of the above. Handy if we don&#39;t know ahead of time.&#39;
+  
+  my $dom=$country-&#62;to_xml_dom();                       # To a DOM Node (XML::LibXML::Node)
+  my $dom=$country-&#62;to_xml_dom_document();      # To a DOM Document  (XML::LibXML::Document)
+  my $xml=$country-&#62;to_xml_string();            # To a string  
+  my $frag=$country-&#62;to_xml_fragment();         # Same thing without the &#60;?xml version=&#34;1.0?&#62; part</pre>
+
+<p>By the way, for those who are interesed in the data structure, here is a sample DUMP of what &#39;$country&#39; might look like. However, don&#39;t count on anything but attribute and element names. Anything else may change. You have been warned.</p>
+
+<pre class="sh_perl">   print Dumper($country);      # actually with Sortkeys(1);
+   
+   # ---- Prints the following DUMP
+   
+   $VAR1 = bless( {
+                 &#39;._nodeName_&#39; =&#62; &#39;country&#39;,
+                 &#39;_code&#39; =&#62; bless( {
+                                     &#39;value&#39; =&#62; &#39;FR&#39;
+                                   }, &#39;XML::Pastor::Builtin::string&#39; ),
+                 &#39;city&#39; =&#62; bless( [
+                                    bless( {
+                                             &#39;._nodeName_&#39; =&#62; &#39;city&#39;,
+                                             &#39;_code&#39; =&#62; bless( {
+                                                                 &#39;value&#39; =&#62; &#39;AVA&#39;
+                                                               }, &#39;XML::Pastor::Test::Type::Code&#39; ),
+                                             &#39;name&#39; =&#62; bless( {
+                                                                &#39;value&#39; =&#62; &#34;Ambri\x{e8}res-les-Vall\x{e9}es&#34;
+                                                              }, &#39;XML::Pastor::Builtin::string&#39; )
+                                           }, &#39;XML::Pastor::Test::Type::City&#39; ),
+                                    bless( {
+                                             &#39;._nodeName_&#39; =&#62; &#39;city&#39;,
+                                             &#39;_code&#39; =&#62; bless( {
+                                                                 &#39;value&#39; =&#62; &#39;BCX&#39;
+                                                               }, &#39;XML::Pastor::Test::Type::Code&#39; ),
+                                             &#39;name&#39; =&#62; bless( {
+                                                                &#39;value&#39; =&#62; &#34;Beire-le-Ch\x{e2}tel&#34;
+                                                              }, &#39;XML::Pastor::Builtin::string&#39; )
+                                           }, &#39;XML::Pastor::Test::Type::City&#39; ),
+                                    bless( {
+                                             &#39;._nodeName_&#39; =&#62; &#39;city&#39;,
+                                             &#39;_code&#39; =&#62; bless( {
+                                                                 &#39;value&#39; =&#62; &#39;LYO&#39;
+                                                               }, &#39;XML::Pastor::Test::Type::Code&#39; ),
+                                             &#39;name&#39; =&#62; bless( {
+                                                                &#39;value&#39; =&#62; &#39;Lyon&#39;
+                                                              }, &#39;XML::Pastor::Builtin::string&#39; )
+                                           }, &#39;XML::Pastor::Test::Type::City&#39; ),
+                                    bless( {
+                                             &#39;._nodeName_&#39; =&#62; &#39;city&#39;,
+                                             &#39;_code&#39; =&#62; bless( {
+                                                                 &#39;value&#39; =&#62; &#39;NCE&#39;
+                                                               }, &#39;XML::Pastor::Test::Type::Code&#39; ),
+                                             &#39;name&#39; =&#62; bless( {
+                                                                &#39;value&#39; =&#62; &#39;Nice&#39;
+                                                              }, &#39;XML::Pastor::Builtin::string&#39; )
+                                           }, &#39;XML::Pastor::Test::Type::City&#39; ),
+                                    bless( {
+                                             &#39;._nodeName_&#39; =&#62; &#39;city&#39;,
+                                             &#39;_code&#39; =&#62; bless( {
+                                                                 &#39;value&#39; =&#62; &#39;PAR&#39;
+                                                               }, &#39;XML::Pastor::Test::Type::Code&#39; ),
+                                             &#39;name&#39; =&#62; bless( {
+                                                                &#39;value&#39; =&#62; &#39;Paris&#39;
+                                                              }, &#39;XML::Pastor::Builtin::string&#39; )
+                                           }, &#39;XML::Pastor::Test::Type::City&#39; )
+                                  ], &#39;XML::Pastor::NodeArray&#39; ),
+                 &#39;currency&#39; =&#62; bless( {
+                                        &#39;._nodeName_&#39; =&#62; &#39;currency&#39;,
+                                        &#39;_code&#39; =&#62; bless( {
+                                                            &#39;value&#39; =&#62; &#39;EUR&#39;
+                                                          }, &#39;XML::Pastor::Builtin::string&#39; ),
+                                        &#39;_name&#39; =&#62; bless( {
+                                                            &#39;value&#39; =&#62; &#39;Euro&#39;
+                                                          }, &#39;XML::Pastor::Builtin::string&#39; )
+                                      }, &#39;XML::Pastor::Test::Type::Country_currency&#39; ),
+                 &#39;name&#39; =&#62; bless( {
+                                    &#39;value&#39; =&#62; &#39;France&#39;
+                                  }, &#39;XML::Pastor::Builtin::string&#39; ),
+                 &#39;population&#39; =&#62; bless( {
+                                          &#39;._nodeName_&#39; =&#62; &#39;population&#39;,
+                                          &#39;_date&#39; =&#62; bless( {
+                                                              &#39;value&#39; =&#62; &#39;2000-01-01&#39;
+                                                            }, &#39;XML::Pastor::Builtin::date&#39; ),
+                                          &#39;_figure&#39; =&#62; bless( {
+                                                                &#39;value&#39; =&#62; &#39;60000000&#39;
+                                                              }, &#39;XML::Pastor::Builtin::nonNegativeInteger&#39; )
+                                        }, &#39;XML::Pastor::Test::Type::Population&#39; )
+               }, &#39;XML::Pastor::Test::country&#39; );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Java had CASTOR, and now Perl has <b>XML::Pastor</b>!</p>
+
+<p>If you know what Castor does in the Java world, then <b>XML::Pastor</b> should be familiar to you. If you have a <b>W3C XSD schema</b>, you can generate Perl classes with roundtrip XML bindings.</p>
+
+<p>Whereas Castor is limited to offline code generation, <b>XML::Pastor</b> is able to generate Perl classes either offline or at run-time starting from a W3C XSD Schema. The generated classes correspond to the global elements, complex and simple type declarations in the schema. The generated classes have full XML binding, meaning objects belonging to them can be read from and written to XML. Accessor methods for attributes and child elements will be generated automatically. Furthermore it is possible to validate the objects of generated classes against the original schema although the schema is typically no longer accessible.</p>
+
+<p><b>XML::Pastor</b> defines just one method, &#39;<i>generate()</i>&#39;, but the classes it generates define many methods which may be found in the documentation of <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/ComplexType.pm" class="podlinkpod"
+>XML::Pastor::ComplexType</a> and <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/SimpleType.pm" class="podlinkpod"
+>XML::Pastor::SimpleType</a> from which all generated classes descend.</p>
+
+<p>In &#39;<i>offline</i>&#39; mode, it is possible to generate a single module with all the generated clasess or multiple modules one for each class. The typical use of the offline mode is during a &#39;make&#39; process, where you have a set of XSD schemas and you generate your modules to be later installed by the &#39;make install&#39;. This is very similar to Java Castor&#39;s behaviour. This way your XSD schemas don&#39;t have to be accessible during run-time and you don&#39;t have a performance penalty.</p>
+
+<p>Perl philosophy dictates however, that There Is More Than One Way To Do It. In &#39;<i>eval</i>&#39; (run-time) mode, the XSD schema is processed at run-time giving much more flexibility to the user. This added flexibility has a price on the other hand, namely a performance penalty and the fact that the XSD schema needs to be accessible at run-time. Note that the performance penalty applies only to the code genereration (pastorize) phase; the generated classes perform the same as if they were generated offline.</p>
+
+<p>There is a command line utility called <a href="/~aulusoy/XML-Pastor-1.0.3/bin/pastorize" class="podlinkpod"
+>pastorize</a> that can help generating classes offline. See the documentation of <a href="/~aulusoy/XML-Pastor-1.0.3/bin/pastorize" class="podlinkpod"
+>pastorize</a> for more details on that.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SCOPE_AND_WARNING"
+>SCOPE AND WARNING <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><b>XML::Pastor</b> is quite good for the so called &#39;data xml&#39;, that is, XML without mixed markup. It is NOT suitable for parsing and manipulating a markup language such as XHTML for example. &#39;Mixed markup&#39; means that an element can contain both textual data and child elements miexed together. <b>XML::Pastor</b> does not support that.</p>
+
+<p><b>XML::Pastor</b> is NOT a recommended way of treating HUGE XML documents. The exact definition of HUGE varies. It usually means paging into virtual memory. If you find yourself doing that, you should know that you might be better of with <a href="/perldoc?XML%3A%3ATwig" class="podlinkpod"
+>XML::Twig</a> which lets you selectively parse chunks of a tree. Or better yet, just do <b>SAX</b> processing. Note that things are not that bad with <b>XML::Pastor</b> =&#62; The memory used by <b>XML::Pastor</b> is not that much more than that of <a href="/perldoc?XML%3A%3ASimple" class="podlinkpod"
+>XML::Simple</a> or a DOM for the same document.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new()_(CONSTRUCTOR)"
+>new() (CONSTRUCTOR)</a></h2>
+
+<p>The new() constructor method instantiates a new <b>XML::Pastor</b> object.</p>
+
+<pre class="sh_perl">    my $pastor = XML::Pastor-&#62;new();</pre>
+
+<p>This is currently unnecessary as the only method (&#39;<i>generate</i>&#39;) is a class method. However, it is higly recommended to use it and call &#39;generate&#39; on an object (rather than the class) as in the future, &#39;generate&#39; may no longer be a class method.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="version_(CLASS_METHOD)"
+>version (CLASS METHOD)</a></h2>
+
+<p>Returns the current VERSION of XML::Pastor;</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="generate(%options)"
+>generate(%options)</a></h2>
+
+<p>Currently a <b>CLASS METHOD</b>, but may change to be an <b>OBJECT METHOD</b> in the future. It works when called on an OBJECT too at this time.</p>
+
+<p>This method is the heart of the module. It will accept a schema file name or URL as input (among some other parameters) and proceed to code generation.</p>
+
+<p>This method will parse the schema(s) given by the <a href="#schema" class="podlinkpod"
+>&#34;schema&#34;</a> parameter and then proceed to code generation. The generated code will be written to disk (mode=&#62;<a href="#offline" class="podlinkpod"
+>&#34;offline&#34;</a>) or evaluated at run-time (mode=&#62;<a href="#eval" class="podlinkpod"
+>&#34;eval&#34;</a>) depending on the value of the <a href="#mode" class="podlinkpod"
+>&#34;mode&#34;</a> parameter.</p>
+
+<p>In <a href="#offline" class="podlinkpod"
+>&#34;offline&#34;</a> mode, the generated classes will either all be put in one <a href="#single" class="podlinkpod"
+>&#34;single&#34;</a> big code block, or in <a href="#multiple" class="podlinkpod"
+>&#34;multiple&#34;</a> module files (one for each class) depending on the <a href="#style" class="podlinkpod"
+>&#34;style&#34;</a> parameter. Again in <a href="#offline" class="podlinkpod"
+>&#34;offline&#34;</a> mode, the generated modules will be written to disk under the directory prefix given by the <a href="#destination" class="podlinkpod"
+>&#34;destination&#34;</a> parameter.</p>
+
+<p>In any case, the names of the generated classes will be prefixed by the string given by the <a href="#class_prefix" class="podlinkpod"
+>&#34;class_prefix&#34;</a> parameter. It is possible to indicate common ancestors for generated classes via the <a href="#complex_isa" class="podlinkpod"
+>&#34;complex_isa&#34;</a> and <a href="#simple_isa" class="podlinkpod"
+>&#34;simple_isa&#34;</a> parameters.</p>
+
+<p>This metod expects the following parameters:</p>
+
+<dl>
+<dt><a name="schema"
+>schema</a></dt>
+
+<dd>
+<p>This is the file name or the URL to the <b>W3C XSD schema</b> file to be processed. Experimentally, it can also be a string containing schema XSD.</p>
+
+<p>Be careful about the paths that are mentioned for any included schemas though. If these are relative, they will be taken realtive to the current schema being processed. In the case of a schema string, the resolution of relative paths for the included schemas is undefined.</p>
+
+<p>Currently, it is also possible to pass an array reference to this parameter, in which case the schemas will be processed in order and merged to the same model for code generation. Just make sure you don&#39;t have name collisions in the schemas though.</p>
+
+<dt><a name="mode"
+>mode</a></dt>
+
+<dd>
+<p>This parameter effects what actuallly will be done by the method. Either offline code generation, or run-time code evaluation, or just returning the generated code.</p>
+
+<dl>
+<dt><a name="offline"
+>offline</a></dt>
+
+<dd>
+<p><b>Default</b>.</p>
+
+<p>In this mode, the code generation is done &#39;offline&#39;, that is, similar to Java&#39;s Castor way of doing things, the generated code will be written to disk on module files under the path given by the <a href="#destination" class="podlinkpod"
+>&#34;destination&#34;</a> parameter.</p>
+
+<p>In &#39;<i>offline</i>&#39; mode, it is possible to generate a single module with all the generated clasess or multiple modules one for each class, depending on the value of the <a href="#style" class="podlinkpod"
+>&#34;style&#34;</a> parameter.</p>
+
+<p>The typical use of the <i>offline</i> mode is during a &#39;<b>make</b>&#39; process, where you have a set of XSD schemas and you generate your modules to be later installed by &#39;<b>make install</b>&#39;. This is very similar to Java Castor&#39;s behaviour. This way your XSD schemas don&#39;t have to be accessible during run-time and you don&#39;t have a performance penalty.</p>
+
+<pre class="sh_perl">  # Generate MULTIPLE modules, one module for each class, and put them under destination.  
+  my $pastor = XML::Pastor-&#62;new();        
+  $pastor-&#62;generate(    
+                        mode =&#62;&#39;offline&#39;,
+                        style =&#62; &#39;multiple&#39;,
+                        schema=&#62;&#39;/some/path/to/schema.xsd&#39;, 
+                        class_prefix=&#62;&#39;MyApp::Data::&#39;,
+                        destination=&#62;&#39;/tmp/lib/perl/&#39;,                                                  
+                        );  </pre>
+
+<dt><a name="eval"
+>eval</a></dt>
+
+<dd>
+<p>In &#39;<i>eval</i>&#39; (run-time) mode, the XSD schema is processed at run-time giving much more flexibility to the user. In this mode, no code will be written to disk. Instead, the generated code (which is necessarily a <a href="#single" class="podlinkpod"
+>&#34;single&#34;</a> block) will be evaluated before returning to the caller.</p>
+
+<p>The added flexibility has a price on the other hand, namely a performance penalty and the fact that the XSD schema needs to be accessible at run-time. Note that the performance penalty applies only to the code genereration (pastorize) phase; the generated classes perform the same as if they were generated offline.</p>
+
+<p>Note that &#39;<i>eval</i>&#39; mode forces the <a href="#style" class="podlinkpod"
+>&#34;style&#34;</a> parameter to have a value of &#39;<i>single</i>&#39;;</p>
+
+<pre class="sh_perl">  # Generate classes in MEMORY, and EVALUATE the generated code on the fly.  
+  my $pastor = XML::Pastor-&#62;new();          
+  $pastor-&#62;generate(    
+                mode =&#62;&#39;eval&#39;,
+                        schema=&#62;&#39;/some/path/to/schema.xsd&#39;, 
+                        class_prefix=&#62;&#39;MyApp::Data::&#39;
+                        );  </pre>
+
+<dt><a name="return"
+>return</a></dt>
+
+<dd>
+<p>In &#39;<i>return</i>&#39; mode, the XSD schema is processed but no code is written to disk or evaluated. In this mode, the method just returns the generated block of code as a string, so that you may use it to your liking. You would typically be evaluating it though.</p>
+
+<p>Note that &#39;<i>return</i>&#39; mode forces the <a href="#style" class="podlinkpod"
+>&#34;style&#34;</a> parameter to have a value of &#39;<i>single</i>&#39;;</p>
+</dd>
+</dl>
+
+<dt><a name="style"
+>style</a></dt>
+
+<dd>
+<p>This parameter determines if <b>XML::Pastor</b> will generate a single module where all classes reside (<a href="#single" class="podlinkpod"
+>&#34;single&#34;</a>), or multiple modules one for each class (<a href="#multiple" class="podlinkpod"
+>&#34;multiple&#34;</a>).</p>
+
+<p>Some modes (such as <a href="#eval" class="podlinkpod"
+>&#34;eval&#34;</a> and <a href="#return" class="podlinkpod"
+>&#34;return&#34;</a>)force the style argument to be &#39;<i>single</i>&#39;.</p>
+
+<p>Possible values are :</p>
+
+<dl>
+<dt><a name="single"
+>single</a></dt>
+
+<dd>
+<p>One block of code containg all the generated classes will be produced.</p>
+
+<dt><a name="multiple"
+>multiple</a></dt>
+
+<dd>
+<p>A separate piece of code for each class will be produced. In addition, a module that &#39;uses&#39; each of the individual generated modules will be created whose name is given by the &#39;module&#39; argument (or otherwise it&#39;s given by &#39;class_prefix&#39;).</p>
+</dd>
+</dl>
+
+<dt><a name="class_prefix"
+>class_prefix</a></dt>
+
+<dd>
+<p>If present, the names of the generated classes will be prefixed by this value. You may end the value with &#39;::&#39; or not, it&#39;s up to you. It will be autocompleted. In other words both &#39;MyApp::Data&#39; and &#39;MyApp::Data::&#39; are valid.</p>
+
+<dt><a name="destination"
+>destination</a></dt>
+
+<dd>
+<p>This is the directory prefix where the produced modules will be written in <i>offline</i> mode. In other modes (<i>eval</i> and <i>return</i>), it is ignored.</p>
+
+<p>Note that the trailing slash (&#39;/&#39;) is optional. The default value for this parameter is &#39;/tmp/lib/perl/&#39;.</p>
+
+<dt><a name="module"
+>module</a></dt>
+
+<dd>
+<p>This parameter has sense only when generating one big chunk of code (<a href="#style" class="podlinkpod"
+>&#34;style&#34;</a> =&#62; <a href="#single" class="podlinkpod"
+>&#34;single&#34;</a>) in offline <a href="#mode" class="podlinkpod"
+>&#34;mode&#34;</a>.</p>
+
+<p>It denotes the name of the module (without the .pm extension) that will be written to disk in this case.</p>
+
+<dt><a name="complex_isa"
+>complex_isa</a></dt>
+
+<dd>
+<p>Via this parameter, it is possible to indicate a common ancestor (or ancestors) of all complex types that are generated by <b>XML::Pastor</b>. The generated complex types will still have <b>XML::Pastor::ComplexType</b> as their last ancestor in their @ISA, but they will also have the class whose name is given by this parameter as their first ancestor. Handy if you would like to add common behaviour to all your generated classes.</p>
+
+<p>This parameter can have a string value (the usual case) or an array reference to strings. In the array case, each item is added to the @ISA array (in that order) of the generated classes.</p>
+
+<dt><a name="simple_isa"
+>simple_isa</a></dt>
+
+<dd>
+<p>Via this parameter, it is possible to indicate a common ancestor (or ancestors) of all simple types that are generated by <b>XML::Pastor</b>. The generated simple types will still have <b>XML::Pastor::SimpleType</b> as their last ancestor in their @ISA, but they will also have the class whose name is given by this parameter as their first ancestor. Handy if you would like to add common behaviour to all your generated classes.</p>
+
+<p>This parameter can have a string value (the usual case) or an array reference to strings. In the array case, each item is added to the @ISA array (in that order) of the generated classes.</p>
+
+<dt><a name="verbose"
+>verbose</a></dt>
+
+<dd>
+<p>This parameter indicates the desired level of verbosity of the output. A value of zero (0), which is the default, indicates &#39;silent&#39; operation where only a fatal error will result in a &#39;die&#39; which will in turn write on STDERR. A higher value of &#39;verbose&#39; indicates more and more chatter on STDERR.</p>
+</dd>
+</dl>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="::Pastor::Meta_CLASS"
+>::Pastor::Meta CLASS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Suppose you use <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor.pm" class="podlinkpod"
+>XML::Pastor</a> for code generation with a <b>class prefix</b> of <b>MyApp::Data</b>. Then, <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor.pm" class="podlinkpod"
+>XML::Pastor</a> will also generate a class that enables you to access meta information about the generated code under &#39;MyApp::Data::Pastor::Meta&#39;.</p>
+
+<p>Currently, the only information you can access is the &#39;<b>Model</b>&#39; that was used to generate code. &#39;<b>Model</b>&#39; is class data that references to an entire schema model object (of type <a href="/perldoc?XML%3A%3ASchema%3A%3AModel" class="podlinkpod"
+>XML::Schema::Model</a>). With the help of the generated &#39;meta&#39; class, you can access the Model which will in turn enable you to call methods such as &#39;<b>xml_item_class()</b>&#39; which helps you determine the generated Perl class of a given global element or type in the schema.</p>
+
+<p>Example:</p>
+
+<pre class="sh_perl"> $pastor-&#62;generate(     
+                mode =&#62;&#39;eval&#39;,
+                        schema=&#62;&#39;/some/path/to/schema.xsd&#39;, 
+                        class_prefix=&#62;&#39;MyApp::Data::&#39;
+                        );  
+
+  # Access the schema model
+  my $model = MyApp::Data::Pastor::Meta-&#62;Model;         # Note that this is $class_prefix . &#39;Pastor::Meta&#39;
+  
+  # Get the class name for element &#39;country&#39;
+  my $class = $model-&#62;xml_item_class(&#39;country&#39;);
+  # OR
+    $class  = $model-&#62;xml_item_class(&#39;country&#39;, &#39;<a href="http://www.example.com/country" class="podlinkurl"
+>http://www.example.com/country</a>&#39;);      # with a namespace URI
+  
+  
+  # Now read the object from a file 
+  my $country = $class-&#62;from_xml_file(&#39;/some/path/to/country.xml&#39;);    # retrieve from a file    </pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SCHEMA_SUPPORT"
+>SCHEMA SUPPORT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The version 1.0 of W3C XSD schema (2001) is supported almost in full, albeit with some exceptions (see <a href="#BUGS_&#38;_CAVEATS" class="podlinkpod"
+>&#34;BUGS &#38; CAVEATS&#34;</a>).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="SUPPORTED"
+>SUPPORTED</a></h2>
+
+<p>Such things as complex and simple types, global elements, groups, attributes, and attribute groups are supported. Type declarations can either be global or done locally.</p>
+
+<p>Complex type derivation by extension and simple type derivation by restriction is supported.</p>
+
+<p>All the basic W3C builtin types are supported.</p>
+
+<p>Unions and lists are supported.</p>
+
+<p>Most of the restriction facets for simple types are supported (<i>length, minLength, maxLength, pattern, enumeration, minInclusive, maxInclusive, minExclusive, maxExclusive, totalDigits, fractionDigits</i>).</p>
+
+<p>Schema inclusion (include) and redefinition (redefine) are supported, allthough for &#39;redefine&#39; not much testing was done.</p>
+
+<p>Schema &#39;import&#39; is now supported (since version 0.6.3).</p>
+
+<p>ComplexTypes with simpleContent (simple-type elements eventually with attributes) are supported (since v0.6.0).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="PARTIALLY_SUPPORTED"
+>PARTIALLY SUPPORTED</a></h2>
+
+<p>Namespaces are quite well supported now (since version 0.6.3). Multiple namespaces are OK.</p>
+
+<p>However, local name collisions with multiple namespaces will yield unpredicted results. That is, if, for example, you have two child elements with the same local name but with different namespaces, the result is unpredictable.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="NOT_SUPPORTED"
+>NOT SUPPORTED</a></h2>
+
+<p>Elements with &#39;mixed&#39; content are NOT supported.</p>
+
+<p>Substitution groups are NOT supported.</p>
+
+<p>&#39;any&#39; and &#39;anyAttribute&#39; are NOT supported.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="HOW_IT_WORKS"
+>HOW IT WORKS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The source code of the <a href="#generate()" class="podlinkpod"
+>&#34;generate()&#34;</a> method looks like this:</p>
+
+<pre class="sh_perl">  sub generate {
+        my $self        = shift;
+        
+        my $parser      =XML::Pastor::Schema::Parser-&#62;new();
+        my $model       = $parser-&#62;parse(@_);
+        
+        $model-&#62;resolve(@_);
+        
+        my $generator = XML::Pastor::Generator-&#62;new();
+        
+        my $result = $generator-&#62;generate(@_, model=&#62;$model);           
+        
+        return $result;
+  }</pre>
+
+<p>At code generation time, <b>XML::Pastor</b> will first parse the schema(s) into a schema model (XML::Pastor::Schema::Model). The model contains all the schema information in perl data structures. All the global elements, types, attributes, groups, and attribute groups are put into this model.</p>
+
+<p>Then, the model is &#39;resolved&#39;, i.e. the references (&#39;ref&#39;) are resolved, class names are determined and so on. Then, comes the code generation stage where your classes are generated according to the given options. In offline mode, this phase will write out the generated code onto modules on disk. Otherwise it can also &#39;eval&#39; the generated code for you.</p>
+
+<p>The generated classes will contain class data named &#39;<b>XmlSchemaType</b>&#39; (thanks to <a href="/perldoc?Class%3A%3AData%3A%3AInheritable" class="podlinkpod"
+>Class::Data::Inheritable</a>), which will contain all the schema model information that corresponds to this type. For a complex type, it will contain information about child elements and attributes. For a simple type it will contain the restriction facets that may exist and so on.</p>
+
+<p>For complex types, the generated classes will also have accessors for the attributes and child elements of that type (thanks to <a href="/perldoc?Class%3A%3AAccessor" class="podlinkpod"
+>Class::Accessor</a>). However, you can also use direct hash access as the objects are just blessed hash references. The fields in the has correspond to attributes and child elements of the complex type. You can also store additional non-XML data in these objects. Such fields are silently ignored during validation and XML serialization. This way, your objects can have state information that is not stored in XML. Just make sure the names of these fields do not coincide with XML attributes and child elements though.</p>
+
+<p>The inheritance of classes are also managed by <b>XML::Pastor</b> for you. Complex types that are derived by extension will automatically be a descendant of the base class. Same applies to the simple types derived by restriction. Global elements will always be a descendant of some type, which may sometimes be implicitely defined. Global elements will have an added ancestor <a href="/perldoc?XML%3A%3APastor%3A%3AElement" class="podlinkpod"
+>XML::Pastor::Element</a> and will also contain an extra class data accessor &#34;<b>XmlSchemaElement</b>&#34; which will contain schema information about the model. This class data is currently used mainly to get at the name of the element when an object of this class is stored in XML (as ComplexTypes don&#39;t have an element name).</p>
+
+<p>Then you <i>use</i> the generated modules. If the generation was offline, you actually need a &#39;use&#39; statement. If it was an &#39;eval&#39;, you can start using your generated classes immediately. At this time, you can call many methods on the generated classes that enable you to create, retrieve and save an object from/to XML. There are also methods that enable you to validate these objects against schema information. Furthermore, you can call the accessors that were automagically created for you on class generation for getting at the fields of complex objects. Since all the schema information is saved as class data, the schema is no longer needed at run-time.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAMING_CONVENTIONS_FOR_GENERATED_CLASSES"
+>NAMING CONVENTIONS FOR GENERATED CLASSES <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>The generated classes will all be prefixed by the string given by the <a href="#class_prefix" class="podlinkpod"
+>&#34;class_prefix&#34;</a> parameter. The rest of this section assumes that <a href="#class_prefix" class="podlinkpod"
+>&#34;class_prefix&#34;</a> is &#34;<b>MyApp::Data</b>&#34;.</p>
+
+<p>Classes that correspond to global elements will keep the name of the element. For example, if there is an element called &#39;<b>country</b>&#39; in the schema, the corresponding clas will have the name &#39;<b>MyApp::Data::country</b>&#39;. Note that no change in case occurs.</p>
+
+<p>Classes that correspond to global complex and simple types will be put under the &#39;<b>Type</b>&#39; subtree. For example, if there is a complex type called &#39;<b>City</b>&#39; in the XSD schema, the corresponding class will be called &#39;<b>MyApp::Data::Type::City</b>&#39;. Note that no change in case occurs.</p>
+
+<p>Implicit types (that is, types that are defined <i>inline</i> in the schema) will have auto-generated names within the &#39;Type&#39; subtree. For example, if the &#39;<b>population</b>&#39; element within &#39;<b>City</b>&#39; is defined by an implicit type, its corresponding class will be &#39;<b>MyApp::Data::Type::City_population</b>&#39;.</p>
+
+<p>Sometimes implicit types need more to disambiguate their names. In that case, an auto-incremented sequence is used to generate the class names.</p>
+
+<p>In any case, do not count on the names of the classes for implicit types. The naming convention for those may change. In other words, do not reference these classes by their names in your program. You have been warned.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SUGGESTED_NAMING_CONVENTIONS_FOR_XML_TYPES,_ELEMENTS_AND_ATTRIBUTES_IN_W3C_SCHEMAS"
+>SUGGESTED NAMING CONVENTIONS FOR XML TYPES, ELEMENTS AND ATTRIBUTES IN W3C SCHEMAS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Sometimes you will be forced to use a W3C schema defined by someone else. In that case, you will not have a choice for the names of types, elements, and attributes defined in the schema.</p>
+
+<p>But most often, you will be the one who defines the W3C schema itself. So you will have full power over the names within.</p>
+
+<p>As mentioned earlier, <b>XML::Pastor</b> will generate accesor methods for the child elements and attributes of each class. The attribute names will be prefixed by an underscore in the hash. Attribute accessors will have an underscore prefix, too. However, accessor aliases will be generated without the underscore prefix for those attributes whose names don&#39;t clash with child element names. &#39; Since there exist some utility methods defined under <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/ComplexType.pm" class="podlinkpod"
+>XML::Pastor::ComplexType</a> and <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/SimpleType.pm" class="podlinkpod"
+>XML::Pastor::SimpleType</a> that are the ancestors of all the generated classes from your schema there is a risk of name collisions. Below is a list of suggestions that will ensure that there are no name collisions within your schema and with the defined methods.</p>
+
+<dl>
+<dt><a name='Element'></a><a name="Element_and_attribute_names_should_start_with_lower_case"
+>Element and attribute names should start with lower case</a></dt>
+
+<dd>
+<p>Element ant attribute names (incuding global ones) should start with lower case and be uppercased at word boundries. Example : &#34;firstName&#34;, &#34;lastName&#34;. Do not use underscore to separate words as this may open up a possibility for name collisions of accessors with the names of utility methods defined under <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/ComplexType.pm" class="podlinkpod"
+>XML::Pastor::ComplexType</a> and <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/SimpleType.pm" class="podlinkpod"
+>XML::Pastor::SimpleType</a>.</p>
+
+<dt><a name='Element'></a><a name="Element_and_attribute_names_should_not_coincide_with_builtin_method_names_of_XML::Pastor::ComplexType"
+>Element and attribute names should not coincide with builtin method names of <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/ComplexType.pm" class="podlinkpod"
+>XML::Pastor::ComplexType</a></a></dt>
+
+<dd>
+<p>Element ant attribute names (incuding global ones) should not coincide with builtin method names defined under <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/ComplexType.pm" class="podlinkpod"
+>XML::Pastor::ComplexType</a> as this will cause a name collision with the generated accessor method. Extra care should be taken for the methods called &#39;<b>get</b>&#39;, &#39;<b>set</b>&#39;, and &#39;<b>grab</b>&#39; as these are one-word builtin method names. Same goes for &#39;<b>isa</b>&#39; and &#39;<b>can</b>&#39; that come from Perl&#39;s <b>UNIVERSAL</b> package. Multiple word method names should not normally cause trouble if you abide by the principle of not using underscore for separating words in element and attribute names. See <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/ComplexType.pm" class="podlinkpod"
+>XML::Pastor::ComplexType</a> for the names of other builtin methods for the generated classes.</p>
+
+<dt><a name='Global'></a><a name="Global_complex_and_simple_types_should_start_with_upper_case"
+>Global complex and simple types should start with upper case</a></dt>
+
+<dd>
+<p>The names of global types (complex and simple) should start with an upper case and continue with lower case. Word boundries should be uppercased. This resembles the package name convention in Perl. Example : &#39;<b>City</b>&#39;, &#39;<b>Country</b>&#39;, &#39;<b>CountryCode</b>&#39;.</p>
+
+<dt><a name='Avoid'></a><a name="Avoid_child_Elements_and_attributes_with_the_same_name,_if_you_can"
+>Avoid child Elements and attributes with the same name, if you can</a></dt>
+
+<dd>
+<p>Try not to use the same name for an attribute and a child element of the same complex type or element within your schema. For instance, if you have an attribute called &#39;title&#39; within a Complex type called &#39;Person&#39;, do not in any circumstance create a child element with the same name &#39;title&#39;. Although this is technically possible under W3C schema, it should really be discoureged. Since v0.54, XML::Pastor overcomes this by introducing an underscore (&#39;_&#39;) prefix to attribute names in the hash. Attribute accessors will have an underscore prefix, too. However, accessor aliases will be generated without the underscore prefix for those attributes whose names don&#39;t clash with child element names. So, if there is no clash, old code should continue to work as long as it used accessors to get at the value.</p>
+</dd>
+</dl>
+
+<p>You are free to name global groups and attribute groups to your liking.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS_&#38;_CAVEATS"
+>BUGS &#38; CAVEATS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>There no known bugs at this time, but this doesn&#39;t mean there are aren&#39;t any. Note that, although some testing was done prior to releasing the module, this should still be considered alpha code. So use it at your own risk.</p>
+
+<p>There are known limitations however:</p>
+
+<ul>
+<li>Namespaces
+<p>Namespaces are quite well supported now (since version 0.6.3). Multiple namespaces are OK.</p>
+
+<p>However, local name collisions with multiple namespaces will yield unpredicted results. That is, if, for example, you have two child elements with the same local name but with different namespaces, the result is unpredictable.</p>
+</li>
+
+<li>&#39;mixed&#39; elements
+<p>Elements with &#39;mixed&#39; content (text and child elements) are not supported at this time.</p>
+</li>
+
+<li>substitution groups
+<p>Substitution groups are not supported at this time.</p>
+</li>
+
+<li>Encoding
+<p>Only the <b>UTF-8</b> encoding is -officially- supported. You should make sure that your data is in UTF-8 format. It may be possible to read and write XML from other encodings. But this feature is experimental and not tested at this time.</p>
+</li>
+
+<li>Default values for attributes
+<p>Default values for attributes are not supported at this time. If you can think of a simple way to support this, please let me know.</p>
+</li>
+</ul>
+
+<p>Note that there may be other bugs or limitations that the author is not aware of.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="AUTHOR"
+>AUTHOR <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Ayhan Ulusoy &#60;dev(at)ulusoy(dot)name&#62;</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<pre class="sh_perl">  Copyright (C) 2006-2008 Ayhan Ulusoy. All Rights Reserved.</pre>
+
+<p>This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DISCLAIMER"
+>DISCLAIMER <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>BECAUSE THIS SOFTWARE IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY FOR THE SOFTWARE, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE SOFTWARE &#34;AS IS&#34; WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH YOU. SHOULD THE SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR, OR CORRECTION.</p>
+
+<p>IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR REDISTRIBUTE THE SOFTWARE AS PERMITTED BY THE ABOVE LICENCE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>See also <a href="/~aulusoy/XML-Pastor-1.0.3/bin/pastorize" class="podlinkpod"
+>pastorize</a>, <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/ComplexType.pm" class="podlinkpod"
+>XML::Pastor::ComplexType</a>, <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/SimpleType.pm" class="podlinkpod"
+>XML::Pastor::SimpleType</a></p>
+
+<p>If you are curious about the implementation, see also <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/Schema/Parser.pm" class="podlinkpod"
+>XML::Pastor::Schema::Parser</a>, <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/Schema/Model.pm" class="podlinkpod"
+>XML::Pastor::Schema::Model</a>, <a href="/~aulusoy/XML-Pastor-1.0.3/lib/XML/Pastor/Generator.pm" class="podlinkpod"
+>XML::Pastor::Generator</a>.</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78275 Uploads, 24724 Distributions
+106002 Modules, 9649 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Sat Apr 28 01:32:16 2012 GMT (0.19169282913208) @cpansearch1 -->
+ </body>
+</html>

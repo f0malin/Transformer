@@ -1,0 +1,438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <link rel="stylesheet" href="http://st.pimg.net/tucs/style.css" type="text/css" />
+<style>
+.styleswitch {
+  text-align: right;
+}
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_main.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/sh_perl.min.js"></script>
+<script type="text/javascript" src="http://st.pimg.net/tucs/js/jquery.styleswitch.js"></script>
+
+<link rel="stylesheet" href="http://st.pimg.net/tucs/print.css" type="text/css" media="print" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf" />
+  <link rel="search" href="http://st.pimg.net/tucs/opensearch.xml" type="application/opensearchdescription+xml" title="SearchCPAN" />
+  <title>Net::DNS::RR - search.cpan.org</title>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3528438-1']);
+    _gaq.push(["_setCustomVar",2,"Distribution","Net-DNS",3]);
+    _gaq.push(["_setCustomVar",5,"Release","Net-DNS-0.68",3]);
+    _gaq.push(["_setCustomVar",3,"Module","Net::DNS::RR",3]);
+    _gaq.push(["_setCustomVar",1,"Author","OLAF",3]);
+    _gaq.push(['_trackPageview']);
+  </script>
+ </head>
+ <body id="cpansearch">
+<center><div class="logo"><a href="/"><img src="http://st.pimg.net/tucs/img/cpan_banner.png" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="/">Home</a>
+&middot; <a href="/author/">Authors</a>
+&middot; <a href="/recent">Recent</a>
+&middot; <a href="http://log.perl.org/cpansearch/">News</a>
+&middot; <a href="/mirror">Mirrors</a>
+&middot; <a href="/faq.html">FAQ</a>
+&middot; <a href="/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input type="text" name="query" value="" size="35">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module" >Modules</option>
+ <option value="dist" >Distributions</option>
+ <option value="author" >Authors</option>
+</select>&nbsp;<input type="submit" value="CPAN Search">
+</form>
+
+
+ <a name="_top"></a>
+  <div class=path>
+<div id=permalink class="noprint"><a href="/perldoc?Net::DNS::RR">permalink</a></div>
+  <a href="/~olaf/">OLAF</a> &gt;
+  <a href="/~olaf/Net-DNS-0.68/">Net-DNS-0.68</a> &gt;
+  Net::DNS::RR
+ </div>
+
+<div class="noprint" style="float:right;align:left;width:19ex">
+<a href="http://hexten.net/cpan-faces/"><img src="http://www.gravatar.com/avatar/e5747bf50b65faa67ee4828a0466d66d?r=g&s=80&d=http%3A%2F%2Fst.pimg.net%2Ftucs%2Fimg%2Fwho.png" width=80 height=80 
+style="float:right"
+/></a>
+<br style="clear:both"/>
+<p style="text-align:right">Download:<br/> <a href="/CPAN/authors/id/O/OL/OLAF/Net-DNS-0.68.tar.gz">Net-DNS-0.68.tar.gz</a></p>
+<p style="text-align:right"><a href="http://deps.cpantesters.org/?module=Net%3A%3ADNS%3A%3ARR;perl=latest">Dependencies</a></p>
+<p style="text-align:right"><a href="http://www.annocpan.org/~OLAF/Net-DNS-0.68/lib/Net/DNS/RR.pm">Annotate this POD
+</a></p>
+
+<div style="float:right">
+<div class=box style='width:150px'>
+<h1 class=t5>CPAN RT</h1>
+<div style="margin:2px">
+<table style="margin-left:auto;margin-right:auto">
+<tr><td>New&nbsp;</td><td style="text-align:right"> 2</td></tr>
+<tr><td>Open&nbsp;</td><td style="text-align:right"> 8</td></tr>
+<tr><td>Stalled&nbsp;</td><td style="text-align:right"> 5</td></tr>
+</table>
+<a href="https://rt.cpan.org/Public/Dist/Display.html?Name=Net-DNS">View/Report Bugs</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+  Module Version:  969 &nbsp;
+<span class="noprint">
+  <a href="/src/OLAF/Net-DNS-0.68/lib/Net/DNS/RR.pm">Source</a> &nbsp;
+</span>
+<a name="___top"></a>
+<div class=pod>
+<div class=toc>
+<div class='indexgroup'>
+<ul   class='indexList indexList1'>
+  <li class='indexItem indexItem1'><a href='#NAME'>NAME</a>
+  <li class='indexItem indexItem1'><a href='#SYNOPSIS'>SYNOPSIS</a>
+  <li class='indexItem indexItem1'><a href='#DESCRIPTION'>DESCRIPTION</a>
+  <li class='indexItem indexItem1'><a href='#METHODS'>METHODS</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#new_(from_string)'>new (from string)</a>
+    <li class='indexItem indexItem2'><a href='#new_(from_hash)'>new (from hash)</a>
+    <li class='indexItem indexItem2'><a href='#decode'>decode</a>
+    <li class='indexItem indexItem2'><a href='#print'>print</a>
+    <li class='indexItem indexItem2'><a href='#string'>string</a>
+    <li class='indexItem indexItem2'><a href='#rdatastr'>rdatastr</a>
+    <li class='indexItem indexItem2'><a href='#name'>name</a>
+    <li class='indexItem indexItem2'><a href='#type'>type</a>
+    <li class='indexItem indexItem2'><a href='#class'>class</a>
+    <li class='indexItem indexItem2'><a href='#ttl'>ttl</a>
+    <li class='indexItem indexItem2'><a href='#rdlength'>rdlength</a>
+    <li class='indexItem indexItem2'><a href='#rdata'>rdata</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#Sorting_of_RR_arrays'>Sorting of RR arrays</a>
+  <ul   class='indexList indexList2'>
+    <li class='indexItem indexItem2'><a href='#set_rrsort_func'>set_rrsort_func</a>
+  </ul>
+  <li class='indexItem indexItem1'><a href='#BUGS'>BUGS</a>
+  <li class='indexItem indexItem1'><a href='#COPYRIGHT'>COPYRIGHT</a>
+  <li class='indexItem indexItem1'><a href='#SEE_ALSO'>SEE ALSO</a>
+</ul>
+</div>
+</div>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="NAME"
+>NAME <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Net::DNS::RR - DNS Resource Record base class</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SYNOPSIS"
+>SYNOPSIS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>use Net::DNS;</p>
+
+<pre class="sh_perl">    $rr = new Net::DNS::RR(&#39;example.com IN A 192.0.2.99&#39;);
+
+    $rr = new Net::DNS::RR(
+            name    =&#62; &#39;example.com&#39;
+            type    =&#62; &#39;A&#39;,
+            address =&#62; &#39;192.0.2.99&#39;
+            );</pre>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="DESCRIPTION"
+>DESCRIPTION <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><code>Net::DNS::RR</code> is the base class for DNS Resource Record (RR) objects. See also the manual pages for each RR type.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="METHODS"
+>METHODS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><b>WARNING!!!</b> Do not assume the RR objects you receive from a query are of a particular type -- always check the object type before calling any of its methods. If you call an unknown method, you will get an error message and execution will be terminated.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new_(from_string)"
+>new (from string)</a></h2>
+
+<pre class="sh_perl"> $a     = Net::DNS::RR-&#62;new(&#34;foo.example.com. 86400 A 10.1.2.3&#34;);
+ $mx    = Net::DNS::RR-&#62;new(&#34;example.com. 7200 MX 10 mailhost.example.com.&#34;);
+ $cname = Net::DNS::RR-&#62;new(&#34;www.example.com 300 IN CNAME www1.example.com&#34;);
+ $txt   = Net::DNS::RR-&#62;new(&#39;baz.example.com 3600 HS TXT &#34;text record&#34;&#39;);</pre>
+
+<p>Returns a <code>Net::DNS::RR</code> object of the appropriate type and initialized from the string passed by the user. The format of the string is that used in zone files, and is compatible with the string returned by <code>Net::DNS::RR-&#62;string</code>.</p>
+
+<p>The name and RR type are required; all other information is optional. If omitted, the TTL defaults to 0 and the RR class defaults to IN. Omitting the optional fields is useful for creating the empty RDATA sections required for certain dynamic update operations. See the <code>Net::DNS::Update</code> manual page for additional examples.</p>
+
+<p>All names must be fully qualified. The trailing dot (.) is optional.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="new_(from_hash)"
+>new (from hash)</a></h2>
+
+<pre class="sh_perl"> $rr = Net::DNS::RR-&#62;new(
+         name    =&#62; &#34;foo.example.com&#34;,
+         ttl     =&#62; 86400,
+         class   =&#62; &#34;IN&#34;,
+         type    =&#62; &#34;A&#34;,
+         address =&#62; &#34;10.1.2.3&#34;,
+ );
+
+ $rr = Net::DNS::RR-&#62;new(
+         name =&#62; &#34;foo.example.com&#34;,
+         type =&#62; &#34;A&#34;,
+ );</pre>
+
+<p>Returns an RR object of the appropriate type, or a <code>Net::DNS::RR</code> object if the type isn&#39;t implemented. See the manual pages for each RR type to see what fields the type requires.</p>
+
+<p>The <code>Name</code> and <code>Type</code> fields are required; all others are optional. If omitted, <code>TTL</code> defaults to 0 and <code>Class</code> defaults to IN. Omitting the optional fields is useful for creating the empty RDATA sections required for certain dynamic update operations.</p>
+
+<p>The fields are case-insensitive, but starting each with uppercase is recommended.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="decode"
+>decode</a></h2>
+
+<pre class="sh_perl">    ($rrobj, $offset) = Net::DNS::RR-&#62;decode(\$data, $offset);</pre>
+
+<p>Decodes a DNS resource record at the specified location within a DNS packet. The first argument is a reference to the packet data. The second argument is the offset within the packet where the resource record begins.</p>
+
+<p>Returns a Net::DNS::RR object and the offset of the next location in the packet.</p>
+
+<p>Decoding is aborted if the object could not be created (e.g., corrupt or insufficient data).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="print"
+>print</a></h2>
+
+<pre class="sh_perl">    $rr-&#62;print;</pre>
+
+<p>Prints the record to the standard output. Calls the <b>string</b> method to get the RR&#39;s string representation.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="string"
+>string</a></h2>
+
+<pre class="sh_perl">    print $rr-&#62;string, &#34;\n&#34;;</pre>
+
+<p>Returns a string representation of the RR. Calls the <b>rdatastr</b> method to get the RR-specific data. Domain names arereturned in RFC1035 format, i.e. all non letter, digit, hyphen characters are represented as \DDD. Besides, all domain names are expanded to fully qualified domain names, with trailing dot. This is in contrast to accessor methods of individual data elements in RR objects, like <b>name</b>, which will not return the trailing dot.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="rdatastr"
+>rdatastr</a></h2>
+
+<pre class="sh_perl">    $s = $rr-&#62;rdatastr;</pre>
+
+<p>Returns a string containing RR-specific data. Subclasses will need to implement this method.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="name"
+>name</a></h2>
+
+<pre class="sh_perl">    $name = $rr-&#62;name;</pre>
+
+<p>Returns the record&#39;s domain name.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="type"
+>type</a></h2>
+
+<pre class="sh_perl">    $type = $rr-&#62;type;</pre>
+
+<p>Returns the record&#39;s type.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="class"
+>class</a></h2>
+
+<pre class="sh_perl">    $class = $rr-&#62;class;</pre>
+
+<p>Returns the record&#39;s class.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="ttl"
+>ttl</a></h2>
+
+<pre class="sh_perl">    $ttl = $rr-&#62;ttl;</pre>
+
+<p>Returns the record&#39;s time-to-live (TTL).</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="rdlength"
+>rdlength</a></h2>
+
+<pre class="sh_perl">    $rdlength = $rr-&#62;rdlength;</pre>
+
+<p>Returns the length of the record&#39;s data section.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="rdata"
+>rdata</a></h2>
+
+<pre class="sh_perl">    $rdata = $rr-&#62;rdata</pre>
+
+<p>Returns the record&#39;s data section as binary data.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="Sorting_of_RR_arrays"
+>Sorting of RR arrays <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>As of version 0.55 there is functionality to help you sort RR arrays. The sorting is done by Net::DNS::rrsort(), see the <a href="/~olaf/Net-DNS-0.68/lib/Net/DNS.pm" class="podlinkpod"
+>Net::DNS</a> documentation. This package provides class methods to set the sorting functions used for a particular RR based on a particular attribute.</p>
+
+<h2><a class='u' href='#___top' title='click to go to top of document'
+name="set_rrsort_func"
+>set_rrsort_func</a></h2>
+
+<p>Net::DNS::RR::SRV-&#62;set_rrsort_func(&#34;priority&#34;, sub { my ($a,$b)=($Net::DNS::a,$Net::DNS::b); $a-&#62;priority &#60;=&#62; $b-&#62;priority || $b-&#62;weight &#60;=&#62; $a-&#62;weight }</p>
+
+<p>Net::DNS::RR::SRV-&#62;set_rrsort_func(&#34;default_sort&#34;, sub { my ($a,$b)=($Net::DNS::a,$Net::DNS::b); $a-&#62;priority &#60;=&#62; $b-&#62;priority || $b-&#62;weight &#60;=&#62; $a-&#62;weight }</p>
+
+<p>set_rrsort_func needs to be called as a class method. The first argument is the attribute name on which the sorting will need to take place. If you specify &#34;default_sort&#34; than that is the sort algorithm that will be used in the case that rrsort() is called without an RR attribute as argument.</p>
+
+<p>The second argument is a reference to a function that uses the variables $a and $b global to the <code>from Net::DNS</code>(!!)package for the sorting. During the sorting $a and $b will contain references to objects from the class you called the set_prop_sort from. In other words, you can rest assured that the above sorting function will only get Net::DNS::RR::SRV objects.</p>
+
+<p>The above example is the sorting function that actually is implemented in SRV.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="BUGS"
+>BUGS <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>This version of <code>Net::DNS::RR</code> does little sanity checking on user-created RR objects.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="COPYRIGHT"
+>COPYRIGHT <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p>Copyright (c)1997-2002 Michael Fuhr.</p>
+
+<p>Portions Copyright (c)2002-2004 Chris Reinhardt.</p>
+
+<p>Portions Copyright (c)2005-2007 Olaf Kolkman</p>
+
+<p>Portions Copyright (c)2007 Dick Franks</p>
+
+<p>All rights reserved.</p>
+
+<p>This program is free software; you may redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<p>EDNS0 extensions by Olaf Kolkman.</p>
+
+<h1><a class='u' href='#___top' title='click to go to top of document'
+name="SEE_ALSO"
+>SEE ALSO <img alt='^' src='http://st.pimg.net/tucs/img/up.gif'></a></h1>
+
+<p><a href="/perldoc?perl" class="podlinkpod"
+>perl</a>, <a href="/~olaf/Net-DNS-0.68/lib/Net/DNS.pm" class="podlinkpod"
+>Net::DNS</a>, <a href="/~olaf/Net-DNS-0.68/lib/Net/DNS/Resolver.pm" class="podlinkpod"
+>Net::DNS::Resolver</a>, <a href="/~olaf/Net-DNS-0.68/lib/Net/DNS/Packet.pm" class="podlinkpod"
+>Net::DNS::Packet</a>, <a href="/~olaf/Net-DNS-0.68/lib/Net/DNS/Update.pm" class="podlinkpod"
+>Net::DNS::Update</a>, <a href="/~olaf/Net-DNS-0.68/lib/Net/DNS/Header.pm" class="podlinkpod"
+>Net::DNS::Header</a>, <a href="/~olaf/Net-DNS-0.68/lib/Net/DNS/Question.pm" class="podlinkpod"
+>Net::DNS::Question</a>, RFC 1035 Section 4.1.3</p>
+
+</div>
+<!-- This should probably be put in the <div class="footer"></div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startingStyle = $.cookie('css') ? $.cookie('css') : 'http://st.pimg.net/tucs/css/sh_none.min.css';
+        $.fn.styleSwitch(startingStyle);
+        $("#styleswitch").val(startingStyle);
+        sh_highlightDocument();
+        $("#styleswitch").bind(($.browser.msie ? "click" : "change"), function() {
+            $.fn.styleSwitch($(this).val());
+        });
+    });
+</script>
+<div class="styleswitch">
+    syntax highlighting:
+    <select id="styleswitch">
+        <option value="http://st.pimg.net/tucs/css/sh_none.min.css">no syntax highlighting</option>
+        <option value="http://st.pimg.net/tucs/css/sh_acid.min.css">acid</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-dark.min.css">berries-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_berries-light.min.css">berries-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bipolar.min.css">bipolar</option>
+        <option value="http://st.pimg.net/tucs/css/sh_blacknblue.min.css">blacknblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_bright.min.css">bright</option>
+        <option value="http://st.pimg.net/tucs/css/sh_contrast.min.css">contrast</option>
+        <option value="http://st.pimg.net/tucs/css/sh_cpan.min.css">cpan</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkblue.min.css">darkblue</option>
+        <option value="http://st.pimg.net/tucs/css/sh_darkness.min.css">darkness</option>
+        <option value="http://st.pimg.net/tucs/css/sh_desert.min.css">desert</option>
+        <option value="http://st.pimg.net/tucs/css/sh_dull.min.css">dull</option>
+        <option value="http://st.pimg.net/tucs/css/sh_easter.min.css">easter</option>
+        <option value="http://st.pimg.net/tucs/css/sh_emacs.min.css">emacs</option>
+        <option value="http://st.pimg.net/tucs/css/sh_golden.min.css">golden</option>
+        <option value="http://st.pimg.net/tucs/css/sh_greenlcd.min.css">greenlcd</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-anjuta.min.css">ide-anjuta</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-codewarrior.min.css">ide-codewarrior</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-devcpp.min.css">ide-devcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-eclipse.min.css">ide-eclipse</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-kdev.min.css">ide-kdev</option>
+        <option value="http://st.pimg.net/tucs/css/sh_ide-msvcpp.min.css">ide-msvcpp</option>
+        <option value="http://st.pimg.net/tucs/css/sh_kwrite.min.css">kwrite</option>
+        <option value="http://st.pimg.net/tucs/css/sh_matlab.min.css">matlab</option>
+        <option value="http://st.pimg.net/tucs/css/sh_navy.min.css">navy</option>
+        <option value="http://st.pimg.net/tucs/css/sh_nedit.min.css">nedit</option>
+        <option value="http://st.pimg.net/tucs/css/sh_neon.min.css">neon</option>
+        <option value="http://st.pimg.net/tucs/css/sh_night.min.css">night</option>
+        <option value="http://st.pimg.net/tucs/css/sh_pablo.min.css">pablo</option>
+        <option value="http://st.pimg.net/tucs/css/sh_peachpuff.min.css">peachpuff</option>
+        <option value="http://st.pimg.net/tucs/css/sh_print.min.css">print</option>
+        <option value="http://st.pimg.net/tucs/css/sh_rand01.min.css">rand01</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-dark.min.css">solarized-dark</option>
+	<option value="http://st.pimg.net/tucs/css/sh_solarized-light.min.css">solarized-light</option>
+        <option value="http://st.pimg.net/tucs/css/sh_style.min.css">style</option>
+        <option value="http://st.pimg.net/tucs/css/sh_the.min.css">the</option>
+        <option value="http://st.pimg.net/tucs/css/sh_typical.min.css">typical</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vampire.min.css">vampire</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim-dark.min.css">vim-dark</option>
+        <option value="http://st.pimg.net/tucs/css/sh_vim.min.css">vim</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whatis.min.css">whatis</option>
+        <option value="http://st.pimg.net/tucs/css/sh_whitengrey.min.css">whitengrey</option>
+        <option value="http://st.pimg.net/tucs/css/sh_zellner.min.css">zellner</option>
+    </select>
+</div>
+
+
+
+<div class="footer"><div class="cpanstats">78179 Uploads, 24710 Distributions
+106004 Modules, 9645 Uploaders
+</div>
+hosted by <a href="http://www.yellowbot.com">YellowBot</a><br/>
+<a href="http://www.yellowbot.com"><img alt="do. tag. write. share." src="http://st.pimg.net/tucs/img/yellowbot_logo.gif"></a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://ipv4.v6test.develooper.com/js/v1/v6test.js"></script>
+
+<script type="text/javascript">
+   // v6.target = '';
+   if (!v6.target) { v6.only_once = true }
+   v6.site = '7A0D89A6-2B82-11DF-B9DA-F61CBD13F020';
+   v6.api_server = 'http://ipv4.v6test.develooper.com';
+   try {
+     v6.test();
+   } catch(err) {}
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[href^=http:]").click(function(){
+      var href = $(this).attr('href');
+      var m = href.match('\/\/([^\/:]+)');
+      _gaq.push(['_trackEvent','External',m[1],'Module']);
+    });
+    $("a[href^=/CPAN/]").click(function(){
+      var href = $(this).attr('href');
+      _gaq.push(['_trackEvent','Download',href,'Module']);
+    });
+  });
+</script>
+<!-- Wed Apr 25 07:50:14 2012 GMT (0.0624260902404785) @cpansearch1 -->
+ </body>
+</html>

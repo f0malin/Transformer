@@ -1,0 +1,32 @@
+version::AlphaBeta 0.06
+-----------------------
+
+Derived class of version objects which permits use of specific
+alphanumeric version objects, patterned after the version strings
+used by many open source programs, like Mozilla.
+
+Implement the numify() operator to overload the base object method.
+
+Please see the enclose POD for more details and instructions for how to
+use the module.
+
+Installation:  you can use either of these two methods:
+
+perl Build.PL
+./Build
+./Build test
+./Build install
+
+OR
+
+perl Makefile.PL
+make
+make test
+make install
+
+Both methods require you to have a copy of Module::Build installed (though
+the second will actually prompt you to do so before continuing).
+
+NOTE: if you are using Windows, you probably need to use nmake instead.
+
+John Peacock <jpeacock@cpan.org>
