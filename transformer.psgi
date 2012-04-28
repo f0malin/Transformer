@@ -285,7 +285,9 @@ sub {
 #        my $module = $1;
 #        return get_pod($env, $module);
 #    } elsif ($env->{'HTTP_HOST'} =~ m{^cpan\.perlchina\.org}) {
-    if ($env->{'HTTP_HOST'} =~ m{^cpan\.perlchina\.org}) {
+    if ($env->{'REQUEST_URI'} =~ m{^/360buy-union\.txt$}) {
+        return [200, ['Content-Type' => 'text/plain', 'Content-Length', 36], ['8deabf7d-f2cf-4a95-8119-34c4044391da']];
+    } elsif ($env->{'HTTP_HOST'} =~ m{^cpan\.perlchina\.org}) {
         return get_cpan($env);
     } else {
         return get_content($env);
