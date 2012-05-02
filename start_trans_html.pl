@@ -24,6 +24,11 @@ my $trans = "data/trans/$domain/". uri_escape($path) . ".old";
 
 ### $trans
 
+if (-e $origin) {
+    print "origin exists, this file is translating or has been translated\n";
+    exit;
+}
+
 my $rc = getstore($url, $origin);
 if (is_success($rc)) {
     cp $origin, $trans;
