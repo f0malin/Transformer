@@ -4,7 +4,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Perl modules - learn.perl.org</title>
+    <title>Perl 模块 - learn.perlchina.org</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
     <link rel="shortcut icon" href="http://st.pimg.net/perlweb/favicon.v249dfa7.ico">
@@ -39,7 +39,7 @@
     <div class="sub_holder">
         <div id="page_image"></div>
         <h1>
-            Perl modules
+            Perl 模块
         </h1>
         <div id="logo_holder">
            
@@ -48,7 +48,7 @@
             <a href="/"><img src="http://st.pimg.net/perlweb/images/camel_head.v25e738a.png" id="logo" alt="Learn Perl, modern programming" height="65" align="right" /></a>
             
 
-			 <span>learn.perl.org</span>
+			 <span>learn.perlchina.org</span>
 
         </div>
     </div>
@@ -58,7 +58,7 @@
     <div class="sub_holder">
         <ul>
     <li>
-        <a href="/">Home</a>
+        <a href="/">首页</a>
     </li>
 
 <!--     <li>
@@ -69,29 +69,29 @@
     </li>
  -->
     <li>
-        <a href="/installing/">Installing Perl</a>
+        <a href="/installing/">安装 Perl</a>
     </li>
 
     <li>
-        <a href="/first_steps/">First steps</a>
+        <a href="/first_steps/">第一步</a>
     </li>
 
     <li class="selected">
-        <a href="/modules/">Modules</a>
+        <a href="/modules/">模块</a>
     </li>
 
     <li>
-        <a href="/examples/">Examples</a>
+        <a href="/examples/">示例</a>
     </li>
 
     <li>
-        <a href="/docs/">Documentation</a>
+        <a href="/docs/">文档</a>
     </li>
     <li>
-        <a href="/books/">Books</a>
+        <a href="/books/">图书</a>
     </li>
     <li>
-        <a href="/faq/">FAQ / Help</a>
+        <a href="/faq/">FAQ / 帮助</a>
     </li>
 
 </ul>
@@ -112,55 +112,48 @@
         <div id="main">
             
 <h2>
-    Perl modules, what are they and why do I care?
+    Perl 模块, 它们是什么以及为什么我关心?
 </h2>
 
 
-<h4>What is a Perl module?</h4>
+<h4>什么是 Perl 模块?</h4>
 
 <p>
     Perl <a href=
-    "http://perldoc.perl.org/perlmod.html">modules</a> 
-    are a set of related functions in a library file. They are specifically
-    designed to be reusable by other modules or programs. 
-    There are 99,000 
-    modules ready for you to use on the <a href="http://www.cpan.org/">Comprehensive Perl Archive Network</a>. 
+    "http://perldoc.perl.org/perlmod.html">模块</a> 
+    是在一个库文件里的一组函数。 它们是专门设计的，可以由其他模块或者程序重用。在
+    <a href="http://www.cpan.org/">Comprehensive Perl Archive Network</a> 里，已经有 99000 个模块供你重用。 
 </p>
 
 <p> 
-    You should be aware that most Perl modules are written in Perl but some use <a href=
-    "http://perldoc.perl.org/perlxs.html">XS</a> (they are written in <a href=
-    "http://en.wikipedia.org/wiki/C_(programming_language)">C</a>) so require a
-    C <a href="http://en.wikipedia.org/wiki/Compiler">compiler</a> (if you followed
-    the <a href="/installing/">installing</a> instructions you already
-    have one). Modules may have dependencies on other modules
-    (almost always on <a href="http://www.cpan.org/">CPAN</a>) and cannot be
-    installed without them (or without a specific version of them). Many modules on
-    CPAN now require a recent version of Perl (version 5.8 or above).
+    你应该知道大部分模块是用 Perl 写的，但是有一些是使用 <a href=
+    "http://perldoc.perl.org/perlxs.html">XS</a> 写的 (它们是使用 <a href=
+    "http://en.wikipedia.org/wiki/C_(programming_language)">C</a> 写的)， 因此需要
+    C <a href="http://en.wikipedia.org/wiki/Compiler">编译器</a> (如果你按照 <a href="/installing/">安装 Perl</a> 指导，你应该已经拥有了一个编译器)。
+    模块也许依赖于其他模块 (几乎都在 <a href="http://www.cpan.org/">CPAN</a> 里)，没有这些依赖 (或者没有指定的版本的依赖)，模块将不能被安装。 当前，许多在 CPAN 上的模块需要最新版本的 Perl (版本 5.8 或者更新)。
 </p>
 
-<h4>Where can I find modules?</h4>
+<h4>哪里能找到模块?</h4>
 <p>
-    <a href="https://metacpan.org/">https://metacpan.org/</a> lets you
-    search the 99,000 modules on CPAN.
+    <a href="https://metacpan.org/">https://metacpan.org/</a> 让你能够在 CPAN上 搜索 99000 个模块。
 </p>
 
-<h4>Which modules should I use?</h4>
+<h4>我应该使用哪个模块?</h4>
 <p>
-    Metacpan has user ratings, also have a look at
-    <a href="https://metacpan.org/release/Task-Kensho/">Task::Kensho</a>.
-    The <a href="/examples/">examples</a> section and <a href="/faq/">FAQ</a> 
-    also have some recommendations, you could also ask the Perl <a href="http://www.perl.org/community.html">community</a>.
+    Metacpan 有用户评定, 也可以看一下
+    <a href="https://metacpan.org/release/Task-Kensho/">Task::Kensho</a> 。
+    <a href="/examples/">示例</a>部分以及 <a href="/faq/">FAQ</a> 
+    也有一些推荐, 你也可以询问 Perl <a href="http://www.perl.org/community.html">社区</a>。
 </p>
 
 
-<h4>How do I install a module?</h4>
+<h4>怎么样安装模块?</h4>
 
-<p>If you haven't already <a href="https://metacpan.org/module/App::cpanminus#INSTALLATION">install cpanm</a> do that first:</p>
+<p>如果你还没有<a href="https://metacpan.org/module/App::cpanminus#INSTALLATION">安装 cpanm</a>，首先进行安装:</p>
 <p>
 <pre><code>cpan App::cpanminus</code></pre>
 </p>
-<p>Then to install any module from CPAN</p>
+<p>然后从 CPAN 安装任何模块</p>
 <p>
 <pre><code>cpanm Module::Name</code></pre>
 </p>
@@ -189,9 +182,9 @@
         </h4>
         <div class="list">
         <p>
-            <strong>Test your code</strong>
-            use <a href="https://metacpan.org/module/Test::More">Test::More</a> or 
+            使用 <a href="https://metacpan.org/module/Test::More">Test::More</a> 或者 
                 <a href="https://metacpan.org/module/Test::Most">Test::Most</a>
+	    <strong>测试你的代码</strong>
         </p>
     </div>
 </div>
@@ -199,7 +192,7 @@
 
             <div id="sponsor">
         <h4>
-            <a href="siteinfo.html#sponsors">Sponsor</a>
+            <a href="siteinfo.html#sponsors">赞助商</a>
         </h4>
         <p>
     
@@ -226,10 +219,10 @@
         
 
         <p class="sites">
-            &nbsp;When you need <em>Perl</em> think <strong>Perl.org</strong>: <a href="http://www.perl.org/">www</a> | <a href="http://blogs.perl.org/">blogs</a> | <a href="http://jobs.perl.org/">jobs</a> | <a href="http://learn.perl.org/">learn</a> <!-- | <a href="http://lists.perl.org/">lists</a> --> | <a href="http://dev.perl.org/">dev</a>   
+            &nbsp;当你需要 <em>Perl</em> 时，就来 <strong>PerlChina.org</strong>: <a href="http://www.perlchina.org/">首页</a> | <a href="http://blogs.perl.org/">博客</a> | <a href="http://jobs.perl.org/">工作</a> | <a href="http://learn.perl.org/">学习</a> <!-- | <a href="http://lists.perl.org/">lists</a> --> | <a href="http://dev.perl.org/">开发</a>   
         </p>
         <p class="copyright">
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/us/80x15.png"></a> © 2002-2012 Perl.org | <a href="/siteinfo.html">Site Info</a>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/us/80x15.png"></a> © 2002-2012 PerlChina.org | <a href="/siteinfo.html">站点信息</a>
         </p>
 
 
