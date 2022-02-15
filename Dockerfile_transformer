@@ -1,10 +1,9 @@
 FROM api6.hukaa.com:5000/hukaa_www:1.1
 
+RUN cpanm -n LWP::Protocol::https Smart::Comments Text::Xslate
+
 COPY . /data/app/Transformer
 WORKDIR /data/app/Transformer
-
-RUN cpanm -n Smart::Comments
-RUN cpanm -n Text::Xslate
 
 RUN rm -rf .git
 
